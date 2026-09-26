@@ -1,6 +1,6 @@
 // US-PainIntervention Pro: Comprehensive Clinical Procedure Database
 // Based on: Ultrasound for Interventional Pain Management (Springer 2020) by Philip Peng et al.
-// Fully standardizing 51 procedures across all 27 chapters with verified Springer Atlas figures.
+// Standardized for Clinical Practice in Vietnam with 100% Bilingual Springer Atlas Figures.
 
 const PROCEDURES_DATA = [
   {
@@ -217,7 +217,9 @@ const PROCEDURES_DATA = [
       {
         "path": "assets/images/ch19_shoulder/p222_img1.jpeg",
         "title": "Mặt cắt ngang gân đầu dài cơ nhị đầu trong rãnh gian củ",
-        "desc": "LT (Củ bé), GT (Củ lớn), BT (Gân nhị đầu). Gân hình tròn tăng âm nằm gọn trong rãnh chữ U."
+        "desc": "LT (Củ bé), GT (Củ lớn), BT (Gân nhị đầu). Gân hình tròn tăng âm nằm gọn trong rãnh chữ U.",
+        "figNumber": "19.6",
+        "springerCaption": "Fig. 19.6c). From scan 2, moving medially and rotating the probe, the CHL can be followed to its origin at the cora- coid process of the scapula. The underlying LHB tendon and subscapularis muscle are visible. Externally rotating the shoulder will bring more of the subscapularis into view and tighten the CHL."
       }
     ]
   },
@@ -274,7 +276,9 @@ const PROCEDURES_DATA = [
       {
         "path": "assets/images/ch19_shoulder/p225_img1.jpeg",
         "title": "Hình ảnh siêu âm và kỹ thuật tiêm khớp cùng vai đòn (AC Joint)",
-        "desc": "Khe khớp AC nằm giữa Acromion và Clavicle. Kim đi in-plane vào khe khớp nông."
+        "desc": "Khe khớp AC nằm giữa Acromion và Clavicle. Kim đi in-plane vào khe khớp nông.",
+        "figNumber": "19.8",
+        "springerCaption": "Fig. 19.8, lower panel). From Scan 1, the probe is translated just lateral to bring the supraspinatus tendon into view. The supraspinatus tendon inserts onto the beak-shaped greater tuberosity (GT). Note the hypoechoic hyaline cartilage along the humeral head. The SASD bursa can be identified as a thin hypoechoic line flanked by the hyperechoic supra- spinatus tendon and subdeltoid fat. When bursitis is present, this bursal space will be fluid-filled with thickening of the peribursal fat. The st"
       }
     ]
   },
@@ -614,12 +618,16 @@ const PROCEDURES_DATA = [
       {
         "path": "assets/images/ch21_wrist_hand/p254_img1.jpeg",
         "title": "Hình ảnh siêu âm ngăn duỗi số 1 cổ tay (De Quervain)",
-        "desc": "APL (Abductor pollicis longus), EPB (Extensor pollicis brevis) trên mỏm trâm quay. Mũi tên chỉ vách ngăn phụ giữa 2 gân."
+        "desc": "APL (Abductor pollicis longus), EPB (Extensor pollicis brevis) trên mỏm trâm quay. Mũi tên chỉ vách ngăn phụ giữa 2 gân.",
+        "figNumber": "21.7",
+        "springerCaption": "Fig. 21.7 Six compartments of the extensor tendons in the wrist. First compartment, abductor pollicis longus (APL) and extensor pollicis brevis (EPB); second compartment, extensor carpi radialis longus (ECRL) and extensor carpi radialis brevis (ECRB); third compartment, the extensor pollicis longus (EPL); fourth compartment, extensor indicis proprius (EIP) and extensor digitorum (EDC); fifth compartment, the extensor digiti quinti (EDQ); sixth compartment, extensor carpi ulnaris (ECU). Lister tu"
       },
       {
         "path": "assets/images/ch21_wrist_hand/p257_img1.jpeg",
         "title": "Kỹ thuật tiêm bao gân ngăn duỗi số 1 dưới siêu âm",
-        "desc": "Kim đi in-plane luồn vào lòng bao gân giữa APL và EPB, tránh nhánh nông thần kinh quay."
+        "desc": "Kim đi in-plane luồn vào lòng bao gân giữa APL và EPB, tránh nhánh nông thần kinh quay.",
+        "figNumber": "21.11",
+        "springerCaption": "Fig. 21.11). Deliver injectate when the needle (arrows) tip is visualized near the tendon sheath above the APL and EPB. 2. Out-of-Plane Injection Place the probe short axis over the abductor pollicis longus (APL) and extensor pollicis brevis (EPB) adjacent to radial styloid process. Note the radial artery that will be located toward the volar surface. Using an out-of-plane approach, steeply insert needle adjacent and centered to the transducer ("
       }
     ]
   },
@@ -823,12 +831,16 @@ const PROCEDURES_DATA = [
       {
         "path": "assets/images/ch23_knee/p284_img1.jpeg",
         "title": "Giải phẫu siêu âm ngách trên bánh chè (Suprapatellar Recess)",
-        "desc": "SPR (Suprapatellar recess) kẹp giữa SFP (Đệm mỡ trên bánh chè) và PFP (Đệm mỡ trước xương đùi). Femur (Vỏ xương đùi)."
+        "desc": "SPR (Suprapatellar recess) kẹp giữa SFP (Đệm mỡ trên bánh chè) và PFP (Đệm mỡ trước xương đùi). Femur (Vỏ xương đùi).",
+        "figNumber": "23.1",
+        "springerCaption": "Fig. 23.1 Suprapatellar recess (SPR). (Reprinted with permission from Philip Peng Educational Series) T. Nouer Frederico and P. Peng"
       },
       {
         "path": "assets/images/ch23_knee/p286_img1.jpeg",
         "title": "Kỹ thuật tiêm In-plane ngách trên bánh chè từ bờ ngoài",
-        "desc": "Đầu dò cắt ngang trên bánh chè, kim đi in-plane từ bờ ngoài vào trung tâm túi cùng trên bánh chè."
+        "desc": "Đầu dò cắt ngang trên bánh chè, kim đi in-plane từ bờ ngoài vào trung tâm túi cùng trên bánh chè.",
+        "figNumber": "23.5",
+        "springerCaption": "Fig. 23.5 Sonographic image of needle insertion. Needle indicated by arrow. ∗∗∗, suprapatellar recess; F, femur; QT, quadriceps tendon. (Reprinted with permission from Philip Peng Educational Series) T. Nouer Frederico and P. Peng"
       }
     ]
   },
@@ -891,12 +903,16 @@ const PROCEDURES_DATA = [
       {
         "path": "assets/images/ch23_knee/p288_img1.jpeg",
         "title": "Hình ảnh siêu âm nang hoạt dịch Baker và cổ nang",
-        "desc": "Nang Baker (BC) nằm giữa gân cơ bán màng (SM) và đầu trong cơ bụng chân (MHG). Cổ nang hình phễu thông vào khớp."
+        "desc": "Nang Baker (BC) nằm giữa gân cơ bán màng (SM) và đầu trong cơ bụng chân (MHG). Cổ nang hình phễu thông vào khớp.",
+        "figNumber": "23.6",
+        "springerCaption": "Fig. 23.6). Whereas most of Baker’s cysts are secondary cysts and associated with degenerative knee joint diseases, primary cysts are less common and occur primarily in children. \u0007Ultrasound Scan \u0007Scan 1: Normal Knee Palpate the semitendinosus (ST) tendon by slightly flex the knee. Put the ultrasound probe over the ST tendon and a “cherry on the cake” appearance with the ST tendon (arrow head) as the cherry and semimembranosus (SM) as the cake ("
       },
       {
         "path": "assets/images/ch23_knee/p290_img1.jpeg",
         "title": "Kỹ thuật chọc hút và tiêm nang Baker dưới siêu âm",
-        "desc": "Kim 18G đi in-plane vào lòng nang dịch khoeo, hút xẹp nang và tiêm steroid."
+        "desc": "Kim 18G đi in-plane vào lòng nang dịch khoeo, hút xẹp nang và tiêm steroid.",
+        "figNumber": "23.9",
+        "springerCaption": "Fig. 23.9 Needle (arrow) marking the pedicle of Baker’s cyst which communicates with the joint. The insert showed the position of the probe. PA, popliteal artery. (Reprinted with permission from Philip Peng Educational Series)"
       }
     ]
   },
@@ -954,12 +970,16 @@ const PROCEDURES_DATA = [
       {
         "path": "assets/images/ch23_knee/p291_img1.jpeg",
         "title": "Giải phẫu siêu âm phức hợp gân chân ngỗng (Pes Anserinus)",
-        "desc": "Sartorius (S), Gracilis (G), Semitendinosus (ST) bám vào mặt trong xương chày (Tibia) trên dây chằng MCL."
+        "desc": "Sartorius (S), Gracilis (G), Semitendinosus (ST) bám vào mặt trong xương chày (Tibia) trên dây chằng MCL.",
+        "figNumber": "23.9",
+        "springerCaption": "Fig. 23.9 Needle (arrow) marking the pedicle of Baker’s cyst which communicates with the joint. The insert showed the position of the probe. PA, popliteal artery. (Reprinted with permission from Philip Peng Educational Series)"
       },
       {
         "path": "assets/images/ch23_knee/p293_img1.jpeg",
         "title": "Kỹ thuật tiêm bao hoạt dịch gân chân ngỗng dưới siêu âm",
-        "desc": "Kim đi in-plane luồn vào khoang bao hoạt dịch nằm sâu dưới gân chân ngỗng."
+        "desc": "Kim đi in-plane luồn vào khoang bao hoạt dịch nằm sâu dưới gân chân ngỗng.",
+        "figNumber": "23.15",
+        "springerCaption": "Fig. 23.15). A linear pattern of spread is seen during the injection expand- ing the fascial plane with no changing in the echogenicity of the tendon (implying intratendinous injection). The lower two panel showed the positions of the probe and needle. Alternatively, the bursa can be injected when the probe is in short axis to the pes anserinus tendon ("
       }
     ]
   },
@@ -1020,12 +1040,16 @@ const PROCEDURES_DATA = [
       {
         "path": "assets/images/ch27_hip_knee_denervation/p346_img1.jpeg",
         "title": "Sơ đồ giải phẫu các nhánh thần kinh cảm giác khớp gối (Genicular Nerves)",
-        "desc": "SMGN (Gối trên trong), SLGN (Gối trên ngoài), IMGN (Gối dưới trong). Động mạch đi kèm là mốc Doppler then chốt."
+        "desc": "SMGN (Gối trên trong), SLGN (Gối trên ngoài), IMGN (Gối dưới trong). Động mạch đi kèm là mốc Doppler then chốt.",
+        "figNumber": "27.10",
+        "springerCaption": "Fig. 27.10). On the superomedial quadrant, the articular branches are superior medial genicular nerve, nerve to vastus medialis, and medial branch of the nerve to vastus intermedius and saphenous nerve. All branches are originated from femoral nerve including superior medial genicular nerve. With the exception of saphenous nerve, all contribute to the joint innervation consistently. Of all those articular branches, only the superior medial genicular nerve and medial branch of the nerve to vastus"
       },
       {
         "path": "assets/images/ch27_hip_knee_denervation/p348_img1.jpeg",
         "title": "Hình ảnh siêu âm và kỹ thuật định vị thần kinh gối",
-        "desc": "Đầu dò đặt dọc thân xương, kim đi in-plane chạm xương sát cạnh động mạch gối."
+        "desc": "Đầu dò đặt dọc thân xương, kim đi in-plane chạm xương sát cạnh động mạch gối.",
+        "figNumber": "27.11",
+        "springerCaption": "Fig. 27.11 Ultrasound imaging technique and the corresponding sonographic image of the super- omedial knee. Upper left panel. The ultrasound probe was placed along the long axis of femur between the diaphysis and epiphysis. Upper right panel. A fascia expansion (∗∗∗) deep to the vastus medial (VM) could be seen. E, epiphysis. Lower left panel. The ultrasound probe was then turned 90 °C to obtain a short-axis view of the femur. Move or align the probe in the cephalad-­ caudal direction until the"
       }
     ]
   },
@@ -1094,12 +1118,16 @@ const PROCEDURES_DATA = [
       {
         "path": "assets/images/ch22_hip/p271_img1.jpeg",
         "title": "Giải phẫu siêu âm khớp háng theo trục dọc cổ xương đùi",
-        "desc": "FH (Chỏm xương đùi), FN (Cổ xương đùi), AL (Sụn viền ổ cối), Capsule (Bao khớp). Target: Chỗ nối chỏm - cổ đùi."
+        "desc": "FH (Chỏm xương đùi), FN (Cổ xương đùi), AL (Sụn viền ổ cối), Capsule (Bao khớp). Target: Chỗ nối chỏm - cổ đùi.",
+        "figNumber": "22.2",
+        "springerCaption": "Fig. 22.2). Lateral approach to the hip joint is commonly performed for fluoroscopy-guided injection and endoscopy pro- cedures but can be implemented with ultrasound guidance as well. Both approaches are described below. \u0007Anterior Approach Scan 1 Operator stands on the affected side of the patient. Place probe perpendicular to the femur at the upper third of the thigh; it shows the femoral shaft in short axis as a dome-shaped hyperechoic structure ("
       },
       {
         "path": "assets/images/ch22_hip/p272_img1.jpeg",
         "title": "Kỹ thuật tiêm In-plane nội khớp háng dưới siêu âm",
-        "desc": "Kim tủy sống dài đi in-plane từ dưới lên trên, mũi kim chạm vỏ xương chỗ nối chỏm-cổ xương đùi."
+        "desc": "Kim tủy sống dài đi in-plane từ dưới lên trên, mũi kim chạm vỏ xương chỗ nối chỏm-cổ xương đùi.",
+        "figNumber": "22.5",
+        "springerCaption": "Fig. 22.5). Slide probe toward the femoral head to optimize image to visualize the femoral neck, femoral head, acetabulum, capsule (arrows), and anterior recess (∗∗). Color Doppler helps identify and avoid the ascending branch of the lateral femo- ral circumflex artery between iliopsoas and rectus femoris muscles when injecting ("
       }
     ]
   },
@@ -1301,12 +1329,16 @@ const PROCEDURES_DATA = [
       {
         "path": "assets/images/ch10_lfn/p131_img1.jpeg",
         "title": "Hình ảnh siêu âm thần kinh bì đùi ngoài (LFCN)",
-        "desc": "LFCN nằm trong góc mạc giữa Sartorius (cơ may) và TFL (cơ căng mạc đùi) dưới mốc xương ASIS."
+        "desc": "LFCN nằm trong góc mạc giữa Sartorius (cơ may) và TFL (cơ căng mạc đùi) dưới mốc xương ASIS.",
+        "figNumber": "10.4",
+        "springerCaption": "Fig. 10.4 Scanning at the fat-filled grove between sartorius and tensor fascia lata. (Reprinted with permission from Philip Peng Educational Series) 10 Lateral Femoral Cutaneous Nerve"
       },
       {
         "path": "assets/images/ch10_lfn/p133_img1.jpeg",
         "title": "Kỹ thuật tiêm In-plane phong bế LFCN dưới siêu âm",
-        "desc": "Kim đi in-plane luồn vào khoang mạc quanh thần kinh bì đùi ngoài."
+        "desc": "Kim đi in-plane luồn vào khoang mạc quanh thần kinh bì đùi ngoài.",
+        "figNumber": "10.4",
+        "springerCaption": "Fig. 10.4 Scanning at the fat-filled grove between sartorius and tensor fascia lata. (Reprinted with permission from Philip Peng Educational Series) 10 Lateral Femoral Cutaneous Nerve"
       }
     ]
   },
@@ -1508,12 +1540,16 @@ const PROCEDURES_DATA = [
       {
         "path": "assets/images/ch15_sacroiliac_joint/p191_img1.jpeg",
         "title": "Hình ảnh siêu âm khe khớp cùng chậu (Sacroiliac Joint)",
-        "desc": "Ilium (Xương chậu), Sacrum (Xương cùng). Mũi tên chỉ khe khớp cùng chậu ở 1/3 dưới."
+        "desc": "Ilium (Xương chậu), Sacrum (Xương cùng). Mũi tên chỉ khe khớp cùng chậu ở 1/3 dưới.",
+        "figNumber": "15.2",
+        "springerCaption": "Fig. 15.2 Sonographic images of the posterior sacrum depicting the various views required for the performance of an ultrasound-guided sacral lateral branch block. The three injection points on the sacral lateral crest are marked by a star (★); probe placement on the skin surface is illustrated in the upper left inset of panel (a); scan lines are illustrated on a skeletal model in the left lower insets. (a) transverse sonographic view of the lower sacrum demonstrating the sacral cornu (SC) and po"
       },
       {
         "path": "assets/images/ch15_sacroiliac_joint/p193_img1.jpeg",
         "title": "Kỹ thuật tiêm In-plane khớp cùng chậu dưới siêu âm",
-        "desc": "Kim đi in-plane từ ngoài vào trong vào khe khớp cùng chậu tại cực dưới."
+        "desc": "Kim đi in-plane từ ngoài vào trong vào khe khớp cùng chậu tại cực dưới.",
+        "figNumber": "15.4",
+        "springerCaption": "Fig. 15.4 Needle placement for a sacroiliac joint injection. (a) right upper inset illustrates the probe placement on the skin surface; left lower inset illustrates the scan line on a skeletal model. Needle (N), S2 posterior foramen (S2), sacroiliac joint (SIJ). (b) color duplex Doppler scan during injection demonstrating spread of injectate in the joint cleft. Reprinted with permission from Philip Peng Educational Series 1. If an eventual SLB radiofrequency ablation procedure is being contem- p"
       }
     ]
   },
@@ -1652,12 +1688,16 @@ const PROCEDURES_DATA = [
       {
         "path": "assets/images/ch11_esp/p144_img1.jpeg",
         "title": "Hình ảnh siêu âm mặt phẳng cơ dựng gai (ESP Block)",
-        "desc": "TP (Mỏm ngang đốt sống), ESM (Cơ dựng gai), Rhomboid (Cơ trám), Trapezius (Cơ thang). Target: Mặt sâu cơ dựng gai trên mỏm ngang."
+        "desc": "TP (Mỏm ngang đốt sống), ESM (Cơ dựng gai), Rhomboid (Cơ trám), Trapezius (Cơ thang). Target: Mặt sâu cơ dựng gai trên mỏm ngang.",
+        "figNumber": "11.9",
+        "springerCaption": "Fig. 11.9 Cranio-caudal probe orientation over the rib. (Reprinted with permission from Dr. Vicente Roques from imedar.com)"
       },
       {
         "path": "assets/images/ch11_esp/p148_img1.jpeg",
         "title": "Kỹ thuật tiêm In-plane phong bế ESP Block",
-        "desc": "Kim đi in-plane chạm mỏm ngang, bơm dịch bóc tách mặt phẳng cơ dựng gai lan tỏa nhiều đốt."
+        "desc": "Kim đi in-plane chạm mỏm ngang, bơm dịch bóc tách mặt phẳng cơ dựng gai lan tỏa nhiều đốt.",
+        "figNumber": "11.14",
+        "springerCaption": "Fig. 11.14). Different cath- eters have been successfully used (catheter over needle or catheter through needle). The preference of the author is to use the later due to the fact that the catheter can be advanced and securely left into the erector spinae muscle. • Needle/catheter: Catheter through needle (regular 18 G Tuohy needle) and regular epidural catheter (19 G) or catheter over needle can be used. • Drugs: For unilateral infusions, bupivacaine 0.2%; for bilateral infusions, bupivacaine 0."
       }
     ]
   },
@@ -1721,12 +1761,16 @@ const PROCEDURES_DATA = [
       {
         "path": "assets/images/ch14_lumbar_medial_branch/p177_img1.jpeg",
         "title": "Hình ảnh siêu âm 5 mặt cắt cơ bản cột sống thắt lưng",
-        "desc": "SP (Mỏm gai), Lamina (Bản sống), Facet (Khớp liên mấu), TP (Mỏm ngang). Điểm đích nhánh trong tại rãnh SAP - TP."
+        "desc": "SP (Mỏm gai), Lamina (Bản sống), Facet (Khớp liên mấu), TP (Mỏm ngang). Điểm đích nhánh trong tại rãnh SAP - TP.",
+        "figNumber": "14.3",
+        "springerCaption": "Fig. 14.3 Paramedian sagittal articular process view. (Reprinted with permission from Philip Peng Educational Series) M. Greher and P. Peng"
       },
       {
         "path": "assets/images/ch14_lumbar_medial_branch/p185_img1.jpeg",
         "title": "Kỹ thuật đi kim phong bế nhánh trong thắt lưng dưới siêu âm",
-        "desc": "Kim chạm góc xương giữa mấu khớp trên SAP và mỏm ngang TP."
+        "desc": "Kim chạm góc xương giữa mấu khớp trên SAP và mỏm ngang TP.",
+        "figNumber": "14.12",
+        "springerCaption": "Fig. 14.12 Checking the needle position in the paramedian sagittal transverse process view. (Reprinted with permission from Philip Peng Educational Series) Second, the ultrasound transducer is placed in paramedian sagittal transverse process view to check the needle position (arrow) at the target point (asterisk),which should be at the cephalad edge of the sacrum ala (SA) caudal to the transverse pro- cess of L5 (TP) ("
       }
     ]
   },
@@ -1790,12 +1834,16 @@ const PROCEDURES_DATA = [
       {
         "path": "assets/images/ch5_intercostal/p76_img1.jpeg",
         "title": "Hình ảnh siêu âm thành ngực và bó mạch thần kinh gian sườn",
-        "desc": "Ribs (Xương sườn), Intercostal muscles (Cơ gian sườn), Pleura (Đường màng phổi). Mũi tên chỉ vị trí bó mạch VAN dưới bờ sườn."
+        "desc": "Ribs (Xương sườn), Intercostal muscles (Cơ gian sườn), Pleura (Đường màng phổi). Mũi tên chỉ vị trí bó mạch VAN dưới bờ sườn.",
+        "figNumber": "5.4",
+        "springerCaption": "Fig. 5.4 (a) The intercostal muscles. EI external intercostal, II internal intercostal, pleura indi- cated by arrows. Bold arrow represents the fascia over the external intercostal muscle. (b) shows a similar sonogram in an obese patient. ∗ represents the target location for the fascial plane between the internal intercostal and innermost intercostal muscles, or deep to the internal intercostal when the innermost intercostal is not well visualized. (Reprinted with permission from Philip Peng Edu"
       },
       {
         "path": "assets/images/ch5_intercostal/p78_img1.jpeg",
         "title": "Kỹ thuật đi kim phong bế gian sườn dưới siêu âm",
-        "desc": "Kim đi in-plane từ dưới lên trên hướng về rãnh bờ dưới sườn, trên đường màng phổi."
+        "desc": "Kim đi in-plane từ dưới lên trên hướng về rãnh bờ dưới sườn, trên đường màng phổi.",
+        "figNumber": "5.7",
+        "springerCaption": "Fig. 5.7). \u0007Postprocedure Follow-Up and Pitfalls • After completion of the procedure, an evaluation of the patient should be con- ducted. Auscultation using a stethoscope to confirm air movement in the chest wall is necessary to diagnose pneumothorax ("
       }
     ]
   },
@@ -1855,12 +1903,16 @@ const PROCEDURES_DATA = [
       {
         "path": "assets/images/ch2_occipital/p48_img1.jpeg",
         "title": "Hình ảnh siêu âm thần kinh chẩm lớn (GON) tại mức C2",
-        "desc": "OCI (Cơ chéo đầu dưới), SSC (Cơ bán gai đầu). GON nằm trong mặt phẳng mạc giữa 2 cơ trên đốt C2."
+        "desc": "OCI (Cơ chéo đầu dưới), SSC (Cơ bán gai đầu). GON nằm trong mặt phẳng mạc giữa 2 cơ trên đốt C2.",
+        "figNumber": "2.6",
+        "springerCaption": "Fig. 2.6). \u0007Distal Approach at Level of Occiput The key landmark is the superior nuchal line and occipital protuberance. Scan 1: Upper sonograph shows the transverse view at superior nuchal line ("
       },
       {
         "path": "assets/images/ch2_occipital/p51_img1.jpeg",
         "title": "Kỹ thuật tiêm In-plane thần kinh chẩm lớn dưới siêu âm",
-        "desc": "Kim đi in-plane từ ngoài vào trong vào mặt phẳng giữa OCI và SSC."
+        "desc": "Kim đi in-plane từ ngoài vào trong vào mặt phẳng giữa OCI và SSC.",
+        "figNumber": "2.9",
+        "springerCaption": "Fig. 2.9 Sonography showed the injection around the greater occipital nerve. SSC semispinalis capitis; IOC inferior obliquus capitis. (Reprint with permission from Philip Peng Educational Series) 1. We recommend for less-experienced sonographers to start with the easier distal US-guided GON approach. 2. A block is successful if it creates absence of light-touch sensation in the dermatome of GON. 3. The target area in the proximal approach is not far from vertebral artery and epidural space; cons"
       }
     ]
   },
@@ -1925,12 +1977,16 @@ const PROCEDURES_DATA = [
       {
         "path": "assets/images/ch3_cervical_sympathetic/p57_img1.jpeg",
         "title": "Hình ảnh siêu âm chuỗi giao cảm cổ mức đốt sống C6",
-        "desc": "CA (Động mạch cảnh), Longus colli (Cơ dài cổ), C6 TP (Củ Chassaignac). Chuỗi giao cảm nằm trên mặt cơ dài cổ."
+        "desc": "CA (Động mạch cảnh), Longus colli (Cơ dài cổ), C6 TP (Củ Chassaignac). Chuỗi giao cảm nằm trên mặt cơ dài cổ.",
+        "figNumber": "3.5",
+        "springerCaption": "Fig. 3.5). At this level, the transverse process has a prominent posterior tubercle and vestigial anterior tubercle. Use color Doppler to identify the vertebral artery. Note that at the C6 level, the vertebral artery most commonly enters the fora- men transversarium. In up to 10% of patients, the vertebral artery travels outside the foramen transversarium at the C6 or even C5 level. The figure showed the presence of vertebral artery anterior to the anterior tubercle at C5 level ("
       },
       {
         "path": "assets/images/ch3_cervical_sympathetic/p58_img1.jpeg",
         "title": "Kỹ thuật tiêm In-plane phong bế giao cảm cổ dưới siêu âm",
-        "desc": "Kim đi in-plane từ ngoài vào luồn dưới động mạch cảnh vào mặt phẳng cơ dài cổ."
+        "desc": "Kim đi in-plane từ ngoài vào luồn dưới động mạch cảnh vào mặt phẳng cơ dài cổ.",
+        "figNumber": "3.4",
+        "springerCaption": "Fig. 3.4 The corresponding anatomic structures revealed at C6. (Reprinted with permission from Philip Peng Educational Series)"
       }
     ]
   },
@@ -1991,12 +2047,16 @@ const PROCEDURES_DATA = [
       {
         "path": "assets/images/ch6_ilioinguinal/p87_img1.jpeg",
         "title": "Hình ảnh siêu âm 3 lớp cơ thành bụng và thần kinh chậu bẹn",
-        "desc": "EO (Cơ chéo ngoài), IO (Cơ chéo trong), TA (Cơ ngang bụng). Thần kinh chậu bẹn nằm giữa IO và TA."
+        "desc": "EO (Cơ chéo ngoài), IO (Cơ chéo trong), TA (Cơ ngang bụng). Thần kinh chậu bẹn nằm giữa IO và TA.",
+        "figNumber": "6.4",
+        "springerCaption": "Fig. 6.4). At this level, all three layers of abdominal muscles can be easily visualized and the IH and II are quite consistently located between the transver- sus abdominis and internal oblique muscle. 2. Put the probe in short axis to the nerve. 3. Make sure the probe is perpendicular to the tangential plane of the skin. 4. Make sure the lateral part of the probe is on the iliac crest as the IH and II are usually located within 1.5 cm from the iliac crest. 5. Put more pressure on the medial pa"
       },
       {
         "path": "assets/images/ch6_ilioinguinal/p88_img1.jpeg",
         "title": "Kỹ thuật tiêm In-plane phong bế thần kinh chậu bẹn",
-        "desc": "Kim đi in-plane vào mặt phẳng mạc giữa cơ chéo trong và cơ ngang bụng."
+        "desc": "Kim đi in-plane vào mặt phẳng mạc giữa cơ chéo trong và cơ ngang bụng.",
+        "figNumber": "6.4",
+        "springerCaption": "Fig. 6.4). At this level, all three layers of abdominal muscles can be easily visualized and the IH and II are quite consistently located between the transver- sus abdominis and internal oblique muscle. 2. Put the probe in short axis to the nerve. 3. Make sure the probe is perpendicular to the tangential plane of the skin. 4. Make sure the lateral part of the probe is on the iliac crest as the IH and II are usually located within 1.5 cm from the iliac crest. 5. Put more pressure on the medial pa"
       }
     ]
   },
