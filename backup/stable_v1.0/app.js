@@ -5,52 +5,9 @@ document.addEventListener('DOMContentLoaded', () => {
   initApp();
 });
 
-// State Management with Multi-Tier Resilient Fallback
-// Tier 1: Primary PROCEDURES_DATA (from data/procedures.js)
-// Tier 2: Frozen Immutable STABLE_PROCEDURES_FALLBACK (from data/procedures.fallback.js)
-// Tier 3: Browser LocalStorage Healthy Snapshot
-function resolveInitialProcedures() {
-  // Tier 1: Check Primary PROCEDURES_DATA
-  if (typeof PROCEDURES_DATA !== 'undefined' && Array.isArray(PROCEDURES_DATA) && PROCEDURES_DATA.length >= 20) {
-    try {
-      // Auto cache healthy snapshot to localStorage
-      localStorage.setItem('us_pain_stable_backup', JSON.stringify(PROCEDURES_DATA));
-    } catch (e) {
-      console.warn('Cannot write snapshot to localStorage:', e);
-    }
-    return { data: PROCEDURES_DATA, isFallback: false, source: 'primary' };
-  }
-
-  // Tier 2: Check STABLE_PROCEDURES_FALLBACK
-  if (typeof STABLE_PROCEDURES_FALLBACK !== 'undefined' && Array.isArray(STABLE_PROCEDURES_FALLBACK) && STABLE_PROCEDURES_FALLBACK.length > 0) {
-    console.warn('[RECOVERY] PROCEDURES_DATA không hợp lệ! Đang tự động kích hoạt STABLE_PROCEDURES_FALLBACK v1.0.0');
-    return { data: STABLE_PROCEDURES_FALLBACK, isFallback: true, source: 'stable_file' };
-  }
-
-  // Tier 3: Check LocalStorage Backup
-  try {
-    const cached = localStorage.getItem('us_pain_stable_backup');
-    if (cached) {
-      const parsed = JSON.parse(cached);
-      if (Array.isArray(parsed) && parsed.length > 0) {
-        console.warn('[RECOVERY] Đang sử dụng LocalStorage Healthy Backup');
-        return { data: parsed, isFallback: true, source: 'local_storage' };
-      }
-    }
-  } catch (e) {
-    console.error('Error reading localStorage backup:', e);
-  }
-
-  console.error('[CRITICAL] Không tìm thấy bất kỳ nguồn dữ liệu quy trình nào!');
-  return { data: [], isFallback: true, source: 'empty' };
-}
-
-const resolvedInitial = resolveInitialProcedures();
-
+// State Management
 const appState = {
-  procedures: resolvedInitial.data,
-  isFallbackActive: resolvedInitial.isFallback,
-  fallbackSource: resolvedInitial.source,
+  procedures: typeof PROCEDURES_DATA !== 'undefined' ? PROCEDURES_DATA : [],
   currentCategory: 'all',
   currentType: 'all',
   currentDifficulty: 'all',
@@ -63,42 +20,11 @@ const appState = {
 
 function initApp() {
   applyTheme(appState.theme);
-  if (appState.isFallbackActive) {
-    renderFallbackAlertBanner();
-  }
   renderCategoryCounters();
   setupEventListeners();
   renderProcedures();
   setupCalculator();
   setupChecklist();
-}
-
-function renderFallbackAlertBanner() {
-  const container = document.querySelector('.main-content');
-  if (!container || document.getElementById('fallback-alert-banner')) return;
-
-  const banner = document.createElement('div');
-  banner.id = 'fallback-alert-banner';
-  banner.className = 'fallback-alert-banner';
-  banner.innerHTML = `
-    <div class="flex items-start justify-between gap-3">
-      <div class="flex items-start gap-2.5">
-        <span class="text-xl">🛡️</span>
-        <div>
-          <div class="font-extrabold text-amber-900 text-xs sm:text-sm">
-            CHẾ ĐỘ DỰ PHÒNG AN TOÀN (FALLBACK MODE v1.0.0 ĐANG HOẠT ĐỘNG)
-          </div>
-          <p class="text-xs text-amber-800 mt-0.5 leading-relaxed">
-            Dữ liệu cập nhật mới gặp lỗi tải hoặc bị gián đoạn. Ứng dụng đã tự động bảo vệ và khôi phục <strong>${appState.procedures.length} quy trình chuẩn ổn định</strong> (${appState.fallbackSource === 'stable_file' ? 'Bản sao dự phòng v1.0.0' : 'Bản lưu trữ trình duyệt'}) để đảm bảo tra cứu lâm sàng liên tục, an toàn.
-          </p>
-        </div>
-      </div>
-      <button onclick="document.getElementById('fallback-alert-banner').remove()" class="text-xs text-amber-900 bg-amber-200/80 hover:bg-amber-300 font-bold px-2 py-1 rounded transition-colors whitespace-nowrap">
-        Đã hiểu ✕
-      </button>
-    </div>
-  `;
-  container.insertBefore(banner, container.firstChild);
 }
 
 // Accent-insensitive normalization for Vietnamese search

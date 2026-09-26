@@ -1,0 +1,43 @@
+{
+  "version": "1.0.0-stable",
+  "created_at": "2026-09-26T20:05:42.277191",
+  "description": "Bản phát hành ổn định v1.0.0 - 51 quy trình siêu âm can thiệp, 111 hình ảnh Springer Atlas, UI mobile tối ưu cho màn hình 7.5 inch với header thu nhỏ và bottom navigation.",
+  "author": "Antigravity Pair Programmer & Clinical Team",
+  "files": {
+    "data/procedures.js": {
+      "sha256": "ed0eeeb0dfa80c1793aed6c4b0221fed4ca15e28b7303dcecf1f6e261a7a5ee2",
+      "size_bytes": 269505,
+      "backup_file": "procedures.js"
+    },
+    "data/figure_captions.json": {
+      "sha256": "5a1d5f46eb3f27438e61cdfbcd506dae4a426c1f3057453f41e7c7ee9c21b07f",
+      "size_bytes": 140331,
+      "backup_file": "figure_captions.json"
+    },
+    "index.html": {
+      "sha256": "4b433d1fa6a6e9424ef901f15365e0ea7f1bd721a4e68ffcabb620670d1a2a01",
+      "size_bytes": 31316,
+      "backup_file": "index.html"
+    },
+    "css/style.css": {
+      "sha256": "1e549fcfd25f2f56f953265e405f085f88f63ad39e647b62b28c079504b90368",
+      "size_bytes": 38924,
+      "backup_file": "style.css"
+    },
+    "js/app.js": {
+      "sha256": "e093b7d3325b6ebeb1d789aa37edba024246bf7fcc36f6dbeb10557716eecd80",
+      "size_bytes": 40057,
+      "backup_file": "app.js"
+    },
+    "js/calculator.js": {
+      "sha256": "fdec7d7ff82a59dfd6f9658b83fe968fdf59bdf0ae1b4fe8c2884f741a8ba826",
+      "size_bytes": 5935,
+      "backup_file": "calculator.js"
+    },
+    "js/checklist.js": {
+      "sha256": "696ed9b12057362292341cc6e6457df3808a0b30b69934f7d23ee12d31aa2a30",
+      "size_bytes": 6801,
+      "backup_file": "checklist.js"
+    }
+  }
+}
