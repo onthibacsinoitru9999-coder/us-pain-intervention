@@ -1,0 +1,1820 @@
+{
+  "1.1": {
+    "chapter": 1,
+    "number": 1,
+    "page": 14,
+    "caption": "Fig. 1.1 Comparison of high-frequency and low-frequency waveform. (Reprinted with permis- sion from Philip Peng Educational Series) Cycle Rarefactions Compressions a b c"
+  },
+  "1.2": {
+    "chapter": 1,
+    "number": 2,
+    "page": 14,
+    "caption": "Fig. 1.2 A longitudinal wave showing alternating compression and rarefaction. (Reprinted with permission from Philip Peng Educational Series) S. Abbas and P. Peng"
+  },
+  "1.3": {
+    "chapter": 1,
+    "number": 3,
+    "page": 15,
+    "caption": "Fig. 1.3). Ultrasound pulses must be spaced with enough time between pulses to permit the sound to reach the target of interest and return to the transducer before the next pulse is generated. The PRF for medical imaging ranges from 1 to 10 kHz. For example, if the PRF = 5 kHz and the time between pulses is 0.2 ms, it will take 0.1 ms to reach the target and 0.1 ms to return to the transducer. This means the pulse will travel 15.4 cm before the next pulse is emitted (1540 m/s × 0.1 ms = 0.154 m "
+  },
+  "1.4": {
+    "chapter": 1,
+    "number": 4,
+    "page": 16,
+    "caption": "Fig. 1.4). The transducer trans- forms the echo (mechanical energy) into an electrical signal which is processed and displayed as an image on the screen. The conversion of sound to electrical energy is called the piezoelectric effect. The image can be displayed in a number of modes ("
+  },
+  "1.5": {
+    "chapter": 1,
+    "number": 5,
+    "page": 16,
+    "caption": "Fig. 1.5 Three different modes of ultrasound. (Reprinted with permission from Philip Peng Educational Series) S. Abbas and P. Peng"
+  },
+  "1.6": {
+    "chapter": 1,
+    "number": 6,
+    "page": 17,
+    "caption": "Fig. 1.6). Attenuation (energy loss) is due to: 1. Absorption (conversion of acoustic energy to heat) 2. Reflection 3. Scattering at interfaces In soft tissue, 80% of the attenuation of the sound wave is caused by absorption resulting in heat production. Attenuation is measured in decibels per centimeter of Reflection Scattering Absorption"
+  },
+  "1.7": {
+    "chapter": 1,
+    "number": 7,
+    "page": 18,
+    "caption": "Fig. 1.7 Variation of attenuation with frequency in different organs. (Reprinted with permission from Philip Peng Educational Series) Table 1.2 Attenuation coefficient of various tissues Material α (dB/cm) Blood 0.18 Fat 0.6 Muscle (across fibers) 3.3 Muscle (along fibers) 1.2 Aqueous and vitreous humor of the eye 0.1 Lens of the eye 2.0 Skull bone 20 Lungs 40 Liver 0.9 Brain 0.85 Kidney 1.0 Spinal cord 1.0 Water 0.0022 Castor oil 0.95 Lucite 2.0 S. Abbas and P. Peng"
+  },
+  "1.8": {
+    "chapter": 1,
+    "number": 8,
+    "page": 19,
+    "caption": "Fig. 1.8). This explains why it is difficult to visualize a needle inserted at a steep angle (>45° to the skin surface). Specular reflection occurs at flat, smooth interfaces where the transmitted wave is reflected in a single direction depending on the angle of incidence. Examples of specular reflectors are fascial sheaths, the diaphragm, and walls of major vessels Table 1.3 Acoustic impendence of various tissues Body tissue Acoustic impedance (106 RayIs) Air 0.0004 Lung 0.18 Fat 1.34 Liver 1.6"
+  },
+  "1.9": {
+    "chapter": 1,
+    "number": 9,
+    "page": 20,
+    "caption": "Fig. 1.9). Block needles are also strong specular reflectors. For specular reflection to occur, the wavelength of the ultrasound wave must be smaller than the reflective structure. Otherwise, scattering will occur. \u0007Scattering Reflection in biological tissues is not always specular. Scattering (diffuse reflection) occurs when the incident wave encounters an interface that is not perfectly smooth (e.g., surface of visceral organs). Echoes from diffuse reflectors are generally weaker than those re"
+  },
+  "1.10": {
+    "chapter": 1,
+    "number": 10,
+    "page": 21,
+    "caption": "Fig. 1.10). Refraction occurs only when the speeds of sound are different on each side of the tissue inter- face. The degree of beam change (bending) is dependent on the change in the speed of sound traveling from one medium on the incident side to another medium on the transmitted side (Snell’s Law). With medical imaging, fat causes consider- able refraction and image distortion, which contributes to some of the difficulties encountered in obese patients. Refraction encountered with bone imagin"
+  },
+  "1.11": {
+    "chapter": 1,
+    "number": 11,
+    "page": 22,
+    "caption": "Fig. 1.11): (a) Backing material: located behind the piezoelectric element, it serves to prevent excessive vibration. This causes the element to generate ultrasonic waves with a shorter pulse length, improving axial resolution in images. (b) Piezoelectric elements: they generate ultrasonic waves and also generate images. Piezoelectric ceramic (PZT: lead zirconate titanate) is most commonly used because of their high conversion efficiency. (c) Acoustic matching layer: this reduces the acoustic im"
+  },
+  "1.12": {
+    "chapter": 1,
+    "number": 12,
+    "page": 22,
+    "caption": "Fig. 1.12). Curvilinear (or curved) transduc- ers are most useful for deeper structures or imaging requiring a wide field of view (e.g., spine). Microconvex is commonly used for small acoustic window such as cardiac scanning. For superficial structures (e.g., nerves in the interscalene region), it is ideal to use high-frequency transducers in the range of 10–15 MHz, but depth of penetration is often limited to 2–3 cm below the skin surface ("
+  },
+  "1.13": {
+    "chapter": 1,
+    "number": 13,
+    "page": 23,
+    "caption": "Fig. 1.13 Frequency, resolution, and penetration. (Reprinted with permission from Philip Peng Educational Series) deeper structures (e.g., in the gluteal region) or when a wider field of view is required, it may be necessary to use a lower-frequency transducer (2–5 MHz) because it offers ultrasound penetration of 4–5 cm or more below the skin surface. However, the image resolution is often inferior to that obtained with a higher-­ frequency transducer. 1 Basic Principles and Physics of Ultrasoun"
+  },
+  "1.14": {
+    "chapter": 1,
+    "number": 14,
+    "page": 24,
+    "caption": "Fig. 1.14). \u0007Gain The echo signals returning from the tissues reach the crystals and produce an elec- tric current (piezoelectric effect). This is then converted to a pixel on the image, with the energy of the returning wave being proportional to the brightness of the pixel dot on the image. The amplitude of the returning echo signals is very small to be properly displayed on a screen. Hence, it needs amplification. Amplification of signal can be adjusted using the GAIN button, but the use of it"
+  },
+  "1.15": {
+    "chapter": 1,
+    "number": 15,
+    "page": 25,
+    "caption": "Fig. 1.15 Time gain compensation. (Reprinted with permission from Philip Peng Educational Series) Too shallow and cannot see the pleura T7 T8 T7 T8 Pleura 1.5 2.2 3.3 T7 T8 Adequate depth to see all pertinent structures Too deep, cannot see the details of intercostal muscle"
+  },
+  "1.16": {
+    "chapter": 1,
+    "number": 16,
+    "page": 24,
+    "caption": "Fig. 1.16). Too shal- low may miss the important information from the background in the deep field, and too deep will diminish the quality of the image in the superficial field. \u0007Focus The shape of the beam varies and is different for each transducer frequency. There is a fixed focused region of the ultrasound beam which is indicated on the system with a small triangle to the right of the image. This indicates the focal zone of that Frequency Gain Focus Frequency Depth Depth Gain Color"
+  },
+  "1.17": {
+    "chapter": 1,
+    "number": 17,
+    "page": 25,
+    "caption": "Fig. 1.17). Effort should be taken to position the object of interest in the subject to within that focused area to obtain the best detail by adjusting the FOCUS button ("
+  },
+  "1.18": {
+    "chapter": 1,
+    "number": 18,
+    "page": 25,
+    "caption": "Fig. 1.18). \u0007Doppler The Doppler information is displayed graphically using spectral Doppler, or as an image using color Doppler (directional Doppler) or power Doppler (non-directional Doppler). Adequate singal near transducer Signal loss away from transducer Gain to deeper tissue More uniform image quality Signal near transducer remains the same"
+  },
+  "1.19": {
+    "chapter": 1,
+    "number": 19,
+    "page": 26,
+    "caption": "Fig. 1.19). Power Doppler depicts the amplitude or power of Doppler signals rather than the frequency shift. This allows detection of a larger range of Doppler shifts and there- fore better visualization of the smaller vessels, but at the expense of directional and velocity information. Subjects seen as one Improve resolution for three subjects Focal zone"
+  },
+  "1.20": {
+    "chapter": 1,
+    "number": 20,
+    "page": 27,
+    "caption": "Fig. 1.20). An artery is pulsatile and not easily compressible. A vein is collapsible and non-pulsatile."
+  },
+  "1.21": {
+    "chapter": 1,
+    "number": 21,
+    "page": 27,
+    "caption": "Figure 1.21 showed the long axis of vessels with color Doppler on. As discussed in the above section, red color indicates the direction of flow and does not confirm the presence of an artery. \u0007The Adipose, Muscle, and Bone The left sonogram showed the typical appearance of adipose tissue, which is hypoechoic background with streaks of hyperechoic lines that are often irregular in texture and length ("
+  },
+  "1.22": {
+    "chapter": 1,
+    "number": 22,
+    "page": 27,
+    "caption": "Fig. 1.22). Appearance of muscle is generally hypoechoic. The structure deep to the adipose tissue is the rectus muscle in transverse plane, which has a speckled appearance. The sonogram on the right displayed the muscle in long Toward the flow Perpendicular to the flow Away from the flow"
+  },
+  "1.23": {
+    "chapter": 1,
+    "number": 23,
+    "page": 29,
+    "caption": "Fig. 1.23). Above the clavicle, the nerve roots typically appear as hypoechoic (left upper sonogram). As the peripheral nerve picks up more connec- tive tissues, it appears as hyperechoic (femoral nerve in the right upper sonogram). A peripheral nerve can also appear as mixed hyper- and hypoechoic (honeycomb appearance) as shown in the left lower sonogram. In long axis, the nerve appears hypoechoic with fibrillar pattern in the right lower sonogram. However, compared with the tendon in long axis"
+  },
+  "1.24": {
+    "chapter": 1,
+    "number": 24,
+    "page": 29,
+    "caption": "Fig. 1.24 below), the nerve is more hypoechoic, and the echotexture is coarse. \u0007Tendon The left sonogram showed the tendon in short axis, which showed densely fibrillar pattern ("
+  },
+  "1.25": {
+    "chapter": 1,
+    "number": 25,
+    "page": 30,
+    "caption": "Fig. 1.25). The time taken for the second wave to arrive is twice that taken by the depth. This sequence of transmission and reflection can occur many times, with the third wave taking three times as long to return to the transducer and being displayed at three times the depth. These reverberation echoes will be strong because of the high acoustic mismatch. There are few tricks to reduce reverberation artifact: 1. Increase the amount of gel used 2. Use a standoff pad. 3. Reduce the gain. 4. Adju"
+  },
+  "1.26": {
+    "chapter": 1,
+    "number": 26,
+    "page": 30,
+    "caption": "Fig. 1.26). \u0007Acoustic Enhancement Artifact This appears as a localized area of increased echo amplitude behind an area of low attenuation. On a scan, it will appear as an area of increased brightness and can commonly be seen distal to fluid-filled structures such as a cyst ("
+  },
+  "1.27": {
+    "chapter": 1,
+    "number": 27,
+    "page": 30,
+    "caption": "Fig. 1.27). This arises due to the application of the time gain compensation (TGC) to areas of low attenuation structure such as fluid. It is caused by the low level of attenuation of the beam as it passes through fluid relative to the greater attenuation of the beam in the adjacent more solid tissue."
+  },
+  "1.28": {
+    "chapter": 1,
+    "number": 28,
+    "page": 32,
+    "caption": "Fig. 1.28). It arises due to refraction of the beam caused by both the curvatures of the rounded edges. When the ultrasound beam races the rounded edge of the structure, reflection will occur, with an angle of incidence equal to the angle of reflection. The outer part of the beam will be totally reflected, but the reminder of the beam passes through the rounded structure and is refracted. \u0007Mirror Imaging Artifact This artifact results in a mirror image of the structure in an ultrasound display. "
+  },
+  "1.29": {
+    "chapter": 1,
+    "number": 29,
+    "page": 32,
+    "caption": "Fig. 1.29 Mirror imaging artifact. (Reprinted with permission from Philip Peng Educational Series) S. Abbas and P. Peng"
+  },
+  "1.30": {
+    "chapter": 1,
+    "number": 30,
+    "page": 33,
+    "caption": "Fig. 1.30). \u0007Anisotropy Anisotropy refers to the angle dependence appearance of a structure (such as ten- don) on an image ("
+  },
+  "1.31": {
+    "chapter": 1,
+    "number": 31,
+    "page": 34,
+    "caption": "Fig. 1.31b). Any change on this incidence angle dramatically reduces the returning echo, caus- ing the structure to “disappear” out of the image (right panel). Manipulation of the transducer (so as to direct the incident beam perpendicular to the structure of inter- est) and beam-steering can help address anisotropy. \u0007Things to Remember for Optimal Ultrasound Scanning and Performance \u0007Scanning and Positioning Terminology \u0007View and Needle Insertion Short and long axis is based on the position of "
+  },
+  "1.32": {
+    "chapter": 1,
+    "number": 32,
+    "page": 35,
+    "caption": "Fig. 1.32 The three different planes. (Reprinted with permission from usra. ca) 1 Basic Principles and Physics of Ultrasound"
+  },
+  "1.33": {
+    "chapter": 1,
+    "number": 33,
+    "page": 34,
+    "caption": "Fig. 1.33b). If the needle tip and the shaft are inserted in a way such that both are in the ultrasound beam, it is called in-plane. If the axis of needle insertion is right angle to the ultrasound beam, it is out-of-plane. \u0007Transducer Handling There are four basic transducer handling (mnemonic = “PART”) ("
+  },
+  "1.34": {
+    "chapter": 1,
+    "number": 34,
+    "page": 34,
+    "caption": "Fig. 1.34). • P = Pressure, adjust according to the depth of target for visualization • A = Alignment, sliding the transducer longitudinally • R = Rotation, rotating the transducer (clockwise/counterclockwise) • T = Tilting, tilting or angling the transducer"
+  },
+  "1.35": {
+    "chapter": 1,
+    "number": 35,
+    "page": 37,
+    "caption": "Fig. 1.35). This includes the following: (a) Adjusting the height of patient bed to an appropriate level for the operator. (b) Assuming a good posture, by choosing to stand or sit down (on a chair). (c) Performing the procedure from the same target side to avoid reaching over the patient. \u0007Positioning the Equipment The ultrasound machine is placed in a position so that the operator can view the site of injection and the machine without turning the head. Similarly, the screen of the monitoring eq"
+  },
+  "1.36": {
+    "chapter": 1,
+    "number": 36,
+    "page": 37,
+    "caption": "Fig. 1.36). \u0007Position of the Assistant An assistant may be needed both to operate the ultrasound machine and to inject the local anesthetic solution. This may be achieved by standing opposite to the operator and near the ultrasound machine. Pressue Alignment Tilt Rotation"
+  },
+  "1.37": {
+    "chapter": 1,
+    "number": 37,
+    "page": 39,
+    "caption": "Fig. 1.37 Correct and incorrect position of holding the ultrasound probe. (Reprinted with permis- sion from Philip Peng Educational Series) \u0007Holding the Probe and Needle Insertion It is important to have a steady control of the probe position. The probe can be held with 2–3 fingers, and the hand can rest on the body of the patient gently to gain sup- port ("
+  },
+  "1.38": {
+    "chapter": 1,
+    "number": 38,
+    "page": 40,
+    "caption": "Fig. 1.38 (a) Correct angle of insertion of needle. (b) Incorrect angle of entry of needle. (Reprinted with permission from Philip Peng Educational Series) S. Abbas and P. Peng"
+  },
+  "2.1": {
+    "chapter": 2,
+    "number": 1,
+    "page": 45,
+    "caption": "Fig. 2.1). The lesser occipital nerve (LON) is the most cephalad branch of the superficial cervical plexus beneath the sternocleidomastoid muscle. It is formed by fibers of the Table 2.1 Indications of occipital nerve blocks in headache Specific types of headache Primary Migraine, cluster headaches, post-concussion headache Secondary Cervicogenic headache, occipital neuralgia"
+  },
+  "2.2": {
+    "chapter": 2,
+    "number": 2,
+    "page": 46,
+    "caption": "Fig. 2.2). \u0007Patient Selection The diagnosis of a specific headache type can be made according to the International Head Society (IHS) classification. The occipital nerve block plays a diagnostic role in the diagnosis of occipital neuralgia and cervicogenic headache. For the other aforementioned headaches, the nerve block can be considered in patient’s failure to respond to conservative management. \u0007Ultrasound Scanning \u0007The Greater Occipital Nerve: Two Different Target Locations \u0007Proximal Approac"
+  },
+  "2.3": {
+    "chapter": 2,
+    "number": 3,
+    "page": 47,
+    "caption": "Fig. 2.3 The scan at the occipital protuberance (∗). The arrows indicated the superficial fascia of the scalp. The position of the ultrasound probe is shown in the picture in the left lower corner. (Reprinted with permission from Philip Peng Educational Series)"
+  },
+  "2.4": {
+    "chapter": 2,
+    "number": 4,
+    "page": 47,
+    "caption": "Fig. 2.4). Scan 3: The transducer is moved laterally to visualize the inferior oblique capi- tis (IOC) muscle and semispinalis capitis (SSC) muscle; to maximize the image of this muscle, the lateral end of the probe is rotated slightly in a cranial direction to bring the transducer parallel to the long axis of the muscle ("
+  },
+  "2.5": {
+    "chapter": 2,
+    "number": 5,
+    "page": 47,
+    "caption": "Fig. 2.5). With this movement, the C2 lamina appears boat-shaped, and IOC is cradled within it. The plane between the IOC and SSC is visualized. Greater occipital nerve (GON) is sandwiched between the IOC and SSC muscles. LON-lesser occipital nerve, SCM-sternocleidomastoid."
+  },
+  "2.6": {
+    "chapter": 2,
+    "number": 6,
+    "page": 48,
+    "caption": "Fig. 2.6). \u0007Distal Approach at Level of Occiput The key landmark is the superior nuchal line and occipital protuberance. Scan 1: Upper sonograph shows the transverse view at superior nuchal line ("
+  },
+  "2.7": {
+    "chapter": 2,
+    "number": 7,
+    "page": 49,
+    "caption": "Fig. 2.7b Doppler showed the occipital artery which is in the same fascia plane with the greater occipital nerve. (Reprinted with permission from Philip Peng Educational Series) Y. Hoydonckx and P. Peng"
+  },
+  "2.8": {
+    "chapter": 2,
+    "number": 8,
+    "page": 50,
+    "caption": "Fig. 2.8 Sonography showed the lesser occipital nerve. SCM- sternocleidomastoid. (Reprinted with permission from Philip Peng Educational Series) 2 Greater and Lesser Occipital Nerve"
+  },
+  "2.9": {
+    "chapter": 2,
+    "number": 9,
+    "page": 51,
+    "caption": "Fig. 2.9 Sonography showed the injection around the greater occipital nerve. SSC semispinalis capitis; IOC inferior obliquus capitis. (Reprint with permission from Philip Peng Educational Series) 1. We recommend for less-experienced sonographers to start with the easier distal US-guided GON approach. 2. A block is successful if it creates absence of light-touch sensation in the dermatome of GON. 3. The target area in the proximal approach is not far from vertebral artery and epidural space; cons"
+  },
+  "3.1": {
+    "chapter": 3,
+    "number": 1,
+    "page": 54,
+    "caption": "Fig. 3.1). The stellate ganglion (also known as the cervicotho- racic ganglion) is formed on each side of the neck by the fusion of the inferior cer- vical ganglion with the first thoracic ganglion. It lies deep to the prevertebral fascia and medial and posterior to the carotid artery. The ganglion is 1–2.5 cm long and approximately 1 cm wide and may be fusiform, triangular, or oval in shape. At the level of the sixth cervical vertebra (C6), the transverse process has a bony process (termed the "
+  },
+  "3.2": {
+    "chapter": 3,
+    "number": 2,
+    "page": 56,
+    "caption": "Fig. 3.2 The cervical ganglion trunk: (1) superior cervical ganglion, (2) middle cervical ganglion, and (3) cervicothoracic ganglion. (Reprinted with permission from Danilo Jankovic) 3 Cervical Sympathetic Trunk"
+  },
+  "3.5": {
+    "chapter": 3,
+    "number": 5,
+    "page": 57,
+    "caption": "Fig. 3.5). At this level, the transverse process has a prominent posterior tubercle and vestigial anterior tubercle. Use color Doppler to identify the vertebral artery. Note that at the C6 level, the vertebral artery most commonly enters the fora- men transversarium. In up to 10% of patients, the vertebral artery travels outside the foramen transversarium at the C6 or even C5 level. The figure showed the presence of vertebral artery anterior to the anterior tubercle at C5 level ("
+  },
+  "3.6": {
+    "chapter": 3,
+    "number": 6,
+    "page": 59,
+    "caption": "Fig. 3.6 Vertebral artery anterior to the anterior tubercle (AT) at C5. Vertebral artery indicated by bold arrow. The other artery medial to the vertebral artery is the carotid artery with a reflection artifact (arrows). SCM, sternocleidomastoid muscle; ∗jugular vein. (Reprinted with permission from Philip Peng Educational Series)"
+  },
+  "3.3": {
+    "chapter": 3,
+    "number": 3,
+    "page": 57,
+    "caption": "Fig. 3.3 Sonoanatomy at C6. The right lower corner showed the position of the patient. Longus colli muscle (LC), longus capitis muscle (LCa), prevertebral fascia (arrows), cervical nerve root (N), carotid artery (C), and internal jugular vein (∗∗). At this level, the transverse process has a prominent anterior tubercle (AT). (Reprinted with permission from Philip Peng Educational Series) • Position: Semi-lateral decubitus position, with the neck turned contralateral • Probe: Linear 6–13 MHz F. M"
+  },
+  "3.7": {
+    "chapter": 3,
+    "number": 7,
+    "page": 59,
+    "caption": "Fig. 3.7 Panels (a)–(c) showed different aberrant vessels in short axis and long axis (bold arrows). Panels (b)–(d) showed the presence of the esophagus (E) outlined by arrowheads. (Reprinted with permission from Philip Peng Educational Series) F. M. M. Alshuraim and D. Flamer"
+  },
+  "3.4": {
+    "chapter": 3,
+    "number": 4,
+    "page": 58,
+    "caption": "Fig. 3.4 The corresponding anatomic structures revealed at C6. (Reprinted with permission from Philip Peng Educational Series)"
+  },
+  "3.8": {
+    "chapter": 3,
+    "number": 8,
+    "page": 60,
+    "caption": "Fig. 3.8 Figure showing the medial (out-of-plane) approach or lateral in-plane approach. The target is the prevertebral fascia (arrows). SCM, sternocleidomastoid muscle; LCa, longus capitis muscle; LC, longus colli muscle; AT, anterior tubercle; T, trachea; solid line, medial out-of-plane approach, dotted line, lateral in-plane approach. *Internal jugular vein (collapsed) (Reprinted with permission from Philip Peng Educational Series) 1. When confirming cervical levels, make sure to scan in a ca"
+  },
+  "4.1": {
+    "chapter": 4,
+    "number": 1,
+    "page": 64,
+    "caption": "Fig. 4.1 Schematic drawing of the course of the suprascapular nerve. Ultrasound probe needle placement is defined for an ultrasound-guided block along the spine of the scapula. (Reprinted with permission from Pain Diagnostics and Interventional Care. Artwork by Zachary Pellis) Table 4.2 Differential diagnosis for suprascapular nerve-related shoulder pain Innervated structures Differential diagnosis Supraspinatus Ganglion cyst at the suprascapular notch Direct compression \u0007Trauma \u0007Fracture callus"
+  },
+  "4.2": {
+    "chapter": 4,
+    "number": 2,
+    "page": 67,
+    "caption": "Fig. 4.2). Ultrasound scanning is performed with a high-frequency linear ultrasound trans- ducer placed in a coronal plane over the suprascapular fossa with a slight anterior tilt. In this position, a transverse section of the supraspinous fossa is visualized ("
+  },
+  "4.3": {
+    "chapter": 4,
+    "number": 3,
+    "page": 66,
+    "caption": "Fig. 4.3 An ultrasound image of the posterior approach for the ultrasound- guided suprascapular nerve block. The arrow identifies the spine of the scapula. (Reprinted with permission from Pain Diagnostics and Interventional Care)"
+  },
+  "4.4": {
+    "chapter": 4,
+    "number": 4,
+    "page": 67,
+    "caption": "Fig. 4.4). \u0007Procedure The initial US scan is performed as described in the above. The US probe is moved to visualize the suprascapular fossa. The transducer is used to identify the suprascapular nerve on the floor of the spine of the scapula between the supra- scapular and spinoglenoid notches. In some cases, the nerve cannot be identi- fied, and the area below the supraspinatus fascia just above the scapular spine is targeted. Doppler is used to ensure blood vessels, including the suprascapular"
+  },
+  "4.5": {
+    "chapter": 4,
+    "number": 5,
+    "page": 68,
+    "caption": "Fig. 4.5). The needle is advanced from medial to lateral. For specific cases, an echogenic needle tip can be helpful for visualization because of the steep trajectory of the needle. The injection occurs under the distal fascial layer of the supraspinatus muscle. \u0007Ultrasound-Guided Peripheral Nerve Stimulation of the Suprascapular Nerve Chronic shoulder pain is the second most common musculoskeletal complaint after the knee. Although spinal cord and dorsal root ganglion stimulation are effective "
+  },
+  "5.1": {
+    "chapter": 5,
+    "number": 1,
+    "page": 71,
+    "caption": "Fig. 5.1). The ventral ramus of T12 forms the subcostal nerve that is located inferior to the corresponding 12th rib. The dorsal rami of T1–T12 travel posteriorly and innervate sensation to the skin, muscles, and bones of the back. Each intercostal nerve is associated with an artery and vein of the corresponding level ("
+  },
+  "5.2": {
+    "chapter": 5,
+    "number": 2,
+    "page": 71,
+    "caption": "Fig. 5.2). The aorta derives the intercostal arteries, while the azygous and hemiazygous veins derive the intercostal veins. The intercostal nerve courses infe- rior to both the vein and artery of the same segment. The intercostal nerves are composed of dorsal horn sensory fibers, ventral horn motor efferent fibers, and postganglionic sympathetic nerves. The intercostal nerves"
+  },
+  "5.3": {
+    "chapter": 5,
+    "number": 3,
+    "page": 72,
+    "caption": "Fig. 5.3). It is important to note that there is variable collateral innervation of the adjacent segment; therefore, it is neces- sary to block both the level above and below the desired level when performing an intercostal nerve block. \u0007Additional Caveats The subcostal nerve is a unique T12 intercostal nerve; it does not run as closely to the intercostal groove of its accompanying rib as other intercostal nerves do. The nerve supplies the lower abdominal wall and is not closely associated with "
+  },
+  "5.4": {
+    "chapter": 5,
+    "number": 4,
+    "page": 76,
+    "caption": "Fig. 5.4 (a) The intercostal muscles. EI external intercostal, II internal intercostal, pleura indi- cated by arrows. Bold arrow represents the fascia over the external intercostal muscle. (b) shows a similar sonogram in an obese patient. ∗ represents the target location for the fascial plane between the internal intercostal and innermost intercostal muscles, or deep to the internal intercostal when the innermost intercostal is not well visualized. (Reprinted with permission from Philip Peng Edu"
+  },
+  "5.5": {
+    "chapter": 5,
+    "number": 5,
+    "page": 77,
+    "caption": "Fig. 5.5 The intercostal space in long axis. EI external intercostal, II internal intercostal; pleura, indicated by arrows. Bold arrow represents the fascia over the external intercostal muscle. ∗ represents the target location for the fascial plane between the internal intercostal and innermost intercostal muscles, or deep to the internal intercostal when the innermost intercostal is not well visualized. (Reprinted with permission from Philip Peng Educational Series) 5 Intercostal Nerve Block"
+  },
+  "5.6": {
+    "chapter": 5,
+    "number": 6,
+    "page": 77,
+    "caption": "Fig. 5.6). An in-plane approach for needle placement is recommended for optimal visu- alization. Puncture site is initiated from the superior border of the rib inferior the intercostal nerve of interest (i.e., if T6 intercostal nerve is to be blocked, the superior border of T7 rib is the puncture site). Local anesthetic is given for skin anesthesia, and then a 22- or 25-gauge 1.5- to 3.5-inch needle is inserted at a 35–45° angle and directed to the inferior border of the corresponding rib. The n"
+  },
+  "5.7": {
+    "chapter": 5,
+    "number": 7,
+    "page": 78,
+    "caption": "Fig. 5.7). \u0007Postprocedure Follow-Up and Pitfalls • After completion of the procedure, an evaluation of the patient should be con- ducted. Auscultation using a stethoscope to confirm air movement in the chest wall is necessary to diagnose pneumothorax ("
+  },
+  "5.8": {
+    "chapter": 5,
+    "number": 8,
+    "page": 78,
+    "caption": "Fig. 5.8). • Alternatively, one can scan the patient at the site of needle entry with the patient in the same position. The pleura should appear as a discrete hyperechoic line freely gliding. B mode can be used and demonstrates seashore sign. Arrows indi- cate the pleura. • If a mild pneumothorax is detected, supplemental oxygen may be necessary. For more severe tension pneumothorax, a chest tube may be needed to prevent pul- monary decompensation."
+  },
+  "5.9": {
+    "chapter": 5,
+    "number": 9,
+    "page": 80,
+    "caption": "Fig. 5.9 External Intercostal (EI) muscle, Injectate (∗) causes the lifting of the external intercostal fascia Table 5.3 HIFU, RFA, EtOH, ICNB studies References Group (n) Methods Results Conclusion Limitations Gulati et al. [3] HIFU (4) RFA (4) EtOH lesions (4) 2 Yorkshire pigs (30–40 kg) Pathology: HIFU (2) nerve intact (2) nerve lesioned RFA (2) nerve intact (2) nerve lesioned EtOH (4) nerve intact HIFU may be used as a noninvasive neurolytic technique in swine. HIFU may have potential as a n"
+  },
+  "6.1": {
+    "chapter": 6,
+    "number": 1,
+    "page": 84,
+    "caption": "Fig. 6.1). The IH and II nerves arise as a single trunk from the ventral ramus of nerve L1. Either before or soon after emerging from the lateral border of the psoas major muscle, this single trunk divides into the IH and II nerves. The IH nerve emerges along the upper lateral border of the psoas major and passes across the ventral surface of quadratus lumborum muscle, travelling in the fascia lumborum towards the iliac crest. Midway between the iliac crest and twelfth rib pierces the transversu"
+  },
+  "6.2": {
+    "chapter": 6,
+    "number": 2,
+    "page": 84,
+    "caption": "Fig. 6.2).The IH nerve then runs inferomedially, piercing the internal oblique muscle above the anterior superior iliac spine (ASIS). From this point, the nerve runs between the internal oblique and external oblique muscles,"
+  },
+  "6.3": {
+    "chapter": 6,
+    "number": 3,
+    "page": 85,
+    "caption": "Fig. 6.3). Throughout the course, it also supplies branches to the abdominal musculature. The nerve provides sensory innervation to the skin over the root of the penis and the anterior surface of the scrotum in men (mons pubis and lateral labium majora in women) and superomedial thigh region, although the sensory innerva- tion is variable. Throughout the course, it also supplies branches to the abdominal musculature. The border nerves anatomic variations are well documented as one or more of the"
+  },
+  "6.4": {
+    "chapter": 6,
+    "number": 4,
+    "page": 88,
+    "caption": "Fig. 6.4). At this level, all three layers of abdominal muscles can be easily visualized and the IH and II are quite consistently located between the transver- sus abdominis and internal oblique muscle. 2. Put the probe in short axis to the nerve. 3. Make sure the probe is perpendicular to the tangential plane of the skin. 4. Make sure the lateral part of the probe is on the iliac crest as the IH and II are usually located within 1.5 cm from the iliac crest. 5. Put more pressure on the medial pa"
+  },
+  "6.5": {
+    "chapter": 6,
+    "number": 5,
+    "page": 89,
+    "caption": "Fig. 6.5 Sonography of the abdominal muscles and ilioinguinal and iliohypogastric nerves. Fascia expansion (arrowhead) indicated where the ilioinguinal and iliohypogastric nerves are (∗). The right sonography showed the Doppler scan. The deep circumflex femoral artery is shown with the fascial expansion (arrows) between the IO and TA. Arrow indicated the subcostal nerve. EO external oblique, IO internal oblique, TA transversus abdominis, PE peritoneum. (Reprinted with permission from Philip Peng"
+  },
+  "6.6": {
+    "chapter": 6,
+    "number": 6,
+    "page": 90,
+    "caption": "Fig. 6.6 Sonography showing the needle insertion. The needle was inserted out of plane and indicated by arrowheads. The injectate was indicated by ∗ within the fascia expansion (arrows). EO external oblique, IO internal oblique, TA transversus abdominis. (Reprinted with permission from Philip Peng Educational Series) 1. When scanning at the level of ASIS, make sure the ultrasound probe is along the short axis of the inguinal canal. 2. Keep the iliac crest always in view. 3. Perfect alignment of "
+  },
+  "7.1": {
+    "chapter": 7,
+    "number": 1,
+    "page": 93,
+    "caption": "Fig. 7.1 The genital and femoral branches of the genitofemoral nerve. (Reprinted with permission from Dr. Maria Fernanda Rojas) Femoral nerve Obturator nerve Anterior scrotal nerve Ilioinguinal nerve Iliohypogastric nerve Genital branch of genitofemoral nerve Lateral cutaneous nerve of thigh Femoral branch of genitofemoral nerve Dorsal nerve of penis (pudendal nerve)"
+  },
+  "7.2": {
+    "chapter": 7,
+    "number": 2,
+    "page": 92,
+    "caption": "Fig. 7.2). The genital branch crosses the inferior epigastric artery (IEA) at its lower end lateral to the junction between the external iliac artery (EIA) and IEA and enters the inguinal canal through the deep inguinal ring ("
+  },
+  "7.3": {
+    "chapter": 7,
+    "number": 3,
+    "page": 92,
+    "caption": "Fig. 7.3). It travels along with other contents of the inguinal canal along with the spermatic cord in men and the round ligament of the uterus in women. The canal also contains the ilioinguinal nerve and testicular vessels in men or the vessel following the round ligament of the uterus in females."
+  },
+  "7.4": {
+    "chapter": 7,
+    "number": 4,
+    "page": 95,
+    "caption": "Fig. 7.4 Figure showing the position of the ultrasound transducer (red square 1) and the corre- sponding sonography. FA femoral artery, ∗ femoral nerve. (Reprinted with permission from Philip Peng Educational Series) A B 2 Anterio superior iliac spine External iliac artery Femoral artery Pubic symphysis"
+  },
+  "7.5": {
+    "chapter": 7,
+    "number": 5,
+    "page": 95,
+    "caption": "Fig. 7.5 Figure showing the position of the ultrasound transducer (red square 2) and the corre- sponding sonography. Line bold arrow, pubic ramus; arrows, inguinal canal, FA femoral artery, EIA external iliac artery. (Reprinted with permission from Philip Peng Educational Series) A. R. Thottungal and P. Peng"
+  },
+  "7.6": {
+    "chapter": 7,
+    "number": 6,
+    "page": 96,
+    "caption": "Fig. 7.6). Note the spermatic cord is a structure with multiple tubular structures inside (vas deferens, arteries, and vein). The probe is moved medially tracing these structures to move away from the FA. \u0007Method 2 \u0007Ultrasound Scanning \u0007Scan 1 This technique is mainly used for male. The initial probe position is to scan the spermatic cord next to the superficial inguinal ring around the pubic tubercle (PT) (upper panel of"
+  },
+  "7.7": {
+    "chapter": 7,
+    "number": 7,
+    "page": 97,
+    "caption": "Fig. 7.7 Position of ultrasound probe at and lateral to the pubic tubercle (PT) and the correspond- ing sonography. The spermatic cord was outlined with arrows. (Reprinted with permission from Philip Peng Educational Series) A. R. Thottungal and P. Peng"
+  },
+  "7.8": {
+    "chapter": 7,
+    "number": 8,
+    "page": 98,
+    "caption": "Fig. 7.8 Position of ultrasound probe and the corresponding sonography. GB genital branch of the genitofemoral nerve (GFN), EIA external iliac artery, IEA inferior epigastric artery, PS pubic sym- physis, RA rectus abdominis. (Reprinted with permission from Philip Peng Educational Series)"
+  },
+  "7.9": {
+    "chapter": 7,
+    "number": 9,
+    "page": 98,
+    "caption": "Fig. 7.9 Position of ultrasound probe and the corresponding sonography revealing the genital branch of the genitofemoral nerve (arrows). EIA external iliac artery. (Reprinted with permission from Philip Peng Educational Series) 7 Genitofemoral Nerve"
+  },
+  "7.10": {
+    "chapter": 7,
+    "number": 10,
+    "page": 99,
+    "caption": "Fig. 7.10). The initial injection (left sonogram) is inside the spermatic cord outlined by the arrowheads. It is impor- tant to observe the spread of the local anesthetic (∗) as this is a very vascular structure. The needle is pulled back to deport the medication outside the sper- matic cord but inside the inguinal canal (arrows) in the right sonogram. This sonogram highlighted the spread of the local anesthetic around the spermatic cord. Inject twice because the GFN may travel outside or within"
+  },
+  "7.11": {
+    "chapter": 7,
+    "number": 11,
+    "page": 99,
+    "caption": "Fig. 7.11). • Needles: 22G/25G, 35- or 50-mm echogenic needle • Drugs: 2–4 ml of 0.25–0.5% levo or plain bupivacaine with 1 ml (3.8 mg) dexamethasone or 40 mg Depo-Medrol injected inside the inguinal canal and another 2–4 ml given inside the spermatic cord."
+  },
+  "8.1": {
+    "chapter": 8,
+    "number": 1,
+    "page": 102,
+    "caption": "Fig. 8.1). Pain aggravated on sitting, external tenderness near the greater sciatic notch, pain on any maneuver that increases piriformis muscle tension, and limitation of straight leg raising are features commonly observed in this syndrome. Injections of local anes- thetics, steroids, and botulinum toxin into this muscle using anatomic landmarks,"
+  },
+  "8.2": {
+    "chapter": 8,
+    "number": 2,
+    "page": 109,
+    "caption": "Fig. 8.2). The OI may be subjected to stress during its sharply angulated exit from the pelvis, as evidenced by the presence of a cartilaginous region on the posterior ischium over which the OI tendon glides. The OI bursa is located medially between the OI and posterior ischial cartilage and reduces frictional stresses in this region. \u0007Patient Selection Pain is present in the mid-buttock region and tenderness on palpation of the interval between the piriformis muscle and the ischial tuberosity c"
+  },
+  "8.3": {
+    "chapter": 8,
+    "number": 3,
+    "page": 105,
+    "caption": "Fig. 8.3 The variation of the anatomical relationship between the piriformis muscle and sciatic nerve. The most common variation is shown in (a), where the sciatic nerve passes below the piri- formis muscle (83%). The sciatic nerve can appear as two trunks passing between and inferior to the piriformis (b), superior and inferior to piriformis (c), or above and between the piriformis muscle (e). Rarely, it appears as one trunk passing between the piriformis (d), or superior to the piriformis musc"
+  },
+  "8.4": {
+    "chapter": 8,
+    "number": 4,
+    "page": 105,
+    "caption": "Fig. 8.4 PACE and Beatty test A. Bhatia and P. Peng"
+  },
+  "8.6": {
+    "chapter": 8,
+    "number": 6,
+    "page": 107,
+    "caption": "Fig. 8.6 The positions of the ultrasound probe (A and B) are shown in left upper diagram. (a) When the probe is placed at the iliac crest, the illum and gluteus maximus (G Max) is well seen. (b) Sliding the probe in the position B which is at the level of the greater sciatic notch, piriformis muscle (Pi) is seen deep to the gluteus maximus (G Max). Please note the sciatic nerve (arrowheads) and the curve shape of ischium (arrow). Right lower diagram is the Doppler scan when the probe is placed i"
+  },
+  "8.5": {
+    "chapter": 8,
+    "number": 5,
+    "page": 106,
+    "caption": "Fig. 8.5 FAIR and Freiberg test (original). (Reprinted with permission from Philip Peng Educational Series) 8 Pelvic Muscles"
+  },
+  "8.7": {
+    "chapter": 8,
+    "number": 7,
+    "page": 108,
+    "caption": "Fig. 8.7 Left figure showing position of the needle and the probe and right figure showed the cor- responding sonography. (Reprinted with permission from Philip Peng Educational Series) • Start scanning from the iliac crest and move the probe slowly in the caudal direction to avoid confusion with muscles in the lesser sciatic notch. • When tilting the probe medially to optimize the scan, quite often the authors will also place the probe on the lateral aspect of gluteal regional and “push” the pr"
+  },
+  "8.8": {
+    "chapter": 8,
+    "number": 8,
+    "page": 110,
+    "caption": "Fig. 8.8 The left upper diagram shows the positions of the ultrasound probe at different level of pelvis (A-D) and the typical appearances of the bony contour (A-D). Only the corresponding sono- grams from A to C are shown here and D will be discussed in"
+  },
+  "8.9": {
+    "chapter": 8,
+    "number": 9,
+    "page": 110,
+    "caption": "Fig. 8.9). Please note the bony contour. Because the orientation of the bone and OI muscle is close to 90° to the ultrasound probe, the OI appears as a hypoechoic structure. If the clinician carefully observes the structures transitioned from the ischial spine to the less sciatic notch, the sacrotuberous ligament continues to be observed and the pudendal neurovascu- lar bundle will move close to the OI in Alcock’s canal. Deep to the sacrotuber- ous ligament, two pelvic floor muscles can be seen:"
+  },
+  "8.10": {
+    "chapter": 8,
+    "number": 10,
+    "page": 112,
+    "caption": "Fig. 8.10 Figure showing the ultrasound probe and needle position on the left side and the cor- responding sonography on the right side. Obturator internus muscle, solid beige color; obturator internus tendon, bold red arrows; ∗∗, obturator internus bursa; sacrotuberous ligament, green color; line arrows, needle; arrowheads, injectate. (Reprinted with permission from Philip Peng Educational Series) • Insert needle 2 cm away from the edge of the probe. • Start scanning from the iliac crest and mo"
+  },
+  "8.11": {
+    "chapter": 8,
+    "number": 11,
+    "page": 113,
+    "caption": "Fig. 8.11). The inferior gemellus lies immediately cephalad and the adductor magnus is caudal. A bursa is often found between the QF muscle and the lesser trochanter. The obturator externus muscle lies deep to the QF and cannot be seen in the figure. \u0007Patient Selection Patients, often middle-aged and elderly women, present with buttock or hip pain that can be worsened with hip flexion. MRI of the gluteal region shows compres- sion of the QF accompanied by tears, edema, or atrophy of this muscle "
+  },
+  "8.12": {
+    "chapter": 8,
+    "number": 12,
+    "page": 114,
+    "caption": "Fig. 8.12). \u0007Procedure Both out-of-plane and in-plane are reasonable methods, depending on the expe- rience and skill of the practitioner. The most important issue is to plane the needle trajectory so as to avoid the sciatic nerve. • Patient position: Prone • Probe: Curvilinear 2–6 MHz • Needle: 22 or 25 G, 3.5- or 5-inch needle (preferably echogenic) • Injectate: 1–2 mL of one of the following: –– Local anesthetic (1% lidocaine or 0.25% bupivacaine) –– Local anesthetic with methylprednisolone 4"
+  },
+  "9.1": {
+    "chapter": 9,
+    "number": 1,
+    "page": 118,
+    "caption": "Fig. 9.1 Pudendal nerve between sacrospinous and sacrotuberous ligament. (Reprinted with per- mission from Philip Peng Educational Series) 1 Sacrospinous ligament Inferior rectal N. Alcock’s canal Perineal branch of pudendal N Dorsal nerve of penis/clitoris 3 2"
+  },
+  "9.2": {
+    "chapter": 9,
+    "number": 2,
+    "page": 118,
+    "caption": "Fig. 9.2 The left diagram showed the course of pudendal nerve around the ischial spine and Alcock’s canal and the three terminal branches of the pudendal nerve. (Reprinted with permission from Philip Peng Educational Series) The right diagram showed the pudendal and its close proxim- ity with sciatic nerve. (1) Pudendal nerve and vessel, (2) sacrotuberous ligament, (3) sciatic nerve. (Reprinted with permission from Dr. Danilo Jankovic) G. A. Bellingham and P. Peng"
+  },
+  "9.3": {
+    "chapter": 9,
+    "number": 3,
+    "page": 119,
+    "caption": "Fig. 9.3 (1) Pudendal nerve, (2) inferior rectal nerves, (3) perineal nerves, (4) internal pudendal artery, (5) internal pudendal veins, (6) inferior rectal artery, (7) ischiorectal fossa, (8) vaginal ori- fice, (9) ischial tuberosity, (10) gluteus maximus muscle, and (11) the anus. (Reprinted with per- mission from Dr. Danilo Jankovic) Inferior cluneal nerve Inferior cluneal nerve Posterior femoral cutaneous nerve Perineal ramus Sciatic nerve Gluteus maximus"
+  },
+  "9.4": {
+    "chapter": 9,
+    "number": 4,
+    "page": 119,
+    "caption": "Fig. 9.4 Inferior cluneal nerve and perineal ramus. (Reprinted with permission from Philip Peng Educational Series) 9 Pudendal and Inferior Cluneal Nerve"
+  },
+  "9.5": {
+    "chapter": 9,
+    "number": 5,
+    "page": 121,
+    "caption": "Fig. 9.5 Position of the ultrasound probe over the iliac crest and the pertinent anatomy and sono- anatomy. PSIS, posterior superior iliac spine; arrow, dimple of Venus approximating the position of PSIS; G. MA, gluteus maximus; G. MD, gluteus medius; G. MN, gluteus minimus. (Reprinted with permission from Philip Peng Educational Series) Gluteus maximus Piriformis Ischial spine Sciatic nerve Sacrospinous ligament Sacrotuberous ligament Pudendal artery Pudendal nerve Alcock canal"
+  },
+  "9.6": {
+    "chapter": 9,
+    "number": 6,
+    "page": 121,
+    "caption": "Fig. 9.6 Position of the ultrasound probe over the greater sciatic notch and the pertinent anatomy and sonoanatomy. G MA, gluteus maximus; Pi, piriformis; ∗, the sciatic nerve; branch of inferior gluteal artery, red in color Doppler; the ischium is indicated by arrows. (Reprinted with permission from Philip Peng Educational Series) 9 Pudendal and Inferior Cluneal Nerve"
+  },
+  "9.7": {
+    "chapter": 9,
+    "number": 7,
+    "page": 122,
+    "caption": "Fig. 9.7): 1. The ischium (IS) becomes longer and straighter. 2. Piriformis will disappear. 3. Medial to the ischium, a hyperechoic structure, sacrospinous ligament (SSL), appears. 4. Appearance of pudendal artery (PA). Difference between the hyperechoic ischium and SSL is that the former casts an anechoic shadow (∗). Gluteus maximus Piriformis Ischial spine Sciatic nerve Sacrospinous ligament Sacrotuberous ligament Pudendal artery Pudendal nerve Alcock canal"
+  },
+  "9.8": {
+    "chapter": 9,
+    "number": 8,
+    "page": 123,
+    "caption": "Fig. 9.8). Once the tip of the needle (arrows) passes the sacrotuberous ligament (arrowheads), hydrolocation of normal saline is important to ensure the spread of the injectate between the sacrospinous ligament (bold arrows) and sacrotuberous ligament. \u0007Ultrasound Scan (Inferior Cluneal Nerve) \u0007Scan 1 Upper sonogram of"
+  },
+  "9.9": {
+    "chapter": 9,
+    "number": 9,
+    "page": 124,
+    "caption": "Fig. 9.9. Pay attention to the details of the sciatic nerve and scan in the caudal direction. A few small nerves (arrowheads) move away from the sciatic nerve and move medially. They are the inferior cluneal nerve (ICN). Moving further in caudal direction, the ICN will course deep to the undersur- face of the G Max and emerge at the lower border to the subcutaneous plane. However, at this level, the PR moves further medial and crosses the hamstring origin to the perineum. These are fine branches"
+  },
+  "9.10": {
+    "chapter": 9,
+    "number": 10,
+    "page": 125,
+    "caption": "Fig. 9.10 Injection around the inferior cluneal nerve (arrow heads). GT, greater trochanter; IT, ischial tuberosity. ∗, injectate. (Reprinted with permission from Philip Peng Educational Series) 1. When scanning at the level of sciatic notch, make sure that the ultrasound probe is along the axis of piriformis muscle and the probe is tilted “medi- ally” as the greater sciatic notch is tilted “laterally”. 2. Keeping the needle insertion point 2 cm away is important as the needle will form a steep "
+  },
+  "10.1": {
+    "chapter": 10,
+    "number": 1,
+    "page": 128,
+    "caption": "Fig. 10.1). Before it reaches the level of ASIS, it crosses under the deep circumflex artery. The LFCN usually emerges from under the inguinal ligament (IL) medial to ASIS at a variable distance (average 29 mm; range 0–73 mm) ("
+  },
+  "10.2": {
+    "chapter": 10,
+    "number": 2,
+    "page": 128,
+    "caption": "Fig. 10.2). A few anatomical variations that one should bear in mind in scanning the LFCN: it may course over or through the IL rather than under it, it may branch before crossing the IL in up to 28% of cases, and it may pass over or posterior the ASIS in 4–29%. The average diameter of LFCN was found to be 3.2 ± 0.7 mm although there is no established normal value for cross-sectional area. Once the LFCN passes under the IL, it usually enters the thigh superficial to the sartorius muscle confined"
+  },
+  "10.3": {
+    "chapter": 10,
+    "number": 3,
+    "page": 129,
+    "caption": "Fig. 10.3). \u0007Patient Selection The diagnosis of MP is mainly on clinical ground. The most common presenta- tion is a burning and tingling sensation on the anterior and lateral aspects of the thigh as far as the knee. Numbness is a late sign and is rarely the only presentation, Lateral femoral cutaneous nerve Iliacus Tensor fascia lata Sartorius"
+  },
+  "10.4": {
+    "chapter": 10,
+    "number": 4,
+    "page": 132,
+    "caption": "Fig. 10.4 Scanning at the fat-filled grove between sartorius and tensor fascia lata. (Reprinted with permission from Philip Peng Educational Series) 10 Lateral Femoral Cutaneous Nerve"
+  },
+  "10.5": {
+    "chapter": 10,
+    "number": 5,
+    "page": 132,
+    "caption": "Fig. 10.5). The LFCN was found at the fat-filled grove (left upper sonogram). It was traced and the LFCN became to approach the surface of the sartorius muscle (right upper and lower two sonograms). Please note a couple of variations ("
+  },
+  "10.6": {
+    "chapter": 10,
+    "number": 6,
+    "page": 132,
+    "caption": "Fig. 10.6). The LFCN can branch into 2–5 branches over the sartorius (left sonogram). It may also pass through sartorius mus- cle between the fascia lata and the fascia overlying the sartorius (right sonogram)."
+  },
+  "10.7": {
+    "chapter": 10,
+    "number": 7,
+    "page": 134,
+    "caption": "Fig. 10.7). Both in-plane and out-of-plane technique can be used. Even with large body habitus, a 1.5-inch needle should reach the target with out-of-plane technique. The sonogram showed an enlarged LFCN over the lateral edge of the sartorius (SAR). The needle is outlined with arrowheads and local anesthetic (LA) is injected. Interestingly, another branch of LFCN (arrows) is seen between the sartorius muscle and the overlying fascia. This is better seen after the injection of local anesthetic. C"
+  },
+  "11.1": {
+    "chapter": 11,
+    "number": 1,
+    "page": 138,
+    "caption": "Fig. 11.1 Paraspinal muscles. (Reprinted with permission from Dr. Vicente Roques from imedar.com)"
+  },
+  "11.2": {
+    "chapter": 11,
+    "number": 2,
+    "page": 138,
+    "caption": "Fig. 11.2). The architecture of the erector spinae muscle is complex, with three muscle layers dis- tributing in the lumbar, thoracic, and cervical area (brief explanation below). The aim of the ESP block is to penetrate the most anterior layer of the erector spinae muscle and deposit the injectate between this layer and the tip of the trans- verse process. The plane allows cranial-caudal spread in multiple spinal segments ("
+  },
+  "11.3": {
+    "chapter": 11,
+    "number": 3,
+    "page": 138,
+    "caption": "Fig. 11.3). The injectable is placed in close relation to the inter-transverse connective soft tissue, which allows the infiltration of the local anesthetic to the paravertebral space, through its porous surfaces or through the foramen where the dorsal ramus of the spinal nerve leaves the intervertebral foramen to innervate back structures."
+  },
+  "11.4": {
+    "chapter": 11,
+    "number": 4,
+    "page": 139,
+    "caption": "Fig. 11.4). The mechanism of action has been examined through clinical (contrast spread) and cadaveric (imaging and dissection) studies. Following a single injection (usually"
+  },
+  "11.5": {
+    "chapter": 11,
+    "number": 5,
+    "page": 140,
+    "caption": "Fig. 11.5 Magnetic resonance imaging with gadolinium contrast added to bupivacaine erector spinae plane block (30 mL total volume) injected at the left T10 level. (a) Sagittal view at the level of the intervertebral foraminae showing transforaminal spread of the gadolinium from T5 to T12 of the left side (yellow arrows). (b) Sagittal view of the spinal canal depicting epidural spread (red arrows) of the contrast from T5 to T12. (c) Axial view at the T12 level demonstrating the spread of gadolin-"
+  },
+  "11.6": {
+    "chapter": 11,
+    "number": 6,
+    "page": 141,
+    "caption": "Fig. 11.6 Schematic diagram showing the spread of injectate following an ESP block. (Reprinted with permission from Dr. Vicente Roques from imedar.com) 11 Erector Spinae Plane Block (ESP Block)"
+  },
+  "11.8": {
+    "chapter": 11,
+    "number": 8,
+    "page": 143,
+    "caption": "Fig. 11.8). Just lateral to the spinous process is the lamina, a flat hyperechoic structure covered by ESM. Lateral to the lamina is the tip of transverse process which is a well-defined hyperechoic flat structure more super- ficial to the lamina. Mark the target on the skin (tip of transverse process) and then rotate the probe in cranio-caudal orientation, keeping the tip of transverse process on the middle of the ultrasound scream. Scan 2 Find the tip of transverse process using cranio-caudal "
+  },
+  "11.7": {
+    "chapter": 11,
+    "number": 7,
+    "page": 143,
+    "caption": "Fig. 11.7 Various positions for the performance of ESP block. (Reprinted with permission from Dr. Vicente Roques from imedar.com) 11 Erector Spinae Plane Block (ESP Block)"
+  },
+  "11.9": {
+    "chapter": 11,
+    "number": 9,
+    "page": 144,
+    "caption": "Fig. 11.9 Cranio-caudal probe orientation over the rib. (Reprinted with permission from Dr. Vicente Roques from imedar.com)"
+  },
+  "11.10": {
+    "chapter": 11,
+    "number": 10,
+    "page": 145,
+    "caption": "Fig. 11.10). Scan 2c Move the ultrasound probe slightly from the costo-transverse union to the tip of transverse process (TTP). A clear transition from the deeper triangular structure (costo-transverse union) to a slightly more superficial FLAT hyperechoic structure (tip of transverse process) ("
+  },
+  "11.11": {
+    "chapter": 11,
+    "number": 11,
+    "page": 145,
+    "caption": "Fig. 11.11). The diagram depicts sonoanatomy at the level of T5, which is the tip of the transverse process in the middle of ultrasound scan. This is the target for ESP injection. Please note the tip of the transverse process which is a FLAT hyperechoic structure. Scan 2d Over the vertebral lamina If ultrasound probe is moved further medially from the tip of the transverse process, the structures found are the ESM (erector spinae muscle) which is thicker than the portion covering the tip of the "
+  },
+  "11.12": {
+    "chapter": 11,
+    "number": 12,
+    "page": 146,
+    "caption": "Fig. 11.12 Over the vertebral lamina. (Reprinted with permission from Dr. Vicente Roques from imedar.com)"
+  },
+  "11.13": {
+    "chapter": 11,
+    "number": 13,
+    "page": 147,
+    "caption": "Fig. 11.13). Once the tip of the needle approaches the TTP in its distal end, hydrolocation of normal saline is important to ensure the spread anterior to the anterior fascia of the erector spinae muscle (AFESM) and posterior to the tip of the transverse process. Following confirmation of appropriate cranio-caudal spread, the total volume of local anesthetic is deposited. • Needle: Usually an echogenic needle is advised; 22G 5–8 cm depending on the BMI of the patient • Drugs: Long-acting local a"
+  },
+  "11.14": {
+    "chapter": 11,
+    "number": 14,
+    "page": 148,
+    "caption": "Fig. 11.14). Different cath- eters have been successfully used (catheter over needle or catheter through needle). The preference of the author is to use the later due to the fact that the catheter can be advanced and securely left into the erector spinae muscle. • Needle/catheter: Catheter through needle (regular 18 G Tuohy needle) and regular epidural catheter (19 G) or catheter over needle can be used. • Drugs: For unilateral infusions, bupivacaine 0.2%; for bilateral infusions, bupivacaine 0."
+  },
+  "12.2": {
+    "chapter": 12,
+    "number": 2,
+    "page": 156,
+    "caption": "Fig. 12.2 The left diagram demonstrated the ascending cervical and deep cervical arteries anas- tomosing with the vertebral artery posterior to the spinal nerves. Note that the ascending cervical artery enters the foramen at C3-4 or C4-5, whereas the deep cervical artery enters the more distal C5-6, C6-7, or C7-T1 foramina. The right diagram showed a cervical transforaminal needle can- nulating a segmental artery contributed by the ascending cervical artery. Steroid particles (purple) are shown "
+  },
+  "12.1": {
+    "chapter": 12,
+    "number": 1,
+    "page": 156,
+    "caption": "Fig. 12.1 Cross section of cervical epidural space. 1. Ligamentum flavum, 2. epidural space with venous plexus, 3. spinal ganglion, 4. spinous process, 5. body of vertebra, 6. dorsal branch of spi- nal nerve, 7. ventral branch of spinal nerve. (Reprinted with permission from Dr. Danilo Jankovic) Posterior segmental artery Anterior spinal artery Segmental medullary artery Ascending cervical artery Ascending cervical artery C1 C2 C3 C4 C5 C6 C7 T1 Vertebral artery Vertebral artery Deep cervical ar"
+  },
+  "12.3": {
+    "chapter": 12,
+    "number": 3,
+    "page": 157,
+    "caption": "Fig. 12.3 Cervical 5th nerve root. Note the anterior and posterior tubercles are similar in size and give the impression of the double camel hump. (Reprinted with permission from Philip Peng Education Series) Patient position: Lateral decubitus position with injection side up. Probe: Linear, high resolution 6–18 MHz 12 Ultrasound-Guided Cervical Nerve Root Block"
+  },
+  "12.6": {
+    "chapter": 12,
+    "number": 6,
+    "page": 159,
+    "caption": "Fig. 12.6 The left sonogram showed the typical location of the vessel in the ventral aspect of the C6 nerve root. The right sonogram showed the rich presence of the vessel in both the ventral and dorsal aspect of the nerve root. (Reprinted with permission from Philip Peng Education Series)"
+  },
+  "12.4": {
+    "chapter": 12,
+    "number": 4,
+    "page": 158,
+    "caption": "Fig. 12.4 Cervical 6th nerve root. Note the prominent anterior tubercle (Chassaignac’s tubercle). (Reprinted with permission from Philip Peng Education Series)"
+  },
+  "12.5": {
+    "chapter": 12,
+    "number": 5,
+    "page": 158,
+    "caption": "Fig. 12.5 Cervical 7th nerve root. Note the presence of posterior tubercle while the anterior is either absent or vestigial. The vertebral artery is in close proximity to the nerve root. (Reprinted with permission from Philip Peng Education Series) • Needles: 22G blunt-tip needle if available • Drug: 1–2 ml Bupivacaine 0.25% for diagnostic blocks; 1–2 ml Bupivacaine 0.25% and 4 mg Dexamethasone for therapeutic injections S. Narouze and P. Peng"
+  },
+  "12.7": {
+    "chapter": 12,
+    "number": 7,
+    "page": 159,
+    "caption": "Fig. 12.7). One can successfully monitor the spread of the injectate around the cervical nerve with real-time ultrasonography, and the absence of such spread around the nerve root may suggest unsuspected or inadvertent intravascular injection. However, it is difficult to monitor the spread of the injectate through the foramen into the"
+  },
+  "13.1": {
+    "chapter": 13,
+    "number": 1,
+    "page": 164,
+    "caption": "Fig. 13.1). (a) Transverse view of a C5 vertebra demonstrating the spinal nerve anatomy. Spinal nerve (1); medial branch of posterior ramus (2); lateral branch of posterior ramus (3); ventral ramus (4). (b) Lateral view of a cervical spine model demonstrating the course of the cervical medial branches. A cervical medial branch traverses the articular pillar, supply- ing the zygapophyseal joint above and below (2); The C2/C3 joint is unique as it is innervated solely by the third occipital nerve "
+  },
+  "13.2": {
+    "chapter": 13,
+    "number": 2,
+    "page": 165,
+    "caption": "Fig. 13.2 Segmental pain referral patterns for cervical zygapophyseal joints. (Adapted from Dwyer A, Aprill C, Bogduk N. Cervical zygapophyseal joint pain patterns I: A study in normal volunteers. Spine 1990;15:453–457). (Reprinted with permission from Philip Peng Educational Series) 13 Cervical Medial Branch and Third Occipital Nerve Blocks"
+  },
+  "13.3": {
+    "chapter": 13,
+    "number": 3,
+    "page": 165,
+    "caption": "Figure 13.3 shows the coronal scan of the cervical spine demonstrating the artic- ular pillars (AP) of C4, C5 and C6, as well as the inferior articular process (IAP) of C2. This view is used for level and needle position confirmation. The medial branches (mb) of C3, C4 and C5 can be seen, as well as the third occipital nerve (TON). Above the C2–C3 joint, the slope of the inferior articular process of C2 creates a characteristic drop-off with the vertebral artery visible immediately cephalad to i"
+  },
+  "13.4": {
+    "chapter": 13,
+    "number": 4,
+    "page": 166,
+    "caption": "Fig. 13.4 Coronal scan of the upper cervical spine demonstrating the drop-off formed by the inferior articular process of C2 (grey arrow in right lower inset), the vertebral artery (VA) can be imaged with duplex Doppler immediately cephalad. This view facilitates identification of the C2/ C3 joint which is used as a landmark during third occipital nerve blocks. The right upper inset is a coronal CT scan of the cervical spine demonstrating the drop-off formed by the inferior articular process of "
+  },
+  "13.5": {
+    "chapter": 13,
+    "number": 5,
+    "page": 167,
+    "caption": "Figure 13.5 shows a coronal scan of the lower cervical spine demonstrating the transverse process of C7 (C7 TP); superior articular process of C7 (SAP); articular pillar of (C5) and (C6). This view is used to confirm appropriate needle positioning for blocks of the lower cervical medial branches. \u0007Transverse (Short Axis) Scan This view is used for needle placement ("
+  },
+  "13.6": {
+    "chapter": 13,
+    "number": 6,
+    "page": 173,
+    "caption": "Fig. 13.6) will help identify the injection targets on the articular pillars. 6. Tilting the probe caudally in the lower neck to visualize the pleura and tracing the first rib back to the T1 transverse process can help with level identification. 7. Identifying the target for a C7 medial branch blocks (superior articular process of C7) can be difficult if the transverse process occupies the entire cephalocaudal dimension of the articular pillar. In these situations, it may be necessary to inject "
+  },
+  "13.7": {
+    "chapter": 13,
+    "number": 7,
+    "page": 169,
+    "caption": "Fig. 13.7 Transverse scan at the level of the (C6/C7) zygapophyseal joint. (Reprinted with per- mission from Philip Peng Educational Series) a c b T1 TP C7 TP BP NR VA NR TP C6 IAP C7 SAP Posterior Anterior"
+  },
+  "13.8": {
+    "chapter": 13,
+    "number": 8,
+    "page": 168,
+    "caption": "Fig. 13.8). (a) The T1 transverse process (T1 TP) can be recognized because of its typical wide and square contour. Further confirmation can be obtained by tilting the probe caudally and imaging the pleura. (b) When scanning cephalad in a transverse plane from T1, the C7 transverse pro- cess (C7 TP) can be found anterior to that of T1. Visualizing this posterior to anterior translation (black arrow in upper inset) is a reliable way to identify the C7 TP, which can be differentiated from that of "
+  },
+  "13.9": {
+    "chapter": 13,
+    "number": 9,
+    "page": 170,
+    "caption": "Fig. 13.9). From this point, the probe is moved caudally to the target points on the C3 and C4 APs. \u0007C5, C6 Medial Branches The base of the neck is scanned in the transverse plane and the TP of T1 identified. As the probe is moved cephalad from this point, the more anterior TP of C7 is localized ("
+  },
+  "13.10": {
+    "chapter": 13,
+    "number": 10,
+    "page": 171,
+    "caption": "Fig. 13.10b). Returning to a transverse view, LA is then injected under real-time visualization; if necessary, the position of the needle tip is adjusted to obtain an LA spread under the semispinalis capitis muscle that covers the anteroposterior diameter of the AP or joint (TON). The sonogram shows a transverse scan of the lower neck demonstrat- ing a needle (N) that has been placed on the C6 articular pillar (AP) using an in-­ plane technique and a posterolateral approach during the performanc"
+  },
+  "13.11": {
+    "chapter": 13,
+    "number": 11,
+    "page": 172,
+    "caption": "Fig. 13.11 Needle insertion at C6 level. The injectate can be seen spreading under the semispina- lis capitis muscle (SSC). Posterior tubercle (PT); nerve root of C6 (NR). (Reprinted with permis- sion from Philip Peng Educational Series) 1. An in-plane needle placement using a posterolateral approach is preferred over a needle out-of-plane one, as it allows the operator to avoid blood vessels and reduces the risk of needle misdirection. 2. Using a bi-planar technique (inserting the needle in a t"
+  },
+  "14.1": {
+    "chapter": 14,
+    "number": 1,
+    "page": 175,
+    "caption": "Fig. 14.1 Dual neural supply of the facet joint. Oblique parasagittal view of overlapping segmental innervation of the facet joint. (1) Ventral branch of spinal nerve, (2) dorsal branch of spinal nerve, (3) ascendant branch of dorsal ramus, (4) medial branch of dorsal ramus, (5) distal branch of medial ramus to facet joint, (6) proximal branch of medial ramus to facet joint, (7) posterior ramus (sinuvertebral nerve of Luschka), (8) facet joint. (Reproduced with permission from Dr. Danilo Jankovi"
+  },
+  "14.2": {
+    "chapter": 14,
+    "number": 2,
+    "page": 176,
+    "caption": "Fig. 14.2). The transducer is placed 3–5 cm away from the midline. Two to three hyperechoic bone shadows of transverse process (TP) are seen deep to the erector spinae muscle (ESM) with open windows to reveal psoas muscles (PM) deep to TP. Deep to the psoas muscle, the peritoneum (P-indicated by arrows) can be seen. \u0007Paramedian Sagittal Articular Process View Moving the transducer medially 1–2 cm reveals an image with continuous hyper- echoic bone shadow (no gap) from the articular process (AP) "
+  },
+  "14.3": {
+    "chapter": 14,
+    "number": 3,
+    "page": 177,
+    "caption": "Fig. 14.3 Paramedian sagittal articular process view. (Reprinted with permission from Philip Peng Educational Series) M. Greher and P. Peng"
+  },
+  "14.4": {
+    "chapter": 14,
+    "number": 4,
+    "page": 176,
+    "caption": "Fig. 14.4). Through this window, the intrathecal space (ITS) can be seen between the laminae (L). The • Position: Prone; • Probe: Curvilinear 2–6 MHz 14 Lumbar Medial Branches and L5 Dorsal Ramus"
+  },
+  "14.5": {
+    "chapter": 14,
+    "number": 5,
+    "page": 179,
+    "caption": "Fig. 14.5 Transverse spinous process view. ESM-erector spinae muscle. (Reprinted with permis- sion from Philip Peng Educational Series)"
+  },
+  "14.6": {
+    "chapter": 14,
+    "number": 6,
+    "page": 180,
+    "caption": "Fig. 14.6). Practitioner should be careful in discerning the difference between TP and intertransverse ligament (line arrows) which is the ligament joining the transverse process dorsal to the psoas muscle. \u0007How to Count the Level There are two methods. In the authors’ opinion, both methods are used to accu- rately count the level. \u0007Method 1 Sagittal View First, the interlaminar levels are indicated with paramedian sagittal oblique view including the sacrum (upper right). The interlaminar levels"
+  },
+  "14.7": {
+    "chapter": 14,
+    "number": 7,
+    "page": 180,
+    "caption": "Fig. 14.7). Second, the paramedian sagittal transverse process view is obtained (lower right). The transverse process are counted and marked on the skin (red lines). The cephalad level of the sacrum is also marked. Quite often, there is a gap in the sacrum and practitioner may mistake that as the L5S1 junction. This is first sacral foramen (S1) (Reprinted with permission from Philip Peng Educational Series). \u0007Method 2 Transverse View Transverse scan is used throughout the counting ("
+  },
+  "14.8": {
+    "chapter": 14,
+    "number": 8,
+    "page": 180,
+    "caption": "Fig. 14.8). The transducer is placed close the posterior superior iliac spine (PSIS) and a typical transverse view of sacrum with median crest (MC) in the midline is revealed (yellow line). Moving the transducer in cephalad direction will reveal the intrathecal space (ITS) and dura. This is the L5S1 (orange line). Moving the transducer further cephalad and lateral, a transverse interlaminar view with transverse process and superior articular process (TP & SAP) is revealed (red line). • Equipment"
+  },
+  "14.9": {
+    "chapter": 14,
+    "number": 9,
+    "page": 181,
+    "caption": "Fig. 14.9). TP is bone and cast an anechoic shadow deep in the scan (orange line and box). If one is not sure, move the transducer cephalad and one can tell the difference. In between the transverse process, a bright hyperechoic line can be cast by the inter- transverse ligament and the fascia overlying the psoas. However, it allows the psoas to be seen (red line and box). Mistaking the later shadow with TP allows the needle to advance to the foramen. \u0007Determining the Target for L5 Dorsal Ramus "
+  },
+  "14.10": {
+    "chapter": 14,
+    "number": 10,
+    "page": 183,
+    "caption": "Fig. 14.10b). This results in a view with all the necessary bony landmarks in a continuous hyperechoic line. They are (from medial to lateral) spinous process (SP) of L5, facet joint (FJ), sacral ala (SA), and iliac crest (IC). The junction between the SA and FJ is the target. To make sure the transducer is at the right location, simply move the transducer in cephalad posi- tion (lower part of"
+  },
+  "14.11": {
+    "chapter": 14,
+    "number": 11,
+    "page": 184,
+    "caption": "Fig. 14.11). Second, rotate the transducer to the paramedian sagittal transverse process view to check the needle (arrow) at the target point (asterisk), which should be at the cephalad edge of the transverse process (TP) ("
+  },
+  "14.12": {
+    "chapter": 14,
+    "number": 12,
+    "page": 185,
+    "caption": "Fig. 14.12 Checking the needle position in the paramedian sagittal transverse process view. (Reprinted with permission from Philip Peng Educational Series) Second, the ultrasound transducer is placed in paramedian sagittal transverse process view to check the needle position (arrow) at the target point (asterisk),which should be at the cephalad edge of the sacrum ala (SA) caudal to the transverse pro- cess of L5 (TP) ("
+  },
+  "14.13": {
+    "chapter": 14,
+    "number": 13,
+    "page": 184,
+    "caption": "Fig. 14.13). • Needles: 22G, 8 cm echogenic needle • Drugs: 1 ml of local anesthetic (0.25% plain bupivacaine or 1% plain lidocaine)"
+  },
+  "14.14": {
+    "chapter": 14,
+    "number": 14,
+    "page": 186,
+    "caption": "Fig. 14.14 Confirming the needle position with paramedian sagittal view. (Reprinted with per- mission from Philip Peng Educational Series) Clinical Pearls 1. Before the use of ultrasound guide facet nerve injection, always check the X-rays to account for lumbarization or sacralization (important for count- ing) and the presence of spondylolisthesis (which affect the accuracy of target localization). 2. Select your patient. The accuracy of the block under ultrasound guidance substantially diminis"
+  },
+  "15.1": {
+    "chapter": 15,
+    "number": 1,
+    "page": 190,
+    "caption": "Fig. 15.1). Patient Selection The SIJ plays a causative role in up to 30% of patients with chronic low back pain. Afflicted patients will typically have back pain below the L5 level with radiation to the buttocks or lower extremities. Provocative physical exam tests can be used to identify likely candidates, and the findings of 3 or more positive tests have been found to have a modest predictive power (sensitivity 91%, specificity 78%) in rela- tion to controlled comparative SIJ blocks. Key test"
+  },
+  "15.2": {
+    "chapter": 15,
+    "number": 2,
+    "page": 191,
+    "caption": "Fig. 15.2 Sonographic images of the posterior sacrum depicting the various views required for the performance of an ultrasound-guided sacral lateral branch block. The three injection points on the sacral lateral crest are marked by a star (★); probe placement on the skin surface is illustrated in the upper left inset of panel (a); scan lines are illustrated on a skeletal model in the left lower insets. (a) transverse sonographic view of the lower sacrum demonstrating the sacral cornu (SC) and po"
+  },
+  "15.3": {
+    "chapter": 15,
+    "number": 3,
+    "page": 192,
+    "caption": "Fig. 15.3 Parasagittal scan of the sacrum demonstrating the posterior sacral foramen. This view is used to confirm needle placement. Probe placement on the skin surface is illustrated in the upper left inset. The posterior foramen of S1, S2, and S3 are visible. (Reprinted with permission from Philip Peng Educational Series) R. Finlayson and M. F. E. Le-Beuffe"
+  },
+  "15.4": {
+    "chapter": 15,
+    "number": 4,
+    "page": 193,
+    "caption": "Fig. 15.4 Needle placement for a sacroiliac joint injection. (a) right upper inset illustrates the probe placement on the skin surface; left lower inset illustrates the scan line on a skeletal model. Needle (N), S2 posterior foramen (S2), sacroiliac joint (SIJ). (b) color duplex Doppler scan during injection demonstrating spread of injectate in the joint cleft. Reprinted with permission from Philip Peng Educational Series 1. If an eventual SLB radiofrequency ablation procedure is being contem- p"
+  },
+  "16.1": {
+    "chapter": 16,
+    "number": 1,
+    "page": 196,
+    "caption": "Fig. 16.1 Posterior innervation of the sacroiliac joint from the posterior sacral network. S1, S2, and S3 indicate the S1, S2, and S3 posterior sacral foramen. The lateral branches from these levels (S1, yellow; S2, green; and S3, blue) contribute to the posterior sacral network (purple). Occasionally, a branch from the L5 dorsal ramus (red) and/or the S4 lateral branches (not pictured) also contribute to the network. (Reprinted with permission from Wolters Kluwer Health, Inc.) • Probe: C5-2 MHz"
+  },
+  "16.2": {
+    "chapter": 16,
+    "number": 2,
+    "page": 197,
+    "caption": "Fig. 16.2 Model illustrating the course of the posterior innervation (lateral branches of S1 – yel- low, lateral branches of S2 – green, lateral branches of S3 – blue, branches from L5 dorsal ramus and lateral branches of S4 – dotted red, posterior sacral network – purple) to the sacroiliac joint relative to the transverse sacral tubercles (circled numbers). In one anatomic study, 80% of cadav- eric specimens had a posterior sacral network that was bordered by the second and third transverse sac"
+  },
+  "16.3": {
+    "chapter": 16,
+    "number": 3,
+    "page": 198,
+    "caption": "Fig. 16.3 Caudad to cephalad scan of the sacrum in the transverse plane illustrating the land- marks used to perform a radiofrequency lesioning procedure of the posterior sacral network. (a) Once the sacral cornua (SC) are identified, the probe is moved laterally over the side of interest and the fourth transverse sacral tubercle as well as the fourth posterior sacral foramen (PSF) (not pic- tured) are visualized. Further cephalad along the lateral sacral crest (LSC), (b) the third transverse sa"
+  },
+  "16.4": {
+    "chapter": 16,
+    "number": 4,
+    "page": 199,
+    "caption": "Fig. 16.4 Illustration of bilateral strip lesion (dotted lines) extending from the first to third transverse sacral tubercle along the lateral crest. The extent of this lesion should capture the posterior innervation of the sacroiliac joint. (Reprinted with permission from Wolters Kluwer Health, Inc.)"
+  },
+  "16.5": {
+    "chapter": 16,
+    "number": 5,
+    "page": 199,
+    "caption": "Fig. 16.5 Sagittal scan of the sacrum illustrating a cannula (arrow) in place along the lateral sacral crest (LSC) (block arrows) 16 Sacroiliac Joint Radiofrequency Ablation"
+  },
+  "17.3": {
+    "chapter": 17,
+    "number": 3,
+    "page": 202,
+    "caption": "Fig. 17.3). The coccygeal plexus is formed as an anastomosis between S4, S5, and coccygeal nerve. Depending on age, the termination of the thecal sac varies between the lower border of the S1 foramen in adults and the S3 foramen in children. In 1–5% of patients, the dural sac terminates at S3 or below, an important fact to remember when placing the epidural needle to avoid dural puncture. Variations in the anatomy of the sacrococcygeal area (up to 10%) or even total absence of the posterior wall"
+  },
+  "17.1": {
+    "chapter": 17,
+    "number": 1,
+    "page": 203,
+    "caption": "Fig. 17.1 Sacral hiatus (arrow) with the sacral cornu (∗). (Reproduced with permission from Dr. Danilo Jankovic)"
+  },
+  "17.2": {
+    "chapter": 17,
+    "number": 2,
+    "page": 203,
+    "caption": "Fig. 17.2 Sacral hiatus covered by sacrococcygeal ligament. (Reproduced with permission from Dr. Danilo Jankovic) J. F. Vargas-Silva and P. Peng"
+  },
+  "17.4": {
+    "chapter": 17,
+    "number": 4,
+    "page": 205,
+    "caption": "Figure 17.4 Lower panel. The transducer is turned 90 degrees to have long-axis view of the sacral canal. The sacral canal (∗∗∗) and the entrance (bold arrows) cov- ered by the thick sacrococcygeal ligament (line arrows) are well appreciated. \u0007Procedure Both in-plane and out-of-plane techniques have been described. The out-of-­ plane technique is performed with the short-axis view of the sacral canal and needle is inserted into the canal in caudal to cephalad direction. However, the authors pre- "
+  },
+  "17.5": {
+    "chapter": 17,
+    "number": 5,
+    "page": 205,
+    "caption": "Fig. 17.5). With the sacral area fully prepped and the buttock is open with tape or both leg internally rotated, the transducer, covered with sterile sheath, is placed in long axis as described in the scanning section. Following local anesthetic infiltration of the • Needles: 17G Tuohy epidural needle (when catheter insertion is planned); or a 3.5-inch 22G spinal needle • Drugs: Volume 10–20 mL with diluted local anesthetic and 40 mg Depo-­ Medrol (volume depending on using catheter or not)"
+  },
+  "17.6": {
+    "chapter": 17,
+    "number": 6,
+    "page": 207,
+    "caption": "Fig. 17.6 The fluoroscopy image showed spread of contrast leaking through foramen and gives rise to “Christmas tree” appearance. (Reproduced with permission from Philip Peng Educational Series) • Remove the excess prep solution or let the solution dry completely (chlorhexidine) to avoid inadvertent introduction of the prep solution into the epidural space which may result in arachnoiditis. • Once the needle is advanced inside the sacral canal, one should be able to see both the long-axis view of"
+  },
+  "19.1": {
+    "chapter": 19,
+    "number": 1,
+    "page": 216,
+    "caption": "Fig. 19.1 The GH joint capsule and surrounding ligaments are pictured. Notably, the coracohu- meral ligament (CHL) is a thick fibrous band arising from the coracoid process and inserting on the greater and lesser tuberosities of the humerus. The CHL assists with reinforcing the joint cap- sule and stabilizing the LHB tendon. Outlined in green, the superior fibers of the glenohumeral ligament are called the superior glenohumeral ligament (SGHL). The CHL and SGHL are impor- tant structures within "
+  },
+  "19.2": {
+    "chapter": 19,
+    "number": 2,
+    "page": 217,
+    "caption": "Fig. 19.2 There are four rotator cuff muscles: supraspinatus, infraspinatus, subscapularis, and teres minor. The supraspinatus passes under the coracoacromial arch (outlined in yellow), which consists of the bony acromion and coracoid process bridged by the coracoacromial ligament. The SASD bursa is a synovium-lined potential space located deep to the acromion and deltoid muscle and superficial to the supraspinatus and infraspinatus tendons. The clinical finding of subacromial impingement is oft"
+  },
+  "19.3": {
+    "chapter": 19,
+    "number": 3,
+    "page": 221,
+    "caption": "Fig. 19.3 slice “x.” Note the greater and lesser tuberosities (GT and LT, respectively) of the humerus and LHB tendon within the bicipital groove. Depicted in purple, the synovial-lined biceps tendon sheath surrounds the tendon and is the target (marked by a star) for injection. The accompanying ascending branch of the anterior circumflex artery should also be located. The transverse humeral ligament (THL), an extension of the subscapularis tendon, is the roof of the bicipital groove. Scan 2: Ro"
+  },
+  "19.4": {
+    "chapter": 19,
+    "number": 4,
+    "page": 219,
+    "caption": "Fig. 19.4 The acromioclavicular joint is a synovial joint with the articular surfaces separated by a wedge-shaped fibrocartilaginous disk (asterisk). The inferior surface of the joint is in direct con- tact with the subacromial bursa and supraspinatus muscle and may play a role in the development of the impingement syndrome. (Reproduced with permission from Philip Peng Educational Series) Table 19.2 Clues on shoulder history Diagnosis Pertinent history GH joint osteoarthritis Advanced age, assoc"
+  },
+  "19.5": {
+    "chapter": 19,
+    "number": 5,
+    "page": 221,
+    "caption": "Fig. 19.5 A simplified algorithm is provided to guide the reader through the physical examination of the shoulder. Palpation is omitted because tenderness of various structures, especially the LHB tendon, is common and non-specific. AC joint tenderness worse on the affected side and that repro- duces the patient’s typical pain supports a diagnosis of AC joint pathology. If marked stiffness and pain is apparent on range of motion examination in a middle-aged adult, the diagnosis of frozen shoulde"
+  },
+  "19.6": {
+    "chapter": 19,
+    "number": 6,
+    "page": 222,
+    "caption": "Fig. 19.6c). From scan 2, moving medially and rotating the probe, the CHL can be followed to its origin at the cora- coid process of the scapula. The underlying LHB tendon and subscapularis muscle are visible. Externally rotating the shoulder will bring more of the subscapularis into view and tighten the CHL."
+  },
+  "19.7": {
+    "chapter": 19,
+    "number": 7,
+    "page": 223,
+    "caption": "Fig. 19.7). The spine of the scapula is palpated later- ally toward the acromion. The probe is placed parallel and directly caudal to the scapular spine. Deep to the deltoid muscle, fibers of the infraspinatus muscle can be seen overlying the humeral head and glenoid. Note the hypoechoic hyaline cartilage along the surface of the humeral head and hyperechoic triangular labrum. These structures should be avoided during injection. Just medial to the glenoid, the bony spinoglenoid notch cradles the"
+  },
+  "19.8": {
+    "chapter": 19,
+    "number": 8,
+    "page": 224,
+    "caption": "Fig. 19.8, lower panel). From Scan 1, the probe is translated just lateral to bring the supraspinatus tendon into view. The supraspinatus tendon inserts onto the beak-shaped greater tuberosity (GT). Note the hypoechoic hyaline cartilage along the humeral head. The SASD bursa can be identified as a thin hypoechoic line flanked by the hyperechoic supra- spinatus tendon and subdeltoid fat. When bursitis is present, this bursal space will be fluid-filled with thickening of the peribursal fat. The st"
+  },
+  "19.9": {
+    "chapter": 19,
+    "number": 9,
+    "page": 226,
+    "caption": "Fig. 19.9d AC joint, short-axis view. (Photo and ultrasound image reproduced with permission from Philip Peng Educational Series. Illustration by Jennifer McDonald) LHB tendon Needles: 25G 1.5-inch needle Drugs: 2–4 mL local anesthetic with steroid (0.25% bupivacaine and 20–40 mg Depo-Medrol) Approach: Out-of-plane or in-plane 1. LHB tendon pathology is rarely present in isolation, and localized tender- ness on examination is not a specific finding. Before targeting the biceps tendon, consider r"
+  },
+  "19.10": {
+    "chapter": 19,
+    "number": 10,
+    "page": 226,
+    "caption": "Fig. 19.10). The needle tip is positioned medial to the hyperechoic biceps tendon deep to the transverse humeral ligament. The lateral anterior circumflex artery should be avoided. (a) Correct position of ultrasound probe and needle for out-of-plane technique. (b) Corresponding US image post-injection. Black arrow marks the anterior circumflex artery. White arrowheads outline the local anesthetic within the biceps tendon sheath. Clinical Pearls"
+  },
+  "19.11": {
+    "chapter": 19,
+    "number": 11,
+    "page": 228,
+    "caption": "Fig. 19.11 Anterior approach to GHJ. (Reproduced with permission from Philip Peng Educational Series) 1. High resistance will be encountered during the injection of the frozen shoulder due to thickening of the CHL and SGHL. Thus, proper localiza- tion of the needle tip is critical to avoid intratendinous injection, which will also provide high resistance. 2. If a sudden loss of resistance is encountered, check that the needle tip has not slipped out into the subdeltoid bursal space. If this has "
+  },
+  "19.12": {
+    "chapter": 19,
+    "number": 12,
+    "page": 229,
+    "caption": "Fig. 19.12 Posterior approach to GHJ. (Reproduced with permission from Philip Peng Educational Series) 1. In order to clear the humeral head and access the narrow target, the needle trajectory can be quite steep. To improve needle visualization, a curvilin- ear probe can be used and heeled in toward the needle. Gel can be heaped under the toe of the probe to improve contact with the skin. 2. If resistance is encountered during the injection, turn the bevel 90 degrees or withdraw the needle sligh"
+  },
+  "19.13": {
+    "chapter": 19,
+    "number": 13,
+    "page": 230,
+    "caption": "Fig. 19.13 Subacromial bursa injection. (Reproduced with permission from Philip Peng Educational Series) Subacromial subdeltoid (SASD) bursa Needles: 25G 1.5-inch or 22G 2-inch needle Drugs: 4 mL local anesthetic with steroid (0.25% bupivacaine and 40 mg Depo-Medrol) Approach: In-plane from distal aspect of probe J. K. McDonald and P. Peng"
+  },
+  "19.14": {
+    "chapter": 19,
+    "number": 14,
+    "page": 231,
+    "caption": "Fig. 19.14). Out-of-plane tech- nique is often used for this superficial structure. (a) Correct position of ultrasound probe and needle for out-of-plane technique. (b) Corresponding US image with out-of-­plane needle (solid arrow) and superior joint capsule (white arrowheads) highlighted. 1. Correct needle location within the bursal space is confirmed by rapid expansion of the bursa with small volume (0.5 mL) hydrodissection. 2. Partial rotator cuff tears are common incidental findings on should"
+  },
+  "20.1": {
+    "chapter": 20,
+    "number": 1,
+    "page": 235,
+    "caption": "Fig. 20.1 Anatomy of the lateral elbow. The blue box is the region of the common extensor ten- don and area of interest for ultrasound scanning Radial collateral ligament Accessory collateral ligament Lateral ulnar collateral ligament Radius Ulna Annular ligament"
+  },
+  "20.2": {
+    "chapter": 20,
+    "number": 2,
+    "page": 235,
+    "caption": "Fig. 20.2 The ligaments in the lateral elbow. (Reprinted with permission from Philip Peng Educational Series) M. Bodor et al."
+  },
+  "20.3": {
+    "chapter": 20,
+    "number": 3,
+    "page": 236,
+    "caption": "Fig. 20.3 Anatomy of the medial elbow. The blue box is the region of the common flexor tendon and area of interest for ultrasound scanning"
+  },
+  "20.4": {
+    "chapter": 20,
+    "number": 4,
+    "page": 237,
+    "caption": "Fig. 20.4 Anatomy of the posterior elbow. The blue boxes are the area of interest for ultrasound scanning M. Bodor et al."
+  },
+  "20.5": {
+    "chapter": 20,
+    "number": 5,
+    "page": 238,
+    "caption": "Fig. 20.5 Sonoanatomy of the lateral elbow 20 Ultrasound-Guided Injections for Elbow Pain"
+  },
+  "20.6": {
+    "chapter": 20,
+    "number": 6,
+    "page": 239,
+    "caption": "Fig. 20.6 Sonoanatomy of medial elbow with the ultrasound probe in scan position 1 Flexor carpi radialis Flexor carpi ulnaris muscle Pronator teres Medial epicondyle of humerus Ulnar nerve Olecranon of ulna 1 1 2 M. Bodor et al."
+  },
+  "20.7": {
+    "chapter": 20,
+    "number": 7,
+    "page": 240,
+    "caption": "Fig. 20.7b Sonograph showed the ulnar nerve (UN) subluxed on the other side of medial epicondyle (ME) 20 Ultrasound-Guided Injections for Elbow Pain"
+  },
+  "20.8": {
+    "chapter": 20,
+    "number": 8,
+    "page": 241,
+    "caption": "Fig. 20.8). Keeping one end of the transducer over the olecranon while rotating the other end laterally, reveals the humero-ulnar joint (HUJ). Additional structures include the triceps muscle (TM), triceps tendon (TT), and distal humerus (H) ("
+  },
+  "20.9": {
+    "chapter": 20,
+    "number": 9,
+    "page": 242,
+    "caption": "Fig. 20.9 Sonoanatomy of the posterior elbow with the ultrasound probe in the scan position 2 20 Ultrasound-Guided Injections for Elbow Pain"
+  },
+  "20.10": {
+    "chapter": 20,
+    "number": 10,
+    "page": 243,
+    "caption": "Fig. 20.10 Upper panel. In-plane injection. Lower panel. Out-of-plane injection. LE, lateral epi- condyle; C, capitellum; RH, radial head; ∗, common extensor tendon M. Bodor et al."
+  },
+  "20.11": {
+    "chapter": 20,
+    "number": 11,
+    "page": 244,
+    "caption": "Fig. 20.11 Sonograph showing the needle trajectory for common flexor tendon injection 20 Ultrasound-Guided Injections for Elbow Pain"
+  },
+  "20.12": {
+    "chapter": 20,
+    "number": 12,
+    "page": 244,
+    "caption": "Fig. 20.12 upper panel). For the humero-ulnar joint, an in-plane approach can be done by positioning one end of the transducer over the distal olecranon and then rotating the other end 30° laterally to bring the joint into view ("
+  },
+  "21.1": {
+    "chapter": 21,
+    "number": 1,
+    "page": 249,
+    "caption": "Fig. 21.1 Carpal tunnel. Please note the recurrent branch and palmar cutaneous branch of median nerve. (Reprinted with permission from Philip Peng Educational Series) Median nerve Flexor digitorum superficialis Flexor digitorum profundus Flexor carpi radialis Flexor pollicis longus Triquetrum Hamate Capitate Ulnar artery and nerve"
+  },
+  "21.2": {
+    "chapter": 21,
+    "number": 2,
+    "page": 249,
+    "caption": "Fig. 21.2 Cross-sectional view of the wrist at carpal tunnel. (Reprinted with permission from Philip Peng Educational Series) D. A. Spinner and A. J. Mazzola"
+  },
+  "21.3": {
+    "chapter": 21,
+    "number": 3,
+    "page": 250,
+    "caption": "Fig. 21.3) The borders of the tunnel seen are the scaphoid and trapezium laterally and the hamate and pisiform medially. The roof of the tunnel is the flexor retinaculum (marked with ∗). Identify the flexor carpi radialis (FCR) and the palmaris longus (PL) located superficial to the flexor retinaculum. The median nerve (MN) will appear honeycomb-like in the tunnel along with the hypoechoic tendons of the flexor digitorum profundus (flexor tendons), flexor digitorum superficialis (flexor tendons)"
+  },
+  "21.4": {
+    "chapter": 21,
+    "number": 4,
+    "page": 251,
+    "caption": "Fig. 21.4). The needle (arrows) will be visualized in the canal. Here, the needle is next to and under the median nerve (MN). The injectate can now be admin- istered. As the space is enclosed, the medicine will spread and saturate the nerve. 2. Out-of-Plane Injection Short axis over the distal wrist crease ("
+  },
+  "21.5": {
+    "chapter": 21,
+    "number": 5,
+    "page": 252,
+    "caption": "Fig. 21.5 Out-of-plane needle insertion. (Reprinted with permission from Philip Peng Educational Series) 1. To visualize the median nerve, isolate a relatively hypoechoic area sur- rounded by hyperechoic tendons in cross-sectional view. 2. Tilt/angle the probe or have patient flex and extend their hand: the nerve will remain relatively unchanged because the tendons are more subject to anisotropy. 3. Look for adhesions, which can be treated by hydrodissection. 4. Track nerve proximally up the arm"
+  },
+  "21.6": {
+    "chapter": 21,
+    "number": 6,
+    "page": 253,
+    "caption": "Fig. 21.6). These tendons are involved in radial abduction and extension of the thumb. Through progressive rubbing, these tendons become irritated causing symptoms. Locate the abductor pollicis longus and extensor pollicis brevis tendon at the first dorsal compartment at the radial styloid process ("
+  },
+  "21.7": {
+    "chapter": 21,
+    "number": 7,
+    "page": 254,
+    "caption": "Fig. 21.7 Six compartments of the extensor tendons in the wrist. First compartment, abductor pollicis longus (APL) and extensor pollicis brevis (EPB); second compartment, extensor carpi radialis longus (ECRL) and extensor carpi radialis brevis (ECRB); third compartment, the extensor pollicis longus (EPL); fourth compartment, extensor indicis proprius (EIP) and extensor digitorum (EDC); fifth compartment, the extensor digiti quinti (EDQ); sixth compartment, extensor carpi ulnaris (ECU). Lister tu"
+  },
+  "21.8": {
+    "chapter": 21,
+    "number": 8,
+    "page": 254,
+    "caption": "Fig. 21.8). Imaging is not routinely useful as x-rays are expected to be unremarkable. With ultrasound, one can demonstrate a thickened extensor retinaculum indicating pos- sible synovitis. VI (ECU) V (EDQ) IV (EIP, EDC) II (ECRB, ECRL) I (EPB, APL) III (EPL)"
+  },
+  "21.9": {
+    "chapter": 21,
+    "number": 9,
+    "page": 255,
+    "caption": "Fig. 21.9). The abductor pollicis longus (APL) and extensor pollicis brevis (EPB) are seen. Extensor retinaculum (outlined by ∗) lies superficially to tendons and radius (RAD) is seen deep to tendons. Note location of the radial artery prior to injection. \u0007Scan 2 Longitudinal View of Radial Styloid and APL Tendon Over the radial styloid process, the transducer is rotated longitudinally ("
+  },
+  "21.10": {
+    "chapter": 21,
+    "number": 10,
+    "page": 255,
+    "caption": "Fig. 21.10). Abductor pollicis longus (APL) and extensor pollicis brevis (EPB) are seen along their long axis above the radius. • Position: Seated with elbow flexed with radial styloid facing up and arm resting comfortably on the table • Probe used: High-frequency linear array transducer (10 MHz+); Hockey stick probe is preferred."
+  },
+  "21.11": {
+    "chapter": 21,
+    "number": 11,
+    "page": 256,
+    "caption": "Fig. 21.11). Deliver injectate when the needle (arrows) tip is visualized near the tendon sheath above the APL and EPB. 2. Out-of-Plane Injection Place the probe short axis over the abductor pollicis longus (APL) and extensor pollicis brevis (EPB) adjacent to radial styloid process. Note the radial artery that will be located toward the volar surface. Using an out-of-plane approach, steeply insert needle adjacent and centered to the transducer ("
+  },
+  "21.12": {
+    "chapter": 21,
+    "number": 12,
+    "page": 256,
+    "caption": "Fig. 21.12). Keeping the nee- dle superficial, visualize a small hyperechoic dot approaching the target (needle tip depicted by arrowhead) of the tendon sheath before injecting. Reprinted with per- mission from Philip Peng Educational Series. • Needles: 25G 1.5 inch needle • Drugs: 1–3 mL local anesthetic (0.25% plain bupivacaine) 0.5 mL steroid (depomedrol)"
+  },
+  "21.13": {
+    "chapter": 21,
+    "number": 13,
+    "page": 259,
+    "caption": "Fig. 21.13). The FDS attaches to the bodies of the middle phalanges of digits 2–5 and acts to flex the middle phalanges at the proximal interphalangeal joint and the proxi- mal phalanges at the MCP joint. At the MCP joint is the first annular pulley. \u0007Patient Selection Patients often present with history of locking or catching of the affected finger in flexion that can progress to pain over the volar aspect of the MCP. Pain may radiate to the tip of the digit affected or to the palm. Examine for"
+  },
+  "21.14": {
+    "chapter": 21,
+    "number": 14,
+    "page": 260,
+    "caption": "Fig. 21.14). The tendons of the flexor digitorum profundus (FDP) and the flexor digitorum superficialis (FDS) lay over the phalanx, superficially to deep, respectively. Reprinted with permission from Philip Peng Educational Series. \u0007Scan 2: Rotate the Probe to Highlight the A1 Pulley System in Short Axis The flexor digitorum superficialis (FDS) and the flexor digitorum profundus (FDP) and the metacarpal bone (MC) are visualized ("
+  },
+  "21.15": {
+    "chapter": 21,
+    "number": 15,
+    "page": 260,
+    "caption": "Fig. 21.15). Superficial to the FDS is the tendon sheath (marked with ∗). Use color flow to highlight the digital arteries (A). Reprinted with permission from Philip Peng Educational Series. • Position: Hand palm up and resting comfortably on a table • Probe used: High-frequency linear array transducer (10 MHz+); Hockey stick probe is preferred."
+  },
+  "21.16": {
+    "chapter": 21,
+    "number": 16,
+    "page": 262,
+    "caption": "Fig. 21.16 Out-of-plane injection of trigger finger. (Reprinted with permission from Philip Peng Educational Series) 1. Identify the digital arteries and nerves to avoid puncture. 2. Flex and extend the patient’s fingers to aid in identifying a nodule. 3. A pathologic A1 pulley will appear hypoechogenic. 4. Retract needle slightly if resistance is felt to avoid injecting tendons. 21 Intervention on Wrist and Hand"
+  },
+  "21.17": {
+    "chapter": 21,
+    "number": 17,
+    "page": 263,
+    "caption": "Fig. 21.17). The dominant pain generator at this site originates from degenerative disease and joint instability. The thumb consists of the distal phalanges and the proximal phalanges that con- nect proximally to the first metacarpal bone. Proximal to the metacarpal bone is the trapezium. This articulation forms the CMC joint. This joint’s movements include flexion/extension and abduction/adduction. Combining flexion and abduction allows for opposition. Combining extension and adduction allows f"
+  },
+  "21.18": {
+    "chapter": 21,
+    "number": 18,
+    "page": 264,
+    "caption": "Fig. 21.18 Grind and lever test. (Reprinted with permission from Philip Peng Educational Series) 21 Intervention on Wrist and Hand"
+  },
+  "21.19": {
+    "chapter": 21,
+    "number": 19,
+    "page": 264,
+    "caption": "Fig. 21.19). The abductor pollicis longus and extensor pollicis brevis tendons can be visualized as they cross over the first CMC joint. The joint space will be seen between the trapezium and the first metacarpal. Evaluate for any bony joint abnormalities. Identify the location of the radial artery prior to injecting. Reprinted with permission from Philip Peng Educational Series. \u0007Procedure • Position: Hand thumb side up in a neutral position and resting comfortably on a table • Probe used: High"
+  },
+  "21.20": {
+    "chapter": 21,
+    "number": 20,
+    "page": 265,
+    "caption": "Fig. 21.20). Advance the needle adjacent to probe with a steep angle (red arrow) until a hyperechoic needle tip is visualized within the joint space (needle tip depicted by arrowhead). Injectate should be visualized spreading within the joint. Reprinted with permission from Philip Peng Educational Series. D. A. Spinner and A. J. Mazzola"
+  },
+  "22.1": {
+    "chapter": 22,
+    "number": 1,
+    "page": 269,
+    "caption": "Fig. 22.1). These anterior articular branches have been well studied and implied to be clinically relevant in hip pain and hip denervation. Further details are dis- cussed in Chap. 27 (Hip and Knee joint denervation). \u0007Hip Intraarticular Injection \u0007Patient Selection Injection is indicated in patients with pain from intraarticular hip pathologies (as listed in Table 22.1) lasting longer than 3 months, nonresponsive to pharmacologic and physical therapy. Osteoarthritis (OA) of different stages (II"
+  },
+  "22.2": {
+    "chapter": 22,
+    "number": 2,
+    "page": 271,
+    "caption": "Fig. 22.2). Lateral approach to the hip joint is commonly performed for fluoroscopy-guided injection and endoscopy pro- cedures but can be implemented with ultrasound guidance as well. Both approaches are described below. \u0007Anterior Approach Scan 1 Operator stands on the affected side of the patient. Place probe perpendicular to the femur at the upper third of the thigh; it shows the femoral shaft in short axis as a dome-shaped hyperechoic structure ("
+  },
+  "22.3": {
+    "chapter": 22,
+    "number": 3,
+    "page": 271,
+    "caption": "Fig. 22.3). • Position: Supine • Probe: Curvilinear 2–6 MHz, linear 5–16 MHz in low BMI patients"
+  },
+  "22.4": {
+    "chapter": 22,
+    "number": 4,
+    "page": 273,
+    "caption": "Fig. 22.4 Ultrasound scan in the trochanteric area. (Reprinted with permission from Dr. Agnes Stogicza)"
+  },
+  "22.5": {
+    "chapter": 22,
+    "number": 5,
+    "page": 272,
+    "caption": "Fig. 22.5). Slide probe toward the femoral head to optimize image to visualize the femoral neck, femoral head, acetabulum, capsule (arrows), and anterior recess (∗∗). Color Doppler helps identify and avoid the ascending branch of the lateral femo- ral circumflex artery between iliopsoas and rectus femoris muscles when injecting ("
+  },
+  "22.6": {
+    "chapter": 22,
+    "number": 6,
+    "page": 273,
+    "caption": "Fig. 22.6 Color Doppler scan of the potential needle path. (Reprinted with permission from Dr. Agnes Stogicza) • Position: Lateral decubitus, affected side up • Probe: Curvilinear 2–6 MHz, linear 5–16 MHz in low BMI patients \u0007Lateral Approach A. Stogicza"
+  },
+  "22.7": {
+    "chapter": 22,
+    "number": 7,
+    "page": 274,
+    "caption": "Fig. 22.7). The deepest muscle is the gluteus minimus (GMin) and then gluteus medius (GMed), and the most superficial layer is the tensor fascia lata (TFL) or the gluteus maximus (GMax) if scanned slightly posteriorly. \u0007Procedure \u0007Anterior Approach In-plane approach is recommended from lateral to medial with the insertion point 2 cm away from the ultrasound probe to allow a shallow needle path ("
+  },
+  "22.8": {
+    "chapter": 22,
+    "number": 8,
+    "page": 274,
+    "caption": "Fig. 22.8 left panel). Once the tip of the needle (arrows) reaches the junction of the femoral head (FH) and neck (FN) inside the anterior recess (bold arrows), injection of normal saline for hydrolocation or color Doppler (right figure) is used to ensure the spread of the injectate under the hip capsule. \u0007Lateral Approach Out-of-plane approach is recommended, where needle passes parallel to the US beam, aiming at the femoral head/neck junction. Once the tip of the needle passes the capsule (arr"
+  },
+  "22.9": {
+    "chapter": 22,
+    "number": 9,
+    "page": 275,
+    "caption": "Fig. 22.9 Out-of-plane injection in lateral approach. The needle cannot be visualized in this picture. Once the needle passes the capsule and contacts bone, the tip is confirmed with color Doppler. AC-acetabulum, GT-greater trochanter, GMax- gluteus maximus, GMed-gluteus medius (Reprinted with permission from Dr. Agnes Stogicza) • For anterior approach, identify the vessels with Doppler. The trajectory of the needle can be adjusted by tilting the probe in cephalad direction to avoid inadvertent "
+  },
+  "22.10": {
+    "chapter": 22,
+    "number": 10,
+    "page": 276,
+    "caption": "Fig. 22.10 Different facets of greater trochanter. (Reprinted with permission from Philip Peng Educational Series) Fascia over gluteus medius M Gluteus maximus M Tensor fascia lata Iliotiibial tract Gluteus medius M Gluteus minimus M Greater trochanter M Subgluteal minimus bursae Gluteus minimus M Greater trochanter"
+  },
+  "22.11": {
+    "chapter": 22,
+    "number": 11,
+    "page": 276,
+    "caption": "Fig. 22.11 showed the three different gluteus muscles in relationship to their attachments. The gluteus minimus (GMin) attaches at the anterior facet for the GT, while the gluteus medius attaches to the inferior aspect of lateral facet and posterosuperior facet of the GT. This supports their function as abductors, hip stabilizers, with the GMin slightly internally and the GMed slightly externally rotating the hip. The gluteus maximus GMax does not attach directly on the GT, as it attaches in the"
+  },
+  "22.12": {
+    "chapter": 22,
+    "number": 12,
+    "page": 278,
+    "caption": "Fig. 22.12) or just superficial to it for bursa injection. Anterior to posterior approach allows access to the Gmin tendon, deep to the tensor fascia lata. Bursae of the GMin or GMed are usually slightly cephalad, and well visualized in long axis view of the GT area, as shown on"
+  },
+  "22.13": {
+    "chapter": 22,
+    "number": 13,
+    "page": 278,
+    "caption": "Fig. 22.13). \u0007Anterior Hip: Iliopsoas Muscle Belly, Bursa, and Tendon The iliacus muscle originates at the iliac crest and inner plate of the ilium, and the psoas muscle attaches at the transverse processes of the five lumbar vertebrae. The iliacus and psoas form the iliopsoas and they attach together at the lesser trochanter ("
+  },
+  "22.14": {
+    "chapter": 22,
+    "number": 14,
+    "page": 279,
+    "caption": "Fig. 22.14 position 1). \u0007Scan 3 Once the caudal end of iliopsoas is identified, the probe is again rotated to view the muscle in short axis and its attachment on the lesser trochanter (LT) as in position 2 in the lower diagram ("
+  },
+  "23.1": {
+    "chapter": 23,
+    "number": 1,
+    "page": 284,
+    "caption": "Fig. 23.1 Suprapatellar recess (SPR). (Reprinted with permission from Philip Peng Educational Series) T. Nouer Frederico and P. Peng"
+  },
+  "23.2": {
+    "chapter": 23,
+    "number": 2,
+    "page": 284,
+    "caption": "Fig. 23.2). This will reveal the SPR (∗∗). When there is difficulty in visualizing the recess, applying pressure in the parapatellar space to squeeze the synovial fluid to the SPR may help when there is no large effusion. • Position: Supine with support underneath the knee to keep it slightly flexed • Probe: Linear 6–13 MHz Quadriceps tendon Posterior"
+  },
+  "23.3": {
+    "chapter": 23,
+    "number": 3,
+    "page": 285,
+    "caption": "Fig. 23.3). A 20- or 22-gauge needle is inserted from lateral to medial in-plane toward the SPR. Alternatively, the ultrasound probe is rotated 45 degrees with the cephalad end directed to the lateral side ("
+  },
+  "23.4": {
+    "chapter": 23,
+    "number": 4,
+    "page": 285,
+    "caption": "Fig. 23.4). The rotation of the probe is to avoid needle trauma to the quadriceps tendon. The red square indicates the probe position. \u0007Procedure Before injection, it is always advisable to aspirate the joint fluid as much as possible. In-plane technique is used with the needle inserted from lateral to medial ("
+  },
+  "23.5": {
+    "chapter": 23,
+    "number": 5,
+    "page": 286,
+    "caption": "Fig. 23.5 Sonographic image of needle insertion. Needle indicated by arrow. ∗∗∗, suprapatellar recess; F, femur; QT, quadriceps tendon. (Reprinted with permission from Philip Peng Educational Series) T. Nouer Frederico and P. Peng"
+  },
+  "23.6": {
+    "chapter": 23,
+    "number": 6,
+    "page": 287,
+    "caption": "Fig. 23.6). Whereas most of Baker’s cysts are secondary cysts and associated with degenerative knee joint diseases, primary cysts are less common and occur primarily in children. \u0007Ultrasound Scan \u0007Scan 1: Normal Knee Palpate the semitendinosus (ST) tendon by slightly flex the knee. Put the ultrasound probe over the ST tendon and a “cherry on the cake” appearance with the ST tendon (arrow head) as the cherry and semimembranosus (SM) as the cake ("
+  },
+  "23.7": {
+    "chapter": 23,
+    "number": 7,
+    "page": 287,
+    "caption": "Fig. 23.7). • Position: Prone • Probe: Linea 6–15 MHz Table 23.1 Comparison of various injectate for knee Steroid Viscosupplement Platelet-rich plasma Mechanism Anti-inflammatory Supplementation of synovial fluid Restore joint hemostasis Duration <3 weeks <3 months <12 months Comments Accelerate cartilage loss Less effect for end-stage OA Less effect for end-stage OA Reprinted with permission from Philip Peng Educational Series 23 Ultrasound-Guided Knee Intervention"
+  },
+  "23.8": {
+    "chapter": 23,
+    "number": 8,
+    "page": 289,
+    "caption": "Fig. 23.8 (a) Baker’s cyst filled with fluid (∗). (b) Baker’s cyst filled of dense fluid and debris (arrows) that might make aspiration difficult or impossible. GH, head of gastrocnemius; PA, pop- liteal artery; SM, semimembranosus; ♦, pedicle of Baker’s cyst with articular communication. (Reprinted with permission from Philip Peng Educational Series) 23 Ultrasound-Guided Knee Intervention"
+  },
+  "23.9": {
+    "chapter": 23,
+    "number": 9,
+    "page": 290,
+    "caption": "Fig. 23.9 Needle (arrow) marking the pedicle of Baker’s cyst which communicates with the joint. The insert showed the position of the probe. PA, popliteal artery. (Reprinted with permission from Philip Peng Educational Series)"
+  },
+  "23.10": {
+    "chapter": 23,
+    "number": 10,
+    "page": 289,
+    "caption": "Fig. 23.10). Remember to evaluate the nature of the fluid (serous or particulate) in order to choose the appropriate size of the needle capable of fluid aspiration (18G or higher). \u0007Step 3 After aspiration, a possible strategy is to fenestrate the capsule in attempt to induce a fibrosis of the cyst wall and thus obliterate the cyst ("
+  },
+  "23.11": {
+    "chapter": 23,
+    "number": 11,
+    "page": 289,
+    "caption": "Fig. 23.11). Fenestration of the cyst pedicle is performed for the same purpose, trying to interrupt the commu- nication with the joint. Note the cyst is empty at this stage ("
+  },
+  "23.12": {
+    "chapter": 23,
+    "number": 12,
+    "page": 289,
+    "caption": "Fig. 23.12). \u0007Step 4 Finally, injection of steroid into the intra-articular space is performed through the anterior approach described before, as most of the cyst is secondary to the • Needles: 16G needle • Approach: Linear probe in plane medial to lateral a b"
+  },
+  "23.13": {
+    "chapter": 23,
+    "number": 13,
+    "page": 292,
+    "caption": "Fig. 23.13). Both pes anserinus tendons and bursa can be injured in valgus deformities and medial compartment osteoarthritis deformities and it can be a very important source of extra-articular pain generator. \u0007Ultrasound Scan With the patient in figure of 4 position, the transducer is placed in long axis in rela- tion of the tibia with the caudal end tilt in anterior direction ("
+  },
+  "23.14": {
+    "chapter": 23,
+    "number": 14,
+    "page": 292,
+    "caption": "Fig. 23.14). The bursa can be seen as a thin hypoechoic line in the plane between the medial collateral ligament (black arrow head) and the pes anserinus tendons (arrows). The right upper panel showed the sonoanatomy in a normal individual. The right low panel showed a patho- logical bursa (∗∗) which is easier to visualize and the tendons are bigger and more hypoechoic than normal (when compared with the medial collateral ligament). • Position: Supine with the knee flex and hip externally rotate"
+  },
+  "23.15": {
+    "chapter": 23,
+    "number": 15,
+    "page": 293,
+    "caption": "Fig. 23.15). A linear pattern of spread is seen during the injection expand- ing the fascial plane with no changing in the echogenicity of the tendon (implying intratendinous injection). The lower two panel showed the positions of the probe and needle. Alternatively, the bursa can be injected when the probe is in short axis to the pes anserinus tendon ("
+  },
+  "23.16": {
+    "chapter": 23,
+    "number": 16,
+    "page": 293,
+    "caption": "Fig. 23.16). \u0007Ultrasound-Guided Distal Iliotibial Band Bursa Injection The iliotibial band is a thick strip of dense connective tissue located on lateral thigh from ilium to tibia. It arises at its proximal end from the tendons of the tensor fas- ciae latae and gluteus maximus muscles and travels along the lateral side of the thigh to insert in Gerdy’s tubercle ("
+  },
+  "23.17": {
+    "chapter": 23,
+    "number": 17,
+    "page": 293,
+    "caption": "Fig. 23.17), a bony prominence between the fibula and tibia tubercle. • Needle: 25G 1.5-inch needle • Drugs: 3 mL 20 mg Depo-Medrol mixed with bupivacaine 0.25"
+  },
+  "23.18": {
+    "chapter": 23,
+    "number": 18,
+    "page": 295,
+    "caption": "Fig. 23.18). Normally the bursa between the ITB and the distal femur is not easily visible or appears as a hypoechoic thin line between the femur and the band. Compare the ITB of the contralateral side to appreciate the ITB thickness and echogenicity. Fluid collection can be seen when the bursa is filled with liquid ("
+  },
+  "23.19": {
+    "chapter": 23,
+    "number": 19,
+    "page": 296,
+    "caption": "Fig. 23.19 ITB with bursitis. In patient with ITB syndrome, the ITB (arrows) may appear thickened with fluid collection in the bursa (∗∗). VL, vastus lateralis. (Reprinted with permission from Philip Peng Education Series) T. Nouer Frederico and P. Peng"
+  },
+  "23.20": {
+    "chapter": 23,
+    "number": 20,
+    "page": 296,
+    "caption": "Fig. 23.20). Then, 3–5 mL of solution is slowly injected and visualization of the distension of bursa is observed. Another approach is to inject the bursa in short axis of the ITB using a 22-gauge needle (arrow) inserted from posterior direction to avoid causing damage or pierc- ing the ITB ("
+  },
+  "23.21": {
+    "chapter": 23,
+    "number": 21,
+    "page": 296,
+    "caption": "Fig. 23.21). \u0007Literature Review The mainstay of treatment is the nonsurgical approach for symptom improve- ment of ITB syndrome. Oral nonsteroidal anti-inflammatory drugs and cortico- steroid injection can be used to treat the acute inflammatory response. Although corticosteroid injections have shown significant pain improvement compared to placebo injections, there are few studies showing corticosteroid injection by the ultrasound. \u0007Ultrasound-Guided Patellar Tendon Injections Patellar tendinop"
+  },
+  "23.22": {
+    "chapter": 23,
+    "number": 22,
+    "page": 297,
+    "caption": "Fig. 23.22 left upper panel). The patella tendon is scan in long axis with the cephalad end of the probe on the lower patella. The patella tendon (bold arrow) is revealed. Please note the presence of the crura fascia (line arrow) and Hoffa fat pad (∗). TT, tibial tubercle. Right upper panel: Position of the ultrasound probe. Left lower panel: Abnormal patella tendon. Ultrasonographic imaging of • Position: Supine with knee slight flexed • Probe: Linear 6–15 MHz 23 Ultrasound-Guided Knee Interven"
+  },
+  "23.23": {
+    "chapter": 23,
+    "number": 23,
+    "page": 298,
+    "caption": "Fig. 23.23a). For high-volume injection, the needle is inserted in the plane deep to the patella tendon (PT). Hydrolocation is performed to visualize the posterior displacement of the Hoffa fat pad (HFD). #, injectate. Please note the intrasubstance tear (bold arrow) with the PT."
+  },
+  "23.24": {
+    "chapter": 23,
+    "number": 24,
+    "page": 299,
+    "caption": "Fig. 23.24). Suggested Reading Acebes JC, Sánchez-Pernaute O. Ultrasonographic assessment of Baker’s cysts after intra-articular corticosteroid injection in knee osteoarthritis. J Clin Ultrasound. 2006;34:113–7. Bandinelli F, Fedi R, Generini S, et al. Longitudinal ultrasound and clinical follow-up of Baker’s cysts injection with steroids in knee osteoarthritis. Clin Rheumatol. 2012;31:727–31. Berkoff DJ. Clinical utility of ultrasound guidance for intra-articular knee injections: a review. Clin"
+  },
+  "24.1": {
+    "chapter": 24,
+    "number": 1,
+    "page": 301,
+    "caption": "Fig. 24.1). The tibiotalar joint is formed by the articulation between the tibia and fibula with the talus. It is a hinged synovial joint, which allows for flexion and extension. The subtalar joint is formed by the articulation of the talus and the calcaneous. The subtalar joint has an anterior and posterior component. The tibiotalar and subtalar joints communicate in approx- imately 10–20% of people. There are five peripheral nerves which innervate the foot: the superficial pero- neal nerve (SP"
+  },
+  "24.2": {
+    "chapter": 24,
+    "number": 2,
+    "page": 303,
+    "caption": "Fig. 24.2 Anterior view of the ankle. (a) Superficial peroneal nerve. (b) Deep peroneal nerve and tibiotalar joint. (Reprinted with permission from the Philip Peng Educational Series) • Position: Supine, tilted contralateral side, affected leg nondependent position • Probe: Linear 6–15 MHz 24 Ankle Joint and Nerves"
+  },
+  "24.3": {
+    "chapter": 24,
+    "number": 3,
+    "page": 302,
+    "caption": "Fig. 24.3). The terminal branches are sensory. Above the level of the ankle joint the DPN lies lateral to the anterior tibial artery between the extensor digitorum longus and extensor hallucis longus tendons. On the medial aspect of the ankle, the SaN provides sensation to the region around the medial malleolus and the medial aspect of the foot ("
+  },
+  "24.4": {
+    "chapter": 24,
+    "number": 4,
+    "page": 305,
+    "caption": "Fig. 24.4 Anteromedial view of the ankle. Saphenous nerve. (Reprinted with permission from the Philip Peng Educational Series) Tibilis posterior Tibilis posterior tendon Flexor digitorum longus tendon Flexor hallucis longus muscle & tendon Posterior tibial artery & vein Tibial nerve Posterior tibial artery Flexor digitorum longus Flexor hallucis longus Flexor retinaculum Tibial nerve Medial malleolus a b"
+  },
+  "24.5": {
+    "chapter": 24,
+    "number": 5,
+    "page": 302,
+    "caption": "Fig. 24.5). The TN gives off a calcaneal branch proximal to the medial malleolus and then continues to terminate in the medial and lateral branches. The SuN provides sensation to the lateral aspect of the distal leg and the lateral aspect of the foot. In the distal leg, the SuN runs adjacent to the lesser saphenous vein between the Achilles tendon and the peroneus tendons ("
+  },
+  "24.6": {
+    "chapter": 24,
+    "number": 6,
+    "page": 302,
+    "caption": "Fig. 24.6). Tibiotalar or tibiocrural joint Tibia Fibula Talus Distal Tibiofibular joint Neck of talus Head of talus Navicular Calcaneus Anterior and posterior Subtalar joint Cuboid Talonavicular joint Calcaneocuboid joint Calcaneus Subtalar joint Sustentaculum tali Tibia Talus Navicular Calcaneonavicular or spring ligament a b c"
+  },
+  "24.7": {
+    "chapter": 24,
+    "number": 7,
+    "page": 306,
+    "caption": "Fig. 24.7 Sonoanatomy of the superficial peroneal nerve at different locations in the lower extremity. (Reprinted with permission from the Philip Peng Educational Series) Achilles tendon Sural nerve Sural nerve Small saphenous vein Tendo calcaneus Superior fibular retinaculum Peroneus brevis Peroneus longus Peroneus brevis Peroneus longus Lateral malleolus Talus Inferior extensor retinaculum"
+  },
+  "24.8": {
+    "chapter": 24,
+    "number": 8,
+    "page": 307,
+    "caption": "Fig. 24.8 Sonoanatomy of sural nerve. Line arrow, SuN. P. brevis, peroneus brevis. (Reprinted with permission from the Philip Peng Educational Series) \u0007Deep Peroneal Nerve By placing the probe in short axis to the tendons just above the ankle joint, the most prominent tendon will be the tibialis anterior tendon (orange circle) ("
+  },
+  "24.9": {
+    "chapter": 24,
+    "number": 9,
+    "page": 307,
+    "caption": "Fig. 24.9). Deep to the extensor hallucis longus (EHL) and extensor digitorum longus (EDL) tendon, the anterior tibial artery is seen. The DPN is in the fascia plane with the vessel. • Position: Supine, knee flexed, foot on the examination table • Probe: Linear 6–15 MHz"
+  },
+  "24.10": {
+    "chapter": 24,
+    "number": 10,
+    "page": 308,
+    "caption": "Fig. 24.10 Sonoanatomy of tibial nerve. TP, tibialis posterior tendon; FDL, flexor digitorum lon- gus tendon; bold arrows, flexor retinaculum. (Reprinted with permission from the Philip Peng Educational Series) \u0007Tibial and Saphenous Nerve By placing the probe between the medial malleolus and Achilles tendon, the tarsal tunnel and its content are revealed ("
+  },
+  "24.11": {
+    "chapter": 24,
+    "number": 11,
+    "page": 309,
+    "caption": "Fig. 24.11 Sonoanatomy of sural nerve. (Reprinted with permission from the Philip Peng Educational Series) \u0007Procedure for Ankle Nerves For each site, 3–5 mL is sufficient, larger volume for TN. For TN, we prefer to direct the needle out-of-plane (dotted arrow) to target the space (★) posterior to TN formed by the retinaculum (bold arrow) and the fascia overlying the FHL (arrows) ("
+  },
+  "24.12": {
+    "chapter": 24,
+    "number": 12,
+    "page": 309,
+    "caption": "Fig. 24.12). For SPN, SaN, and DPN, we suggest in-plane and SN out-of-plane. • Drugs: Bupivacaine 0.25% 10 mL mixed with depo steroid (Depo-Medrol) 40 mg • Needle: 25G 1.5-inch needle"
+  },
+  "24.13": {
+    "chapter": 24,
+    "number": 13,
+    "page": 310,
+    "caption": "Fig. 24.13 Sonoanatomy of anterior to the tibiotalar joint. (Reprinted with permission from the Philip Peng Educational Series) • Position: Lateral position, affected leg nondependent position, rolled towel on the medial ankle to allow inversion of the ankle • Probe: Linear 6–15 MHz • Position: Supine, knee flexed, foot on the examination table • Probe: Linear 6–15 MHz N. Soneji and P. Peng"
+  },
+  "24.14": {
+    "chapter": 24,
+    "number": 14,
+    "page": 311,
+    "caption": "Fig. 24.14). On the calcaneal side, the peroneus tendon (∗) can be seen. \u0007Scan 1 Rotate the probe toward the lateral malleolus as much as possible, and the hyper- echoic shadow of both calcaneus and talus will become superficial with a gap in between (bold arrow) ("
+  },
+  "24.15": {
+    "chapter": 24,
+    "number": 15,
+    "page": 311,
+    "caption": "Fig. 24.15). This is the entrance to the subtalar joint. The peroneus tendon (∗) is on the calcaneus side. \u0007Procedure \u0007Tibiotalar Joint Injection—Anterior Joint Recess"
+  },
+  "24.16": {
+    "chapter": 24,
+    "number": 16,
+    "page": 313,
+    "caption": "Fig. 24.16 (a) Out-of-plane needle insertion to tibiotalar joint. (b) In-plane approach to tibiotalar joint. (Reprinted with permission from the Philip Peng Educational Series) 1. When scanning the anterior tibiotalar joint, ensure the patient’s foot is flat on the examination table with the knee flexed. This opens the anterior joint recess. 2. When scanning the tibiotalar joint, start by scanning over the tibialis ante- rior tendon. The probe should then be shifted medially. Needle insertion me"
+  },
+  "24.17": {
+    "chapter": 24,
+    "number": 17,
+    "page": 312,
+    "caption": "Fig. 24.17). The needle tip is passed between the calcaneous and talus using hydrolocation with saline. Thin arrows, needle direction with out of plane technique. Thick arrow, subtalar joint. Reprinted with permission from the Philip Peng Educational Series. Needles: 25G 1.5-inch needle. Drugs: 2 mL of local anesthetic (2% plain lidocaine) 1 mL steroid (40 mg Depo-Medrol) N. Soneji and P. Peng"
+  },
+  "25.1": {
+    "chapter": 25,
+    "number": 1,
+    "page": 318,
+    "caption": "Fig. 25.1 Platelet physiology. Platelets are not cells, but rather 1–4 μm anucleated cytoplasmic fragments of megakaryocytes. Platelets contain dense granules and alpha granules. The latter contain adhesion molecules, coagulation and fibrinolytic factors, growth factors, cytokines, antibacterial proteins, and other factors, totaling more than 1000. These factors are released with platelet activation as shown on the schematics. ∗AG – Alpha granules, DG – Dense granules, PDGF – Platelet-derived gr"
+  },
+  "25.2": {
+    "chapter": 25,
+    "number": 2,
+    "page": 319,
+    "caption": "Fig. 25.2 Typical pattern of healing. An initial reaction to injury starts immediately with hemo- stasis. The inflammatory phase followed by proliferation and then remodeling. The healing of tis- sue may last more than a year 25 Platelet-Rich Plasma"
+  },
+  "25.3": {
+    "chapter": 25,
+    "number": 3,
+    "page": 320,
+    "caption": "Fig. 25.3 Why use platelet-rich plasma (PRP)? The normal or physiologic platelet concentration in blood is 150–450,00 per μL. It is characteristically three to eight times greater in the PRP. Subsequently, the concentration of growth factors and other signaling molecules is significantly higher, which may potentially explain some of the mechanisms of accelerated tissue regeneration with platelet-rich plasma application. PRP seems to produce simultaneous anti- inflammatory and pro-inflammatory ef"
+  },
+  "25.4": {
+    "chapter": 25,
+    "number": 4,
+    "page": 321,
+    "caption": "Fig. 25.4 Clinical application of platelet-rich plasma (PRP). There are more than 5000 publications related to PRP. Most common clinical applications are tendinopathy and osteoarthritis 40 Effect size Saline Local anesthetic Steroids Leucocyte pure PRP Leucocyte rich PRP 30 20 10 0"
+  },
+  "25.5": {
+    "chapter": 25,
+    "number": 5,
+    "page": 321,
+    "caption": "Fig. 25.5 Platelet-rich plasma (PRP) in the treatment of tendinopathy. This figure demonstrates the effect size of various injectates on tendinopathy based on a recent meta-analysis (Fitzpatrick J, Bulsara M, Zheng MH. The Effectiveness of Platelet-Rich Plasma in the Treatment of Tendinopathy: A Meta-analysis of Randomized Controlled Clinical Trials. Am J Sports Med. 2017;45(1):226-233) 25 Platelet-Rich Plasma"
+  },
+  "25.6": {
+    "chapter": 25,
+    "number": 6,
+    "page": 322,
+    "caption": "Fig. 25.6). Table 25.3 Effect of different platelet-rich plasma formulations on tissue regeneration The outcomes of different tissue regenerations may depend on PRP formulation LR-PRP appears to be more effective for tendon regeneration. LP-PRP appears to be more effective for cartilage regeneration. PPP appears to be more effective for tendon regeneration muscle repair. PRP Platelet-rich plasma, LR-PRP Leucocyte-rich platelet-rich plasma, LR-PRP Leucocyte-pure platelet-­rich plasma, PPP Platele"
+  },
+  "26.1": {
+    "chapter": 26,
+    "number": 1,
+    "page": 325,
+    "caption": "Fig. 26.1). Depending on the phase of disease, the imaging appearance and physical consistency of the calcification dif- fer significantly as do patient symptoms. The calcific stage consists of three phases: formative, resting, and resorptive. The formative and resting phases are long-lasting asymptomatic stages (hard calcific phases) but may be associated with varying degrees of pain at rest or with movement. Many patients are asymptomatic if they are not large enough to induce impingement synd"
+  },
+  "26.2": {
+    "chapter": 26,
+    "number": 2,
+    "page": 325,
+    "caption": "Fig. 26.2). It is difficult to aspirate the calcifications in these two phases because the calcifications are quite hard and chalklike. Most com- mon indication of lavage at this stage is calcification over 1 cm in diameter, which commonly causes impingement syndrome."
+  },
+  "26.3": {
+    "chapter": 26,
+    "number": 3,
+    "page": 326,
+    "caption": "Fig. 26.3 Soft calcific phase: sonographic (a), radiographic image (b), and aspirated specimen (c). The arrows indicate the calcification. Note the minimal echogenic shadow cast by the calcium in (a). (Reprinted with permission from Philip Peng Education Series) S. H. Lee"
+  },
+  "26.4": {
+    "chapter": 26,
+    "number": 4,
+    "page": 330,
+    "caption": "Fig. 26.4f Subacromial bursa injection of steroid. (Reprinted with permission from Philip Peng Education Series) 1. Identify the symptomatic calcification. 2. Target is the center of calcium cavity. 3. Do not relocate or adjust the needle after insertion of the needle. 4. Initial step is very important. Push the plunger very gently to avoid the calcium rupture, which is the most common cause of failure. 5. Subacromial bursal injection of steroid is important in minimizing the post-procedural bur"
+  },
+  "26.5": {
+    "chapter": 26,
+    "number": 5,
+    "page": 330,
+    "caption": "Fig. 26.5). Identify the symptomatic calcification. Place the transducer along the long axis of the center of calcification. After administration of the local anesthetic, advance the fenestration needle until its tip is placed in the surface of the calcifica- tion. Fenestrate the calcification by repeated forward and backward movement or rotating movement until the calcification is softened, and crepitation is diminished. During repeated fenestration procedure, infiltrate the 1% of lidocaine or "
+  },
+  "27.1": {
+    "chapter": 27,
+    "number": 1,
+    "page": 335,
+    "caption": "Fig. 27.1 Schematic diagram to show the articular branches to the anterior hip joint capsule. The femoral, obturator, and accessory obturator nerves are color coded. (Reprinted with permission from Philip Peng Educational Series. The original artwork was created and modified with the permission from Dr. Maria Fernanda Rojas, Bucaramanga, Colombia) J. Tran and P. Peng"
+  },
+  "27.2": {
+    "chapter": 27,
+    "number": 2,
+    "page": 336,
+    "caption": "Fig. 27.2 The articular branches of the femoral nerve are classified as either high or low, corre- sponding to their origin superior or inferior to the inguinal ligament. High branches are much more prevalent than low branches. In this dissection photograph, the left iliopsoas had been removed, and the femoral nerve (orange arrow) was retracted medially to visualize the high articular branches (highlighted in green) supplying the anterior hip joint capsule. Left upper insert showed the region of"
+  },
+  "27.3": {
+    "chapter": 27,
+    "number": 3,
+    "page": 337,
+    "caption": "Fig. 27.3 The AON (highlighted in blue) descended into the anterior thigh region and supplied sensory branches to the medial aspect of the anterior hip joint capsule. Note in the dissection photograph, the iliopsoas had been removed to visualize the AON. The insert in the left upper corner showed the region of the photograph. (Reprinted with permission from Philip Peng Educational Series) J. Tran and P. Peng"
+  },
+  "27.4": {
+    "chapter": 27,
+    "number": 4,
+    "page": 338,
+    "caption": "Fig. 27.4 In this figure, a low branch was shown. If a high branch was present, it usually consisted of a single nerve branch. The low branches, when present, were more numerous (green) and traveled either directly to the hip joint or formed a fine plexus that innervated the capsule. The obturator canal was outlined with red circle and the femoral head in white dotted line. The most consistent landmark for both high and low ON branches was the bone thickening of the inferomedial acetabulum (∗) t"
+  },
+  "27.5": {
+    "chapter": 27,
+    "number": 5,
+    "page": 339,
+    "caption": "Fig. 27.5 The diagram summarized the contribution of various articular branches to the anterior hip capsule. The articular branches from femoral nerve (FN) contribute to all four quadrants including the weight-bearing superior (medial and lateral) quadrants. Articular branches from obturator nerve (ON) only contribute to the lower half and that from accessory obturator nerve (AON) to medial half of the anterior capsule. (Reprinted with permission from Philip Peng Education Series) J. Tran and P."
+  },
+  "27.6": {
+    "chapter": 27,
+    "number": 6,
+    "page": 341,
+    "caption": "Fig. 27.6d). Please differentiate the fascia layer between the iliopsoas tendon from the iliofemoral ligament overly- ing the anterior joint capsule. \u0007The Second Target Is the Obturator Articular Branch At the present time, the author prefers a combined fluoroscopic and ultrasound tech- nique. The bony target is the inferomedial acetabulum. Direct insertion of the needle under fluoroscopy will be at high risk to the femoral neurovascular bundle because of the close vicinity. Directing the needle"
+  },
+  "27.7": {
+    "chapter": 27,
+    "number": 7,
+    "page": 342,
+    "caption": "Fig. 27.7 Left figure showed the position of the ultrasound probe in both positions (red and green rectangles). The middle and right figures were the corresponding sonographic images in red and green rectangles, respectively. SMA, superomedial acetabulum; IMA, inferomedial acetabulum; FA, femoral artery; FH, femoral head; arrow, target of the obturator articular branches. (Reprinted with permission from Philip Peng Educational Series) • Needle: 22G 3.5 inch needle • Drug: 3 mL 0.25% bupivacaine "
+  },
+  "27.8": {
+    "chapter": 27,
+    "number": 8,
+    "page": 343,
+    "caption": "Fig. 27.8 Upper panel. The left diagram showed the needle insertion and the relevant landmark. The corresponding sonographic image was shown on the right with the spread of local anesthetic (∗) deep to the psoas tendon (PS). The needle was outlined by the arrows. Lower panel. The left diagram showed the needle insertion and the relevant landmark. The needle (bold arrows) was directed to the deep end of the inferomedial acetabulum (IMA) with the local anesthetic (LA) shown at the tip. FA, femoral"
+  },
+  "27.9": {
+    "chapter": 27,
+    "number": 9,
+    "page": 344,
+    "caption": "Fig. 27.9 Radiograph of the pelvis and hip joint in the anteroposterior (AP) view. Needle 1 was targeted to the femoral articular branches and needle 2 targeted to the inferomedial acetabulum or teardrops (white dotted line). (Reprinted with permission from Philip Peng Educational Series) 27 Hip and Knee Joint Denervation"
+  },
+  "27.10": {
+    "chapter": 27,
+    "number": 10,
+    "page": 346,
+    "caption": "Fig. 27.10). On the superomedial quadrant, the articular branches are superior medial genicular nerve, nerve to vastus medialis, and medial branch of the nerve to vastus intermedius and saphenous nerve. All branches are originated from femoral nerve including superior medial genicular nerve. With the exception of saphenous nerve, all contribute to the joint innervation consistently. Of all those articular branches, only the superior medial genicular nerve and medial branch of the nerve to vastus"
+  },
+  "27.11": {
+    "chapter": 27,
+    "number": 11,
+    "page": 348,
+    "caption": "Fig. 27.11 Ultrasound imaging technique and the corresponding sonographic image of the super- omedial knee. Upper left panel. The ultrasound probe was placed along the long axis of femur between the diaphysis and epiphysis. Upper right panel. A fascia expansion (∗∗∗) deep to the vastus medial (VM) could be seen. E, epiphysis. Lower left panel. The ultrasound probe was then turned 90 °C to obtain a short-axis view of the femur. Move or align the probe in the cephalad-­ caudal direction until the "
+  },
+  "27.12": {
+    "chapter": 27,
+    "number": 12,
+    "page": 349,
+    "caption": "Fig. 27.12 Left panel. The two positions of the ultrasound probe just distal to the epiphysis of the tibia. Right upper panel in red rectangle. The ultrasound probe was in the long axis of the tibia. The inferior medial genicular nerve (IMGN) and vessel (bold arrow) are deep to the medial collateral ligament (arrowheads), which is deep to the crural fascia (arrows). Mark the depth of the bone hyperechoic shadow deep to the IMGN. Right lower panel in green rectangle. The ultrasound was rotated 90"
+  },
+  "27.13": {
+    "chapter": 27,
+    "number": 13,
+    "page": 350,
+    "caption": "Fig. 27.13). Therefore, the needle is inserted in-plane from anterior to posterior direction. The trajectory of the needle is similar to the fluoroscopy-guided knee genicular branch injection. A few important points are highlighted here. First, the author suggests a “90-degree rule.” What this means is that the ultrasound probe is placed in the same alignment as it is for lateral X-ray. The probe will only be aligned or glided without tilting or rotating. The rationale behind is simple. This man"
+  },
+  "27.14": {
+    "chapter": 27,
+    "number": 14,
+    "page": 351,
+    "caption": "Fig. 27.14 The left panel showed the target for the fluoroscopy-guided injection (star). However, the ultrasound showed the fascia expansion (bold arrows) and the vessel at a more proximal location (red dot in the left panel). The red spot in the right panel is not a sign of Doppler but was artificially added to show the vessel, which was seen in the video. E, epiphysis. (Reprinted with permission from Philip Peng Educational Series) • Needle: system providing large or palisade or strip lesion •"
+  },
+  "27.15": {
+    "chapter": 27,
+    "number": 15,
+    "page": 352,
+    "caption": "Fig. 27.15 Multiple needle insertion for the superomedial quadrant. If three needles are planned for insertion, the first needle is placed at the midpoint of the femur (position A in the left upper panel and solid red circle in the right upper panel). A second needle is placed in a slight cephalad and anterior position (position B in the left upper panel and solid red circle in the right lower panel). The left lower panel showed the arrangement of the three needles. (Reprinted with permission fr"
+  }
+}
