@@ -47,7 +47,7 @@ red_flags_master = extract_js_var('RED_FLAGS_MASTER', scr_text)
 lab_tests_guide = extract_js_var('LAB_TESTS_GUIDE', scr_text)
 drug_induced_guide = extract_js_var('DRUG_INDUCED_PAIN_GUIDE', scr_text)
 
-assert len(screening_data) == 10, f"Expected 10 modules (Chapters 1-10), got {len(screening_data)}"
+assert len(screening_data) == 8, f"Expected 8 symptom modules, got {len(screening_data)}"
 total_deepak_figs = 0
 for m in screening_data:
     assert 'id' in m and 'chapter' in m and 'title_vi' in m and 'summary' in m
@@ -62,7 +62,7 @@ assert len(red_flags_master) >= 10, f"Expected >= 10 red flags in master, got {l
 assert len(lab_tests_guide) >= 10, f"Expected >= 10 lab tests, got {len(lab_tests_guide)}"
 assert len(drug_induced_guide) >= 6, f"Expected >= 6 drug classes, got {len(drug_induced_guide)}"
 
-print(f"  [PASS] Web 2 (Sàng Lọc Chẩn Đoán Phân Biệt Deepak Sebastian): Đủ 10 chương, Thuật toán 3 Giai đoạn, Master Cờ đỏ, Lab tests, Drug-induced & 279 ảnh Atlas sẵn sàng 100%!")
+print(f"  [PASS] Web 2 (Sàng Lọc Chẩn Đoán Phân Biệt Deepak Sebastian): Đủ 8 Vùng Triệu Chứng Lâm Sàng, Thuật toán 3 Giai đoạn, Master Cờ đỏ, Lab tests, Drug-induced & 279 ảnh Atlas sẵn sàng 100%!")
 
 # 3. Test Fallback files
 assert os.path.exists('data/procedures.fallback.js'), "Missing procedures.fallback.js"
@@ -72,7 +72,7 @@ with open('data/screening.fallback.js', 'r', encoding='utf-8') as f:
     fb_text = f.read()
 
 fb_screening_data = extract_js_var('STABLE_SCREENING_FALLBACK', fb_text)
-assert len(fb_screening_data) == 10, f"Expected 10 fallback modules, got {len(fb_screening_data)}"
+assert len(fb_screening_data) == 8, f"Expected 8 fallback symptom modules, got {len(fb_screening_data)}"
 
 assert os.path.exists('backup/stable_v1.0/manifest.json'), "Missing backup manifest"
 print("  [PASS] Cơ chế Fallback dự phòng độc lập cho cả 2 ứng dụng đã đồng bộ và hoạt động chuẩn xác!")

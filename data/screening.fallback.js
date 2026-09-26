@@ -1,16 +1,18 @@
 // MSK-Differential Screening Pro - Resilient Fallback Shield
-// Auto-generated stable fallback dataset
+// Auto-generated stable fallback dataset with 8 Symptom-based Clinical Guidemaps
 
 const STABLE_SCREENING_FALLBACK = [
   {
-    "id": "ch01-thought-process",
+    "id": "systemic-widespread",
     "chapter": 1,
-    "region": "foundation",
-    "region_vi": "Tư Duy Cốt Lõi & Thuật Toán",
-    "title": "Introduction and Thought Process in Regional Pain",
-    "title_vi": "Tư Duy 3 Giai Đoạn Sàng Lọc Lâm Sàng & Thuật Toán Guidemap Ca Đau Khó",
-    "author": "GS. Deepak Sebastian (Chapter 1, pp. 1-6)",
-    "summary": "Mô hình tư duy chẩn đoán phân biệt hiện đại (Direct Access MSK Model): Thoát khỏi lối mòn chỉ nghĩ đến 'Chấn thương & Thoái hóa', thiết lập tư duy sàng lọc toàn diện 10 nhóm căn nguyên hệ thống (Mạch máu, Nhiễm trùng, Ung thư, Bẩm sinh, Đau do thuốc, Nội tiết, Tự miễn, Dinh dưỡng, Chấn thương, Thoái hóa). Ứng dụng thuật toán 3 giai đoạn để phân định an toàn: Giai đoạn 1 (Rà soát Cờ đỏ & Bệnh hệ thống) -> Giai đoạn 2 (Xác định tổn thương mô & Rối loạn chức năng thể dịch Somatic Dysfunction) -> Giai đoạn 3 (Định hướng can thiệp: Phục hồi chức năng, Tiêm siêu âm can thiệp hay Chuyển tuyến cấp cứu).",
+    "region": "systemic",
+    "region_vi": "Toàn Thân & Do Thuốc",
+    "icon": "🌐",
+    "title": "Systemic, Widespread MSK Pain, Drug-Induced Pain & Lab Screening",
+    "title_vi": "🌐 Đau Toàn Thân / Đa Khớp, Đau do Thuốc & Rối Loạn Chuyển Hóa",
+    "chief_complaint": "Phàn nàn chính: Đau mỏi toàn thân, đau nhức nhiều khớp di chuyển, đau xơ cơ (Fibromyalgia), đau đa cơ do thấp (PMR), đau mỏi cơ gân sau dùng thuốc Statin / Quinolone / Corticoid / Kháng Estrogen, sưng đau đa khớp kèm sốt nhẹ hoặc sút cân.",
+    "author": "GS. Deepak Sebastian (Chuyên khảo Chương 1, 2, 3 - Tổng Hợp Lâm Sàng)",
+    "summary": "Mô hình tiếp cận ca đau khó & đau lan tỏa: Tích hợp tư duy sàng lọc 3 giai đoạn (Stage 1 Red Flags -> Stage 2 Phân định mô tổn thương & Rối loạn cơ chế Somatic -> Stage 3 Định hướng can thiệp / Chuyển tuyến). Rà soát triệt để 10 nhóm nguyên nhân hệ thống, 15 nhóm thuốc gây đau cơ xương khớp thường gặp (Statin, Quinolone, Aromatase inhibitors, Bisphosphonate...) và bảng kiểm 7 nhóm xét nghiệm cận lâm sàng (ESR, CRP, Calci, ALP, Uric acid, CPK, HLA-B27, RF, Anti-CCP, ANA).",
     "stage_1_systemic_red_flags": [
       {
         "category": "10 Nhóm Căn Nguyên Hệ Thống Cần Rà Soát (The 10 Systemic Categories)",
@@ -21,30 +23,53 @@ const STABLE_SCREENING_FALLBACK = [
         "category": "Cờ Vàng Tâm Lý & Dấu Hiệu Không Do Thực Thể (Yellow Flags & Non-organic Signs)",
         "signs": "Triệu chứng đau lan tỏa không phù hợp giải phẫu thần kinh, điểm đau nhảy nhót, niềm tin thảm họa hóa (Catastrophizing), lo âu/trầm cảm nặng, yếu tố vụ lợi thứ phát (Secondary gain: tranh chấp pháp lý tai nạn lao động, bồi thường bảo hiểm). Dấu hiệu Waddell dương tính.",
         "action": "Đánh giá thang điểm trầm cảm/lo âu (PHQ-9, GAD-7), giải thích tâm lý hành vi (CBT), tránh các can thiệp xâm lấn không cần thiết."
+      },
+      {
+        "category": "Cờ Đỏ Tốc Độ Máu Lắng Tăng Cao Vọt (ESR > 100 mm/h)",
+        "signs": "Đau xương âm ỉ toàn thân, đau cột sống dai dẳng tăng về đêm, mệt mỏi suy kiệt. Cần nghĩ ngay đến: Đa u tủy xương (Multiple Myeloma), Viêm động mạch thái dương (Temporal Arteritis / GCA), Viêm tủy xương (Osteomyelitis) hoặc Ung thư di căn xương.",
+        "action": "Chỉ định Điện di đạm huyết thanh (SPEP), Định lượng chuỗi nhẹ Bence-Jones niệu, Chụp X-quang cột sống/khung chậu tìm ổ tiêu xương đục lỗ (punched-out lesions) và MRI."
       }
     ],
     "red_flags": [
       {
-        "category": "Cờ Đỏ Hệ Thống Cấp Cứu (Stage 1 Red Flags Triage)",
-        "signs": "Sốt cao kèm sưng nóng đỏ đau 1 khớp đơn độc, đau dữ dội về đêm không liên quan vận động, sụt cân không chủ ý > 5kg/tháng, suy giảm thần kinh tiến triển nhanh (liệt, đại tiểu tiện không tự chủ), đau xé rách ngực lưng, mạch ngoại vi yếu/mất.",
-        "action": "Chuyển viện/Cấp cứu chuyên khoa ngay trong ngày. Tuyệt đối KHÔNG tiêm giảm đau làm lu mờ triệu chứng."
+        "category": "Cờ Đỏ Nhiễm Trùng Khớp Cấp / Viêm Khớp Nhiễm Khuẩn (Septic Arthritis)",
+        "signs": "Sốt cao rét run kèm sưng nóng đỏ đau dữ dội 1 khớp đơn độc (gối, háng, vai), khớp co cứng hoàn toàn không thể cử động dù thụ động nhẹ nhất. Chọc hút dịch khớp có bạch cầu dịch khớp > 50,000 - 100,000/mcL (> 75% Neutrophils).",
+        "action": "CẤP CỨU NGOẠI KHOA KHẨN: Rửa khớp, dẫn lưu dịch mủ qua nội soi hoặc mổ hở + Kháng sinh tĩnh mạch liều cao phổ rộng. CHỐNG CHỈ ĐỊNH TUYỆT ĐỐI TIÊM CORTICOID VÀO KHỚP!",
+        "figures": []
       },
       {
-        "category": "Nhận Diện Ca Đau Khớp Kháng Trị / Không Điển Hình",
-        "signs": "Đau khớp điều trị thông thường > 6-12 tuần không thuyên giảm, đau tăng lên khi nghỉ ngơi, đau đối xứng nhiều khớp di chuyển, đáp ứng kém với NSAID/thuốc giảm đau bậc 2.",
-        "action": "Kích hoạt Quy trình rà soát Ch 2 (Xét nghiệm miễn dịch/chuyển hóa) và Ch 3 (Tiền sử dùng thuốc dài ngày)."
+        "category": "Cờ Đỏ Tốc Độ Máu Lắng Tăng Cực Cao (ESR > 100 mm/h) - Nghi Ngờ Đa U Tủy Xương / U Di Căn",
+        "signs": "Đau xương âm ỉ dai dẳng toàn thân, đau cột sống tăng về đêm không liên quan tư thế, mệt mỏi suy nhược, sụt cân không chủ ý. Cần nghĩ ngay: Đa u tủy xương (Multiple Myeloma), Viêm động mạch thái dương (GCA), Ung thư di căn xương (PB KTL).",
+        "action": "Chỉ định Điện di đạm huyết thanh (SPEP), Chuỗi nhẹ Bence-Jones niệu, X-quang xương sọ/khung chậu/cột sống tìm ổ tiêu xương đục lỗ (punched-out lesions) và hội chẩn Huyết học/Ung bướu.",
+        "figures": []
+      },
+      {
+        "category": "Cờ Đỏ Tiêu Cơ Vân Cấp Do Thuốc Statin (Rhabdomyolysis / Extreme CPK Elevation)",
+        "signs": "Creatine Kinase (CK/CPK) tăng > 1,000 - 50,000 U/L, cơ bắp căng đau cứng dữ dội, nước tiểu sẫm màu nâu đen như nước xá xị (Myoglobin niệu), thiểu niệu hoặc vô niệu sau bắt đầu dùng Statin hoặc tăng liều.",
+        "action": "Cấp cứu truyền dịch tĩnh mạch đệm kiềm hóa nước tiểu (Natri Bicarbonat) khẩn cấp để phòng hoại tử ống thận cấp suy thận cấp. Ngừng ngay lập tức Statin.",
+        "figures": []
       }
     ],
     "visceral_referrals": [
       {
-        "source": "Tổng quan Nguyên lý Chuyển đau từ Tạng (Visceral Pain Referral Concepts)",
-        "pattern": "Đau phát sinh từ xung động tạng truyền qua dây giao cảm/phó giao cảm vào cùng sừng sau tủy sống với cảm giác soma (Convergence-Projection Theory). Não bộ giải mã sai tín hiệu tạng thành đau vùng cơ xương khớp tương ứng khoanh tủy (Dermatome/Myotome).",
-        "differential": "Đau tạng thường âm ỉ, sâu, co thắt, không có điểm đau khu trú nông khi sờ nắn, không đổi theo tư thế cơ học hoặc cử động khớp chủ động/thụ động."
+        "source": "Tổng quan Cơ chế Chuyển đau từ Tạng (Visceral Pain Referral Concepts)",
+        "pattern": "Đau phát sinh từ xung động tạng truyền qua dây thần kinh giao cảm/phó giao cảm vào cùng sừng sau tủy sống với cảm giác soma (Thuyết hội tụ - phóng chiếu). Não bộ giải mã sai tín hiệu tạng thành đau vùng cơ xương khớp tương ứng khoanh tủy.",
+        "differential": "Đau tạng thường âm ỉ, sâu, co thắt, không có điểm đau khu trú nông khi sờ nắn, không thay đổi theo tư thế cơ học hoặc cử động khớp chủ động/thụ động.",
+        "figures": []
+      },
+      {
+        "source": "Bệnh lý Chuyển hóa & Suy Thận (Metabolic & Renal Referral)",
+        "pattern": "Axit Uric máu tăng lắng đọng tinh thể Urat tại thận gây sỏi thận và suy thận mạn. Ngược lại suy giảm chức năng thận làm giảm thải acid uric gây bùng phát viêm khớp gút tophi đa khớp kháng trị.",
+        "differential": "Phân biệt viêm khớp gút (tinh thể hình kim lưỡng chiết quang âm tính) với viêm khớp vôi hóa giả gút CPPD (tinh thể Canxi Pyrophosphate hình thoi lưỡng chiết quang dương tính yếu).",
+        "figures": []
       }
     ],
     "drug_induced": [
-      "Khái niệm Iatrogenic Musculoskeletal Pain (Đau cơ xương khớp do thầy thuốc): Chiếm tới 10-15% ca đau khớp/cơ không rõ nguyên nhân ở phòng khám ngoại trú.",
-      "Luôn khai thác tiền sử sử dụng: Statin, Quinolone, Corticoid, Kháng Estrogen/Aromatase, Bisphosphonate, Hóa chất ung thư, Thuốc ức chế miễn dịch."
+      "Thuốc Statin (Atorvastatin, Rosuvastatin, Simvastatin): Đau cơ, yếu cơ gốc chi đối xứng, chuột rút, viêm cơ hoại tử tự miễn kháng HMGCR.",
+      "Kháng sinh Quinolone (Ciprofloxacin, Levofloxacin): Viêm gân và đứt gân gót Achilles tự phát, nguy cơ tăng gấp bội khi dùng kèm Corticoid.",
+      "Corticosteroid dài ngày: Hoại tử vô mạch chỏm xương đùi/xương cánh tay (AVN), loãng xương gãy lún đốt sống, bệnh cơ do steroid (Steroid myopathy).",
+      "Thuốc ức chế Aromatase (Anastrozole, Letrozole, Exemestane): Hội chứng đau khớp do ức chế aromatase (AIA) gặp ở 50% phụ nữ điều trị ung thư vú.",
+      "Bisphosphonate (Alendronate, Zoledronic acid): Đau cơ xương khớp dữ dội lan tỏa, gãy xương đùi không điển hình (Atypical femur fracture), hoại tử xương hàm (ONJ)."
     ],
     "examination_procedures": [
       {
@@ -53,7 +78,8 @@ const STABLE_SCREENING_FALLBACK = [
         "significance": "Xác định rõ ràng nguồn gốc triệu chứng là Cơ học (Mechanical), Thần kinh (Neuropathic) hay Hệ thống (Systemic) trước khi ra quyết định điều trị.",
         "sensitivity": "95%",
         "specificity": "88%",
-        "diagnostic_role": "Độ nhạy rất cao sàng lọc loại trừ căn nguyên hệ thống & cờ đỏ trước can thiệp"
+        "diagnostic_role": "Độ nhạy rất cao sàng lọc loại trừ căn nguyên hệ thống & cờ đỏ trước can thiệp",
+        "figures": []
       },
       {
         "name": "Đánh giá Dấu hiệu Thực thể Không do Cơ quan (Waddell's Non-organic Signs)",
@@ -61,258 +87,75 @@ const STABLE_SCREENING_FALLBACK = [
         "significance": "Có >= 3/5 dấu hiệu cảnh báo yếu tố tâm lý xã hội hoặc vụ lợi thứ phát (Yellow Flags).",
         "sensitivity": "80%",
         "specificity": "85%",
-        "diagnostic_role": "Sàng lọc cờ vàng tâm lý và yếu tố phi thực thể (dương tính khi có >= 3/5 nhóm dấu hiệu)"
-      }
-    ],
-    "differential_table": [
-      {
-        "condition": "Đau cơ học thuần túy (Mechanical MSK Pain)",
-        "onset": "Liên quan vận động, tư thế, chấn thương",
-        "aggravating": "Tăng khi cử động/tải trọng, giảm khi nghỉ ngơi",
-        "key_differentiator": "Khám tái hiện đau chính xác bằng động tác chuyên biệt, XN cận lâm sàng bình thường",
-        "confirmatory_test": "Nghiệm pháp khám chuyên biệt vùng & Khám cơ lực đối kháng",
-        "gold_standard": "Siêu âm can thiệp cơ xương khớp / X-quang / MRI chuyên sâu"
+        "diagnostic_role": "Sàng lọc cờ vàng tâm lý và yếu tố phi thực thể (dương tính khi có >= 3/5 nhóm dấu hiệu)",
+        "figures": []
       },
-      {
-        "condition": "Đau chuyển từ tạng (Visceral Referred Pain)",
-        "onset": "Đột ngột hoặc chu kỳ, không rõ chấn thương",
-        "aggravating": "Liên quan bữa ăn, chu kỳ kinh, hô hấp, không đổi khi xoay vặn cột sống",
-        "key_differentiator": "Không có điểm đau khu trú khi ấn nông, khám khớp bình thường",
-        "confirmatory_test": "Khám bụng, nghiệm pháp Murphy, nghiệm pháp gõ thận",
-        "gold_standard": "Siêu âm bụng tổng quát, ECG, Men tim, Men tụy, CT Scan"
-      },
-      {
-        "condition": "Đau do viêm hệ thống / Ung thư (Systemic/Malignant)",
-        "onset": "Âm ỉ, tiến triển liên tục, tăng về đêm",
-        "aggravating": "Không giảm khi nằm nghỉ, kèm sốt nhẹ, mệt mỏi, sụt cân",
-        "key_differentiator": "ESR/CRP tăng cao, thiếu máu mạn, tổn thương tiêu xương/đặc xương trên hình ảnh",
-        "confirmatory_test": "Nghiệm pháp khám chuyên biệt vùng & Khám cơ lực đối kháng",
-        "gold_standard": "Siêu âm can thiệp cơ xương khớp / X-quang / MRI chuyên sâu"
-      }
-    ],
-    "figures": []
-  },
-  {
-    "id": "ch02-biochemistry-lab-tests",
-    "chapter": 2,
-    "region": "foundation",
-    "region_vi": "Xét Nghiệm Cận Lâm Sàng",
-    "title": "Chemical Basis of the Human Body with Relevance to Regional Musculoskeletal Pain",
-    "title_vi": "Cơ Sở Hóa Sinh & Bảng Tra Cứu Xét Nghiệm Cận Lâm Sàng Cơ Xương Khớp",
-    "author": "GS. Deepak Sebastian (Chapter 2, pp. 7-63)",
-    "summary": "Kho tàng cận lâm sàng thiết yếu cho bác sĩ cơ xương khớp: Phân tích toàn diện huyết học (CBC, ESR), sinh hóa (CRP, Acid Uric, Canxi, Phosphatase kiềm, Creatine Kinase), miễn dịch học (HLA-B27, RF, Anti-CCP, ANA, Điện di đạm Bence-Jones), phân tích nước tiểu và dấu ấn u xương/mô mềm. Hướng dẫn chi tiết giá trị bình thường, ngưỡng cảnh báo bệnh lý và ý nghĩa quyết định khi đối mặt với ca viêm khớp không điển hình, đau xương kháng trị, nghi ngờ ung thư di căn hoặc đa u tủy xương.",
-    "stage_1_systemic_red_flags": [
-      {
-        "category": "Cờ Đỏ Tốc Độ Máu Lắng Tăng Cao Vọt (ESR > 100 mm/h)",
-        "signs": "Đau xương âm ỉ toàn thân, đau cột sống dai dẳng tăng về đêm, mệt mỏi suy kiệt. Cần nghĩ ngay đến: Đa u tủy xương (Multiple Myeloma), Viêm động mạch thái dương (Temporal Arteritis / GCA), Viêm tủy xương (Osteomyelitis) hoặc Ung thư di căn xương.",
-        "action": "Chỉ định Điện di đạm huyết thanh (SPEP), Định lượng chuỗi nhẹ Bence-Jones niệu, Chụp X-quang cột sống/khung chậu tìm ổ tiêu xương đục lỗ (punched-out lesions) và MRI."
-      },
-      {
-        "category": "Cờ Đỏ Tăng Canxi Máu & Tăng Phosphatase Kiềm (ALP)",
-        "signs": "Tăng Canxi (> 10.5 mg/dL) kèm đau xương, sỏi thận, lú lẫn, rối loạn tiêu hóa: Cường cận giáp nguyên phát hoặc tổn thương tiêu xương ác tính. ALP tăng vọt (> 150-500 U/L): Bệnh Paget xương, Ung thư xương nguyên phát (Osteosarcoma) hoặc di căn đặc xương từ ung thư tiền liệt tuyến/vú.",
-        "action": "Định lượng PTH (Parathyroid Hormone), PSA, Chụp Xạ hình xương (Bone Scan) hoặc SPECT-CT toàn thân."
-      },
-      {
-        "category": "Cờ Đỏ Tiêu Cơ Vân Cấp (Rhabdomyolysis / Extreme CPK Elevation)",
-        "signs": "Creatine Kinase (CK/CPK) tăng > 1,000 - 50,000 U/L, cơ bắp căng đau cứng dữ dội, nước tiểu màu đỏ nâu sẫm như xá xị (Myoglobin niệu), thiểu niệu hoặc vô niệu.",
-        "action": "Cấp cứu truyền dịch tĩnh mạch đệm kiềm hóa nước tiểu (Natri Bicarbonat) khẩn cấp để phòng hoại tử ống thận cấp suy thận cấp. Ngừng ngay lập tức Statin hoặc độc chất nghi ngờ."
-      }
-    ],
-    "red_flags": [
-      {
-        "category": "Bạch Cầu Tăng Cao & Dịch Khớp Mủ (Septic Joint Warning)",
-        "signs": "Bạch cầu máu > 12,000 - 20,000/mcL với bạch cầu đa nhân trung tính > 80-90%. Chọc hút dịch khớp có bạch cầu dịch khớp > 50,000 - 100,000/mcL (> 75% PMN), dịch đục mủ.",
-        "action": "CẤP CỨU NGOẠI KHOA: Rửa khớp, dẫn lưu khớp qua nội soi hoặc mổ hở + Kháng sinh đường tĩnh mạch phổ rộng ngay lập tức. CHỐNG CHỈ ĐỊNH TIÊM CORTICOID VÀO KHỚP!"
-      },
-      {
-        "category": "Dấu Ấn Ung Thư Di Căn Xương (PB KTL Metastases)",
-        "signs": "PSA tăng vọt ở nam giới đau thắt lưng/khung chậu (K tiền liệt tuyến di căn); Tăng CA 15-3 (K vú), CEA (K đại tràng/phổi), AFP (K gan) kèm ổ khuyết xương trên phim.",
-        "action": "Chuyển khoa Ung bướu hội chẩn sinh thiết tổn thương xương."
-      }
-    ],
-    "visceral_referrals": [
-      {
-        "source": "Bệnh lý Chuyển hóa & Suy Thận (Metabolic & Renal Referral)",
-        "pattern": "Axit Uric máu tăng lắng đọng tinh thể Urat tại thận gây sỏi thận và suy thận mạn. Ngược lại suy giảm chức năng thận (Creatinine tăng, eGFR giảm) làm giảm thải acid uric gây bùng phát viêm khớp gút tophi đa khớp kháng trị.",
-        "differential": "Phân biệt viêm khớp gút (tinh thể hình kim lưỡng chiết quang âm tính) với viêm khớp vôi hóa giả gút CPPD (tinh thể Canxi Pyrophosphate hình thoi lưỡng chiết quang dương tính yếu)."
-      }
-    ],
-    "drug_induced": [
-      "Thuốc lợi tiểu Thiazide / Quai: Cạnh tranh bài tiết acid uric tại ống thận, là nguyên nhân hàng đầu gây bùng phát cơn Gút cấp.",
-      "Thuốc độc tế bào ung thư: Hội chứng ly giải khối u làm acid uric tăng vọt gây suy thận cấp và đau khớp cấp tính."
-    ],
-    "examination_procedures": [
-      {
-        "name": "Bảng Kiểm 7 Nhóm Xét Nghiệm Miễn Dịch Khớp (MSK Immunology Checklist)",
-        "technique": "Rút máu tĩnh mạch làm bộ 7 chỉ số: 1. HLA-B27; 2. Yếu tố dạng thấp RF; 3. Kháng thể kháng CCP; 4. Kháng thể kháng nhân ANA; 5. Kháng thể kháng ds-DNA; 6. Tốc độ máu lắng ESR; 7. Định lượng CRP độ nhạy cao (hs-CRP).",
-        "significance": "Phân loại dứt khoát nhóm Viêm khớp cột sống huyết thanh âm tính (Seronegative Spondyloarthropathy: HLA-B27+) vs Viêm khớp dạng thấp (RF+, Anti-CCP+) vs Bệnh mô liên kết tự miễn (Lupus: ANA+, ds-DNA+).",
-        "sensitivity": "92%",
-        "specificity": "89%",
-        "diagnostic_role": "Độ nhạy cao loại trừ bệnh tự miễn viêm khớp cột sống & mô liên kết khi toàn bộ âm tính"
-      },
-      {
-        "name": "Đánh Giá Xét Nghiệm Dịch Khớp (Synovial Fluid Analysis Protocol)",
-        "technique": "Chọc dịch khớp vô khuẩn: Đánh giá độ nhớt, màu sắc, tế bào học (số lượng WBC), soi tìm tinh thể dưới kính hiển vi phân cực (MSU vs CPPD) và cấy vi khuẩn làm kháng sinh đồ.",
-        "significance": "Tiêu chuẩn vàng phân biệt 4 nhóm dịch khớp: Nhóm 1 Không viêm (Thoái hóa: WBC < 2,000), Nhóm 2 Viêm (Gout/RA: WBC 2,000 - 50,000), Nhóm 3 Nhiễm trùng (WBC > 50,000), Nhóm 4 Tràn máu khớp (Chấn thương/U mạch).",
-        "sensitivity": "95%",
-        "specificity": "98%",
-        "diagnostic_role": "Tiêu chuẩn vàng phân biệt dịch khớp viêm, nhiễm trùng mủ, vi tinh thể gút và tràn máu"
-      }
-    ],
-    "differential_table": [
-      {
-        "condition": "Viêm cột sống dính khớp (Ankylosing Spondylitis)",
-        "onset": "Nam trẻ tuổi 18-35, đau thắt lưng kiểu viêm",
-        "aggravating": "Đau tăng khi nghỉ/sáng sớm, giảm sau vận động",
-        "key_differentiator": "HLA-B27 dương tính (90-95%), X-quang thấy viêm khớp cùng chậu hai bên, cột sống hình cây tre",
-        "confirmatory_test": "Nghiệm pháp khám chuyên biệt vùng & Khám cơ lực đối kháng",
-        "gold_standard": "Siêu âm can thiệp cơ xương khớp / X-quang / MRI chuyên sâu"
-      },
-      {
-        "condition": "Viêm khớp dạng thấp (Rheumatoid Arthritis)",
-        "onset": "Nữ 30-55, sưng đau đối xứng các khớp nhỏ bàn tay",
-        "aggravating": "Cứng khớp buổi sáng kéo dài > 1 giờ",
-        "key_differentiator": "Anti-CCP (+) độ đặc hiệu 98%, RF (+), hạt thấp dưới da, tiêu hủy xương đầu khớp đối xứng",
-        "confirmatory_test": "Nghiệm pháp khám chuyên biệt vùng & Khám cơ lực đối kháng",
-        "gold_standard": "Siêu âm can thiệp cơ xương khớp / X-quang / MRI chuyên sâu"
-      },
-      {
-        "condition": "Viêm khớp Gút cấp (Acute Gouty Arthritis)",
-        "onset": "Đột ngột nửa đêm, khớp sưng nóng đỏ dữ dội (thường ngón I bàn chân)",
-        "aggravating": "Sau bữa ăn giàu đạm, bia rượu, chấn thương nhẹ",
-        "key_differentiator": "Axit Uric máu tăng, tìm thấy tinh thể Urate hình kim phân cực âm trong dịch khớp",
-        "confirmatory_test": "Khám sưng nóng đỏ đau khớp ngón 1 bàn chân (Podagra)",
-        "gold_standard": "Soi kính hiển vi phân cực thấy vi tinh thể Urat (MSU) trong dịch khớp"
-      },
-      {
-        "condition": "Đa u tủy xương (Multiple Myeloma)",
-        "onset": "Người cao tuổi > 50, đau xương lưng/sườn âm ỉ tăng dần",
-        "aggravating": "Vận động, tì đè lực",
-        "key_differentiator": "ESR > 100 mm/h, Thiếu máu, Tăng canxi máu, Protein Bence-Jones niệu (+), X-quang khuyết xương hình bấm lỗ",
-        "confirmatory_test": "Nghiệm pháp khám chuyên biệt vùng & Khám cơ lực đối kháng",
-        "gold_standard": "Siêu âm can thiệp cơ xương khớp / X-quang / MRI chuyên sâu"
-      }
-    ],
-    "figures": []
-  },
-  {
-    "id": "ch03-drug-induced-pain",
-    "chapter": 3,
-    "region": "foundation",
-    "region_vi": "Đau Do Thuốc & Độc Chất",
-    "title": "Drug-induced Regional Pain",
-    "title_vi": "Đau Cơ Xương Khớp & Bệnh Thần Kinh Ngoại Biên Do Thuốc (Drug-Induced Pain)",
-    "author": "GS. Deepak Sebastian (Chapter 3, pp. 64-89)",
-    "summary": "Cẩm nang chuyên sâu về các hội chứng đau cơ, viêm đứt gân, thoái hóa hoại tử vô mạch và bệnh thần kinh ngoại biên khởi phát do tác dụng phụ của thuốc tân dược. Chi tiết cơ chế bệnh sinh, nhóm đối tượng nguy cơ cao, biểu hiện lâm sàng đặc thù và phác đồ xử trí khẩn cấp cho các thủ phạm kinh điển: Statin (viêm cơ/tiêu cơ vân), Kháng sinh Fluoroquinolone (viêm hoại tử gân gót Achilles), Corticoid toàn thân (hoại tử vô mạch chỏm xương đùi AVN & xẹp đốt sống), Thuốc ức chế Aromatase (đau khớp AIMS ở bệnh nhân K vú), Bisphosphonate (đau xương bùng phát & gãy xương đùi không điển hình), và Hóa trị ung thư (bệnh đa dây thần kinh CIPN).",
-    "stage_1_systemic_red_flags": [
-      {
-        "category": "Cờ Đỏ Tiêu Cơ Vân Cấp Do Statin (Statin-Induced Rhabdomyolysis)",
-        "signs": "Đau cơ dữ dội đối xứng hai đùi/vai, yếu cơ gốc chi không nâng được tay/đứng dậy, nước tiểu màu xá xị sẫm màu. Nguy cơ tăng gấp 10 lần khi phối hợp Statin với Gemfibrozil, Amiodarone, Clarithromycin hoặc Cyclosporine.",
-        "action": "Đo CK khẩn cấp. Nếu CK > 5-10 lần giới hạn trên: NGỪNG STATIN NGAY, nhập viện bù dịch kiềm hóa nước tiểu theo dõi chức năng thận."
-      },
-      {
-        "category": "Cờ Đỏ Đứt Gân Gót Achilles Do Kháng Sinh Quinolone (FDA Black Box Warning)",
-        "signs": "Bệnh nhân đang hoặc mới dùng Ciprofloxacin, Levofloxacin, Moxifloxacin (trong vòng 1-6 tháng) đột ngột đau nhói vùng gót chân, có cảm giác như bị đá sau gót, mất khả năng đứng nhón gót, Thompson test (+).",
-        "action": "NGỪNG QUINOLONE NGAY TỨC THÌ khi có dấu hiệu đau gân đầu tiên. Bất động nẹp cổ chân, cấm chịu lực. Siêu âm Doppler gân gót đánh giá độ rách."
-      },
-      {
-        "category": "Cờ Đỏ Hoại Tử Vô Mạch Chỏm Xương Đùi Do Corticosteroid (AVN / Osteonecrosis)",
-        "signs": "Tiền sử dùng Methylprednisolone/Dexamethasone liều cao hoặc kéo dài (trong điều trị Covid-19, Lupus, ghép tạng, Hen phế quản) xuất hiện đau bẹn/háng âm ỉ, đi khập khiễng, đau tăng khi chịu lực.",
-        "action": "Chụp MRI khớp háng hai bên khẩn cấp (X-quang giai đoạn sớm thường âm tính). Giải phóng tải trọng khớp (chống nạng), hội chẩn Chấn thương chỉnh hình khoan giảm áp hoặc thay khớp."
-      }
-    ],
-    "red_flags": [
-      {
-        "category": "Gãy Xương Đùi Không Điển Hình Do Bisphosphonate Kéo Dài (AFF)",
-        "signs": "Dùng Alendronate/Zoledronate > 3-5 năm, xuất hiện đau âm ỉ vùng dưới mấu chuyển hoặc thân xương đùi trước khi gãy xương tự phát khi đi lại nhẹ nhàng.",
-        "action": "Chụp X-quang xương đùi hai bên tìm dày vỏ xương bên (Beaking sign) và đường nứt vỏ ngoài. Ngừng ngay Bisphosphonate, cân nhắc đóng đinh nội tủy phòng ngừa."
-      },
-      {
-        "category": "Bệnh Thần Kinh Ngoại Biên Nặng Do Hóa Chất Trị Liệu (CIPN)",
-        "signs": "Mất cảm giác sâu, mất thăng bằng, dị cảm buốt bỏng ngọn chi sau truyền Cisplatin, Oxaliplatin, Paclitaxel hoặc Vincristine.",
-        "action": "Đo điện cơ (EMG), điều chỉnh giảm liều hóa trị, dùng Duloxetine 60mg/ngày."
-      }
-    ],
-    "visceral_referrals": [
-      {
-        "source": "Độc Tính Thuốc Trên Nội Tạng Gây Đau Chuyển Vùng",
-        "pattern": "NSAID dùng kéo dài gây viêm loét thủng dạ dày quy chiếu đau lưng ngực; Thuốc kháng lao (INH/Rifampicin) hoặc Paracetamol quá liều gây viêm gan cấp quy chiếu đau vùng dưới sườn và vai phải.",
-        "differential": "Khai thác kỹ danh mục thuốc bệnh nhân đang uống mỗi ngày trước khi chỉ định can thiệp cơ xương khớp."
-      }
-    ],
-    "drug_induced": [
-      "Statins: Atorvastatin, Simvastatin, Rosuvastatin -> Myalgia, Myositis, Rhabdomyolysis.",
-      "Fluoroquinolones: Ciprofloxacin, Levofloxacin -> Tendinitis & Achilles Tendon Rupture.",
-      "Corticosteroids: Prednisone, Methylprednisolone -> AVN, Osteoporosis, Steroid Myopathy.",
-      "Aromatase Inhibitors: Anastrozole, Letrozole, Exemestane -> Severe Hand/Knee Arthralgia (AIMS).",
-      "Bisphosphonates: Alendronate, Zoledronic acid -> Acute Bone Pain, Atypical Femur Fracture, ONJ.",
-      "Chemotherapy: Cisplatin, Oxaliplatin, Paclitaxel -> Sensory-Motor Peripheral Neuropathy (CIPN).",
-      "Antiretrovirals (NRTIs): Zidovudine -> Mitochondrial Myopathy & Lactic Acidosis.",
-      "Antirheumatics: Colchicine (độc tính thần kinh cơ khi dùng chung Statin), Leflunomide (bệnh dây TK)."
-    ],
-    "examination_procedures": [
       {
         "name": "Nghiệm Pháp Thompson Đánh Giá Đứt Gân Gót Do Quinolone (Thompson Squeeze Test)",
-        "technique": "Bệnh nhân nằm sấp, bàn chân thả lỏng qua mép giường. Người khám dùng một tay bóp mạnh vào khối cơ bụng chân (Gastrocnemius - Soleus).",
-        "significance": "Bình thường bàn chân sẽ gập lòng (plantarflexion). Nếu bàn chân bất động không gập -> Dương tính (Đứt hoàn toàn gân gót Achilles).",
-        "sensitivity": "96% - 98%",
-        "specificity": "93% - 98%",
-        "diagnostic_role": "Tiêu chuẩn vàng khám lâm sàng đứt gân gót Achilles do tác dụng phụ của Fluoroquinolone (+LR: 15.0, -LR: 0.03)"
+        "technique": "Bệnh nhân nằm sấp, gập gối 90 độ hoặc bàn chân thò ra ngoài mép giường khám. Bác sĩ dùng tay bóp mạnh vào khối cơ bắp chân (bụng chân). Bình thường: Bàn chân gập mặt lòng thụ động (Plantarflexion). Bất thường (Dương tính): Bàn chân nằm im bất động.",
+        "significance": "Dấu hiệu đứt hoàn toàn gân gót Achilles, thường xảy ra sau dùng Quinolone từ 2-14 ngày.",
+        "sensitivity": "96%",
+        "specificity": "98%",
+        "diagnostic_role": "Tiêu chuẩn vàng khám lâm sàng đứt gân gót Achilles cấp",
+        "figures": []
       },
       {
-        "name": "Khám Sàng Lọc Bệnh Đa Dây Thần Kinh Ngoại Biên Do Thuốc (Semmes-Weinstein & Tuning Fork)",
-        "technique": "Dùng sợi cước đơn Monofilament 10g khám cảm giác xúc giác tại 10 điểm gan bàn chân; Dùng âm thoa tần số 128 Hz đặt vào mấu xương bàn chân ngón cái và mắt cá trong khám cảm giác rung vỏ xương.",
-        "significance": "Mất cảm giác bảo vệ hoặc mất cảm giác rung âm thoa khẳng định tổn thương sợi trục thần kinh ngoại vi do độc chất/thuốc (Neuropathy).",
-        "sensitivity": "86% - 93%",
-        "specificity": "82% - 90%",
-        "diagnostic_role": "Phát hiện sớm mất cảm giác bảo vệ CIPN do hóa trị ung thư hoặc độc chất thần kinh ngoại biên"
+        "name": "Khám Sàng Lọc Bệnh Đa Dây Thần Kinh Ngoại Biên Do Thuốc & Hóa Chất",
+        "technique": "Khám cảm giác rung âm thoa 128Hz tại khớp ngón cái và mắt cá trong; Khám cảm giác áp lực với sợi chỉ đơn Monofilament Semmes-Weinstein 10g tại 10 điểm gan chân; Khám phản xạ gân gót (Achilles DTR).",
+        "significance": "Mất cảm giác rung âm thoa và mất phản xạ gân gót là dấu hiệu sớm nhất của tổn thương sợi trục thần kinh do thuốc.",
+        "sensitivity": "88%",
+        "specificity": "92%",
+        "diagnostic_role": "Phát hiện sớm biến chứng thần kinh ngoại biên do hóa chất/đái tháo đường",
+        "figures": []
       }
     ],
     "differential_table": [
       {
-        "condition": "Đau cơ do Statin (Statin-Induced Myalgia)",
-        "onset": "Vài tuần đến vài tháng sau khi dùng/tăng liều statin",
-        "aggravating": "Vận động thể lực, phối hợp Fibrate",
-        "key_differentiator": "Đau mỏi cơ gốc chi đối xứng hai bên, CK có thể tăng hoặc bình thường, thuyên giảm rõ rệt sau ngưng thuốc 2-4 tuần",
-        "confirmatory_test": "Nghiệm pháp khám chuyên biệt vùng & Khám cơ lực đối kháng",
-        "gold_standard": "Siêu âm can thiệp cơ xương khớp / X-quang / MRI chuyên sâu"
+        "condition": "Đau xơ cơ (Fibromyalgia)",
+        "onset": "Âm ỉ mạn tính > 3 tháng, đau lan tỏa 4 góc phần tư",
+        "aggravating": "Căng thẳng, mất ngủ, thời tiết lạnh",
+        "key_differentiator": "Đau nhiều điểm trigger points, XN ESR/CRP hoàn toàn bình thường, không teo cơ",
+        "confirmatory_test": "Thang điểm WPI (Widespread Pain Index) >= 7 và SSS >= 5",
+        "gold_standard": "Tiêu chuẩn chẩn đoán ACR 2016 Fibromyalgia"
       },
       {
-        "condition": "Viêm đa cơ tự miễn (Polymyositis)",
-        "onset": "Từ từ, không liên quan thuốc statin",
-        "aggravating": "Tiến triển liên tục",
-        "key_differentiator": "Yếu cơ gốc chi nặng, CK tăng rất cao (> 10-50 lần), kháng thể kháng Jo-1 (+), sinh thiết cơ hoại tử và thâm nhiễm viêm lympho",
-        "confirmatory_test": "Nghiệm pháp khám chuyên biệt vùng & Khám cơ lực đối kháng",
-        "gold_standard": "Siêu âm can thiệp cơ xương khớp / X-quang / MRI chuyên sâu"
+        "condition": "Đau đa cơ do thấp (Polymyalgia Rheumatica - PMR)",
+        "onset": "Đột ngột ở người > 50 tuổi, đau đai vai và đai chậu",
+        "aggravating": "Tăng nhiều buổi sáng, cứng khớp buổi sáng > 45 phút",
+        "key_differentiator": "Máu lắng ESR > 40-100 mm/h, CRP tăng vọt, đáp ứng thần kỳ với Prednisolone liều thấp 15mg/ngày sau 48h",
+        "confirmatory_test": "Xét nghiệm ESR, CRP, Siêu âm khớp vai tìm viêm bao hoạt dịch dưới mỏm cùng",
+        "gold_standard": "Tiêu chuẩn ACR/EULAR 2012 PMR"
       },
       {
-        "condition": "Hội chứng đau khớp do Aromatase Inhibitor (AIMS)",
-        "onset": "2 - 6 tháng sau khi bắt đầu điều trị ung thư vú",
-        "aggravating": "Buổi sáng, thời tiết lạnh",
-        "key_differentiator": "Đau khớp đối xứng bàn tay/cổ tay/gối, cứng khớp sáng > 30-60 phút, không tăng ESR/CRP, X-quang khớp không hẹp khe khớp",
-        "confirmatory_test": "Nghiệm pháp khám chuyên biệt vùng & Khám cơ lực đối kháng",
-        "gold_standard": "Siêu âm can thiệp cơ xương khớp / X-quang / MRI chuyên sâu"
-      },
-      {
-        "condition": "Bệnh cơ do Corticosteroid (Steroid Myopathy)",
-        "onset": "Dùng steroid liều cao kéo dài (> 4-6 tuần)",
-        "aggravating": "Đứng lên từ ghế, leo cầu thang",
-        "key_differentiator": "Yếu cơ đùi đối xứng nhưng KHÔNG ĐAU CƠ, nồng độ men CK hoàn toàn bình thường, hồi phục khi giảm liều",
-        "confirmatory_test": "Nghiệm pháp khám chuyên biệt vùng & Khám cơ lực đối kháng",
-        "gold_standard": "Siêu âm can thiệp cơ xương khớp / X-quang / MRI chuyên sâu"
+        "condition": "Đau cơ do Statin (Statin-Induced Myopathy)",
+        "onset": "Sau 2-8 tuần bắt đầu dùng hoặc tăng liều Statin",
+        "aggravating": "Vận động nặng, phối hợp Fibrate hoặc thuốc ức chế CYP3A4",
+        "key_differentiator": "Yếu cơ gốc chi đối xứng, CK tăng từ nhẹ đến > 10 lần bình thường, hết đau khi ngưng Statin 2-4 tuần",
+        "confirmatory_test": "Định lượng Men cơ Creatine Kinase (CK), Kháng thể Anti-HMGCR",
+        "gold_standard": "Thử nghiệm ngưng thuốc (De-challenge) và tái sử dụng liều thấp (Re-challenge)"
       }
     ],
-    "figures": []
+    "figures": [],
+    "stage_2_somatic_dysfunctions": [
+      "Đau xơ cơ (Fibromyalgia): Rối loạn điều hòa cảm giác đau trung ương (Central Sensitization) với tăng nhạy cảm đau (Hyperalgesia) và loạn cảm đau (Allodynia).",
+      "Đau đa cơ do thấp (PMR): Viêm bao hoạt dịch dưới mỏm cùng đai vai và bao hoạt dịch đai chậu đối xứng hai bên.",
+      "Bệnh lý gân cơ do thuốc (Drug-induced Myopathy & Tendinopathy): Tổn thương ty thể tế bào cơ do Statin hoặc suy thoái chất nền collagen type I gân do Quinolone.",
+      "Rối loạn chuyển hóa & Tinh thể: Lắng đọng vi tinh thể Urat (Gout) hoặc Calci Pyrophosphate (CPPD / Pseudogout) màng hoạt dịch và sụn khớp."
+    ],
+    "stage_3_guidemap_intervention": "Điều trị toàn thân theo nguyên nhân gốc rễ: Điều chỉnh hoặc ngừng thuốc nghi ngờ (Statin/Quinolone/Steroid), tối ưu hóa kiểm soát acid uric và đường huyết, tập phục hồi chức năng đa phương thức. Nếu có điểm đau khu trú kháng trị có thể phối hợp tiêm can thiệp tại chỗ.",
+    "recommended_web1_procedures": []
   },
   {
-    "id": "ch04-cervical-spine",
+    "id": "cervical-pain",
     "chapter": 4,
-    "region": "spine",
-    "region_vi": "Cột Sống Cổ",
-    "title": "Cervical Pain Differential Screening",
-    "title_vi": "Sàng Lọc Chẩn Đoán Phân Biệt Đau Cột Sống Cổ",
-    "author": "GS. Deepak Sebastian (Chapter 4, pp. 90-172)",
-    "summary": "Tiếp cận 3 giai đoạn sàng lọc đau cổ chuyên sâu: Loại trừ triệt để cờ đỏ tủy cổ (Cervical Spondylotic Myelopathy), thiếu máu đốt sống thân nền (VBI với quy tắc 5D 3N), bóc tách động mạch đốt sống/động mạch cảnh, mất vững khớp đội trục (C1-C2 Instability), ung thư di căn và áp-xe vùng cổ. Phân biệt tổn thương bệnh học mô rễ thần kinh (Radiculopathy) vs diện khớp (Facet syndrome) vs đau cơ mạc (Myofascial) vs hội chứng lối thoát lồng ngực (TOS) vs đau chuyển từ tim và u đỉnh phổi Pancoast. Tích hợp trọn bộ 70 hình ảnh giải phẫu, cơ học trượt khớp và kỹ thuật khám từ giáo trình gốc.",
+    "region": "cervical",
+    "region_vi": "Cổ - Vai - Gáy",
+    "icon": "👤",
+    "title": "Cervical Spine, Suboccipital & Cervicobrachial Pain",
+    "title_vi": "👤 Đau Cổ - Vai - Gáy & Bệnh Rễ Thần Kinh Cổ",
+    "chief_complaint": "Phàn nàn chính: Đau mỏi vùng gáy lan lên đầu (đau đầu do cổ), đau cổ lan xuống vai và cánh tay/bàn tay kèm tê bì châm chích ngón tay, vẹo cổ cấp, cứng cổ hạn chế quay cổ.",
+    "author": "GS. Deepak Sebastian (Chương 4, pp. 105-187)",
+    "summary": "Sàng lọc phân biệt đau cột sống cổ: Phân biệt đau cơ học cân cơ, thoái hóa diện khớp cổ (Facet syndrome), thoát vị đĩa đệm chèn ép rễ cổ (Radiculopathy C5-C8) với các bệnh lý tủy cổ nặng (Cervical myelopathy). Rà soát khẩn cấp Cờ đỏ thiếu máu đốt sống thân nền (VBI 5D And 3N), bóc tách động mạch cảnh, mất vững dây chằng mỏm nha C1-C2 sau chấn thương hoặc trong viêm khớp dạng thấp, và u Pancoast đỉnh phổi.",
     "stage_1_systemic_red_flags": [
       {
         "category": "Cờ Đỏ Chèn Ép Tủy Cổ (Cervical Spondylotic Myelopathy - CSM)",
@@ -339,29 +182,34 @@ const STABLE_SCREENING_FALLBACK = [
       {
         "category": "Cờ Đỏ Tủy Cổ & Động Mạch Đốt Sống",
         "signs": "CSM (Hoffman+, Babinski+, rối loạn dáng đi) & VBI (5D 3N, chóng mặt khi ngửa xoay cổ tối đa).",
-        "action": "Chụp MRI/CTA cổ khẩn, chuyển Ngoại thần kinh / Đột quỵ."
+        "action": "Chụp MRI/CTA cổ khẩn, chuyển Ngoại thần kinh / Đột quỵ.",
+        "figures": []
       },
       {
         "category": "Áp-xe Thành Sau Họng & Viêm Màng Não",
         "signs": "Cổ cứng đờ không cúi được (gáy cứng), sốt cao rét run, há miệng hạn chế, khó nuốt, chảy nước dãi.",
-        "action": "Chuyển viện cấp cứu chuyên khoa Tai Mũi Họng / Truyền nhiễm."
+        "action": "Chuyển viện cấp cứu chuyên khoa Tai Mũi Họng / Truyền nhiễm.",
+        "figures": []
       }
     ],
     "visceral_referrals": [
       {
         "source": "U Đỉnh Phổi Pancoast (Pancoast Tumor / Superior Sulcus Tumor)",
         "pattern": "Khối u xâm lấn đám rối thần kinh cánh tay (rễ C8-T1) và hạch giao cảm cổ: Đau dữ dội mặt trong cánh tay, cẳng tay và ngón 4-5; teo các cơ bàn tay; Hội chứng Horner cùng bên (Sụp mi Ptosis, co đồng tử Miosis, giảm tiết mồ hôi Anhidrosis).",
-        "differential": "Cực kỳ dễ nhầm với thoái hóa cột sống cổ chèn ép rễ C8 hoặc hội chứng ống cổ tay/ống Guyon. Bắt buộc chụp X-quang/CT lồng ngực ở người hút thuốc lá lớn tuổi đau tay kháng trị."
+        "differential": "Cực kỳ dễ nhầm với thoái hóa cột sống cổ chèn ép rễ C8 hoặc hội chứng ống cổ tay/ống Guyon. Bắt buộc chụp X-quang/CT lồng ngực ở người hút thuốc lá lớn tuổi đau tay kháng trị.",
+        "figures": []
       },
       {
         "source": "Thiếu Máu Cơ Tim / Nhồi Máu Cơ Tim (Myocardial Ischemia / MI)",
         "pattern": "Đau thắt lan lên bờ trước cơ ức đòn chũm, hàm dưới, vai và cánh tay trái khi gắng sức hoặc xúc động mạnh, kèm vã mồ hôi, khó thở.",
-        "differential": "Đo điện tim ECG và xét nghiệm Troponin I/T siêu nhạy (hs-cTnI) loại trừ bệnh mạch vành cấp."
+        "differential": "Đo điện tim ECG và xét nghiệm Troponin I/T siêu nhạy (hs-cTnI) loại trừ bệnh mạch vành cấp.",
+        "figures": []
       },
       {
         "source": "Bệnh Lý Tuyến Giáp (Thyroiditis & Carcinoma)",
         "pattern": "Đau cổ trước lan lên góc hàm và tai, kèm bướu cổ to, khó nuốt, khàn tiếng.",
-        "differential": "Siêu âm tuyến giáp, xét nghiệm chức năng tuyến giáp FT4, TSH."
+        "differential": "Siêu âm tuyến giáp, xét nghiệm chức năng tuyến giáp FT4, TSH.",
+        "figures": []
       }
     ],
     "drug_induced": [
@@ -376,7 +224,19 @@ const STABLE_SCREENING_FALLBACK = [
         "significance": "Dương tính khi tái hiện đau chói hoặc cảm giác tê giật lan xuống cánh tay theo dermatom rễ cổ. Độ đặc hiệu (Sp) cực cao: 92 - 100%, độ nhạy (Sn): 30 - 50% (Tiêu chuẩn vàng khám lâm sàng rễ cổ).",
         "sensitivity": "30% - 50%",
         "specificity": "92% - 100%",
-        "diagnostic_role": "Đặc hiệu rất cao: giá trị khẳng định chèn ép rễ thần kinh cổ (+LR: 10.2)"
+        "diagnostic_role": "Đặc hiệu rất cao: giá trị khẳng định chèn ép rễ thần kinh cổ (+LR: 10.2)",
+        "figures": [
+          {
+            "file": "assets/deepak_images/ch04_cervical_pain/p172_img1.jpeg",
+            "page": 172,
+            "fig_number": "4.47",
+            "caption_en": "Fig. 4.47: Spurling compression",
+            "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Spurling compression",
+            "category": "examination",
+            "width": 717,
+            "height": 538
+          }
+        ]
       },
       {
         "name": "Nghiệm Pháp Kéo Giãn Cột Sống Cổ (Cervical Distraction Test)",
@@ -384,7 +244,29 @@ const STABLE_SCREENING_FALLBACK = [
         "significance": "Dương tính khi triệu chứng đau cổ hoặc đau rễ cánh tay giảm rõ rệt hoặc biến mất hoàn toàn do mở rộng lỗ ghép thần kinh (Sp: 90 - 97%).",
         "sensitivity": "44%",
         "specificity": "90% - 97%",
-        "diagnostic_role": "Đặc hiệu cao: giảm đau tay rõ rệt khi nâng đầu giúp khẳng định chèn ép rễ (+LR: 4.4)"
+        "diagnostic_role": "Đặc hiệu cao: giảm đau tay rõ rệt khi nâng đầu giúp khẳng định chèn ép rễ (+LR: 4.4)",
+        "figures": [
+          {
+            "file": "assets/deepak_images/ch04_cervical_pain/p173_img1.jpeg",
+            "page": 173,
+            "fig_number": "4.48",
+            "caption_en": "Fig. 4.48: Distraction",
+            "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Distraction",
+            "category": "examination",
+            "width": 717,
+            "height": 538
+          },
+          {
+            "file": "assets/deepak_images/ch04_cervical_pain/p173_img2.jpeg",
+            "page": 173,
+            "fig_number": "4.48",
+            "caption_en": "Fig. 4.48: Distraction",
+            "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Distraction",
+            "category": "examination",
+            "width": 717,
+            "height": 484
+          }
+        ]
       },
       {
         "name": "Dấu Hiệu Hoffman (Hoffman's Reflex - Tháp Tủy)",
@@ -392,7 +274,29 @@ const STABLE_SCREENING_FALLBACK = [
         "significance": "Dương tính khi ngón cái và ngón trỏ của bệnh nhân đột ngột gập và khép lại (phản xạ bệnh lý bó tháp do chèn ép tủy cổ từ C5 trở lên).",
         "sensitivity": "58% - 75%",
         "specificity": "78% - 90%",
-        "diagnostic_role": "Sàng lọc cờ đỏ chèn ép tủy cổ (Cervical Spondylotic Myelopathy) tổn thương neuron vận động trên"
+        "diagnostic_role": "Sàng lọc cờ đỏ chèn ép tủy cổ (Cervical Spondylotic Myelopathy) tổn thương neuron vận động trên",
+        "figures": [
+          {
+            "file": "assets/deepak_images/ch04_cervical_pain/p163_img1.jpeg",
+            "page": 163,
+            "fig_number": "4.37",
+            "caption_en": "Fig. 4.37: Testing biceps reflex C5",
+            "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Testing biceps reflex C5",
+            "category": "examination",
+            "width": 717,
+            "height": 538
+          },
+          {
+            "file": "assets/deepak_images/ch04_cervical_pain/p163_img2.jpeg",
+            "page": 163,
+            "fig_number": "4.37",
+            "caption_en": "Fig. 4.37: Testing biceps reflex C5",
+            "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Testing biceps reflex C5",
+            "category": "examination",
+            "width": 717,
+            "height": 538
+          }
+        ]
       },
       {
         "name": "Bộ Nghiệm Pháp Căng Đám Rối Thần Kinh Cánh Tay (Upper Limb Tension Tests - ULTT)",
@@ -400,7 +304,29 @@ const STABLE_SCREENING_FALLBACK = [
         "significance": "Độ nhạy cực cao (Sn: 97%) để loại trừ chèn ép rễ thần kinh cổ (khi ULTT âm tính, khả năng bị bệnh rễ cổ < 3%).",
         "sensitivity": "80% - 90%",
         "specificity": "75% - 85%",
-        "diagnostic_role": "Nghiệm pháp lâm sàng hỗ trợ sàng lọc chẩn đoán phân biệt"
+        "diagnostic_role": "Nghiệm pháp lâm sàng hỗ trợ sàng lọc chẩn đoán phân biệt",
+        "figures": [
+          {
+            "file": "assets/deepak_images/ch04_cervical_pain/p150_img1.jpeg",
+            "page": 150,
+            "fig_number": "4.20",
+            "caption_en": "Fig. 4.20: Nerve representation in the scalp",
+            "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Nerve representation in the scalp",
+            "category": "anatomy_visceral",
+            "width": 842,
+            "height": 532
+          },
+          {
+            "file": "assets/deepak_images/ch04_cervical_pain/p167_img1.jpeg",
+            "page": 167,
+            "fig_number": "4.44A and B",
+            "caption_en": "Figs 4.44A and B: Testing median nerve tension",
+            "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Testing median nerve tension",
+            "category": "examination",
+            "width": 717,
+            "height": 538
+          }
+        ]
       },
       {
         "name": "Nghiệm Pháp Roos (Elevated Arm Stress Test - EAST cho TOS)",
@@ -408,7 +334,8 @@ const STABLE_SCREENING_FALLBACK = [
         "significance": "Dương tính khi bệnh nhân không duy trì được quá 1-2 phút do đau mỏi dữ dội, tê bì cánh cẳng tay, tay tái nhợt (Hội chứng lối thoát lồng ngực Thoracic Outlet Syndrome).",
         "sensitivity": "84%",
         "specificity": "70%",
-        "diagnostic_role": "Sàng lọc hội chứng lối thoát ngực (TOS): tái hiện thiếu máu và tê buốt sau 1-3 phút co bóp tay"
+        "diagnostic_role": "Sàng lọc hội chứng lối thoát ngực (TOS): tái hiện thiếu máu và tê buốt sau 1-3 phút co bóp tay",
+        "figures": []
       },
       {
         "name": "Nghiệm Pháp Sharp-Purser (Sharp-Purser Test cho Mất Vững C1-C2)",
@@ -416,7 +343,29 @@ const STABLE_SCREENING_FALLBACK = [
         "significance": "Dương tính nếu thấy đầu trượt trượt ra sau kèm tiếng 'khục' và giảm triệu chứng chèn ép tủy (Tổn thương dây chằng ngang C1-C2).",
         "sensitivity": "69% - 88%",
         "specificity": "96% - 98%",
-        "diagnostic_role": "Đặc hiệu cao phát hiện mất vững khớp đội - trục đe dọa chèn ép tủy cổ cao (+LR: 17.3)"
+        "diagnostic_role": "Đặc hiệu cao phát hiện mất vững khớp đội - trục đe dọa chèn ép tủy cổ cao (+LR: 17.3)",
+        "figures": [
+          {
+            "file": "assets/deepak_images/ch04_cervical_pain/p123_img1.jpeg",
+            "page": 123,
+            "fig_number": "4.10",
+            "caption_en": "Fig. 4.10: Odontoid fracture",
+            "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Odontoid fracture",
+            "category": "redflags_pathology",
+            "width": 595,
+            "height": 400
+          },
+          {
+            "file": "assets/deepak_images/ch04_cervical_pain/p123_img2.png",
+            "page": 123,
+            "fig_number": "4.10",
+            "caption_en": "Fig. 4.10: Odontoid fracture",
+            "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Odontoid fracture",
+            "category": "redflags_pathology",
+            "width": 1335,
+            "height": 603
+          }
+        ]
       }
     ],
     "differential_table": [
@@ -453,6 +402,708 @@ const STABLE_SCREENING_FALLBACK = [
         "gold_standard": "Siêu âm can thiệp cơ xương khớp / X-quang / MRI chuyên sâu"
       }
     ],
+    "figures": [
+      {
+        "file": "assets/deepak_images/ch04_cervical_pain/p106_img1.png",
+        "page": 106,
+        "fig_number": "4.1",
+        "caption_en": "Fig. 4.1: Cervical spine dorsal view",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Cervical spine dorsal view",
+        "category": "general_atlas",
+        "width": 842,
+        "height": 389
+      },
+      {
+        "file": "assets/deepak_images/ch04_cervical_pain/p106_img2.jpeg",
+        "page": 106,
+        "fig_number": "4.1",
+        "caption_en": "Fig. 4.1: Cervical spine dorsal view",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Cervical spine dorsal view",
+        "category": "general_atlas",
+        "width": 889,
+        "height": 341
+      },
+      {
+        "file": "assets/deepak_images/ch04_cervical_pain/p107_img1.jpeg",
+        "page": 107,
+        "fig_number": "4.3",
+        "caption_en": "Fig. 4.3: Transverse ligament",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Transverse ligament",
+        "category": "general_atlas",
+        "width": 846,
+        "height": 400
+      },
+      {
+        "file": "assets/deepak_images/ch04_cervical_pain/p108_img1.png",
+        "page": 108,
+        "fig_number": "4.4",
+        "caption_en": "Fig. 4.4: Ligaments of the spinal column",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Ligaments of the spinal column",
+        "category": "general_atlas",
+        "width": 897,
+        "height": 445
+      },
+      {
+        "file": "assets/deepak_images/ch04_cervical_pain/p110_img1.png",
+        "page": 110,
+        "fig_number": "4.5",
+        "caption_en": "Fig. 4.5: Vertebral artery and subclavian",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Vertebral artery and subclavian",
+        "category": "anatomy_visceral",
+        "width": 772,
+        "height": 811
+      },
+      {
+        "file": "assets/deepak_images/ch04_cervical_pain/p111_img1.jpeg",
+        "page": 111,
+        "fig_number": "4.6",
+        "caption_en": "Fig. 4.6: Carotid artery and temporal artery",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Carotid artery and temporal artery",
+        "category": "anatomy_visceral",
+        "width": 1051,
+        "height": 758
+      },
+      {
+        "file": "assets/deepak_images/ch04_cervical_pain/p112_img1.jpeg",
+        "page": 112,
+        "fig_number": "4.7",
+        "caption_en": "Fig. 4.7: Cervical lymph nodes",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Cervical lymph nodes",
+        "category": "anatomy_visceral",
+        "width": 453,
+        "height": 580
+      },
+      {
+        "file": "assets/deepak_images/ch04_cervical_pain/p113_img1.jpeg",
+        "page": 113,
+        "fig_number": "4.8",
+        "caption_en": "Fig. 4.8: Thyroid cartilage and gland",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Thyroid cartilage and gland",
+        "category": "anatomy_visceral",
+        "width": 453,
+        "height": 580
+      },
+      {
+        "file": "assets/deepak_images/ch04_cervical_pain/p115_img1.jpeg",
+        "page": 115,
+        "fig_number": "4.9",
+        "caption_en": "Fig. 4.9: Forward head posture",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Forward head posture",
+        "category": "general_atlas",
+        "width": 717,
+        "height": 538
+      },
+      {
+        "file": "assets/deepak_images/ch04_cervical_pain/p123_img1.jpeg",
+        "page": 123,
+        "fig_number": "4.10",
+        "caption_en": "Fig. 4.10: Odontoid fracture",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Odontoid fracture",
+        "category": "redflags_pathology",
+        "width": 595,
+        "height": 400
+      },
+      {
+        "file": "assets/deepak_images/ch04_cervical_pain/p123_img2.png",
+        "page": 123,
+        "fig_number": "4.10",
+        "caption_en": "Fig. 4.10: Odontoid fracture",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Odontoid fracture",
+        "category": "redflags_pathology",
+        "width": 1335,
+        "height": 603
+      },
+      {
+        "file": "assets/deepak_images/ch04_cervical_pain/p125_img1.jpeg",
+        "page": 125,
+        "fig_number": "4.12A and B",
+        "caption_en": "Figs 4.12A and B: (A) Alar ligament and consequence of injury; (B) fractured",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: (A) Alar ligament and consequence of injury; (B) fractured",
+        "category": "redflags_pathology",
+        "width": 901,
+        "height": 225
+      },
+      {
+        "file": "assets/deepak_images/ch04_cervical_pain/p126_img1.jpeg",
+        "page": 126,
+        "fig_number": "4.13A to C",
+        "caption_en": "Figs 4.13A to C: Atlas transverse view",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Atlas transverse view",
+        "category": "redflags_pathology",
+        "width": 846,
+        "height": 400
+      },
+      {
+        "file": "assets/deepak_images/ch04_cervical_pain/p126_img2.jpeg",
+        "page": 126,
+        "fig_number": "4.13A to C",
+        "caption_en": "Figs 4.13A to C: Atlas transverse view",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Atlas transverse view",
+        "category": "redflags_pathology",
+        "width": 825,
+        "height": 351
+      },
+      {
+        "file": "assets/deepak_images/ch04_cervical_pain/p126_img3.png",
+        "page": 126,
+        "fig_number": "4.13A to C",
+        "caption_en": "Figs 4.13A to C: Atlas transverse view",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Atlas transverse view",
+        "category": "redflags_pathology",
+        "width": 1282,
+        "height": 529
+      },
+      {
+        "file": "assets/deepak_images/ch04_cervical_pain/p140_img1.jpeg",
+        "page": 140,
+        "fig_number": "4.14",
+        "caption_en": "Fig. 4.14: Lesions",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Lesions",
+        "category": "redflags_pathology",
+        "width": 877,
+        "height": 599
+      },
+      {
+        "file": "assets/deepak_images/ch04_cervical_pain/p143_img1.png",
+        "page": 143,
+        "fig_number": "4.15",
+        "caption_en": "Fig. 4.15: Grades of disc pathology",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Grades of disc pathology",
+        "category": "general_atlas",
+        "width": 1323,
+        "height": 794
+      },
+      {
+        "file": "assets/deepak_images/ch04_cervical_pain/p144_img1.jpeg",
+        "page": 144,
+        "fig_number": "4.16",
+        "caption_en": "Fig. 4.16: Whiplash injury mechanism",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Whiplash injury mechanism",
+        "category": "general_atlas",
+        "width": 782,
+        "height": 560
+      },
+      {
+        "file": "assets/deepak_images/ch04_cervical_pain/p146_img1.png",
+        "page": 146,
+        "fig_number": "4.17",
+        "caption_en": "Fig. 4.17: Sites of entrapment in the thoracic outlet",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Sites of entrapment in the thoracic outlet",
+        "category": "redflags_pathology",
+        "width": 757,
+        "height": 540
+      },
+      {
+        "file": "assets/deepak_images/ch04_cervical_pain/p148_img1.jpeg",
+        "page": 148,
+        "fig_number": "4.18",
+        "caption_en": "Fig. 4.18: The curved black structure is the disc",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: The curved black structure is the disc",
+        "category": "general_atlas",
+        "width": 672,
+        "height": 537
+      },
+      {
+        "file": "assets/deepak_images/ch04_cervical_pain/p149_img1.png",
+        "page": 149,
+        "fig_number": "4.19",
+        "caption_en": "Fig. 4.19: Suboccipital muscles",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Suboccipital muscles",
+        "category": "anatomy_visceral",
+        "width": 1234,
+        "height": 813
+      },
+      {
+        "file": "assets/deepak_images/ch04_cervical_pain/p150_img1.jpeg",
+        "page": 150,
+        "fig_number": "4.20",
+        "caption_en": "Fig. 4.20: Nerve representation in the scalp",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Nerve representation in the scalp",
+        "category": "anatomy_visceral",
+        "width": 842,
+        "height": 532
+      },
+      {
+        "file": "assets/deepak_images/ch04_cervical_pain/p151_img1.jpeg",
+        "page": 151,
+        "fig_number": "4.21",
+        "caption_en": "Fig. 4.21: Forward bending",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Forward bending",
+        "category": "anatomy_visceral",
+        "width": 677,
+        "height": 508
+      },
+      {
+        "file": "assets/deepak_images/ch04_cervical_pain/p151_img2.jpeg",
+        "page": 151,
+        "fig_number": "4.21",
+        "caption_en": "Fig. 4.21: Forward bending",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Forward bending",
+        "category": "anatomy_visceral",
+        "width": 677,
+        "height": 508
+      },
+      {
+        "file": "assets/deepak_images/ch04_cervical_pain/p152_img1.jpeg",
+        "page": 152,
+        "fig_number": "4.23A and B",
+        "caption_en": "Figs 4.23A and B: Sidebending",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Sidebending",
+        "category": "general_atlas",
+        "width": 681,
+        "height": 513
+      },
+      {
+        "file": "assets/deepak_images/ch04_cervical_pain/p152_img2.jpeg",
+        "page": 152,
+        "fig_number": "4.23A and B",
+        "caption_en": "Figs 4.23A and B: Sidebending",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Sidebending",
+        "category": "general_atlas",
+        "width": 681,
+        "height": 511
+      },
+      {
+        "file": "assets/deepak_images/ch04_cervical_pain/p153_img1.jpeg",
+        "page": 153,
+        "fig_number": "4.24A and B",
+        "caption_en": "Figs 4.24A and B: Rotation",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Rotation",
+        "category": "general_atlas",
+        "width": 681,
+        "height": 511
+      },
+      {
+        "file": "assets/deepak_images/ch04_cervical_pain/p153_img2.jpeg",
+        "page": 153,
+        "fig_number": "4.24A and B",
+        "caption_en": "Figs 4.24A and B: Rotation",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Rotation",
+        "category": "general_atlas",
+        "width": 681,
+        "height": 511
+      },
+      {
+        "file": "assets/deepak_images/ch04_cervical_pain/p154_img1.jpeg",
+        "page": 154,
+        "fig_number": "4.25",
+        "caption_en": "Fig. 4.25: Levator scapula",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Levator scapula",
+        "category": "general_atlas",
+        "width": 485,
+        "height": 597
+      },
+      {
+        "file": "assets/deepak_images/ch04_cervical_pain/p154_img2.jpeg",
+        "page": 154,
+        "fig_number": "4.25",
+        "caption_en": "Fig. 4.25: Levator scapula",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Levator scapula",
+        "category": "general_atlas",
+        "width": 485,
+        "height": 597
+      },
+      {
+        "file": "assets/deepak_images/ch04_cervical_pain/p155_img1.jpeg",
+        "page": 155,
+        "fig_number": "4.27",
+        "caption_en": "Fig. 4.27: Scalenes",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Scalenes",
+        "category": "general_atlas",
+        "width": 717,
+        "height": 538
+      },
+      {
+        "file": "assets/deepak_images/ch04_cervical_pain/p155_img2.jpeg",
+        "page": 155,
+        "fig_number": "4.27",
+        "caption_en": "Fig. 4.27: Scalenes",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Scalenes",
+        "category": "general_atlas",
+        "width": 717,
+        "height": 538
+      },
+      {
+        "file": "assets/deepak_images/ch04_cervical_pain/p156_img1.jpeg",
+        "page": 156,
+        "fig_number": "4.29",
+        "caption_en": "Fig. 4.29: Suboccipitals",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Suboccipitals",
+        "category": "examination",
+        "width": 717,
+        "height": 538
+      },
+      {
+        "file": "assets/deepak_images/ch04_cervical_pain/p157_img1.jpeg",
+        "page": 157,
+        "fig_number": "4.30",
+        "caption_en": "Fig. 4.30: Basic hold",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Basic hold",
+        "category": "examination",
+        "width": 717,
+        "height": 538
+      },
+      {
+        "file": "assets/deepak_images/ch04_cervical_pain/p157_img2.jpeg",
+        "page": 157,
+        "fig_number": "4.30",
+        "caption_en": "Fig. 4.30: Basic hold",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Basic hold",
+        "category": "examination",
+        "width": 485,
+        "height": 597
+      },
+      {
+        "file": "assets/deepak_images/ch04_cervical_pain/p158_img1.jpeg",
+        "page": 158,
+        "fig_number": "4.32",
+        "caption_en": "Fig. 4.32: Testing closing restriction on the right",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Testing closing restriction on the right",
+        "category": "examination",
+        "width": 485,
+        "height": 597
+      },
+      {
+        "file": "assets/deepak_images/ch04_cervical_pain/p159_img1.jpeg",
+        "page": 159,
+        "fig_number": "4.33",
+        "caption_en": "Fig. 4.33: Atlanto occipital forward nodding",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Atlanto occipital forward nodding",
+        "category": "examination",
+        "width": 717,
+        "height": 538
+      },
+      {
+        "file": "assets/deepak_images/ch04_cervical_pain/p160_img1.jpeg",
+        "page": 160,
+        "fig_number": "4.34",
+        "caption_en": "Fig. 4.34: Atlanto occipital backward nodding",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Atlanto occipital backward nodding",
+        "category": "general_atlas",
+        "width": 717,
+        "height": 538
+      },
+      {
+        "file": "assets/deepak_images/ch04_cervical_pain/p161_img1.jpeg",
+        "page": 161,
+        "fig_number": "4.35",
+        "caption_en": "Fig. 4.35: Atlanto occipital sidebending",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Atlanto occipital sidebending",
+        "category": "general_atlas",
+        "width": 717,
+        "height": 538
+      },
+      {
+        "file": "assets/deepak_images/ch04_cervical_pain/p162_img1.jpeg",
+        "page": 162,
+        "fig_number": "4.36",
+        "caption_en": "Fig. 4.36: Atlanto axial rotation",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Atlanto axial rotation",
+        "category": "examination",
+        "width": 717,
+        "height": 538
+      },
+      {
+        "file": "assets/deepak_images/ch04_cervical_pain/p163_img1.jpeg",
+        "page": 163,
+        "fig_number": "4.37",
+        "caption_en": "Fig. 4.37: Testing biceps reflex C5",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Testing biceps reflex C5",
+        "category": "examination",
+        "width": 717,
+        "height": 538
+      },
+      {
+        "file": "assets/deepak_images/ch04_cervical_pain/p163_img2.jpeg",
+        "page": 163,
+        "fig_number": "4.37",
+        "caption_en": "Fig. 4.37: Testing biceps reflex C5",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Testing biceps reflex C5",
+        "category": "examination",
+        "width": 717,
+        "height": 538
+      },
+      {
+        "file": "assets/deepak_images/ch04_cervical_pain/p164_img1.jpeg",
+        "page": 164,
+        "fig_number": "4.39",
+        "caption_en": "Fig. 4.39: Testing brachioradialis reflex C6",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Testing brachioradialis reflex C6",
+        "category": "examination",
+        "width": 681,
+        "height": 511
+      },
+      {
+        "file": "assets/deepak_images/ch04_cervical_pain/p165_img1.jpeg",
+        "page": 165,
+        "fig_number": "4.40",
+        "caption_en": "Fig. 4.40: Neutral",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Neutral",
+        "category": "examination",
+        "width": 681,
+        "height": 511
+      },
+      {
+        "file": "assets/deepak_images/ch04_cervical_pain/p165_img2.jpeg",
+        "page": 165,
+        "fig_number": "4.40",
+        "caption_en": "Fig. 4.40: Neutral",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Neutral",
+        "category": "examination",
+        "width": 681,
+        "height": 511
+      },
+      {
+        "file": "assets/deepak_images/ch04_cervical_pain/p166_img1.jpeg",
+        "page": 166,
+        "fig_number": "4.42",
+        "caption_en": "Fig. 4.42: Neck flexion indicating global weakness",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Neck flexion indicating global weakness",
+        "category": "examination",
+        "width": 681,
+        "height": 511
+      },
+      {
+        "file": "assets/deepak_images/ch04_cervical_pain/p166_img2.jpeg",
+        "page": 166,
+        "fig_number": "4.42",
+        "caption_en": "Fig. 4.42: Neck flexion indicating global weakness",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Neck flexion indicating global weakness",
+        "category": "examination",
+        "width": 485,
+        "height": 597
+      },
+      {
+        "file": "assets/deepak_images/ch04_cervical_pain/p167_img1.jpeg",
+        "page": 167,
+        "fig_number": "4.44A and B",
+        "caption_en": "Figs 4.44A and B: Testing median nerve tension",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Testing median nerve tension",
+        "category": "examination",
+        "width": 717,
+        "height": 538
+      },
+      {
+        "file": "assets/deepak_images/ch04_cervical_pain/p167_img2.jpeg",
+        "page": 167,
+        "fig_number": "4.44A and B",
+        "caption_en": "Figs 4.44A and B: Testing median nerve tension",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Testing median nerve tension",
+        "category": "examination",
+        "width": 717,
+        "height": 538
+      },
+      {
+        "file": "assets/deepak_images/ch04_cervical_pain/p169_img1.jpeg",
+        "page": 169,
+        "fig_number": "4.45A and B",
+        "caption_en": "Figs 4.45A and B: Testing radial nerve tension",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Testing radial nerve tension",
+        "category": "examination",
+        "width": 717,
+        "height": 538
+      },
+      {
+        "file": "assets/deepak_images/ch04_cervical_pain/p169_img2.jpeg",
+        "page": 169,
+        "fig_number": "4.45A and B",
+        "caption_en": "Figs 4.45A and B: Testing radial nerve tension",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Testing radial nerve tension",
+        "category": "examination",
+        "width": 717,
+        "height": 538
+      },
+      {
+        "file": "assets/deepak_images/ch04_cervical_pain/p171_img1.jpeg",
+        "page": 171,
+        "fig_number": "4.46",
+        "caption_en": "Fig. 4.46: Testing ulnar nerve tension",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Testing ulnar nerve tension",
+        "category": "examination",
+        "width": 717,
+        "height": 538
+      },
+      {
+        "file": "assets/deepak_images/ch04_cervical_pain/p172_img1.jpeg",
+        "page": 172,
+        "fig_number": "4.47",
+        "caption_en": "Fig. 4.47: Spurling compression",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Spurling compression",
+        "category": "examination",
+        "width": 717,
+        "height": 538
+      },
+      {
+        "file": "assets/deepak_images/ch04_cervical_pain/p173_img1.jpeg",
+        "page": 173,
+        "fig_number": "4.48",
+        "caption_en": "Fig. 4.48: Distraction",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Distraction",
+        "category": "examination",
+        "width": 717,
+        "height": 538
+      },
+      {
+        "file": "assets/deepak_images/ch04_cervical_pain/p173_img2.jpeg",
+        "page": 173,
+        "fig_number": "4.48",
+        "caption_en": "Fig. 4.48: Distraction",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Distraction",
+        "category": "examination",
+        "width": 717,
+        "height": 484
+      },
+      {
+        "file": "assets/deepak_images/ch04_cervical_pain/p174_img1.jpeg",
+        "page": 174,
+        "fig_number": "4.50",
+        "caption_en": "Fig. 4.50: Roos test",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Roos test",
+        "category": "examination",
+        "width": 717,
+        "height": 538
+      },
+      {
+        "file": "assets/deepak_images/ch04_cervical_pain/p175_img1.jpeg",
+        "page": 175,
+        "fig_number": "4.51",
+        "caption_en": "Fig. 4.51: Testing alar ligament integrity in sitting",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Testing alar ligament integrity in sitting",
+        "category": "examination",
+        "width": 717,
+        "height": 538
+      },
+      {
+        "file": "assets/deepak_images/ch04_cervical_pain/p176_img1.jpeg",
+        "page": 176,
+        "fig_number": "4.52A and B",
+        "caption_en": "Figs 4.52A and B: Testing transverse ligament integrity",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Testing transverse ligament integrity",
+        "category": "examination",
+        "width": 717,
+        "height": 538
+      },
+      {
+        "file": "assets/deepak_images/ch04_cervical_pain/p176_img2.jpeg",
+        "page": 176,
+        "fig_number": "4.52A and B",
+        "caption_en": "Figs 4.52A and B: Testing transverse ligament integrity",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Testing transverse ligament integrity",
+        "category": "examination",
+        "width": 717,
+        "height": 538
+      },
+      {
+        "file": "assets/deepak_images/ch04_cervical_pain/p177_img1.jpeg",
+        "page": 177,
+        "fig_number": "4.53",
+        "caption_en": "Fig. 4.53: Testing the vertebral artery",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Testing the vertebral artery",
+        "category": "examination",
+        "width": 717,
+        "height": 538
+      },
+      {
+        "file": "assets/deepak_images/ch04_cervical_pain/p178_img1.jpeg",
+        "page": 178,
+        "fig_number": "4.54",
+        "caption_en": "Fig. 4.54: Vertex compression",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Vertex compression",
+        "category": "examination",
+        "width": 717,
+        "height": 538
+      },
+      {
+        "file": "assets/deepak_images/ch04_cervical_pain/p179_img1.jpeg",
+        "page": 179,
+        "fig_number": "4.55",
+        "caption_en": "Fig. 4.55: Checking pupillary light reflex",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Checking pupillary light reflex",
+        "category": "examination",
+        "width": 717,
+        "height": 538
+      },
+      {
+        "file": "assets/deepak_images/ch04_cervical_pain/p180_img1.jpeg",
+        "page": 180,
+        "fig_number": "4.56",
+        "caption_en": "Fig. 4.56: Checking for tenderness over C7",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Checking for tenderness over C7",
+        "category": "examination",
+        "width": 717,
+        "height": 538
+      },
+      {
+        "file": "assets/deepak_images/ch04_cervical_pain/p180_img2.jpeg",
+        "page": 180,
+        "fig_number": "4.56",
+        "caption_en": "Fig. 4.56: Checking for tenderness over C7",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Checking for tenderness over C7",
+        "category": "examination",
+        "width": 437,
+        "height": 597
+      },
+      {
+        "file": "assets/deepak_images/ch04_cervical_pain/p181_img1.jpeg",
+        "page": 181,
+        "fig_number": "4.58",
+        "caption_en": "Fig. 4.58: Testing Hoffmann’s sign",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Testing Hoffmann’s sign",
+        "category": "examination",
+        "width": 717,
+        "height": 538
+      },
+      {
+        "file": "assets/deepak_images/ch04_cervical_pain/p182_img1.jpeg",
+        "page": 182,
+        "fig_number": "4.59",
+        "caption_en": "Fig. 4.59: Assessing the first rib",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Assessing the first rib",
+        "category": "examination",
+        "width": 717,
+        "height": 538
+      },
+      {
+        "file": "assets/deepak_images/ch04_cervical_pain/p183_img1.jpeg",
+        "page": 183,
+        "fig_number": "4.60",
+        "caption_en": "Fig. 4.60: Shoulder protraction with pectoralis minor tightness left",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Shoulder protraction with pectoralis minor tightness left",
+        "category": "examination",
+        "width": 717,
+        "height": 497
+      },
+      {
+        "file": "assets/deepak_images/ch04_cervical_pain/p184_img1.jpeg",
+        "page": 184,
+        "fig_number": "4.61",
+        "caption_en": "Fig. 4.61: Mandibular deviation to the right",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Mandibular deviation to the right",
+        "category": "examination",
+        "width": 461,
+        "height": 568
+      },
+      {
+        "file": "assets/deepak_images/ch04_cervical_pain/p185_img1.jpeg",
+        "page": 185,
+        "fig_number": "4.62",
+        "caption_en": "Fig. 4.62: Palpating for tenderness",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Palpating for tenderness",
+        "category": "examination",
+        "width": 418,
+        "height": 597
+      },
+      {
+        "file": "assets/deepak_images/ch04_cervical_pain/p185_img2.jpeg",
+        "page": 185,
+        "fig_number": "4.62",
+        "caption_en": "Fig. 4.62: Palpating for tenderness",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Palpating for tenderness",
+        "category": "examination",
+        "width": 413,
+        "height": 597
+      }
+    ],
     "stage_2_somatic_dysfunctions": [
       "Hạn chế mở diện khớp cổ (Opening Restriction / FRS - Flexed, Rotated, Sidebent): Mấu khớp dưới không trượt lên trên và ra trước được khi cúi nghiêng xoay đối bên.",
       "Hạn chế đóng diện khớp cổ (Closing Restriction / ERS - Extended, Rotated, Sidebent): Mấu khớp dưới không trượt xuống dưới và ra sau được khi ngửa nghiêng xoay cùng bên.",
@@ -460,1205 +1111,6 @@ const STABLE_SCREENING_FALLBACK = [
       "Vẹo vặn trục đội - trục (AA Joint rotation dysfunction): Giới hạn xoay đầu sang một bên khi cổ đã gập tối đa (Flexion-Rotation Test)."
     ],
     "stage_3_guidemap_intervention": "Nếu không có cờ đỏ: Điều trị nội khoa & nắn chỉnh cơ sinh học giải phóng diện khớp; Trường hợp đau rễ cổ kháng trị hoặc viêm diện khớp cổ dai dẳng -> Chỉ định Tiêm can thiệp dưới hướng dẫn siêu âm (Xem Web 1: Tiêm rễ thần kinh cổ chọn lọc C5-C6-C7 hoặc Tiêm nhánh trong phong bế diện khớp cổ).",
-    "figures": [
-      {
-        "chapter": 4,
-        "chapter_name": "cervical_pain",
-        "page": 106,
-        "file": "assets/deepak_images/ch04_cervical_pain/p106_img1.png",
-        "width": 842,
-        "height": 389,
-        "size_bytes": 113534,
-        "page_captions": [
-          "Fig. 4.1:  Cervical spine dorsal view",
-          "Fig. 4.2). They principally limit flexion of ",
-          "Fig. 4.2:  Posterior view of the neck (suboccipital region)"
-        ],
-        "captions": [
-          "Fig. 4.1: Cervical spine dorsal view articulations or the uncinate/unciform joints. They are also known as the joints",
-          "Fig. 4.2). They principally limit flexion of the occiput and also sidebending and rotation. Their most important function is"
-        ]
-      },
-      {
-        "chapter": 4,
-        "chapter_name": "cervical_pain",
-        "page": 106,
-        "file": "assets/deepak_images/ch04_cervical_pain/p106_img2.jpeg",
-        "width": 889,
-        "height": 341,
-        "size_bytes": 26940,
-        "page_captions": [
-          "Fig. 4.1:  Cervical spine dorsal view",
-          "Fig. 4.2). They principally limit flexion of ",
-          "Fig. 4.2:  Posterior view of the neck (suboccipital region)"
-        ],
-        "captions": [
-          "Fig. 4.1: Cervical spine dorsal view articulations or the uncinate/unciform joints. They are also known as the joints",
-          "Fig. 4.2). They principally limit flexion of the occiput and also sidebending and rotation. Their most important function is"
-        ]
-      },
-      {
-        "chapter": 4,
-        "chapter_name": "cervical_pain",
-        "page": 107,
-        "file": "assets/deepak_images/ch04_cervical_pain/p107_img1.jpeg",
-        "width": 846,
-        "height": 400,
-        "size_bytes": 29038,
-        "page_captions": [
-          "Fig. 4.3). By this position ",
-          "Fig. 4.3:  Transverse ligament"
-        ],
-        "captions": [
-          "Fig. 4.3). By this position it offers a great deal of stability to the dens. It serves as a fence to the spinal",
-          "Fig. 4.3: Transverse ligament"
-        ]
-      },
-      {
-        "chapter": 4,
-        "chapter_name": "cervical_pain",
-        "page": 108,
-        "file": "assets/deepak_images/ch04_cervical_pain/p108_img1.png",
-        "width": 897,
-        "height": 445,
-        "size_bytes": 182789,
-        "page_captions": [
-          "Fig. 4.4). The ligamentum flavum extends from C2 to all of the caudal segments. ",
-          "Fig. 4.4:  Ligaments of the spinal column"
-        ],
-        "captions": [
-          "Fig. 4.4). The ligamentum flavum extends from C2 to all of the caudal segments. Above C2 it is replaced by the posterior atlantoaxial and atlanto-occipital",
-          "Fig. 4.4: Ligaments of the spinal column"
-        ]
-      },
-      {
-        "chapter": 4,
-        "chapter_name": "cervical_pain",
-        "page": 110,
-        "file": "assets/deepak_images/ch04_cervical_pain/p110_img1.png",
-        "width": 772,
-        "height": 811,
-        "size_bytes": 123742,
-        "page_captions": [
-          "Fig. 4.5). It passes into the openings on the transverse ",
-          "Fig. 4.5:  Vertebral artery and subclavian"
-        ],
-        "captions": [
-          "Fig. 4.5). It passes into the openings on the transverse processes known as the foramen transversaria. When it exits out of the altas,",
-          "Fig. 4.5: Vertebral artery and subclavian"
-        ]
-      },
-      {
-        "chapter": 4,
-        "chapter_name": "cervical_pain",
-        "page": 111,
-        "file": "assets/deepak_images/ch04_cervical_pain/p111_img1.jpeg",
-        "width": 1051,
-        "height": 758,
-        "size_bytes": 49994,
-        "page_captions": [
-          "Fig. 4.6) and the right ",
-          "Fig. 4.7). ",
-          "Fig. 4.6:  Carotid artery and temporal artery"
-        ],
-        "captions": [
-          "Fig. 4.6) and the right common carotid artery arises from the brachiocephalic trunk. Both follow the same",
-          "Fig. 4.7). Enlargement or tenderness may indicate a systemic pathology warrating attention.",
-          "Fig. 4.6: Carotid artery and temporal artery"
-        ]
-      },
-      {
-        "chapter": 4,
-        "chapter_name": "cervical_pain",
-        "page": 112,
-        "file": "assets/deepak_images/ch04_cervical_pain/p112_img1.jpeg",
-        "width": 453,
-        "height": 580,
-        "size_bytes": 19843,
-        "page_captions": [
-          "Fig. 4.8). It attaches to several laryngeal muscles and serves to protect ",
-          "Fig. 4.7:  Cervical lymph nodes"
-        ],
-        "captions": [
-          "Fig. 4.8). It attaches to several laryngeal muscles and serves to protect the vocal cords. The thyroid gland is a butterfly shaped structure located directly",
-          "Fig. 4.7: Cervical lymph nodes"
-        ]
-      },
-      {
-        "chapter": 4,
-        "chapter_name": "cervical_pain",
-        "page": 113,
-        "file": "assets/deepak_images/ch04_cervical_pain/p113_img1.jpeg",
-        "width": 453,
-        "height": 580,
-        "size_bytes": 21857,
-        "page_captions": [
-          "Fig. 4.8:  Thyroid cartilage and gland"
-        ],
-        "captions": [
-          "Fig. 4.8: Thyroid cartilage and gland"
-        ]
-      },
-      {
-        "chapter": 4,
-        "chapter_name": "cervical_pain",
-        "page": 115,
-        "file": "assets/deepak_images/ch04_cervical_pain/p115_img1.jpeg",
-        "width": 717,
-        "height": 538,
-        "size_bytes": 16640,
-        "page_captions": [
-          "Fig. 4.9)",
-          "Fig. 4.9) is seen either as a habit, natural tendency to ",
-          "Fig. 4.9:  Forward head posture"
-        ],
-        "captions": [
-          "Fig. 4.9). Components of the Forward Head Posture",
-          "Fig. 4.9) is seen either as a habit, natural tendency to slouch or wearing bifocals. It is also seen in individuals who function looking",
-          "Fig. 4.9: Forward head posture"
-        ]
-      },
-      {
-        "chapter": 4,
-        "chapter_name": "cervical_pain",
-        "page": 123,
-        "file": "assets/deepak_images/ch04_cervical_pain/p123_img1.jpeg",
-        "width": 595,
-        "height": 400,
-        "size_bytes": 17441,
-        "page_captions": [
-          "Fig. 4.10), type 1 involving the tip of the dens, type 2 the neck ",
-          "Fig. 4.11)",
-          "Fig. 4.10:  Odontoid fracture"
-        ],
-        "captions": [
-          "Fig. 4.10), type 1 involving the tip of the dens, type 2 the neck and type 3, the body of C2. Type 2 is described as being the most common.",
-          "Fig. 4.11). Clay-Shoveler’s Fracture",
-          "Fig. 4.10: Odontoid fracture Fig. 4.11: Jefferson fracture"
-        ]
-      },
-      {
-        "chapter": 4,
-        "chapter_name": "cervical_pain",
-        "page": 123,
-        "file": "assets/deepak_images/ch04_cervical_pain/p123_img2.png",
-        "width": 1335,
-        "height": 603,
-        "size_bytes": 169943,
-        "page_captions": [
-          "Fig. 4.10), type 1 involving the tip of the dens, type 2 the neck ",
-          "Fig. 4.11)",
-          "Fig. 4.10:  Odontoid fracture"
-        ],
-        "captions": [
-          "Fig. 4.10), type 1 involving the tip of the dens, type 2 the neck and type 3, the body of C2. Type 2 is described as being the most common.",
-          "Fig. 4.11). Clay-Shoveler’s Fracture",
-          "Fig. 4.10: Odontoid fracture Fig. 4.11: Jefferson fracture"
-        ]
-      },
-      {
-        "chapter": 4,
-        "chapter_name": "cervical_pain",
-        "page": 125,
-        "file": "assets/deepak_images/ch04_cervical_pain/p125_img1.jpeg",
-        "width": 901,
-        "height": 225,
-        "size_bytes": 24615,
-        "page_captions": [
-          "Figs 4.13A to C). Hence, in unstable ",
-          "Figs 4.12A and B:  (A) Alar ligament and consequence of injury; (B) fractured "
-        ],
-        "captions": [
-          "Figs 4.13A to C). Hence, in unstable situations of the transverse ligament, movement or procedures of the subcranial",
-          "Figs 4.12A and B: (A) Alar ligament and consequence of injury; (B) fractured dens pulled up by alar ligament into foramen secondary to traction"
-        ]
-      },
-      {
-        "chapter": 4,
-        "chapter_name": "cervical_pain",
-        "page": 126,
-        "file": "assets/deepak_images/ch04_cervical_pain/p126_img1.jpeg",
-        "width": 846,
-        "height": 400,
-        "size_bytes": 29043,
-        "page_captions": [
-          "Figs 4.13A to C:  Atlas transverse view"
-        ],
-        "captions": [
-          "Figs 4.13A to C: Atlas transverse view A"
-        ]
-      },
-      {
-        "chapter": 4,
-        "chapter_name": "cervical_pain",
-        "page": 126,
-        "file": "assets/deepak_images/ch04_cervical_pain/p126_img2.jpeg",
-        "width": 825,
-        "height": 351,
-        "size_bytes": 29938,
-        "page_captions": [
-          "Figs 4.13A to C:  Atlas transverse view"
-        ],
-        "captions": [
-          "Figs 4.13A to C: Atlas transverse view A"
-        ]
-      },
-      {
-        "chapter": 4,
-        "chapter_name": "cervical_pain",
-        "page": 126,
-        "file": "assets/deepak_images/ch04_cervical_pain/p126_img3.png",
-        "width": 1282,
-        "height": 529,
-        "size_bytes": 185145,
-        "page_captions": [
-          "Figs 4.13A to C:  Atlas transverse view"
-        ],
-        "captions": [
-          "Figs 4.13A to C: Atlas transverse view A"
-        ]
-      },
-      {
-        "chapter": 4,
-        "chapter_name": "cervical_pain",
-        "page": 140,
-        "file": "assets/deepak_images/ch04_cervical_pain/p140_img1.jpeg",
-        "width": 877,
-        "height": 599,
-        "size_bytes": 49398,
-        "page_captions": [
-          "Fig. 4.14:  Lesions"
-        ],
-        "captions": [
-          "Fig. 4.14: Lesions"
-        ]
-      },
-      {
-        "chapter": 4,
-        "chapter_name": "cervical_pain",
-        "page": 143,
-        "file": "assets/deepak_images/ch04_cervical_pain/p143_img1.png",
-        "width": 1323,
-        "height": 794,
-        "size_bytes": 240213,
-        "page_captions": [
-          "Fig. 4.15:  Grades of disc pathology"
-        ],
-        "captions": [
-          "Fig. 4.15: Grades of disc pathology Cervical Myelopathy"
-        ]
-      },
-      {
-        "chapter": 4,
-        "chapter_name": "cervical_pain",
-        "page": 144,
-        "file": "assets/deepak_images/ch04_cervical_pain/p144_img1.jpeg",
-        "width": 782,
-        "height": 560,
-        "size_bytes": 36184,
-        "page_captions": [
-          "Fig. 4.16). This stretches muscles ",
-          "Fig. 4.16:  Whiplash injury mechanism"
-        ],
-        "captions": [
-          "Fig. 4.16). This stretches muscles and ligaments in the neck. The principal structures are the sternomastoid, deep",
-          "Fig. 4.16: Whiplash injury mechanism"
-        ]
-      },
-      {
-        "chapter": 4,
-        "chapter_name": "cervical_pain",
-        "page": 146,
-        "file": "assets/deepak_images/ch04_cervical_pain/p146_img1.png",
-        "width": 757,
-        "height": 540,
-        "size_bytes": 140240,
-        "page_captions": [
-          "Fig. 4.17:  Sites of entrapment in the thoracic outlet"
-        ],
-        "captions": [
-          "Fig. 4.17: Sites of entrapment in the thoracic outlet"
-        ]
-      },
-      {
-        "chapter": 4,
-        "chapter_name": "cervical_pain",
-        "page": 148,
-        "file": "assets/deepak_images/ch04_cervical_pain/p148_img1.jpeg",
-        "width": 672,
-        "height": 537,
-        "size_bytes": 33845,
-        "page_captions": [
-          "Fig. 4.18). The disc can displace from its ",
-          "Fig. 4.18:  The curved black structure is the disc"
-        ],
-        "captions": [
-          "Fig. 4.18). The disc can displace from its position and create dysfunctional states. The other reason for the above dynamics",
-          "Fig. 4.18: The curved black structure is the disc"
-        ]
-      },
-      {
-        "chapter": 4,
-        "chapter_name": "cervical_pain",
-        "page": 149,
-        "file": "assets/deepak_images/ch04_cervical_pain/p149_img1.png",
-        "width": 1234,
-        "height": 813,
-        "size_bytes": 182827,
-        "page_captions": [
-          "Fig. 4.19)",
-          "Fig. 4.20). Dysfunctional states of the guy ropes of the cervical spine, namely ",
-          "Fig. 4.19:  Suboccipital muscles"
-        ],
-        "captions": [
-          "Fig. 4.19).",
-          "Fig. 4.20). Dysfunctional states of the guy ropes of the cervical spine, namely the SCM and trapezius can also trigger muscular headaches. Additionally,",
-          "Fig. 4.19: Suboccipital muscles"
-        ]
-      },
-      {
-        "chapter": 4,
-        "chapter_name": "cervical_pain",
-        "page": 150,
-        "file": "assets/deepak_images/ch04_cervical_pain/p150_img1.jpeg",
-        "width": 842,
-        "height": 532,
-        "size_bytes": 28129,
-        "page_captions": [
-          "Fig. 4.21). Note for any restriction and possible signs of transverse ",
-          "Fig. 4.22). Note for restriction. This movement is not often ",
-          "Fig. 4.23A). Note for restriction. Now the shoulder on the opposite side is "
-        ],
-        "captions": [
-          "Fig. 4.21). Note for any restriction and possible signs of transverse ligament involvement.",
-          "Fig. 4.22). Note for restriction. This movement is not often tested and should be avoided in the elderly to avoid a possible vertebral artery",
-          "Fig. 4.23A). Note for restriction. Now the shoulder on the opposite side is Fig. 4.20: Nerve representation in the scalp"
-        ]
-      },
-      {
-        "chapter": 4,
-        "chapter_name": "cervical_pain",
-        "page": 151,
-        "file": "assets/deepak_images/ch04_cervical_pain/p151_img1.jpeg",
-        "width": 677,
-        "height": 508,
-        "size_bytes": 21214,
-        "page_captions": [
-          "Fig. 4.21:  Forward bending",
-          "Fig. 4.22:  Backward bending",
-          "Fig. 4.23B). This "
-        ],
-        "captions": [
-          "Fig. 4.21: Forward bending Fig. 4.22: Backward bending",
-          "Fig. 4.23B). This will slacken the muscles on that side. Now if the range of motion in sidebending",
-          "Fig. 4.24A). The opposite shoulder is shrugged upwards and a change in range (Fig. 4.24B), if any, is noted to rule out a muscular restriction."
-        ]
-      },
-      {
-        "chapter": 4,
-        "chapter_name": "cervical_pain",
-        "page": 151,
-        "file": "assets/deepak_images/ch04_cervical_pain/p151_img2.jpeg",
-        "width": 677,
-        "height": 508,
-        "size_bytes": 17451,
-        "page_captions": [
-          "Fig. 4.21:  Forward bending",
-          "Fig. 4.22:  Backward bending",
-          "Fig. 4.23B). This "
-        ],
-        "captions": [
-          "Fig. 4.21: Forward bending Fig. 4.22: Backward bending",
-          "Fig. 4.23B). This will slacken the muscles on that side. Now if the range of motion in sidebending",
-          "Fig. 4.24A). The opposite shoulder is shrugged upwards and a change in range (Fig. 4.24B), if any, is noted to rule out a muscular restriction."
-        ]
-      },
-      {
-        "chapter": 4,
-        "chapter_name": "cervical_pain",
-        "page": 152,
-        "file": "assets/deepak_images/ch04_cervical_pain/p152_img1.jpeg",
-        "width": 681,
-        "height": 513,
-        "size_bytes": 19832,
-        "page_captions": [
-          "Fig. 4.25). ",
-          "Figs 4.23A and B:  Sidebending"
-        ],
-        "captions": [
-          "Fig. 4.25). Figs 4.23A and B: Sidebending"
-        ]
-      },
-      {
-        "chapter": 4,
-        "chapter_name": "cervical_pain",
-        "page": 152,
-        "file": "assets/deepak_images/ch04_cervical_pain/p152_img2.jpeg",
-        "width": 681,
-        "height": 511,
-        "size_bytes": 19623,
-        "page_captions": [
-          "Fig. 4.25). ",
-          "Figs 4.23A and B:  Sidebending"
-        ],
-        "captions": [
-          "Fig. 4.25). Figs 4.23A and B: Sidebending"
-        ]
-      },
-      {
-        "chapter": 4,
-        "chapter_name": "cervical_pain",
-        "page": 153,
-        "file": "assets/deepak_images/ch04_cervical_pain/p153_img1.jpeg",
-        "width": 681,
-        "height": 511,
-        "size_bytes": 20855,
-        "page_captions": [
-          "Fig. 4.26)",
-          "Fig. 4.27)",
-          "Fig. 4.28). The shoulder on the side of the SCM being tested is "
-        ],
-        "captions": [
-          "Fig. 4.26). ANTERIOR SCALENES",
-          "Fig. 4.27). STERNOMASTOID",
-          "Fig. 4.28). The shoulder on the side of the SCM being tested is kept shrugged. This slackens the SCM on the same side. The maneuver is done",
-          "Figs 4.24A and B: Rotation A"
-        ]
-      },
-      {
-        "chapter": 4,
-        "chapter_name": "cervical_pain",
-        "page": 153,
-        "file": "assets/deepak_images/ch04_cervical_pain/p153_img2.jpeg",
-        "width": 681,
-        "height": 511,
-        "size_bytes": 17384,
-        "page_captions": [
-          "Fig. 4.26)",
-          "Fig. 4.27)",
-          "Fig. 4.28). The shoulder on the side of the SCM being tested is "
-        ],
-        "captions": [
-          "Fig. 4.26). ANTERIOR SCALENES",
-          "Fig. 4.27). STERNOMASTOID",
-          "Fig. 4.28). The shoulder on the side of the SCM being tested is kept shrugged. This slackens the SCM on the same side. The maneuver is done",
-          "Figs 4.24A and B: Rotation A"
-        ]
-      },
-      {
-        "chapter": 4,
-        "chapter_name": "cervical_pain",
-        "page": 154,
-        "file": "assets/deepak_images/ch04_cervical_pain/p154_img1.jpeg",
-        "width": 485,
-        "height": 597,
-        "size_bytes": 28131,
-        "page_captions": [
-          "Fig. 4.25:  Levator scapula",
-          "Fig. 4.26:  Trapezius"
-        ],
-        "captions": [
-          "Fig. 4.25: Levator scapula Fig. 4.26: Trapezius"
-        ]
-      },
-      {
-        "chapter": 4,
-        "chapter_name": "cervical_pain",
-        "page": 154,
-        "file": "assets/deepak_images/ch04_cervical_pain/p154_img2.jpeg",
-        "width": 485,
-        "height": 597,
-        "size_bytes": 29915,
-        "page_captions": [
-          "Fig. 4.25:  Levator scapula",
-          "Fig. 4.26:  Trapezius"
-        ],
-        "captions": [
-          "Fig. 4.25: Levator scapula Fig. 4.26: Trapezius"
-        ]
-      },
-      {
-        "chapter": 4,
-        "chapter_name": "cervical_pain",
-        "page": 155,
-        "file": "assets/deepak_images/ch04_cervical_pain/p155_img1.jpeg",
-        "width": 717,
-        "height": 538,
-        "size_bytes": 28272,
-        "page_captions": [
-          "Fig. 4.27:  Scalenes",
-          "Fig. 4.28:  Sternomastoid on the right",
-          "Fig. 4.29). When this is done the occipital condyles roll backward "
-        ],
-        "captions": [
-          "Fig. 4.27: Scalenes Fig. 4.28: Sternomastoid on the right",
-          "Fig. 4.29). When this is done the occipital condyles roll backward"
-        ]
-      },
-      {
-        "chapter": 4,
-        "chapter_name": "cervical_pain",
-        "page": 155,
-        "file": "assets/deepak_images/ch04_cervical_pain/p155_img2.jpeg",
-        "width": 717,
-        "height": 538,
-        "size_bytes": 20105,
-        "page_captions": [
-          "Fig. 4.27:  Scalenes",
-          "Fig. 4.28:  Sternomastoid on the right",
-          "Fig. 4.29). When this is done the occipital condyles roll backward "
-        ],
-        "captions": [
-          "Fig. 4.27: Scalenes Fig. 4.28: Sternomastoid on the right",
-          "Fig. 4.29). When this is done the occipital condyles roll backward"
-        ]
-      },
-      {
-        "chapter": 4,
-        "chapter_name": "cervical_pain",
-        "page": 156,
-        "file": "assets/deepak_images/ch04_cervical_pain/p156_img1.jpeg",
-        "width": 717,
-        "height": 538,
-        "size_bytes": 19051,
-        "page_captions": [
-          "Fig. 4.30)",
-          "Fig. 4.31)",
-          "Fig. 4.29:  Suboccipitals"
-        ],
-        "captions": [
-          "Fig. 4.30) Normal movements occur in patterns or diagonals. It is usually a combination",
-          "Fig. 4.31). Fig. 4.29: Suboccipitals"
-        ]
-      },
-      {
-        "chapter": 4,
-        "chapter_name": "cervical_pain",
-        "page": 157,
-        "file": "assets/deepak_images/ch04_cervical_pain/p157_img1.jpeg",
-        "width": 717,
-        "height": 538,
-        "size_bytes": 25172,
-        "page_captions": [
-          "Fig. 4.30:  Basic hold",
-          "Fig. 4.31:  Testing opening restriction on the left"
-        ],
-        "captions": [
-          "Fig. 4.30: Basic hold Fig. 4.31: Testing opening restriction on the left"
-        ]
-      },
-      {
-        "chapter": 4,
-        "chapter_name": "cervical_pain",
-        "page": 157,
-        "file": "assets/deepak_images/ch04_cervical_pain/p157_img2.jpeg",
-        "width": 485,
-        "height": 597,
-        "size_bytes": 24070,
-        "page_captions": [
-          "Fig. 4.30:  Basic hold",
-          "Fig. 4.31:  Testing opening restriction on the left"
-        ],
-        "captions": [
-          "Fig. 4.30: Basic hold Fig. 4.31: Testing opening restriction on the left"
-        ]
-      },
-      {
-        "chapter": 4,
-        "chapter_name": "cervical_pain",
-        "page": 158,
-        "file": "assets/deepak_images/ch04_cervical_pain/p158_img1.jpeg",
-        "width": 485,
-        "height": 597,
-        "size_bytes": 18921,
-        "page_captions": [
-          "Fig. 4.32:  Testing closing restriction on the right",
-          "Fig. 4.32)"
-        ],
-        "captions": [
-          "Fig. 4.32: Testing closing restriction on the right is stuck in flexion, rotation, sidebending (FRS is left not right of C4 as goes by the",
-          "Fig. 4.32)."
-        ]
-      },
-      {
-        "chapter": 4,
-        "chapter_name": "cervical_pain",
-        "page": 159,
-        "file": "assets/deepak_images/ch04_cervical_pain/p159_img1.jpeg",
-        "width": 717,
-        "height": 538,
-        "size_bytes": 17827,
-        "page_captions": [
-          "Fig. 4.33)",
-          "Fig. 4.33:  Atlanto occipital forward nodding"
-        ],
-        "captions": [
-          "Fig. 4.33). Fig. 4.33: Atlanto occipital forward nodding"
-        ]
-      },
-      {
-        "chapter": 4,
-        "chapter_name": "cervical_pain",
-        "page": 160,
-        "file": "assets/deepak_images/ch04_cervical_pain/p160_img1.jpeg",
-        "width": 717,
-        "height": 538,
-        "size_bytes": 17867,
-        "page_captions": [
-          "Fig. 4.34)",
-          "Fig. 4.34:  Atlanto occipital backward nodding"
-        ],
-        "captions": [
-          "Fig. 4.34).",
-          "Fig. 4.34: Atlanto occipital backward nodding"
-        ]
-      },
-      {
-        "chapter": 4,
-        "chapter_name": "cervical_pain",
-        "page": 161,
-        "file": "assets/deepak_images/ch04_cervical_pain/p161_img1.jpeg",
-        "width": 717,
-        "height": 538,
-        "size_bytes": 18577,
-        "page_captions": [
-          "Fig. 4.35:  Atlanto occipital sidebending",
-          "Fig. 4.35). The patient is asked to sidebend to either side and "
-        ],
-        "captions": [
-          "Fig. 4.35: Atlanto occipital sidebending C0, C1 Sidebending Restriction",
-          "Fig. 4.35). The patient is asked to sidebend to either side and the clinician palpates for an increase in prominence. For example, if the head is"
-        ]
-      },
-      {
-        "chapter": 4,
-        "chapter_name": "cervical_pain",
-        "page": 162,
-        "file": "assets/deepak_images/ch04_cervical_pain/p162_img1.jpeg",
-        "width": 717,
-        "height": 538,
-        "size_bytes": 19153,
-        "page_captions": [
-          "Fig. 4.36). This exclusively tests the AA joint. The test is done ideally with the ",
-          "Fig. 4.37)",
-          "Fig. 4.39)"
-        ],
-        "captions": [
-          "Fig. 4.36). This exclusively tests the AA joint. The test is done ideally with the shoulder in a shrug position bilaterally as this helps to ease the soft tissue that may",
-          "Fig. 4.37) •",
-          "Fig. 4.39) •",
-          "Fig. 4.38). Sensation may be Diminished to the Corresponding Nerve Root",
-          "Fig. 4.36: Atlanto axial rotation"
-        ]
-      },
-      {
-        "chapter": 4,
-        "chapter_name": "cervical_pain",
-        "page": 163,
-        "file": "assets/deepak_images/ch04_cervical_pain/p163_img1.jpeg",
-        "width": 717,
-        "height": 538,
-        "size_bytes": 31619,
-        "page_captions": [
-          "Fig. 4.37:  Testing biceps reflex C5",
-          "Fig. 4.38:  Testing triceps reflex C7"
-        ],
-        "captions": [
-          "Fig. 4.37: Testing biceps reflex C5 Fig. 4.38: Testing triceps reflex C7"
-        ]
-      },
-      {
-        "chapter": 4,
-        "chapter_name": "cervical_pain",
-        "page": 163,
-        "file": "assets/deepak_images/ch04_cervical_pain/p163_img2.jpeg",
-        "width": 717,
-        "height": 538,
-        "size_bytes": 29975,
-        "page_captions": [
-          "Fig. 4.37:  Testing biceps reflex C5",
-          "Fig. 4.38:  Testing triceps reflex C7"
-        ],
-        "captions": [
-          "Fig. 4.37: Testing biceps reflex C5 Fig. 4.38: Testing triceps reflex C7"
-        ]
-      },
-      {
-        "chapter": 4,
-        "chapter_name": "cervical_pain",
-        "page": 164,
-        "file": "assets/deepak_images/ch04_cervical_pain/p164_img1.jpeg",
-        "width": 681,
-        "height": 511,
-        "size_bytes": 30713,
-        "page_captions": [
-          "Figs 4.40 to 4.42) (the author ",
-          "Fig. 4.39:  Testing brachioradialis reflex C6"
-        ],
-        "captions": [
-          "Figs 4.40 to 4.42) (the author is credited to have described this test).57",
-          "Fig. 4.39: Testing brachioradialis reflex C6"
-        ]
-      },
-      {
-        "chapter": 4,
-        "chapter_name": "cervical_pain",
-        "page": 165,
-        "file": "assets/deepak_images/ch04_cervical_pain/p165_img1.jpeg",
-        "width": 681,
-        "height": 511,
-        "size_bytes": 22770,
-        "page_captions": [
-          "Fig. 4.40:  Neutral",
-          "Fig. 4.43)",
-          "Fig. 4.41:  Neck extension with increasing ‘chin length’ (deep group weakness)"
-        ],
-        "captions": [
-          "Fig. 4.40: Neutral Lower Trapezius",
-          "Fig. 4.43). Positive Finding on Upper Limb Tension Testing (ULTT)46"
-        ]
-      },
-      {
-        "chapter": 4,
-        "chapter_name": "cervical_pain",
-        "page": 165,
-        "file": "assets/deepak_images/ch04_cervical_pain/p165_img2.jpeg",
-        "width": 681,
-        "height": 511,
-        "size_bytes": 21687,
-        "page_captions": [
-          "Fig. 4.40:  Neutral",
-          "Fig. 4.43)",
-          "Fig. 4.41:  Neck extension with increasing ‘chin length’ (deep group weakness)"
-        ],
-        "captions": [
-          "Fig. 4.40: Neutral Lower Trapezius",
-          "Fig. 4.43). Positive Finding on Upper Limb Tension Testing (ULTT)46"
-        ]
-      },
-      {
-        "chapter": 4,
-        "chapter_name": "cervical_pain",
-        "page": 166,
-        "file": "assets/deepak_images/ch04_cervical_pain/p166_img1.jpeg",
-        "width": 681,
-        "height": 511,
-        "size_bytes": 21488,
-        "page_captions": [
-          "Figs 4.43 and 4.44A and B)",
-          "Fig. 4.42:  Neck flexion indicating global weakness  ",
-          "Fig. 4.43:  Testing lower trapezius"
-        ],
-        "captions": [
-          "Figs 4.43 and 4.44A and B) Shoulder-Girdle Depression",
-          "Fig. 4.43: Testing lower trapezius"
-        ]
-      },
-      {
-        "chapter": 4,
-        "chapter_name": "cervical_pain",
-        "page": 166,
-        "file": "assets/deepak_images/ch04_cervical_pain/p166_img2.jpeg",
-        "width": 485,
-        "height": 597,
-        "size_bytes": 27331,
-        "page_captions": [
-          "Figs 4.43 and 4.44A and B)",
-          "Fig. 4.42:  Neck flexion indicating global weakness  ",
-          "Fig. 4.43:  Testing lower trapezius"
-        ],
-        "captions": [
-          "Figs 4.43 and 4.44A and B) Shoulder-Girdle Depression",
-          "Fig. 4.43: Testing lower trapezius"
-        ]
-      },
-      {
-        "chapter": 4,
-        "chapter_name": "cervical_pain",
-        "page": 167,
-        "file": "assets/deepak_images/ch04_cervical_pain/p167_img1.jpeg",
-        "width": 717,
-        "height": 538,
-        "size_bytes": 43161,
-        "page_captions": [
-          "Figs 4.44A and B:  Testing median nerve tension"
-        ],
-        "captions": [
-          "Figs 4.44A and B: Testing median nerve tension B"
-        ]
-      },
-      {
-        "chapter": 4,
-        "chapter_name": "cervical_pain",
-        "page": 167,
-        "file": "assets/deepak_images/ch04_cervical_pain/p167_img2.jpeg",
-        "width": 717,
-        "height": 538,
-        "size_bytes": 43701,
-        "page_captions": [
-          "Figs 4.44A and B:  Testing median nerve tension"
-        ],
-        "captions": [
-          "Figs 4.44A and B: Testing median nerve tension B"
-        ]
-      },
-      {
-        "chapter": 4,
-        "chapter_name": "cervical_pain",
-        "page": 169,
-        "file": "assets/deepak_images/ch04_cervical_pain/p169_img1.jpeg",
-        "width": 717,
-        "height": 538,
-        "size_bytes": 32424,
-        "page_captions": [
-          "Figs 4.45A and B:  Testing radial nerve tension"
-        ],
-        "captions": [
-          "Figs 4.45A and B: Testing radial nerve tension A"
-        ]
-      },
-      {
-        "chapter": 4,
-        "chapter_name": "cervical_pain",
-        "page": 169,
-        "file": "assets/deepak_images/ch04_cervical_pain/p169_img2.jpeg",
-        "width": 717,
-        "height": 538,
-        "size_bytes": 36871,
-        "page_captions": [
-          "Figs 4.45A and B:  Testing radial nerve tension"
-        ],
-        "captions": [
-          "Figs 4.45A and B: Testing radial nerve tension A"
-        ]
-      },
-      {
-        "chapter": 4,
-        "chapter_name": "cervical_pain",
-        "page": 171,
-        "file": "assets/deepak_images/ch04_cervical_pain/p171_img1.jpeg",
-        "width": 717,
-        "height": 538,
-        "size_bytes": 36656,
-        "page_captions": [
-          "Fig. 4.46:  Testing ulnar nerve tension"
-        ],
-        "captions": [
-          "Fig. 4.46: Testing ulnar nerve tension"
-        ]
-      },
-      {
-        "chapter": 4,
-        "chapter_name": "cervical_pain",
-        "page": 172,
-        "file": "assets/deepak_images/ch04_cervical_pain/p172_img1.jpeg",
-        "width": 717,
-        "height": 538,
-        "size_bytes": 39548,
-        "page_captions": [
-          "Figs 4.47 to 4.49)",
-          "Fig. 4.47:  Spurling compression"
-        ],
-        "captions": [
-          "Figs 4.47 to 4.49) Three out of four of the following tests should reproduce radicular pain31:",
-          "Fig. 4.47: Spurling compression"
-        ]
-      },
-      {
-        "chapter": 4,
-        "chapter_name": "cervical_pain",
-        "page": 173,
-        "file": "assets/deepak_images/ch04_cervical_pain/p173_img1.jpeg",
-        "width": 717,
-        "height": 538,
-        "size_bytes": 32608,
-        "page_captions": [
-          "Fig. 4.48:  Distraction",
-          "Fig. 4.49:  Ipsilateral rotation",
-          "Fig. 4.50). A positive test is indicated by reproduction of symptoms in "
-        ],
-        "captions": [
-          "Fig. 4.48: Distraction Fig. 4.49: Ipsilateral rotation",
-          "Fig. 4.50). A positive test is indicated by reproduction of symptoms in the hands."
-        ]
-      },
-      {
-        "chapter": 4,
-        "chapter_name": "cervical_pain",
-        "page": 173,
-        "file": "assets/deepak_images/ch04_cervical_pain/p173_img2.jpeg",
-        "width": 717,
-        "height": 484,
-        "size_bytes": 30254,
-        "page_captions": [
-          "Fig. 4.48:  Distraction",
-          "Fig. 4.49:  Ipsilateral rotation",
-          "Fig. 4.50). A positive test is indicated by reproduction of symptoms in "
-        ],
-        "captions": [
-          "Fig. 4.48: Distraction Fig. 4.49: Ipsilateral rotation",
-          "Fig. 4.50). A positive test is indicated by reproduction of symptoms in the hands."
-        ]
-      },
-      {
-        "chapter": 4,
-        "chapter_name": "cervical_pain",
-        "page": 174,
-        "file": "assets/deepak_images/ch04_cervical_pain/p174_img1.jpeg",
-        "width": 717,
-        "height": 538,
-        "size_bytes": 22492,
-        "page_captions": [
-          "Fig. 4.51)",
-          "Fig. 4.52). A positive test can produce sharp pain that is shock like ",
-          "Fig. 4.50:  Roos test"
-        ],
-        "captions": [
-          "Fig. 4.51).",
-          "Fig. 4.52). A positive test can produce sharp pain that is shock like Fig. 4.50: Roos test"
-        ]
-      },
-      {
-        "chapter": 4,
-        "chapter_name": "cervical_pain",
-        "page": 175,
-        "file": "assets/deepak_images/ch04_cervical_pain/p175_img1.jpeg",
-        "width": 717,
-        "height": 538,
-        "size_bytes": 20615,
-        "page_captions": [
-          "Fig. 4.51:  Testing alar ligament integrity in sitting",
-          "Figs 4.52A and B). "
-        ],
-        "captions": [
-          "Fig. 4.51: Testing alar ligament integrity in sitting with tingling numbness in the extremities. Sometimes a ‘clunk’ can be heard in",
-          "Figs 4.52A and B). On reviewing subcranial mechanics, the atlas follows the occiput and hence would"
-        ]
-      },
-      {
-        "chapter": 4,
-        "chapter_name": "cervical_pain",
-        "page": 176,
-        "file": "assets/deepak_images/ch04_cervical_pain/p176_img1.jpeg",
-        "width": 717,
-        "height": 538,
-        "size_bytes": 23023,
-        "page_captions": [
-          "Figs 4.52A and B:  Testing transverse ligament integrity"
-        ],
-        "captions": [
-          "Figs 4.52A and B: Testing transverse ligament integrity A"
-        ]
-      },
-      {
-        "chapter": 4,
-        "chapter_name": "cervical_pain",
-        "page": 176,
-        "file": "assets/deepak_images/ch04_cervical_pain/p176_img2.jpeg",
-        "width": 717,
-        "height": 538,
-        "size_bytes": 18167,
-        "page_captions": [
-          "Figs 4.52A and B:  Testing transverse ligament integrity"
-        ],
-        "captions": [
-          "Figs 4.52A and B: Testing transverse ligament integrity A"
-        ]
-      },
-      {
-        "chapter": 4,
-        "chapter_name": "cervical_pain",
-        "page": 177,
-        "file": "assets/deepak_images/ch04_cervical_pain/p177_img1.jpeg",
-        "width": 717,
-        "height": 538,
-        "size_bytes": 24233,
-        "page_captions": [
-          "Fig. 4.53). The ",
-          "Fig. 4.54). Moderate to severe pain can ",
-          "Fig. 4.53:  Testing the vertebral artery"
-        ],
-        "captions": [
-          "Fig. 4.53). The patient is asked to count backwards from 15 to 1 as this requires alert cognition. In",
-          "Fig. 4.54). Moderate to severe pain can indicate serious pathology as in a Jefferson fracture. A Jefferson fracture is a",
-          "Fig. 4.53: Testing the vertebral artery"
-        ]
-      },
-      {
-        "chapter": 4,
-        "chapter_name": "cervical_pain",
-        "page": 178,
-        "file": "assets/deepak_images/ch04_cervical_pain/p178_img1.jpeg",
-        "width": 717,
-        "height": 538,
-        "size_bytes": 16678,
-        "page_captions": [
-          "Fig. 4.55), which is held at ",
-          "Fig. 4.54:  Vertex compression"
-        ],
-        "captions": [
-          "Fig. 4.55), which is held at eye level. Using a pen torch, light is flashed into the patients eye and the clinician",
-          "Fig. 4.54: Vertex compression"
-        ]
-      },
-      {
-        "chapter": 4,
-        "chapter_name": "cervical_pain",
-        "page": 179,
-        "file": "assets/deepak_images/ch04_cervical_pain/p179_img1.jpeg",
-        "width": 717,
-        "height": 538,
-        "size_bytes": 20937,
-        "page_captions": [
-          "Fig. 4.55:  Checking pupillary light reflex",
-          "Fig. 4.56). Acute tenderness over the lower ",
-          "Fig. 4.57). A pathological reflex is suspected when the great toe "
-        ],
-        "captions": [
-          "Fig. 4.55: Checking pupillary light reflex called ‘battle sign’. Additionally puffiness with redness around the eyes is looked",
-          "Fig. 4.56). Acute tenderness over the lower cervical area especially over C7 may indicate a clay-shoveler’s fracture, with an",
-          "Fig. 4.57). A pathological reflex is suspected when the great toe extends and flexes toward the top of the foot and the other toes fan out. Normally,"
-        ]
-      },
-      {
-        "chapter": 4,
-        "chapter_name": "cervical_pain",
-        "page": 180,
-        "file": "assets/deepak_images/ch04_cervical_pain/p180_img1.jpeg",
-        "width": 717,
-        "height": 538,
-        "size_bytes": 18133,
-        "page_captions": [
-          "Fig. 4.56:  Checking for tenderness over C7",
-          "Fig. 4.57:  Testing for Babinski’s reflex"
-        ],
-        "captions": [
-          "Fig. 4.56: Checking for tenderness over C7 Fig. 4.57: Testing for Babinski’s reflex"
-        ]
-      },
-      {
-        "chapter": 4,
-        "chapter_name": "cervical_pain",
-        "page": 180,
-        "file": "assets/deepak_images/ch04_cervical_pain/p180_img2.jpeg",
-        "width": 437,
-        "height": 597,
-        "size_bytes": 28188,
-        "page_captions": [
-          "Fig. 4.56:  Checking for tenderness over C7",
-          "Fig. 4.57:  Testing for Babinski’s reflex"
-        ],
-        "captions": [
-          "Fig. 4.56: Checking for tenderness over C7 Fig. 4.57: Testing for Babinski’s reflex"
-        ]
-      },
-      {
-        "chapter": 4,
-        "chapter_name": "cervical_pain",
-        "page": 181,
-        "file": "assets/deepak_images/ch04_cervical_pain/p181_img1.jpeg",
-        "width": 717,
-        "height": 538,
-        "size_bytes": 33654,
-        "page_captions": [
-          "Fig. 4.58:  Testing Hoffmann’s sign",
-          "Fig. 4.58). The index and thumb will close in as to make a tip ",
-          "Fig. 4.59)"
-        ],
-        "captions": [
-          "Fig. 4.58: Testing Hoffmann’s sign •",
-          "Fig. 4.58). The index and thumb will close in as to make a tip to tip contact. A positive Hoffmann’s reflex reflects presence of an upper motor",
-          "Fig. 4.59)."
-        ]
-      },
-      {
-        "chapter": 4,
-        "chapter_name": "cervical_pain",
-        "page": 182,
-        "file": "assets/deepak_images/ch04_cervical_pain/p182_img1.jpeg",
-        "width": 717,
-        "height": 538,
-        "size_bytes": 27673,
-        "page_captions": [
-          "Fig. 4.60). The reader is also suggested to refer to the scapula backward ",
-          "Fig. 4.59:  Assessing the first rib"
-        ],
-        "captions": [
-          "Fig. 4.60). The reader is also suggested to refer to the scapula backward tipping test (SBTT) in the shoulder section.",
-          "Fig. 4.59: Assessing the first rib"
-        ]
-      },
-      {
-        "chapter": 4,
-        "chapter_name": "cervical_pain",
-        "page": 183,
-        "file": "assets/deepak_images/ch04_cervical_pain/p183_img1.jpeg",
-        "width": 717,
-        "height": 497,
-        "size_bytes": 23378,
-        "page_captions": [
-          "Fig. 4.60:  Shoulder protraction with pectoralis minor tightness left",
-          "Fig. 4.61).51"
-        ],
-        "captions": [
-          "Fig. 4.60: Shoulder protraction with pectoralis minor tightness left jaw deviates past midline either to the left or the right it then suggests ipsilateral",
-          "Fig. 4.61).51 Clicking in the TMJ/Decreased Mouth Opening"
-        ]
-      },
-      {
-        "chapter": 4,
-        "chapter_name": "cervical_pain",
-        "page": 184,
-        "file": "assets/deepak_images/ch04_cervical_pain/p184_img1.jpeg",
-        "width": 461,
-        "height": 568,
-        "size_bytes": 18808,
-        "page_captions": [
-          "Fig. 4.61:  Mandibular deviation to the right"
-        ],
-        "captions": [
-          "Fig. 4.61: Mandibular deviation to the right"
-        ]
-      },
-      {
-        "chapter": 4,
-        "chapter_name": "cervical_pain",
-        "page": 185,
-        "file": "assets/deepak_images/ch04_cervical_pain/p185_img1.jpeg",
-        "width": 418,
-        "height": 597,
-        "size_bytes": 26214,
-        "page_captions": [
-          "Figs 4.62 and 4.63). Tenderness and pain on clenching on the same side may ",
-          "Fig. 4.62:  Palpating for tenderness ",
-          "Fig. 4.63:  Palpating for tenderness "
-        ],
-        "captions": [
-          "Figs 4.62 and 4.63). Tenderness and pain on clenching on the same side may indicate hyperactivity of these muscles secondary to bruxism, parafunction or a",
-          "Fig. 4.62: Palpating for tenderness over the masseter",
-          "Fig. 4.63: Palpating for tenderness over the pterygoid"
-        ]
-      },
-      {
-        "chapter": 4,
-        "chapter_name": "cervical_pain",
-        "page": 185,
-        "file": "assets/deepak_images/ch04_cervical_pain/p185_img2.jpeg",
-        "width": 413,
-        "height": 597,
-        "size_bytes": 21019,
-        "page_captions": [
-          "Figs 4.62 and 4.63). Tenderness and pain on clenching on the same side may ",
-          "Fig. 4.62:  Palpating for tenderness ",
-          "Fig. 4.63:  Palpating for tenderness "
-        ],
-        "captions": [
-          "Figs 4.62 and 4.63). Tenderness and pain on clenching on the same side may indicate hyperactivity of these muscles secondary to bruxism, parafunction or a",
-          "Fig. 4.62: Palpating for tenderness over the masseter",
-          "Fig. 4.63: Palpating for tenderness over the pterygoid"
-        ]
-      }
-    ],
     "recommended_web1_procedures": [
       {
         "id": "cervical-medial-branch-ton",
@@ -1683,14 +1135,756 @@ const STABLE_SCREENING_FALLBACK = [
     ]
   },
   {
-    "id": "ch05-thoracic-spine",
+    "id": "shoulder-pain",
+    "chapter": 9,
+    "region": "shoulder",
+    "region_vi": "Khớp Vai & Đai Vai",
+    "icon": "🏹",
+    "title": "Shoulder Complex, Rotator Cuff & Shoulder Girdle Pain",
+    "title_vi": "🏹 Đau Khớp Vai, Đai Vai & Xung Đột Chóp Xoay",
+    "chief_complaint": "Phàn nàn chính: Đau khớp vai khi nhấc tay qua đầu, đau nhói mặt trước vai khi với tay ra sau, đau vai về đêm khi nằm nghiêng đè lên vai, đông cứng khớp vai không thể chải đầu hay cài cúc áo.",
+    "author": "GS. Deepak Sebastian (Chương 9, pp. 417-466)",
+    "summary": "Chẩn đoán phân biệt đau khớp vai toàn diện: Xung đột khoang dưới mỏm cùng (Subacromial Impingement), rách gân chóp xoay (Supraspinatus, Infraspinatus, Subscapularis), viêm gân đầu dài cơ nhị đầu, thoái hóa khớp cùng đòn (AC Joint), đông cứng khớp vai (Frozen Shoulder / Adhesive Capsulitis). Sàng lọc cờ đỏ nhồi máu cơ tim (quy chiếu vai trái), u đỉnh phổi Pancoast, bệnh lý gan mật (quy chiếu vai phải), vỡ lách tụ máu (dấu hiệu Kehr vai trái).",
+    "stage_1_systemic_red_flags": [
+      {
+        "category": "Cờ Đỏ Thiếu Máu Cơ Tim / Nhồi Máu Cơ Tim (Cardiac Ischemia)",
+        "signs": "Đau nhức vùng vai trái lan dọc bờ trong cánh tay và ngón 4-5 hoặc lan lên hàm, khởi phát khi gắng sức hoặc xúc động, kèm cảm giác đè nặng ngực, vã mồ hôi, khó thở, buồn nôn.",
+        "action": "CẤP CỨU NỘI TIM MẠCH: Đo ECG 12 chuyển đạo ngay lập tức, xét nghiệm Troponin I/T siêu nhạy. Tuyệt đối không tiêm corticoid vào vai!"
+      },
+      {
+        "category": "Cờ Đỏ Vỡ Lách / Chảy Máu Trong Ổ Bụng (Dấu Hiệu Kehr)",
+        "signs": "Đau nhói dữ dội tại đỉnh vai trái (do máu hoặc dịch kích thích dây thần kinh hoành mặt dưới cơ hoành C3-C5), xuất hiện sau chấn thương ngực bụng kín hoặc tai nạn giao thông, kèm da niêm mạc nhợt, tụt huyết áp, bụng chướng.",
+        "action": "CẤP CỨU NGOẠI TIÊU HÓA: Siêu âm bụng tại giường (FAST) tìm dịch ổ bụng, chuyển mổ khẩn cấp."
+      },
+      {
+        "category": "Cờ Đỏ U Đỉnh Phổi Pancoast (Pancoast Tumor)",
+        "signs": "Đau vai sau và rãnh gai bả vai âm ỉ liên tục tăng về đêm, lan dọc theo bờ trong cánh tay, sụt cân, tiền sử hút thuốc lá, có thể kèm sụp mi co đồng tử cùng bên (Hội chứng Horner).",
+        "action": "Chụp X-quang và CT lồng ngực đánh giá vùng đỉnh phổi."
+      },
+      {
+        "category": "Cờ Đỏ Trật Khớp Vai Sau Bị Bỏ Sót (Posterior Shoulder Dislocation)",
+        "signs": "Khớp vai bị cố định ở tư thế khép và xoay trong, MẤT HOÀN TOÀN KHẢ NĂNG XOAY NGOÀI THỤ ĐỘNG. Rất dễ bị bỏ sót trên phim X-quang AP thông thường (dấu hiệu bóng đèn / Lightbulb sign), thường gặp sau cơn co giật động kinh hoặc bị điện giật.",
+        "action": "Chụp X-quang khớp vai tư thế nách (Axillary view) hoặc chữ Y xương bả vai (Scapular Y view), nắn trật dưới vô cảm."
+      }
+    ],
+    "red_flags": [
+      {
+        "category": "Nhồi Máu Cơ Tim & Vỡ Tạng Ổ Bụng",
+        "signs": "Đau vai trái kèm đau ngực khó thở hoặc dấu hiệu Kehr sau ngã đụng bụng.",
+        "action": "Đo ECG / Siêu âm FAST ổ bụng cấp cứu.",
+        "figures": []
+      },
+      {
+        "category": "Hoại Tử Vô Mạch Chỏm Xương Cánh Tay (Humeral Head AVN)",
+        "signs": "Đau vai âm ỉ sâu, cứng khớp tiến triển ở bệnh nhân dùng corticoid liều cao kéo dài hoặc bệnh hồng cầu hình liềm.",
+        "action": "Chụp MRI khớp vai đánh giá mức độ hoại tử dưới sụn.",
+        "figures": []
+      }
+    ],
+    "visceral_referrals": [
+      {
+        "source": "Bệnh Lý Gan & Túi Mật (Liver Abscess & Cholecystitis)",
+        "pattern": "Kích thích cơ hoành phải quy chiếu đau lên đỉnh vai phải và vùng bờ trên cơ thang phải (qua thần kinh hoành C3-C5). Kèm sốt, vàng da, ấn đau hạ sườn phải.",
+        "differential": "Siêu âm gan mật tụy, xét nghiệm men gan AST/ALT, Bilirubin.",
+        "figures": []
+      },
+      {
+        "source": "Đau Rễ Cổ C5 (Cervical Radiculopathy C5)",
+        "pattern": "Đau nhức mặt ngoài cơ delta và đỉnh vai, tê bì dermatom C5, yếu cơ giạng vai (cơ delta).",
+        "differential": "Spurling test (+), Kéo giãn cổ (+) làm giảm triệu chứng, cử động khớp vai nội khớp bình thường.",
+        "figures": []
+      }
+    ],
+    "drug_induced": [
+      "Quinolone: Viêm gân và đứt gân cơ trên gai (Supraspinatus).",
+      "Statin: Viêm cơ thang, cơ delta và cơ dưới gai đối xứng hai bên.",
+      "Corticoid: Hoại tử vô mạch chỏm xương cánh tay (AVN)."
+    ],
+    "examination_procedures": [
+      {
+        "name": "Nghiệm Pháp Neer (Neer Impingement Test Xung Đột Dưới Mỏm Cùng)",
+        "technique": "Người khám đứng sau, một tay cố định xương bả vai bệnh nhân, tay kia nâng toàn bộ cánh tay bệnh nhân gập tối đa ra trước trong tư thế xoay trong hoàn toàn.",
+        "significance": "Tái hiện đau chói ở góc 70° - 120° do mấu động lớn kẹp gân cơ trên gai vào bờ trước dưới mỏm cùng vai (Sn: 79 - 88%).",
+        "sensitivity": "79% - 88%",
+        "specificity": "53% - 60%",
+        "diagnostic_role": "Độ nhạy cao để sàng lọc loại trừ xung đột dưới mỏm cùng vai (SAIS)",
+        "figures": []
+      },
+      {
+        "name": "Nghiệm Pháp Hawkins-Kennedy (Hawkins-Kennedy Impingement Test)",
+        "technique": "Bệnh nhân gập vai 90°, gập khuỷu 90°. Người khám giữ khuỷu tay và thực hiện động tác xoay trong cánh tay đột ngột.",
+        "significance": "Tái hiện đau chói mặt trước trên vai do gân cơ trên gai bị kẹp dưới dây chằng quạ - cùng vai (Sn: 87 - 92%).",
+        "sensitivity": "80% - 92%",
+        "specificity": "56% - 67%",
+        "diagnostic_role": "Độ nhạy cao phát hiện chèn kẹp gân cơ trên gai dưới dây chằng quạ cùng vai",
+        "figures": [
+          {
+            "file": "assets/deepak_images/ch09_shoulder_pain/p442_img1.jpeg",
+            "page": 442,
+            "fig_number": "9.10",
+            "caption_en": "Fig. 9.10: Location for rotator cuff pathology",
+            "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Location for rotator cuff pathology",
+            "category": "redflags_pathology",
+            "width": 1134,
+            "height": 754
+          },
+          {
+            "file": "assets/deepak_images/ch09_shoulder_pain/p460_img1.jpeg",
+            "page": 460,
+            "fig_number": "9.31A and B ",
+            "caption_en": "Figs 9.31A and B : External rotation lag sign",
+            "caption_vi": "Hình ảnh giải phẫu & lâm sàng: External rotation lag sign",
+            "category": "examination",
+            "width": 958,
+            "height": 728
+          }
+        ]
+      },
+      {
+        "name": "Nghiệm Pháp Jobe / Empty Can (Khám Đứt/Viêm Gân Cơ Trên Gai)",
+        "technique": "Bệnh nhân giạng hai cánh tay 90° trong mặt phẳng bả vai (hướng ra trước 30°), xoay trong cánh tay tối đa ngón cái chúc xuống đất. Người khám ấn hai tay xuống, yêu cầu bệnh nhân kháng lực.",
+        "significance": "Đau chói hoặc yếu cơ rõ rệt không giữ được tay -> Dương tính tổn thương gân cơ trên gai (Supraspinatus).",
+        "sensitivity": "89%",
+        "specificity": "68%",
+        "diagnostic_role": "Sàng lọc tổn thương viêm hoặc rách gân cơ trên gai (Supraspinatus Tendon)",
+        "figures": [
+          {
+            "file": "assets/deepak_images/ch09_shoulder_pain/p423_img1.png",
+            "page": 423,
+            "fig_number": "9.3",
+            "caption_en": "Fig. 9.3: Normal mechanics during overhead activity",
+            "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Normal mechanics during overhead activity",
+            "category": "general_atlas",
+            "width": 994,
+            "height": 813
+          },
+          {
+            "file": "assets/deepak_images/ch09_shoulder_pain/p442_img1.jpeg",
+            "page": 442,
+            "fig_number": "9.10",
+            "caption_en": "Fig. 9.10: Location for rotator cuff pathology",
+            "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Location for rotator cuff pathology",
+            "category": "redflags_pathology",
+            "width": 1134,
+            "height": 754
+          }
+        ]
+      },
+      {
+        "name": "Dấu Hiệu Trễ Xoay Ngoài (External Rotation Lag Sign - Cơ Dưới Gai & Tròn Bé)",
+        "technique": "Bệnh nhân ngồi. Người khám nâng tay bệnh nhân gập khuỷu 90°, đưa vai ra sau và xoay ngoài thụ động gần tối đa (khoảng 80°), sau đó yêu cầu bệnh nhân giữ nguyên tư thế và buông tay ra.",
+        "significance": "Cẳng tay bệnh nhân bị rơi bật ngược vào trong -> Rách lớn hoặc đứt hoàn toàn gân cơ dưới gai (Infraspinatus) và cơ tròn bé (Sp: 98%).",
+        "sensitivity": "70%",
+        "specificity": "98% - 100%",
+        "diagnostic_role": "Đặc hiệu cực cao chẩn đoán rách lớn cơ dưới gai & tròn bé (+LR: 35.0)",
+        "figures": [
+          {
+            "file": "assets/deepak_images/ch09_shoulder_pain/p442_img1.jpeg",
+            "page": 442,
+            "fig_number": "9.10",
+            "caption_en": "Fig. 9.10: Location for rotator cuff pathology",
+            "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Location for rotator cuff pathology",
+            "category": "redflags_pathology",
+            "width": 1134,
+            "height": 754
+          },
+          {
+            "file": "assets/deepak_images/ch09_shoulder_pain/p460_img1.jpeg",
+            "page": 460,
+            "fig_number": "9.31A and B ",
+            "caption_en": "Figs 9.31A and B : External rotation lag sign",
+            "caption_vi": "Hình ảnh giải phẫu & lâm sàng: External rotation lag sign",
+            "category": "examination",
+            "width": 958,
+            "height": 728
+          }
+        ]
+      },
+      {
+        "name": "Nghiệm Pháp Gerber / Lift-off Test (Khám Cơ Dưới Vai - Subscapularis)",
+        "technique": "Bệnh nhân đưa tay ra sau lưng, mu bàn tay áp vào vùng thắt lưng. Yêu cầu bệnh nhân chủ động đẩy mu bàn tay tách rời ra xa khỏi lưng.",
+        "significance": "Bệnh nhân không thể nhấc tay ra khỏi lưng hoặc người khám ấn nhẹ bị sụp tay -> Rách gân cơ dưới vai (Subscapularis).",
+        "sensitivity": "70% - 80%",
+        "specificity": "98%",
+        "diagnostic_role": "Đặc hiệu rất cao chẩn đoán rách gân cơ dưới vai (Subscapularis Tendon)",
+        "figures": [
+          {
+            "file": "assets/deepak_images/ch09_shoulder_pain/p462_img1.jpeg",
+            "page": 462,
+            "fig_number": "9.33",
+            "caption_en": "Fig. 9.33: Positioning for Gerber lift off",
+            "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Positioning for Gerber lift off",
+            "category": "examination",
+            "width": 958,
+            "height": 626
+          },
+          {
+            "file": "assets/deepak_images/ch09_shoulder_pain/p462_img2.jpeg",
+            "page": 462,
+            "fig_number": "9.33",
+            "caption_en": "Fig. 9.33: Positioning for Gerber lift off",
+            "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Positioning for Gerber lift off",
+            "category": "examination",
+            "width": 958,
+            "height": 685
+          }
+        ]
+      },
+      {
+        "name": "Nghiệm Pháp Speed & Yergason (Khám Đầu Dài Gân Nhị Đầu)",
+        "technique": "Speed Test: Bệnh nhân duỗi thẳng khuỷu, ngửa cẳng tay, gập vai 90° kháng lực của người khám.\nYergason Test: Gập khuỷu 90°, áp sát cánh tay vào thân mình, bệnh nhân cố gắng ngửa cẳng tay và xoay ngoài vai kháng lại lực cản.",
+        "significance": "Đau chói khu trú tại rãnh gian củ (Bicipital groove) -> Viêm gân đầu dài cơ nhị đầu hoặc mất vững gân nhị đầu.",
+        "sensitivity": "63% (Speed) / 43% (Yergason)",
+        "specificity": "58% (Speed) / 85% (Yergason)",
+        "diagnostic_role": "Phối hợp đánh giá bệnh lý đầu dài gân cơ nhị đầu cánh tay (LHBT Tendinopathy)",
+        "figures": [
+          {
+            "file": "assets/deepak_images/ch09_shoulder_pain/p434_img1.jpeg",
+            "page": 434,
+            "fig_number": "9.4",
+            "caption_en": "Fig. 9.4: Bicipital tendinitis",
+            "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Bicipital tendinitis",
+            "category": "general_atlas",
+            "width": 1027,
+            "height": 754
+          },
+          {
+            "file": "assets/deepak_images/ch09_shoulder_pain/p454_img1.jpeg",
+            "page": 454,
+            "fig_number": "9.21",
+            "caption_en": "Fig. 9.21: Speeds test",
+            "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Speeds test",
+            "category": "examination",
+            "width": 958,
+            "height": 781
+          }
+        ]
+      },
+      {
+        "name": "Nghiệm Pháp O'Brien (Active Compression Test Khám Rách Sụn Viền SLAP)",
+        "technique": "Gập vai 90°, khép vào trong 10°, xoay trong cánh tay tối đa (ngón cái chỉ xuống sàn), ấn cánh tay xuống kháng lực (Vị trí 1). Lặp lại động tác với cẳng tay ngửa hoàn toàn (ngón cái chỉ lên trời - Vị trí 2).",
+        "significance": "Đau sâu trong khớp vai ở Vị trí 1 và GIẢM HOẶC HẾT ĐAU ở Vị trí 2 -> Tổn thương rách sụn viền trên ổ chảo từ trước ra sau (SLAP Tear).",
+        "sensitivity": "88% - 100%",
+        "specificity": "73% - 98%",
+        "diagnostic_role": "Độ chính xác cao chẩn đoán rách sụn viền ổ chảo từ trước ra sau (SLAP Tear)",
+        "figures": []
+      },
+      {
+        "name": "Nghiệm Pháp Cross-Body Adduction (Khám Khớp Cùng Đòn AC Joint)",
+        "technique": "Bệnh nhân nâng tay gập 90°, người khám kéo khép tối đa cánh tay ngang qua ngực về phía vai đối diện.",
+        "significance": "Tái hiện đau chói tại đỉnh khớp cùng đòn (Acromioclavicular Joint Arthrosis).",
+        "sensitivity": "77%",
+        "specificity": "79%",
+        "diagnostic_role": "Tái hiện đau khu trú tại đỉnh khớp cùng vai - đòn (AC Joint Arthrosis)",
+        "figures": []
+      }
+    ],
+    "differential_table": [
+      {
+        "condition": "Hội chứng xung đột dưới mỏm cùng (Subacromial Impingement - SAIS)",
+        "onset": "Từ từ sau các hoạt động đưa tay qua đầu thường xuyên",
+        "aggravating": "Giạng tay trong cung đau 60° - 120° (Painful Arc)",
+        "key_differentiator": "Neer (+), Hawkins (+), cơ lực còn tốt, tầm vận động thụ động PROM bình thường nhưng đau khi AROM chủ động",
+        "confirmatory_test": "Nghiệm pháp khám chuyên biệt vùng & Khám cơ lực đối kháng",
+        "gold_standard": "Siêu âm can thiệp cơ xương khớp / X-quang / MRI chuyên sâu"
+      },
+      {
+        "condition": "Rách chóp xoay hoàn toàn (Full-Thickness Rotator Cuff Tear)",
+        "onset": "Sau chấn thương ngã chống tay hoặc thoái hóa rách dần",
+        "aggravating": "Nâng cánh tay, nằm nghiêng đè lên vai",
+        "key_differentiator": "Yếu cơ rõ rệt khi thử cơ lực (Empty can +, Drop arm test +), Dấu hiệu trễ xoay ngoài (+), siêu âm/MRI thấy đứt liên tục sợi gân",
+        "confirmatory_test": "Nghiệm pháp Jobe, Lag sign, Lift-off test",
+        "gold_standard": "Siêu âm cơ xương khớp độ phân giải cao hoặc MRI khớp vai"
+      },
+      {
+        "condition": "Đông cứng khớp vai (Adhesive Capsulitis / Frozen Shoulder)",
+        "onset": "Âm ỉ, nữ 40-60 tuổi, tiền sử đái tháo đường/tuyến giáp",
+        "aggravating": "Tất cả các hướng cử động, đau nhiều về đêm giai đoạn đầu",
+        "key_differentiator": "MẤT TẦM VẬN ĐỘNG CẢ CHỦ ĐỘNG LẪN THỤ ĐỘNG THEO MÔ HÌNH BAO KHỚP: Xoay ngoài giảm nặng nhất > Giạng > Xoay trong (ER > ABD > IR)",
+        "confirmatory_test": "Nghiệm pháp khám chuyên biệt vùng & Khám cơ lực đối kháng",
+        "gold_standard": "Siêu âm can thiệp cơ xương khớp / X-quang / MRI chuyên sâu"
+      },
+      {
+        "condition": "Viêm thoái hóa khớp cùng đòn (AC Joint Arthropathy)",
+        "onset": "VĐV tập tạ ngực, người lao động nặng mang vác trên vai",
+        "aggravating": "Đưa tay chéo qua ngực, nằm đè nghiêng vai",
+        "key_differentiator": "Đau khu trú chính xác tại đỉnh mỏm cùng vai, ấn đau chói khớp AC, Cross-body adduction test (+), O'Brien đau nông ở mỏm cùng",
+        "confirmatory_test": "Nghiệm pháp khám chuyên biệt vùng & Khám cơ lực đối kháng",
+        "gold_standard": "Siêu âm can thiệp cơ xương khớp / X-quang / MRI chuyên sâu"
+      }
+    ],
+    "figures": [
+      {
+        "file": "assets/deepak_images/ch09_shoulder_pain/p418_img1.jpeg",
+        "page": 418,
+        "fig_number": "9.1",
+        "caption_en": "Fig. 9.1: Shoulder anterior view",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Shoulder anterior view",
+        "category": "general_atlas",
+        "width": 1290,
+        "height": 751
+      },
+      {
+        "file": "assets/deepak_images/ch09_shoulder_pain/p418_img2.jpeg",
+        "page": 418,
+        "fig_number": "9.1",
+        "caption_en": "Fig. 9.1: Shoulder anterior view",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Shoulder anterior view",
+        "category": "general_atlas",
+        "width": 934,
+        "height": 753
+      },
+      {
+        "file": "assets/deepak_images/ch09_shoulder_pain/p423_img1.png",
+        "page": 423,
+        "fig_number": "9.3",
+        "caption_en": "Fig. 9.3: Normal mechanics during overhead activity",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Normal mechanics during overhead activity",
+        "category": "general_atlas",
+        "width": 994,
+        "height": 813
+      },
+      {
+        "file": "assets/deepak_images/ch09_shoulder_pain/p434_img1.jpeg",
+        "page": 434,
+        "fig_number": "9.4",
+        "caption_en": "Fig. 9.4: Bicipital tendinitis",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Bicipital tendinitis",
+        "category": "general_atlas",
+        "width": 1027,
+        "height": 754
+      },
+      {
+        "file": "assets/deepak_images/ch09_shoulder_pain/p436_img1.jpeg",
+        "page": 436,
+        "fig_number": "9.5",
+        "caption_en": "Fig. 9.5: Coracobrachialis (arrow)",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Coracobrachialis (arrow)",
+        "category": "general_atlas",
+        "width": 543,
+        "height": 903
+      },
+      {
+        "file": "assets/deepak_images/ch09_shoulder_pain/p437_img1.jpeg",
+        "page": 437,
+        "fig_number": "9.6",
+        "caption_en": "Fig. 9.6: Subacromial bursa (arrow)",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Subacromial bursa (arrow)",
+        "category": "general_atlas",
+        "width": 735,
+        "height": 753
+      },
+      {
+        "file": "assets/deepak_images/ch09_shoulder_pain/p438_img1.jpeg",
+        "page": 438,
+        "fig_number": "9.7",
+        "caption_en": "Fig. 9.7: Scapular notch; spinoglenoid notch (posterior view)",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Scapular notch; spinoglenoid notch (posterior view)",
+        "category": "general_atlas",
+        "width": 842,
+        "height": 903
+      },
+      {
+        "file": "assets/deepak_images/ch09_shoulder_pain/p439_img1.jpeg",
+        "page": 439,
+        "fig_number": "9.8",
+        "caption_en": "Fig. 9.8: Quadrilateral space and triangular interval",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Quadrilateral space and triangular interval",
+        "category": "redflags_pathology",
+        "width": 994,
+        "height": 753
+      },
+      {
+        "file": "assets/deepak_images/ch09_shoulder_pain/p440_img1.jpeg",
+        "page": 440,
+        "fig_number": "9.9",
+        "caption_en": "Fig. 9.9: Sites of impingement: 1. Posterior-superior glenoid rim;",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Sites of impingement: 1. Posterior-superior glenoid rim;",
+        "category": "redflags_pathology",
+        "width": 637,
+        "height": 753
+      },
+      {
+        "file": "assets/deepak_images/ch09_shoulder_pain/p442_img1.jpeg",
+        "page": 442,
+        "fig_number": "9.10",
+        "caption_en": "Fig. 9.10: Location for rotator cuff pathology",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Location for rotator cuff pathology",
+        "category": "redflags_pathology",
+        "width": 1134,
+        "height": 754
+      },
+      {
+        "file": "assets/deepak_images/ch09_shoulder_pain/p443_img1.jpeg",
+        "page": 443,
+        "fig_number": "9.11",
+        "caption_en": "Fig. 9.11: Posterior-superior glenoid impingement",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Posterior-superior glenoid impingement",
+        "category": "redflags_pathology",
+        "width": 1000,
+        "height": 753
+      },
+      {
+        "file": "assets/deepak_images/ch09_shoulder_pain/p445_img1.jpeg",
+        "page": 445,
+        "fig_number": "9.12",
+        "caption_en": "Fig. 9.12: Labral tear sites",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Labral tear sites",
+        "category": "redflags_pathology",
+        "width": 1011,
+        "height": 722
+      },
+      {
+        "file": "assets/deepak_images/ch09_shoulder_pain/p447_img1.jpeg",
+        "page": 447,
+        "fig_number": "9.13",
+        "caption_en": "Fig. 9.13: Assessing an anterior humerus",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Assessing an anterior humerus",
+        "category": "examination",
+        "width": 958,
+        "height": 717
+      },
+      {
+        "file": "assets/deepak_images/ch09_shoulder_pain/p447_img2.jpeg",
+        "page": 447,
+        "fig_number": "9.13",
+        "caption_en": "Fig. 9.13: Assessing an anterior humerus",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Assessing an anterior humerus",
+        "category": "examination",
+        "width": 958,
+        "height": 723
+      },
+      {
+        "file": "assets/deepak_images/ch09_shoulder_pain/p448_img1.jpeg",
+        "page": 448,
+        "fig_number": "9.15",
+        "caption_en": "Fig. 9.15: Assessing a superior humerus",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Assessing a superior humerus",
+        "category": "examination",
+        "width": 958,
+        "height": 711
+      },
+      {
+        "file": "assets/deepak_images/ch09_shoulder_pain/p449_img1.jpeg",
+        "page": 449,
+        "fig_number": "9.16",
+        "caption_en": "Fig. 9.16: Assessing scapula downward rotation",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Assessing scapula downward rotation",
+        "category": "examination",
+        "width": 958,
+        "height": 718
+      },
+      {
+        "file": "assets/deepak_images/ch09_shoulder_pain/p450_img1.jpeg",
+        "page": 450,
+        "fig_number": "9.17",
+        "caption_en": "Fig. 9.17: Assessing protracted scapula",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Assessing protracted scapula",
+        "category": "examination",
+        "width": 958,
+        "height": 711
+      },
+      {
+        "file": "assets/deepak_images/ch09_shoulder_pain/p452_img1.jpeg",
+        "page": 452,
+        "fig_number": "9.18",
+        "caption_en": "Fig. 9.18: Assessing acromioclavicular mobility",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Assessing acromioclavicular mobility",
+        "category": "examination",
+        "width": 958,
+        "height": 706
+      },
+      {
+        "file": "assets/deepak_images/ch09_shoulder_pain/p453_img1.jpeg",
+        "page": 453,
+        "fig_number": "9.19",
+        "caption_en": "Fig. 9.19: Assessing sternoclavicular mobility",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Assessing sternoclavicular mobility",
+        "category": "examination",
+        "width": 958,
+        "height": 685
+      },
+      {
+        "file": "assets/deepak_images/ch09_shoulder_pain/p454_img1.jpeg",
+        "page": 454,
+        "fig_number": "9.21",
+        "caption_en": "Fig. 9.21: Speeds test",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Speeds test",
+        "category": "examination",
+        "width": 958,
+        "height": 781
+      },
+      {
+        "file": "assets/deepak_images/ch09_shoulder_pain/p454_img2.jpeg",
+        "page": 454,
+        "fig_number": "9.21",
+        "caption_en": "Fig. 9.21: Speeds test",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Speeds test",
+        "category": "examination",
+        "width": 958,
+        "height": 628
+      },
+      {
+        "file": "assets/deepak_images/ch09_shoulder_pain/p455_img1.jpeg",
+        "page": 455,
+        "fig_number": "9.22",
+        "caption_en": "Fig. 9.22: Yergason’s test",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Yergason’s test",
+        "category": "examination",
+        "width": 827,
+        "height": 798
+      },
+      {
+        "file": "assets/deepak_images/ch09_shoulder_pain/p455_img2.jpeg",
+        "page": 455,
+        "fig_number": "9.22",
+        "caption_en": "Fig. 9.22: Yergason’s test",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Yergason’s test",
+        "category": "examination",
+        "width": 958,
+        "height": 709
+      },
+      {
+        "file": "assets/deepak_images/ch09_shoulder_pain/p456_img1.jpeg",
+        "page": 456,
+        "fig_number": "9.24",
+        "caption_en": "Fig. 9.24: Neer impingement test",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Neer impingement test",
+        "category": "examination",
+        "width": 557,
+        "height": 798
+      },
+      {
+        "file": "assets/deepak_images/ch09_shoulder_pain/p457_img1.jpeg",
+        "page": 457,
+        "fig_number": "9.26",
+        "caption_en": "Fig. 9.26: Crank test modified in supine",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Crank test modified in supine",
+        "category": "examination",
+        "width": 958,
+        "height": 631
+      },
+      {
+        "file": "assets/deepak_images/ch09_shoulder_pain/p457_img2.jpeg",
+        "page": 457,
+        "fig_number": "9.26",
+        "caption_en": "Fig. 9.26: Crank test modified in supine",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Crank test modified in supine",
+        "category": "examination",
+        "width": 958,
+        "height": 614
+      },
+      {
+        "file": "assets/deepak_images/ch09_shoulder_pain/p457_img3.jpeg",
+        "page": 457,
+        "fig_number": "9.26",
+        "caption_en": "Fig. 9.26: Crank test modified in supine",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Crank test modified in supine",
+        "category": "examination",
+        "width": 958,
+        "height": 748
+      },
+      {
+        "file": "assets/deepak_images/ch09_shoulder_pain/p458_img1.jpeg",
+        "page": 458,
+        "fig_number": "9.28",
+        "caption_en": "Fig. 9.28: Active compression of O’Brien position two",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Active compression of O’Brien position two",
+        "category": "examination",
+        "width": 958,
+        "height": 651
+      },
+      {
+        "file": "assets/deepak_images/ch09_shoulder_pain/p458_img2.jpeg",
+        "page": 458,
+        "fig_number": "9.28",
+        "caption_en": "Fig. 9.28: Active compression of O’Brien position two",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Active compression of O’Brien position two",
+        "category": "examination",
+        "width": 958,
+        "height": 625
+      },
+      {
+        "file": "assets/deepak_images/ch09_shoulder_pain/p459_img1.jpeg",
+        "page": 459,
+        "fig_number": "9.30",
+        "caption_en": "Fig. 9.30: Sulcus sign",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Sulcus sign",
+        "category": "examination",
+        "width": 958,
+        "height": 646
+      },
+      {
+        "file": "assets/deepak_images/ch09_shoulder_pain/p460_img1.jpeg",
+        "page": 460,
+        "fig_number": "9.31A and B ",
+        "caption_en": "Figs 9.31A and B : External rotation lag sign",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: External rotation lag sign",
+        "category": "examination",
+        "width": 958,
+        "height": 728
+      },
+      {
+        "file": "assets/deepak_images/ch09_shoulder_pain/p460_img2.jpeg",
+        "page": 460,
+        "fig_number": "9.31A and B ",
+        "caption_en": "Figs 9.31A and B : External rotation lag sign",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: External rotation lag sign",
+        "category": "examination",
+        "width": 958,
+        "height": 719
+      },
+      {
+        "file": "assets/deepak_images/ch09_shoulder_pain/p461_img1.jpeg",
+        "page": 461,
+        "fig_number": "9.32A and B",
+        "caption_en": "Figs 9.32A and B: Internal rotation lag sign",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Internal rotation lag sign",
+        "category": "examination",
+        "width": 958,
+        "height": 733
+      },
+      {
+        "file": "assets/deepak_images/ch09_shoulder_pain/p461_img2.jpeg",
+        "page": 461,
+        "fig_number": "9.32A and B",
+        "caption_en": "Figs 9.32A and B: Internal rotation lag sign",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Internal rotation lag sign",
+        "category": "examination",
+        "width": 958,
+        "height": 716
+      },
+      {
+        "file": "assets/deepak_images/ch09_shoulder_pain/p462_img1.jpeg",
+        "page": 462,
+        "fig_number": "9.33",
+        "caption_en": "Fig. 9.33: Positioning for Gerber lift off",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Positioning for Gerber lift off",
+        "category": "examination",
+        "width": 958,
+        "height": 626
+      },
+      {
+        "file": "assets/deepak_images/ch09_shoulder_pain/p462_img2.jpeg",
+        "page": 462,
+        "fig_number": "9.33",
+        "caption_en": "Fig. 9.33: Positioning for Gerber lift off",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Positioning for Gerber lift off",
+        "category": "examination",
+        "width": 958,
+        "height": 685
+      },
+      {
+        "file": "assets/deepak_images/ch09_shoulder_pain/p463_img1.jpeg",
+        "page": 463,
+        "fig_number": "9.35",
+        "caption_en": "Fig. 9.35: Hawkins-Kennedy test",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Hawkins-Kennedy test",
+        "category": "examination",
+        "width": 958,
+        "height": 588
+      },
+      {
+        "file": "assets/deepak_images/ch09_shoulder_pain/p463_img2.jpeg",
+        "page": 463,
+        "fig_number": "9.35",
+        "caption_en": "Fig. 9.35: Hawkins-Kennedy test",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Hawkins-Kennedy test",
+        "category": "examination",
+        "width": 958,
+        "height": 597
+      },
+      {
+        "file": "assets/deepak_images/ch09_shoulder_pain/p463_img3.jpeg",
+        "page": 463,
+        "fig_number": "9.35",
+        "caption_en": "Fig. 9.35: Hawkins-Kennedy test",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Hawkins-Kennedy test",
+        "category": "examination",
+        "width": 958,
+        "height": 717
+      },
+      {
+        "file": "assets/deepak_images/ch09_shoulder_pain/p464_img1.jpeg",
+        "page": 464,
+        "fig_number": "9.38",
+        "caption_en": "Fig. 9.38: Internal rotation resisted strength test (external impingement)",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Internal rotation resisted strength test (external impingement)",
+        "category": "examination",
+        "width": 958,
+        "height": 795
+      },
+      {
+        "file": "assets/deepak_images/ch09_shoulder_pain/p464_img2.jpeg",
+        "page": 464,
+        "fig_number": "9.38",
+        "caption_en": "Fig. 9.38: Internal rotation resisted strength test (external impingement)",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Internal rotation resisted strength test (external impingement)",
+        "category": "examination",
+        "width": 904,
+        "height": 677
+      }
+    ],
+    "stage_2_somatic_dysfunctions": [
+      "Rối loạn nhịp vận động bả vai - cánh tay (Scapulohumeral Rhythm Dysynergia): Xương bả vai không xoay lên trên đủ 1:2 so với cánh tay khi giạng.",
+      "Co rút bao khớp sau khớp vai (Posterior Capsule Tightness): Đẩy chỏm xương cánh tay trượt ra trước và lên trên khi nâng tay, gây xung đột dưới mỏm cùng.",
+      "Xung đột cơ học khoang dưới mỏm cùng (Subacromial Impingement - Neer stage I-III): Hẹp khoang dưới mỏm cùng chèn ép gân trên gai và bao hoạt dịch SASD."
+    ],
+    "stage_3_guidemap_intervention": "Kỹ thuật giải phóng bao khớp sau và tập phục hồi vận động xương bả vai (Scapular stabilization); Tiêm khoang dưới mỏm cùng hoặc Tiêm nội khớp vai nong bao khớp dưới hướng dẫn siêu âm (Xem Web 1: Tiêm Khoang Dưới Mỏm Cùng, Tiêm Bao Gân Nhị Đầu, Tiêm Khớp Cùng Đòn).",
+    "recommended_web1_procedures": [
+      {
+        "id": "sasd-bursa",
+        "nameVi": "Tiêm bao hoạt dịch dưới mỏm cùng - dưới cơ delta (SASD Bursa)",
+        "role": "Hội chứng xung đột dưới mỏm cùng (SAIS), viêm bao hoạt dịch dưới cơ delta"
+      },
+      {
+        "id": "glenohumeral-posterior",
+        "nameVi": "Tiêm khớp ổ chảo cánh tay lối sau (Posterior Glenohumeral)",
+        "role": "Đông cứng khớp vai (Frozen Shoulder), thoái hóa khớp ổ chảo cánh tay"
+      },
+      {
+        "id": "glenohumeral-anterior",
+        "nameVi": "Tiêm khớp ổ chảo cánh tay tiếp cận lối trước",
+        "role": "Tiếp cận thay thế khi bệnh nhân hạn chế xoay trong hoặc tổn thương bao khớp sau"
+      },
+      {
+        "id": "biceps-tendon",
+        "nameVi": "Tiêm bao gân đầu dài cơ nhị đầu cánh tay (LHBT Injection)",
+        "role": "Viêm bao gân nhị đầu trong rãnh gian củ xương cánh tay"
+      },
+      {
+        "id": "ac-joint",
+        "nameVi": "Tiêm khớp cùng vai - đòn (Acromioclavicular Joint Injection)",
+        "role": "Thoái hóa khớp cùng đòn, viêm khớp cùng đòn sau chấn thương va đập"
+      },
+      {
+        "id": "suprascapular-nerve",
+        "nameVi": "Phong bế thần kinh trên vai (Suprascapular Nerve Block)",
+        "role": "Giảm đau toàn diện khớp vai trong rách chóp xoay không thể mổ, đông cứng khớp vai"
+      },
+      {
+        "id": "calcific-tendinitis-barbotage",
+        "nameVi": "Can thiệp vôi hóa gân chóp xoay - Chọc hút & rửa vôi (Barbotage)",
+        "role": "Viêm gân vôi hóa cấp tính cơ trên gai/dưới gai gây đau vai dữ dội"
+      },
+      {
+        "id": "prp-platelet-rich-plasma",
+        "nameVi": "Liệu pháp Huyết tương giàu tiểu cầu (PRP) cơ xương khớp",
+        "role": "Rách bán phần gân chóp xoay, thoái hóa gân mạn tính không đáp ứng corticoid"
+      }
+    ]
+  },
+  {
+    "id": "thoracic-pain",
     "chapter": 5,
-    "region": "spine",
-    "region_vi": "Cột Sống Ngực & Thành Ngực",
-    "title": "Thoracic Pain Differential Screening",
-    "title_vi": "Sàng Lọc Chẩn Đoán Phân Biệt Đau Cột Sống Ngực & Thành Ngực",
-    "author": "GS. Deepak Sebastian (Chapter 5, pp. 173-202)",
-    "summary": "Vùng ngực là ngã tư chuyển đau phức tạp nhất trong cơ thể, nơi các bệnh lý nội tạng đe dọa tính mạng (bóc tách phình động mạch chủ ngực, nhồi máu cơ tim, thuyên tắc phổi, ung thư tụy, viêm túi mật) thường xuyên giả mạo đau cơ xương khớp. Hướng dẫn chi tiết quy trình sàng lọc cờ đỏ lồng ngực, phân biệt hội chứng T4, đau dây thần kinh liên sườn, viêm khớp ức sườn/sụn sườn (Tietze), hội chứng kẹp khoang liên sườn trước (AICS do chính GS. Deepak Sebastian phát hiện) và các rối loạn vận động lồng ngực quai thùng/đòn bẩy.",
+    "region": "thoracic",
+    "region_vi": "Ngực & Cột Sống Ngực",
+    "icon": "🛡️",
+    "title": "Thoracic Spine, Costovertebral & Chest Wall Pain",
+    "title_vi": "🛡️ Đau Ngực, Cột Sống Ngực & Cờ Đỏ Tim Mạch - Phổi",
+    "chief_complaint": "Phàn nàn chính: Đau nhói ngực khi hít sâu, đau tức thành ngực dọc theo cung liên sườn, đau lưng vùng giữa hai xương bả vai, đau tăng khi xoay vặn thân mình hoặc ho hắt hơi.",
+    "author": "GS. Deepak Sebastian (Chương 5, pp. 188-217)",
+    "summary": "Chẩn đoán phân biệt đau cột sống ngực và thành ngực: Rối loạn diện khớp sườn - sống và sườn - ngang, viêm sụn sườn (Hội chứng Tietze / Costochondritis), gãy xẹp đốt sống do loãng xương ở người cao tuổi, đau thần kinh liên sườn sau Zona. CỜ ĐỎ CẤP CỨU HÀNG ĐẦU: Bóc tách động mạch chủ ngực (đau xé rách ngực lưng), hội chứng vành cấp / nhồi máu cơ tim, thuyên tắc phổi (PE), tràn khí màng phổi tự phát, loét thủng dạ dày - tá tràng, viêm tụy cấp.",
     "stage_1_systemic_red_flags": [
       {
         "category": "Cờ Đỏ Bóc Tách Động Mạch Chủ Ngực (Thoracic Aortic Dissection)",
@@ -1717,34 +1911,40 @@ const STABLE_SCREENING_FALLBACK = [
       {
         "category": "Bóc Tách Động Mạch Chủ & Nhồi Máu Cơ Tim Ngực",
         "signs": "Đau xé rách xuyên lưng giữa hai bả vai, khó thở, vã mồ hôi, chênh lệch huyết áp hai tay.",
-        "action": "Cấp cứu Tim mạch - CTA ngực ngay."
+        "action": "Cấp cứu Tim mạch - CTA ngực ngay.",
+        "figures": []
       },
       {
         "category": "Nhiễm Trùng Đĩa Đệm Đốt Sống Ngực (Thoracic Spondylodiscitis / TB Spine)",
         "signs": "Sốt nhẹ về chiều, đổ mồ hôi trộm, đau lưng dữ dội, gù nhọn cột sống ngực (Lao cột sống Pott).",
-        "action": "Chụp MRI ngực, xét nghiệm máu lắng ESR, QuantiFERON-TB."
+        "action": "Chụp MRI ngực, xét nghiệm máu lắng ESR, QuantiFERON-TB.",
+        "figures": []
       }
     ],
     "visceral_referrals": [
       {
         "source": "Bệnh Lý Túi Mật & Đường Mật (Cholecystitis & Cholelithiasis)",
         "pattern": "Đau quy chiếu lên góc dưới xương bả vai phải và vùng gian bả vai phải (do các nhánh thần kinh cảm giác T8-T9). Đau tăng sau bữa ăn nhiều dầu mỡ, dấu hiệu Murphy (+).",
-        "differential": "Siêu âm ổ bụng tổng quát gan mật là chỉ định bắt buộc trước khi điều trị thoái hóa cột sống ngực bên phải."
+        "differential": "Siêu âm ổ bụng tổng quát gan mật là chỉ định bắt buộc trước khi điều trị thoái hóa cột sống ngực bên phải.",
+        "figures": []
       },
       {
         "source": "Bệnh Lý Tụy (Ung Thư Tụy & Viêm Tụy Cấp / Mạn)",
         "pattern": "Đau vùng thượng vị đâm xuyên thẳng ra sau lưng vùng khoang liên sườn T7-T9. Đặc điểm kinh điển: Đau tăng dữ dội khi nằm ngửa, giảm bớt khi ngồi cúi gập người ôm bụng.",
-        "differential": "Xét nghiệm Amylase, Lipase máu; Chụp CT bụng có cản quang đánh giá nhu mô tụy."
+        "differential": "Xét nghiệm Amylase, Lipase máu; Chụp CT bụng có cản quang đánh giá nhu mô tụy.",
+        "figures": []
       },
       {
         "source": "Bệnh Lý Thận & Niệu Quản (Renal & Ureteral Calculi)",
         "pattern": "Cơn đau quặn thận khởi phát từ góc sườn - sống (Costovertebral angle T10-L1) lan vòng ra trước bụng xuống vùng bẹn bìu, kèm đái máu.",
-        "differential": "Rung thận (+), siêu âm hệ tiết niệu, tổng phân tích nước tiểu tìm hồng cầu vi thể."
+        "differential": "Rung thận (+), siêu âm hệ tiết niệu, tổng phân tích nước tiểu tìm hồng cầu vi thể.",
+        "figures": []
       },
       {
         "source": "Bệnh Lý Dạ Dày & Thực Quản (Peptic Ulcer & GERD)",
         "pattern": "Đau nóng rát sau xương ức và giữa hai bả vai T5-T6, liên quan chu kỳ bữa ăn (đói đau trong loét tá tràng, no đau trong loét dạ dày).",
-        "differential": "Nội soi thực quản dạ dày tá tràng."
+        "differential": "Nội soi thực quản dạ dày tá tràng.",
+        "figures": []
       }
     ],
     "drug_induced": [
@@ -1758,7 +1958,29 @@ const STABLE_SCREENING_FALLBACK = [
         "significance": "Tái hiện đau lan dọc thân mình hoặc khoang liên sườn ngực, giảm khi ngửa nhẹ cổ (chẩn đoán thoát vị đĩa đệm ngực hoặc chèn ép thần kinh rễ ngực).",
         "sensitivity": "84%",
         "specificity": "83%",
-        "diagnostic_role": "Phân biệt đau thành ngực cơ học với đau kích thích màng tủy / rễ thần kinh gian sườn"
+        "diagnostic_role": "Phân biệt đau thành ngực cơ học với đau kích thích màng tủy / rễ thần kinh gian sườn",
+        "figures": [
+          {
+            "file": "assets/deepak_images/ch05_thoracic_pain/p188_img1.png",
+            "page": 188,
+            "fig_number": "5.1",
+            "caption_en": "Fig. 5.1: Typical thoracic vertebra",
+            "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Typical thoracic vertebra",
+            "category": "general_atlas",
+            "width": 1169,
+            "height": 602
+          },
+          {
+            "file": "assets/deepak_images/ch05_thoracic_pain/p209_img1.jpeg",
+            "page": 209,
+            "fig_number": "5.2",
+            "caption_en": "Fig. 5.2: Clinical representation of the T2 spinal nerve",
+            "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Clinical representation of the T2 spinal nerve",
+            "category": "anatomy_visceral",
+            "width": 939,
+            "height": 766
+          }
+        ]
       },
       {
         "name": "Khám Hạn Chế Đóng/Mở Diện Khớp Ngực (Thoracic Opening/Closing ERS/FRS T1-T12)",
@@ -1766,7 +1988,29 @@ const STABLE_SCREENING_FALLBACK = [
         "significance": "Phát hiện đốt sống bị kẹt mở (ERS: không gập/mở được mấu khớp) hoặc kẹt đóng (FRS: không ngửa/đóng được mấu khớp).",
         "sensitivity": "78%",
         "specificity": "81%",
-        "diagnostic_role": "Xác định chính xác vị trí phân đoạn đốt sống ngực bị khóa diện khớp cơ học theo Deepak"
+        "diagnostic_role": "Xác định chính xác vị trí phân đoạn đốt sống ngực bị khóa diện khớp cơ học theo Deepak",
+        "figures": [
+          {
+            "file": "assets/deepak_images/ch05_thoracic_pain/p211_img1.jpeg",
+            "page": 211,
+            "fig_number": "5.3",
+            "caption_en": "Fig. 5.3: Assessing opening restriction in the upper thoracic spine",
+            "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Assessing opening restriction in the upper thoracic spine",
+            "category": "examination",
+            "width": 1080,
+            "height": 810
+          },
+          {
+            "file": "assets/deepak_images/ch05_thoracic_pain/p212_img1.jpeg",
+            "page": 212,
+            "fig_number": "5.5",
+            "caption_en": "Fig. 5.5: Assessing opening restriction in the lower thoracic region",
+            "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Assessing opening restriction in the lower thoracic region",
+            "category": "examination",
+            "width": 1080,
+            "height": 810
+          }
+        ]
       },
       {
         "name": "Nghiệm Pháp Nhún Khớp Sườn - Sống & Sườn - Ngang (Costovertebral Joint Springing)",
@@ -1774,7 +2018,29 @@ const STABLE_SCREENING_FALLBACK = [
         "significance": "Tái hiện chính xác cơn đau ngực cơ học do viêm thoái hóa khớp sườn sống hoặc trượt khớp sườn ngang.",
         "sensitivity": "82%",
         "specificity": "85%",
-        "diagnostic_role": "Tái hiện đau khu trú tại diện khớp sườn sống, phân biệt với đau thắt ngực tim mạch hoặc viêm phổi màng phổi"
+        "diagnostic_role": "Tái hiện đau khu trú tại diện khớp sườn sống, phân biệt với đau thắt ngực tim mạch hoặc viêm phổi màng phổi",
+        "figures": [
+          {
+            "file": "assets/deepak_images/ch05_thoracic_pain/p215_img1.jpeg",
+            "page": 215,
+            "fig_number": "5.7A and B",
+            "caption_en": "Figs 5.7A and B: Posterior rib dysfunction right",
+            "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Posterior rib dysfunction right",
+            "category": "general_atlas",
+            "width": 1080,
+            "height": 720
+          },
+          {
+            "file": "assets/deepak_images/ch05_thoracic_pain/p215_img2.jpeg",
+            "page": 215,
+            "fig_number": "5.7A and B",
+            "caption_en": "Figs 5.7A and B: Posterior rib dysfunction right",
+            "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Posterior rib dysfunction right",
+            "category": "general_atlas",
+            "width": 1080,
+            "height": 720
+          }
+        ]
       },
       {
         "name": "Nghiệm Pháp Lindgren Đánh Giá Xương Sườn 1 Nhô Cao (Elevated First Rib Test)",
@@ -1782,7 +2048,29 @@ const STABLE_SCREENING_FALLBACK = [
         "significance": "Hạn chế biên độ gập cằm so với bên đối diện gợi ý xương sườn 1 bên đó bị kéo nhô cao do co thắt cơ bậc thang (nguyên nhân gây hội chứng lối thoát ngực và đau cổ ngực).",
         "sensitivity": "80%",
         "specificity": "84%",
-        "diagnostic_role": "Đánh giá xương sườn 1 nhô cao gây chèn ép bó mạch thần kinh cánh tay tại tam giác cơ bậc thang"
+        "diagnostic_role": "Đánh giá xương sườn 1 nhô cao gây chèn ép bó mạch thần kinh cánh tay tại tam giác cơ bậc thang",
+        "figures": [
+          {
+            "file": "assets/deepak_images/ch05_thoracic_pain/p215_img1.jpeg",
+            "page": 215,
+            "fig_number": "5.7A and B",
+            "caption_en": "Figs 5.7A and B: Posterior rib dysfunction right",
+            "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Posterior rib dysfunction right",
+            "category": "general_atlas",
+            "width": 1080,
+            "height": 720
+          },
+          {
+            "file": "assets/deepak_images/ch05_thoracic_pain/p215_img2.jpeg",
+            "page": 215,
+            "fig_number": "5.7A and B",
+            "caption_en": "Figs 5.7A and B: Posterior rib dysfunction right",
+            "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Posterior rib dysfunction right",
+            "category": "general_atlas",
+            "width": 1080,
+            "height": 720
+          }
+        ]
       }
     ],
     "differential_table": [
@@ -1819,143 +2107,94 @@ const STABLE_SCREENING_FALLBACK = [
         "gold_standard": "Siêu âm can thiệp cơ xương khớp / X-quang / MRI chuyên sâu"
       }
     ],
-    "stage_2_somatic_dysfunctions": [
-      "Rối loạn chức năng xương sườn thì hít vào (Inhalation Somatic Dysfunction): Khung sườn bị kẹt ở vị trí hít vào tối đa, không xẹp xuống được khi thở ra.",
-      "Rối loạn chức năng xương sườn thì thở ra (Exhalation Somatic Dysfunction): Khung sườn bị kẹt ở vị trí thở ra, không nâng lên được khi hít vào.",
-      "Trượt mỏm ngang đốt sống ngực (Thoracic Rotational Malalignment): Đốt sống ngực xoay cố định sang một bên gây nhô mỏm ngang cạnh sống."
-    ],
-    "stage_3_guidemap_intervention": "Kỹ thuật kéo giãn mở khoang liên sườn kết hợp tập mạnh cơ răng trước; Phong bế dây thần kinh liên sườn hoặc phong bế mặt phẳng cơ dựng gai (ESP Block) dưới hướng dẫn siêu âm (Xem Web 1: Quy trình ESP Block & Intercostal Nerve Block).",
     "figures": [
       {
-        "chapter": 5,
-        "chapter_name": "thoracic_pain",
-        "page": 188,
         "file": "assets/deepak_images/ch05_thoracic_pain/p188_img1.png",
+        "page": 188,
+        "fig_number": "5.1",
+        "caption_en": "Fig. 5.1: Typical thoracic vertebra",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Typical thoracic vertebra",
+        "category": "general_atlas",
         "width": 1169,
-        "height": 602,
-        "size_bytes": 123207,
-        "page_captions": [
-          "Fig. 5.1). These facets articulate ",
-          "Fig. 5.1:  Typical thoracic vertebra"
-        ],
-        "captions": [
-          "Fig. 5.1). These facets articulate with the head rib. Laterally, on the transverse processes, are two facets on either",
-          "Fig. 5.1: Typical thoracic vertebra"
-        ]
+        "height": 602
       },
       {
-        "chapter": 5,
-        "chapter_name": "thoracic_pain",
-        "page": 209,
         "file": "assets/deepak_images/ch05_thoracic_pain/p209_img1.jpeg",
+        "page": 209,
+        "fig_number": "5.2",
+        "caption_en": "Fig. 5.2: Clinical representation of the T2 spinal nerve",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Clinical representation of the T2 spinal nerve",
+        "category": "anatomy_visceral",
         "width": 939,
-        "height": 766,
-        "size_bytes": 137638,
-        "page_captions": [
-          "Fig. 5.2:  Clinical representation of the T2 spinal nerve"
-        ],
-        "captions": [
-          "Fig. 5.2: Clinical representation of the T2 spinal nerve"
-        ]
+        "height": 766
       },
       {
-        "chapter": 5,
-        "chapter_name": "thoracic_pain",
-        "page": 211,
         "file": "assets/deepak_images/ch05_thoracic_pain/p211_img1.jpeg",
+        "page": 211,
+        "fig_number": "5.3",
+        "caption_en": "Fig. 5.3: Assessing opening restriction in the upper thoracic spine",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Assessing opening restriction in the upper thoracic spine",
+        "category": "examination",
         "width": 1080,
-        "height": 810,
-        "size_bytes": 67568,
-        "page_captions": [
-          "Fig. 5.3:  Assessing opening restriction in the upper thoracic spine",
-          "Fig. 5.4)",
-          "Fig. 5.5)"
-        ],
-        "captions": [
-          "Fig. 5.3: Assessing opening restriction in the upper thoracic spine Flexed, Rotated and Sidebent (FRS)/Closing Restriction",
-          "Fig. 5.4). Extended, Rotated and Sidebent (ERS) (Mid and Lower Thoracic Spine) T6 to T12",
-          "Fig. 5.5). Flexed, Rotated and Sidebent (FRS) (Mid and Lower Thoracic Spine) T6 to T12",
-          "Fig. 5.6). Now the patient is in an extended position."
-        ]
+        "height": 810
       },
       {
-        "chapter": 5,
-        "chapter_name": "thoracic_pain",
-        "page": 212,
         "file": "assets/deepak_images/ch05_thoracic_pain/p212_img1.jpeg",
-        "width": 1080,
-        "height": 810,
-        "size_bytes": 86618,
-        "page_captions": [
-          "Fig. 5.5:  Assessing opening restriction in the lower thoracic region",
-          "Fig. 5.4:  Assessing closing restriction in the upper thoracic spine"
-        ],
-        "captions": [
-          "Fig. 5.5: Assessing opening restriction in the lower thoracic region Fig. 5.4: Assessing closing restriction in the upper thoracic spine"
-        ]
-      },
-      {
-        "chapter": 5,
-        "chapter_name": "thoracic_pain",
         "page": 212,
+        "fig_number": "5.5",
+        "caption_en": "Fig. 5.5: Assessing opening restriction in the lower thoracic region",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Assessing opening restriction in the lower thoracic region",
+        "category": "examination",
+        "width": 1080,
+        "height": 810
+      },
+      {
         "file": "assets/deepak_images/ch05_thoracic_pain/p212_img2.jpeg",
+        "page": 212,
+        "fig_number": "5.5",
+        "caption_en": "Fig. 5.5: Assessing opening restriction in the lower thoracic region",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Assessing opening restriction in the lower thoracic region",
+        "category": "examination",
         "width": 1080,
-        "height": 810,
-        "size_bytes": 82859,
-        "page_captions": [
-          "Fig. 5.5:  Assessing opening restriction in the lower thoracic region",
-          "Fig. 5.4:  Assessing closing restriction in the upper thoracic spine"
-        ],
-        "captions": [
-          "Fig. 5.5: Assessing opening restriction in the lower thoracic region Fig. 5.4: Assessing closing restriction in the upper thoracic spine"
-        ]
+        "height": 810
       },
       {
-        "chapter": 5,
-        "chapter_name": "thoracic_pain",
-        "page": 213,
         "file": "assets/deepak_images/ch05_thoracic_pain/p213_img1.jpeg",
+        "page": 213,
+        "fig_number": "5.6",
+        "caption_en": "Fig. 5.6: Assessing closing restriction in the lower thoracic region",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Assessing closing restriction in the lower thoracic region",
+        "category": "examination",
         "width": 1080,
-        "height": 810,
-        "size_bytes": 109664,
-        "page_captions": [
-          "Fig. 5.6:  Assessing closing restriction in the lower thoracic region"
-        ],
-        "captions": [
-          "Fig. 5.6: Assessing closing restriction in the lower thoracic region"
-        ]
+        "height": 810
       },
       {
-        "chapter": 5,
-        "chapter_name": "thoracic_pain",
-        "page": 215,
         "file": "assets/deepak_images/ch05_thoracic_pain/p215_img1.jpeg",
+        "page": 215,
+        "fig_number": "5.7A and B",
+        "caption_en": "Figs 5.7A and B: Posterior rib dysfunction right",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Posterior rib dysfunction right",
+        "category": "general_atlas",
         "width": 1080,
-        "height": 720,
-        "size_bytes": 130745,
-        "page_captions": [
-          "Figs 5.7A and B:  Posterior rib dysfunction right"
-        ],
-        "captions": [
-          "Figs 5.7A and B: Posterior rib dysfunction right A"
-        ]
+        "height": 720
       },
       {
-        "chapter": 5,
-        "chapter_name": "thoracic_pain",
-        "page": 215,
         "file": "assets/deepak_images/ch05_thoracic_pain/p215_img2.jpeg",
+        "page": 215,
+        "fig_number": "5.7A and B",
+        "caption_en": "Figs 5.7A and B: Posterior rib dysfunction right",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Posterior rib dysfunction right",
+        "category": "general_atlas",
         "width": 1080,
-        "height": 720,
-        "size_bytes": 105078,
-        "page_captions": [
-          "Figs 5.7A and B:  Posterior rib dysfunction right"
-        ],
-        "captions": [
-          "Figs 5.7A and B: Posterior rib dysfunction right A"
-        ]
+        "height": 720
       }
     ],
+    "stage_2_somatic_dysfunctions": [
+      "Hạn chế mở / đóng diện khớp sườn - sống (Costovertebral joint restriction): Khóa khớp sườn sống gây đau buốt thành ngực mỗi nhịp thở sâu.",
+      "Rối loạn chuyển động xương sườn khi hít vào / thở ra (Inhalation / Exhalation Rib dysfunction): Xương sườn kẹt ở thì hít vào hoặc thì thở ra.",
+      "Khóa diện khớp liên đốt ngực T1-T12 (Thoracic Facet Locking): Hạn chế xoay thân mình sang bên tổn thương."
+    ],
+    "stage_3_guidemap_intervention": "Kỹ thuật kéo giãn mở khoang liên sườn kết hợp tập mạnh cơ răng trước; Phong bế dây thần kinh liên sườn hoặc phong bế mặt phẳng cơ dựng gai (ESP Block) dưới hướng dẫn siêu âm (Xem Web 1: Quy trình ESP Block & Intercostal Nerve Block).",
     "recommended_web1_procedures": [
       {
         "id": "esp-block",
@@ -1970,14 +2209,16 @@ const STABLE_SCREENING_FALLBACK = [
     ]
   },
   {
-    "id": "ch06-lumbopelvic",
+    "id": "lumbopelvic-pain",
     "chapter": 6,
-    "region": "spine",
-    "region_vi": "Thắt Lưng - Khung Chậu",
-    "title": "Lumbopelvic Pain Differential Screening",
-    "title_vi": "Sàng Lọc Chẩn Đoán Phân Biệt Đau Thắt Lưng - Khung Chậu",
-    "author": "GS. Deepak Sebastian (Chapter 6, pp. 203-285)",
-    "summary": "Chuyên đề đồ sộ nhất với 83 trang textbook: Sàng lọc cấp cứu hội chứng chùm đuôi ngựa (Cauda Equina Syndrome), phình vỡ động mạch chủ bụng (AAA), viêm đĩa đệm đốt sống, ung thư di căn và các rối loạn cơ xương khớp vùng thắt lưng chậu. Điểm nhấn đột phá là hệ thống chẩn đoán rối loạn chức năng cơ học khung chậu chuyên sâu của GS. Deepak Sebastian: Phân định chi tiết sai lệch xoay xương chậu (Anterior/Posterior Innominate, Innominate Upslip) và xoay xương cùng (Sacral Torsions: Left-on-Left, Left-on-Right, Right-on-Right, Right-on-Left). Kèm 40 hình ảnh Atlas nguyên bản.",
+    "region": "lumbopelvic",
+    "region_vi": "Thắt Lưng - Chậu",
+    "icon": "🦴",
+    "title": "Low Back, Lumbopelvic, Sacroiliac & Sciatic Pain",
+    "title_vi": "🦴 Đau Lưng, Thắt Lưng - Chậu & Thần Kinh Tọa",
+    "chief_complaint": "Phàn nàn chính: Đau thắt lưng cấp/mạn, đau lưng lan xuống mông và mặt sau đùi cẳng chân bàn chân (đau thần kinh tọa), đau khớp cùng chậu khi đứng lâu, đau cách hồi rễ thần kinh khi đi bộ phải ngồi xổm để đỡ đau.",
+    "author": "GS. Deepak Sebastian (Chương 6, pp. 218-300)",
+    "summary": "Sàng lọc phân biệt đau vùng thắt lưng - chậu: Phân định chính xác 4 nhóm nguyên nhân cơ học thường gặp nhất: Thoát vị đĩa đệm (Disc Herniation), Thoái hóa diện khớp thắt lưng (Facet Syndrome), Viêm/rối loạn chức năng khớp cùng chậu (SIJ Dysfunction) và Hẹp ống sống thắt lưng (Lumbar Spinal Stenosis). Rà soát khẩn cấp Cờ đỏ Hội chứng chùm đuôi ngựa (Cauda Equina Syndrome), Phình bóc tách động mạch chủ bụng (AAA), Áp xe ngoài màng cứng cột sống, Ung thư di căn xương.",
     "stage_1_systemic_red_flags": [
       {
         "category": "Cờ Đỏ Hội Chứng Chùm Đuôi Ngựa (Cauda Equina Syndrome - CES)",
@@ -2004,34 +2245,40 @@ const STABLE_SCREENING_FALLBACK = [
       {
         "category": "Chùm Đuôi Ngựa & Phình Động Mạch Chủ Bụng",
         "signs": "Tê yên ngựa, mất kiểm soát bàng quang / ruột, khối u đập nảy bụng.",
-        "action": "Cấp cứu Ngoại thần kinh / Phẫu thuật mạch máu ngay."
+        "action": "Cấp cứu Ngoại thần kinh / Phẫu thuật mạch máu ngay.",
+        "figures": []
       },
       {
         "category": "Gãy Xẹp Đốt Sống Do Loãng Xương (Osteoporotic Vertebral Fracture)",
         "signs": "Đau nhói thắt lưng đột ngột sau ho rặn, cúi người hoặc chấn thương ngã dập mông ở người cao tuổi dùng corticoid.",
-        "action": "X-quang, MRI đánh giá phù tủy xương đốt sống, cân nhắc tạo hình đốt sống bằng bơm xi măng (Vertebroplasty)."
+        "action": "X-quang, MRI đánh giá phù tủy xương đốt sống, cân nhắc tạo hình đốt sống bằng bơm xi măng (Vertebroplasty).",
+        "figures": []
       }
     ],
     "visceral_referrals": [
       {
         "source": "Sỏi Thận & Sỏi Niệu Quản (Nephrolithiasis)",
         "pattern": "Cơn đau quặn thận khởi phát từ góc sườn cột sống L1-L2 lan ra trước bụng xuống hố chậu và bẹn bìu/môi lớn, đau từng cơn dữ dội làm bệnh nhân lăn lộn.",
-        "differential": "Siêu âm thận tiết niệu, xét nghiệm nước tiểu tìm hồng cầu vi thể."
+        "differential": "Siêu âm thận tiết niệu, xét nghiệm nước tiểu tìm hồng cầu vi thể.",
+        "figures": []
       },
       {
         "source": "Bệnh Lý Phụ Khoa (Lạc Nội Mạc Tử Cung, U Xoắn Buồng Trứng, Thai Ngoài Tử Cung)",
         "pattern": "Đau vùng thắt lưng thấp và khung chậu liên quan chu kỳ kinh nguyệt, đau sâu khi giao hợp (Dyspareunia), trễ kinh kèm tụt huyết áp.",
-        "differential": "Siêu âm đầu dò âm đạo, xét nghiệm Beta-hCG."
+        "differential": "Siêu âm đầu dò âm đạo, xét nghiệm Beta-hCG.",
+        "figures": []
       },
       {
         "source": "Bệnh Tuyến Tiền Liệt (Prostatitis & Prostate Cancer)",
         "pattern": "Đau vùng xương cùng cụt và thắt lưng thấp kèm tiểu khó, tiểu ngắt quãng, tiểu đêm nhiều lần.",
-        "differential": "Thăm trực tràng khám tuyến tiền liệt (DRE), xét nghiệm PSA toàn phần/tự do."
+        "differential": "Thăm trực tràng khám tuyến tiền liệt (DRE), xét nghiệm PSA toàn phần/tự do.",
+        "figures": []
       },
       {
         "source": "Bệnh Lý Đại Tràng (Viêm Túi Thừa & Ung Thư Trực Tràng)",
         "pattern": "Đau thắt lưng chậu kèm thay đổi thói quen đại tiện (táo bón xen kẽ ỉa chảy), phân dẹt, đại tiện ra máu.",
-        "differential": "Nội soi toàn bộ đại trực tràng."
+        "differential": "Nội soi toàn bộ đại trực tràng.",
+        "figures": []
       }
     ],
     "drug_induced": [
@@ -2045,7 +2292,29 @@ const STABLE_SCREENING_FALLBACK = [
         "significance": "Dương tính khi tái hiện đau nhói như điện giật lan từ mông xuống dưới gối ở góc 30° - 70°. Nhạy cảm cao (Sn: 91%) với thoát vị đĩa đệm rễ L4-L5, L5-S1.",
         "sensitivity": "80% - 90%",
         "specificity": "75% - 85%",
-        "diagnostic_role": "Nghiệm pháp lâm sàng hỗ trợ sàng lọc chẩn đoán phân biệt"
+        "diagnostic_role": "Nghiệm pháp lâm sàng hỗ trợ sàng lọc chẩn đoán phân biệt",
+        "figures": [
+          {
+            "file": "assets/deepak_images/ch06_lumbopelvic_pain/p258_img1.jpeg",
+            "page": 258,
+            "fig_number": "6.7",
+            "caption_en": "Fig. 6.7: Disc herniation with nerve root entrapment L2 L3",
+            "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Disc herniation with nerve root entrapment L2 L3",
+            "category": "redflags_pathology",
+            "width": 676,
+            "height": 993
+          },
+          {
+            "file": "assets/deepak_images/ch06_lumbopelvic_pain/p285_img1.jpeg",
+            "page": 285,
+            "fig_number": "6.21",
+            "caption_en": "Fig. 6.21: Inability to tuck in",
+            "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Inability to tuck in",
+            "category": "examination",
+            "width": 1080,
+            "height": 715
+          }
+        ]
       },
       {
         "name": "Nghiệm Pháp SLR Chân Lành (Crossed SLR / Well-Leg Raise Test)",
@@ -2053,7 +2322,29 @@ const STABLE_SCREENING_FALLBACK = [
         "significance": "Dương tính khi nâng chân lành mà TÁI HIỆN ĐAU Ở CHÂN BỆNH. Độ đặc hiệu cực cao (Sp: 88 - 98%) khẳng định thoát vị đĩa đệm thể lớn hoặc thoát vị thể nách rễ thần kinh.",
         "sensitivity": "80% - 90%",
         "specificity": "75% - 85%",
-        "diagnostic_role": "Nghiệm pháp lâm sàng hỗ trợ sàng lọc chẩn đoán phân biệt"
+        "diagnostic_role": "Nghiệm pháp lâm sàng hỗ trợ sàng lọc chẩn đoán phân biệt",
+        "figures": [
+          {
+            "file": "assets/deepak_images/ch06_lumbopelvic_pain/p258_img1.jpeg",
+            "page": 258,
+            "fig_number": "6.7",
+            "caption_en": "Fig. 6.7: Disc herniation with nerve root entrapment L2 L3",
+            "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Disc herniation with nerve root entrapment L2 L3",
+            "category": "redflags_pathology",
+            "width": 676,
+            "height": 993
+          },
+          {
+            "file": "assets/deepak_images/ch06_lumbopelvic_pain/p285_img1.jpeg",
+            "page": 285,
+            "fig_number": "6.21",
+            "caption_en": "Fig. 6.21: Inability to tuck in",
+            "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Inability to tuck in",
+            "category": "examination",
+            "width": 1080,
+            "height": 715
+          }
+        ]
       },
       {
         "name": "Nghiệm Pháp Slump Test (Kéo Căng Toàn Bộ Trục Thần Kinh)",
@@ -2061,7 +2352,19 @@ const STABLE_SCREENING_FALLBACK = [
         "significance": "Tái hiện đau rễ thần kinh, giảm khi ngửa nhẹ đầu (Sn: 84%, Sp: 83% chẩn đoán kích thích rễ thần kinh thắt lưng).",
         "sensitivity": "80% - 90%",
         "specificity": "75% - 85%",
-        "diagnostic_role": "Nghiệm pháp lâm sàng hỗ trợ sàng lọc chẩn đoán phân biệt"
+        "diagnostic_role": "Nghiệm pháp lâm sàng hỗ trợ sàng lọc chẩn đoán phân biệt",
+        "figures": [
+          {
+            "file": "assets/deepak_images/ch06_lumbopelvic_pain/p258_img1.jpeg",
+            "page": 258,
+            "fig_number": "6.7",
+            "caption_en": "Fig. 6.7: Disc herniation with nerve root entrapment L2 L3",
+            "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Disc herniation with nerve root entrapment L2 L3",
+            "category": "redflags_pathology",
+            "width": 676,
+            "height": 993
+          }
+        ]
       },
       {
         "name": "Cụm Nghiệm Pháp Khám Khớp Cùng Chậu (Van der Wurff & Laslett SIJ Cluster)",
@@ -2069,7 +2372,29 @@ const STABLE_SCREENING_FALLBACK = [
         "significance": "Có ít nhất 2/4 hoặc 3/5 nghiệm pháp dương tính -> Độ đặc hiệu > 85-90% chẩn đoán nguồn đau phát sinh từ Khớp cùng chậu (SIJ Dysfunction).",
         "sensitivity": "91%",
         "specificity": "87%",
-        "diagnostic_role": "Tiêu chuẩn vàng lâm sàng chẩn đoán đau khớp cùng chậu SIJ khi có >= 3/5 nghiệm pháp dương tính (+LR: 6.97)"
+        "diagnostic_role": "Tiêu chuẩn vàng lâm sàng chẩn đoán đau khớp cùng chậu SIJ khi có >= 3/5 nghiệm pháp dương tính (+LR: 6.97)",
+        "figures": [
+          {
+            "file": "assets/deepak_images/ch06_lumbopelvic_pain/p225_img1.png",
+            "page": 225,
+            "fig_number": "6.2",
+            "caption_en": "Fig. 6.2: The sacrum with the oblique axis depicted",
+            "caption_vi": "Hình ảnh giải phẫu & lâm sàng: The sacrum with the oblique axis depicted",
+            "category": "general_atlas",
+            "width": 1161,
+            "height": 603
+          },
+          {
+            "file": "assets/deepak_images/ch06_lumbopelvic_pain/p276_img1.jpeg",
+            "page": 276,
+            "fig_number": "6.11",
+            "caption_en": "Fig. 6.11: Stork test",
+            "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Stork test",
+            "category": "examination",
+            "width": 1080,
+            "height": 810
+          }
+        ]
       },
       {
         "name": "Nghiệm Pháp Cúi Ngồi & Cúi Đứng (Sitting & Standing Flexion Tests)",
@@ -2077,7 +2402,29 @@ const STABLE_SCREENING_FALLBACK = [
         "significance": "Nếu PSIS một bên di chuyển lên trên sớm hơn ở tư thế Đứng nhưng bình thường ở tư thế Ngồi -> Rối loạn chức năng xương chậu (Innominate problem). Nếu bất thường cả khi Ngồi -> Rối loạn chức năng xương cùng (Sacral problem).",
         "sensitivity": "75%",
         "specificity": "78%",
-        "diagnostic_role": "Phân biệt sai lệch chuyển động chậu Innominate (bất đối xứng khi đứng) vs xương cùng Sacrum (bất đối xứng khi ngồi)"
+        "diagnostic_role": "Phân biệt sai lệch chuyển động chậu Innominate (bất đối xứng khi đứng) vs xương cùng Sacrum (bất đối xứng khi ngồi)",
+        "figures": [
+          {
+            "file": "assets/deepak_images/ch06_lumbopelvic_pain/p225_img1.png",
+            "page": 225,
+            "fig_number": "6.2",
+            "caption_en": "Fig. 6.2: The sacrum with the oblique axis depicted",
+            "caption_vi": "Hình ảnh giải phẫu & lâm sàng: The sacrum with the oblique axis depicted",
+            "category": "general_atlas",
+            "width": 1161,
+            "height": 603
+          },
+          {
+            "file": "assets/deepak_images/ch06_lumbopelvic_pain/p276_img1.jpeg",
+            "page": 276,
+            "fig_number": "6.11",
+            "caption_en": "Fig. 6.11: Stork test",
+            "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Stork test",
+            "category": "examination",
+            "width": 1080,
+            "height": 810
+          }
+        ]
       },
       {
         "name": "Nghiệm Pháp Stork (Gillet Test / Stork Motion Test)",
@@ -2085,7 +2432,29 @@ const STABLE_SCREENING_FALLBACK = [
         "significance": "Đánh giá sự di động trượt xuống dưới của PSIS so với xương cùng khi co gập háng.",
         "sensitivity": "55%",
         "specificity": "85%",
-        "diagnostic_role": "Đặc hiệu đánh giá khóa khớp cùng chậu chuyển động cùng bên khi gập gối nhấc chân"
+        "diagnostic_role": "Đặc hiệu đánh giá khóa khớp cùng chậu chuyển động cùng bên khi gập gối nhấc chân",
+        "figures": [
+          {
+            "file": "assets/deepak_images/ch06_lumbopelvic_pain/p225_img1.png",
+            "page": 225,
+            "fig_number": "6.2",
+            "caption_en": "Fig. 6.2: The sacrum with the oblique axis depicted",
+            "caption_vi": "Hình ảnh giải phẫu & lâm sàng: The sacrum with the oblique axis depicted",
+            "category": "general_atlas",
+            "width": 1161,
+            "height": 603
+          },
+          {
+            "file": "assets/deepak_images/ch06_lumbopelvic_pain/p276_img1.jpeg",
+            "page": 276,
+            "fig_number": "6.11",
+            "caption_en": "Fig. 6.11: Stork test",
+            "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Stork test",
+            "category": "examination",
+            "width": 1080,
+            "height": 810
+          }
+        ]
       }
     ],
     "differential_table": [
@@ -2130,690 +2499,414 @@ const STABLE_SCREENING_FALLBACK = [
         "gold_standard": "Siêu âm can thiệp cơ xương khớp / X-quang / MRI chuyên sâu"
       }
     ],
-    "stage_2_somatic_dysfunctions": [
-      "Xoay xương chậu ra trước (Anterior Innominate Rotation): ASIS bên bệnh thấp hơn và PSIS cao hơn; chiều dài chân chức năng dài hơn ở tư thế nằm ngửa.",
-      "Xoay xương chậu ra sau (Posterior Innominate Rotation): ASIS bên bệnh cao hơn và PSIS thấp hơn; chiều dài chân ngắn hơn ở tư thế nằm ngửa.",
-      "Trượt xương chậu lên trên (Innominate Upslip): Cả ASIS và PSIS cùng bên đều bị kéo lệch lên trên so với bên lành do co thắt cơ vuông thắt lưng.",
-      "Rối loạn xoay xương cùng Trái trên Trục Trái (Left-on-Left Sacral Torsion): Xương cùng xoay sang trái trên trục xiên trái, rãnh cùng bên phải sâu hơn, góc dưới bên (ILA) bên trái thấp và lồi hơn.",
-      "Rối loạn xoay xương cùng Trái trên Trục Phải (Left-on-Right Sacral Torsion): Xương cùng xoay lùi ra sau, nghiệm pháp chống đẩy ngực (Prone Prop-up Test) làm tăng mức độ bất đối xứng rãnh cùng."
-    ],
-    "stage_3_guidemap_intervention": "Kỹ thuật nắn chỉnh cân bằng cơ sinh học khung chậu (Muscle Energy Technique - MET); Trường hợp viêm rễ thần kinh cấp hoặc viêm khớp cùng chậu dai dẳng -> Tiêm thẩm nhuận rễ thắt lưng chọn lọc (Transforaminal ESI) hoặc Tiêm khớp cùng chậu dưới hướng dẫn siêu âm (Xem Web 1: Quy trình Tiêm Khớp Cùng Chậu & Tiêm Rễ Thần Kinh Ngoài Màng Cứng).",
     "figures": [
       {
-        "chapter": 6,
-        "chapter_name": "lumbopelvic_pain",
-        "page": 218,
         "file": "assets/deepak_images/ch06_lumbopelvic_pain/p218_img1.jpeg",
+        "page": 218,
+        "fig_number": "6.1",
+        "caption_en": "Fig. 6.1: Lumbar vertebra",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Lumbar vertebra",
+        "category": "general_atlas",
         "width": 1260,
-        "height": 513,
-        "size_bytes": 47663,
-        "page_captions": [
-          "Fig. 6.1:  Lumbar vertebra",
-          "Fig. 6.1) support the upper part of the body and "
-        ],
-        "captions": [
-          "Fig. 6.1: Lumbar vertebra The lumbopelvic region10,21 comprises the five lumbar vertebrae, sacrum and",
-          "Fig. 6.1) support the upper part of the body and transmit their weight to the pelvis and lower extremities. It is often debated that"
-        ]
+        "height": 513
       },
       {
-        "chapter": 6,
-        "chapter_name": "lumbopelvic_pain",
-        "page": 225,
         "file": "assets/deepak_images/ch06_lumbopelvic_pain/p225_img1.png",
+        "page": 225,
+        "fig_number": "6.2",
+        "caption_en": "Fig. 6.2: The sacrum with the oblique axis depicted",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: The sacrum with the oblique axis depicted",
+        "category": "general_atlas",
         "width": 1161,
-        "height": 603,
-        "size_bytes": 130617,
-        "page_captions": [
-          "Fig. 6.2). This ",
-          "Fig. 6.2:  The sacrum with the oblique axis depicted"
-        ],
-        "captions": [
-          "Fig. 6.2). This axis is an imaginary line drawn from the superior aspect of one sacroiliac joint",
-          "Fig. 6.2: The sacrum with the oblique axis depicted"
-        ]
+        "height": 603
       },
       {
-        "chapter": 6,
-        "chapter_name": "lumbopelvic_pain",
-        "page": 229,
         "file": "assets/deepak_images/ch06_lumbopelvic_pain/p229_img1.jpeg",
+        "page": 229,
+        "fig_number": "6.3",
+        "caption_en": "Fig. 6.3: Abdominal quadrants. (Abbreviations: LLQ, left lower quadrant; LUQ,",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Abdominal quadrants. (Abbreviations: LLQ, left lower quadrant; LUQ,",
+        "category": "anatomy_visceral",
         "width": 1000,
-        "height": 903,
-        "size_bytes": 56575,
-        "page_captions": [
-          "Fig. 6.3:  Abdominal quadrants. (Abbreviations: LLQ, left lower quadrant; LUQ, "
-        ],
-        "captions": [
-          "Fig. 6.3). STAGE ONE"
-        ]
+        "height": 903
       },
       {
-        "chapter": 6,
-        "chapter_name": "lumbopelvic_pain",
-        "page": 231,
         "file": "assets/deepak_images/ch06_lumbopelvic_pain/p231_img1.jpeg",
+        "page": 231,
+        "fig_number": "6.4",
+        "caption_en": "Fig. 6.4: Sites to elicit bruits",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Sites to elicit bruits",
+        "category": "redflags_pathology",
         "width": 1377,
-        "height": 903,
-        "size_bytes": 52724,
-        "page_captions": [
-          "Fig. 6.4)",
-          "Fig. 6.4:  Sites to elicit bruits"
-        ],
-        "captions": [
-          "Fig. 6.4). Renal Vein Thrombosis Embolism",
-          "Fig. 6.4: Sites to elicit bruits"
-        ]
+        "height": 903
       },
       {
-        "chapter": 6,
-        "chapter_name": "lumbopelvic_pain",
-        "page": 236,
         "file": "assets/deepak_images/ch06_lumbopelvic_pain/p236_img1.jpeg",
+        "page": 236,
+        "fig_number": "6.5",
+        "caption_en": "Fig. 6.5: Spondylolysis L5",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Spondylolysis L5",
+        "category": "redflags_pathology",
         "width": 527,
-        "height": 788,
-        "size_bytes": 39906,
-        "page_captions": [
-          "Fig. 6.5). A defect in the pars interarticularis ",
-          "Fig. 6.5:  Spondylolysis L5"
-        ],
-        "captions": [
-          "Fig. 6.5). A defect in the pars interarticularis is called spondylolysis. So, spondylolysis means a defect in the thin isthmus",
-          "Fig. 6.5: Spondylolysis L5"
-        ]
+        "height": 788
       },
       {
-        "chapter": 6,
-        "chapter_name": "lumbopelvic_pain",
-        "page": 257,
         "file": "assets/deepak_images/ch06_lumbopelvic_pain/p257_img1.png",
+        "page": 257,
+        "fig_number": "6.6",
+        "caption_en": "Fig. 6.6: Lumbar spondylosis",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Lumbar spondylosis",
+        "category": "redflags_pathology",
         "width": 860,
-        "height": 993,
-        "size_bytes": 205572,
-        "page_captions": [
-          "Fig. 6.5). These accumulated changes caused by degeneration and the narrowing ",
-          "Fig. 6.6) comprises all aspects ",
-          "Fig. 6.7). This is further aggravated by faulty body "
-        ],
-        "captions": [
-          "Fig. 6.5). These accumulated changes caused by degeneration and the narrowing of the foramen can gradually compress one or more of the exiting nerve roots.",
-          "Fig. 6.6) comprises all aspects of the above description and commonly occurs secondary to faulty mechanics",
-          "Fig. 6.7). This is further aggravated by faulty body Fig. 6.6: Lumbar spondylosis"
-        ]
+        "height": 993
       },
       {
-        "chapter": 6,
-        "chapter_name": "lumbopelvic_pain",
-        "page": 258,
         "file": "assets/deepak_images/ch06_lumbopelvic_pain/p258_img1.jpeg",
+        "page": 258,
+        "fig_number": "6.7",
+        "caption_en": "Fig. 6.7: Disc herniation with nerve root entrapment L2 L3",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Disc herniation with nerve root entrapment L2 L3",
+        "category": "redflags_pathology",
         "width": 676,
-        "height": 993,
-        "size_bytes": 40591,
-        "page_captions": [
-          "Fig. 6.7:  Disc herniation with nerve root entrapment L2 L3"
-        ],
-        "captions": [
-          "Fig. 6.7: Disc herniation with nerve root entrapment L2 L3"
-        ]
+        "height": 993
       },
       {
-        "chapter": 6,
-        "chapter_name": "lumbopelvic_pain",
-        "page": 273,
         "file": "assets/deepak_images/ch06_lumbopelvic_pain/p273_img1.jpeg",
+        "page": 273,
+        "fig_number": "6.8",
+        "caption_en": "Fig. 6.8: Vulnerable structures in non-traumatic vertical compression",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Vulnerable structures in non-traumatic vertical compression",
+        "category": "examination",
         "width": 949,
-        "height": 843,
-        "size_bytes": 73035,
-        "page_captions": [
-          "Fig. 6.8). They are speculated to be potential ",
-          "Fig. 6.8:  Vulnerable structures in non-traumatic vertical compression"
-        ],
-        "captions": [
-          "Fig. 6.8). They are speculated to be potential symptom mediators and collectively identified as vulnerable structures in lower",
-          "Fig. 6.8: Vulnerable structures in non-traumatic vertical compression"
-        ]
+        "height": 843
       },
       {
-        "chapter": 6,
-        "chapter_name": "lumbopelvic_pain",
-        "page": 274,
         "file": "assets/deepak_images/ch06_lumbopelvic_pain/p274_img1.jpeg",
+        "page": 274,
+        "fig_number": "6.9",
+        "caption_en": "Fig. 6.9: Palpating transverse processes",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Palpating transverse processes",
+        "category": "examination",
         "width": 1080,
-        "height": 808,
-        "size_bytes": 44585,
-        "page_captions": [
-          "Fig. 6.9). The patient is then asked to bend ",
-          "Fig. 6.9:  Palpating transverse processes"
-        ],
-        "captions": [
-          "Fig. 6.9). The patient is then asked to bend forwards by taking both arms toward the floor and between the legs.",
-          "Fig. 6.9: Palpating transverse processes"
-        ]
+        "height": 808
       },
       {
-        "chapter": 6,
-        "chapter_name": "lumbopelvic_pain",
-        "page": 276,
         "file": "assets/deepak_images/ch06_lumbopelvic_pain/p276_img1.jpeg",
-        "width": 1080,
-        "height": 810,
-        "size_bytes": 42242,
-        "page_captions": [
-          "Fig. 6.11:  Stork test",
-          "Fig. 6.10:  Sitting flexion test"
-        ],
-        "captions": [
-          "Fig. 6.11: Stork test Fig. 6.10: Sitting flexion test"
-        ]
-      },
-      {
-        "chapter": 6,
-        "chapter_name": "lumbopelvic_pain",
         "page": 276,
+        "fig_number": "6.11",
+        "caption_en": "Fig. 6.11: Stork test",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Stork test",
+        "category": "examination",
+        "width": 1080,
+        "height": 810
+      },
+      {
         "file": "assets/deepak_images/ch06_lumbopelvic_pain/p276_img2.jpeg",
+        "page": 276,
+        "fig_number": "6.11",
+        "caption_en": "Fig. 6.11: Stork test",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Stork test",
+        "category": "examination",
         "width": 1080,
-        "height": 811,
-        "size_bytes": 42958,
-        "page_captions": [
-          "Fig. 6.11:  Stork test",
-          "Fig. 6.10:  Sitting flexion test"
-        ],
-        "captions": [
-          "Fig. 6.11: Stork test Fig. 6.10: Sitting flexion test"
-        ]
+        "height": 811
       },
       {
-        "chapter": 6,
-        "chapter_name": "lumbopelvic_pain",
-        "page": 277,
         "file": "assets/deepak_images/ch06_lumbopelvic_pain/p277_img1.jpeg",
+        "page": 277,
+        "fig_number": "6.12",
+        "caption_en": "Fig. 6.12: Palpating pubic tubercles in supine",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Palpating pubic tubercles in supine",
+        "category": "examination",
         "width": 1080,
-        "height": 804,
-        "size_bytes": 49730,
-        "page_captions": [
-          "Fig. 6.12:  Palpating pubic tubercles in supine",
-          "Fig. 6.12)",
-          "Figs 6.13 and 6.14)."
-        ],
-        "captions": [
-          "Fig. 6.12: Palpating pubic tubercles in supine Prone Prop up Test",
-          "Fig. 6.12).",
-          "Figs 6.13 and 6.14)."
-        ]
+        "height": 804
       },
       {
-        "chapter": 6,
-        "chapter_name": "lumbopelvic_pain",
-        "page": 278,
         "file": "assets/deepak_images/ch06_lumbopelvic_pain/p278_img1.jpeg",
-        "width": 1080,
-        "height": 808,
-        "size_bytes": 43601,
-        "page_captions": [
-          "Fig. 6.13:  Locating the inferior aspect of the sacrum",
-          "Fig. 6.14:  Locating the inferior lateral angle",
-          "Fig. 6.15)"
-        ],
-        "captions": [
-          "Fig. 6.13: Locating the inferior aspect of the sacrum Fig. 6.14: Locating the inferior lateral angle",
-          "Fig. 6.15). TORSIONAL DYSFUNCTIONS"
-        ]
-      },
-      {
-        "chapter": 6,
-        "chapter_name": "lumbopelvic_pain",
         "page": 278,
+        "fig_number": "6.13",
+        "caption_en": "Fig. 6.13: Locating the inferior aspect of the sacrum",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Locating the inferior aspect of the sacrum",
+        "category": "examination",
+        "width": 1080,
+        "height": 808
+      },
+      {
         "file": "assets/deepak_images/ch06_lumbopelvic_pain/p278_img2.jpeg",
+        "page": 278,
+        "fig_number": "6.13",
+        "caption_en": "Fig. 6.13: Locating the inferior aspect of the sacrum",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Locating the inferior aspect of the sacrum",
+        "category": "examination",
         "width": 1080,
-        "height": 810,
-        "size_bytes": 43156,
-        "page_captions": [
-          "Fig. 6.13:  Locating the inferior aspect of the sacrum",
-          "Fig. 6.14:  Locating the inferior lateral angle",
-          "Fig. 6.15)"
-        ],
-        "captions": [
-          "Fig. 6.13: Locating the inferior aspect of the sacrum Fig. 6.14: Locating the inferior lateral angle",
-          "Fig. 6.15). TORSIONAL DYSFUNCTIONS"
-        ]
+        "height": 810
       },
       {
-        "chapter": 6,
-        "chapter_name": "lumbopelvic_pain",
-        "page": 279,
         "file": "assets/deepak_images/ch06_lumbopelvic_pain/p279_img1.jpeg",
+        "page": 279,
+        "fig_number": "6.15",
+        "caption_en": "Fig. 6.15: Locating the base",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Locating the base",
+        "category": "general_atlas",
         "width": 1080,
-        "height": 774,
-        "size_bytes": 35019,
-        "page_captions": [
-          "Fig. 6.15:  Locating the base"
-        ],
-        "captions": [
-          "Fig. 6.15: Locating the base"
-        ]
+        "height": 774
       },
       {
-        "chapter": 6,
-        "chapter_name": "lumbopelvic_pain",
-        "page": 281,
         "file": "assets/deepak_images/ch06_lumbopelvic_pain/p281_img1.jpeg",
-        "width": 1080,
-        "height": 717,
-        "size_bytes": 44201,
-        "page_captions": [
-          "Fig. 6.16:  Visualizing apparent leg length discrepancy",
-          "Fig. 6.17:  Prone knee flexion",
-          "Fig. 6.18)"
-        ],
-        "captions": [
-          "Fig. 6.16: Visualizing apparent leg length discrepancy Fig. 6.17: Prone knee flexion",
-          "Fig. 6.18)."
-        ]
-      },
-      {
-        "chapter": 6,
-        "chapter_name": "lumbopelvic_pain",
         "page": 281,
+        "fig_number": "6.16",
+        "caption_en": "Fig. 6.16: Visualizing apparent leg length discrepancy",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Visualizing apparent leg length discrepancy",
+        "category": "general_atlas",
+        "width": 1080,
+        "height": 717
+      },
+      {
         "file": "assets/deepak_images/ch06_lumbopelvic_pain/p281_img2.jpeg",
+        "page": 281,
+        "fig_number": "6.16",
+        "caption_en": "Fig. 6.16: Visualizing apparent leg length discrepancy",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Visualizing apparent leg length discrepancy",
+        "category": "general_atlas",
         "width": 1080,
-        "height": 793,
-        "size_bytes": 51064,
-        "page_captions": [
-          "Fig. 6.16:  Visualizing apparent leg length discrepancy",
-          "Fig. 6.17:  Prone knee flexion",
-          "Fig. 6.18)"
-        ],
-        "captions": [
-          "Fig. 6.16: Visualizing apparent leg length discrepancy Fig. 6.17: Prone knee flexion",
-          "Fig. 6.18)."
-        ]
+        "height": 793
       },
       {
-        "chapter": 6,
-        "chapter_name": "lumbopelvic_pain",
-        "page": 282,
         "file": "assets/deepak_images/ch06_lumbopelvic_pain/p282_img1.jpeg",
+        "page": 282,
+        "fig_number": "6.18",
+        "caption_en": "Fig. 6.18: Supine to sit",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Supine to sit",
+        "category": "examination",
         "width": 1080,
-        "height": 810,
-        "size_bytes": 49433,
-        "page_captions": [
-          "Figs 6.19 and 6.20). Always make a ",
-          "Fig. 6.18:  Supine to sit"
-        ],
-        "captions": [
-          "Figs 6.19 and 6.20). Always make a comparison with the other side as some patients are inherently hyporeflexic. A",
-          "Fig. 6.18: Supine to sit"
-        ]
+        "height": 810
       },
       {
-        "chapter": 6,
-        "chapter_name": "lumbopelvic_pain",
-        "page": 283,
         "file": "assets/deepak_images/ch06_lumbopelvic_pain/p283_img1.jpeg",
-        "width": 710,
-        "height": 900,
-        "size_bytes": 103649,
-        "page_captions": [
-          "Fig. 6.20:  Patellar reflex (L2, L3)",
-          "Fig. 6.19:  Achilles reflex (S1)"
-        ],
-        "captions": [
-          "Fig. 6.20: Patellar reflex (L2, L3) •"
-        ]
-      },
-      {
-        "chapter": 6,
-        "chapter_name": "lumbopelvic_pain",
         "page": 283,
+        "fig_number": "6.20",
+        "caption_en": "Fig. 6.20: Patellar reflex (L2, L3)",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Patellar reflex (L2, L3)",
+        "category": "examination",
+        "width": 710,
+        "height": 900
+      },
+      {
         "file": "assets/deepak_images/ch06_lumbopelvic_pain/p283_img2.jpeg",
+        "page": 283,
+        "fig_number": "6.20",
+        "caption_en": "Fig. 6.20: Patellar reflex (L2, L3)",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Patellar reflex (L2, L3)",
+        "category": "examination",
         "width": 715,
-        "height": 900,
-        "size_bytes": 104737,
-        "page_captions": [
-          "Fig. 6.20:  Patellar reflex (L2, L3)",
-          "Fig. 6.19:  Achilles reflex (S1)"
-        ],
-        "captions": [
-          "Fig. 6.20: Patellar reflex (L2, L3) •"
-        ]
+        "height": 900
       },
       {
-        "chapter": 6,
-        "chapter_name": "lumbopelvic_pain",
-        "page": 285,
         "file": "assets/deepak_images/ch06_lumbopelvic_pain/p285_img1.jpeg",
-        "width": 1080,
-        "height": 715,
-        "size_bytes": 68364,
-        "page_captions": [
-          "Fig. 6.28)",
-          "Fig. 6.21:  Inability to tuck in",
-          "Fig. 6.22:  Able to tuck in with lower rib cage visualized"
-        ],
-        "captions": [
-          "Fig. 6.28). Fig. 6.21: Inability to tuck in",
-          "Fig. 6.22: Able to tuck in with lower rib cage visualized"
-        ]
-      },
-      {
-        "chapter": 6,
-        "chapter_name": "lumbopelvic_pain",
         "page": 285,
+        "fig_number": "6.21",
+        "caption_en": "Fig. 6.21: Inability to tuck in",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Inability to tuck in",
+        "category": "examination",
+        "width": 1080,
+        "height": 715
+      },
+      {
         "file": "assets/deepak_images/ch06_lumbopelvic_pain/p285_img2.jpeg",
+        "page": 285,
+        "fig_number": "6.21",
+        "caption_en": "Fig. 6.21: Inability to tuck in",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Inability to tuck in",
+        "category": "examination",
         "width": 1080,
-        "height": 720,
-        "size_bytes": 75334,
-        "page_captions": [
-          "Fig. 6.28)",
-          "Fig. 6.21:  Inability to tuck in",
-          "Fig. 6.22:  Able to tuck in with lower rib cage visualized"
-        ],
-        "captions": [
-          "Fig. 6.28). Fig. 6.21: Inability to tuck in",
-          "Fig. 6.22: Able to tuck in with lower rib cage visualized"
-        ]
+        "height": 720
       },
       {
-        "chapter": 6,
-        "chapter_name": "lumbopelvic_pain",
-        "page": 286,
         "file": "assets/deepak_images/ch06_lumbopelvic_pain/p286_img1.jpeg",
-        "width": 1080,
-        "height": 724,
-        "size_bytes": 80381,
-        "page_captions": [
-          "Fig. 6.23:  Able to tuck in and move legs",
-          "Fig. 6.24:  Tucked in position being lost during leg lifts. Note increase in lordosis"
-        ],
-        "captions": [
-          "Fig. 6.24: Tucked in position being lost during leg lifts. Note increase in lordosis"
-        ]
-      },
-      {
-        "chapter": 6,
-        "chapter_name": "lumbopelvic_pain",
         "page": 286,
+        "fig_number": "6.23",
+        "caption_en": "Fig. 6.23: Able to tuck in and move legs",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Able to tuck in and move legs",
+        "category": "examination",
+        "width": 1080,
+        "height": 724
+      },
+      {
         "file": "assets/deepak_images/ch06_lumbopelvic_pain/p286_img2.jpeg",
+        "page": 286,
+        "fig_number": "6.23",
+        "caption_en": "Fig. 6.23: Able to tuck in and move legs",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Able to tuck in and move legs",
+        "category": "examination",
         "width": 1080,
-        "height": 717,
-        "size_bytes": 51772,
-        "page_captions": [
-          "Fig. 6.23:  Able to tuck in and move legs",
-          "Fig. 6.24:  Tucked in position being lost during leg lifts. Note increase in lordosis"
-        ],
-        "captions": [
-          "Fig. 6.24: Tucked in position being lost during leg lifts. Note increase in lordosis"
-        ]
+        "height": 717
       },
       {
-        "chapter": 6,
-        "chapter_name": "lumbopelvic_pain",
-        "page": 287,
         "file": "assets/deepak_images/ch06_lumbopelvic_pain/p287_img1.jpeg",
-        "width": 1080,
-        "height": 723,
-        "size_bytes": 56433,
-        "page_captions": [
-          "Fig. 6.25:  On verbal cueing tuck in position reinforced",
-          "Fig. 6.26:  Testing the strength of the gluteus medius"
-        ],
-        "captions": [
-          "Fig. 6.25: On verbal cueing tuck in position reinforced Foot dorsiflexion with inversion/eversion",
-          "Fig. 6.26: Testing the strength of the gluteus medius"
-        ]
-      },
-      {
-        "chapter": 6,
-        "chapter_name": "lumbopelvic_pain",
         "page": 287,
+        "fig_number": "6.25",
+        "caption_en": "Fig. 6.25: On verbal cueing tuck in position reinforced",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: On verbal cueing tuck in position reinforced",
+        "category": "examination",
+        "width": 1080,
+        "height": 723
+      },
+      {
         "file": "assets/deepak_images/ch06_lumbopelvic_pain/p287_img2.jpeg",
+        "page": 287,
+        "fig_number": "6.25",
+        "caption_en": "Fig. 6.25: On verbal cueing tuck in position reinforced",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: On verbal cueing tuck in position reinforced",
+        "category": "examination",
         "width": 624,
-        "height": 900,
-        "size_bytes": 72071,
-        "page_captions": [
-          "Fig. 6.25:  On verbal cueing tuck in position reinforced",
-          "Fig. 6.26:  Testing the strength of the gluteus medius"
-        ],
-        "captions": [
-          "Fig. 6.25: On verbal cueing tuck in position reinforced Foot dorsiflexion with inversion/eversion",
-          "Fig. 6.26: Testing the strength of the gluteus medius"
-        ]
+        "height": 900
       },
       {
-        "chapter": 6,
-        "chapter_name": "lumbopelvic_pain",
-        "page": 288,
         "file": "assets/deepak_images/ch06_lumbopelvic_pain/p288_img1.jpeg",
-        "width": 1080,
-        "height": 720,
-        "size_bytes": 94125,
-        "page_captions": [
-          "Fig. 6.29) the possibility of nerve ",
-          "Fig. 6.27:  Testing multifidus",
-          "Fig. 6.28:  Slump position"
-        ],
-        "captions": [
-          "Fig. 6.29) the possibility of nerve tension exists, however, if symptoms persist it maybe of a muscle/fascial origin.",
-          "Fig. 6.27: Testing multifidus Fig. 6.28: Slump position"
-        ]
-      },
-      {
-        "chapter": 6,
-        "chapter_name": "lumbopelvic_pain",
         "page": 288,
+        "fig_number": "6.27",
+        "caption_en": "Fig. 6.27: Testing multifidus",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Testing multifidus",
+        "category": "examination",
+        "width": 1080,
+        "height": 720
+      },
+      {
         "file": "assets/deepak_images/ch06_lumbopelvic_pain/p288_img2.jpeg",
+        "page": 288,
+        "fig_number": "6.27",
+        "caption_en": "Fig. 6.27: Testing multifidus",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Testing multifidus",
+        "category": "examination",
         "width": 1080,
-        "height": 810,
-        "size_bytes": 52394,
-        "page_captions": [
-          "Fig. 6.29) the possibility of nerve ",
-          "Fig. 6.27:  Testing multifidus",
-          "Fig. 6.28:  Slump position"
-        ],
-        "captions": [
-          "Fig. 6.29) the possibility of nerve tension exists, however, if symptoms persist it maybe of a muscle/fascial origin.",
-          "Fig. 6.27: Testing multifidus Fig. 6.28: Slump position"
-        ]
+        "height": 810
       },
       {
-        "chapter": 6,
-        "chapter_name": "lumbopelvic_pain",
-        "page": 289,
         "file": "assets/deepak_images/ch06_lumbopelvic_pain/p289_img1.jpeg",
+        "page": 289,
+        "fig_number": "6.29",
+        "caption_en": "Fig. 6.29: Release of cervical flexion",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Release of cervical flexion",
+        "category": "examination",
         "width": 1080,
-        "height": 810,
-        "size_bytes": 49728,
-        "page_captions": [
-          "Fig. 6.29:  Release of cervical flexion"
-        ],
-        "captions": [
-          "Fig. 6.29: Release of cervical flexion"
-        ]
+        "height": 810
       },
       {
-        "chapter": 6,
-        "chapter_name": "lumbopelvic_pain",
-        "page": 290,
         "file": "assets/deepak_images/ch06_lumbopelvic_pain/p290_img1.jpeg",
+        "page": 290,
+        "fig_number": "6.30",
+        "caption_en": "Fig. 6.30: Side lying knee bend",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Side lying knee bend",
+        "category": "general_atlas",
         "width": 1080,
-        "height": 834,
-        "size_bytes": 67451,
-        "page_captions": [
-          "Fig. 6.30)",
-          "Fig. 6.30:  Side lying knee bend"
-        ],
-        "captions": [
-          "Fig. 6.30: Side lying knee bend"
-        ]
+        "height": 834
       },
       {
-        "chapter": 6,
-        "chapter_name": "lumbopelvic_pain",
-        "page": 292,
         "file": "assets/deepak_images/ch06_lumbopelvic_pain/p292_img1.jpeg",
+        "page": 292,
+        "fig_number": "6.31",
+        "caption_en": "Fig. 6.31: Palpating for tenderness over the sacroiliac joint secondary to an",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Palpating for tenderness over the sacroiliac joint secondary to an",
+        "category": "examination",
         "width": 633,
-        "height": 900,
-        "size_bytes": 91152,
-        "page_captions": [
-          "Fig. 6.31)",
-          "Fig. 6.32A)",
-          "Fig. 6.32B)"
-        ],
-        "captions": [
-          "Fig. 6.31).",
-          "Fig. 6.32A). •",
-          "Fig. 6.32B). •",
-          "Fig. 6.32C). Fig. 6.31: Palpating for tenderness over the sacroiliac joint secondary to an"
-        ]
+        "height": 900
       },
       {
-        "chapter": 6,
-        "chapter_name": "lumbopelvic_pain",
-        "page": 293,
         "file": "assets/deepak_images/ch06_lumbopelvic_pain/p293_img1.jpeg",
-        "width": 1080,
-        "height": 755,
-        "size_bytes": 81316,
-        "page_captions": [
-          "Fig. 6.32D)",
-          "Fig. 6.32E)",
-          "Figs 6.33A and B).29"
-        ],
-        "captions": [
-          "Fig. 6.32D). •",
-          "Fig. 6.32E). Signs of Instability is Positive",
-          "Figs 6.33A and B).29 Figs 6.32A and B:"
-        ]
-      },
-      {
-        "chapter": 6,
-        "chapter_name": "lumbopelvic_pain",
         "page": 293,
+        "fig_number": "6.32A and B",
+        "caption_en": "Figs 6.32A and B: A",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: A",
+        "category": "examination",
+        "width": 1080,
+        "height": 755
+      },
+      {
         "file": "assets/deepak_images/ch06_lumbopelvic_pain/p293_img2.jpeg",
+        "page": 293,
+        "fig_number": "6.32A and B",
+        "caption_en": "Figs 6.32A and B: A",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: A",
+        "category": "examination",
         "width": 1080,
-        "height": 810,
-        "size_bytes": 75347,
-        "page_captions": [
-          "Fig. 6.32D)",
-          "Fig. 6.32E)",
-          "Figs 6.33A and B).29"
-        ],
-        "captions": [
-          "Fig. 6.32D). •",
-          "Fig. 6.32E). Signs of Instability is Positive",
-          "Figs 6.33A and B).29 Figs 6.32A and B:"
-        ]
+        "height": 810
       },
       {
-        "chapter": 6,
-        "chapter_name": "lumbopelvic_pain",
-        "page": 294,
         "file": "assets/deepak_images/ch06_lumbopelvic_pain/p294_img1.jpeg",
+        "page": 294,
+        "fig_number": "6.32C to E",
+        "caption_en": "Figs 6.32C to E: Sacroiliac provocation",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Sacroiliac provocation",
+        "category": "examination",
         "width": 1080,
-        "height": 810,
-        "size_bytes": 69193,
-        "page_captions": [
-          "Figs 6.32C to E:  Sacroiliac provocation"
-        ],
-        "captions": [
-          "Figs 6.32C to E: Sacroiliac provocation C"
-        ]
+        "height": 810
       },
       {
-        "chapter": 6,
-        "chapter_name": "lumbopelvic_pain",
-        "page": 294,
         "file": "assets/deepak_images/ch06_lumbopelvic_pain/p294_img2.jpeg",
-        "width": 1080,
-        "height": 810,
-        "size_bytes": 69450,
-        "page_captions": [
-          "Figs 6.32C to E:  Sacroiliac provocation"
-        ],
-        "captions": [
-          "Figs 6.32C to E: Sacroiliac provocation C"
-        ]
-      },
-      {
-        "chapter": 6,
-        "chapter_name": "lumbopelvic_pain",
         "page": 294,
+        "fig_number": "6.32C to E",
+        "caption_en": "Figs 6.32C to E: Sacroiliac provocation",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Sacroiliac provocation",
+        "category": "examination",
+        "width": 1080,
+        "height": 810
+      },
+      {
         "file": "assets/deepak_images/ch06_lumbopelvic_pain/p294_img3.jpeg",
+        "page": 294,
+        "fig_number": "6.32C to E",
+        "caption_en": "Figs 6.32C to E: Sacroiliac provocation",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Sacroiliac provocation",
+        "category": "examination",
         "width": 1080,
-        "height": 810,
-        "size_bytes": 71790,
-        "page_captions": [
-          "Figs 6.32C to E:  Sacroiliac provocation"
-        ],
-        "captions": [
-          "Figs 6.32C to E: Sacroiliac provocation C"
-        ]
+        "height": 810
       },
       {
-        "chapter": 6,
-        "chapter_name": "lumbopelvic_pain",
-        "page": 295,
         "file": "assets/deepak_images/ch06_lumbopelvic_pain/p295_img1.jpeg",
-        "width": 621,
-        "height": 900,
-        "size_bytes": 87208,
-        "page_captions": [
-          "Figs 6.33A and B:  Prone instability test"
-        ],
-        "captions": [
-          "Figs 6.33A and B: Prone instability test B"
-        ]
-      },
-      {
-        "chapter": 6,
-        "chapter_name": "lumbopelvic_pain",
         "page": 295,
+        "fig_number": "6.33A and B",
+        "caption_en": "Figs 6.33A and B: Prone instability test",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Prone instability test",
+        "category": "examination",
+        "width": 621,
+        "height": 900
+      },
+      {
         "file": "assets/deepak_images/ch06_lumbopelvic_pain/p295_img2.jpeg",
+        "page": 295,
+        "fig_number": "6.33A and B",
+        "caption_en": "Figs 6.33A and B: Prone instability test",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Prone instability test",
+        "category": "examination",
         "width": 1080,
-        "height": 760,
-        "size_bytes": 100205,
-        "page_captions": [
-          "Figs 6.33A and B:  Prone instability test"
-        ],
-        "captions": [
-          "Figs 6.33A and B: Prone instability test B"
-        ]
+        "height": 760
       },
       {
-        "chapter": 6,
-        "chapter_name": "lumbopelvic_pain",
-        "page": 296,
         "file": "assets/deepak_images/ch06_lumbopelvic_pain/p296_img1.jpeg",
+        "page": 296,
+        "fig_number": "6.34",
+        "caption_en": "Fig. 6.34: Hip internal rotation",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Hip internal rotation",
+        "category": "examination",
         "width": 659,
-        "height": 900,
-        "size_bytes": 77336,
-        "page_captions": [
-          "Fig. 6.34). Restriction in internal rotation and extension is ",
-          "Fig. 6.35). The patient is slowly ",
-          "Fig. 6.34:  Hip internal rotation"
-        ],
-        "captions": [
-          "Fig. 6.34). Restriction in internal rotation and extension is most indicative of a capsular pattern. This will indicate increased innominate",
-          "Fig. 6.35). The patient is slowly lowered, to lay on the back. The other leg that hangs by the edge of the table is",
-          "Fig. 6.34: Hip internal rotation"
-        ]
+        "height": 900
       },
       {
-        "chapter": 6,
-        "chapter_name": "lumbopelvic_pain",
-        "page": 297,
         "file": "assets/deepak_images/ch06_lumbopelvic_pain/p297_img1.jpeg",
+        "page": 297,
+        "fig_number": "6.35",
+        "caption_en": "Fig. 6.35: Thomas test",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Thomas test",
+        "category": "examination",
         "width": 1080,
-        "height": 720,
-        "size_bytes": 67948,
-        "page_captions": [
-          "Fig. 6.35:  Thomas test"
-        ],
-        "captions": [
-          "Fig. 6.35: Thomas test"
-        ]
+        "height": 720
       }
     ],
+    "stage_2_somatic_dysfunctions": [
+      "Xoay xương chậu ra trước / ra sau (Anterior / Posterior Innominate Shear): Mất cân xứng chiều dài chi chức năng và đau khớp cùng chậu.",
+      "Vặn xoắn xương cùng (Sacral Torsion on Oblique Axis - R on R, L on L): Gây căng cứng cơ hình lê và chèn ép rễ thần kinh tọa.",
+      "Khóa diện khớp thắt lưng (Lumbar Facet ERS / FRS): Co thắt cơ nhiều tầng và đau nhói khi ưỡn lưng xoay người."
+    ],
+    "stage_3_guidemap_intervention": "Kỹ thuật nắn chỉnh cân bằng cơ sinh học khung chậu (Muscle Energy Technique - MET); Trường hợp viêm rễ thần kinh cấp hoặc viêm khớp cùng chậu dai dẳng -> Tiêm thẩm nhuận rễ thắt lưng chọn lọc (Transforaminal ESI) hoặc Tiêm khớp cùng chậu dưới hướng dẫn siêu âm (Xem Web 1: Quy trình Tiêm Khớp Cùng Chậu & Tiêm Rễ Thần Kinh Ngoài Màng Cứng).",
     "recommended_web1_procedures": [
       {
         "id": "sacroiliac-joint",
@@ -2853,14 +2946,16 @@ const STABLE_SCREENING_FALLBACK = [
     ]
   },
   {
-    "id": "ch07-hip-groin",
+    "id": "hip-groin-pain",
     "chapter": 7,
-    "region": "lower_limb",
-    "region_vi": "Khớp Háng & Vùng Bẹn",
-    "title": "Hip Pain Differential Screening",
-    "title_vi": "Sàng Lọc Chẩn Đoán Phân Biệt Đau Khớp Háng & Vùng Bẹn",
-    "author": "GS. Deepak Sebastian (Chapter 7, pp. 286-318)",
-    "summary": "Hướng dẫn sàng lọc lâm sàng vùng háng bẹn: Phân loại theo 3 khu vực giải phẫu chức năng (Đau trước - trong háng bẹn vs Đau ngoài mấu chuyển lớn vs Đau sau mông háng). Sàng lọc cờ đỏ khẩn cấp: Gãy cổ xương đùi, hoại tử vô mạch chỏm xương đùi (AVN), viêm khớp háng nhiễm trùng, trượt biểu mô chỏm đùi (SCFE) và Legg-Calvé-Perthes ở trẻ em. Chẩn đoán phân biệt chuyên sâu giữa thoái hóa khớp háng, xung đột xương đùi ổ cối (FAI), rách sụn viền, viêm bao hoạt dịch thắt lưng chậu, hội chứng dải chậu chày và đau mấu chuyển lớn (GTPS). Kèm trọn bộ 20 hình ảnh Atlas Deepak.",
+    "region": "hip",
+    "region_vi": "Khớp Háng & Bẹn",
+    "icon": "👖",
+    "title": "Hip Joint, Groin, AVN & Greater Trochanteric Pain",
+    "title_vi": "👖 Đau Khớp Háng, Vùng Bẹn, AVN & Mấu Chuyển Lớn",
+    "chief_complaint": "Phàn nàn chính: Đau sâu vùng bẹn hình chữ C (dấu hiệu C-sign), đau khớp háng khi đứng lên ngồi xuống hoặc lên xuống cầu thang, đau mặt ngoài khớp háng khi nằm nghiêng (viêm túi thanh dịch mấu chuyển lớn), đi khập khiễng.",
+    "author": "GS. Deepak Sebastian (Chương 7, pp. 301-333)",
+    "summary": "Chẩn đoán phân biệt đau khớp háng và vùng bẹn: Thoái hóa khớp háng (Coxarthrosis), Hoại tử vô khuẩn chỏm xương đùi (Avascular Necrosis - AVN do corticoid/rượu), Xung đột xương chậu - đùi (FAI Cam/Pincer), Rách viền sụn khớp háng (Acetabular labral tear), Hội chứng đau mấu chuyển lớn (GTPS / Trochanteric bursitis). Sàng lọc cờ đỏ gãy cổ xương đùi người già, viêm khớp háng nhiễm trùng mủ, thoát vị bẹn nghẹt, u xương chậu.",
     "stage_1_systemic_red_flags": [
       {
         "category": "Cờ Đỏ Gãy Cổ Xương Đùi & Gãy Khối Mấu Chuyển",
@@ -2887,24 +2982,28 @@ const STABLE_SCREENING_FALLBACK = [
       {
         "category": "Gãy Cổ Xương Đùi & Viêm Khớp Nhiễm Trùng",
         "signs": "Chân ngắn xoay ngoài sau ngã, sốt cao co cứng khớp háng hoàn toàn.",
-        "action": "Chụp X-quang/MRI háng, phẫu thuật cấp cứu."
+        "action": "Chụp X-quang/MRI háng, phẫu thuật cấp cứu.",
+        "figures": []
       },
       {
         "category": "Thoát Vị Bẹn / Đùi Nghẹt (Strangulated Hernia)",
         "signs": "Khối phồng vùng bẹn đùi đau dữ dội, không đẩy lên được, kèm nôn mửa, chướng bụng, bí trung đại tiện.",
-        "action": "Cấp cứu Ngoại tổng quát mổ giải phóng tạng nghẹt tránh hoại tử ruột."
+        "action": "Cấp cứu Ngoại tổng quát mổ giải phóng tạng nghẹt tránh hoại tử ruột.",
+        "figures": []
       }
     ],
     "visceral_referrals": [
       {
         "source": "Áp-xe Cơ Thắt Lưng Chậu (Psoas Abscess)",
         "pattern": "Đau vùng bẹn và mặt trước trong khớp háng kèm sốt dao động, gầy sút cân. Bệnh nhân có tư thế gập háng và xoay trong để chùng cơ thắt lưng chậu; Duỗi háng thụ động gây đau dữ dội (Dấu hiệu cơ thắt lưng chậu / Psoas sign +).",
-        "differential": "Chụp CT hoặc MRI vùng bụng chậu tìm ổ áp-xe trong cơ thắt lưng chậu."
+        "differential": "Chụp CT hoặc MRI vùng bụng chậu tìm ổ áp-xe trong cơ thắt lưng chậu.",
+        "figures": []
       },
       {
         "source": "Bệnh Lý Thần Kinh Bì Đùi Ngoài (Meralgia Paresthetica)",
         "pattern": "Tê bì, bỏng rát, giảm cảm giác hình bầu dục ở mặt trước ngoài đùi do dây thần kinh bì đùi ngoài bị chèn ép dưới dây chằng bẹn (ở người béo phì, mặc quần chật, đeo thắt lưng đồ nghề nặng).",
-        "differential": "Khám vận động cơ lực và phản xạ gân xương hoàn toàn bình thường (dây thần kinh thuần cảm giác)."
+        "differential": "Khám vận động cơ lực và phản xạ gân xương hoàn toàn bình thường (dây thần kinh thuần cảm giác).",
+        "figures": []
       }
     ],
     "drug_induced": [
@@ -2918,7 +3017,29 @@ const STABLE_SCREENING_FALLBACK = [
         "significance": "Tái hiện đau chói sâu trong bẹn -> Dương tính với Xung đột xương đùi ổ cối (Femoroacetabular Impingement - FAI) và Rách sụn viền ổ cối (Acetabular Labral Tear). Độ nhạy cực cao (Sn: 94-99%).",
         "sensitivity": "80% - 90%",
         "specificity": "75% - 85%",
-        "diagnostic_role": "Nghiệm pháp lâm sàng hỗ trợ sàng lọc chẩn đoán phân biệt"
+        "diagnostic_role": "Nghiệm pháp lâm sàng hỗ trợ sàng lọc chẩn đoán phân biệt",
+        "figures": [
+          {
+            "file": "assets/deepak_images/ch07_hip_pain/p316_img1.jpeg",
+            "page": 316,
+            "fig_number": "7.5",
+            "caption_en": "Fig. 7.5: Anterior view of the hip showing a cam impingement",
+            "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Anterior view of the hip showing a cam impingement",
+            "category": "redflags_pathology",
+            "width": 990,
+            "height": 1019
+          },
+          {
+            "file": "assets/deepak_images/ch07_hip_pain/p317_img1.jpeg",
+            "page": 317,
+            "fig_number": "7.6",
+            "caption_en": "Fig. 7.6: Anterior view of the hip showing a pincer impingement",
+            "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Anterior view of the hip showing a pincer impingement",
+            "category": "redflags_pathology",
+            "width": 990,
+            "height": 1019
+          }
+        ]
       },
       {
         "name": "Nghiệm Pháp FABER / Patrick (Flexion-Abduction-External Rotation)",
@@ -2926,7 +3047,29 @@ const STABLE_SCREENING_FALLBACK = [
         "significance": "Đau sâu mặt trước bẹn: Bệnh lý nội khớp háng (Thoái hóa/Sụn viền); Đau sau mông vùng khớp cùng chậu: Rối loạn chức năng khớp cùng chậu (SIJD).",
         "sensitivity": "82% - 88%",
         "specificity": "68% - 75%",
-        "diagnostic_role": "Sàng lọc đau khớp háng trong bao (đau bẹn trước) vs khớp cùng chậu (đau mông sau)"
+        "diagnostic_role": "Sàng lọc đau khớp háng trong bao (đau bẹn trước) vs khớp cùng chậu (đau mông sau)",
+        "figures": [
+          {
+            "file": "assets/deepak_images/ch07_hip_pain/p301_img1.jpeg",
+            "page": 301,
+            "fig_number": "7.1",
+            "caption_en": "Fig. 7.1: Hip anterior view",
+            "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Hip anterior view",
+            "category": "general_atlas",
+            "width": 1249,
+            "height": 813
+          },
+          {
+            "file": "assets/deepak_images/ch07_hip_pain/p304_img1.jpeg",
+            "page": 304,
+            "fig_number": "7.2",
+            "caption_en": "Fig. 7.2: Hip joint vasculature",
+            "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Hip joint vasculature",
+            "category": "anatomy_visceral",
+            "width": 1285,
+            "height": 813
+          }
+        ]
       },
       {
         "name": "Nghiệm Pháp Scouring / Hip Quadrant Test (Nghiệm Pháp Vét Khớp Háng)",
@@ -2934,7 +3077,29 @@ const STABLE_SCREENING_FALLBACK = [
         "significance": "Tái hiện tiếng lạo xạo, đau chói hoặc cảm giác kẹt khớp -> Tổn thương thoái hóa sụn khớp hoặc rách sụn viền ổ cối.",
         "sensitivity": "80% - 85%",
         "specificity": "70% - 75%",
-        "diagnostic_role": "Tái hiện đau và tiếng lục cục ổ cối trong thoái hóa khớp háng và tổn thương sụn khớp"
+        "diagnostic_role": "Tái hiện đau và tiếng lục cục ổ cối trong thoái hóa khớp háng và tổn thương sụn khớp",
+        "figures": [
+          {
+            "file": "assets/deepak_images/ch07_hip_pain/p330_img1.jpeg",
+            "page": 330,
+            "fig_number": "7.18",
+            "caption_en": "Fig. 7.18: Hip scouring test",
+            "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Hip scouring test",
+            "category": "examination",
+            "width": 958,
+            "height": 703
+          },
+          {
+            "file": "assets/deepak_images/ch07_hip_pain/p330_img2.jpeg",
+            "page": 330,
+            "fig_number": "7.18",
+            "caption_en": "Fig. 7.18: Hip scouring test",
+            "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Hip scouring test",
+            "category": "examination",
+            "width": 958,
+            "height": 685
+          }
+        ]
       },
       {
         "name": "Nghiệm Pháp Thomas (Thomas Test Co Rút Cơ Gập Háng)",
@@ -2942,7 +3107,19 @@ const STABLE_SCREENING_FALLBACK = [
         "significance": "Nếu đùi chân kia bị nhấc bổng khỏi mặt bàn -> Co rút cơ thắt lưng chậu (Iliopsoas tightness); Nếu đùi chạm bàn nhưng cẳng chân bị duỗi ra -> Co rút cơ thẳng đùi (Rectus femoris).",
         "sensitivity": "89%",
         "specificity": "92%",
-        "diagnostic_role": "Độ chính xác cao đánh giá co rút cơ thắt lưng chậu (Iliopsoas) và cơ thẳng đùi (Rectus Femoris)"
+        "diagnostic_role": "Độ chính xác cao đánh giá co rút cơ thắt lưng chậu (Iliopsoas) và cơ thẳng đùi (Rectus Femoris)",
+        "figures": [
+          {
+            "file": "assets/deepak_images/ch07_hip_pain/p326_img1.jpeg",
+            "page": 326,
+            "fig_number": "7.12",
+            "caption_en": "Fig. 7.12: Thomas test",
+            "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Thomas test",
+            "category": "examination",
+            "width": 958,
+            "height": 718
+          }
+        ]
       },
       {
         "name": "Nghiệm Pháp Ober (Ober's Test Co Rút Dải Chậu Chày)",
@@ -2950,7 +3127,8 @@ const STABLE_SCREENING_FALLBACK = [
         "significance": "Nếu đùi không rơi xuống được mặt bàn mà lơ lửng trên không -> Co rút dải chậu chày (Iliotibial band contracture).",
         "sensitivity": "85%",
         "specificity": "90%",
-        "diagnostic_role": "Đánh giá co rút dải chậu chày (ITB) và cơ căng mạc đùi (TFL) gây hội chứng đau mấu chuyển lớn"
+        "diagnostic_role": "Đánh giá co rút dải chậu chày (ITB) và cơ căng mạc đùi (TFL) gây hội chứng đau mấu chuyển lớn",
+        "figures": []
       },
       {
         "name": "Dấu Hiệu Trendelenburg (Trendelenburg Sign Khám Cơ Mông Nhỡ)",
@@ -2958,7 +3136,29 @@ const STABLE_SCREENING_FALLBACK = [
         "significance": "Nếu khung chậu bên chân đối diện bị sa sụp xuống thấp -> Yếu hoặc đứt rách gân cơ mông nhỡ / mông bé (Gluteus medius insufficiency).",
         "sensitivity": "73%",
         "specificity": "77%",
-        "diagnostic_role": "Phát hiện suy yếu/rách cơ mông nhỡ (Gluteus Medius) hoặc ức chế rễ L5 / thần kinh mông trên"
+        "diagnostic_role": "Phát hiện suy yếu/rách cơ mông nhỡ (Gluteus Medius) hoặc ức chế rễ L5 / thần kinh mông trên",
+        "figures": [
+          {
+            "file": "assets/deepak_images/ch07_hip_pain/p315_img1.jpeg",
+            "page": 315,
+            "fig_number": "7.4",
+            "caption_en": "Fig. 7.4: Location of friction on the trochanteric bursa",
+            "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Location of friction on the trochanteric bursa",
+            "category": "redflags_pathology",
+            "width": 1246,
+            "height": 813
+          },
+          {
+            "file": "assets/deepak_images/ch07_hip_pain/p325_img1.jpeg",
+            "page": 325,
+            "fig_number": "7.10",
+            "caption_en": "Fig. 7.10: Hip abduction firing pattern",
+            "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Hip abduction firing pattern",
+            "category": "examination",
+            "width": 958,
+            "height": 711
+          }
+        ]
       }
     ],
     "differential_table": [
@@ -2995,351 +3195,214 @@ const STABLE_SCREENING_FALLBACK = [
         "gold_standard": "Siêu âm can thiệp cơ xương khớp / X-quang / MRI chuyên sâu"
       }
     ],
-    "stage_2_somatic_dysfunctions": [
-      "Trượt chỏm xương đùi ra trước (Anterior Femoral Glide): Chỏm đùi không trượt ra sau được khi gập háng làm đau nhói trước bẹn.",
-      "Hạn chế bao khớp háng phía dưới sau (Inferoposterior Capsular Restriction): Gây cản trở động tác gập sâu và xoay trong háng.",
-      "Co thắt cơ thắt lưng chậu và cơ hình lê thứ phát (Secondary Psoas & Piriformis Spasm)."
-    ],
-    "stage_3_guidemap_intervention": "Kỹ thuật kéo dãn trượt khớp háng ra sau (Posterior glide mobilization); Tiêm nội khớp háng dưới hướng dẫn siêu âm (xem Web 1: Tiêm Khớp Háng Đường Trước Ngoài) hoặc Tiêm túi thanh dịch mấu chuyển lớn / gân cơ mông nhỡ.",
     "figures": [
       {
-        "chapter": 7,
-        "chapter_name": "hip_pain",
-        "page": 301,
         "file": "assets/deepak_images/ch07_hip_pain/p301_img1.jpeg",
+        "page": 301,
+        "fig_number": "7.1",
+        "caption_en": "Fig. 7.1: Hip anterior view",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Hip anterior view",
+        "category": "general_atlas",
         "width": 1249,
-        "height": 813,
-        "size_bytes": 90392,
-        "page_captions": [
-          "Fig. 7.1). From a mechanical ",
-          "Fig. 7.1:  Hip anterior view"
-        ],
-        "captions": [
-          "Fig. 7.1). From a mechanical Fig. 7.1: Hip anterior view"
-        ]
+        "height": 813
       },
       {
-        "chapter": 7,
-        "chapter_name": "hip_pain",
-        "page": 304,
         "file": "assets/deepak_images/ch07_hip_pain/p304_img1.jpeg",
+        "page": 304,
+        "fig_number": "7.2",
+        "caption_en": "Fig. 7.2: Hip joint vasculature",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Hip joint vasculature",
+        "category": "anatomy_visceral",
         "width": 1285,
-        "height": 813,
-        "size_bytes": 107171,
-        "page_captions": [
-          "Fig. 7.2:  Hip joint vasculature"
-        ],
-        "captions": [
-          "Fig. 7.2: Hip joint vasculature"
-        ]
+        "height": 813
       },
       {
-        "chapter": 7,
-        "chapter_name": "hip_pain",
-        "page": 314,
         "file": "assets/deepak_images/ch07_hip_pain/p314_img1.jpeg",
+        "page": 314,
+        "fig_number": "7.3",
+        "caption_en": "Fig. 7.3: Osteoarthritis of the coxafemoral joint",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Osteoarthritis of the coxafemoral joint",
+        "category": "general_atlas",
         "width": 1230,
-        "height": 813,
-        "size_bytes": 91889,
-        "page_captions": [
-          "Fig. 7.3). ",
-          "Fig. 7.3:  Osteoarthritis of the coxafemoral joint"
-        ],
-        "captions": [
-          "Fig. 7.3). What to look for?",
-          "Fig. 7.3: Osteoarthritis of the coxafemoral joint"
-        ]
+        "height": 813
       },
       {
-        "chapter": 7,
-        "chapter_name": "hip_pain",
-        "page": 315,
         "file": "assets/deepak_images/ch07_hip_pain/p315_img1.jpeg",
+        "page": 315,
+        "fig_number": "7.4",
+        "caption_en": "Fig. 7.4: Location of friction on the trochanteric bursa",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Location of friction on the trochanteric bursa",
+        "category": "redflags_pathology",
         "width": 1246,
-        "height": 813,
-        "size_bytes": 100842,
-        "page_captions": [
-          "Fig. 7.4). This is because the pelvic ",
-          "Fig. 7.4:  Location of friction on the trochanteric bursa"
-        ],
-        "captions": [
-          "Fig. 7.4). This is because the pelvic dip causes the lengthened soft tissue to rub over the greater trochanter on the",
-          "Fig. 7.4: Location of friction on the trochanteric bursa"
-        ]
+        "height": 813
       },
       {
-        "chapter": 7,
-        "chapter_name": "hip_pain",
-        "page": 316,
         "file": "assets/deepak_images/ch07_hip_pain/p316_img1.jpeg",
+        "page": 316,
+        "fig_number": "7.5",
+        "caption_en": "Fig. 7.5: Anterior view of the hip showing a cam impingement",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Anterior view of the hip showing a cam impingement",
+        "category": "redflags_pathology",
         "width": 990,
-        "height": 1019,
-        "size_bytes": 89783,
-        "page_captions": [
-          "Fig. 7.5)",
-          "Fig. 7.5:  Anterior view of the hip showing a cam impingement"
-        ],
-        "captions": [
-          "Fig. 7.5). Fig. 7.5: Anterior view of the hip showing a cam impingement"
-        ]
+        "height": 1019
       },
       {
-        "chapter": 7,
-        "chapter_name": "hip_pain",
-        "page": 317,
         "file": "assets/deepak_images/ch07_hip_pain/p317_img1.jpeg",
+        "page": 317,
+        "fig_number": "7.6",
+        "caption_en": "Fig. 7.6: Anterior view of the hip showing a pincer impingement",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Anterior view of the hip showing a pincer impingement",
+        "category": "redflags_pathology",
         "width": 990,
-        "height": 1019,
-        "size_bytes": 86468,
-        "page_captions": [
-          "Fig. 7.6) where the acetabulum encloses the femoral ",
-          "Fig. 7.6:  Anterior view of the hip showing a pincer impingement"
-        ],
-        "captions": [
-          "Fig. 7.6) where the acetabulum encloses the femoral head excessively, especially in the anterior direction, causing an impingement",
-          "Fig. 7.6: Anterior view of the hip showing a pincer impingement"
-        ]
+        "height": 1019
       },
       {
-        "chapter": 7,
-        "chapter_name": "hip_pain",
-        "page": 320,
         "file": "assets/deepak_images/ch07_hip_pain/p320_img1.jpeg",
+        "page": 320,
+        "fig_number": "7.7",
+        "caption_en": "Fig. 7.7: Right thigh anterior view",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Right thigh anterior view",
+        "category": "general_atlas",
         "width": 974,
-        "height": 903,
-        "size_bytes": 88099,
-        "page_captions": [
-          "Fig. 7.7)",
-          "Fig. 7.7:  Right thigh anterior view"
-        ],
-        "captions": [
-          "Fig. 7.7). Ilioinguinal",
-          "Fig. 7.7: Right thigh anterior view"
-        ]
+        "height": 903
       },
       {
-        "chapter": 7,
-        "chapter_name": "hip_pain",
-        "page": 322,
         "file": "assets/deepak_images/ch07_hip_pain/p322_img1.jpeg",
+        "page": 322,
+        "fig_number": "7.8",
+        "caption_en": "Fig. 7.8: Sites of entrapment of the lateral cutaneous nerve",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Sites of entrapment of the lateral cutaneous nerve",
+        "category": "redflags_pathology",
         "width": 968,
-        "height": 891,
-        "size_bytes": 80684,
-        "page_captions": [
-          "Fig. 7.8:  Sites of entrapment of the lateral cutaneous nerve"
-        ],
-        "captions": [
-          "Fig. 7.8: Sites of entrapment of the lateral cutaneous nerve"
-        ]
+        "height": 891
       },
       {
-        "chapter": 7,
-        "chapter_name": "hip_pain",
-        "page": 324,
         "file": "assets/deepak_images/ch07_hip_pain/p324_img1.jpeg",
+        "page": 324,
+        "fig_number": "7.9",
+        "caption_en": "Fig. 7.9: Femoral head posterolateral",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Femoral head posterolateral",
+        "category": "examination",
         "width": 958,
-        "height": 720,
-        "size_bytes": 77380,
-        "page_captions": [
-          "Fig. 7.9:  Femoral head posterolateral",
-          "Fig. 7.9). Motion examination may reveal restriction ",
-          "Fig. 7.10)"
-        ],
-        "captions": [
-          "Fig. 7.9: Femoral head posterolateral a posterolateral dysfunction (Fig. 7.9). Motion examination may reveal restriction",
-          "Fig. 7.10). DESCRIPTION OF EXAMINATION PROCEDURES",
-          "Fig. 7.11). Restriction in internal rotation and extension is most indicative of a capsular pattern.27 This will indicate increased innominate"
-        ]
+        "height": 720
       },
       {
-        "chapter": 7,
-        "chapter_name": "hip_pain",
-        "page": 325,
         "file": "assets/deepak_images/ch07_hip_pain/p325_img1.jpeg",
-        "width": 958,
-        "height": 711,
-        "size_bytes": 76960,
-        "page_captions": [
-          "Fig. 7.10:  Hip abduction firing pattern",
-          "Fig. 7.11:  Assessment of hip capsule mobility"
-        ],
-        "captions": [
-          "Fig. 7.10: Hip abduction firing pattern Fig. 7.11: Assessment of hip capsule mobility"
-        ]
-      },
-      {
-        "chapter": 7,
-        "chapter_name": "hip_pain",
         "page": 325,
+        "fig_number": "7.10",
+        "caption_en": "Fig. 7.10: Hip abduction firing pattern",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Hip abduction firing pattern",
+        "category": "examination",
+        "width": 958,
+        "height": 711
+      },
+      {
         "file": "assets/deepak_images/ch07_hip_pain/p325_img2.jpeg",
+        "page": 325,
+        "fig_number": "7.10",
+        "caption_en": "Fig. 7.10: Hip abduction firing pattern",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Hip abduction firing pattern",
+        "category": "examination",
         "width": 525,
-        "height": 798,
-        "size_bytes": 80056,
-        "page_captions": [
-          "Fig. 7.10:  Hip abduction firing pattern",
-          "Fig. 7.11:  Assessment of hip capsule mobility"
-        ],
-        "captions": [
-          "Fig. 7.10: Hip abduction firing pattern Fig. 7.11: Assessment of hip capsule mobility"
-        ]
+        "height": 798
       },
       {
-        "chapter": 7,
-        "chapter_name": "hip_pain",
-        "page": 326,
         "file": "assets/deepak_images/ch07_hip_pain/p326_img1.jpeg",
+        "page": 326,
+        "fig_number": "7.12",
+        "caption_en": "Fig. 7.12: Thomas test",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Thomas test",
+        "category": "examination",
         "width": 958,
-        "height": 718,
-        "size_bytes": 111201,
-        "page_captions": [
-          "Fig. 7.12). The patient is slowly ",
-          "Fig. 7.13). Inability to maintain resistance indicates weakness.",
-          "Fig. 7.12:  Thomas test"
-        ],
-        "captions": [
-          "Fig. 7.12). The patient is slowly lowered to lay on the back. The other leg that hangs by the edge of the table is",
-          "Fig. 7.13). Inability to maintain resistance indicates weakness.",
-          "Fig. 7.12: Thomas test"
-        ]
+        "height": 718
       },
       {
-        "chapter": 7,
-        "chapter_name": "hip_pain",
-        "page": 327,
         "file": "assets/deepak_images/ch07_hip_pain/p327_img1.jpeg",
-        "width": 532,
-        "height": 798,
-        "size_bytes": 76701,
-        "page_captions": [
-          "Fig. 7.14). The maneuver is now tried with the hip in slight flexion. The examiner ",
-          "Fig. 7.13:  Assessing gluteus medius strength",
-          "Fig. 7.14:  Obers test"
-        ],
-        "captions": [
-          "Fig. 7.14). The maneuver is now tried with the hip in slight flexion. The examiner then slowly lowers the upper leg. If the leg drops to the table, the test is negative;",
-          "Fig. 7.13: Assessing gluteus medius strength Fig. 7.14: Obers test"
-        ]
-      },
-      {
-        "chapter": 7,
-        "chapter_name": "hip_pain",
         "page": 327,
+        "fig_number": "7.13",
+        "caption_en": "Fig. 7.13: Assessing gluteus medius strength",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Assessing gluteus medius strength",
+        "category": "examination",
+        "width": 532,
+        "height": 798
+      },
+      {
         "file": "assets/deepak_images/ch07_hip_pain/p327_img2.jpeg",
+        "page": 327,
+        "fig_number": "7.13",
+        "caption_en": "Fig. 7.13: Assessing gluteus medius strength",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Assessing gluteus medius strength",
+        "category": "examination",
         "width": 958,
-        "height": 602,
-        "size_bytes": 63598,
-        "page_captions": [
-          "Fig. 7.14). The maneuver is now tried with the hip in slight flexion. The examiner ",
-          "Fig. 7.13:  Assessing gluteus medius strength",
-          "Fig. 7.14:  Obers test"
-        ],
-        "captions": [
-          "Fig. 7.14). The maneuver is now tried with the hip in slight flexion. The examiner then slowly lowers the upper leg. If the leg drops to the table, the test is negative;",
-          "Fig. 7.13: Assessing gluteus medius strength Fig. 7.14: Obers test"
-        ]
+        "height": 602
       },
       {
-        "chapter": 7,
-        "chapter_name": "hip_pain",
-        "page": 328,
         "file": "assets/deepak_images/ch07_hip_pain/p328_img1.jpeg",
+        "page": 328,
+        "fig_number": "7.15",
+        "caption_en": "Fig. 7.15: Palpation for tenderness over the trochanteric bursa",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Palpation for tenderness over the trochanteric bursa",
+        "category": "examination",
         "width": 958,
-        "height": 639,
-        "size_bytes": 76794,
-        "page_captions": [
-          "Fig. 7.15)",
-          "Fig. 7.15:  Palpation for tenderness over the trochanteric bursa"
-        ],
-        "captions": [
-          "Fig. 7.15). Fig. 7.15: Palpation for tenderness over the trochanteric bursa"
-        ]
+        "height": 639
       },
       {
-        "chapter": 7,
-        "chapter_name": "hip_pain",
-        "page": 329,
         "file": "assets/deepak_images/ch07_hip_pain/p329_img1.jpeg",
+        "page": 329,
+        "fig_number": "7.16",
+        "caption_en": "Fig. 7.16: Palpation for tenderness over the ischial bursa",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Palpation for tenderness over the ischial bursa",
+        "category": "examination",
         "width": 958,
-        "height": 474,
-        "size_bytes": 59079,
-        "page_captions": [
-          "Fig. 7.16). Firm and gentle pressure is applied for a comparable sign. ",
-          "Figs 7.17 and 7.18). A positive ",
-          "Fig. 7.19). Presence of clicking or grating "
-        ],
-        "captions": [
-          "Fig. 7.16). Firm and gentle pressure is applied for a comparable sign. Supratrochanteric Shortening",
-          "Figs 7.17 and 7.18). A positive test occurs with a grating or clicking sound or sensation, or if pain is elicited.29",
-          "Fig. 7.19). Presence of clicking or grating in the hip indicates instability and is positive for telescoping.30",
-          "Fig. 7.20). Pain may be indication of a pathology (impingement, osteoarthritis, labral tear, adductor tendonitis).",
-          "Fig. 7.16: Palpation for tenderness over the ischial bursa"
-        ]
+        "height": 474
       },
       {
-        "chapter": 7,
-        "chapter_name": "hip_pain",
-        "page": 330,
         "file": "assets/deepak_images/ch07_hip_pain/p330_img1.jpeg",
-        "width": 958,
-        "height": 703,
-        "size_bytes": 61846,
-        "page_captions": [
-          "Fig. 7.18:  Hip scouring test",
-          "Fig. 7.17:  Hip scouring test"
-        ],
-        "captions": [
-          "Fig. 7.18: Hip scouring test Fig. 7.17: Hip scouring test"
-        ]
-      },
-      {
-        "chapter": 7,
-        "chapter_name": "hip_pain",
         "page": 330,
+        "fig_number": "7.18",
+        "caption_en": "Fig. 7.18: Hip scouring test",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Hip scouring test",
+        "category": "examination",
+        "width": 958,
+        "height": 703
+      },
+      {
         "file": "assets/deepak_images/ch07_hip_pain/p330_img2.jpeg",
+        "page": 330,
+        "fig_number": "7.18",
+        "caption_en": "Fig. 7.18: Hip scouring test",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Hip scouring test",
+        "category": "examination",
         "width": 958,
-        "height": 685,
-        "size_bytes": 64446,
-        "page_captions": [
-          "Fig. 7.18:  Hip scouring test",
-          "Fig. 7.17:  Hip scouring test"
-        ],
-        "captions": [
-          "Fig. 7.18: Hip scouring test Fig. 7.17: Hip scouring test"
-        ]
+        "height": 685
       },
       {
-        "chapter": 7,
-        "chapter_name": "hip_pain",
-        "page": 331,
         "file": "assets/deepak_images/ch07_hip_pain/p331_img1.jpeg",
+        "page": 331,
+        "fig_number": "7.19",
+        "caption_en": "Fig. 7.19: Hip telescoping test",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Hip telescoping test",
+        "category": "examination",
         "width": 958,
-        "height": 693,
-        "size_bytes": 67034,
-        "page_captions": [
-          "Fig. 7.19:  Hip telescoping test",
-          "Fig. 7.20:  Resisted straight leg raise"
-        ],
-        "captions": [
-          "Fig. 7.19: Hip telescoping test Fig. 7.20: Resisted straight leg raise"
-        ]
+        "height": 693
       },
       {
-        "chapter": 7,
-        "chapter_name": "hip_pain",
-        "page": 331,
         "file": "assets/deepak_images/ch07_hip_pain/p331_img2.jpeg",
+        "page": 331,
+        "fig_number": "7.19",
+        "caption_en": "Fig. 7.19: Hip telescoping test",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Hip telescoping test",
+        "category": "examination",
         "width": 958,
-        "height": 803,
-        "size_bytes": 67504,
-        "page_captions": [
-          "Fig. 7.19:  Hip telescoping test",
-          "Fig. 7.20:  Resisted straight leg raise"
-        ],
-        "captions": [
-          "Fig. 7.19: Hip telescoping test Fig. 7.20: Resisted straight leg raise"
-        ]
+        "height": 803
       }
     ],
+    "stage_2_somatic_dysfunctions": [
+      "Giảm trượt chỏm xương đùi ra sau (Posterior glide restriction): Hạn chế gập háng sâu và gây đau xung đột cấn mặt trước ổ cối.",
+      "Co rút cơ thắt lưng chậu (Iliopsoas contracture) & cơ may: Làm tăng độ ưỡn cột sống thắt lưng và tăng áp lực lên khớp háng.",
+      "Yếu cơ mông nhỡ và cơ xoay ngoài khớp háng: Dấu hiệu Trendelenburg, lệch trục chi dưới gây quá tải bao hoạt dịch mấu chuyển lớn."
+    ],
+    "stage_3_guidemap_intervention": "Kỹ thuật kéo dãn trượt khớp háng ra sau (Posterior glide mobilization); Tiêm nội khớp háng dưới hướng dẫn siêu âm (xem Web 1: Tiêm Khớp Háng Đường Trước Ngoài) hoặc Tiêm túi thanh dịch mấu chuyển lớn / gân cơ mông nhỡ.",
     "recommended_web1_procedures": [
       {
         "id": "hip-intraarticular",
@@ -3379,14 +3442,16 @@ const STABLE_SCREENING_FALLBACK = [
     ]
   },
   {
-    "id": "ch08-knee-ankle-foot",
+    "id": "knee-leg-foot-pain",
     "chapter": 8,
-    "region": "lower_limb",
-    "region_vi": "Khớp Gối, Cổ Chân & Bàn Chân",
-    "title": "Knee, Ankle and Foot Pain Differential Screening",
-    "title_vi": "Sàng Lọc Chẩn Đoán Phân Biệt Đau Khớp Gối, Cổ Chân & Bàn Chân",
-    "author": "GS. Deepak Sebastian (Chapter 8, pp. 319-401)",
-    "summary": "Cẩm nang sàng lọc chi dưới toàn diện: Phân tách rõ ràng các cờ đỏ tối khẩn (Huyết khối tĩnh mạch sâu DVT, Hội chứng khoang cẳng chân cấp 5P, Viêm tắc động mạch Buerger, Đứt hoàn toàn gân gót Achilles, Viêm khớp gối nhiễm trùng). Hướng dẫn chi tiết kỹ thuật thực hiện và giá trị độ nhạy/độ đặc hiệu của 12 nghiệm pháp khớp gối (Lachman, Pivot shift, McMurray, Clark, Hoffa...) và cổ bàn chân (Thompson, Squeeze, Mulder, Windlass...). Bảng đối chiếu chẩn đoán phân biệt chuyên sâu cho tổn thương dây chằng, sụn chêm, hội chứng bánh chè đùi, nang Baker, viêm cân gan chân và u thần kinh Morton. Tích hợp trọn vẹn 67 hình ảnh Atlas giáo trình gốc.",
+    "region": "knee_foot",
+    "region_vi": "Gối, Cẳng & Bàn Chân",
+    "icon": "🦵",
+    "title": "Knee Joint, Lower Leg, Ankle & Foot Regional Pain",
+    "title_vi": "🦵 Đau Khớp Gối, Cẳng Chân, Cổ Chân & Bàn Chân",
+    "chief_complaint": "Phàn nàn chính: Sưng đau khớp gối sau chấn thương thể thao, kẹt khớp gối khi ngồi xổm (rách sụn chêm), đau gân gót Achilles khi chạy, đau nhói gót chân bước đầu tiên buổi sáng (viêm cân gan chân), sưng căng cứng bắp chân.",
+    "author": "GS. Deepak Sebastian (Chương 8, pp. 334-416)",
+    "summary": "Chẩn đoán phân biệt phức hợp gối - cổ chân - bàn chân: Tổn thương sụn chêm trong/ngoài, đứt dây chằng chéo trước/sau (ACL/PCL), thoái hóa khớp gối, hội chứng bánh chè - đùi (PFPS), nang Baker khoeo chân. Vùng cẳng & bàn chân: Viêm/đứt gân gót Achilles, viêm cân gan chân (Plantar Fasciitis), u thần kinh Morton, đau ngón chân cái do Gút cấp. CỜ ĐỎ KHẨN CẤP: Huyết khối tĩnh mạch sâu (DVT), Hội chứng chèn ép khoang cấp (5P), Viêm mủ khớp gối.",
     "stage_1_systemic_red_flags": [
       {
         "category": "Cờ Đỏ Huyết Khối Tĩnh Mạch Sâu Chi Dưới (Deep Vein Thrombosis - DVT)",
@@ -3413,24 +3478,70 @@ const STABLE_SCREENING_FALLBACK = [
       {
         "category": "Huyết Khối Tĩnh Mạch Sâu & Hội Chứng Khoang",
         "signs": "Bắp chân sưng nóng đỏ đau đột ngột, đau quá mức khi gập duỗi thụ động.",
-        "action": "Siêu âm Doppler / Mở cân giải áp cấp cứu."
+        "action": "Siêu âm Doppler / Mở cân giải áp cấp cứu.",
+        "figures": []
       },
       {
         "category": "Đứt Hoàn Toàn Gân Gót Achilles (Achilles Rupture)",
         "signs": "Cảm giác có người đá mạnh vào gót chân, tiếng 'bốp', sờ thấy ổ khuyết lõm trên gân gót, Thompson test (+).",
-        "action": "Nẹp cổ chân gập lòng, siêu âm đánh giá, phẫu thuật nối gân khẩn cấp."
+        "action": "Nẹp cổ chân gập lòng, siêu âm đánh giá, phẫu thuật nối gân khẩn cấp.",
+        "figures": [
+          {
+            "file": "assets/deepak_images/ch08_knee_ankle_foot_pain/p390_img1.jpeg",
+            "page": 390,
+            "fig_number": "8.24",
+            "caption_en": "Fig. 8.24: Tendoachilles tendon",
+            "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Tendoachilles tendon",
+            "category": "redflags_pathology",
+            "width": 523,
+            "height": 752
+          },
+          {
+            "file": "assets/deepak_images/ch08_knee_ankle_foot_pain/p390_img2.jpeg",
+            "page": 390,
+            "fig_number": "8.24",
+            "caption_en": "Fig. 8.24: Tendoachilles tendon",
+            "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Tendoachilles tendon",
+            "category": "redflags_pathology",
+            "width": 512,
+            "height": 752
+          }
+        ]
       }
     ],
     "visceral_referrals": [
       {
         "source": "Đau Chuyển Từ Khớp Háng Xuống Khớp Gối (Hip-to-Knee Referred Pain)",
         "pattern": "Bệnh lý khớp háng (Thoái hóa háng, Trượt biểu mô chỏm đùi SCFE, Viêm khớp háng) kích thích thần kinh bịt (Obturator nerve) quy chiếu đau xuống mặt trong và mặt trước khớp gối.",
-        "differential": "Ở trẻ em hoặc người lớn tuổi than phiền đau gối nhưng khám gối hoàn toàn bình thường -> BẮT BUỘC PHẢI KHÁM KHỚP HÁNG!"
+        "differential": "Ở trẻ em hoặc người lớn tuổi than phiền đau gối nhưng khám gối hoàn toàn bình thường -> BẮT BUỘC PHẢI KHÁM KHỚP HÁNG!",
+        "figures": [
+          {
+            "file": "assets/deepak_images/ch08_knee_ankle_foot_pain/p369_img1.jpeg",
+            "page": 369,
+            "fig_number": "8.12",
+            "caption_en": "Fig. 8.12: Sites for superficial nerve entrapment",
+            "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Sites for superficial nerve entrapment",
+            "category": "redflags_pathology",
+            "width": 920,
+            "height": 962
+          },
+          {
+            "file": "assets/deepak_images/ch08_knee_ankle_foot_pain/p377_img1.png",
+            "page": 377,
+            "fig_number": "8.14",
+            "caption_en": "Fig. 8.14: Tibial nerve and its branches",
+            "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Tibial nerve and its branches",
+            "category": "anatomy_visceral",
+            "width": 1259,
+            "height": 903
+          }
+        ]
       },
       {
         "source": "Đau Rễ Thần Kinh Thắt Lưng (L3-L4-L5-S1 Radiculopathy)",
         "pattern": "Rễ L3-L4 đau mặt trước đùi và trước trong gối; Rễ L5 đau mặt ngoài cẳng chân và mu chân ngón cái; Rễ S1 đau bắp chân lan xuống gót và bờ ngoài bàn chân.",
-        "differential": "Khám cột sống thắt lưng, nghiệm pháp SLR, Slump test và đánh giá phản xạ gân gót."
+        "differential": "Khám cột sống thắt lưng, nghiệm pháp SLR, Slump test và đánh giá phản xạ gân gót.",
+        "figures": []
       }
     ],
     "drug_induced": [
@@ -3445,7 +3556,29 @@ const STABLE_SCREENING_FALLBACK = [
         "significance": "Độ dịch chuyển mâm chày ra trước tăng kèm mất điểm dừng cứng (Soft end-feel). Độ nhạy (Sn: 85 - 95%) và Độ đặc hiệu (Sp: 94 - 98%) vượt trội hơn nghiệm pháp Ngăn kéo trước.",
         "sensitivity": "80% - 90%",
         "specificity": "75% - 85%",
-        "diagnostic_role": "Nghiệm pháp lâm sàng hỗ trợ sàng lọc chẩn đoán phân biệt"
+        "diagnostic_role": "Nghiệm pháp lâm sàng hỗ trợ sàng lọc chẩn đoán phân biệt",
+        "figures": [
+          {
+            "file": "assets/deepak_images/ch08_knee_ankle_foot_pain/p336_img1.jpeg",
+            "page": 336,
+            "fig_number": "8.2",
+            "caption_en": "Fig. 8.2: Primary ligaments of the knee and menisci",
+            "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Primary ligaments of the knee and menisci",
+            "category": "general_atlas",
+            "width": 1348,
+            "height": 664
+          },
+          {
+            "file": "assets/deepak_images/ch08_knee_ankle_foot_pain/p365_img1.jpeg",
+            "page": 365,
+            "fig_number": "8.9",
+            "caption_en": "Fig. 8.9: Types of meniscal tears",
+            "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Types of meniscal tears",
+            "category": "redflags_pathology",
+            "width": 1339,
+            "height": 678
+          }
+        ]
       },
       {
         "name": "Nghiệm Pháp Pivot Shift (Mất Vững Xoay Khớp Gối Trong Đứt ACL)",
@@ -3453,7 +3586,29 @@ const STABLE_SCREENING_FALLBACK = [
         "significance": "Ở góc gập khoảng 30° - 40°, mâm chày ngoài đang bị bán trật ra trước sẽ đột ngột giật 'khục' trượt về vị trí cũ. Độ đặc hiệu cực cao (Sp: 98%) khẳng định mất vững khớp gối chức năng.",
         "sensitivity": "80% - 90%",
         "specificity": "75% - 85%",
-        "diagnostic_role": "Nghiệm pháp lâm sàng hỗ trợ sàng lọc chẩn đoán phân biệt"
+        "diagnostic_role": "Nghiệm pháp lâm sàng hỗ trợ sàng lọc chẩn đoán phân biệt",
+        "figures": [
+          {
+            "file": "assets/deepak_images/ch08_knee_ankle_foot_pain/p411_img1.jpeg",
+            "page": 411,
+            "fig_number": "8.53A and B",
+            "caption_en": "Figs 8.53A and B: Pivot shift maneuver",
+            "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Pivot shift maneuver",
+            "category": "examination",
+            "width": 958,
+            "height": 706
+          },
+          {
+            "file": "assets/deepak_images/ch08_knee_ankle_foot_pain/p411_img2.jpeg",
+            "page": 411,
+            "fig_number": "8.53A and B",
+            "caption_en": "Figs 8.53A and B: Pivot shift maneuver",
+            "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Pivot shift maneuver",
+            "category": "examination",
+            "width": 958,
+            "height": 725
+          }
+        ]
       },
       {
         "name": "Nghiệm Pháp McMurray (Khám Rách Sụn Chêm Trong & Ngoài)",
@@ -3461,7 +3616,29 @@ const STABLE_SCREENING_FALLBACK = [
         "significance": "Tái hiện tiếng 'lục cục' (clunk/click) kèm đau chói tại khe khớp gối tương ứng.",
         "sensitivity": "53% - 70%",
         "specificity": "85% - 95%",
-        "diagnostic_role": "Đặc hiệu cao phát hiện rách sụn chêm khi có tiếng kêu click và đau chói khe khớp (+LR: 4.5)"
+        "diagnostic_role": "Đặc hiệu cao phát hiện rách sụn chêm khi có tiếng kêu click và đau chói khe khớp (+LR: 4.5)",
+        "figures": [
+          {
+            "file": "assets/deepak_images/ch08_knee_ankle_foot_pain/p336_img1.jpeg",
+            "page": 336,
+            "fig_number": "8.2",
+            "caption_en": "Fig. 8.2: Primary ligaments of the knee and menisci",
+            "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Primary ligaments of the knee and menisci",
+            "category": "general_atlas",
+            "width": 1348,
+            "height": 664
+          },
+          {
+            "file": "assets/deepak_images/ch08_knee_ankle_foot_pain/p337_img1.jpeg",
+            "page": 337,
+            "fig_number": "8.3",
+            "caption_en": "Fig. 8.3: Transverse view of the knee menisci",
+            "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Transverse view of the knee menisci",
+            "category": "general_atlas",
+            "width": 1331,
+            "height": 564
+          }
+        ]
       },
       {
         "name": "Nghiệm Pháp Clark (Patellar Grind Test Khám Khớp Bánh Chè - Đùi)",
@@ -3469,7 +3646,29 @@ const STABLE_SCREENING_FALLBACK = [
         "significance": "Đau chói dưới xương bánh chè và bệnh nhân không thể duy trì co cơ -> Dương tính trong Hội chứng đau bánh chè - đùi (PFPS) / Nhuyễn sụn bánh chè.",
         "sensitivity": "74%",
         "specificity": "82%",
-        "diagnostic_role": "Khám hội chứng đau bánh chè - đùi (PFPS) và thoái hóa sụn khớp bánh chè"
+        "diagnostic_role": "Khám hội chứng đau bánh chè - đùi (PFPS) và thoái hóa sụn khớp bánh chè",
+        "figures": [
+          {
+            "file": "assets/deepak_images/ch08_knee_ankle_foot_pain/p359_img1.jpeg",
+            "page": 359,
+            "fig_number": "8.4",
+            "caption_en": "Fig. 8.4: Causes for patella tracking dysfunction",
+            "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Causes for patella tracking dysfunction",
+            "category": "general_atlas",
+            "width": 1256,
+            "height": 903
+          },
+          {
+            "file": "assets/deepak_images/ch08_knee_ankle_foot_pain/p361_img1.jpeg",
+            "page": 361,
+            "fig_number": "8.5",
+            "caption_en": "Fig. 8.5: Anterior view of the knee joint showing a bipartite patella",
+            "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Anterior view of the knee joint showing a bipartite patella",
+            "category": "redflags_pathology",
+            "width": 1039,
+            "height": 664
+          }
+        ]
       },
       {
         "name": "Nghiệm Pháp Hoffa (Hoffa's Test Khám Viêm Đệm Mỡ Dưới Bánh Chè)",
@@ -3477,7 +3676,29 @@ const STABLE_SCREENING_FALLBACK = [
         "significance": "Đau chói dữ dội khi gối duỗi thẳng do đệm mỡ bị chèn kẹp giữa lồi cầu đùi và mâm chày.",
         "sensitivity": "85%",
         "specificity": "90%",
-        "diagnostic_role": "Đặc hiệu cao chẩn đoán viêm phì đại đệm mỡ dưới bánh chè Hoffa (Hoffa Disease)"
+        "diagnostic_role": "Đặc hiệu cao chẩn đoán viêm phì đại đệm mỡ dưới bánh chè Hoffa (Hoffa Disease)",
+        "figures": [
+          {
+            "file": "assets/deepak_images/ch08_knee_ankle_foot_pain/p359_img1.jpeg",
+            "page": 359,
+            "fig_number": "8.4",
+            "caption_en": "Fig. 8.4: Causes for patella tracking dysfunction",
+            "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Causes for patella tracking dysfunction",
+            "category": "general_atlas",
+            "width": 1256,
+            "height": 903
+          },
+          {
+            "file": "assets/deepak_images/ch08_knee_ankle_foot_pain/p361_img1.jpeg",
+            "page": 361,
+            "fig_number": "8.5",
+            "caption_en": "Fig. 8.5: Anterior view of the knee joint showing a bipartite patella",
+            "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Anterior view of the knee joint showing a bipartite patella",
+            "category": "redflags_pathology",
+            "width": 1039,
+            "height": 664
+          }
+        ]
       },
       {
         "name": "Nghiệm Pháp Thompson (Thompson Test Khám Đứt Gân Gót Achilles)",
@@ -3485,7 +3706,29 @@ const STABLE_SCREENING_FALLBACK = [
         "significance": "Bàn chân không tự động gập lòng -> Dương tính đứt hoàn toàn gân gót Achilles (Sp: 98%).",
         "sensitivity": "96% - 98%",
         "specificity": "93% - 98%",
-        "diagnostic_role": "Tiêu chuẩn vàng khám lâm sàng đứt hoàn toàn gân gót Achilles (+LR: 15.0, -LR: 0.03)"
+        "diagnostic_role": "Tiêu chuẩn vàng khám lâm sàng đứt hoàn toàn gân gót Achilles (+LR: 15.0, -LR: 0.03)",
+        "figures": [
+          {
+            "file": "assets/deepak_images/ch08_knee_ankle_foot_pain/p390_img1.jpeg",
+            "page": 390,
+            "fig_number": "8.24",
+            "caption_en": "Fig. 8.24: Tendoachilles tendon",
+            "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Tendoachilles tendon",
+            "category": "redflags_pathology",
+            "width": 523,
+            "height": 752
+          },
+          {
+            "file": "assets/deepak_images/ch08_knee_ankle_foot_pain/p390_img2.jpeg",
+            "page": 390,
+            "fig_number": "8.24",
+            "caption_en": "Fig. 8.24: Tendoachilles tendon",
+            "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Tendoachilles tendon",
+            "category": "redflags_pathology",
+            "width": 512,
+            "height": 752
+          }
+        ]
       },
       {
         "name": "Nghiệm Pháp Squeeze Test (Khám Tổn Thương Khớp Chày Mác Dưới - Syndesmosis)",
@@ -3493,7 +3736,29 @@ const STABLE_SCREENING_FALLBACK = [
         "significance": "Tái hiện đau chói ở vùng khớp chày mác dưới ngay trên mắt cá ngoài -> Tổn thương bong gân khớp công-gô sụn sợi (High Ankle Sprain).",
         "sensitivity": "30%",
         "specificity": "94%",
-        "diagnostic_role": "Đặc hiệu cao chẩn đoán tổn thương dây chằng khớp chày mác dưới (Bong gân mắt cá chân cao)"
+        "diagnostic_role": "Đặc hiệu cao chẩn đoán tổn thương dây chằng khớp chày mác dưới (Bong gân mắt cá chân cao)",
+        "figures": [
+          {
+            "file": "assets/deepak_images/ch08_knee_ankle_foot_pain/p335_img1.jpeg",
+            "page": 335,
+            "fig_number": "8.1",
+            "caption_en": "Fig. 8.1: Knee joint anterior view",
+            "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Knee joint anterior view",
+            "category": "general_atlas",
+            "width": 1196,
+            "height": 663
+          },
+          {
+            "file": "assets/deepak_images/ch08_knee_ankle_foot_pain/p361_img1.jpeg",
+            "page": 361,
+            "fig_number": "8.5",
+            "caption_en": "Fig. 8.5: Anterior view of the knee joint showing a bipartite patella",
+            "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Anterior view of the knee joint showing a bipartite patella",
+            "category": "redflags_pathology",
+            "width": 1039,
+            "height": 664
+          }
+        ]
       },
       {
         "name": "Dấu Hiệu Mulder (Mulder's Click Khám U Thần Kinh Morton)",
@@ -3501,7 +3766,8 @@ const STABLE_SCREENING_FALLBACK = [
         "significance": "Cảm nhận tiếng 'tách' (click) kèm cảm giác đau nhói phóng điện ra hai ngón chân -> U thần kinh Morton (Morton's neuroma).",
         "sensitivity": "88%",
         "specificity": "92%",
-        "diagnostic_role": "Độ chính xác cao chẩn đoán U thần kinh Morton gian đốt bàn ngón chân 3-4"
+        "diagnostic_role": "Độ chính xác cao chẩn đoán U thần kinh Morton gian đốt bàn ngón chân 3-4",
+        "figures": []
       },
       {
         "name": "Nghiệm Pháp Windlass (Windlass Test Khám Viêm Cân Gan Chân)",
@@ -3509,7 +3775,8 @@ const STABLE_SCREENING_FALLBACK = [
         "significance": "Tái hiện đau chói tại vị trí bám của cân gan chân vào củ dưới trong xương gót -> Viêm cân gan chân (Plantar Fasciitis).",
         "sensitivity": "32%",
         "specificity": "100%",
-        "diagnostic_role": "Đặc hiệu tuyệt đối khẳng định viêm cân gan chân (Plantar Fasciitis) khi gập mu ngón cái làm căng dải cân"
+        "diagnostic_role": "Đặc hiệu tuyệt đối khẳng định viêm cân gan chân (Plantar Fasciitis) khi gập mu ngón cái làm căng dải cân",
+        "figures": []
       }
     ],
     "differential_table": [
@@ -3554,1171 +3821,684 @@ const STABLE_SCREENING_FALLBACK = [
         "gold_standard": "Siêu âm can thiệp cơ xương khớp / X-quang / MRI chuyên sâu"
       }
     ],
-    "stage_2_somatic_dysfunctions": [
-      "Lệch xoay trong/xoay ngoài xương chày (Tibia Internal/External Rotation Dysfunction): Hạn chế cơ học khóa/mở khớp gối (Screw-home mechanism).",
-      "Kẹt đầu trên xương mác ra trước hoặc ra sau (Anterior/Posterior Fibular Head restriction): Gây đau mặt ngoài khớp gối và chèn ép thần kinh mác chung.",
-      "Khóa khớp sên gót (Subtalar Joint hypomobility): Hạn chế động tác sấp ngửa bàn chân gây tăng tải lệch trục lên khớp gối.",
-      "Sa sụp khớp sên ghe (Talonavicular drop / Bàn chân bẹt): Gây xoay trong xương chày thứ phát và hội chứng đau bánh chè đùi."
-    ],
-    "stage_3_guidemap_intervention": "Kỹ thuật giải phóng di động đầu trên xương mác và diện khớp bánh chè; Tiêm chất nhờn Acid Hyaluronic hoặc PRP dưới hướng dẫn siêu âm vào ổ khớp gối (Xem Web 1: Tiêm Khớp Gối, Tiêm Dịch Khớp Khoeo / Nang Baker, Tiêm Cân Gan Chân).",
     "figures": [
       {
-        "chapter": 8,
-        "chapter_name": "knee_ankle_foot_pain",
-        "page": 335,
         "file": "assets/deepak_images/ch08_knee_ankle_foot_pain/p335_img1.jpeg",
+        "page": 335,
+        "fig_number": "8.1",
+        "caption_en": "Fig. 8.1: Knee joint anterior view",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Knee joint anterior view",
+        "category": "general_atlas",
         "width": 1196,
-        "height": 663,
-        "size_bytes": 48282,
-        "page_captions": [
-          "Fig. 8.1:  Knee joint anterior view",
-          "Fig. 8.2). This ligament functions to resist anterior translation of tibia and "
-        ],
-        "captions": [
-          "Fig. 8.1: Knee joint anterior view versa for extension. Hence, a restriction of this motion can affect the mobility and",
-          "Fig. 8.2). This ligament functions to resist anterior translation of tibia and tibial internal rotation/valgus stress."
-        ]
+        "height": 663
       },
       {
-        "chapter": 8,
-        "chapter_name": "knee_ankle_foot_pain",
-        "page": 336,
         "file": "assets/deepak_images/ch08_knee_ankle_foot_pain/p336_img1.jpeg",
+        "page": 336,
+        "fig_number": "8.2",
+        "caption_en": "Fig. 8.2: Primary ligaments of the knee and menisci",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Primary ligaments of the knee and menisci",
+        "category": "general_atlas",
         "width": 1348,
-        "height": 664,
-        "size_bytes": 63311,
-        "page_captions": [
-          "Fig. 8.2:  Primary ligaments of the knee and menisci",
-          "Fig. 8.3). The medial meniscus is more firmly attached and hence has less mobility, "
-        ],
-        "captions": [
-          "Fig. 8.2: Primary ligaments of the knee and menisci Lateral Collateral Ligament",
-          "Fig. 8.3). The medial meniscus is more firmly attached and hence has less mobility,"
-        ]
+        "height": 664
       },
       {
-        "chapter": 8,
-        "chapter_name": "knee_ankle_foot_pain",
-        "page": 337,
         "file": "assets/deepak_images/ch08_knee_ankle_foot_pain/p337_img1.jpeg",
+        "page": 337,
+        "fig_number": "8.3",
+        "caption_en": "Fig. 8.3: Transverse view of the knee menisci",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Transverse view of the knee menisci",
+        "category": "general_atlas",
         "width": 1331,
-        "height": 564,
-        "size_bytes": 86235,
-        "page_captions": [
-          "Fig. 8.3:  Transverse view of the knee menisci"
-        ],
-        "captions": [
-          "Fig. 8.3: Transverse view of the knee menisci therefore more vulnerable for injury. The lateral meniscus is more mobile than the"
-        ]
+        "height": 564
       },
       {
-        "chapter": 8,
-        "chapter_name": "knee_ankle_foot_pain",
-        "page": 359,
         "file": "assets/deepak_images/ch08_knee_ankle_foot_pain/p359_img1.jpeg",
+        "page": 359,
+        "fig_number": "8.4",
+        "caption_en": "Fig. 8.4: Causes for patella tracking dysfunction",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Causes for patella tracking dysfunction",
+        "category": "general_atlas",
         "width": 1256,
-        "height": 903,
-        "size_bytes": 69465,
-        "page_captions": [
-          "Fig. 8.4:  Causes for patella tracking dysfunction"
-        ],
-        "captions": [
-          "Fig. 8.4: Causes for patella tracking dysfunction"
-        ]
+        "height": 903
       },
       {
-        "chapter": 8,
-        "chapter_name": "knee_ankle_foot_pain",
-        "page": 361,
         "file": "assets/deepak_images/ch08_knee_ankle_foot_pain/p361_img1.jpeg",
-        "width": 1039,
-        "height": 664,
-        "size_bytes": 33911,
-        "page_captions": [
-          "Fig. 8.7). The most common causes ",
-          "Fig. 8.5:  Anterior view of the knee joint showing a bipartite patella",
-          "Fig. 8.6:  Lateral view of the knee showing the location of the "
-        ],
-        "captions": [
-          "Fig. 8.7). The most common causes Fig. 8.5: Anterior view of the knee joint showing a bipartite patella",
-          "Fig. 8.6: Lateral view of the knee showing the location of the fat pad and tibial tuberosity"
-        ]
-      },
-      {
-        "chapter": 8,
-        "chapter_name": "knee_ankle_foot_pain",
         "page": 361,
+        "fig_number": "8.5",
+        "caption_en": "Fig. 8.5: Anterior view of the knee joint showing a bipartite patella",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Anterior view of the knee joint showing a bipartite patella",
+        "category": "redflags_pathology",
+        "width": 1039,
+        "height": 664
+      },
+      {
         "file": "assets/deepak_images/ch08_knee_ankle_foot_pain/p361_img2.jpeg",
+        "page": 361,
+        "fig_number": "8.5",
+        "caption_en": "Fig. 8.5: Anterior view of the knee joint showing a bipartite patella",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Anterior view of the knee joint showing a bipartite patella",
+        "category": "redflags_pathology",
         "width": 876,
-        "height": 719,
-        "size_bytes": 42795,
-        "page_captions": [
-          "Fig. 8.7). The most common causes ",
-          "Fig. 8.5:  Anterior view of the knee joint showing a bipartite patella",
-          "Fig. 8.6:  Lateral view of the knee showing the location of the "
-        ],
-        "captions": [
-          "Fig. 8.7). The most common causes Fig. 8.5: Anterior view of the knee joint showing a bipartite patella",
-          "Fig. 8.6: Lateral view of the knee showing the location of the fat pad and tibial tuberosity"
-        ]
+        "height": 719
       },
       {
-        "chapter": 8,
-        "chapter_name": "knee_ankle_foot_pain",
-        "page": 362,
         "file": "assets/deepak_images/ch08_knee_ankle_foot_pain/p362_img1.jpeg",
+        "page": 362,
+        "fig_number": "8.7",
+        "caption_en": "Fig. 8.7: Osteochondral lesion over the inferior joint surface of the femur",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Osteochondral lesion over the inferior joint surface of the femur",
+        "category": "redflags_pathology",
         "width": 1003,
-        "height": 664,
-        "size_bytes": 32271,
-        "page_captions": [
-          "Fig. 8.7:  Osteochondral lesion over the inferior joint surface of the femur"
-        ],
-        "captions": [
-          "Fig. 8.7: Osteochondral lesion over the inferior joint surface of the femur"
-        ]
+        "height": 664
       },
       {
-        "chapter": 8,
-        "chapter_name": "knee_ankle_foot_pain",
-        "page": 364,
         "file": "assets/deepak_images/ch08_knee_ankle_foot_pain/p364_img1.jpeg",
+        "page": 364,
+        "fig_number": "8.8",
+        "caption_en": "Fig. 8.8: Bursitis of the knee",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Bursitis of the knee",
+        "category": "redflags_pathology",
         "width": 924,
-        "height": 725,
-        "size_bytes": 60635,
-        "page_captions": [
-          "Fig. 8.9). Examples of the various patterns ",
-          "Fig. 8.8:  Bursitis of the knee"
-        ],
-        "captions": [
-          "Fig. 8.9). Examples of the various patterns are:",
-          "Fig. 8.8: Bursitis of the knee"
-        ]
+        "height": 725
       },
       {
-        "chapter": 8,
-        "chapter_name": "knee_ankle_foot_pain",
-        "page": 365,
         "file": "assets/deepak_images/ch08_knee_ankle_foot_pain/p365_img1.jpeg",
+        "page": 365,
+        "fig_number": "8.9",
+        "caption_en": "Fig. 8.9: Types of meniscal tears",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Types of meniscal tears",
+        "category": "redflags_pathology",
         "width": 1339,
-        "height": 678,
-        "size_bytes": 72042,
-        "page_captions": [
-          "Fig. 8.10). ",
-          "Fig. 8.9:  Types of meniscal tears"
-        ],
-        "captions": [
-          "Fig. 8.10). This nerve can be entrapped in the Hunter’s canal on the medial aspect of the thigh",
-          "Fig. 8.9: Types of meniscal tears"
-        ]
+        "height": 678
       },
       {
-        "chapter": 8,
-        "chapter_name": "knee_ankle_foot_pain",
-        "page": 366,
         "file": "assets/deepak_images/ch08_knee_ankle_foot_pain/p366_img1.jpeg",
+        "page": 366,
+        "fig_number": "8.10",
+        "caption_en": "Fig. 8.10: Right thigh anterior view",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Right thigh anterior view",
+        "category": "redflags_pathology",
         "width": 1315,
-        "height": 903,
-        "size_bytes": 73358,
-        "page_captions": [
-          "Fig. 8.11). Symptoms appear when the plica ",
-          "Fig. 8.10:  Right thigh anterior view"
-        ],
-        "captions": [
-          "Fig. 8.11). Symptoms appear when the plica is pinched between the patella and femur. If the plica connects the patella to the",
-          "Fig. 8.10: Right thigh anterior view"
-        ]
+        "height": 903
       },
       {
-        "chapter": 8,
-        "chapter_name": "knee_ankle_foot_pain",
-        "page": 367,
         "file": "assets/deepak_images/ch08_knee_ankle_foot_pain/p367_img1.jpeg",
+        "page": 367,
+        "fig_number": "8.11",
+        "caption_en": "Fig. 8.11: Knee plica",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Knee plica",
+        "category": "general_atlas",
         "width": 798,
-        "height": 663,
-        "size_bytes": 34898,
-        "page_captions": [
-          "Fig. 8.11:  Knee plica"
-        ],
-        "captions": [
-          "Fig. 8.11: Knee plica"
-        ]
+        "height": 663
       },
       {
-        "chapter": 8,
-        "chapter_name": "knee_ankle_foot_pain",
-        "page": 369,
         "file": "assets/deepak_images/ch08_knee_ankle_foot_pain/p369_img1.jpeg",
+        "page": 369,
+        "fig_number": "8.12",
+        "caption_en": "Fig. 8.12: Sites for superficial nerve entrapment",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Sites for superficial nerve entrapment",
+        "category": "redflags_pathology",
         "width": 920,
-        "height": 962,
-        "size_bytes": 51372,
-        "page_captions": [
-          "Fig. 8.12)",
-          "Fig. 8.12:  Sites for superficial nerve entrapment"
-        ],
-        "captions": [
-          "Fig. 8.12). Retinacular Nerve",
-          "Fig. 8.12: Sites for superficial nerve entrapment"
-        ]
+        "height": 962
       },
       {
-        "chapter": 8,
-        "chapter_name": "knee_ankle_foot_pain",
-        "page": 377,
         "file": "assets/deepak_images/ch08_knee_ankle_foot_pain/p377_img1.png",
-        "width": 1259,
-        "height": 903,
-        "size_bytes": 162637,
-        "page_captions": [
-          "Fig. 8.14:  Tibial nerve and its branches",
-          "Fig. 8.14) and it passes ",
-          "Fig. 8.13:  Effects of pronation on the fascia"
-        ],
-        "captions": [
-          "Fig. 8.14: Tibial nerve and its branches Plantar Nerve Entrapment",
-          "Fig. 8.14) and it passes beneath the spring ligament on the medial side of the foot. Excessive pronation",
-          "Fig. 8.13: Effects of pronation on the fascia"
-        ]
-      },
-      {
-        "chapter": 8,
-        "chapter_name": "knee_ankle_foot_pain",
         "page": 377,
+        "fig_number": "8.14",
+        "caption_en": "Fig. 8.14: Tibial nerve and its branches",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Tibial nerve and its branches",
+        "category": "anatomy_visceral",
+        "width": 1259,
+        "height": 903
+      },
+      {
         "file": "assets/deepak_images/ch08_knee_ankle_foot_pain/p377_img2.jpeg",
+        "page": 377,
+        "fig_number": "8.14",
+        "caption_en": "Fig. 8.14: Tibial nerve and its branches",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Tibial nerve and its branches",
+        "category": "anatomy_visceral",
         "width": 991,
-        "height": 752,
-        "size_bytes": 46040,
-        "page_captions": [
-          "Fig. 8.14:  Tibial nerve and its branches",
-          "Fig. 8.14) and it passes ",
-          "Fig. 8.13:  Effects of pronation on the fascia"
-        ],
-        "captions": [
-          "Fig. 8.14: Tibial nerve and its branches Plantar Nerve Entrapment",
-          "Fig. 8.14) and it passes beneath the spring ligament on the medial side of the foot. Excessive pronation",
-          "Fig. 8.13: Effects of pronation on the fascia"
-        ]
+        "height": 752
       },
       {
-        "chapter": 8,
-        "chapter_name": "knee_ankle_foot_pain",
-        "page": 378,
         "file": "assets/deepak_images/ch08_knee_ankle_foot_pain/p378_img1.jpeg",
+        "page": 378,
+        "fig_number": "8.15",
+        "caption_en": "Fig. 8.15: Tarsal tunnel",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Tarsal tunnel",
+        "category": "anatomy_visceral",
         "width": 1193,
-        "height": 751,
-        "size_bytes": 45793,
-        "page_captions": [
-          "Fig. 8.15). The roof of the tunnel consists of the lancinate ligament ",
-          "Fig. 8.15:  Tarsal tunnel"
-        ],
-        "captions": [
-          "Fig. 8.15). The roof of the tunnel consists of the lancinate ligament and the floor by underlying bony structures. The diameter of this tunnel can be",
-          "Fig. 8.15: Tarsal tunnel"
-        ]
+        "height": 751
       },
       {
-        "chapter": 8,
-        "chapter_name": "knee_ankle_foot_pain",
-        "page": 380,
         "file": "assets/deepak_images/ch08_knee_ankle_foot_pain/p380_img1.jpeg",
-        "width": 1161,
-        "height": 753,
-        "size_bytes": 50454,
-        "page_captions": [
-          "Fig. 8.17) and to the plantar surface of the foot where it inserts on to ",
-          "Fig. 8.16:  March fracture",
-          "Fig. 8.17:  Vulnerability of the tibialis posterior on pronation"
-        ],
-        "captions": [
-          "Fig. 8.17) and to the plantar surface of the foot where it inserts on to the tuberosity of the navicular, the first and third cuneiforms, the cuboid and the",
-          "Fig. 8.16: March fracture Fig. 8.17: Vulnerability of the tibialis posterior on pronation"
-        ]
-      },
-      {
-        "chapter": 8,
-        "chapter_name": "knee_ankle_foot_pain",
         "page": 380,
+        "fig_number": "8.16",
+        "caption_en": "Fig. 8.16: March fracture",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: March fracture",
+        "category": "redflags_pathology",
+        "width": 1161,
+        "height": 753
+      },
+      {
         "file": "assets/deepak_images/ch08_knee_ankle_foot_pain/p380_img2.jpeg",
+        "page": 380,
+        "fig_number": "8.16",
+        "caption_en": "Fig. 8.16: March fracture",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: March fracture",
+        "category": "redflags_pathology",
         "width": 1248,
-        "height": 751,
-        "size_bytes": 57486,
-        "page_captions": [
-          "Fig. 8.17) and to the plantar surface of the foot where it inserts on to ",
-          "Fig. 8.16:  March fracture",
-          "Fig. 8.17:  Vulnerability of the tibialis posterior on pronation"
-        ],
-        "captions": [
-          "Fig. 8.17) and to the plantar surface of the foot where it inserts on to the tuberosity of the navicular, the first and third cuneiforms, the cuboid and the",
-          "Fig. 8.16: March fracture Fig. 8.17: Vulnerability of the tibialis posterior on pronation"
-        ]
+        "height": 751
       },
       {
-        "chapter": 8,
-        "chapter_name": "knee_ankle_foot_pain",
-        "page": 383,
         "file": "assets/deepak_images/ch08_knee_ankle_foot_pain/p383_img1.jpeg",
+        "page": 383,
+        "fig_number": "8.18",
+        "caption_en": "Fig. 8.18: Osteochondral lesion of the talus",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Osteochondral lesion of the talus",
+        "category": "redflags_pathology",
         "width": 1219,
-        "height": 751,
-        "size_bytes": 42399,
-        "page_captions": [
-          "Fig. 8.18)",
-          "Fig. 8.18:  Osteochondral lesion of the talus"
-        ],
-        "captions": [
-          "Fig. 8.18). What to look for?",
-          "Fig. 8.18: Osteochondral lesion of the talus"
-        ]
+        "height": 751
       },
       {
-        "chapter": 8,
-        "chapter_name": "knee_ankle_foot_pain",
-        "page": 385,
         "file": "assets/deepak_images/ch08_knee_ankle_foot_pain/p385_img1.jpeg",
-        "width": 1194,
-        "height": 752,
-        "size_bytes": 76424,
-        "page_captions": [
-          "Fig. 8.20:  Vulnerable ligaments in inversion sprains",
-          "Fig. 8.19:  Sites of fracture on the fifth metatarsal"
-        ],
-        "captions": [
-          "Fig. 8.20: Vulnerable ligaments in inversion sprains can occur if the opposite mechanics is present and eventually stresses the medial",
-          "Fig. 8.19: Sites of fracture on the fifth metatarsal"
-        ]
-      },
-      {
-        "chapter": 8,
-        "chapter_name": "knee_ankle_foot_pain",
         "page": 385,
+        "fig_number": "8.20",
+        "caption_en": "Fig. 8.20: Vulnerable ligaments in inversion sprains",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Vulnerable ligaments in inversion sprains",
+        "category": "redflags_pathology",
+        "width": 1194,
+        "height": 752
+      },
+      {
         "file": "assets/deepak_images/ch08_knee_ankle_foot_pain/p385_img2.png",
+        "page": 385,
+        "fig_number": "8.20",
+        "caption_en": "Fig. 8.20: Vulnerable ligaments in inversion sprains",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Vulnerable ligaments in inversion sprains",
+        "category": "redflags_pathology",
         "width": 493,
-        "height": 753,
-        "size_bytes": 54136,
-        "page_captions": [
-          "Fig. 8.20:  Vulnerable ligaments in inversion sprains",
-          "Fig. 8.19:  Sites of fracture on the fifth metatarsal"
-        ],
-        "captions": [
-          "Fig. 8.20: Vulnerable ligaments in inversion sprains can occur if the opposite mechanics is present and eventually stresses the medial",
-          "Fig. 8.19: Sites of fracture on the fifth metatarsal"
-        ]
+        "height": 753
       },
       {
-        "chapter": 8,
-        "chapter_name": "knee_ankle_foot_pain",
-        "page": 386,
         "file": "assets/deepak_images/ch08_knee_ankle_foot_pain/p386_img1.jpeg",
+        "page": 386,
+        "fig_number": "8.21",
+        "caption_en": "Fig. 8.21: Location of sinus tarsi",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Location of sinus tarsi",
+        "category": "redflags_pathology",
         "width": 1018,
-        "height": 693,
-        "size_bytes": 33608,
-        "page_captions": [
-          "Fig. 8.21). Damage to the sinus ",
-          "Fig. 8.21:  Location of sinus tarsi"
-        ],
-        "captions": [
-          "Fig. 8.21). Damage to the sinus tarsi can be caused from overuse in conjunction with over pronation. Inversion",
-          "Fig. 8.21: Location of sinus tarsi"
-        ]
+        "height": 693
       },
       {
-        "chapter": 8,
-        "chapter_name": "knee_ankle_foot_pain",
-        "page": 387,
         "file": "assets/deepak_images/ch08_knee_ankle_foot_pain/p387_img1.jpeg",
+        "page": 387,
+        "fig_number": "8.22",
+        "caption_en": "Fig. 8.22: Peroneal tendon and retinaculum",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Peroneal tendon and retinaculum",
+        "category": "general_atlas",
         "width": 957,
-        "height": 753,
-        "size_bytes": 69506,
-        "page_captions": [
-          "Fig. 8.22). Subluxation occurs when the tendons have slipped ",
-          "Fig. 8.22:  Peroneal tendon and retinaculum"
-        ],
-        "captions": [
-          "Fig. 8.22). Subluxation occurs when the tendons have slipped out of their normal position. This is seen in trauma secondary to heavy or",
-          "Fig. 8.22: Peroneal tendon and retinaculum"
-        ]
+        "height": 753
       },
       {
-        "chapter": 8,
-        "chapter_name": "knee_ankle_foot_pain",
-        "page": 389,
         "file": "assets/deepak_images/ch08_knee_ankle_foot_pain/p389_img1.jpeg",
+        "page": 389,
+        "fig_number": "8.23",
+        "caption_en": "Fig. 8.23: Retrocalcaneal bursitis",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Retrocalcaneal bursitis",
+        "category": "redflags_pathology",
         "width": 774,
-        "height": 693,
-        "size_bytes": 35625,
-        "page_captions": [
-          "Figs 8.23 to 8.25). Metabolic changes and ",
-          "Fig. 8.23:  Retrocalcaneal bursitis"
-        ],
-        "captions": [
-          "Figs 8.23 to 8.25). Metabolic changes and certain disease states increase the risk. Certain medications in the category of",
-          "Fig. 8.23: Retrocalcaneal bursitis"
-        ]
+        "height": 693
       },
       {
-        "chapter": 8,
-        "chapter_name": "knee_ankle_foot_pain",
-        "page": 390,
         "file": "assets/deepak_images/ch08_knee_ankle_foot_pain/p390_img1.jpeg",
-        "width": 523,
-        "height": 752,
-        "size_bytes": 27000,
-        "page_captions": [
-          "Fig. 8.24:  Tendoachilles tendon ",
-          "Fig. 8.25:  Achilles tendon rupture"
-        ],
-        "captions": [
-          "Fig. 8.24: Tendoachilles tendon degeneration",
-          "Fig. 8.25: Achilles tendon rupture"
-        ]
-      },
-      {
-        "chapter": 8,
-        "chapter_name": "knee_ankle_foot_pain",
         "page": 390,
-        "file": "assets/deepak_images/ch08_knee_ankle_foot_pain/p390_img2.jpeg",
-        "width": 512,
-        "height": 752,
-        "size_bytes": 26171,
-        "page_captions": [
-          "Fig. 8.24:  Tendoachilles tendon ",
-          "Fig. 8.25:  Achilles tendon rupture"
-        ],
-        "captions": [
-          "Fig. 8.24: Tendoachilles tendon degeneration",
-          "Fig. 8.25: Achilles tendon rupture"
-        ]
-      },
-      {
-        "chapter": 8,
-        "chapter_name": "knee_ankle_foot_pain",
-        "page": 391,
-        "file": "assets/deepak_images/ch08_knee_ankle_foot_pain/p391_img1.jpeg",
-        "width": 1199,
-        "height": 753,
-        "size_bytes": 54668,
-        "page_captions": [
-          "Fig. 8.26).53",
-          "Fig. 8.26:  Sites of impingement"
-        ],
-        "captions": [
-          "Fig. 8.26).53 What to look for?",
-          "Fig. 8.26: Sites of impingement"
-        ]
-      },
-      {
-        "chapter": 8,
-        "chapter_name": "knee_ankle_foot_pain",
-        "page": 392,
-        "file": "assets/deepak_images/ch08_knee_ankle_foot_pain/p392_img1.jpeg",
-        "width": 996,
-        "height": 962,
-        "size_bytes": 42311,
-        "page_captions": [
-          "Fig. 8.27) or cuneiform and base of ",
-          "Fig. 8.27:  Right lower leg anterior view (EHL, extensor hallucis longus; "
-        ],
-        "captions": [
-          "Fig. 8.27) or cuneiform and base of first, and second metatarsal."
-        ]
-      },
-      {
-        "chapter": 8,
-        "chapter_name": "knee_ankle_foot_pain",
-        "page": 393,
-        "file": "assets/deepak_images/ch08_knee_ankle_foot_pain/p393_img1.jpeg",
-        "width": 958,
-        "height": 711,
-        "size_bytes": 56160,
-        "page_captions": [
-          "Fig. 8.28). Comparison is made with the other side. An internal rotation of ",
-          "Fig. 8.29). A glide ",
-          "Fig. 8.30). Inability of the fibula head to glide anteriorly is the "
-        ],
-        "captions": [
-          "Fig. 8.28). Comparison is made with the other side. An internal rotation of the tibia as described in the section on mechanism of dysfunction, can predispose",
-          "Fig. 8.29). A glide is applied in the anterior direction and the clinician senses for restriction and",
-          "Fig. 8.30). Inability of the fibula head to glide anteriorly is the commonest restriction seen. Dysfunctions of the fibula head can predispose to",
-          "Fig. 8.28: Assessing tibial rotation"
-        ]
-      },
-      {
-        "chapter": 8,
-        "chapter_name": "knee_ankle_foot_pain",
-        "page": 394,
-        "file": "assets/deepak_images/ch08_knee_ankle_foot_pain/p394_img1.jpeg",
-        "width": 958,
-        "height": 713,
-        "size_bytes": 63008,
-        "page_captions": [
-          "Fig. 8.29:  Assessing fibular head asymmetry",
-          "Fig. 8.31). Dysfunction is indicated by a painful sensation on ",
-          "Fig. 8.30:  Assessing fibular head mobility"
-        ],
-        "captions": [
-          "Fig. 8.29: Assessing fibular head asymmetry Femoral Head Posterolateral",
-          "Fig. 8.31). Dysfunction is indicated by a painful sensation on Fig. 8.30: Assessing fibular head mobility"
-        ]
-      },
-      {
-        "chapter": 8,
-        "chapter_name": "knee_ankle_foot_pain",
-        "page": 394,
-        "file": "assets/deepak_images/ch08_knee_ankle_foot_pain/p394_img2.jpeg",
-        "width": 958,
-        "height": 641,
-        "size_bytes": 40786,
-        "page_captions": [
-          "Fig. 8.29:  Assessing fibular head asymmetry",
-          "Fig. 8.31). Dysfunction is indicated by a painful sensation on ",
-          "Fig. 8.30:  Assessing fibular head mobility"
-        ],
-        "captions": [
-          "Fig. 8.29: Assessing fibular head asymmetry Femoral Head Posterolateral",
-          "Fig. 8.31). Dysfunction is indicated by a painful sensation on Fig. 8.30: Assessing fibular head mobility"
-        ]
-      },
-      {
-        "chapter": 8,
-        "chapter_name": "knee_ankle_foot_pain",
-        "page": 395,
-        "file": "assets/deepak_images/ch08_knee_ankle_foot_pain/p395_img1.jpeg",
-        "width": 958,
-        "height": 708,
-        "size_bytes": 60648,
-        "page_captions": [
-          "Fig. 8.31:  Patella superolateral",
-          "Fig. 8.32). When this is felt, the position of the heel in relation ",
-          "Fig. 8.33). If the first ray is higher than the fifth ray, then it is "
-        ],
-        "captions": [
-          "Fig. 8.31: Patella superolateral the superolateral border. Comparison is made with the other side. A superolateral",
-          "Fig. 8.32). When this is felt, the position of the heel in relation to the tibia is observed and maintained as neutral as possible. Alternately, a less",
-          "Fig. 8.33). If the first ray is higher than the fifth ray, then it is a forefoot varus. On weight bearing when the forefoot is flat on the ground and a",
-          "Figs 8.34A and B). The result is a pronated foot."
-        ]
-      },
-      {
-        "chapter": 8,
-        "chapter_name": "knee_ankle_foot_pain",
-        "page": 396,
-        "file": "assets/deepak_images/ch08_knee_ankle_foot_pain/p396_img1.jpeg",
-        "width": 958,
-        "height": 715,
-        "size_bytes": 45159,
-        "page_captions": [
-          "Fig. 8.32:  Subtalar neutral",
-          "Fig. 8.33:  Neutral",
-          "Figs 8.34A and B:  Forefoot varus (non-weight bearing) compensated by "
-        ],
-        "captions": [
-          "Fig. 8.32: Subtalar neutral Fig. 8.33: Neutral"
-        ]
-      },
-      {
-        "chapter": 8,
-        "chapter_name": "knee_ankle_foot_pain",
-        "page": 396,
-        "file": "assets/deepak_images/ch08_knee_ankle_foot_pain/p396_img2.png",
-        "width": 681,
-        "height": 543,
-        "size_bytes": 43620,
-        "page_captions": [
-          "Fig. 8.32:  Subtalar neutral",
-          "Fig. 8.33:  Neutral",
-          "Figs 8.34A and B:  Forefoot varus (non-weight bearing) compensated by "
-        ],
-        "captions": [
-          "Fig. 8.32: Subtalar neutral Fig. 8.33: Neutral"
-        ]
-      },
-      {
-        "chapter": 8,
-        "chapter_name": "knee_ankle_foot_pain",
-        "page": 396,
-        "file": "assets/deepak_images/ch08_knee_ankle_foot_pain/p396_img3.jpeg",
-        "width": 292,
-        "height": 544,
-        "size_bytes": 11474,
-        "page_captions": [
-          "Fig. 8.32:  Subtalar neutral",
-          "Fig. 8.33:  Neutral",
-          "Figs 8.34A and B:  Forefoot varus (non-weight bearing) compensated by "
-        ],
-        "captions": [
-          "Fig. 8.32: Subtalar neutral Fig. 8.33: Neutral"
-        ]
-      },
-      {
-        "chapter": 8,
-        "chapter_name": "knee_ankle_foot_pain",
-        "page": 396,
-        "file": "assets/deepak_images/ch08_knee_ankle_foot_pain/p396_img4.jpeg",
-        "width": 280,
-        "height": 543,
-        "size_bytes": 11940,
-        "page_captions": [
-          "Fig. 8.32:  Subtalar neutral",
-          "Fig. 8.33:  Neutral",
-          "Figs 8.34A and B:  Forefoot varus (non-weight bearing) compensated by "
-        ],
-        "captions": [
-          "Fig. 8.32: Subtalar neutral Fig. 8.33: Neutral"
-        ]
-      },
-      {
-        "chapter": 8,
-        "chapter_name": "knee_ankle_foot_pain",
-        "page": 397,
-        "file": "assets/deepak_images/ch08_knee_ankle_foot_pain/p397_img1.jpeg",
-        "width": 958,
-        "height": 711,
-        "size_bytes": 53904,
-        "page_captions": [
-          "Figs 8.35). The result is a supinated foot.",
-          "Fig. 8.36). The clinician ",
-          "Fig. 8.36:  Plantar flexed talus"
-        ],
-        "captions": [
-          "Figs 8.35). The result is a supinated foot. Plantar Flexed Talus",
-          "Fig. 8.36). The clinician then passively swings the foot upward and a restriction may be noted. This is"
-        ]
-      },
-      {
-        "chapter": 8,
-        "chapter_name": "knee_ankle_foot_pain",
-        "page": 397,
-        "file": "assets/deepak_images/ch08_knee_ankle_foot_pain/p397_img2.jpeg",
-        "width": 280,
-        "height": 544,
-        "size_bytes": 12455,
-        "page_captions": [
-          "Figs 8.35). The result is a supinated foot.",
-          "Fig. 8.36). The clinician ",
-          "Fig. 8.36:  Plantar flexed talus"
-        ],
-        "captions": [
-          "Figs 8.35). The result is a supinated foot. Plantar Flexed Talus",
-          "Fig. 8.36). The clinician then passively swings the foot upward and a restriction may be noted. This is"
-        ]
-      },
-      {
-        "chapter": 8,
-        "chapter_name": "knee_ankle_foot_pain",
-        "page": 398,
-        "file": "assets/deepak_images/ch08_knee_ankle_foot_pain/p398_img1.jpeg",
-        "width": 958,
-        "height": 717,
-        "size_bytes": 38066,
-        "page_captions": [
-          "Fig. 8.37:  Inversion/eversion of calcaneus",
-          "Fig. 8.37). The calcaneus is mostly restricted in ",
-          "Fig. 8.38). The clinician senses for restriction "
-        ],
-        "captions": [
-          "Fig. 8.37: Inversion/eversion of calcaneus 2. With the patient lying supine, the clinician grasps the lower shaft of the tibia",
-          "Fig. 8.37). The calcaneus is mostly restricted in inversion resisting eversion.",
-          "Fig. 8.38). The clinician senses for restriction as this movement is performed."
-        ]
-      },
-      {
-        "chapter": 8,
-        "chapter_name": "knee_ankle_foot_pain",
-        "page": 399,
-        "file": "assets/deepak_images/ch08_knee_ankle_foot_pain/p399_img1.jpeg",
-        "width": 958,
-        "height": 710,
-        "size_bytes": 40732,
-        "page_captions": [
-          "Fig. 8.39). A sense of restriction ",
-          "Fig. 8.38:  Midfoot rotation"
-        ],
-        "captions": [
-          "Fig. 8.39). A sense of restriction in a superior direction will indicate the first ray stuck or restricted in plantar",
-          "Fig. 8.38: Midfoot rotation"
-        ]
-      },
-      {
-        "chapter": 8,
-        "chapter_name": "knee_ankle_foot_pain",
-        "page": 400,
-        "file": "assets/deepak_images/ch08_knee_ankle_foot_pain/p400_img1.jpeg",
-        "width": 958,
-        "height": 711,
-        "size_bytes": 37623,
-        "page_captions": [
-          "Fig. 8.39:  Assessment of the first ray",
-          "Figs 8.40A and B)",
-          "Fig. 8.41)"
-        ],
-        "captions": [
-          "Fig. 8.39: Assessment of the first ray DESCRIPTION OF EXAMINATION PROCEDURES",
-          "Figs 8.40A and B). Tenderness Over the Lateral Retinaculum",
-          "Fig. 8.41). Pain on Medial Tilt of the Patella to Stretch the Retinaculum",
-          "Fig. 8.42). The patella is glided laterally and pulled upwards by the laterally placed fingers to reproduce symptoms.",
-          "Fig. 8.43). Conversely, the full extended knee of the patient is held by the examiners and the patient is asked to sustain this position"
-        ]
-      },
-      {
-        "chapter": 8,
-        "chapter_name": "knee_ankle_foot_pain",
-        "page": 401,
-        "file": "assets/deepak_images/ch08_knee_ankle_foot_pain/p401_img1.jpeg",
-        "width": 958,
-        "height": 638,
-        "size_bytes": 38695,
-        "page_captions": [
-          "Fig. 8.41:  Tenderness over the lateral retinaculum",
-          "Figs 8.40A and B:  Clicking over patella"
-        ],
-        "captions": [
-          "Fig. 8.41: Tenderness over the lateral retinaculum Figs 8.40A and B: Clicking over patella"
-        ]
-      },
-      {
-        "chapter": 8,
-        "chapter_name": "knee_ankle_foot_pain",
-        "page": 401,
-        "file": "assets/deepak_images/ch08_knee_ankle_foot_pain/p401_img2.jpeg",
-        "width": 958,
-        "height": 579,
-        "size_bytes": 30355,
-        "page_captions": [
-          "Fig. 8.41:  Tenderness over the lateral retinaculum",
-          "Figs 8.40A and B:  Clicking over patella"
-        ],
-        "captions": [
-          "Fig. 8.41: Tenderness over the lateral retinaculum Figs 8.40A and B: Clicking over patella"
-        ]
-      },
-      {
-        "chapter": 8,
-        "chapter_name": "knee_ankle_foot_pain",
-        "page": 401,
-        "file": "assets/deepak_images/ch08_knee_ankle_foot_pain/p401_img3.jpeg",
-        "width": 958,
-        "height": 558,
-        "size_bytes": 27835,
-        "page_captions": [
-          "Fig. 8.41:  Tenderness over the lateral retinaculum",
-          "Figs 8.40A and B:  Clicking over patella"
-        ],
-        "captions": [
-          "Fig. 8.41: Tenderness over the lateral retinaculum Figs 8.40A and B: Clicking over patella"
-        ]
-      },
-      {
-        "chapter": 8,
-        "chapter_name": "knee_ankle_foot_pain",
-        "page": 402,
-        "file": "assets/deepak_images/ch08_knee_ankle_foot_pain/p402_img1.jpeg",
-        "width": 958,
-        "height": 697,
-        "size_bytes": 55710,
-        "page_captions": [
-          "Fig. 8.43:  Active knee extension lag",
-          "Fig. 8.42:  Patella medial tilt",
-          "Fig. 8.44A). A passive lag is determined by placing "
-        ],
-        "captions": [
-          "Fig. 8.43: Active knee extension lag Fig. 8.42: Patella medial tilt",
-          "Fig. 8.44A). A passive lag is determined by placing the subjects prone with the knees just past the edge of the table and determining the",
-          "Fig. 8.44B). The sitting active and prone passive lag test (SAPLT) may be incorporated as a simple, yet effective test to determine the presence of"
-        ]
-      },
-      {
-        "chapter": 8,
-        "chapter_name": "knee_ankle_foot_pain",
-        "page": 402,
-        "file": "assets/deepak_images/ch08_knee_ankle_foot_pain/p402_img2.jpeg",
-        "width": 958,
-        "height": 640,
-        "size_bytes": 33730,
-        "page_captions": [
-          "Fig. 8.43:  Active knee extension lag",
-          "Fig. 8.42:  Patella medial tilt",
-          "Fig. 8.44A). A passive lag is determined by placing "
-        ],
-        "captions": [
-          "Fig. 8.43: Active knee extension lag Fig. 8.42: Patella medial tilt",
-          "Fig. 8.44A). A passive lag is determined by placing the subjects prone with the knees just past the edge of the table and determining the",
-          "Fig. 8.44B). The sitting active and prone passive lag test (SAPLT) may be incorporated as a simple, yet effective test to determine the presence of"
-        ]
-      },
-      {
-        "chapter": 8,
-        "chapter_name": "knee_ankle_foot_pain",
-        "page": 403,
-        "file": "assets/deepak_images/ch08_knee_ankle_foot_pain/p403_img1.jpeg",
-        "width": 958,
-        "height": 713,
-        "size_bytes": 53253,
-        "page_captions": [
-          "Figs 8.44A and B:  Photographs showing: A. A positive ‘active lag’ on the right; "
-        ],
-        "captions": [
-          "Figs 8.44A and B: Photographs showing: A. A positive ‘active lag’ on the right; B. A positive ‘passive lag’ on the right."
-        ]
-      },
-      {
-        "chapter": 8,
-        "chapter_name": "knee_ankle_foot_pain",
-        "page": 403,
-        "file": "assets/deepak_images/ch08_knee_ankle_foot_pain/p403_img2.jpeg",
-        "width": 958,
-        "height": 713,
-        "size_bytes": 61242,
-        "page_captions": [
-          "Figs 8.44A and B:  Photographs showing: A. A positive ‘active lag’ on the right; "
-        ],
-        "captions": [
-          "Figs 8.44A and B: Photographs showing: A. A positive ‘active lag’ on the right; B. A positive ‘passive lag’ on the right."
-        ]
-      },
-      {
-        "chapter": 8,
-        "chapter_name": "knee_ankle_foot_pain",
-        "page": 404,
-        "file": "assets/deepak_images/ch08_knee_ankle_foot_pain/p404_img1.jpeg",
-        "width": 958,
-        "height": 638,
-        "size_bytes": 45820,
-        "page_captions": [
-          "Fig. 8.45). ",
-          "Figs 8.46A and B). Pain and/or ",
-          "Fig. 8.47). A click felt over the meniscus is indicative of a "
-        ],
-        "captions": [
-          "Fig. 8.45). Conversely the clinician performs patella gliding at 0° of flexion and then again",
-          "Figs 8.46A and B). Pain and/or apprehension of the patient is considered a positive sign for fat pad impingement.29",
-          "Fig. 8.47). A click felt over the meniscus is indicative of a positive finding.35",
-          "Fig. 8.45: Apprehension sign"
-        ]
-      },
-      {
-        "chapter": 8,
-        "chapter_name": "knee_ankle_foot_pain",
-        "page": 405,
-        "file": "assets/deepak_images/ch08_knee_ankle_foot_pain/p405_img1.jpeg",
-        "width": 958,
-        "height": 683,
-        "size_bytes": 42352,
-        "page_captions": [
-          "Fig. 8.48A and B).35",
-          "Fig. 8.49). The proximal tibia is pulled anteriorly. A positive test is ",
-          "Fig. 8.46A and B:  Hoffa’s test"
-        ],
-        "captions": [
-          "Fig. 8.48A and B).35 Lachman test may be Positive",
-          "Fig. 8.49). The proximal tibia is pulled anteriorly. A positive test is indicated by excessive gliding of the tibia.4",
-          "Fig. 8.46A and B: Hoffa’s test A"
-        ]
-      },
-      {
-        "chapter": 8,
-        "chapter_name": "knee_ankle_foot_pain",
-        "page": 405,
-        "file": "assets/deepak_images/ch08_knee_ankle_foot_pain/p405_img2.jpeg",
-        "width": 958,
-        "height": 723,
-        "size_bytes": 46926,
-        "page_captions": [
-          "Fig. 8.48A and B).35",
-          "Fig. 8.49). The proximal tibia is pulled anteriorly. A positive test is ",
-          "Fig. 8.46A and B:  Hoffa’s test"
-        ],
-        "captions": [
-          "Fig. 8.48A and B).35 Lachman test may be Positive",
-          "Fig. 8.49). The proximal tibia is pulled anteriorly. A positive test is indicated by excessive gliding of the tibia.4",
-          "Fig. 8.46A and B: Hoffa’s test A"
-        ]
-      },
-      {
-        "chapter": 8,
-        "chapter_name": "knee_ankle_foot_pain",
-        "page": 406,
-        "file": "assets/deepak_images/ch08_knee_ankle_foot_pain/p406_img1.jpeg",
-        "width": 958,
-        "height": 721,
-        "size_bytes": 39089,
-        "page_captions": [
-          "Fig. 8.47:  McMurray’s test",
-          "Figs 8.48A and B:  Ege’s test"
-        ],
-        "captions": [
-          "Fig. 8.47: McMurray’s test Figs 8.48A and B: Ege’s test"
-        ]
-      },
-      {
-        "chapter": 8,
-        "chapter_name": "knee_ankle_foot_pain",
-        "page": 406,
-        "file": "assets/deepak_images/ch08_knee_ankle_foot_pain/p406_img2.jpeg",
-        "width": 462,
-        "height": 798,
-        "size_bytes": 33775,
-        "page_captions": [
-          "Fig. 8.47:  McMurray’s test",
-          "Figs 8.48A and B:  Ege’s test"
-        ],
-        "captions": [
-          "Fig. 8.47: McMurray’s test Figs 8.48A and B: Ege’s test"
-        ]
-      },
-      {
-        "chapter": 8,
-        "chapter_name": "knee_ankle_foot_pain",
-        "page": 406,
-        "file": "assets/deepak_images/ch08_knee_ankle_foot_pain/p406_img3.jpeg",
+        "fig_number": "8.24",
+        "caption_en": "Fig. 8.24: Tendoachilles tendon",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Tendoachilles tendon",
+        "category": "redflags_pathology",
         "width": 523,
-        "height": 798,
-        "size_bytes": 37643,
-        "page_captions": [
-          "Fig. 8.47:  McMurray’s test",
-          "Figs 8.48A and B:  Ege’s test"
-        ],
-        "captions": [
-          "Fig. 8.47: McMurray’s test Figs 8.48A and B: Ege’s test"
-        ]
+        "height": 752
       },
       {
-        "chapter": 8,
-        "chapter_name": "knee_ankle_foot_pain",
-        "page": 407,
+        "file": "assets/deepak_images/ch08_knee_ankle_foot_pain/p390_img2.jpeg",
+        "page": 390,
+        "fig_number": "8.24",
+        "caption_en": "Fig. 8.24: Tendoachilles tendon",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Tendoachilles tendon",
+        "category": "redflags_pathology",
+        "width": 512,
+        "height": 752
+      },
+      {
+        "file": "assets/deepak_images/ch08_knee_ankle_foot_pain/p391_img1.jpeg",
+        "page": 391,
+        "fig_number": "8.26",
+        "caption_en": "Fig. 8.26: Sites of impingement",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Sites of impingement",
+        "category": "redflags_pathology",
+        "width": 1199,
+        "height": 753
+      },
+      {
+        "file": "assets/deepak_images/ch08_knee_ankle_foot_pain/p392_img1.jpeg",
+        "page": 392,
+        "fig_number": "8.27",
+        "caption_en": "Fig. 8.27: Right lower leg anterior view (EHL, extensor hallucis longus;",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Right lower leg anterior view (EHL, extensor hallucis longus;",
+        "category": "examination",
+        "width": 996,
+        "height": 962
+      },
+      {
+        "file": "assets/deepak_images/ch08_knee_ankle_foot_pain/p393_img1.jpeg",
+        "page": 393,
+        "fig_number": "8.28",
+        "caption_en": "Fig. 8.28: Assessing tibial rotation",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Assessing tibial rotation",
+        "category": "examination",
+        "width": 958,
+        "height": 711
+      },
+      {
+        "file": "assets/deepak_images/ch08_knee_ankle_foot_pain/p394_img1.jpeg",
+        "page": 394,
+        "fig_number": "8.29",
+        "caption_en": "Fig. 8.29: Assessing fibular head asymmetry",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Assessing fibular head asymmetry",
+        "category": "examination",
+        "width": 958,
+        "height": 713
+      },
+      {
+        "file": "assets/deepak_images/ch08_knee_ankle_foot_pain/p394_img2.jpeg",
+        "page": 394,
+        "fig_number": "8.29",
+        "caption_en": "Fig. 8.29: Assessing fibular head asymmetry",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Assessing fibular head asymmetry",
+        "category": "examination",
+        "width": 958,
+        "height": 641
+      },
+      {
+        "file": "assets/deepak_images/ch08_knee_ankle_foot_pain/p395_img1.jpeg",
+        "page": 395,
+        "fig_number": "8.31",
+        "caption_en": "Fig. 8.31: Patella superolateral",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Patella superolateral",
+        "category": "examination",
+        "width": 958,
+        "height": 708
+      },
+      {
+        "file": "assets/deepak_images/ch08_knee_ankle_foot_pain/p396_img1.jpeg",
+        "page": 396,
+        "fig_number": "8.32",
+        "caption_en": "Fig. 8.32: Subtalar neutral",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Subtalar neutral",
+        "category": "general_atlas",
+        "width": 958,
+        "height": 715
+      },
+      {
+        "file": "assets/deepak_images/ch08_knee_ankle_foot_pain/p396_img2.png",
+        "page": 396,
+        "fig_number": "8.32",
+        "caption_en": "Fig. 8.32: Subtalar neutral",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Subtalar neutral",
+        "category": "general_atlas",
+        "width": 681,
+        "height": 543
+      },
+      {
+        "file": "assets/deepak_images/ch08_knee_ankle_foot_pain/p396_img3.jpeg",
+        "page": 396,
+        "fig_number": "8.32",
+        "caption_en": "Fig. 8.32: Subtalar neutral",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Subtalar neutral",
+        "category": "general_atlas",
+        "width": 292,
+        "height": 544
+      },
+      {
+        "file": "assets/deepak_images/ch08_knee_ankle_foot_pain/p396_img4.jpeg",
+        "page": 396,
+        "fig_number": "8.32",
+        "caption_en": "Fig. 8.32: Subtalar neutral",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Subtalar neutral",
+        "category": "general_atlas",
+        "width": 280,
+        "height": 543
+      },
+      {
+        "file": "assets/deepak_images/ch08_knee_ankle_foot_pain/p397_img1.jpeg",
+        "page": 397,
+        "fig_number": "8.36",
+        "caption_en": "Fig. 8.36: Plantar flexed talus",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Plantar flexed talus",
+        "category": "general_atlas",
+        "width": 958,
+        "height": 711
+      },
+      {
+        "file": "assets/deepak_images/ch08_knee_ankle_foot_pain/p397_img2.jpeg",
+        "page": 397,
+        "fig_number": "8.36",
+        "caption_en": "Fig. 8.36: Plantar flexed talus",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Plantar flexed talus",
+        "category": "general_atlas",
+        "width": 280,
+        "height": 544
+      },
+      {
+        "file": "assets/deepak_images/ch08_knee_ankle_foot_pain/p398_img1.jpeg",
+        "page": 398,
+        "fig_number": "8.37",
+        "caption_en": "Fig. 8.37: Inversion/eversion of calcaneus",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Inversion/eversion of calcaneus",
+        "category": "general_atlas",
+        "width": 958,
+        "height": 717
+      },
+      {
+        "file": "assets/deepak_images/ch08_knee_ankle_foot_pain/p399_img1.jpeg",
+        "page": 399,
+        "fig_number": "8.38",
+        "caption_en": "Fig. 8.38: Midfoot rotation",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Midfoot rotation",
+        "category": "examination",
+        "width": 958,
+        "height": 710
+      },
+      {
+        "file": "assets/deepak_images/ch08_knee_ankle_foot_pain/p400_img1.jpeg",
+        "page": 400,
+        "fig_number": "8.39",
+        "caption_en": "Fig. 8.39: Assessment of the first ray",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Assessment of the first ray",
+        "category": "examination",
+        "width": 958,
+        "height": 711
+      },
+      {
+        "file": "assets/deepak_images/ch08_knee_ankle_foot_pain/p401_img1.jpeg",
+        "page": 401,
+        "fig_number": "8.41",
+        "caption_en": "Fig. 8.41: Tenderness over the lateral retinaculum",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Tenderness over the lateral retinaculum",
+        "category": "examination",
+        "width": 958,
+        "height": 638
+      },
+      {
+        "file": "assets/deepak_images/ch08_knee_ankle_foot_pain/p401_img2.jpeg",
+        "page": 401,
+        "fig_number": "8.41",
+        "caption_en": "Fig. 8.41: Tenderness over the lateral retinaculum",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Tenderness over the lateral retinaculum",
+        "category": "examination",
+        "width": 958,
+        "height": 579
+      },
+      {
+        "file": "assets/deepak_images/ch08_knee_ankle_foot_pain/p401_img3.jpeg",
+        "page": 401,
+        "fig_number": "8.41",
+        "caption_en": "Fig. 8.41: Tenderness over the lateral retinaculum",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Tenderness over the lateral retinaculum",
+        "category": "examination",
+        "width": 958,
+        "height": 558
+      },
+      {
+        "file": "assets/deepak_images/ch08_knee_ankle_foot_pain/p402_img1.jpeg",
+        "page": 402,
+        "fig_number": "8.43",
+        "caption_en": "Fig. 8.43: Active knee extension lag",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Active knee extension lag",
+        "category": "general_atlas",
+        "width": 958,
+        "height": 697
+      },
+      {
+        "file": "assets/deepak_images/ch08_knee_ankle_foot_pain/p402_img2.jpeg",
+        "page": 402,
+        "fig_number": "8.43",
+        "caption_en": "Fig. 8.43: Active knee extension lag",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Active knee extension lag",
+        "category": "general_atlas",
+        "width": 958,
+        "height": 640
+      },
+      {
+        "file": "assets/deepak_images/ch08_knee_ankle_foot_pain/p403_img1.jpeg",
+        "page": 403,
+        "fig_number": "8.44A and B",
+        "caption_en": "Figs 8.44A and B: Photographs showing: A. A positive ‘active lag’ on the right;",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Photographs showing: A. A positive ‘active lag’ on the right;",
+        "category": "examination",
+        "width": 958,
+        "height": 713
+      },
+      {
+        "file": "assets/deepak_images/ch08_knee_ankle_foot_pain/p403_img2.jpeg",
+        "page": 403,
+        "fig_number": "8.44A and B",
+        "caption_en": "Figs 8.44A and B: Photographs showing: A. A positive ‘active lag’ on the right;",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Photographs showing: A. A positive ‘active lag’ on the right;",
+        "category": "examination",
+        "width": 958,
+        "height": 713
+      },
+      {
+        "file": "assets/deepak_images/ch08_knee_ankle_foot_pain/p404_img1.jpeg",
+        "page": 404,
+        "fig_number": "8.45",
+        "caption_en": "Fig. 8.45: Apprehension sign",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Apprehension sign",
+        "category": "examination",
+        "width": 958,
+        "height": 638
+      },
+      {
+        "file": "assets/deepak_images/ch08_knee_ankle_foot_pain/p405_img1.jpeg",
+        "page": 405,
+        "fig_number": "8.46A and B",
+        "caption_en": "Fig. 8.46A and B: Hoffa’s test",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Hoffa’s test",
+        "category": "examination",
+        "width": 958,
+        "height": 683
+      },
+      {
+        "file": "assets/deepak_images/ch08_knee_ankle_foot_pain/p405_img2.jpeg",
+        "page": 405,
+        "fig_number": "8.46A and B",
+        "caption_en": "Fig. 8.46A and B: Hoffa’s test",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Hoffa’s test",
+        "category": "examination",
+        "width": 958,
+        "height": 723
+      },
+      {
+        "file": "assets/deepak_images/ch08_knee_ankle_foot_pain/p406_img1.jpeg",
+        "page": 406,
+        "fig_number": "8.47",
+        "caption_en": "Fig. 8.47: McMurray’s test",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: McMurray’s test",
+        "category": "examination",
+        "width": 958,
+        "height": 721
+      },
+      {
+        "file": "assets/deepak_images/ch08_knee_ankle_foot_pain/p406_img2.jpeg",
+        "page": 406,
+        "fig_number": "8.47",
+        "caption_en": "Fig. 8.47: McMurray’s test",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: McMurray’s test",
+        "category": "examination",
+        "width": 462,
+        "height": 798
+      },
+      {
+        "file": "assets/deepak_images/ch08_knee_ankle_foot_pain/p406_img3.jpeg",
+        "page": 406,
+        "fig_number": "8.47",
+        "caption_en": "Fig. 8.47: McMurray’s test",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: McMurray’s test",
+        "category": "examination",
+        "width": 523,
+        "height": 798
+      },
+      {
         "file": "assets/deepak_images/ch08_knee_ankle_foot_pain/p407_img1.jpeg",
+        "page": 407,
+        "fig_number": "8.49",
+        "caption_en": "Fig. 8.49: Lachman test",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Lachman test",
+        "category": "examination",
         "width": 958,
-        "height": 650,
-        "size_bytes": 42244,
-        "page_captions": [
-          "Figs 8.50A and B).4",
-          "Fig. 8.49:  Lachman test",
-          "Figs 8.50A and B:  Varus and valgus stress"
-        ],
-        "captions": [
-          "Figs 8.50A and B).4 Fig. 8.49: Lachman test",
-          "Figs 8.50A and B: Varus and valgus stress A"
-        ]
+        "height": 650
       },
       {
-        "chapter": 8,
-        "chapter_name": "knee_ankle_foot_pain",
-        "page": 407,
         "file": "assets/deepak_images/ch08_knee_ankle_foot_pain/p407_img2.jpeg",
-        "width": 958,
-        "height": 639,
-        "size_bytes": 33283,
-        "page_captions": [
-          "Figs 8.50A and B).4",
-          "Fig. 8.49:  Lachman test",
-          "Figs 8.50A and B:  Varus and valgus stress"
-        ],
-        "captions": [
-          "Figs 8.50A and B).4 Fig. 8.49: Lachman test",
-          "Figs 8.50A and B: Varus and valgus stress A"
-        ]
-      },
-      {
-        "chapter": 8,
-        "chapter_name": "knee_ankle_foot_pain",
         "page": 407,
+        "fig_number": "8.49",
+        "caption_en": "Fig. 8.49: Lachman test",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Lachman test",
+        "category": "examination",
+        "width": 958,
+        "height": 639
+      },
+      {
         "file": "assets/deepak_images/ch08_knee_ankle_foot_pain/p407_img3.jpeg",
+        "page": 407,
+        "fig_number": "8.49",
+        "caption_en": "Fig. 8.49: Lachman test",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Lachman test",
+        "category": "examination",
         "width": 958,
-        "height": 805,
-        "size_bytes": 40561,
-        "page_captions": [
-          "Figs 8.50A and B).4",
-          "Fig. 8.49:  Lachman test",
-          "Figs 8.50A and B:  Varus and valgus stress"
-        ],
-        "captions": [
-          "Figs 8.50A and B).4 Fig. 8.49: Lachman test",
-          "Figs 8.50A and B: Varus and valgus stress A"
-        ]
+        "height": 805
       },
       {
-        "chapter": 8,
-        "chapter_name": "knee_ankle_foot_pain",
-        "page": 408,
         "file": "assets/deepak_images/ch08_knee_ankle_foot_pain/p408_img1.jpeg",
-        "width": 958,
-        "height": 738,
-        "size_bytes": 45228,
-        "page_captions": [
-          "Figs 8.51A and B). The test is positive if there is a reproduction of clicking ",
-          "Figs 8.51A and B:  Plica test"
-        ],
-        "captions": [
-          "Figs 8.51A and B). The test is positive if there is a reproduction of clicking and symptoms.63",
-          "Figs 8.51A and B: Plica test A"
-        ]
-      },
-      {
-        "chapter": 8,
-        "chapter_name": "knee_ankle_foot_pain",
         "page": 408,
+        "fig_number": "8.51A and B",
+        "caption_en": "Figs 8.51A and B: Plica test",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Plica test",
+        "category": "examination",
+        "width": 958,
+        "height": 738
+      },
+      {
         "file": "assets/deepak_images/ch08_knee_ankle_foot_pain/p408_img2.jpeg",
+        "page": 408,
+        "fig_number": "8.51A and B",
+        "caption_en": "Figs 8.51A and B: Plica test",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Plica test",
+        "category": "examination",
         "width": 958,
-        "height": 693,
-        "size_bytes": 44939,
-        "page_captions": [
-          "Figs 8.51A and B). The test is positive if there is a reproduction of clicking ",
-          "Figs 8.51A and B:  Plica test"
-        ],
-        "captions": [
-          "Figs 8.51A and B). The test is positive if there is a reproduction of clicking and symptoms.63",
-          "Figs 8.51A and B: Plica test A"
-        ]
+        "height": 693
       },
       {
-        "chapter": 8,
-        "chapter_name": "knee_ankle_foot_pain",
-        "page": 410,
         "file": "assets/deepak_images/ch08_knee_ankle_foot_pain/p410_img1.jpeg",
+        "page": 410,
+        "fig_number": "8.52A to C",
+        "caption_en": "Figs 8.52A to C: Drawer’s test with variations",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Drawer’s test with variations",
+        "category": "examination",
         "width": 958,
-        "height": 665,
-        "size_bytes": 40439,
-        "page_captions": [
-          "Figs 8.52A to C:  Drawer’s test with variations"
-        ],
-        "captions": [
-          "Figs 8.52A to C: Drawer’s test with variations B"
-        ]
+        "height": 665
       },
       {
-        "chapter": 8,
-        "chapter_name": "knee_ankle_foot_pain",
-        "page": 410,
         "file": "assets/deepak_images/ch08_knee_ankle_foot_pain/p410_img2.jpeg",
-        "width": 958,
-        "height": 631,
-        "size_bytes": 36834,
-        "page_captions": [
-          "Figs 8.52A to C:  Drawer’s test with variations"
-        ],
-        "captions": [
-          "Figs 8.52A to C: Drawer’s test with variations B"
-        ]
-      },
-      {
-        "chapter": 8,
-        "chapter_name": "knee_ankle_foot_pain",
         "page": 410,
+        "fig_number": "8.52A to C",
+        "caption_en": "Figs 8.52A to C: Drawer’s test with variations",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Drawer’s test with variations",
+        "category": "examination",
+        "width": 958,
+        "height": 631
+      },
+      {
         "file": "assets/deepak_images/ch08_knee_ankle_foot_pain/p410_img3.jpeg",
+        "page": 410,
+        "fig_number": "8.52A to C",
+        "caption_en": "Figs 8.52A to C: Drawer’s test with variations",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Drawer’s test with variations",
+        "category": "examination",
         "width": 865,
-        "height": 798,
-        "size_bytes": 51255,
-        "page_captions": [
-          "Figs 8.52A to C:  Drawer’s test with variations"
-        ],
-        "captions": [
-          "Figs 8.52A to C: Drawer’s test with variations B"
-        ]
+        "height": 798
       },
       {
-        "chapter": 8,
-        "chapter_name": "knee_ankle_foot_pain",
-        "page": 411,
         "file": "assets/deepak_images/ch08_knee_ankle_foot_pain/p411_img1.jpeg",
+        "page": 411,
+        "fig_number": "8.53A and B",
+        "caption_en": "Figs 8.53A and B: Pivot shift maneuver",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Pivot shift maneuver",
+        "category": "examination",
         "width": 958,
-        "height": 706,
-        "size_bytes": 35328,
-        "page_captions": [
-          "Figs 8.53A and B:  Pivot shift maneuver  ",
-          "Fig. 8.54:  Eliciting lateral knee pain with external rotation  "
-        ],
-        "captions": [
-          "Figs 8.53A and B: Pivot shift maneuver Note: Additional internal rotation may be required",
-          "Fig. 8.54: Eliciting lateral knee pain with external rotation and pressing down on the knee in the supine position"
-        ]
+        "height": 706
       },
       {
-        "chapter": 8,
-        "chapter_name": "knee_ankle_foot_pain",
-        "page": 411,
         "file": "assets/deepak_images/ch08_knee_ankle_foot_pain/p411_img2.jpeg",
-        "width": 958,
-        "height": 725,
-        "size_bytes": 32855,
-        "page_captions": [
-          "Figs 8.53A and B:  Pivot shift maneuver  ",
-          "Fig. 8.54:  Eliciting lateral knee pain with external rotation  "
-        ],
-        "captions": [
-          "Figs 8.53A and B: Pivot shift maneuver Note: Additional internal rotation may be required",
-          "Fig. 8.54: Eliciting lateral knee pain with external rotation and pressing down on the knee in the supine position"
-        ]
-      },
-      {
-        "chapter": 8,
-        "chapter_name": "knee_ankle_foot_pain",
         "page": 411,
+        "fig_number": "8.53A and B",
+        "caption_en": "Figs 8.53A and B: Pivot shift maneuver",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Pivot shift maneuver",
+        "category": "examination",
+        "width": 958,
+        "height": 725
+      },
+      {
         "file": "assets/deepak_images/ch08_knee_ankle_foot_pain/p411_img3.jpeg",
+        "page": 411,
+        "fig_number": "8.53A and B",
+        "caption_en": "Figs 8.53A and B: Pivot shift maneuver",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Pivot shift maneuver",
+        "category": "examination",
         "width": 958,
-        "height": 630,
-        "size_bytes": 45205,
-        "page_captions": [
-          "Figs 8.53A and B:  Pivot shift maneuver  ",
-          "Fig. 8.54:  Eliciting lateral knee pain with external rotation  "
-        ],
-        "captions": [
-          "Figs 8.53A and B: Pivot shift maneuver Note: Additional internal rotation may be required",
-          "Fig. 8.54: Eliciting lateral knee pain with external rotation and pressing down on the knee in the supine position"
-        ]
+        "height": 630
       },
       {
-        "chapter": 8,
-        "chapter_name": "knee_ankle_foot_pain",
-        "page": 412,
         "file": "assets/deepak_images/ch08_knee_ankle_foot_pain/p412_img1.jpeg",
-        "width": 525,
-        "height": 798,
-        "size_bytes": 40424,
-        "page_captions": [
-          "Fig. 8.55). A palpable click is usually present. Occasionally pain may ",
-          "Fig. 8.56)",
-          "Fig. 8.55:  Mulder click test"
-        ],
-        "captions": [
-          "Fig. 8.55). A palpable click is usually present. Occasionally pain may radiate distally. Conversely, the digital nerve stretch test has been shown to have",
-          "Fig. 8.56). Fig. 8.55: Mulder click test",
-          "Fig. 8.56: Palpating for tender nodules over medial achilles tendon"
-        ]
-      },
-      {
-        "chapter": 8,
-        "chapter_name": "knee_ankle_foot_pain",
         "page": 412,
-        "file": "assets/deepak_images/ch08_knee_ankle_foot_pain/p412_img2.jpeg",
-        "width": 958,
-        "height": 700,
-        "size_bytes": 41340,
-        "page_captions": [
-          "Fig. 8.55). A palpable click is usually present. Occasionally pain may ",
-          "Fig. 8.56)",
-          "Fig. 8.55:  Mulder click test"
-        ],
-        "captions": [
-          "Fig. 8.55). A palpable click is usually present. Occasionally pain may radiate distally. Conversely, the digital nerve stretch test has been shown to have",
-          "Fig. 8.56). Fig. 8.55: Mulder click test",
-          "Fig. 8.56: Palpating for tender nodules over medial achilles tendon"
-        ]
+        "fig_number": "8.55",
+        "caption_en": "Fig. 8.55: Mulder click test",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Mulder click test",
+        "category": "examination",
+        "width": 525,
+        "height": 798
       },
       {
-        "chapter": 8,
-        "chapter_name": "knee_ankle_foot_pain",
-        "page": 413,
-        "file": "assets/deepak_images/ch08_knee_ankle_foot_pain/p413_img1.jpeg",
+        "file": "assets/deepak_images/ch08_knee_ankle_foot_pain/p412_img2.jpeg",
+        "page": 412,
+        "fig_number": "8.55",
+        "caption_en": "Fig. 8.55: Mulder click test",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Mulder click test",
+        "category": "examination",
         "width": 958,
-        "height": 639,
-        "size_bytes": 54781,
-        "page_captions": [
-          "Fig. 8.57)",
-          "Fig. 8.57:  External rotation stress test"
-        ],
-        "captions": [
-          "Fig. 8.57). REFERENCES",
-          "Fig. 8.57: External rotation stress test"
-        ]
+        "height": 700
+      },
+      {
+        "file": "assets/deepak_images/ch08_knee_ankle_foot_pain/p413_img1.jpeg",
+        "page": 413,
+        "fig_number": "8.57",
+        "caption_en": "Fig. 8.57: External rotation stress test",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: External rotation stress test",
+        "category": "examination",
+        "width": 958,
+        "height": 639
       }
     ],
+    "stage_2_somatic_dysfunctions": [
+      "Hạn chế di động đầu trên xương mác (Superior tibiofibular joint restriction): Gây đau mặt ngoài gối và cổ chân khi ngồi xổm hoặc chạy.",
+      "Mất cân bằng bánh chè - đùi (Patellar lateral tracking & tilt): Kéo lệch xương bánh chè ra ngoài gây mòn sụn khớp bánh chè đùi.",
+      "Mất độ ngửa cổ chân và khóa khớp sên - ghe (Subtalar joint pronation): Gây căng dãn quá mức cân gan chân và gân chày sau."
+    ],
+    "stage_3_guidemap_intervention": "Kỹ thuật giải phóng di động đầu trên xương mác và diện khớp bánh chè; Tiêm chất nhờn Acid Hyaluronic hoặc PRP dưới hướng dẫn siêu âm vào ổ khớp gối (Xem Web 1: Tiêm Khớp Gối, Tiêm Dịch Khớp Khoeo / Nang Baker, Tiêm Cân Gan Chân).",
     "recommended_web1_procedures": [
       {
         "id": "knee-suprapatellar",
@@ -4773,947 +4553,16 @@ const STABLE_SCREENING_FALLBACK = [
     ]
   },
   {
-    "id": "ch09-shoulder",
-    "chapter": 9,
-    "region": "upper_limb",
-    "region_vi": "Khớp Vai & Đai Vai",
-    "title": "Shoulder Pain Differential Screening",
-    "title_vi": "Sàng Lọc Chẩn Đoán Phân Biệt Đau Khớp Vai & Đai Vai",
-    "author": "GS. Deepak Sebastian (Chapter 9, pp. 402-451)",
-    "summary": "Tiếp cận sàng lọc toàn diện khớp vai và đai vai: Phân loại theo 4 vùng đau lâm sàng (Đau vai trên, Đau vai trước, Đau vai ngoài, Đau vai sau). Loại trừ cờ đỏ nội tạng cấp tính: Nhồi máu cơ tim, vỡ lách (Dấu hiệu Kehr), viêm túi mật / áp-xe gan, u đỉnh phổi Pancoast, hoại tử vô mạch chỏm xương cánh tay và trật khớp vai sau bị bỏ sót. Phân biệt tổn thương chóp xoay (Supraspinatus, Infraspinatus, Subscapularis), hội chứng xung đột dưới mỏm cùng (SAIS), tổn thương sụn viền SLAP, đông cứng khớp vai (Frozen shoulder) và rối loạn vận động xương bả vai (Scapular dyskinesis). Trọn vẹn 41 hình ảnh Atlas Deepak.",
-    "stage_1_systemic_red_flags": [
-      {
-        "category": "Cờ Đỏ Thiếu Máu Cơ Tim / Nhồi Máu Cơ Tim (Cardiac Ischemia)",
-        "signs": "Đau nhức vùng vai trái lan dọc bờ trong cánh tay và ngón 4-5 hoặc lan lên hàm, khởi phát khi gắng sức hoặc xúc động, kèm cảm giác đè nặng ngực, vã mồ hôi, khó thở, buồn nôn.",
-        "action": "CẤP CỨU NỘI TIM MẠCH: Đo ECG 12 chuyển đạo ngay lập tức, xét nghiệm Troponin I/T siêu nhạy. Tuyệt đối không tiêm corticoid vào vai!"
-      },
-      {
-        "category": "Cờ Đỏ Vỡ Lách / Chảy Máu Trong Ổ Bụng (Dấu Hiệu Kehr)",
-        "signs": "Đau nhói dữ dội tại đỉnh vai trái (do máu hoặc dịch kích thích dây thần kinh hoành mặt dưới cơ hoành C3-C5), xuất hiện sau chấn thương ngực bụng kín hoặc tai nạn giao thông, kèm da niêm mạc nhợt, tụt huyết áp, bụng chướng.",
-        "action": "CẤP CỨU NGOẠI TIÊU HÓA: Siêu âm bụng tại giường (FAST) tìm dịch ổ bụng, chuyển mổ khẩn cấp."
-      },
-      {
-        "category": "Cờ Đỏ U Đỉnh Phổi Pancoast (Pancoast Tumor)",
-        "signs": "Đau vai sau và rãnh gai bả vai âm ỉ liên tục tăng về đêm, lan dọc theo bờ trong cánh tay, sụt cân, tiền sử hút thuốc lá, có thể kèm sụp mi co đồng tử cùng bên (Hội chứng Horner).",
-        "action": "Chụp X-quang và CT lồng ngực đánh giá vùng đỉnh phổi."
-      },
-      {
-        "category": "Cờ Đỏ Trật Khớp Vai Sau Bị Bỏ Sót (Posterior Shoulder Dislocation)",
-        "signs": "Khớp vai bị cố định ở tư thế khép và xoay trong, MẤT HOÀN TOÀN KHẢ NĂNG XOAY NGOÀI THỤ ĐỘNG. Rất dễ bị bỏ sót trên phim X-quang AP thông thường (dấu hiệu bóng đèn / Lightbulb sign), thường gặp sau cơn co giật động kinh hoặc bị điện giật.",
-        "action": "Chụp X-quang khớp vai tư thế nách (Axillary view) hoặc chữ Y xương bả vai (Scapular Y view), nắn trật dưới vô cảm."
-      }
-    ],
-    "red_flags": [
-      {
-        "category": "Nhồi Máu Cơ Tim & Vỡ Tạng Ổ Bụng",
-        "signs": "Đau vai trái kèm đau ngực khó thở hoặc dấu hiệu Kehr sau ngã đụng bụng.",
-        "action": "Đo ECG / Siêu âm FAST ổ bụng cấp cứu."
-      },
-      {
-        "category": "Hoại Tử Vô Mạch Chỏm Xương Cánh Tay (Humeral Head AVN)",
-        "signs": "Đau vai âm ỉ sâu, cứng khớp tiến triển ở bệnh nhân dùng corticoid liều cao kéo dài hoặc bệnh hồng cầu hình liềm.",
-        "action": "Chụp MRI khớp vai đánh giá mức độ hoại tử dưới sụn."
-      }
-    ],
-    "visceral_referrals": [
-      {
-        "source": "Bệnh Lý Gan & Túi Mật (Liver Abscess & Cholecystitis)",
-        "pattern": "Kích thích cơ hoành phải quy chiếu đau lên đỉnh vai phải và vùng bờ trên cơ thang phải (qua thần kinh hoành C3-C5). Kèm sốt, vàng da, ấn đau hạ sườn phải.",
-        "differential": "Siêu âm gan mật tụy, xét nghiệm men gan AST/ALT, Bilirubin."
-      },
-      {
-        "source": "Đau Rễ Cổ C5 (Cervical Radiculopathy C5)",
-        "pattern": "Đau nhức mặt ngoài cơ delta và đỉnh vai, tê bì dermatom C5, yếu cơ giạng vai (cơ delta).",
-        "differential": "Spurling test (+), Kéo giãn cổ (+) làm giảm triệu chứng, cử động khớp vai nội khớp bình thường."
-      }
-    ],
-    "drug_induced": [
-      "Quinolone: Viêm gân và đứt gân cơ trên gai (Supraspinatus).",
-      "Statin: Viêm cơ thang, cơ delta và cơ dưới gai đối xứng hai bên.",
-      "Corticoid: Hoại tử vô mạch chỏm xương cánh tay (AVN)."
-    ],
-    "examination_procedures": [
-      {
-        "name": "Nghiệm Pháp Neer (Neer Impingement Test Xung Đột Dưới Mỏm Cùng)",
-        "technique": "Người khám đứng sau, một tay cố định xương bả vai bệnh nhân, tay kia nâng toàn bộ cánh tay bệnh nhân gập tối đa ra trước trong tư thế xoay trong hoàn toàn.",
-        "significance": "Tái hiện đau chói ở góc 70° - 120° do mấu động lớn kẹp gân cơ trên gai vào bờ trước dưới mỏm cùng vai (Sn: 79 - 88%).",
-        "sensitivity": "79% - 88%",
-        "specificity": "53% - 60%",
-        "diagnostic_role": "Độ nhạy cao để sàng lọc loại trừ xung đột dưới mỏm cùng vai (SAIS)"
-      },
-      {
-        "name": "Nghiệm Pháp Hawkins-Kennedy (Hawkins-Kennedy Impingement Test)",
-        "technique": "Bệnh nhân gập vai 90°, gập khuỷu 90°. Người khám giữ khuỷu tay và thực hiện động tác xoay trong cánh tay đột ngột.",
-        "significance": "Tái hiện đau chói mặt trước trên vai do gân cơ trên gai bị kẹp dưới dây chằng quạ - cùng vai (Sn: 87 - 92%).",
-        "sensitivity": "80% - 92%",
-        "specificity": "56% - 67%",
-        "diagnostic_role": "Độ nhạy cao phát hiện chèn kẹp gân cơ trên gai dưới dây chằng quạ cùng vai"
-      },
-      {
-        "name": "Nghiệm Pháp Jobe / Empty Can (Khám Đứt/Viêm Gân Cơ Trên Gai)",
-        "technique": "Bệnh nhân giạng hai cánh tay 90° trong mặt phẳng bả vai (hướng ra trước 30°), xoay trong cánh tay tối đa ngón cái chúc xuống đất. Người khám ấn hai tay xuống, yêu cầu bệnh nhân kháng lực.",
-        "significance": "Đau chói hoặc yếu cơ rõ rệt không giữ được tay -> Dương tính tổn thương gân cơ trên gai (Supraspinatus).",
-        "sensitivity": "89%",
-        "specificity": "68%",
-        "diagnostic_role": "Sàng lọc tổn thương viêm hoặc rách gân cơ trên gai (Supraspinatus Tendon)"
-      },
-      {
-        "name": "Dấu Hiệu Trễ Xoay Ngoài (External Rotation Lag Sign - Cơ Dưới Gai & Tròn Bé)",
-        "technique": "Bệnh nhân ngồi. Người khám nâng tay bệnh nhân gập khuỷu 90°, đưa vai ra sau và xoay ngoài thụ động gần tối đa (khoảng 80°), sau đó yêu cầu bệnh nhân giữ nguyên tư thế và buông tay ra.",
-        "significance": "Cẳng tay bệnh nhân bị rơi bật ngược vào trong -> Rách lớn hoặc đứt hoàn toàn gân cơ dưới gai (Infraspinatus) và cơ tròn bé (Sp: 98%).",
-        "sensitivity": "70%",
-        "specificity": "98% - 100%",
-        "diagnostic_role": "Đặc hiệu cực cao chẩn đoán rách lớn cơ dưới gai & tròn bé (+LR: 35.0)"
-      },
-      {
-        "name": "Nghiệm Pháp Gerber / Lift-off Test (Khám Cơ Dưới Vai - Subscapularis)",
-        "technique": "Bệnh nhân đưa tay ra sau lưng, mu bàn tay áp vào vùng thắt lưng. Yêu cầu bệnh nhân chủ động đẩy mu bàn tay tách rời ra xa khỏi lưng.",
-        "significance": "Bệnh nhân không thể nhấc tay ra khỏi lưng hoặc người khám ấn nhẹ bị sụp tay -> Rách gân cơ dưới vai (Subscapularis).",
-        "sensitivity": "70% - 80%",
-        "specificity": "98%",
-        "diagnostic_role": "Đặc hiệu rất cao chẩn đoán rách gân cơ dưới vai (Subscapularis Tendon)"
-      },
-      {
-        "name": "Nghiệm Pháp Speed & Yergason (Khám Đầu Dài Gân Nhị Đầu)",
-        "technique": "Speed Test: Bệnh nhân duỗi thẳng khuỷu, ngửa cẳng tay, gập vai 90° kháng lực của người khám.\nYergason Test: Gập khuỷu 90°, áp sát cánh tay vào thân mình, bệnh nhân cố gắng ngửa cẳng tay và xoay ngoài vai kháng lại lực cản.",
-        "significance": "Đau chói khu trú tại rãnh gian củ (Bicipital groove) -> Viêm gân đầu dài cơ nhị đầu hoặc mất vững gân nhị đầu.",
-        "sensitivity": "63% (Speed) / 43% (Yergason)",
-        "specificity": "58% (Speed) / 85% (Yergason)",
-        "diagnostic_role": "Phối hợp đánh giá bệnh lý đầu dài gân cơ nhị đầu cánh tay (LHBT Tendinopathy)"
-      },
-      {
-        "name": "Nghiệm Pháp O'Brien (Active Compression Test Khám Rách Sụn Viền SLAP)",
-        "technique": "Gập vai 90°, khép vào trong 10°, xoay trong cánh tay tối đa (ngón cái chỉ xuống sàn), ấn cánh tay xuống kháng lực (Vị trí 1). Lặp lại động tác với cẳng tay ngửa hoàn toàn (ngón cái chỉ lên trời - Vị trí 2).",
-        "significance": "Đau sâu trong khớp vai ở Vị trí 1 và GIẢM HOẶC HẾT ĐAU ở Vị trí 2 -> Tổn thương rách sụn viền trên ổ chảo từ trước ra sau (SLAP Tear).",
-        "sensitivity": "88% - 100%",
-        "specificity": "73% - 98%",
-        "diagnostic_role": "Độ chính xác cao chẩn đoán rách sụn viền ổ chảo từ trước ra sau (SLAP Tear)"
-      },
-      {
-        "name": "Nghiệm Pháp Cross-Body Adduction (Khám Khớp Cùng Đòn AC Joint)",
-        "technique": "Bệnh nhân nâng tay gập 90°, người khám kéo khép tối đa cánh tay ngang qua ngực về phía vai đối diện.",
-        "significance": "Tái hiện đau chói tại đỉnh khớp cùng đòn (Acromioclavicular Joint Arthrosis).",
-        "sensitivity": "77%",
-        "specificity": "79%",
-        "diagnostic_role": "Tái hiện đau khu trú tại đỉnh khớp cùng vai - đòn (AC Joint Arthrosis)"
-      }
-    ],
-    "differential_table": [
-      {
-        "condition": "Hội chứng xung đột dưới mỏm cùng (Subacromial Impingement - SAIS)",
-        "onset": "Từ từ sau các hoạt động đưa tay qua đầu thường xuyên",
-        "aggravating": "Giạng tay trong cung đau 60° - 120° (Painful Arc)",
-        "key_differentiator": "Neer (+), Hawkins (+), cơ lực còn tốt, tầm vận động thụ động PROM bình thường nhưng đau khi AROM chủ động",
-        "confirmatory_test": "Nghiệm pháp khám chuyên biệt vùng & Khám cơ lực đối kháng",
-        "gold_standard": "Siêu âm can thiệp cơ xương khớp / X-quang / MRI chuyên sâu"
-      },
-      {
-        "condition": "Rách chóp xoay hoàn toàn (Full-Thickness Rotator Cuff Tear)",
-        "onset": "Sau chấn thương ngã chống tay hoặc thoái hóa rách dần",
-        "aggravating": "Nâng cánh tay, nằm nghiêng đè lên vai",
-        "key_differentiator": "Yếu cơ rõ rệt khi thử cơ lực (Empty can +, Drop arm test +), Dấu hiệu trễ xoay ngoài (+), siêu âm/MRI thấy đứt liên tục sợi gân",
-        "confirmatory_test": "Nghiệm pháp Jobe, Lag sign, Lift-off test",
-        "gold_standard": "Siêu âm cơ xương khớp độ phân giải cao hoặc MRI khớp vai"
-      },
-      {
-        "condition": "Đông cứng khớp vai (Adhesive Capsulitis / Frozen Shoulder)",
-        "onset": "Âm ỉ, nữ 40-60 tuổi, tiền sử đái tháo đường/tuyến giáp",
-        "aggravating": "Tất cả các hướng cử động, đau nhiều về đêm giai đoạn đầu",
-        "key_differentiator": "MẤT TẦM VẬN ĐỘNG CẢ CHỦ ĐỘNG LẪN THỤ ĐỘNG THEO MÔ HÌNH BAO KHỚP: Xoay ngoài giảm nặng nhất > Giạng > Xoay trong (ER > ABD > IR)",
-        "confirmatory_test": "Nghiệm pháp khám chuyên biệt vùng & Khám cơ lực đối kháng",
-        "gold_standard": "Siêu âm can thiệp cơ xương khớp / X-quang / MRI chuyên sâu"
-      },
-      {
-        "condition": "Viêm thoái hóa khớp cùng đòn (AC Joint Arthropathy)",
-        "onset": "VĐV tập tạ ngực, người lao động nặng mang vác trên vai",
-        "aggravating": "Đưa tay chéo qua ngực, nằm đè nghiêng vai",
-        "key_differentiator": "Đau khu trú chính xác tại đỉnh mỏm cùng vai, ấn đau chói khớp AC, Cross-body adduction test (+), O'Brien đau nông ở mỏm cùng",
-        "confirmatory_test": "Nghiệm pháp khám chuyên biệt vùng & Khám cơ lực đối kháng",
-        "gold_standard": "Siêu âm can thiệp cơ xương khớp / X-quang / MRI chuyên sâu"
-      }
-    ],
-    "stage_2_somatic_dysfunctions": [
-      "Chỏm xương cánh tay trượt lên trên - ra trước (Anterosuperior Humeral Head Migration): Do mất cân bằng lực kéo chóp xoay và cơ delta.",
-      "Rối loạn vận động xương bả vai (Scapular Dyskinesis - SICK Scapula): Xương bả vai chúc góc dưới (Type 1), nhô bờ trong (Type 2), hoặc nhô bờ trên (Type 3) làm hẹp khoang dưới mỏm cùng.",
-      "Co rút bao khớp vai phía sau (Posterior Shoulder Capsule Tightness): Đẩy chỏm cánh tay trượt ra trước gây xung đột thứ phát.",
-      "Khóa xương sườn 1 nhô cao (Elevated 1st rib): Gây chèn ép đám rối cánh tay và hạn chế hạ đai vai."
-    ],
-    "stage_3_guidemap_intervention": "Kỹ thuật giải phóng bao khớp sau và tập phục hồi vận động xương bả vai (Scapular stabilization); Tiêm khoang dưới mỏm cùng hoặc Tiêm nội khớp vai nong bao khớp dưới hướng dẫn siêu âm (Xem Web 1: Tiêm Khoang Dưới Mỏm Cùng, Tiêm Bao Gân Nhị Đầu, Tiêm Khớp Cùng Đòn).",
-    "figures": [
-      {
-        "chapter": 9,
-        "chapter_name": "shoulder_pain",
-        "page": 418,
-        "file": "assets/deepak_images/ch09_shoulder_pain/p418_img1.jpeg",
-        "width": 1290,
-        "height": 751,
-        "size_bytes": 91918,
-        "page_captions": [
-          "Fig. 9.1:  Shoulder anterior view",
-          "Fig. 9.2:  Shoulder posterior view"
-        ],
-        "captions": [
-          "Fig. 9.1: Shoulder anterior view Fig. 9.2: Shoulder posterior view"
-        ]
-      },
-      {
-        "chapter": 9,
-        "chapter_name": "shoulder_pain",
-        "page": 418,
-        "file": "assets/deepak_images/ch09_shoulder_pain/p418_img2.jpeg",
-        "width": 934,
-        "height": 753,
-        "size_bytes": 68837,
-        "page_captions": [
-          "Fig. 9.1:  Shoulder anterior view",
-          "Fig. 9.2:  Shoulder posterior view"
-        ],
-        "captions": [
-          "Fig. 9.1: Shoulder anterior view Fig. 9.2: Shoulder posterior view"
-        ]
-      },
-      {
-        "chapter": 9,
-        "chapter_name": "shoulder_pain",
-        "page": 423,
-        "file": "assets/deepak_images/ch09_shoulder_pain/p423_img1.png",
-        "width": 994,
-        "height": 813,
-        "size_bytes": 179084,
-        "page_captions": [
-          "Fig. 9.3:  Normal mechanics during overhead activity"
-        ],
-        "captions": [
-          "Fig. 9.3: Normal mechanics during overhead activity"
-        ]
-      },
-      {
-        "chapter": 9,
-        "chapter_name": "shoulder_pain",
-        "page": 434,
-        "file": "assets/deepak_images/ch09_shoulder_pain/p434_img1.jpeg",
-        "width": 1027,
-        "height": 754,
-        "size_bytes": 67829,
-        "page_captions": [
-          "Fig. 9.4:  Bicipital tendinitis"
-        ],
-        "captions": [
-          "Fig. 9.4: Bicipital tendinitis"
-        ]
-      },
-      {
-        "chapter": 9,
-        "chapter_name": "shoulder_pain",
-        "page": 436,
-        "file": "assets/deepak_images/ch09_shoulder_pain/p436_img1.jpeg",
-        "width": 543,
-        "height": 903,
-        "size_bytes": 55068,
-        "page_captions": [
-          "Fig. 9.5:  Coracobrachialis (arrow)"
-        ],
-        "captions": [
-          "Fig. 9.5) and between the biceps and the brachialis, supplying these three muscles. This nerve is vulnerable for entrapment by all three muscles it supplies."
-        ]
-      },
-      {
-        "chapter": 9,
-        "chapter_name": "shoulder_pain",
-        "page": 437,
-        "file": "assets/deepak_images/ch09_shoulder_pain/p437_img1.jpeg",
-        "width": 735,
-        "height": 753,
-        "size_bytes": 53211,
-        "page_captions": [
-          "Fig. 9.6). Refer heading impingement for further description.",
-          "Fig. 9.7). It innervates the supraspinatus ",
-          "Fig. 9.6:  Subacromial bursa (arrow)"
-        ],
-        "captions": [
-          "Fig. 9.6). Refer heading impingement for further description. Rotator Cuff Syndrome",
-          "Fig. 9.7). It innervates the supraspinatus muscles and infraspinous muscles. The suprascapular nerve is vulnerable to"
-        ]
-      },
-      {
-        "chapter": 9,
-        "chapter_name": "shoulder_pain",
-        "page": 438,
-        "file": "assets/deepak_images/ch09_shoulder_pain/p438_img1.jpeg",
-        "width": 842,
-        "height": 903,
-        "size_bytes": 53404,
-        "page_captions": [
-          "Fig. 9.8). ",
-          "Fig. 9.8). This is seen often with ",
-          "Fig. 9.7:  Scapular notch; spinoglenoid notch (posterior view)"
-        ],
-        "captions": [
-          "Fig. 9.8). This is seen often with hypertrophy of the teres minor muscle, but it can very well",
-          "Fig. 9.8). This is seen often with hypertrophy of the triceps and teres major muscle, but it can very well occur with"
-        ]
-      },
-      {
-        "chapter": 9,
-        "chapter_name": "shoulder_pain",
-        "page": 439,
-        "file": "assets/deepak_images/ch09_shoulder_pain/p439_img1.jpeg",
-        "width": 994,
-        "height": 753,
-        "size_bytes": 80783,
-        "page_captions": [
-          "Fig. 9.8:  Quadrilateral space and triangular interval"
-        ],
-        "captions": [
-          "Fig. 9.8: Quadrilateral space and triangular interval"
-        ]
-      },
-      {
-        "chapter": 9,
-        "chapter_name": "shoulder_pain",
-        "page": 440,
-        "file": "assets/deepak_images/ch09_shoulder_pain/p440_img1.jpeg",
-        "width": 637,
-        "height": 753,
-        "size_bytes": 55189,
-        "page_captions": [
-          "Fig. 9.9) are missed. An accurate identification ",
-          "Fig. 9.9:  Sites of impingement: 1. Posterior-superior glenoid rim; "
-        ],
-        "captions": [
-          "Fig. 9.9) are missed. An accurate identification of the type and presentation makes treatment more effective. We aim to simplify",
-          "Fig. 9.9: Sites of impingement: 1. Posterior-superior glenoid rim; 2. Subacromial; 3. Subcoracoid"
-        ]
-      },
-      {
-        "chapter": 9,
-        "chapter_name": "shoulder_pain",
-        "page": 442,
-        "file": "assets/deepak_images/ch09_shoulder_pain/p442_img1.jpeg",
-        "width": 1134,
-        "height": 754,
-        "size_bytes": 91748,
-        "page_captions": [
-          "Fig. 9.10)",
-          "Fig. 9.11) type of impingement is ",
-          "Fig. 9.10:  Location for rotator cuff pathology"
-        ],
-        "captions": [
-          "Fig. 9.10). What to look for?",
-          "Fig. 9.11) type of impingement is considered the most common cause of posterior shoulder pain in the throwing",
-          "Fig. 9.10: Location for rotator cuff pathology"
-        ]
-      },
-      {
-        "chapter": 9,
-        "chapter_name": "shoulder_pain",
-        "page": 443,
-        "file": "assets/deepak_images/ch09_shoulder_pain/p443_img1.jpeg",
-        "width": 1000,
-        "height": 753,
-        "size_bytes": 69572,
-        "page_captions": [
-          "Fig. 9.11:  Posterior-superior glenoid impingement"
-        ],
-        "captions": [
-          "Fig. 9.11: Posterior-superior glenoid impingement"
-        ]
-      },
-      {
-        "chapter": 9,
-        "chapter_name": "shoulder_pain",
-        "page": 445,
-        "file": "assets/deepak_images/ch09_shoulder_pain/p445_img1.jpeg",
-        "width": 1011,
-        "height": 722,
-        "size_bytes": 71710,
-        "page_captions": [
-          "Fig. 9.12)",
-          "Fig. 9.12:  Labral tear sites"
-        ],
-        "captions": [
-          "Fig. 9.12).",
-          "Fig. 9.12: Labral tear sites"
-        ]
-      },
-      {
-        "chapter": 9,
-        "chapter_name": "shoulder_pain",
-        "page": 447,
-        "file": "assets/deepak_images/ch09_shoulder_pain/p447_img1.jpeg",
-        "width": 958,
-        "height": 717,
-        "size_bytes": 67990,
-        "page_captions": [
-          "Fig. 9.13:  Assessing an anterior humerus",
-          "Fig. 9.14:  Assessing a medially rotated humerus"
-        ],
-        "captions": [
-          "Fig. 9.13: Assessing an anterior humerus Fig. 9.14: Assessing a medially rotated humerus"
-        ]
-      },
-      {
-        "chapter": 9,
-        "chapter_name": "shoulder_pain",
-        "page": 447,
-        "file": "assets/deepak_images/ch09_shoulder_pain/p447_img2.jpeg",
-        "width": 958,
-        "height": 723,
-        "size_bytes": 59254,
-        "page_captions": [
-          "Fig. 9.13:  Assessing an anterior humerus",
-          "Fig. 9.14:  Assessing a medially rotated humerus"
-        ],
-        "captions": [
-          "Fig. 9.13: Assessing an anterior humerus Fig. 9.14: Assessing a medially rotated humerus"
-        ]
-      },
-      {
-        "chapter": 9,
-        "chapter_name": "shoulder_pain",
-        "page": 448,
-        "file": "assets/deepak_images/ch09_shoulder_pain/p448_img1.jpeg",
-        "width": 958,
-        "height": 711,
-        "size_bytes": 80704,
-        "page_captions": [
-          "Fig. 9.15). A decrease in the ",
-          "Fig. 9.15:  Assessing a superior humerus"
-        ],
-        "captions": [
-          "Fig. 9.15). A decrease in the inferior glide denotes a superior dysfunction.",
-          "Fig. 9.15: Assessing a superior humerus"
-        ]
-      },
-      {
-        "chapter": 9,
-        "chapter_name": "shoulder_pain",
-        "page": 449,
-        "file": "assets/deepak_images/ch09_shoulder_pain/p449_img1.jpeg",
-        "width": 958,
-        "height": 718,
-        "size_bytes": 66234,
-        "page_captions": [
-          "Fig. 9.16). The angles of both ",
-          "Fig. 9.16:  Assessing scapula downward rotation"
-        ],
-        "captions": [
-          "Fig. 9.16). The angles of both thumbs placements are observed. If one thumb appears relatively more horizontal",
-          "Fig. 9.16: Assessing scapula downward rotation"
-        ]
-      },
-      {
-        "chapter": 9,
-        "chapter_name": "shoulder_pain",
-        "page": 450,
-        "file": "assets/deepak_images/ch09_shoulder_pain/p450_img1.jpeg",
-        "width": 958,
-        "height": 711,
-        "size_bytes": 67957,
-        "page_captions": [
-          "Fig. 9.17:  Assessing protracted scapula",
-          "Fig. 9.17). Their distance "
-        ],
-        "captions": [
-          "Fig. 9.17: Assessing protracted scapula Soft Tissue",
-          "Fig. 9.17). Their distance from the midline (spinous process of T7, 8 is observed). Next the spines of the"
-        ]
-      },
-      {
-        "chapter": 9,
-        "chapter_name": "shoulder_pain",
-        "page": 452,
-        "file": "assets/deepak_images/ch09_shoulder_pain/p452_img1.jpeg",
-        "width": 958,
-        "height": 706,
-        "size_bytes": 63238,
-        "page_captions": [
-          "Fig. 9.18)",
-          "Fig. 9.19). The clinician ",
-          "Fig. 9.18:  Assessing acromioclavicular mobility"
-        ],
-        "captions": [
-          "Fig. 9.18).",
-          "Fig. 9.19). The clinician should note for asymmetry as in the landmark being slightly superior in comparison",
-          "Fig. 9.18: Assessing acromioclavicular mobility"
-        ]
-      },
-      {
-        "chapter": 9,
-        "chapter_name": "shoulder_pain",
-        "page": 453,
-        "file": "assets/deepak_images/ch09_shoulder_pain/p453_img1.jpeg",
-        "width": 958,
-        "height": 685,
-        "size_bytes": 72803,
-        "page_captions": [
-          "Fig. 9.20). Reproduction of pain is a positive finding.26",
-          "Fig. 9.19:  Assessing sternoclavicular mobility"
-        ],
-        "captions": [
-          "Fig. 9.20). Reproduction of pain is a positive finding.26 Fig. 9.19: Assessing sternoclavicular mobility"
-        ]
-      },
-      {
-        "chapter": 9,
-        "chapter_name": "shoulder_pain",
-        "page": 454,
-        "file": "assets/deepak_images/ch09_shoulder_pain/p454_img1.jpeg",
-        "width": 958,
-        "height": 781,
-        "size_bytes": 69894,
-        "page_captions": [
-          "Fig. 9.21:  Speeds test",
-          "Fig. 9.20:  Crossover sign",
-          "Fig. 9.21). "
-        ],
-        "captions": [
-          "Fig. 9.21: Speeds test Fig. 9.20: Crossover sign",
-          "Fig. 9.21). The examiner palpates the biceps tendon for tenderness and resists the forearm to",
-          "Fig. 9.22). Increased tenderness or pain over the biceps tendon indicates a positive finding.29"
-        ]
-      },
-      {
-        "chapter": 9,
-        "chapter_name": "shoulder_pain",
-        "page": 454,
-        "file": "assets/deepak_images/ch09_shoulder_pain/p454_img2.jpeg",
-        "width": 958,
-        "height": 628,
-        "size_bytes": 64381,
-        "page_captions": [
-          "Fig. 9.21:  Speeds test",
-          "Fig. 9.20:  Crossover sign",
-          "Fig. 9.21). "
-        ],
-        "captions": [
-          "Fig. 9.21: Speeds test Fig. 9.20: Crossover sign",
-          "Fig. 9.21). The examiner palpates the biceps tendon for tenderness and resists the forearm to",
-          "Fig. 9.22). Increased tenderness or pain over the biceps tendon indicates a positive finding.29"
-        ]
-      },
-      {
-        "chapter": 9,
-        "chapter_name": "shoulder_pain",
-        "page": 455,
-        "file": "assets/deepak_images/ch09_shoulder_pain/p455_img1.jpeg",
-        "width": 827,
-        "height": 798,
-        "size_bytes": 80396,
-        "page_captions": [
-          "Fig. 9.23)",
-          "Fig. 9.22:  Yergason’s test",
-          "Fig. 9.23:  Applying a scapula retraction stretch"
-        ],
-        "captions": [
-          "Fig. 9.23). Fig. 9.22: Yergason’s test",
-          "Fig. 9.23: Applying a scapula retraction stretch"
-        ]
-      },
-      {
-        "chapter": 9,
-        "chapter_name": "shoulder_pain",
-        "page": 455,
-        "file": "assets/deepak_images/ch09_shoulder_pain/p455_img2.jpeg",
-        "width": 958,
-        "height": 709,
-        "size_bytes": 73139,
-        "page_captions": [
-          "Fig. 9.23)",
-          "Fig. 9.22:  Yergason’s test",
-          "Fig. 9.23:  Applying a scapula retraction stretch"
-        ],
-        "captions": [
-          "Fig. 9.23). Fig. 9.22: Yergason’s test",
-          "Fig. 9.23: Applying a scapula retraction stretch"
-        ]
-      },
-      {
-        "chapter": 9,
-        "chapter_name": "shoulder_pain",
-        "page": 456,
-        "file": "assets/deepak_images/ch09_shoulder_pain/p456_img1.jpeg",
-        "width": 557,
-        "height": 798,
-        "size_bytes": 68478,
-        "page_captions": [
-          "Fig. 9.24). Reproduction of pain indicates a positive test.",
-          "Fig. 9.25). A feeling of apprehension is positive for ",
-          "Fig. 9.26)"
-        ],
-        "captions": [
-          "Fig. 9.24). Reproduction of pain indicates a positive test. Crank (Apprehension) And Relocation Test is Positive",
-          "Fig. 9.25). A feeling of apprehension is positive for instability. In the relocation maneuver backward pressure is applied from front",
-          "Fig. 9.26). Active Compression of O’Brien",
-          "Figs 9.27 and 9.28). The test was considered positive if pain was elicited during the first maneuver, and was reduced or eliminated",
-          "Fig. 9.24: Neer impingement test"
-        ]
-      },
-      {
-        "chapter": 9,
-        "chapter_name": "shoulder_pain",
-        "page": 457,
-        "file": "assets/deepak_images/ch09_shoulder_pain/p457_img1.jpeg",
-        "width": 958,
-        "height": 631,
-        "size_bytes": 56971,
-        "page_captions": [
-          "Fig. 9.26:  Crank test modified in supine",
-          "Fig. 9.27:  Active compression of O’Brien position one",
-          "Fig. 9.25:  Crank test"
-        ],
-        "captions": [
-          "Fig. 9.26: Crank test modified in supine Fig. 9.27: Active compression of O’Brien position one",
-          "Fig. 9.25: Crank test"
-        ]
-      },
-      {
-        "chapter": 9,
-        "chapter_name": "shoulder_pain",
-        "page": 457,
-        "file": "assets/deepak_images/ch09_shoulder_pain/p457_img2.jpeg",
-        "width": 958,
-        "height": 614,
-        "size_bytes": 65991,
-        "page_captions": [
-          "Fig. 9.26:  Crank test modified in supine",
-          "Fig. 9.27:  Active compression of O’Brien position one",
-          "Fig. 9.25:  Crank test"
-        ],
-        "captions": [
-          "Fig. 9.26: Crank test modified in supine Fig. 9.27: Active compression of O’Brien position one",
-          "Fig. 9.25: Crank test"
-        ]
-      },
-      {
-        "chapter": 9,
-        "chapter_name": "shoulder_pain",
-        "page": 457,
-        "file": "assets/deepak_images/ch09_shoulder_pain/p457_img3.jpeg",
-        "width": 958,
-        "height": 748,
-        "size_bytes": 61128,
-        "page_captions": [
-          "Fig. 9.26:  Crank test modified in supine",
-          "Fig. 9.27:  Active compression of O’Brien position one",
-          "Fig. 9.25:  Crank test"
-        ],
-        "captions": [
-          "Fig. 9.26: Crank test modified in supine Fig. 9.27: Active compression of O’Brien position one",
-          "Fig. 9.25: Crank test"
-        ]
-      },
-      {
-        "chapter": 9,
-        "chapter_name": "shoulder_pain",
-        "page": 458,
-        "file": "assets/deepak_images/ch09_shoulder_pain/p458_img1.jpeg",
-        "width": 958,
-        "height": 651,
-        "size_bytes": 66291,
-        "page_captions": [
-          "Fig. 9.29). The examiner attempts to move the humeral head anteriorly ",
-          "Fig. 9.30). A gap can appear between the humeral ",
-          "Fig. 9.28:  Active compression of O’Brien position two"
-        ],
-        "captions": [
-          "Fig. 9.29). The examiner attempts to move the humeral head anteriorly and posteriorly.28 Posterior translation greater than 50% of the humeral head is",
-          "Fig. 9.30). A gap can appear between the humeral Fig. 9.28: Active compression of O’Brien position two",
-          "Fig. 9.29: Load and shift"
-        ]
-      },
-      {
-        "chapter": 9,
-        "chapter_name": "shoulder_pain",
-        "page": 458,
-        "file": "assets/deepak_images/ch09_shoulder_pain/p458_img2.jpeg",
-        "width": 958,
-        "height": 625,
-        "size_bytes": 56445,
-        "page_captions": [
-          "Fig. 9.29). The examiner attempts to move the humeral head anteriorly ",
-          "Fig. 9.30). A gap can appear between the humeral ",
-          "Fig. 9.28:  Active compression of O’Brien position two"
-        ],
-        "captions": [
-          "Fig. 9.29). The examiner attempts to move the humeral head anteriorly and posteriorly.28 Posterior translation greater than 50% of the humeral head is",
-          "Fig. 9.30). A gap can appear between the humeral Fig. 9.28: Active compression of O’Brien position two",
-          "Fig. 9.29: Load and shift"
-        ]
-      },
-      {
-        "chapter": 9,
-        "chapter_name": "shoulder_pain",
-        "page": 459,
-        "file": "assets/deepak_images/ch09_shoulder_pain/p459_img1.jpeg",
-        "width": 958,
-        "height": 646,
-        "size_bytes": 69004,
-        "page_captions": [
-          "Fig. 9.30:  Sulcus sign",
-          "Fig. 9.31A). The patient is asked to hold the position while the examiner supports ",
-          "Fig. 9.31B), it is a positive "
-        ],
-        "captions": [
-          "Fig. 9.30: Sulcus sign head and undersurface of the acromion. Up to a centimeter is considered normal,",
-          "Fig. 9.31A). The patient is asked to hold the position while the examiner supports the elbow, but releases the hold at the wrist. Ideally the arm stays in position, but",
-          "Fig. 9.31B), it is a positive finding for a tear or insufficiency of the infraspinatus.30 The test is more effective",
-          "Fig. 9.32A). The patient is asked to hold the position, while the examiner supports the elbow but releases the hold at the wrist. Ideally the arm stays in",
-          "Fig. 9.32B), it is a positive finding for a tear or insufficiency of the subscapularis.30"
-        ]
-      },
-      {
-        "chapter": 9,
-        "chapter_name": "shoulder_pain",
-        "page": 460,
-        "file": "assets/deepak_images/ch09_shoulder_pain/p460_img1.jpeg",
-        "width": 958,
-        "height": 728,
-        "size_bytes": 59426,
-        "page_captions": [
-          "Fig. 9.33). The patient is asked to lift the hand off of the back. ",
-          "Fig. 9.34).27",
-          "Figs 9.31A and B :  External rotation lag sign"
-        ],
-        "captions": [
-          "Fig. 9.33). The patient is asked to lift the hand off of the back. Inability to do so is positive for a subscapularis involvement (Fig. 9.34).27",
-          "Figs 9.31A and B : External rotation lag sign A"
-        ]
-      },
-      {
-        "chapter": 9,
-        "chapter_name": "shoulder_pain",
-        "page": 460,
-        "file": "assets/deepak_images/ch09_shoulder_pain/p460_img2.jpeg",
-        "width": 958,
-        "height": 719,
-        "size_bytes": 67693,
-        "page_captions": [
-          "Fig. 9.33). The patient is asked to lift the hand off of the back. ",
-          "Fig. 9.34).27",
-          "Figs 9.31A and B :  External rotation lag sign"
-        ],
-        "captions": [
-          "Fig. 9.33). The patient is asked to lift the hand off of the back. Inability to do so is positive for a subscapularis involvement (Fig. 9.34).27",
-          "Figs 9.31A and B : External rotation lag sign A"
-        ]
-      },
-      {
-        "chapter": 9,
-        "chapter_name": "shoulder_pain",
-        "page": 461,
-        "file": "assets/deepak_images/ch09_shoulder_pain/p461_img1.jpeg",
-        "width": 958,
-        "height": 733,
-        "size_bytes": 67669,
-        "page_captions": [
-          "Fig. 9.35). Pain reproduction indicates an impingement of the greater ",
-          "Fig. 9.36). The resistance should increase the patient’s discomfort for ",
-          "Figs 9.32A and B:  Internal rotation lag sign"
-        ],
-        "captions": [
-          "Fig. 9.35). Pain reproduction indicates an impingement of the greater tuberosity of the humeral head over the coracoid.27,29",
-          "Fig. 9.36). The resistance should increase the patient’s discomfort for a positive test.",
-          "Figs 9.32A and B: Internal rotation lag sign A"
-        ]
-      },
-      {
-        "chapter": 9,
-        "chapter_name": "shoulder_pain",
-        "page": 461,
-        "file": "assets/deepak_images/ch09_shoulder_pain/p461_img2.jpeg",
-        "width": 958,
-        "height": 716,
-        "size_bytes": 69945,
-        "page_captions": [
-          "Fig. 9.35). Pain reproduction indicates an impingement of the greater ",
-          "Fig. 9.36). The resistance should increase the patient’s discomfort for ",
-          "Figs 9.32A and B:  Internal rotation lag sign"
-        ],
-        "captions": [
-          "Fig. 9.35). Pain reproduction indicates an impingement of the greater tuberosity of the humeral head over the coracoid.27,29",
-          "Fig. 9.36). The resistance should increase the patient’s discomfort for a positive test.",
-          "Figs 9.32A and B: Internal rotation lag sign A"
-        ]
-      },
-      {
-        "chapter": 9,
-        "chapter_name": "shoulder_pain",
-        "page": 462,
-        "file": "assets/deepak_images/ch09_shoulder_pain/p462_img1.jpeg",
-        "width": 958,
-        "height": 626,
-        "size_bytes": 61330,
-        "page_captions": [
-          "Fig. 9.33:  Positioning for Gerber lift off",
-          "Fig. 9.34:  Inability to lift off",
-          "Fig. 9.37). A positive test indicates an internal joint impingement, "
-        ],
-        "captions": [
-          "Fig. 9.33: Positioning for Gerber lift off Fig. 9.34: Inability to lift off",
-          "Fig. 9.37). A positive test indicates an internal joint impingement, while a negative test (more weakness and or pain in external rotation) indicates a",
-          "Fig. 9.38)."
-        ]
-      },
-      {
-        "chapter": 9,
-        "chapter_name": "shoulder_pain",
-        "page": 462,
-        "file": "assets/deepak_images/ch09_shoulder_pain/p462_img2.jpeg",
-        "width": 958,
-        "height": 685,
-        "size_bytes": 57138,
-        "page_captions": [
-          "Fig. 9.33:  Positioning for Gerber lift off",
-          "Fig. 9.34:  Inability to lift off",
-          "Fig. 9.37). A positive test indicates an internal joint impingement, "
-        ],
-        "captions": [
-          "Fig. 9.33: Positioning for Gerber lift off Fig. 9.34: Inability to lift off",
-          "Fig. 9.37). A positive test indicates an internal joint impingement, while a negative test (more weakness and or pain in external rotation) indicates a",
-          "Fig. 9.38)."
-        ]
-      },
-      {
-        "chapter": 9,
-        "chapter_name": "shoulder_pain",
-        "page": 463,
-        "file": "assets/deepak_images/ch09_shoulder_pain/p463_img1.jpeg",
-        "width": 958,
-        "height": 588,
-        "size_bytes": 65812,
-        "page_captions": [
-          "Fig. 9.35:  Hawkins-Kennedy test",
-          "Fig. 9.36:  Biceps load test",
-          "Fig. 9.37:  Internal rotation resisted strength test (internal impingement)"
-        ],
-        "captions": [
-          "Fig. 9.35: Hawkins-Kennedy test Fig. 9.36: Biceps load test"
-        ]
-      },
-      {
-        "chapter": 9,
-        "chapter_name": "shoulder_pain",
-        "page": 463,
-        "file": "assets/deepak_images/ch09_shoulder_pain/p463_img2.jpeg",
-        "width": 958,
-        "height": 597,
-        "size_bytes": 55454,
-        "page_captions": [
-          "Fig. 9.35:  Hawkins-Kennedy test",
-          "Fig. 9.36:  Biceps load test",
-          "Fig. 9.37:  Internal rotation resisted strength test (internal impingement)"
-        ],
-        "captions": [
-          "Fig. 9.35: Hawkins-Kennedy test Fig. 9.36: Biceps load test"
-        ]
-      },
-      {
-        "chapter": 9,
-        "chapter_name": "shoulder_pain",
-        "page": 463,
-        "file": "assets/deepak_images/ch09_shoulder_pain/p463_img3.jpeg",
-        "width": 958,
-        "height": 717,
-        "size_bytes": 79304,
-        "page_captions": [
-          "Fig. 9.35:  Hawkins-Kennedy test",
-          "Fig. 9.36:  Biceps load test",
-          "Fig. 9.37:  Internal rotation resisted strength test (internal impingement)"
-        ],
-        "captions": [
-          "Fig. 9.35: Hawkins-Kennedy test Fig. 9.36: Biceps load test"
-        ]
-      },
-      {
-        "chapter": 9,
-        "chapter_name": "shoulder_pain",
-        "page": 464,
-        "file": "assets/deepak_images/ch09_shoulder_pain/p464_img1.jpeg",
-        "width": 958,
-        "height": 795,
-        "size_bytes": 96122,
-        "page_captions": [
-          "Fig. 9.39) was described by the ",
-          "Fig. 9.38:  Internal rotation resisted strength test (external impingement)",
-          "Fig. 9.39:  The scapula backward tlipping test"
-        ],
-        "captions": [
-          "Fig. 9.39) was described by the author to identify the presence of forward tipping of the scapula. Forward tipping",
-          "Fig. 9.38: Internal rotation resisted strength test (external impingement) Fig. 9.39: The scapula backward tlipping test"
-        ]
-      },
-      {
-        "chapter": 9,
-        "chapter_name": "shoulder_pain",
-        "page": 464,
-        "file": "assets/deepak_images/ch09_shoulder_pain/p464_img2.jpeg",
-        "width": 904,
-        "height": 677,
-        "size_bytes": 71912,
-        "page_captions": [
-          "Fig. 9.39) was described by the ",
-          "Fig. 9.38:  Internal rotation resisted strength test (external impingement)",
-          "Fig. 9.39:  The scapula backward tlipping test"
-        ],
-        "captions": [
-          "Fig. 9.39) was described by the author to identify the presence of forward tipping of the scapula. Forward tipping",
-          "Fig. 9.38: Internal rotation resisted strength test (external impingement) Fig. 9.39: The scapula backward tlipping test"
-        ]
-      }
-    ],
-    "recommended_web1_procedures": [
-      {
-        "id": "sasd-bursa",
-        "nameVi": "Tiêm bao hoạt dịch dưới mỏm cùng - dưới cơ delta (SASD Bursa)",
-        "role": "Hội chứng xung đột dưới mỏm cùng (SAIS), viêm bao hoạt dịch dưới cơ delta"
-      },
-      {
-        "id": "glenohumeral-posterior",
-        "nameVi": "Tiêm khớp ổ chảo cánh tay lối sau (Posterior Glenohumeral)",
-        "role": "Đông cứng khớp vai (Frozen Shoulder), thoái hóa khớp ổ chảo cánh tay"
-      },
-      {
-        "id": "glenohumeral-anterior",
-        "nameVi": "Tiêm khớp ổ chảo cánh tay tiếp cận lối trước",
-        "role": "Tiếp cận thay thế khi bệnh nhân hạn chế xoay trong hoặc tổn thương bao khớp sau"
-      },
-      {
-        "id": "biceps-tendon",
-        "nameVi": "Tiêm bao gân đầu dài cơ nhị đầu cánh tay (LHBT Injection)",
-        "role": "Viêm bao gân nhị đầu trong rãnh gian củ xương cánh tay"
-      },
-      {
-        "id": "ac-joint",
-        "nameVi": "Tiêm khớp cùng vai - đòn (Acromioclavicular Joint Injection)",
-        "role": "Thoái hóa khớp cùng đòn, viêm khớp cùng đòn sau chấn thương va đập"
-      },
-      {
-        "id": "suprascapular-nerve",
-        "nameVi": "Phong bế thần kinh trên vai (Suprascapular Nerve Block)",
-        "role": "Giảm đau toàn diện khớp vai trong rách chóp xoay không thể mổ, đông cứng khớp vai"
-      },
-      {
-        "id": "calcific-tendinitis-barbotage",
-        "nameVi": "Can thiệp vôi hóa gân chóp xoay - Chọc hút & rửa vôi (Barbotage)",
-        "role": "Viêm gân vôi hóa cấp tính cơ trên gai/dưới gai gây đau vai dữ dội"
-      },
-      {
-        "id": "prp-platelet-rich-plasma",
-        "nameVi": "Liệu pháp Huyết tương giàu tiểu cầu (PRP) cơ xương khớp",
-        "role": "Rách bán phần gân chóp xoay, thoái hóa gân mạn tính không đáp ứng corticoid"
-      }
-    ]
-  },
-  {
-    "id": "ch10-elbow-wrist-hand",
+    "id": "elbow-wrist-hand-pain",
     "chapter": 10,
-    "region": "upper_limb",
-    "region_vi": "Khớp Khuỷu, Cổ Tay & Bàn Tay",
-    "title": "Elbow, Wrist and Hand Pain Differential Screening",
-    "title_vi": "Sàng Lọc Chẩn Đoán Phân Biệt Đau Khớp Khuỷu, Cổ Tay & Bàn Tay",
-    "author": "GS. Deepak Sebastian (Chapter 10, pp. 452-498)",
-    "summary": "Sàng lọc chẩn đoán phân biệt chi trên ngọn chi: Nhận diện các cờ đỏ cấp cứu tối khẩn gồm Hội chứng khoang cẳng tay Volkmann, Hoại tử vô mạch xương nguyệt (Bệnh Kienböck), Gãy xương thuyền bỏ sót và đặc biệt là Viêm bao gân gấp mủ ngón tay (4 Dấu hiệu kinh điển Kanavel - cấp cứu rạch dẫn lưu tránh hoại tử bàn tay). Làm chủ các nghiệm pháp phân biệt kinh điển: Tennis Elbow (Cozen, Mill, Maudsley) vs Golfer's Elbow vs Hội chứng ống cổ tay (Phalen, Tinel, Durkan) vs Viêm bao gân De Quervain (Finkelstein, Eichhoff) vs Ngón tay lò xo và Hội chứng ống Guyon. Kèm trọn bộ 33 hình ảnh Atlas Deepak.",
+    "region": "elbow_hand",
+    "region_vi": "Khuỷu, Cổ & Bàn Tay",
+    "icon": "🖐️",
+    "title": "Elbow, Forearm, Wrist & Hand Regional Pain",
+    "title_vi": "🖐️ Đau Khớp Khuỷu, Cổ Tay, Bàn Tay & Ống Cổ Tay",
+    "chief_complaint": "Phàn nàn chính: Đau lồi cầu ngoài khuỷu tay khi cầm nắm (Tennis elbow), tê bì ngón 1-2-3 thức giấc nửa đêm (Hội chứng ống cổ tay), đau nhói gốc ngón cái khi ẵm con (Viêm gân De Quervain), ngón tay bị kẹt gập không duỗi được (Ngón tay lò xo).",
+    "author": "GS. Deepak Sebastian (Chương 10, pp. 467-512)",
+    "summary": "Chẩn đoán phân biệt chi trên ngoại vi: Viêm lồi cầu ngoài (Tennis Elbow), viêm lồi cầu trong (Golfer Elbow), chèn ép thần kinh trụ tại rãnh khuỷu (Cubital Tunnel). Bàn cổ tay: Hội chứng ống cổ tay (CTS - TK giữa), viêm bao gân De Quervain, ngón tay lò xo (Trigger Finger), nang hoạt dịch cổ tay, thoái hóa khớp bàn ngón cái (CMC-1). CỜ ĐỎ: Hội chứng chèn ép khoang cẳng tay (Volkmann), Nhiễm trùng bao gân gấp bàn tay (4 dấu hiệu Kanavel), Hoại tử vô mạch xương thuyền / xương nguyệt (Kienböck), Gãy xương thuyền bỏ sót.",
     "stage_1_systemic_red_flags": [
       {
         "category": "Cờ Đỏ Viêm Bao Gân Gấp Mủ Bàn Tay (Kanavel's Four Cardinal Signs)",
@@ -5740,19 +4589,22 @@ const STABLE_SCREENING_FALLBACK = [
       {
         "category": "Nhiễm Trùng Bao Gân Kanavel & Khoang Sâu Bàn Tay",
         "signs": "Ngón tay xúc xích, đau dữ dội khi duỗi ngón, sưng phồng ô mô cái / gan tay.",
-        "action": "Rạch mổ dẫn lưu cấp cứu Ngoại chấn thương bàn tay."
+        "action": "Rạch mổ dẫn lưu cấp cứu Ngoại chấn thương bàn tay.",
+        "figures": []
       },
       {
         "category": "Tắc Mạch / Hoại Tử Ngón Tay (Raynaud Nặng / Allen Test Bất Thường)",
         "signs": "Ngón tay tím tái hoặc đen hoại tử đầu ngón, loét trợt, Allen test cho thấy tắc động mạch quay hoặc trụ.",
-        "action": "Chuyển Phẫu thuật Mạch máu, khảo sát Doppler mạch ngọn chi."
+        "action": "Chuyển Phẫu thuật Mạch máu, khảo sát Doppler mạch ngọn chi.",
+        "figures": []
       }
     ],
     "visceral_referrals": [
       {
         "source": "Đau Rễ Cổ C6 - C7 - C8 (Cervical Radiculopathy)",
         "pattern": "Đau lan từ cổ gáy dọc xuống chi trên: Rễ C6 đau lan ra ngón cái và ngón trỏ (dễ nhầm với De Quervain và HC ống cổ tay); Rễ C7 đau ngón giữa; Rễ C8 đau ngón út và bờ trụ bàn tay (dễ nhầm với HC ống Guyon).",
-        "differential": "Khám Spurling cổ (+), nghiệm pháp căng đám rối cánh tay ULTT (+), cử động gập duỗi cổ tay không làm thay đổi triệu chứng."
+        "differential": "Khám Spurling cổ (+), nghiệm pháp căng đám rối cánh tay ULTT (+), cử động gập duỗi cổ tay không làm thay đổi triệu chứng.",
+        "figures": []
       }
     ],
     "drug_induced": [
@@ -5767,7 +4619,29 @@ const STABLE_SCREENING_FALLBACK = [
         "significance": "Tái hiện đau chói tại mỏm lồi cầu ngoài xương cánh tay (nơi bám gân cơ duỗi cổ tay quay ngắn ECRB).",
         "sensitivity": "84%",
         "specificity": "75%",
-        "diagnostic_role": "Sàng lọc viêm lồi cầu ngoài xương cánh tay (Lateral Epicondylalgia / Tennis Elbow)"
+        "diagnostic_role": "Sàng lọc viêm lồi cầu ngoài xương cánh tay (Lateral Epicondylalgia / Tennis Elbow)",
+        "figures": [
+          {
+            "file": "assets/deepak_images/ch10_elbow_wrist_hand_pain/p468_img1.png",
+            "page": 468,
+            "fig_number": "10.2",
+            "caption_en": "Fig. 10.2: Elbow joint lateral aspect",
+            "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Elbow joint lateral aspect",
+            "category": "general_atlas",
+            "width": 1061,
+            "height": 601
+          },
+          {
+            "file": "assets/deepak_images/ch10_elbow_wrist_hand_pain/p468_img2.png",
+            "page": 468,
+            "fig_number": "10.2",
+            "caption_en": "Fig. 10.2: Elbow joint lateral aspect",
+            "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Elbow joint lateral aspect",
+            "category": "general_atlas",
+            "width": 956,
+            "height": 659
+          }
+        ]
       },
       {
         "name": "Nghiệm Pháp Mill (Mill's Test Kéo Căng Gân Duỗi Khuỷu)",
@@ -5775,7 +4649,29 @@ const STABLE_SCREENING_FALLBACK = [
         "significance": "Đau chói tại lồi cầu ngoài do kéo căng tối đa gân cơ duỗi.",
         "sensitivity": "76%",
         "specificity": "80%",
-        "diagnostic_role": "Kéo căng thụ động gân cơ duỗi cổ tay quay ngắn để khẳng định tổn thương lồi cầu ngoài"
+        "diagnostic_role": "Kéo căng thụ động gân cơ duỗi cổ tay quay ngắn để khẳng định tổn thương lồi cầu ngoài",
+        "figures": [
+          {
+            "file": "assets/deepak_images/ch10_elbow_wrist_hand_pain/p468_img1.png",
+            "page": 468,
+            "fig_number": "10.2",
+            "caption_en": "Fig. 10.2: Elbow joint lateral aspect",
+            "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Elbow joint lateral aspect",
+            "category": "general_atlas",
+            "width": 1061,
+            "height": 601
+          },
+          {
+            "file": "assets/deepak_images/ch10_elbow_wrist_hand_pain/p468_img2.png",
+            "page": 468,
+            "fig_number": "10.2",
+            "caption_en": "Fig. 10.2: Elbow joint lateral aspect",
+            "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Elbow joint lateral aspect",
+            "category": "general_atlas",
+            "width": 956,
+            "height": 659
+          }
+        ]
       },
       {
         "name": "Nghiệm Pháp Maudsley (Maudsley's Test Duỗi Ngón 3 Kháng Lực)",
@@ -5783,7 +4679,8 @@ const STABLE_SCREENING_FALLBACK = [
         "significance": "Đau chói tại lồi cầu ngoài do cơ duỗi chung các ngón và ECRB co thắt (đặc hiệu cao cho Tennis Elbow).",
         "sensitivity": "88%",
         "specificity": "74%",
-        "diagnostic_role": "Khu trú tổn thương cơ duỗi chung các ngón và ECRB"
+        "diagnostic_role": "Khu trú tổn thương cơ duỗi chung các ngón và ECRB",
+        "figures": []
       },
       {
         "name": "Nghiệm Pháp Phalen & Phalen Ngược (Phalen & Prayer Sign Khám Hội Chứng Ống Cổ Tay)",
@@ -5791,7 +4688,29 @@ const STABLE_SCREENING_FALLBACK = [
         "significance": "Xuất hiện hoặc tăng cảm giác tê bì, dị cảm châm chích ở vùng chi phối thần kinh giữa (ngón 1, 2, 3 và nửa ngón 4) trong vòng 60 giây (Sn: 68 - 88%, Sp: 85%).",
         "sensitivity": "68% - 75%",
         "specificity": "84% - 90%",
-        "diagnostic_role": "Khám kích thích thiếu máu thần kinh giữa trong ống cổ tay khi gập cổ tay 90 độ"
+        "diagnostic_role": "Khám kích thích thiếu máu thần kinh giữa trong ống cổ tay khi gập cổ tay 90 độ",
+        "figures": [
+          {
+            "file": "assets/deepak_images/ch10_elbow_wrist_hand_pain/p500_img1.jpeg",
+            "page": 500,
+            "fig_number": "10.17",
+            "caption_en": "Fig. 10.17: Carpal tunnel",
+            "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Carpal tunnel",
+            "category": "general_atlas",
+            "width": 986,
+            "height": 903
+          },
+          {
+            "file": "assets/deepak_images/ch10_elbow_wrist_hand_pain/p504_img1.jpeg",
+            "page": 504,
+            "fig_number": "10.21",
+            "caption_en": "Fig. 10.21: Joint play assessment",
+            "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Joint play assessment",
+            "category": "examination",
+            "width": 958,
+            "height": 718
+          }
+        ]
       },
       {
         "name": "Dấu Hiệu Durkan (Durkan's Carpal Compression Test - Nhạy Nhất Cho Ống Cổ Tay)",
@@ -5799,7 +4718,29 @@ const STABLE_SCREENING_FALLBACK = [
         "significance": "Tái hiện tê bì dị cảm theo phân bố thần kinh giữa. Nghiệm pháp có độ nhạy (Sn: 87 - 91%) và độ đặc hiệu (Sp: 90%) cao nhất trong các nghiệm pháp khám ống cổ tay.",
         "sensitivity": "87% - 91%",
         "specificity": "90%",
-        "diagnostic_role": "Tiêu chuẩn vàng lâm sàng nhạy và đặc hiệu nhất cho Hội chứng Ống Cổ Tay (CTS)"
+        "diagnostic_role": "Tiêu chuẩn vàng lâm sàng nhạy và đặc hiệu nhất cho Hội chứng Ống Cổ Tay (CTS)",
+        "figures": [
+          {
+            "file": "assets/deepak_images/ch10_elbow_wrist_hand_pain/p500_img1.jpeg",
+            "page": 500,
+            "fig_number": "10.17",
+            "caption_en": "Fig. 10.17: Carpal tunnel",
+            "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Carpal tunnel",
+            "category": "general_atlas",
+            "width": 986,
+            "height": 903
+          },
+          {
+            "file": "assets/deepak_images/ch10_elbow_wrist_hand_pain/p504_img1.jpeg",
+            "page": 504,
+            "fig_number": "10.21",
+            "caption_en": "Fig. 10.21: Joint play assessment",
+            "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Joint play assessment",
+            "category": "examination",
+            "width": 958,
+            "height": 718
+          }
+        ]
       },
       {
         "name": "Dấu Hiệu Tinel Ống Cổ Tay & Rãnh Khuỷu (Tinel's Sign)",
@@ -5807,7 +4748,29 @@ const STABLE_SCREENING_FALLBACK = [
         "significance": "Tái hiện cảm giác giật điện hoặc tê buốt phóng dọc theo đường đi của dây thần kinh ra các ngón tay.",
         "sensitivity": "50% - 60%",
         "specificity": "67% - 87%",
-        "diagnostic_role": "Đánh giá tái sinh sợi trục thần kinh hoặc chèn ép thần kinh giữa / thần kinh trụ"
+        "diagnostic_role": "Đánh giá tái sinh sợi trục thần kinh hoặc chèn ép thần kinh giữa / thần kinh trụ",
+        "figures": [
+          {
+            "file": "assets/deepak_images/ch10_elbow_wrist_hand_pain/p500_img1.jpeg",
+            "page": 500,
+            "fig_number": "10.17",
+            "caption_en": "Fig. 10.17: Carpal tunnel",
+            "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Carpal tunnel",
+            "category": "general_atlas",
+            "width": 986,
+            "height": 903
+          },
+          {
+            "file": "assets/deepak_images/ch10_elbow_wrist_hand_pain/p504_img1.jpeg",
+            "page": 504,
+            "fig_number": "10.21",
+            "caption_en": "Fig. 10.21: Joint play assessment",
+            "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Joint play assessment",
+            "category": "examination",
+            "width": 958,
+            "height": 718
+          }
+        ]
       },
       {
         "name": "Nghiệm Pháp Finkelstein & Eichhoff (Khám Viêm Bao Gân De Quervain)",
@@ -5815,7 +4778,29 @@ const STABLE_SCREENING_FALLBACK = [
         "significance": "Đau chói dữ dội tại mỏm trâm quay (bao gân cơ dạng dài và duỗi ngắn ngón cái APL & EPB).",
         "sensitivity": "89% - 95%",
         "specificity": "85% - 90%",
-        "diagnostic_role": "Tiêu chuẩn vàng chẩn đoán Viêm bao gân mỏm trâm quay De Quervain (Ngăn duỗi số 1)"
+        "diagnostic_role": "Tiêu chuẩn vàng chẩn đoán Viêm bao gân mỏm trâm quay De Quervain (Ngăn duỗi số 1)",
+        "figures": [
+          {
+            "file": "assets/deepak_images/ch10_elbow_wrist_hand_pain/p493_img1.jpeg",
+            "page": 493,
+            "fig_number": "10.12",
+            "caption_en": "Fig. 10.12: Common extensor origin",
+            "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Common extensor origin",
+            "category": "general_atlas",
+            "width": 1089,
+            "height": 603
+          },
+          {
+            "file": "assets/deepak_images/ch10_elbow_wrist_hand_pain/p496_img1.jpeg",
+            "page": 496,
+            "fig_number": "10.14",
+            "caption_en": "Fig. 10.14: Ulnar collateral ligament tear",
+            "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Ulnar collateral ligament tear",
+            "category": "redflags_pathology",
+            "width": 890,
+            "height": 903
+          }
+        ]
       },
       {
         "name": "Nghiệm Pháp Allen (Allen's Test Đánh Giá Cung Động Mạch Bàn Tay)",
@@ -5823,7 +4808,8 @@ const STABLE_SCREENING_FALLBACK = [
         "significance": "Lòng bàn tay hồng trở lại trong vòng 3 - 5 giây: Cung động mạch gan tay thông suốt. Nếu sau 7 - 10 giây lòng bàn tay vẫn tái nhợt: Thiếu máu hoặc tắc động mạch trụ (bắt buộc kiểm tra trước khi chọc khí máu hoặc phẫu thuật).",
         "sensitivity": "92%",
         "specificity": "88%",
-        "diagnostic_role": "Đánh giá sự thông suốt của cung động mạch quay - trụ trước các thủ thuật xâm lấn cổ bàn tay"
+        "diagnostic_role": "Đánh giá sự thông suốt của cung động mạch quay - trụ trước các thủ thuật xâm lấn cổ bàn tay",
+        "figures": []
       }
     ],
     "differential_table": [
@@ -5868,595 +4854,344 @@ const STABLE_SCREENING_FALLBACK = [
         "gold_standard": "Siêu âm can thiệp cơ xương khớp / X-quang / MRI chuyên sâu"
       }
     ],
-    "stage_2_somatic_dysfunctions": [
-      "Trượt chỏm xương quay ra sau (Posterior Radial Head dysfunction): Giới hạn động tác ngửa cẳng tay và duỗi khuỷu.",
-      "Trượt chỏm xương quay ra trước (Anterior Radial Head dysfunction): Giới hạn động tác sấp cẳng tay và gập khuỷu.",
-      "Xoay xương thuyền / xương nguyệt (Scaphoid/Lunate Somatic dysfunction): Hạn chế cử động trượt trơn tru các xương cổ tay sau bong gân.",
-      "Chênh lệch độ dài xương trụ (Positive/Negative Ulnar Variance): Xương trụ dài hơn xương quay gây hội chứng chèn ép phức hợp sụn sợi tam giác (TFCC)."
-    ],
-    "stage_3_guidemap_intervention": "Kỹ thuật nắn chỉnh di động chỏm xương quay và xương cổ tay; Tiêm bao gân De Quervain, tiêm ròng rọc A1 ngón tay lò xo, hoặc tiêm thủy dịch giải ép thần kinh giữa ống cổ tay (Hydrodissection) dưới hướng dẫn siêu âm (Xem Web 1: Tiêm Ống Cổ Tay, Tiêm Gân De Quervain, Tiêm Ngón Tay Lò Xo, Tiêm Gân Lồi Cầu Ngoài).",
     "figures": [
       {
-        "chapter": 10,
-        "chapter_name": "elbow_wrist_hand_pain",
-        "page": 467,
         "file": "assets/deepak_images/ch10_elbow_wrist_hand_pain/p467_img1.jpeg",
+        "page": 467,
+        "fig_number": "10.1",
+        "caption_en": "Fig. 10.1: Elbow joint medial aspect",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Elbow joint medial aspect",
+        "category": "general_atlas",
         "width": 1044,
-        "height": 589,
-        "size_bytes": 45718,
-        "page_captions": [
-          "Figs 10.1 to 10.3).",
-          "Fig. 10.1:  Elbow joint medial aspect"
-        ],
-        "captions": [
-          "Figs 10.1 to 10.3).",
-          "Fig. 10.1: Elbow joint medial aspect"
-        ]
+        "height": 589
       },
       {
-        "chapter": 10,
-        "chapter_name": "elbow_wrist_hand_pain",
-        "page": 468,
         "file": "assets/deepak_images/ch10_elbow_wrist_hand_pain/p468_img1.png",
-        "width": 1061,
-        "height": 601,
-        "size_bytes": 71907,
-        "page_captions": [
-          "Fig. 10.2:  Elbow joint lateral aspect",
-          "Fig. 10.3:  Elbow joint posterior aspect"
-        ],
-        "captions": [
-          "Fig. 10.2: Elbow joint lateral aspect Fig. 10.3: Elbow joint posterior aspect"
-        ]
-      },
-      {
-        "chapter": 10,
-        "chapter_name": "elbow_wrist_hand_pain",
         "page": 468,
+        "fig_number": "10.2",
+        "caption_en": "Fig. 10.2: Elbow joint lateral aspect",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Elbow joint lateral aspect",
+        "category": "general_atlas",
+        "width": 1061,
+        "height": 601
+      },
+      {
         "file": "assets/deepak_images/ch10_elbow_wrist_hand_pain/p468_img2.png",
+        "page": 468,
+        "fig_number": "10.2",
+        "caption_en": "Fig. 10.2: Elbow joint lateral aspect",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Elbow joint lateral aspect",
+        "category": "general_atlas",
         "width": 956,
-        "height": 659,
-        "size_bytes": 91161,
-        "page_captions": [
-          "Fig. 10.2:  Elbow joint lateral aspect",
-          "Fig. 10.3:  Elbow joint posterior aspect"
-        ],
-        "captions": [
-          "Fig. 10.2: Elbow joint lateral aspect Fig. 10.3: Elbow joint posterior aspect"
-        ]
+        "height": 659
       },
       {
-        "chapter": 10,
-        "chapter_name": "elbow_wrist_hand_pain",
-        "page": 473,
         "file": "assets/deepak_images/ch10_elbow_wrist_hand_pain/p473_img1.png",
+        "page": 473,
+        "fig_number": "10.4",
+        "caption_en": "Fig. 10.4: Right wrist and hand (palmar view)",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Right wrist and hand (palmar view)",
+        "category": "general_atlas",
         "width": 1275,
-        "height": 903,
-        "size_bytes": 210997,
-        "page_captions": [
-          "Fig. 10.4)",
-          "Fig. 10.4:  Right wrist and hand (palmar view)"
-        ],
-        "captions": [
-          "Fig. 10.4) Distal Radioulnar Joint"
-        ]
+        "height": 903
       },
       {
-        "chapter": 10,
-        "chapter_name": "elbow_wrist_hand_pain",
-        "page": 487,
         "file": "assets/deepak_images/ch10_elbow_wrist_hand_pain/p487_img1.jpeg",
-        "width": 946,
-        "height": 604,
-        "size_bytes": 52197,
-        "page_captions": [
-          "Fig. 10.6). The anterior band attaches ",
-          "Fig. 10.5:  Common flexor origin",
-          "Fig. 10.6:  Medial collateral ligament"
-        ],
-        "captions": [
-          "Fig. 10.6). The anterior band attaches to the coronoid process of ulna and the posterior band attaches to the olecranon",
-          "Fig. 10.5: Common flexor origin Fig. 10.6: Medial collateral ligament"
-        ]
-      },
-      {
-        "chapter": 10,
-        "chapter_name": "elbow_wrist_hand_pain",
         "page": 487,
+        "fig_number": "10.5",
+        "caption_en": "Fig. 10.5: Common flexor origin",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Common flexor origin",
+        "category": "general_atlas",
+        "width": 946,
+        "height": 604
+      },
+      {
         "file": "assets/deepak_images/ch10_elbow_wrist_hand_pain/p487_img2.jpeg",
+        "page": 487,
+        "fig_number": "10.5",
+        "caption_en": "Fig. 10.5: Common flexor origin",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Common flexor origin",
+        "category": "general_atlas",
         "width": 926,
-        "height": 603,
-        "size_bytes": 60412,
-        "page_captions": [
-          "Fig. 10.6). The anterior band attaches ",
-          "Fig. 10.5:  Common flexor origin",
-          "Fig. 10.6:  Medial collateral ligament"
-        ],
-        "captions": [
-          "Fig. 10.6). The anterior band attaches to the coronoid process of ulna and the posterior band attaches to the olecranon",
-          "Fig. 10.5: Common flexor origin Fig. 10.6: Medial collateral ligament"
-        ]
+        "height": 603
       },
       {
-        "chapter": 10,
-        "chapter_name": "elbow_wrist_hand_pain",
-        "page": 488,
         "file": "assets/deepak_images/ch10_elbow_wrist_hand_pain/p488_img1.jpeg",
+        "page": 488,
+        "fig_number": "10.7",
+        "caption_en": "Fig. 10.7: Cubital tunnel",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Cubital tunnel",
+        "category": "general_atlas",
         "width": 932,
-        "height": 603,
-        "size_bytes": 53973,
-        "page_captions": [
-          "Fig. 10.7). This includes repeated flexion at ",
-          "Fig. 10.7:  Cubital tunnel"
-        ],
-        "captions": [
-          "Fig. 10.7). This includes repeated flexion at the elbow and ulnar deviation of the wrist. Systemic diseases such as diabetes,",
-          "Fig. 10.7: Cubital tunnel"
-        ]
+        "height": 603
       },
       {
-        "chapter": 10,
-        "chapter_name": "elbow_wrist_hand_pain",
-        "page": 489,
         "file": "assets/deepak_images/ch10_elbow_wrist_hand_pain/p489_img1.jpeg",
+        "page": 489,
+        "fig_number": "10.8",
+        "caption_en": "Fig. 10.8: Triangular fibrocartilage complex (arrow)",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Triangular fibrocartilage complex (arrow)",
+        "category": "general_atlas",
         "width": 658,
-        "height": 903,
-        "size_bytes": 70560,
-        "page_captions": [
-          "Fig. 10.8). This area is often described as the ulnameniscal-triquetral ",
-          "Fig. 10.8:  Triangular fibrocartilage complex (arrow)"
-        ],
-        "captions": [
-          "Fig. 10.8). This area is often described as the ulnameniscal-triquetral joint. The TFCC is synonymously described as a disc or meniscus. It normally"
-        ]
+        "height": 903
       },
       {
-        "chapter": 10,
-        "chapter_name": "elbow_wrist_hand_pain",
-        "page": 491,
         "file": "assets/deepak_images/ch10_elbow_wrist_hand_pain/p491_img1.jpeg",
-        "width": 668,
-        "height": 603,
-        "size_bytes": 32832,
-        "page_captions": [
-          "Fig. 10.10). Signs and symptoms to look for are clicking or locking of ",
-          "Fig. 10.9:  Olecranon bursa (arrow)",
-          "Fig. 10.10:  Humero-ulnar joint"
-        ],
-        "captions": [
-          "Fig. 10.10). Signs and symptoms to look for are clicking or locking of the elbow with terminal extension. Crepitus with a mechanical extension block are",
-          "Fig. 10.9: Olecranon bursa (arrow) Fig. 10.10: Humero-ulnar joint"
-        ]
-      },
-      {
-        "chapter": 10,
-        "chapter_name": "elbow_wrist_hand_pain",
         "page": 491,
+        "fig_number": "10.9",
+        "caption_en": "Fig. 10.9: Olecranon bursa (arrow)",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Olecranon bursa (arrow)",
+        "category": "general_atlas",
+        "width": 668,
+        "height": 603
+      },
+      {
         "file": "assets/deepak_images/ch10_elbow_wrist_hand_pain/p491_img2.jpeg",
+        "page": 491,
+        "fig_number": "10.9",
+        "caption_en": "Fig. 10.9: Olecranon bursa (arrow)",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Olecranon bursa (arrow)",
+        "category": "general_atlas",
         "width": 515,
-        "height": 607,
-        "size_bytes": 24675,
-        "page_captions": [
-          "Fig. 10.10). Signs and symptoms to look for are clicking or locking of ",
-          "Fig. 10.9:  Olecranon bursa (arrow)",
-          "Fig. 10.10:  Humero-ulnar joint"
-        ],
-        "captions": [
-          "Fig. 10.10). Signs and symptoms to look for are clicking or locking of the elbow with terminal extension. Crepitus with a mechanical extension block are",
-          "Fig. 10.9: Olecranon bursa (arrow) Fig. 10.10: Humero-ulnar joint"
-        ]
+        "height": 607
       },
       {
-        "chapter": 10,
-        "chapter_name": "elbow_wrist_hand_pain",
-        "page": 492,
         "file": "assets/deepak_images/ch10_elbow_wrist_hand_pain/p492_img1.jpeg",
+        "page": 492,
+        "fig_number": "10.11",
+        "caption_en": "Fig. 10.11: Intersection syndrome (Abbreviations: APL, Abductor pollicis longus;",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Intersection syndrome (Abbreviations: APL, Abductor pollicis longus;",
+        "category": "general_atlas",
         "width": 1157,
-        "height": 904,
-        "size_bytes": 96307,
-        "page_captions": [
-          "Fig. 10.11). Intersection syndrome is characterized by pain and swelling in the ",
-          "Fig. 10.11:  Intersection syndrome (Abbreviations: APL, Abductor pollicis longus; "
-        ],
-        "captions": [
-          "Fig. 10.11). Intersection syndrome is characterized by pain and swelling in the distal dorsoradial forearm. Intersection syndrome can be caused by direct trauma",
-          "Fig. 10.11: Intersection syndrome (Abbreviations: APL, Abductor pollicis longus; ECRB, Extensor carpi radialis brevis; ECRL, Extensor carpi radialis longus; EPB,"
-        ]
+        "height": 904
       },
       {
-        "chapter": 10,
-        "chapter_name": "elbow_wrist_hand_pain",
-        "page": 493,
         "file": "assets/deepak_images/ch10_elbow_wrist_hand_pain/p493_img1.jpeg",
+        "page": 493,
+        "fig_number": "10.12",
+        "caption_en": "Fig. 10.12: Common extensor origin",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Common extensor origin",
+        "category": "general_atlas",
         "width": 1089,
-        "height": 603,
-        "size_bytes": 39522,
-        "page_captions": [
-          "Fig. 10.12). Although the gripping mechanism is one of the causative factors, it is ",
-          "Fig. 10.12:  Common extensor origin"
-        ],
-        "captions": [
-          "Fig. 10.12). Although the gripping mechanism is one of the causative factors, it is more so repetitive, wrist extension and radial deviation that causes this condition.",
-          "Fig. 10.12: Common extensor origin"
-        ]
+        "height": 603
       },
       {
-        "chapter": 10,
-        "chapter_name": "elbow_wrist_hand_pain",
-        "page": 494,
         "file": "assets/deepak_images/ch10_elbow_wrist_hand_pain/p494_img1.jpeg",
+        "page": 494,
+        "fig_number": "10.13",
+        "caption_en": "Fig. 10.13: Radial tunnel",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Radial tunnel",
+        "category": "general_atlas",
         "width": 925,
-        "height": 604,
-        "size_bytes": 42694,
-        "page_captions": [
-          "Fig. 10.13). Other areas of compression include ",
-          "Fig. 10.13:  Radial tunnel"
-        ],
-        "captions": [
-          "Fig. 10.13). Other areas of compression include the radiocapitellar joint and the extensor carpi radialis brevis.",
-          "Fig. 10.13: Radial tunnel"
-        ]
+        "height": 604
       },
       {
-        "chapter": 10,
-        "chapter_name": "elbow_wrist_hand_pain",
-        "page": 496,
         "file": "assets/deepak_images/ch10_elbow_wrist_hand_pain/p496_img1.jpeg",
+        "page": 496,
+        "fig_number": "10.14",
+        "caption_en": "Fig. 10.14: Ulnar collateral ligament tear",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Ulnar collateral ligament tear",
+        "category": "redflags_pathology",
         "width": 890,
-        "height": 903,
-        "size_bytes": 84409,
-        "page_captions": [
-          "Fig. 10.14:  Ulnar collateral ligament tear"
-        ],
-        "captions": [
-          "Fig. 10.14: Ulnar collateral ligament tear"
-        ]
+        "height": 903
       },
       {
-        "chapter": 10,
-        "chapter_name": "elbow_wrist_hand_pain",
-        "page": 497,
         "file": "assets/deepak_images/ch10_elbow_wrist_hand_pain/p497_img1.png",
+        "page": 497,
+        "fig_number": "10.15",
+        "caption_en": "Fig. 10.15: Sites of irritation of the median nerve",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Sites of irritation of the median nerve",
+        "category": "redflags_pathology",
         "width": 917,
-        "height": 903,
-        "size_bytes": 174718,
-        "page_captions": [
-          "Fig. 10.14).13",
-          "Fig. 10.15). It often ",
-          "Fig. 10.15:  Sites of irritation of the median nerve"
-        ],
-        "captions": [
-          "Fig. 10.14).13 What to look for?",
-          "Fig. 10.15). It often Fig. 10.15: Sites of irritation of the median nerve"
-        ]
+        "height": 903
       },
       {
-        "chapter": 10,
-        "chapter_name": "elbow_wrist_hand_pain",
-        "page": 499,
         "file": "assets/deepak_images/ch10_elbow_wrist_hand_pain/p499_img1.jpeg",
+        "page": 499,
+        "fig_number": "10.16",
+        "caption_en": "Fig. 10.16: Guyon’s canal",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Guyon’s canal",
+        "category": "general_atlas",
         "width": 835,
-        "height": 903,
-        "size_bytes": 82048,
-        "page_captions": [
-          "Fig. 10.17) and has several causative factors. The ones that are ",
-          "Fig. 10.16:  Guyon’s canal"
-        ],
-        "captions": [
-          "Fig. 10.17) and has several causative factors. The ones that are relevant to the manual therapist are:",
-          "Fig. 10.16: Guyon’s canal"
-        ]
+        "height": 903
       },
       {
-        "chapter": 10,
-        "chapter_name": "elbow_wrist_hand_pain",
-        "page": 500,
         "file": "assets/deepak_images/ch10_elbow_wrist_hand_pain/p500_img1.jpeg",
+        "page": 500,
+        "fig_number": "10.17",
+        "caption_en": "Fig. 10.17: Carpal tunnel",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Carpal tunnel",
+        "category": "general_atlas",
         "width": 986,
-        "height": 903,
-        "size_bytes": 84300,
-        "page_captions": [
-          "Fig. 10.17:  Carpal tunnel"
-        ],
-        "captions": [
-          "Fig. 10.17: Carpal tunnel"
-        ]
+        "height": 903
       },
       {
-        "chapter": 10,
-        "chapter_name": "elbow_wrist_hand_pain",
-        "page": 502,
         "file": "assets/deepak_images/ch10_elbow_wrist_hand_pain/p502_img1.jpeg",
+        "page": 502,
+        "fig_number": "10.18",
+        "caption_en": "Fig. 10.18: Radial head superior/inferior",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Radial head superior/inferior",
+        "category": "general_atlas",
         "width": 958,
-        "height": 716,
-        "size_bytes": 84754,
-        "page_captions": [
-          "Fig. 10.18). The ",
-          "Fig. 10.19). The ulnar styloid is normally ",
-          "Fig. 10.18:  Radial head superior/inferior"
-        ],
-        "captions": [
-          "Fig. 10.18). The patients’ elbow is now flexed and extended while this hollow space is palpated.",
-          "Fig. 10.19). The ulnar styloid is normally slightly posterior in comparison to the radial styloid, but increased posteriority in",
-          "Fig. 10.18: Radial head superior/inferior"
-        ]
+        "height": 716
       },
       {
-        "chapter": 10,
-        "chapter_name": "elbow_wrist_hand_pain",
-        "page": 503,
         "file": "assets/deepak_images/ch10_elbow_wrist_hand_pain/p503_img1.jpeg",
-        "width": 958,
-        "height": 715,
-        "size_bytes": 65651,
-        "page_captions": [
-          "Fig. 10.20)",
-          "Fig. 10.20:  Lunate anterior",
-          "Fig. 10.19:  Ulnar posterior"
-        ],
-        "captions": [
-          "Fig. 10.20). Assessment of Restriction of Joint Play: Wrist Extension with Radial Deviation",
-          "Fig. 10.20: Lunate anterior Fig. 10.19: Ulnar posterior"
-        ]
-      },
-      {
-        "chapter": 10,
-        "chapter_name": "elbow_wrist_hand_pain",
         "page": 503,
+        "fig_number": "10.20",
+        "caption_en": "Fig. 10.20: Lunate anterior",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Lunate anterior",
+        "category": "examination",
+        "width": 958,
+        "height": 715
+      },
+      {
         "file": "assets/deepak_images/ch10_elbow_wrist_hand_pain/p503_img2.jpeg",
+        "page": 503,
+        "fig_number": "10.20",
+        "caption_en": "Fig. 10.20: Lunate anterior",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Lunate anterior",
+        "category": "examination",
         "width": 958,
-        "height": 701,
-        "size_bytes": 84539,
-        "page_captions": [
-          "Fig. 10.20)",
-          "Fig. 10.20:  Lunate anterior",
-          "Fig. 10.19:  Ulnar posterior"
-        ],
-        "captions": [
-          "Fig. 10.20). Assessment of Restriction of Joint Play: Wrist Extension with Radial Deviation",
-          "Fig. 10.20: Lunate anterior Fig. 10.19: Ulnar posterior"
-        ]
+        "height": 701
       },
       {
-        "chapter": 10,
-        "chapter_name": "elbow_wrist_hand_pain",
-        "page": 504,
         "file": "assets/deepak_images/ch10_elbow_wrist_hand_pain/p504_img1.jpeg",
+        "page": 504,
+        "fig_number": "10.21",
+        "caption_en": "Fig. 10.21: Joint play assessment",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Joint play assessment",
+        "category": "examination",
         "width": 958,
-        "height": 718,
-        "size_bytes": 77775,
-        "page_captions": [
-          "Fig. 10.21). Now, the patient is ",
-          "Fig. 10.22). This is called the ",
-          "Fig. 10.23). This position is held for one "
-        ],
-        "captions": [
-          "Fig. 10.21). Now, the patient is asked to extend the wrist, and on terminal extension, the radius is felt to glide",
-          "Fig. 10.22). This is called the prayer sign.29 This is due to non enzymatic glycosylation of collagen and its",
-          "Fig. 10.23). This position is held for one Fig. 10.21: Joint play assessment"
-        ]
+        "height": 718
       },
       {
-        "chapter": 10,
-        "chapter_name": "elbow_wrist_hand_pain",
-        "page": 505,
         "file": "assets/deepak_images/ch10_elbow_wrist_hand_pain/p505_img1.jpeg",
-        "width": 958,
-        "height": 637,
-        "size_bytes": 62890,
-        "page_captions": [
-          "Fig. 10.22:  Prayer sign",
-          "Fig. 10.23:  Phalens test"
-        ],
-        "captions": [
-          "Fig. 10.22: Prayer sign Fig. 10.23: Phalens test"
-        ]
-      },
-      {
-        "chapter": 10,
-        "chapter_name": "elbow_wrist_hand_pain",
         "page": 505,
+        "fig_number": "10.22",
+        "caption_en": "Fig. 10.22: Prayer sign",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Prayer sign",
+        "category": "examination",
+        "width": 958,
+        "height": 637
+      },
+      {
         "file": "assets/deepak_images/ch10_elbow_wrist_hand_pain/p505_img2.jpeg",
+        "page": 505,
+        "fig_number": "10.22",
+        "caption_en": "Fig. 10.22: Prayer sign",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Prayer sign",
+        "category": "examination",
         "width": 895,
-        "height": 798,
-        "size_bytes": 106369,
-        "page_captions": [
-          "Fig. 10.22:  Prayer sign",
-          "Fig. 10.23:  Phalens test"
-        ],
-        "captions": [
-          "Fig. 10.22: Prayer sign Fig. 10.23: Phalens test"
-        ]
+        "height": 798
       },
       {
-        "chapter": 10,
-        "chapter_name": "elbow_wrist_hand_pain",
-        "page": 506,
         "file": "assets/deepak_images/ch10_elbow_wrist_hand_pain/p506_img1.jpeg",
-        "width": 958,
-        "height": 735,
-        "size_bytes": 78952,
-        "page_captions": [
-          "Fig. 10.24)",
-          "Fig. 10.25). Normally, ",
-          "Fig. 10.24:  Valgus stress"
-        ],
-        "captions": [
-          "Fig. 10.24). Ulnar Variance",
-          "Fig. 10.25). Normally, Fig. 10.24: Valgus stress",
-          "Fig. 10.25: Ulnar variance"
-        ]
-      },
-      {
-        "chapter": 10,
-        "chapter_name": "elbow_wrist_hand_pain",
         "page": 506,
+        "fig_number": "10.24",
+        "caption_en": "Fig. 10.24: Valgus stress",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Valgus stress",
+        "category": "examination",
+        "width": 958,
+        "height": 735
+      },
+      {
         "file": "assets/deepak_images/ch10_elbow_wrist_hand_pain/p506_img2.jpeg",
+        "page": 506,
+        "fig_number": "10.24",
+        "caption_en": "Fig. 10.24: Valgus stress",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Valgus stress",
+        "category": "examination",
         "width": 958,
-        "height": 718,
-        "size_bytes": 76695,
-        "page_captions": [
-          "Fig. 10.24)",
-          "Fig. 10.25). Normally, ",
-          "Fig. 10.24:  Valgus stress"
-        ],
-        "captions": [
-          "Fig. 10.24). Ulnar Variance",
-          "Fig. 10.25). Normally, Fig. 10.24: Valgus stress",
-          "Fig. 10.25: Ulnar variance"
-        ]
+        "height": 718
       },
       {
-        "chapter": 10,
-        "chapter_name": "elbow_wrist_hand_pain",
-        "page": 507,
         "file": "assets/deepak_images/ch10_elbow_wrist_hand_pain/p507_img1.jpeg",
-        "width": 958,
-        "height": 590,
-        "size_bytes": 57637,
-        "page_captions": [
-          "Fig. 10.26). Sharp pain at the base of the thumb indicates a ",
-          "Fig. 10.27).30 ",
-          "Fig. 10.26:  Finkelstein’s test"
-        ],
-        "captions": [
-          "Fig. 10.26). Sharp pain at the base of the thumb indicates a positive test.26",
-          "Fig. 10.27).30 Fig. 10.26: Finkelstein’s test",
-          "Fig. 10.27: Cozen’s test"
-        ]
-      },
-      {
-        "chapter": 10,
-        "chapter_name": "elbow_wrist_hand_pain",
         "page": 507,
+        "fig_number": "10.26",
+        "caption_en": "Fig. 10.26: Finkelstein’s test",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Finkelstein’s test",
+        "category": "examination",
+        "width": 958,
+        "height": 590
+      },
+      {
         "file": "assets/deepak_images/ch10_elbow_wrist_hand_pain/p507_img2.jpeg",
+        "page": 507,
+        "fig_number": "10.26",
+        "caption_en": "Fig. 10.26: Finkelstein’s test",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Finkelstein’s test",
+        "category": "examination",
         "width": 958,
-        "height": 798,
-        "size_bytes": 85627,
-        "page_captions": [
-          "Fig. 10.26). Sharp pain at the base of the thumb indicates a ",
-          "Fig. 10.27).30 ",
-          "Fig. 10.26:  Finkelstein’s test"
-        ],
-        "captions": [
-          "Fig. 10.26). Sharp pain at the base of the thumb indicates a positive test.26",
-          "Fig. 10.27).30 Fig. 10.26: Finkelstein’s test",
-          "Fig. 10.27: Cozen’s test"
-        ]
+        "height": 798
       },
       {
-        "chapter": 10,
-        "chapter_name": "elbow_wrist_hand_pain",
-        "page": 508,
         "file": "assets/deepak_images/ch10_elbow_wrist_hand_pain/p508_img1.jpeg",
-        "width": 958,
-        "height": 626,
-        "size_bytes": 57385,
-        "page_captions": [
-          "Fig. 10.29:  Radiocapitellar chondromalacia test hand placement",
-          "Fig. 10.28).31",
-          "Figs 10.29 and 10.30). If it provokes pain it may be indicative of radiocapitellar "
-        ],
-        "captions": [
-          "Fig. 10.29: Radiocapitellar chondromalacia test hand placement Maudsley’s Test",
-          "Fig. 10.28).31 Radiocapitellar Chondromalacia Test",
-          "Figs 10.29 and 10.30). If it provokes pain it may be indicative of radiocapitellar chondromalacia. Another provocation called the flexion pronation test where",
-          "Fig. 10.28: Maudsley test"
-        ]
-      },
-      {
-        "chapter": 10,
-        "chapter_name": "elbow_wrist_hand_pain",
         "page": 508,
+        "fig_number": "10.29",
+        "caption_en": "Fig. 10.29: Radiocapitellar chondromalacia test hand placement",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Radiocapitellar chondromalacia test hand placement",
+        "category": "examination",
+        "width": 958,
+        "height": 626
+      },
+      {
         "file": "assets/deepak_images/ch10_elbow_wrist_hand_pain/p508_img2.jpeg",
+        "page": 508,
+        "fig_number": "10.29",
+        "caption_en": "Fig. 10.29: Radiocapitellar chondromalacia test hand placement",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Radiocapitellar chondromalacia test hand placement",
+        "category": "examination",
         "width": 958,
-        "height": 630,
-        "size_bytes": 70668,
-        "page_captions": [
-          "Fig. 10.29:  Radiocapitellar chondromalacia test hand placement",
-          "Fig. 10.28).31",
-          "Figs 10.29 and 10.30). If it provokes pain it may be indicative of radiocapitellar "
-        ],
-        "captions": [
-          "Fig. 10.29: Radiocapitellar chondromalacia test hand placement Maudsley’s Test",
-          "Fig. 10.28).31 Radiocapitellar Chondromalacia Test",
-          "Figs 10.29 and 10.30). If it provokes pain it may be indicative of radiocapitellar chondromalacia. Another provocation called the flexion pronation test where",
-          "Fig. 10.28: Maudsley test"
-        ]
+        "height": 630
       },
       {
-        "chapter": 10,
-        "chapter_name": "elbow_wrist_hand_pain",
-        "page": 509,
         "file": "assets/deepak_images/ch10_elbow_wrist_hand_pain/p509_img1.jpeg",
-        "width": 958,
-        "height": 703,
-        "size_bytes": 68281,
-        "page_captions": [
-          "Fig. 10.30:  Radiocapitellar chondromalacia test",
-          "Fig. 10.31). The elbow is reduced in full extension and must sublux as it is flexed ",
-          "Fig. 10.31:  Postero-lateral rotatory instability test for elbow"
-        ],
-        "captions": [
-          "Fig. 10.30: Radiocapitellar chondromalacia test Posterolateral Rotatory Instability Test is Positive",
-          "Fig. 10.31). The elbow is reduced in full extension and must sublux as it is flexed in order to obtain a positive test result (a sudden reduction of the subluxation).",
-          "Fig. 10.31: Postero-lateral rotatory instability test for elbow"
-        ]
-      },
-      {
-        "chapter": 10,
-        "chapter_name": "elbow_wrist_hand_pain",
         "page": 509,
+        "fig_number": "10.30",
+        "caption_en": "Fig. 10.30: Radiocapitellar chondromalacia test",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Radiocapitellar chondromalacia test",
+        "category": "examination",
+        "width": 958,
+        "height": 703
+      },
+      {
         "file": "assets/deepak_images/ch10_elbow_wrist_hand_pain/p509_img2.jpeg",
+        "page": 509,
+        "fig_number": "10.30",
+        "caption_en": "Fig. 10.30: Radiocapitellar chondromalacia test",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Radiocapitellar chondromalacia test",
+        "category": "examination",
         "width": 958,
-        "height": 683,
-        "size_bytes": 64218,
-        "page_captions": [
-          "Fig. 10.30:  Radiocapitellar chondromalacia test",
-          "Fig. 10.31). The elbow is reduced in full extension and must sublux as it is flexed ",
-          "Fig. 10.31:  Postero-lateral rotatory instability test for elbow"
-        ],
-        "captions": [
-          "Fig. 10.30: Radiocapitellar chondromalacia test Posterolateral Rotatory Instability Test is Positive",
-          "Fig. 10.31). The elbow is reduced in full extension and must sublux as it is flexed in order to obtain a positive test result (a sudden reduction of the subluxation).",
-          "Fig. 10.31: Postero-lateral rotatory instability test for elbow"
-        ]
+        "height": 683
       },
       {
-        "chapter": 10,
-        "chapter_name": "elbow_wrist_hand_pain",
-        "page": 510,
         "file": "assets/deepak_images/ch10_elbow_wrist_hand_pain/p510_img1.jpeg",
+        "page": 510,
+        "fig_number": "10.32A and B",
+        "caption_en": "Figs 10.32A and B: Trigger finger",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Trigger finger",
+        "category": "examination",
         "width": 958,
-        "height": 740,
-        "size_bytes": 61580,
-        "page_captions": [
-          "Figs 10.32A and B)",
-          "Figs 10.32A and B:  Trigger finger"
-        ],
-        "captions": [
-          "Figs 10.32A and B). REFERENCES",
-          "Figs 10.32A and B: Trigger finger A"
-        ]
+        "height": 740
       },
       {
-        "chapter": 10,
-        "chapter_name": "elbow_wrist_hand_pain",
-        "page": 510,
         "file": "assets/deepak_images/ch10_elbow_wrist_hand_pain/p510_img2.jpeg",
+        "page": 510,
+        "fig_number": "10.32A and B",
+        "caption_en": "Figs 10.32A and B: Trigger finger",
+        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Trigger finger",
+        "category": "examination",
         "width": 958,
-        "height": 705,
-        "size_bytes": 47116,
-        "page_captions": [
-          "Figs 10.32A and B)",
-          "Figs 10.32A and B:  Trigger finger"
-        ],
-        "captions": [
-          "Figs 10.32A and B). REFERENCES",
-          "Figs 10.32A and B: Trigger finger A"
-        ]
+        "height": 705
       }
     ],
+    "stage_2_somatic_dysfunctions": [
+      "Sai lệch trượt chỏm xương quay ra trước / sau (Radial head anterior / posterior subluxation): Gây đau chói khi sấp ngửa cẳng tay.",
+      "Khóa khớp thang - bàn ngón cái (CMC-1 restriction): Gây hạn chế đối chiếu ngón cái và đau buốt khi cầm nắm vật nặng.",
+      "Hẹp khoang ống cổ tay do sụp vòm khối xương cổ tay (Carpal arch flattening): Tăng áp lực chèn ép cơ học lên thần kinh giữa."
+    ],
+    "stage_3_guidemap_intervention": "Kỹ thuật nắn chỉnh di động chỏm xương quay và xương cổ tay; Tiêm bao gân De Quervain, tiêm ròng rọc A1 ngón tay lò xo, hoặc tiêm thủy dịch giải ép thần kinh giữa ống cổ tay (Hydrodissection) dưới hướng dẫn siêu âm (Xem Web 1: Tiêm Ống Cổ Tay, Tiêm Gân De Quervain, Tiêm Ngón Tay Lò Xo, Tiêm Gân Lồi Cầu Ngoài).",
     "recommended_web1_procedures": [
       {
         "id": "tennis-elbow",

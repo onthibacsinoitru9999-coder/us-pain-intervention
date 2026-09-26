@@ -16,8 +16,8 @@ console.log('\n=== TEST 2: DATA STRUCTURE INTEGRITY ===');
 const screening = require('../data/screening.js');
 const fallback = require('../data/screening.fallback.js');
 
-assert.strictEqual(screening.SCREENING_DATA.length, 10, 'Must have exactly 10 chapters');
-assert.strictEqual(fallback.STABLE_SCREENING_FALLBACK.length, 10, 'Fallback must have exactly 10 chapters');
+assert.strictEqual(screening.SCREENING_DATA.length, 8, 'Must have exactly 8 symptom modules');
+assert.strictEqual(fallback.STABLE_SCREENING_FALLBACK.length, 8, 'Fallback must have exactly 8 symptom modules');
 assert.strictEqual(screening.RED_FLAGS_MASTER.length, 10, 'Must have 10 master red flags');
 assert.strictEqual(screening.LAB_TESTS_GUIDE.length, 12, 'Must have 12 lab tests');
 assert.strictEqual(screening.DRUG_INDUCED_PAIN_GUIDE.length, 7, 'Must have 7 drug-induced classes');
@@ -104,23 +104,23 @@ vm.runInContext(screeningJs + '\n' + controllerJs + '\n; this.screeningState = s
 context.initScreeningApp();
 
 // 3.1 Initial State Check
-assert.strictEqual(context.screeningState.selectedModuleId, 'ch01-thought-process');
-assert.ok(dom.getElementById('screening-detail-container').innerHTML.includes('Chương 1'), 'Detail view must render Chapter 1 initially');
-console.log('  [PASS] 3.1 Initial load rendered Chapter 1 successfully.');
+assert.strictEqual(context.screeningState.selectedModuleId, 'systemic-widespread');
+assert.ok(dom.getElementById('screening-detail-container').innerHTML.includes('Đau Toàn Thân'), 'Detail view must render Module 1 initially');
+console.log('  [PASS] 3.1 Initial load rendered Module 1 successfully.');
 
 // 3.2 Category Filter & Auto-Select Bug Fix Verification
 context.screeningState.activeFilter = 'spine';
 context.applyFilters();
-assert.strictEqual(context.screeningState.selectedModuleId, 'ch04-cervical-spine', 'Auto-select must pick Chapter 4 when filtering to spine');
-assert.ok(dom.getElementById('screening-detail-container').innerHTML.includes('Chương 4'), 'Detail view must render Chapter 4');
-assert.ok(dom.getElementById('screening-detail-container').innerHTML.includes('Cột Sống Cổ'), 'Detail view must show Cervical title');
-console.log('  [PASS] 3.2 Category filter spine correctly auto-selects Chapter 4 and renders detail view.');
+assert.strictEqual(context.screeningState.selectedModuleId, 'cervical-pain', 'Auto-select must pick Cervical when filtering to spine');
+assert.ok(dom.getElementById('screening-detail-container').innerHTML.includes('Cổ - Vai - Gáy'), 'Detail view must render Cervical');
+assert.ok(dom.getElementById('screening-detail-container').innerHTML.includes('Bệnh Rễ Thần Kinh Cổ'), 'Detail view must show Cervical title');
+console.log('  [PASS] 3.2 Category filter spine correctly auto-selects Cervical module and renders detail view.');
 
 context.screeningState.activeFilter = 'upper';
 context.applyFilters();
-assert.strictEqual(context.screeningState.selectedModuleId, 'ch09-shoulder', 'Auto-select must pick Chapter 9 when filtering to upper limb');
+assert.strictEqual(context.screeningState.selectedModuleId, 'shoulder-pain', 'Auto-select must pick Shoulder when filtering to upper limb');
 assert.ok(dom.getElementById('screening-detail-container').innerHTML.includes('Khớp Vai'), 'Detail view must show Shoulder title');
-console.log('  [PASS] 3.3 Category filter upper limb correctly auto-selects Chapter 9.');
+console.log('  [PASS] 3.3 Category filter upper limb correctly auto-selects Shoulder module.');
 
 // 3.3 Empty Search Result Handling
 context.screeningState.activeFilter = 'all';
@@ -193,7 +193,7 @@ context.switchMode('modules');
 context.screeningState.activeFilter = 'all';
 context.screeningState.searchQuery = '';
 context.applyFilters();
-context.selectModule('ch04-cervical-spine'); // 70 figures
+context.selectModule('cervical-pain'); // 70 figures
 
 assert.strictEqual(context.screeningState.currentModuleFigures.length, 70);
 

@@ -257,10 +257,11 @@ function applyFilters() {
     screeningState.filteredModules = screeningState.allModules.filter(m => {
       // Category match
       let matchCat = true;
-      if (cat === 'foundation') matchCat = (m.region === 'foundation');
-      else if (cat === 'spine') matchCat = (m.region === 'spine');
-      else if (cat === 'upper') matchCat = (m.region === 'upper_limb');
-      else if (cat === 'lower') matchCat = (m.region === 'lower_limb');
+      if (cat === 'systemic') matchCat = (m.region === 'systemic');
+      else if (cat === 'spine') matchCat = ['cervical', 'thoracic', 'lumbopelvic'].includes(m.region);
+      else if (cat === 'upper') matchCat = ['shoulder', 'elbow_hand'].includes(m.region);
+      else if (cat === 'lower') matchCat = ['hip', 'knee_foot'].includes(m.region);
+      else if (cat !== 'all') matchCat = (m.region === cat);
 
       // Search query match
       let matchQuery = true;
@@ -269,11 +270,12 @@ function applyFilters() {
           m.title,
           m.title_vi,
           m.region_vi,
+          m.chief_complaint || '',
           m.summary,
-          JSON.stringify(m.red_flags),
-          JSON.stringify(m.visceral_referrals),
-          JSON.stringify(m.examination_procedures),
-          JSON.stringify(m.differential_table),
+          JSON.stringify(m.red_flags || []),
+          JSON.stringify(m.visceral_referrals || []),
+          JSON.stringify(m.examination_procedures || []),
+          JSON.stringify(m.differential_table || []),
           JSON.stringify(m.stage_2_somatic_dysfunctions || []),
           JSON.stringify(m.drug_induced || []),
           JSON.stringify(m.recommended_web1_procedures || [])
@@ -285,14 +287,13 @@ function applyFilters() {
       return matchCat && matchQuery;
     });
 
-    // Fix Selection & Filter Sync Bug:
-    // If the currently selected module is not in filtered modules, auto-select the first matching module
+    // Fix Selection & Filter Sync:
     if (screeningState.filteredModules.length > 0) {
       const stillPresent = screeningState.filteredModules.some(m => m.id === screeningState.selectedModuleId);
       if (!stillPresent) {
         screeningState.selectedModuleId = screeningState.filteredModules[0].id;
       }
-      selectModule(screeningState.selectedModuleId, false); // false = don't re-render cards loop
+      selectModule(screeningState.selectedModuleId, false);
     } else {
       screeningState.selectedModuleId = null;
       renderEmptyDetailState(query);
@@ -301,7 +302,7 @@ function applyFilters() {
     renderCards();
 
     if (countEl) {
-      countEl.textContent = `${screeningState.filteredModules.length} / ${screeningState.allModules.length} chuyên đề`;
+      countEl.textContent = `${screeningState.filteredModules.length} / ${screeningState.allModules.length} vùng lâm sàng`;
     }
   } else if (mode === 'algorithm') {
     renderAlgorithmView();
@@ -328,10 +329,10 @@ function applyFilters() {
 
 function updateCategoryCounts() {
   const allCount = screeningState.allModules.length;
-  const foundationCount = screeningState.allModules.filter(m => m.region === 'foundation').length;
-  const spineCount = screeningState.allModules.filter(m => m.region === 'spine').length;
-  const upperCount = screeningState.allModules.filter(m => m.region === 'upper_limb').length;
-  const lowerCount = screeningState.allModules.filter(m => m.region === 'lower_limb').length;
+  const systemicCount = screeningState.allModules.filter(m => m.region === 'systemic').length;
+  const spineCount = screeningState.allModules.filter(m => ['cervical', 'thoracic', 'lumbopelvic'].includes(m.region)).length;
+  const upperCount = screeningState.allModules.filter(m => ['shoulder', 'elbow_hand'].includes(m.region)).length;
+  const lowerCount = screeningState.allModules.filter(m => ['hip', 'knee_foot'].includes(m.region)).length;
 
   const setEl = (id, val) => {
     const el = document.getElementById(id);
@@ -339,10 +340,57 @@ function updateCategoryCounts() {
   };
 
   setEl('count-all', allCount);
-  setEl('count-foundation', foundationCount);
+  setEl('count-systemic', systemicCount);
   setEl('count-spine', spineCount);
   setEl('count-upper', upperCount);
   setEl('count-lower', lowerCount);
+}
+
+function quickSelectModule(moduleId) {
+  // Update quick pills active state
+  document.querySelectorAll('.symptom-pill-btn').forEach(btn => {
+    if (btn.dataset.mod === moduleId) {
+      btn.classList.add('active');
+    } else {
+      btn.classList.remove('active');
+    }
+  });
+
+  // Switch to modules mode if not already
+  if (screeningState.activeMode !== 'modules') {
+    const modBtn = document.querySelector('.mode-tab-btn[data-mode="modules"]');
+    if (modBtn) modBtn.click();
+  }
+
+  // Ensure filter doesn't hide it
+  const target = screeningState.allModules.find(m => m.id === moduleId);
+  if (target && screeningState.activeFilter !== 'all') {
+    const cat = screeningState.activeFilter;
+    let match = true;
+    if (cat === 'systemic') match = (target.region === 'systemic');
+    else if (cat === 'spine') match = ['cervical', 'thoracic', 'lumbopelvic'].includes(target.region);
+    else if (cat === 'upper') match = ['shoulder', 'elbow_hand'].includes(target.region);
+    else if (cat === 'lower') match = ['hip', 'knee_foot'].includes(target.region);
+    
+    if (!match) {
+      // Reset filter to all
+      screeningState.activeFilter = 'all';
+      document.querySelectorAll('.cat-filter-btn').forEach(b => b.classList.remove('active'));
+      const allBtn = document.querySelector('.cat-filter-btn[data-cat="all"]');
+      if (allBtn) allBtn.classList.add('active');
+      applyFilters();
+    }
+  }
+
+  selectModule(moduleId, true);
+
+  // On mobile, scroll smoothly to detail
+  if (window.innerWidth < 1024) {
+    const detail = document.getElementById('screening-detail-container');
+    if (detail) {
+      detail.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
 }
 
 function renderCards() {
@@ -353,14 +401,14 @@ function renderCards() {
     grid.innerHTML = `
       <div class="col-span-full py-12 text-center text-slate-400">
         <svg class="w-12 h-12 mx-auto mb-3 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-        <p class="font-medium text-slate-600 dark:text-slate-300">Không tìm thấy chuyên đề sàng lọc phù hợp</p>
-        <p class="text-xs text-slate-400 mt-1">Thử tìm kiếm với từ khóa khác (ví dụ: cổ, ngực, vai, gối, cờ đỏ, lasegue, statin, gout...)</p>
+        <p class="font-medium text-slate-600 dark:text-slate-300">Không tìm thấy vùng triệu chứng phù hợp</p>
+        <p class="text-xs text-slate-400 mt-1">Thử tìm kiếm với từ khóa khác (ví dụ: cổ, ngực, vai, gối, thắt lưng, statin, cờ đỏ...)</p>
       </div>
     `;
     return;
   }
 
-  grid.innerHTML = screeningState.filteredModules.map(m => {
+  grid.innerHTML = screeningState.filteredModules.map((m, idx) => {
     const isSelected = screeningState.selectedModuleId === m.id;
     const rfCount = m.red_flags ? m.red_flags.length : 0;
     const testCount = m.examination_procedures ? m.examination_procedures.length : 0;
@@ -371,21 +419,25 @@ function renderCards() {
       <div class="proc-card ${isSelected ? 'active-card' : ''}" onclick="selectModule('${m.id}')" style="cursor: pointer;">
         <div class="card-header-badge">
           <span class="badge-cat badge-${m.region}">
-            ${m.region_vi}
+            ${m.icon || '📍'} ${m.region_vi}
           </span>
-          <span class="badge-code font-bold">Chương ${m.chapter}</span>
+          <span class="badge-code font-bold">Vùng ${idx + 1}/8</span>
         </div>
         <h3 class="card-title text-base font-bold text-slate-800 dark:text-white mt-2 leading-snug">
           ${m.title_vi}
         </h3>
-        <p class="text-xs text-slate-500 italic mt-0.5">${m.title}</p>
+        ${m.chief_complaint ? `
+          <div class="p-2 mt-2 rounded bg-amber-50/70 dark:bg-amber-950/30 border border-amber-200/60 dark:border-amber-900/40 text-[11px] text-amber-900 dark:text-amber-300 line-clamp-2">
+            <strong>${m.chief_complaint}</strong>
+          </div>
+        ` : ''}
         <p class="card-snippet text-xs text-slate-600 dark:text-slate-300 mt-2 line-clamp-2">
           ${m.summary}
         </p>
         <div class="card-footer-tags mt-3 pt-2 border-t border-slate-100 dark:border-slate-800 flex flex-wrap gap-2 text-[11px]">
           <span class="text-rose-600 font-semibold bg-rose-50 dark:bg-rose-950/40 px-2 py-0.5 rounded">🚨 ${rfCount} Cờ đỏ</span>
           ${testCount > 0 ? `<span class="text-teal-600 font-semibold bg-teal-50 dark:bg-teal-950/40 px-2 py-0.5 rounded">🩺 ${testCount} Nghiệm pháp</span>` : ''}
-          ${figCount > 0 ? `<span class="text-blue-600 font-semibold bg-blue-50 dark:bg-blue-950/40 px-2 py-0.5 rounded">🖼️ ${figCount} Atlas</span>` : `<span class="text-purple-600 font-semibold bg-purple-50 dark:bg-purple-950/40 px-2 py-0.5 rounded">📊 Bảng Ma Trận</span>`}
+          ${figCount > 0 ? `<span class="text-blue-600 font-semibold bg-blue-50 dark:bg-blue-950/40 px-2 py-0.5 rounded">🖼️ ${figCount} Atlas Bản Dương</span>` : `<span class="text-purple-600 font-semibold bg-purple-50 dark:bg-purple-950/40 px-2 py-0.5 rounded">📊 Bảng Ma Trận</span>`}
           ${web1Count > 0 ? `<span class="text-emerald-700 font-semibold bg-emerald-50 dark:bg-emerald-950/40 px-2 py-0.5 rounded">💉 ${web1Count} Thủ thuật Web 1</span>` : ''}
         </div>
       </div>
@@ -413,11 +465,49 @@ function renderEmptyDetailState(query) {
   `;
 }
 
+// Render embedded mini figures directly inside sections
+function renderEmbeddedFigures(figures) {
+  if (!figures || figures.length === 0) return '';
+  return `
+    <div class="mt-3 pt-2.5 border-t border-slate-200/60 dark:border-slate-800">
+      <div class="text-[11px] font-bold text-slate-700 dark:text-slate-300 mb-1.5 flex items-center gap-1.5">
+        <span>📸</span> Hình Ảnh Lâm Sàng Trực Quan (${figures.length} hình trích từ Deepak Sebastian):
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+        ${figures.map(fig => `
+          <div class="figure-mini-card bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-lg overflow-hidden group cursor-pointer shadow-2xs" onclick="openLightboxByFile('${fig.file}', '${escapeHtml(fig.caption_vi || fig.caption_en)}')">
+            <div class="h-36 overflow-hidden relative flex items-center justify-center p-1.5 bg-slate-50 dark:bg-slate-950">
+              <img src="${fig.file}" alt="${escapeHtml(fig.caption_en)}" loading="lazy" class="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-200">
+              <div class="absolute inset-0 bg-black/0 group-hover:bg-black/25 transition-colors flex items-center justify-center">
+                <span class="opacity-0 group-hover:opacity-100 bg-slate-900/85 text-white text-[11px] font-semibold px-2.5 py-1 rounded shadow">
+                  🔍 Xem phóng to
+                </span>
+              </div>
+            </div>
+            <div class="p-2 text-[11px] text-slate-700 dark:text-slate-300 border-t border-slate-100 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-900/50">
+              <span class="font-bold text-teal-700 dark:text-teal-400 font-mono">${fig.fig_number || ('Trang ' + fig.page)}:</span> ${escapeHtml(fig.caption_vi || fig.caption_en)}
+            </div>
+          </div>
+        `).join('')}
+      </div>
+    </div>
+  `;
+}
+
 function selectModule(moduleId, updateCards = true) {
   screeningState.selectedModuleId = moduleId;
   if (updateCards) {
     renderCards();
   }
+
+  // Update quick pills active state
+  document.querySelectorAll('.symptom-pill-btn').forEach(btn => {
+    if (btn.dataset.mod === moduleId) {
+      btn.classList.add('active');
+    } else {
+      btn.classList.remove('active');
+    }
+  });
 
   const module = screeningState.allModules.find(m => m.id === moduleId);
   if (!module) return;
@@ -428,7 +518,7 @@ function selectModule(moduleId, updateCards = true) {
   const detailContainer = document.getElementById('screening-detail-container');
   if (!detailContainer) return;
 
-  // Render Red flags
+  // Render Red flags with embedded figures
   const redFlagsHtml = (module.red_flags || []).map(rf => `
     <div class="bg-rose-50 dark:bg-rose-950/30 border border-rose-200 dark:border-rose-900 rounded-lg p-3.5 mb-3">
       <div class="flex items-center gap-2 text-rose-700 dark:text-rose-400 font-bold text-sm">
@@ -441,19 +531,21 @@ function selectModule(moduleId, updateCards = true) {
       <div class="mt-2 text-xs text-rose-800 dark:text-rose-300 bg-white/70 dark:bg-black/40 p-2.5 rounded border border-rose-200/50">
         <strong>⚡ Xử trí khẩn cấp:</strong> ${rf.action}
       </div>
+      ${renderEmbeddedFigures(rf.figures)}
     </div>
   `).join('');
 
-  // Render Visceral referrals
+  // Render Visceral referrals with embedded figures
   const referralsHtml = (module.visceral_referrals || []).map(ref => `
     <div class="border-l-4 border-amber-500 bg-amber-50/60 dark:bg-amber-950/20 p-3 rounded-r-lg mb-2.5">
       <div class="font-bold text-xs text-amber-900 dark:text-amber-300">🫀 ${ref.source}</div>
       <div class="text-xs text-slate-700 dark:text-slate-300 mt-1"><strong>Kiểu chuyển đau:</strong> ${ref.pattern}</div>
       <div class="text-[11px] text-amber-800 dark:text-amber-400 mt-1 italic"><strong>Phân biệt lâm sàng:</strong> ${ref.differential}</div>
+      ${renderEmbeddedFigures(ref.figures)}
     </div>
   `).join('');
 
-  // Render Examination procedures with Sn / Sp badges
+  // Render Examination procedures with Sn / Sp badges and embedded figures
   const testsHtml = (module.examination_procedures || []).map((t, idx) => `
     <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-lg p-4 mb-3 shadow-sm">
       <div class="flex flex-wrap items-start justify-between gap-2 pb-2 border-b border-slate-100 dark:border-slate-800">
@@ -480,6 +572,7 @@ function selectModule(moduleId, updateCards = true) {
       <div class="text-xs text-emerald-800 dark:text-emerald-300 bg-emerald-50/80 dark:bg-emerald-950/30 p-2.5 rounded mt-2.5 border border-emerald-100 dark:border-emerald-900">
         <strong>Ý nghĩa lâm sàng:</strong> ${t.significance}
       </div>
+      ${renderEmbeddedFigures(t.figures)}
     </div>
   `).join('');
 
@@ -557,14 +650,12 @@ function selectModule(moduleId, updateCards = true) {
   // Render Figures with safe index-based lightbox triggers
   const figuresList = screeningState.currentModuleFigures;
   const figuresHtml = figuresList.map((fig, idx) => {
-    const captionText = (fig.captions && fig.captions.length > 0) 
-      ? fig.captions[0] 
-      : (fig.page_captions && fig.page_captions.length > 0 ? fig.page_captions[0] : `Hình minh họa trang ${fig.page} (${module.title})`);
+    const captionText = fig.caption_vi || fig.caption_en || `Hình minh họa trang ${fig.page}`;
 
     return `
       <div class="figure-card bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-lg overflow-hidden group">
         <div class="h-44 overflow-hidden relative cursor-pointer" onclick="openLightboxIndex(${idx})">
-          <img src="${fig.file}" alt="Hình ${idx + 1} - Trang ${fig.page}" loading="lazy" class="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-200">
+          <img src="${fig.file}" alt="${escapeHtml(captionText)}" loading="lazy" class="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-200">
           <div class="absolute inset-0 bg-black/0 group-hover:bg-black/25 transition-colors flex items-center justify-center">
             <span class="opacity-0 group-hover:opacity-100 bg-slate-900/85 text-white text-xs px-2.5 py-1 rounded shadow-md flex items-center gap-1">
               🔍 Phóng to (Ảnh ${idx + 1}/${figuresList.length})
@@ -572,7 +663,7 @@ function selectModule(moduleId, updateCards = true) {
           </div>
         </div>
         <div class="p-2.5 text-[11px] text-slate-600 dark:text-slate-400 border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950">
-          <span class="font-bold text-teal-700 dark:text-teal-400">Trang ${fig.page}:</span> ${escapeHtml(captionText)}
+          <span class="font-bold text-teal-700 dark:text-teal-400">${fig.fig_number || ('Trang ' + fig.page)}:</span> ${escapeHtml(captionText)}
         </div>
       </div>
     `;
@@ -580,12 +671,24 @@ function selectModule(moduleId, updateCards = true) {
 
   detailContainer.innerHTML = `
     <div class="bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 p-6 shadow-sm">
+      <!-- Mobile Return Bar -->
+      <div class="lg:hidden mb-4 flex items-center justify-between bg-teal-50 dark:bg-teal-950/60 p-2.5 rounded-lg border border-teal-200 dark:border-teal-800">
+        <button onclick="scrollToCardsList()" class="btn btn-outline text-xs text-teal-800 dark:text-teal-200 font-semibold flex items-center gap-1.5 py-1 px-3 bg-white dark:bg-slate-900 shadow-2xs">
+          ← Danh Sách Vùng Đau
+        </button>
+        <span class="text-xs font-bold text-teal-800 dark:text-teal-200 flex items-center gap-1">
+          ${module.icon || '📍'} ${module.region_vi}
+        </span>
+      </div>
+
       <!-- Title & Header -->
       <div class="flex flex-wrap items-start justify-between gap-4 pb-4 border-b border-slate-100 dark:border-slate-800">
         <div>
           <div class="flex items-center gap-2 mb-1.5">
-            <span class="badge-cat badge-${module.region}">${module.region_vi}</span>
-            <span class="text-xs text-slate-400 font-bold">Chương ${module.chapter}</span>
+            <span class="badge-cat badge-${module.region}">
+              ${module.icon || '📍'} ${module.region_vi}
+            </span>
+            <span class="text-xs text-slate-400 font-bold">Vùng Triệu Chứng Lâm Sàng</span>
           </div>
           <h2 class="text-xl font-bold text-slate-900 dark:text-white leading-tight">
             ${module.title_vi}
@@ -598,8 +701,20 @@ function selectModule(moduleId, updateCards = true) {
         </a>
       </div>
 
+      <!-- Chief Complaint Highlight Box -->
+      ${module.chief_complaint ? `
+        <div class="my-4 p-3.5 rounded-xl bg-amber-50 dark:bg-amber-950/25 border border-amber-200 dark:border-amber-900/40">
+          <div class="flex items-center gap-1.5 font-bold text-xs text-amber-900 dark:text-amber-300 uppercase tracking-wide mb-1">
+            <span>🗣️</span> Phàn Nàn Chính & Biểu Hiện Lâm Sàng Thường Gặp
+          </div>
+          <p class="text-xs text-slate-700 dark:text-slate-300 leading-relaxed font-medium">
+            ${module.chief_complaint}
+          </p>
+        </div>
+      ` : ''}
+
       <!-- Clinical Summary / Philosophy -->
-      <div class="my-5 p-4 rounded-xl bg-teal-50/50 dark:bg-teal-950/20 border border-teal-100 dark:border-teal-900/50">
+      <div class="my-4 p-4 rounded-xl bg-teal-50/50 dark:bg-teal-950/20 border border-teal-100 dark:border-teal-900/50">
         <h4 class="text-xs font-bold uppercase tracking-wider text-teal-900 dark:text-teal-300 mb-1.5">
           💡 Nguyên Lý Sàng Lọc Lâm Sàng (Clinical Screening Concept)
         </h4>
@@ -680,19 +795,25 @@ function selectModule(moduleId, updateCards = true) {
       <!-- SECTION 6: TARGETED INTERVENTION & WEB 1 LINK -->
       ${interventionHtml}
 
-      <!-- SECTION 7: ATLAS FIGURES -->
+      <!-- SECTION 7: EXPANDABLE ATLAS FIGURES -->
       ${figuresList.length > 0 ? `
-        <div>
-          <div class="flex items-center justify-between mb-3">
-            <h3 class="font-bold text-blue-800 dark:text-blue-300 text-sm uppercase tracking-wide flex items-center gap-2">
-              <span>🖼️</span> 4. Atlas Hình Ảnh Giải Phẫu & Khám Lâm Sàng (${figuresList.length} Hình ảnh Deepak Sebastian)
-            </h3>
-            <span class="text-xs text-slate-400 font-medium">Bấm ảnh để xem phóng to với bộ duyệt Atlas</span>
+        <details class="mt-6 rounded-xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 overflow-hidden" open>
+          <summary class="cursor-pointer p-4 font-bold text-sm text-blue-900 dark:text-blue-300 flex items-center justify-between hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors select-none">
+            <div class="flex items-center gap-2">
+              <span>🖼️</span>
+              <span>Bộ Sưu Tập Atlas Minh Họa Vùng ${module.region_vi} (${figuresList.length} Hình Ảnh Bản Dương Sắc Nét)</span>
+            </div>
+            <span class="text-xs font-normal text-teal-700 dark:text-teal-400 bg-white dark:bg-slate-800 px-2.5 py-1 rounded-full border border-teal-200 dark:border-teal-800 shadow-2xs">Thu gọn / Mở rộng ▾</span>
+          </summary>
+          <div class="p-4 pt-2 border-t border-slate-200 dark:border-slate-800">
+            <p class="text-xs text-slate-500 dark:text-slate-400 mb-3 italic">
+              Toàn bộ hình ảnh giải phẫu, cơ sinh học và nghiệm pháp trích xuất nguyên bản từ giáo trình GS. Deepak Sebastian, đã xử lý màu dương bản sắc nét:
+            </p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+              ${figuresHtml}
+            </div>
           </div>
-          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
-            ${figuresHtml}
-          </div>
-        </div>
+        </details>
       ` : ''}
     </div>
   `;
@@ -700,6 +821,42 @@ function selectModule(moduleId, updateCards = true) {
   // Scroll smoothly to detail on mobile
   if (window.innerWidth < 1024) {
     detailContainer.scrollIntoView({ behavior: 'smooth' });
+  }
+}
+
+function scrollToCardsList() {
+  const grid = document.getElementById('screening-cards-grid');
+  if (grid) {
+    grid.scrollIntoView({ behavior: 'smooth' });
+  } else {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+}
+
+function openLightboxByFile(filePath, captionText) {
+  let idx = (screeningState.currentModuleFigures || []).findIndex(f => f.file === filePath);
+  if (idx !== -1) {
+    openLightboxIndex(idx);
+    return;
+  }
+  
+  const lightbox = document.getElementById('image-lightbox');
+  const img = document.getElementById('lightbox-img');
+  const desc = document.getElementById('lightbox-desc');
+  const metaEl = document.getElementById('lightbox-springer');
+  const counterEl = document.getElementById('lightbox-counter');
+
+  if (lightbox && img) {
+    img.src = filePath;
+    if (desc) desc.textContent = captionText || 'Hình ảnh lâm sàng GS. Deepak Sebastian';
+    if (metaEl) {
+      metaEl.innerHTML = `<span>Giáo trình GS. Deepak Sebastian: Differential Screening of Regional Pain in Musculoskeletal</span>`;
+    }
+    if (counterEl) {
+      counterEl.textContent = 'Hình ảnh minh họa';
+    }
+    lightbox.classList.remove('hidden');
+    document.body.style.overflow = 'hidden';
   }
 }
 
@@ -723,9 +880,7 @@ function openLightboxIndex(index) {
   const metaEl = document.getElementById('lightbox-springer');
   const counterEl = document.getElementById('lightbox-counter');
 
-  const captionText = (fig.captions && fig.captions.length > 0) 
-    ? fig.captions[0] 
-    : (fig.page_captions && fig.page_captions.length > 0 ? fig.page_captions[0] : `Hình minh họa trang ${fig.page}`);
+  const captionText = fig.caption_vi || fig.caption_en || (fig.captions && fig.captions.length > 0 ? fig.captions[0] : `Hình minh họa trang ${fig.page}`);
 
   if (lightbox && img) {
     img.src = fig.file;
@@ -1303,6 +1458,15 @@ function escapeHtml(str) {
     .replace(/'/g, '&#39;');
 }
 
+// Global window bindings for inline HTML handlers
+if (typeof window !== 'undefined') {
+  window.selectModule = selectModule;
+  window.quickSelectModule = quickSelectModule;
+  window.openLightboxByFile = openLightboxByFile;
+  window.openLightboxIndex = openLightboxIndex;
+  window.scrollToCardsList = scrollToCardsList;
+}
+
 // Export for Node/testing environment
 if (typeof module !== 'undefined' && module.exports) {
   module.exports = {
@@ -1310,6 +1474,9 @@ if (typeof module !== 'undefined' && module.exports) {
     initScreeningApp,
     applyFilters,
     selectModule,
+    quickSelectModule,
+    openLightboxByFile,
+    scrollToCardsList,
     switchMode,
     openLightboxIndex,
     lightboxPrev,
