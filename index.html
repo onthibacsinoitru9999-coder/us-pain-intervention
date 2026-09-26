@@ -80,19 +80,19 @@
             <div class="cat-buttons-group">
               <button class="cat-filter-btn active" data-cat="all">
                 <span>Tất cả</span>
-                <span id="count-all" class="counter-pill">31</span>
+                <span id="count-all" class="counter-pill">51</span>
               </button>
               <button class="cat-filter-btn" data-cat="upper">
                 <span>Chi Trên</span>
-                <span id="count-upper" class="counter-pill">11</span>
+                <span id="count-upper" class="counter-pill">13</span>
               </button>
               <button class="cat-filter-btn" data-cat="lower">
                 <span>Chi Dưới</span>
-                <span id="count-lower" class="counter-pill">10</span>
+                <span id="count-lower" class="counter-pill">18</span>
               </button>
               <button class="cat-filter-btn" data-cat="spine">
                 <span>Cột sống & Khung chậu</span>
-                <span id="count-spine" class="counter-pill">8</span>
+                <span id="count-spine" class="counter-pill">18</span>
               </button>
               <button class="cat-filter-btn" data-cat="biologics">
                 <span>Can thiệp Sinh học</span>
@@ -110,10 +110,11 @@
                 <option value="all">Loại can thiệp: Tất cả</option>
                 <option value="joint">Nội khớp (Joint)</option>
                 <option value="bursa">Bao hoạt dịch (Bursa)</option>
-                <option value="tendon">Quanh gân (Tendon)</option>
+                <option value="tendon">Gân & Bao gân (Tendon)</option>
                 <option value="nerve">Thần kinh (Nerve Block)</option>
-                <option value="spine">Cột sống (Spine)</option>
-                <option value="biologics">Tái tạo / Đặc biệt</option>
+                <option value="muscle">Cơ sâu (Muscle Injection)</option>
+                <option value="rfa">Đốt sóng cao tần (RFA / Denervation)</option>
+                <option value="biologics">Tái tạo & Sinh học (PRP / Barbotage)</option>
               </select>
 
               <select id="filter-difficulty" class="filter-select">
@@ -121,6 +122,7 @@
                 <option value="Cơ bản">Cơ bản</option>
                 <option value="Trung bình">Trung bình</option>
                 <option value="Nâng cao">Nâng cao</option>
+                <option value="Chuyên sâu">Chuyên sâu</option>
               </select>
             </div>
           </div>
@@ -129,10 +131,10 @@
         <!-- Result count line -->
         <div class="flex items-center justify-between mb-4 px-1">
           <div class="text-xs text-slate-500 font-semibold">
-            Danh mục thủ thuật chuẩn mực: <span id="search-result-count" class="text-teal-700 font-bold">31 quy trình</span>
+            Danh mục thủ thuật chuẩn mực: <span id="search-result-count" class="text-teal-700 font-bold">51 quy trình</span>
           </div>
           <div class="text-xs text-slate-400">
-            Click vào thẻ để xem chi tiết mốc siêu âm, kỹ thuật đi kim, liều thuốc & hình ảnh
+            Click vào thẻ để xem chi tiết mốc siêu âm, kỹ thuật đi kim, liều thuốc & hình ảnh Springer Atlas
           </div>
         </div>
 
@@ -415,6 +417,7 @@
       <div class="lightbox-caption">
         <h4 id="lightbox-title" class="font-bold text-sm"></h4>
         <p id="lightbox-desc" class="text-xs text-slate-300 mt-1"></p>
+        <div id="lightbox-springer" class="text-[11px] text-teal-300 mt-2 pt-2 border-t border-slate-700 italic hidden"></div>
       </div>
     </div>
   </div>

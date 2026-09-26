@@ -227,7 +227,12 @@ function filterProcedures() {
 
     // Type filter
     if (appState.currentType !== 'all') {
-      if (item.type !== appState.currentType) return false;
+      if (appState.currentType === 'joint' && !['joint', 'joint_injection'].includes(item.type)) return false;
+      else if (appState.currentType === 'nerve' && !['nerve', 'nerve_block'].includes(item.type)) return false;
+      else if (appState.currentType === 'biologics' && !['biologics', 'regenerative', 'special'].includes(item.type)) return false;
+      else if (appState.currentType === 'muscle' && item.type !== 'muscle_injection') return false;
+      else if (appState.currentType === 'rfa' && item.type !== 'rfa') return false;
+      else if (['bursa', 'tendon', 'spine'].includes(appState.currentType) && item.type !== appState.currentType) return false;
     }
 
     // Difficulty filter
@@ -252,18 +257,26 @@ function filterProcedures() {
 function getTypeBadge(type) {
   switch (type) {
     case 'joint':
+    case 'joint_injection':
       return '<span class="badge badge-joint">Nội khớp</span>';
     case 'bursa':
       return '<span class="badge badge-bursa">Bao hoạt dịch</span>';
     case 'tendon':
       return '<span class="badge badge-tendon">Quanh gân</span>';
     case 'nerve':
+    case 'nerve_block':
       return '<span class="badge badge-nerve">Thần kinh</span>';
+    case 'muscle':
+    case 'muscle_injection':
+      return '<span class="badge badge-nerve" style="background:#f0fdf4;color:#166534;border:1px solid #bbf7d0;">Cơ sâu</span>';
+    case 'rfa':
+      return '<span class="badge badge-bio" style="background:#fff7ed;color:#c2410c;border:1px solid #ffedd5;">Đốt RFA</span>';
     case 'spine':
       return '<span class="badge badge-spine">Cột sống</span>';
     case 'biologics':
+    case 'regenerative':
     case 'special':
-      return '<span class="badge badge-bio">Tái tạo / Đặc biệt</span>';
+      return '<span class="badge badge-bio">Tái tạo / PRP</span>';
     default:
       return '<span class="badge">Thủ thuật</span>';
   }
@@ -274,8 +287,10 @@ function getDifficultyBadge(diff) {
     return '<span class="diff-chip diff-basic">● Cơ bản</span>';
   } else if (diff === 'Trung bình') {
     return '<span class="diff-chip diff-medium">● Trung bình</span>';
-  } else {
+  } else if (diff === 'Nâng cao') {
     return '<span class="diff-chip diff-advanced">● Nâng cao</span>';
+  } else {
+    return '<span class="diff-chip" style="background:#fdf2f8;color:#9d174d;border:1px solid #fbcfe8;">● Chuyên sâu</span>';
   }
 }
 
@@ -566,18 +581,34 @@ function openProcedureDetail(procId) {
   if (item.figures && item.figures.length > 0) {
     tab5.innerHTML = `
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-        ${item.figures.map(fig => `
-          <div class="figure-card" onclick="openLightbox('${fig.path}', '${fig.title.replace(/'/g, "\\'")}', '${fig.desc.replace(/'/g, "\\'")}')">
-            <div class="figure-img-box">
-              <img src="${fig.path}" alt="${fig.title}" loading="lazy">
-              <span class="figure-zoom-hint">Phóng to ảnh 🔍</span>
+        ${item.figures.map(fig => {
+          const safeTitle = (fig.title || '').replace(/'/g, "\\'");
+          const safeDesc = (fig.desc || '').replace(/'/g, "\\'");
+          const safeSpringer = (fig.springerCaption || '').replace(/'/g, "\\'");
+          const figNumBadge = fig.figNumber ? `<span class="px-2 py-0.5 rounded bg-teal-100 text-teal-800 text-[10px] font-bold">Fig ${fig.figNumber}</span>` : '';
+          const springerBlock = fig.springerCaption ? `
+            <div class="mt-2.5 pt-2 border-t border-slate-100 text-[11px] text-slate-500 italic bg-slate-50 p-2 rounded">
+              <span class="font-semibold text-teal-700 not-italic">📖 Springer Atlas:</span> ${fig.springerCaption}
             </div>
-            <div class="figure-caption">
-              <h5 class="font-bold text-slate-800 text-xs">${fig.title}</h5>
-              <p class="text-slate-500 text-xs mt-1 leading-relaxed">${fig.desc}</p>
+          ` : '';
+
+          return `
+            <div class="figure-card" onclick="openLightbox('${fig.path}', '${safeTitle}', '${safeDesc}', '${safeSpringer}')">
+              <div class="figure-img-box">
+                <img src="${fig.path}" alt="${fig.title}" loading="lazy">
+                <span class="figure-zoom-hint">Phóng to ảnh 🔍</span>
+              </div>
+              <div class="figure-caption">
+                <div class="flex items-center justify-between gap-1 mb-1">
+                  <h5 class="font-bold text-slate-800 text-xs">${fig.title}</h5>
+                  ${figNumBadge}
+                </div>
+                <p class="text-slate-500 text-xs leading-relaxed">${fig.desc}</p>
+                ${springerBlock}
+              </div>
             </div>
-          </div>
-        `).join('')}
+          `;
+        }).join('')}
       </div>
     `;
   } else {
@@ -613,16 +644,25 @@ function closeModal() {
 }
 
 // Lightbox logic
-function openLightbox(imgSrc, title, desc) {
+function openLightbox(imgSrc, title, desc, springerCaption = '') {
   const lb = document.getElementById('image-lightbox');
   const lbImg = document.getElementById('lightbox-img');
   const lbTitle = document.getElementById('lightbox-title');
   const lbDesc = document.getElementById('lightbox-desc');
+  const lbSpringer = document.getElementById('lightbox-springer');
 
   if (lb && lbImg) {
     lbImg.src = imgSrc;
     if (lbTitle) lbTitle.textContent = title;
     if (lbDesc) lbDesc.textContent = desc;
+    if (lbSpringer) {
+      if (springerCaption) {
+        lbSpringer.textContent = `📖 Springer Atlas (Philip Peng): ${springerCaption}`;
+        lbSpringer.classList.remove('hidden');
+      } else {
+        lbSpringer.classList.add('hidden');
+      }
+    }
     lb.classList.remove('hidden');
   }
 }
