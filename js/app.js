@@ -176,6 +176,40 @@ function setupEventListeners() {
       if (e.target === lightbox) closeLightbox();
     });
   }
+
+  // Collapsible Modal Header on scroll (tối ưu không gian đọc lâm sàng cho 7.5 inch)
+  const modalBody = document.getElementById('modal-body');
+  const modalHeader = document.getElementById('modal-header');
+  if (modalBody && modalHeader) {
+    modalBody.addEventListener('scroll', () => {
+      if (modalBody.scrollTop > 25) {
+        if (!modalHeader.classList.contains('is-compact')) {
+          modalHeader.classList.add('is-compact');
+        }
+      } else {
+        if (modalHeader.classList.contains('is-compact')) {
+          modalHeader.classList.remove('is-compact');
+        }
+      }
+    }, { passive: true });
+  }
+
+  // Collapsible Main App Header on page scroll
+  const appHeaderBar = document.getElementById('app-header-bar') || document.querySelector('.header-bar');
+  if (appHeaderBar) {
+    window.addEventListener('scroll', () => {
+      const sy = window.scrollY || window.pageYOffset;
+      if (sy > 30) {
+        if (!appHeaderBar.classList.contains('header-compact')) {
+          appHeaderBar.classList.add('header-compact');
+        }
+      } else {
+        if (appHeaderBar.classList.contains('header-compact')) {
+          appHeaderBar.classList.remove('header-compact');
+        }
+      }
+    }, { passive: true });
+  }
 }
 
 function switchMainTab(tabName) {
@@ -397,6 +431,12 @@ function openProcedureDetail(procId) {
 
   appState.currentProcedure = item;
   const isFav = appState.favorites.includes(item.id);
+
+  // Reset compact mode and scroll position when opening procedure
+  const modalHeader = document.getElementById('modal-header') || document.querySelector('.modal-header');
+  if (modalHeader) modalHeader.classList.remove('is-compact');
+  const modalBody = document.getElementById('modal-body') || document.querySelector('.modal-body');
+  if (modalBody) modalBody.scrollTop = 0;
 
   // Set modal headers (Optimized for 7.5-inch mobile)
   const modalTitle = document.getElementById('modal-title');
@@ -673,8 +713,10 @@ function switchModalSubTab(tabIndex) {
     c.classList.toggle('hidden', idx + 1 !== tabIndex);
   });
 
-  // Scroll modal body to top upon subtab switch
-  const modalBody = document.querySelector('.modal-body');
+  // Reset compact header and scroll modal body to top upon subtab switch
+  const modalHeader = document.getElementById('modal-header') || document.querySelector('.modal-header');
+  if (modalHeader) modalHeader.classList.remove('is-compact');
+  const modalBody = document.getElementById('modal-body') || document.querySelector('.modal-body');
   if (modalBody) modalBody.scrollTop = 0;
 }
 

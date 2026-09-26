@@ -519,6 +519,36 @@ body {
   padding: 1.15rem 1.35rem 0.85rem 1.35rem;
   border-bottom: 1px solid var(--border-color);
   background-color: var(--bg-surface);
+  position: relative;
+  flex-shrink: 0;
+  transition: padding 0.22s cubic-bezier(0.16, 1, 0.3, 1),
+              background-color 0.2s ease,
+              box-shadow 0.2s ease;
+}
+
+.modal-header.is-compact {
+  padding: 0.5rem 1.35rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.modal-header.is-compact .modal-subtitle-box {
+  opacity: 0;
+  max-height: 0;
+  margin: 0 !important;
+  pointer-events: none;
+  transform: translateY(-4px);
+}
+
+.modal-header.is-compact .modal-meta-badges {
+  opacity: 0;
+  max-height: 0;
+  margin: 0 !important;
+  pointer-events: none;
+}
+
+.modal-header.is-compact .modal-title {
+  font-size: 1.05rem;
+  margin-bottom: 0;
 }
 
 .modal-header-top {
@@ -527,6 +557,7 @@ body {
   justify-content: space-between;
   gap: 0.75rem;
   margin-bottom: 0.5rem;
+  transition: margin-bottom 0.2s ease;
 }
 
 .modal-meta-badges {
@@ -605,6 +636,12 @@ body {
   align-items: center;
   flex-wrap: wrap;
   gap: 0.35rem 0.6rem;
+  overflow: hidden;
+  max-height: 120px;
+  transition: max-height 0.22s cubic-bezier(0.16, 1, 0.3, 1),
+              opacity 0.2s ease,
+              transform 0.2s ease,
+              margin 0.2s ease;
 }
 
 .modal-subtitle-en {
@@ -958,6 +995,46 @@ body {
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border-bottom: 1px solid var(--border-color);
+    transition: all 0.22s ease;
+  }
+
+  .header-bar.header-compact {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08) !important;
+  }
+
+  .header-bar.header-compact .header-inner {
+    padding: 0.35rem 0.85rem !important;
+  }
+
+  .header-bar.header-compact .brand-logo-icon {
+    width: 26px !important;
+    height: 26px !important;
+  }
+
+  .header-bar.header-compact .brand-logo-icon svg {
+    width: 14px !important;
+    height: 14px !important;
+  }
+
+  .header-bar.header-compact .brand-title {
+    font-size: 0.92rem !important;
+  }
+
+  .header-bar.header-compact #theme-toggle-btn {
+    padding: 0.35rem !important;
+    font-size: 0 !important;
+    width: 30px !important;
+    height: 30px !important;
+    border-radius: 50% !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  .header-bar.header-compact #theme-toggle-btn svg {
+    width: 14px !important;
+    height: 14px !important;
+    margin: 0 !important;
   }
 
   .header-inner {
@@ -1153,13 +1230,16 @@ body {
     padding: 0.75rem 1rem 0.6rem 1rem !important;
     background-color: #ffffff !important;
     border-bottom: 1px solid var(--border-color) !important;
-    position: sticky;
-    top: 0;
-    z-index: 25;
+    position: relative !important;
+    flex-shrink: 0 !important;
+    transition: padding 0.22s cubic-bezier(0.16, 1, 0.3, 1),
+                background-color 0.2s ease,
+                box-shadow 0.2s ease !important;
   }
 
   .modal-header-top {
     margin-bottom: 0.35rem !important;
+    transition: all 0.2s ease !important;
   }
 
   .btn-print-mobile-hide {
@@ -1176,11 +1256,17 @@ body {
     padding: 0 !important;
     justify-content: center !important;
     border-radius: 50% !important;
+    transition: all 0.2s ease !important;
   }
 
   .modal-close-circle {
     width: 34px !important;
     height: 34px !important;
+    transition: all 0.2s ease !important;
+  }
+
+  .modal-title-container {
+    transition: padding-right 0.2s ease !important;
   }
 
   .modal-title {
@@ -1189,10 +1275,28 @@ body {
     line-height: 1.35 !important;
     margin-bottom: 0.25rem !important;
     color: #0f172a !important;
+    transition: font-size 0.2s ease, margin 0.2s ease, line-height 0.2s ease !important;
   }
 
   .modal-subtitle-box {
     gap: 0.3rem 0.5rem !important;
+    overflow: hidden !important;
+    max-height: 120px !important;
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+    transition: max-height 0.22s cubic-bezier(0.16, 1, 0.3, 1),
+                opacity 0.2s ease,
+                margin 0.2s ease,
+                transform 0.2s ease !important;
+  }
+
+  .modal-meta-badges {
+    overflow: hidden !important;
+    max-height: 40px !important;
+    opacity: 1 !important;
+    transition: max-height 0.22s cubic-bezier(0.16, 1, 0.3, 1),
+                opacity 0.2s ease,
+                margin 0.2s ease !important;
   }
 
   .modal-subtitle-en {
@@ -1204,6 +1308,70 @@ body {
     font-size: 0.7rem !important;
     padding: 1px 6px !important;
     line-height: 1.4 !important;
+  }
+
+  /* ========================================================= */
+  /* THU NHỎ HEADER KHI CUỘN ĐỌC NỘI DUNG (COMPACT ON SCROLL)   */
+  /* ========================================================= */
+  .modal-header.is-compact {
+    padding: 0.35rem 0.75rem !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08) !important;
+    background-color: rgba(255, 255, 255, 0.98) !important;
+  }
+
+  .modal-header.is-compact .modal-header-top {
+    position: absolute !important;
+    right: 0.75rem !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    margin-bottom: 0 !important;
+    z-index: 10 !important;
+  }
+
+  .modal-header.is-compact .modal-meta-badges {
+    opacity: 0 !important;
+    max-height: 0 !important;
+    margin: 0 !important;
+    pointer-events: none !important;
+  }
+
+  .modal-header.is-compact .modal-title-container {
+    padding-right: 76px !important; /* Chừa chỗ cho 2 nút tròn Lưu & Đóng */
+  }
+
+  .modal-header.is-compact .modal-title {
+    font-size: 0.88rem !important;
+    font-weight: 800 !important;
+    line-height: 1.25 !important;
+    margin-bottom: 0 !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    color: #0f172a !important;
+  }
+
+  .modal-header.is-compact .modal-subtitle-box {
+    opacity: 0 !important;
+    max-height: 0 !important;
+    margin: 0 !important;
+    pointer-events: none !important;
+    transform: translateY(-4px) !important;
+  }
+
+  .modal-header.is-compact .modal-actions {
+    gap: 0.35rem !important;
+  }
+
+  .modal-header.is-compact .modal-btn-action,
+  .modal-header.is-compact .modal-close-circle {
+    width: 30px !important;
+    height: 30px !important;
+  }
+
+  .modal-header.is-compact .modal-btn-action svg,
+  .modal-header.is-compact .modal-close-circle svg {
+    width: 14px !important;
+    height: 14px !important;
   }
 
   /* Sticky Sub-tabs bar on mobile */
