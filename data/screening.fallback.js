@@ -1,5 +1,6 @@
-// MSK-Differential Screening Pro - Resilient Fallback Shield
-// Auto-generated stable fallback dataset with 8 Symptom-based Clinical Guidemaps
+// MSK-Differential Screening Pro & Clinical Guidemap Database - Resilient Fallback Shield
+// Master Edition based on Prof. Deepak Sebastian: Differential Screening of Regional Pain in Musculoskeletal Practice (526 pages)
+// 8 Symptom-based Clinical Guidemaps + 3-Stage Decision Algorithm + Red Flags Master + Lab Tests Checker + Drug-Induced Pain Checker + 279 Positive Atlas Figures
 
 const STABLE_SCREENING_FALLBACK = [
   {
@@ -35,19 +36,52 @@ const STABLE_SCREENING_FALLBACK = [
         "category": "Cờ Đỏ Nhiễm Trùng Khớp Cấp / Viêm Khớp Nhiễm Khuẩn (Septic Arthritis)",
         "signs": "Sốt cao rét run kèm sưng nóng đỏ đau dữ dội 1 khớp đơn độc (gối, háng, vai), khớp co cứng hoàn toàn không thể cử động dù thụ động nhẹ nhất. Chọc hút dịch khớp có bạch cầu dịch khớp > 50,000 - 100,000/mcL (> 75% Neutrophils).",
         "action": "CẤP CỨU NGOẠI KHOA KHẨN: Rửa khớp, dẫn lưu dịch mủ qua nội soi hoặc mổ hở + Kháng sinh tĩnh mạch liều cao phổ rộng. CHỐNG CHỈ ĐỊNH TUYỆT ĐỐI TIÊM CORTICOID VÀO KHỚP!",
-        "figures": []
+        "figures": [
+          {
+            "file": "assets/deepak_images/ch08_knee_ankle_foot_pain/p362_img1.jpeg",
+            "page": 362,
+            "fig_number": "8.7",
+            "caption_en": "Fig. 8.7: Osteochondral lesion over the inferior joint surface of the femur",
+            "caption_vi": "🚨 Phim X-quang / Cờ đỏ: Osteochondral lesion over the inferior joint surface of the femur",
+            "role_type": "redflag",
+            "width": 1003,
+            "height": 664
+          }
+        ]
       },
       {
         "category": "Cờ Đỏ Tốc Độ Máu Lắng Tăng Cực Cao (ESR > 100 mm/h) - Nghi Ngờ Đa U Tủy Xương / U Di Căn",
         "signs": "Đau xương âm ỉ dai dẳng toàn thân, đau cột sống tăng về đêm không liên quan tư thế, mệt mỏi suy nhược, sụt cân không chủ ý. Cần nghĩ ngay: Đa u tủy xương (Multiple Myeloma), Viêm động mạch thái dương (GCA), Ung thư di căn xương (PB KTL).",
         "action": "Chỉ định Điện di đạm huyết thanh (SPEP), Chuỗi nhẹ Bence-Jones niệu, X-quang xương sọ/khung chậu/cột sống tìm ổ tiêu xương đục lỗ (punched-out lesions) và hội chẩn Huyết học/Ung bướu.",
-        "figures": []
+        "figures": [
+          {
+            "file": "assets/deepak_images/ch06_lumbopelvic_pain/p273_img1.jpeg",
+            "page": 273,
+            "fig_number": "6.8",
+            "caption_en": "Fig. 6.8: Vulnerable structures in non-traumatic vertical compression",
+            "caption_vi": "🚨 Phim X-quang / Cờ đỏ: Vulnerable structures in non-traumatic vertical compression",
+            "role_type": "redflag",
+            "width": 949,
+            "height": 843
+          }
+        ]
       },
       {
         "category": "Cờ Đỏ Tiêu Cơ Vân Cấp Do Thuốc Statin (Rhabdomyolysis / Extreme CPK Elevation)",
         "signs": "Creatine Kinase (CK/CPK) tăng > 1,000 - 50,000 U/L, cơ bắp căng đau cứng dữ dội, nước tiểu sẫm màu nâu đen như nước xá xị (Myoglobin niệu), thiểu niệu hoặc vô niệu sau bắt đầu dùng Statin hoặc tăng liều.",
         "action": "Cấp cứu truyền dịch tĩnh mạch đệm kiềm hóa nước tiểu (Natri Bicarbonat) khẩn cấp để phòng hoại tử ống thận cấp suy thận cấp. Ngừng ngay lập tức Statin.",
-        "figures": []
+        "figures": [
+          {
+            "file": "assets/deepak_images/ch08_knee_ankle_foot_pain/p390_img2.jpeg",
+            "page": 390,
+            "fig_number": "8.24",
+            "caption_en": "Fig. 8.24: Tendoachilles tendon",
+            "caption_vi": "🚨 Phim X-quang / Cờ đỏ: Tendoachilles tendon",
+            "role_type": "redflag",
+            "width": 512,
+            "height": 752
+          }
+        ]
       }
     ],
     "visceral_referrals": [
@@ -55,13 +89,35 @@ const STABLE_SCREENING_FALLBACK = [
         "source": "Tổng quan Cơ chế Chuyển đau từ Tạng (Visceral Pain Referral Concepts)",
         "pattern": "Đau phát sinh từ xung động tạng truyền qua dây thần kinh giao cảm/phó giao cảm vào cùng sừng sau tủy sống với cảm giác soma (Thuyết hội tụ - phóng chiếu). Não bộ giải mã sai tín hiệu tạng thành đau vùng cơ xương khớp tương ứng khoanh tủy.",
         "differential": "Đau tạng thường âm ỉ, sâu, co thắt, không có điểm đau khu trú nông khi sờ nắn, không thay đổi theo tư thế cơ học hoặc cử động khớp chủ động/thụ động.",
-        "figures": []
+        "figures": [
+          {
+            "file": "assets/deepak_images/ch06_lumbopelvic_pain/p229_img1.jpeg",
+            "page": 229,
+            "fig_number": "6.3",
+            "caption_en": "Fig. 6.3: Abdominal quadrants. (Abbreviations: LLQ, left lower quadrant; LUQ,",
+            "caption_vi": "🫀 Chuyển đau tạng / Giải phẫu: Abdominal quadrants. (Abbreviations: LLQ, left lower quadrant; LUQ,",
+            "role_type": "visceral",
+            "width": 1000,
+            "height": 903
+          }
+        ]
       },
       {
         "source": "Bệnh lý Chuyển hóa & Suy Thận (Metabolic & Renal Referral)",
         "pattern": "Axit Uric máu tăng lắng đọng tinh thể Urat tại thận gây sỏi thận và suy thận mạn. Ngược lại suy giảm chức năng thận làm giảm thải acid uric gây bùng phát viêm khớp gút tophi đa khớp kháng trị.",
         "differential": "Phân biệt viêm khớp gút (tinh thể hình kim lưỡng chiết quang âm tính) với viêm khớp vôi hóa giả gút CPPD (tinh thể Canxi Pyrophosphate hình thoi lưỡng chiết quang dương tính yếu).",
-        "figures": []
+        "figures": [
+          {
+            "file": "assets/deepak_images/ch06_lumbopelvic_pain/p231_img1.jpeg",
+            "page": 231,
+            "fig_number": "6.4",
+            "caption_en": "Fig. 6.4: Sites to elicit bruits",
+            "caption_vi": "🫀 Chuyển đau tạng / Giải phẫu: Sites to elicit bruits",
+            "role_type": "visceral",
+            "width": 1377,
+            "height": 903
+          }
+        ]
       }
     ],
     "drug_induced": [
@@ -88,7 +144,18 @@ const STABLE_SCREENING_FALLBACK = [
         "sensitivity": "80%",
         "specificity": "85%",
         "diagnostic_role": "Sàng lọc cờ vàng tâm lý và yếu tố phi thực thể (dương tính khi có >= 3/5 nhóm dấu hiệu)",
-        "figures": []
+        "figures": [
+          {
+            "file": "assets/deepak_images/ch06_lumbopelvic_pain/p285_img1.jpeg",
+            "page": 285,
+            "fig_number": "6.21",
+            "caption_en": "Fig. 6.21: Inability to tuck in",
+            "caption_vi": "🩺 Thao tác khám: Inability to tuck in",
+            "role_type": "exam",
+            "width": 1080,
+            "height": 715
+          }
+        ]
       },
       {
         "name": "Nghiệm Pháp Thompson Đánh Giá Đứt Gân Gót Do Quinolone (Thompson Squeeze Test)",
@@ -97,7 +164,18 @@ const STABLE_SCREENING_FALLBACK = [
         "sensitivity": "96%",
         "specificity": "98%",
         "diagnostic_role": "Tiêu chuẩn vàng khám lâm sàng đứt gân gót Achilles cấp",
-        "figures": []
+        "figures": [
+          {
+            "file": "assets/deepak_images/ch08_knee_ankle_foot_pain/p390_img2.jpeg",
+            "page": 390,
+            "fig_number": "8.24",
+            "caption_en": "Fig. 8.24: Tendoachilles tendon",
+            "caption_vi": "🩺 Thao tác khám: Tendoachilles tendon",
+            "role_type": "exam",
+            "width": 512,
+            "height": 752
+          }
+        ]
       },
       {
         "name": "Khám Sàng Lọc Bệnh Đa Dây Thần Kinh Ngoại Biên Do Thuốc & Hóa Chất",
@@ -106,7 +184,18 @@ const STABLE_SCREENING_FALLBACK = [
         "sensitivity": "88%",
         "specificity": "92%",
         "diagnostic_role": "Phát hiện sớm biến chứng thần kinh ngoại biên do hóa chất/đái tháo đường",
-        "figures": []
+        "figures": [
+          {
+            "file": "assets/deepak_images/ch08_knee_ankle_foot_pain/p377_img1.png",
+            "page": 377,
+            "fig_number": "8.14",
+            "caption_en": "Fig. 8.14: Tibial nerve and its branches",
+            "caption_vi": "🩺 Thao tác khám: Tibial nerve and its branches",
+            "role_type": "exam",
+            "width": 1259,
+            "height": 903
+          }
+        ]
       }
     ],
     "differential_table": [
@@ -183,13 +272,55 @@ const STABLE_SCREENING_FALLBACK = [
         "category": "Cờ Đỏ Tủy Cổ & Động Mạch Đốt Sống",
         "signs": "CSM (Hoffman+, Babinski+, rối loạn dáng đi) & VBI (5D 3N, chóng mặt khi ngửa xoay cổ tối đa).",
         "action": "Chụp MRI/CTA cổ khẩn, chuyển Ngoại thần kinh / Đột quỵ.",
-        "figures": []
+        "figures": [
+          {
+            "file": "assets/deepak_images/ch04_cervical_pain/p110_img1.png",
+            "page": 110,
+            "fig_number": "4.5",
+            "caption_en": "Fig. 4.5: Vertebral artery and subclavian",
+            "caption_vi": "🚨 Phim X-quang / Cờ đỏ: Vertebral artery and subclavian",
+            "role_type": "redflag",
+            "width": 772,
+            "height": 811
+          },
+          {
+            "file": "assets/deepak_images/ch04_cervical_pain/p123_img1.jpeg",
+            "page": 123,
+            "fig_number": "4.10",
+            "caption_en": "Fig. 4.10: Odontoid fracture",
+            "caption_vi": "🚨 Phim X-quang / Cờ đỏ: Odontoid fracture",
+            "role_type": "redflag",
+            "width": 595,
+            "height": 400
+          }
+        ]
       },
       {
         "category": "Áp-xe Thành Sau Họng & Viêm Màng Não",
         "signs": "Cổ cứng đờ không cúi được (gáy cứng), sốt cao rét run, há miệng hạn chế, khó nuốt, chảy nước dãi.",
         "action": "Chuyển viện cấp cứu chuyên khoa Tai Mũi Họng / Truyền nhiễm.",
-        "figures": []
+        "figures": [
+          {
+            "file": "assets/deepak_images/ch04_cervical_pain/p112_img1.jpeg",
+            "page": 112,
+            "fig_number": "4.7",
+            "caption_en": "Fig. 4.7: Cervical lymph nodes",
+            "caption_vi": "🚨 Phim X-quang / Cờ đỏ: Cervical lymph nodes",
+            "role_type": "redflag",
+            "width": 453,
+            "height": 580
+          },
+          {
+            "file": "assets/deepak_images/ch04_cervical_pain/p125_img1.jpeg",
+            "page": 125,
+            "fig_number": "4.12A and B",
+            "caption_en": "Figs 4.12A and B: (A) Alar ligament and consequence of injury; (B) fractured",
+            "caption_vi": "🚨 Phim X-quang / Cờ đỏ: (A) Alar ligament and consequence of injury; (B) fractured",
+            "role_type": "redflag",
+            "width": 901,
+            "height": 225
+          }
+        ]
       }
     ],
     "visceral_referrals": [
@@ -197,19 +328,52 @@ const STABLE_SCREENING_FALLBACK = [
         "source": "U Đỉnh Phổi Pancoast (Pancoast Tumor / Superior Sulcus Tumor)",
         "pattern": "Khối u xâm lấn đám rối thần kinh cánh tay (rễ C8-T1) và hạch giao cảm cổ: Đau dữ dội mặt trong cánh tay, cẳng tay và ngón 4-5; teo các cơ bàn tay; Hội chứng Horner cùng bên (Sụp mi Ptosis, co đồng tử Miosis, giảm tiết mồ hôi Anhidrosis).",
         "differential": "Cực kỳ dễ nhầm với thoái hóa cột sống cổ chèn ép rễ C8 hoặc hội chứng ống cổ tay/ống Guyon. Bắt buộc chụp X-quang/CT lồng ngực ở người hút thuốc lá lớn tuổi đau tay kháng trị.",
-        "figures": []
+        "figures": [
+          {
+            "file": "assets/deepak_images/ch04_cervical_pain/p146_img1.png",
+            "page": 146,
+            "fig_number": "4.17",
+            "caption_en": "Fig. 4.17: Sites of entrapment in the thoracic outlet",
+            "caption_vi": "🫀 Chuyển đau tạng / Giải phẫu: Sites of entrapment in the thoracic outlet",
+            "role_type": "visceral",
+            "width": 757,
+            "height": 540
+          }
+        ]
       },
       {
         "source": "Thiếu Máu Cơ Tim / Nhồi Máu Cơ Tim (Myocardial Ischemia / MI)",
         "pattern": "Đau thắt lan lên bờ trước cơ ức đòn chũm, hàm dưới, vai và cánh tay trái khi gắng sức hoặc xúc động mạnh, kèm vã mồ hôi, khó thở.",
         "differential": "Đo điện tim ECG và xét nghiệm Troponin I/T siêu nhạy (hs-cTnI) loại trừ bệnh mạch vành cấp.",
-        "figures": []
+        "figures": [
+          {
+            "file": "assets/deepak_images/ch04_cervical_pain/p150_img1.jpeg",
+            "page": 150,
+            "fig_number": "4.20",
+            "caption_en": "Fig. 4.20: Nerve representation in the scalp",
+            "caption_vi": "🫀 Chuyển đau tạng / Giải phẫu: Nerve representation in the scalp",
+            "role_type": "visceral",
+            "width": 842,
+            "height": 532
+          }
+        ]
       },
       {
         "source": "Bệnh Lý Tuyến Giáp (Thyroiditis & Carcinoma)",
         "pattern": "Đau cổ trước lan lên góc hàm và tai, kèm bướu cổ to, khó nuốt, khàn tiếng.",
         "differential": "Siêu âm tuyến giáp, xét nghiệm chức năng tuyến giáp FT4, TSH.",
-        "figures": []
+        "figures": [
+          {
+            "file": "assets/deepak_images/ch04_cervical_pain/p113_img1.jpeg",
+            "page": 113,
+            "fig_number": "4.8",
+            "caption_en": "Fig. 4.8: Thyroid cartilage and gland",
+            "caption_vi": "🫀 Chuyển đau tạng / Giải phẫu: Thyroid cartilage and gland",
+            "role_type": "visceral",
+            "width": 453,
+            "height": 580
+          }
+        ]
       }
     ],
     "drug_induced": [
@@ -231,8 +395,8 @@ const STABLE_SCREENING_FALLBACK = [
             "page": 172,
             "fig_number": "4.47",
             "caption_en": "Fig. 4.47: Spurling compression",
-            "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Spurling compression",
-            "category": "examination",
+            "caption_vi": "🩺 Thao tác khám: Spurling compression",
+            "role_type": "exam",
             "width": 717,
             "height": 538
           }
@@ -251,20 +415,10 @@ const STABLE_SCREENING_FALLBACK = [
             "page": 173,
             "fig_number": "4.48",
             "caption_en": "Fig. 4.48: Distraction",
-            "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Distraction",
-            "category": "examination",
+            "caption_vi": "🩺 Thao tác khám: Distraction",
+            "role_type": "exam",
             "width": 717,
             "height": 538
-          },
-          {
-            "file": "assets/deepak_images/ch04_cervical_pain/p173_img2.jpeg",
-            "page": 173,
-            "fig_number": "4.48",
-            "caption_en": "Fig. 4.48: Distraction",
-            "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Distraction",
-            "category": "examination",
-            "width": 717,
-            "height": 484
           }
         ]
       },
@@ -277,22 +431,12 @@ const STABLE_SCREENING_FALLBACK = [
         "diagnostic_role": "Sàng lọc cờ đỏ chèn ép tủy cổ (Cervical Spondylotic Myelopathy) tổn thương neuron vận động trên",
         "figures": [
           {
-            "file": "assets/deepak_images/ch04_cervical_pain/p163_img1.jpeg",
-            "page": 163,
-            "fig_number": "4.37",
-            "caption_en": "Fig. 4.37: Testing biceps reflex C5",
-            "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Testing biceps reflex C5",
-            "category": "examination",
-            "width": 717,
-            "height": 538
-          },
-          {
-            "file": "assets/deepak_images/ch04_cervical_pain/p163_img2.jpeg",
-            "page": 163,
-            "fig_number": "4.37",
-            "caption_en": "Fig. 4.37: Testing biceps reflex C5",
-            "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Testing biceps reflex C5",
-            "category": "examination",
+            "file": "assets/deepak_images/ch04_cervical_pain/p181_img1.jpeg",
+            "page": 181,
+            "fig_number": "4.58",
+            "caption_en": "Fig. 4.58: Testing Hoffmann’s sign",
+            "caption_vi": "🩺 Thao tác khám: Testing Hoffmann’s sign",
+            "role_type": "exam",
             "width": 717,
             "height": 538
           }
@@ -307,22 +451,22 @@ const STABLE_SCREENING_FALLBACK = [
         "diagnostic_role": "Nghiệm pháp lâm sàng hỗ trợ sàng lọc chẩn đoán phân biệt",
         "figures": [
           {
-            "file": "assets/deepak_images/ch04_cervical_pain/p150_img1.jpeg",
-            "page": 150,
-            "fig_number": "4.20",
-            "caption_en": "Fig. 4.20: Nerve representation in the scalp",
-            "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Nerve representation in the scalp",
-            "category": "anatomy_visceral",
-            "width": 842,
-            "height": 532
-          },
-          {
             "file": "assets/deepak_images/ch04_cervical_pain/p167_img1.jpeg",
             "page": 167,
             "fig_number": "4.44A and B",
             "caption_en": "Figs 4.44A and B: Testing median nerve tension",
-            "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Testing median nerve tension",
-            "category": "examination",
+            "caption_vi": "🩺 Thao tác khám: Testing median nerve tension",
+            "role_type": "exam",
+            "width": 717,
+            "height": 538
+          },
+          {
+            "file": "assets/deepak_images/ch04_cervical_pain/p169_img1.jpeg",
+            "page": 169,
+            "fig_number": "4.45A and B",
+            "caption_en": "Figs 4.45A and B: Testing radial nerve tension",
+            "caption_vi": "🩺 Thao tác khám: Testing radial nerve tension",
+            "role_type": "exam",
             "width": 717,
             "height": 538
           }
@@ -335,7 +479,18 @@ const STABLE_SCREENING_FALLBACK = [
         "sensitivity": "84%",
         "specificity": "70%",
         "diagnostic_role": "Sàng lọc hội chứng lối thoát ngực (TOS): tái hiện thiếu máu và tê buốt sau 1-3 phút co bóp tay",
-        "figures": []
+        "figures": [
+          {
+            "file": "assets/deepak_images/ch04_cervical_pain/p174_img1.jpeg",
+            "page": 174,
+            "fig_number": "4.50",
+            "caption_en": "Fig. 4.50: Roos test",
+            "caption_vi": "🩺 Thao tác khám: Roos test",
+            "role_type": "exam",
+            "width": 717,
+            "height": 538
+          }
+        ]
       },
       {
         "name": "Nghiệm Pháp Sharp-Purser (Sharp-Purser Test cho Mất Vững C1-C2)",
@@ -346,24 +501,24 @@ const STABLE_SCREENING_FALLBACK = [
         "diagnostic_role": "Đặc hiệu cao phát hiện mất vững khớp đội - trục đe dọa chèn ép tủy cổ cao (+LR: 17.3)",
         "figures": [
           {
-            "file": "assets/deepak_images/ch04_cervical_pain/p123_img1.jpeg",
-            "page": 123,
-            "fig_number": "4.10",
-            "caption_en": "Fig. 4.10: Odontoid fracture",
-            "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Odontoid fracture",
-            "category": "redflags_pathology",
-            "width": 595,
-            "height": 400
+            "file": "assets/deepak_images/ch04_cervical_pain/p175_img1.jpeg",
+            "page": 175,
+            "fig_number": "4.51",
+            "caption_en": "Fig. 4.51: Testing alar ligament integrity in sitting",
+            "caption_vi": "🩺 Thao tác khám: Testing alar ligament integrity in sitting",
+            "role_type": "exam",
+            "width": 717,
+            "height": 538
           },
           {
-            "file": "assets/deepak_images/ch04_cervical_pain/p123_img2.png",
-            "page": 123,
-            "fig_number": "4.10",
-            "caption_en": "Fig. 4.10: Odontoid fracture",
-            "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Odontoid fracture",
-            "category": "redflags_pathology",
-            "width": 1335,
-            "height": 603
+            "file": "assets/deepak_images/ch04_cervical_pain/p176_img1.jpeg",
+            "page": 176,
+            "fig_number": "4.52A and B",
+            "caption_en": "Figs 4.52A and B: Testing transverse ligament integrity",
+            "caption_vi": "🩺 Thao tác khám: Testing transverse ligament integrity",
+            "role_type": "exam",
+            "width": 717,
+            "height": 538
           }
         ]
       }
@@ -408,8 +563,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 106,
         "fig_number": "4.1",
         "caption_en": "Fig. 4.1: Cervical spine dorsal view",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Cervical spine dorsal view",
-        "category": "general_atlas",
+        "caption_vi": "📸 Hình ảnh minh họa: Cervical spine dorsal view",
+        "role_type": "general",
         "width": 842,
         "height": 389
       },
@@ -418,8 +573,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 106,
         "fig_number": "4.1",
         "caption_en": "Fig. 4.1: Cervical spine dorsal view",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Cervical spine dorsal view",
-        "category": "general_atlas",
+        "caption_vi": "📸 Hình ảnh minh họa: Cervical spine dorsal view",
+        "role_type": "general",
         "width": 889,
         "height": 341
       },
@@ -428,8 +583,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 107,
         "fig_number": "4.3",
         "caption_en": "Fig. 4.3: Transverse ligament",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Transverse ligament",
-        "category": "general_atlas",
+        "caption_vi": "📸 Hình ảnh minh họa: Transverse ligament",
+        "role_type": "general",
         "width": 846,
         "height": 400
       },
@@ -438,8 +593,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 108,
         "fig_number": "4.4",
         "caption_en": "Fig. 4.4: Ligaments of the spinal column",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Ligaments of the spinal column",
-        "category": "general_atlas",
+        "caption_vi": "📸 Hình ảnh minh họa: Ligaments of the spinal column",
+        "role_type": "general",
         "width": 897,
         "height": 445
       },
@@ -448,8 +603,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 110,
         "fig_number": "4.5",
         "caption_en": "Fig. 4.5: Vertebral artery and subclavian",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Vertebral artery and subclavian",
-        "category": "anatomy_visceral",
+        "caption_vi": "📸 Hình ảnh minh họa: Vertebral artery and subclavian",
+        "role_type": "general",
         "width": 772,
         "height": 811
       },
@@ -458,8 +613,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 111,
         "fig_number": "4.6",
         "caption_en": "Fig. 4.6: Carotid artery and temporal artery",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Carotid artery and temporal artery",
-        "category": "anatomy_visceral",
+        "caption_vi": "📸 Hình ảnh minh họa: Carotid artery and temporal artery",
+        "role_type": "general",
         "width": 1051,
         "height": 758
       },
@@ -468,8 +623,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 112,
         "fig_number": "4.7",
         "caption_en": "Fig. 4.7: Cervical lymph nodes",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Cervical lymph nodes",
-        "category": "anatomy_visceral",
+        "caption_vi": "📸 Hình ảnh minh họa: Cervical lymph nodes",
+        "role_type": "general",
         "width": 453,
         "height": 580
       },
@@ -478,8 +633,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 113,
         "fig_number": "4.8",
         "caption_en": "Fig. 4.8: Thyroid cartilage and gland",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Thyroid cartilage and gland",
-        "category": "anatomy_visceral",
+        "caption_vi": "📸 Hình ảnh minh họa: Thyroid cartilage and gland",
+        "role_type": "general",
         "width": 453,
         "height": 580
       },
@@ -488,8 +643,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 115,
         "fig_number": "4.9",
         "caption_en": "Fig. 4.9: Forward head posture",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Forward head posture",
-        "category": "general_atlas",
+        "caption_vi": "📸 Hình ảnh minh họa: Forward head posture",
+        "role_type": "general",
         "width": 717,
         "height": 538
       },
@@ -498,8 +653,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 123,
         "fig_number": "4.10",
         "caption_en": "Fig. 4.10: Odontoid fracture",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Odontoid fracture",
-        "category": "redflags_pathology",
+        "caption_vi": "📸 Hình ảnh minh họa: Odontoid fracture",
+        "role_type": "general",
         "width": 595,
         "height": 400
       },
@@ -508,8 +663,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 123,
         "fig_number": "4.10",
         "caption_en": "Fig. 4.10: Odontoid fracture",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Odontoid fracture",
-        "category": "redflags_pathology",
+        "caption_vi": "📸 Hình ảnh minh họa: Odontoid fracture",
+        "role_type": "general",
         "width": 1335,
         "height": 603
       },
@@ -518,8 +673,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 125,
         "fig_number": "4.12A and B",
         "caption_en": "Figs 4.12A and B: (A) Alar ligament and consequence of injury; (B) fractured",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: (A) Alar ligament and consequence of injury; (B) fractured",
-        "category": "redflags_pathology",
+        "caption_vi": "📸 Hình ảnh minh họa: (A) Alar ligament and consequence of injury; (B) fractured",
+        "role_type": "general",
         "width": 901,
         "height": 225
       },
@@ -528,8 +683,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 126,
         "fig_number": "4.13A to C",
         "caption_en": "Figs 4.13A to C: Atlas transverse view",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Atlas transverse view",
-        "category": "redflags_pathology",
+        "caption_vi": "📸 Hình ảnh minh họa: Atlas transverse view",
+        "role_type": "general",
         "width": 846,
         "height": 400
       },
@@ -538,8 +693,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 126,
         "fig_number": "4.13A to C",
         "caption_en": "Figs 4.13A to C: Atlas transverse view",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Atlas transverse view",
-        "category": "redflags_pathology",
+        "caption_vi": "📸 Hình ảnh minh họa: Atlas transverse view",
+        "role_type": "general",
         "width": 825,
         "height": 351
       },
@@ -548,8 +703,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 126,
         "fig_number": "4.13A to C",
         "caption_en": "Figs 4.13A to C: Atlas transverse view",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Atlas transverse view",
-        "category": "redflags_pathology",
+        "caption_vi": "📸 Hình ảnh minh họa: Atlas transverse view",
+        "role_type": "general",
         "width": 1282,
         "height": 529
       },
@@ -558,8 +713,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 140,
         "fig_number": "4.14",
         "caption_en": "Fig. 4.14: Lesions",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Lesions",
-        "category": "redflags_pathology",
+        "caption_vi": "📸 Hình ảnh minh họa: Lesions",
+        "role_type": "general",
         "width": 877,
         "height": 599
       },
@@ -568,8 +723,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 143,
         "fig_number": "4.15",
         "caption_en": "Fig. 4.15: Grades of disc pathology",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Grades of disc pathology",
-        "category": "general_atlas",
+        "caption_vi": "📸 Hình ảnh minh họa: Grades of disc pathology",
+        "role_type": "general",
         "width": 1323,
         "height": 794
       },
@@ -578,8 +733,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 144,
         "fig_number": "4.16",
         "caption_en": "Fig. 4.16: Whiplash injury mechanism",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Whiplash injury mechanism",
-        "category": "general_atlas",
+        "caption_vi": "📸 Hình ảnh minh họa: Whiplash injury mechanism",
+        "role_type": "general",
         "width": 782,
         "height": 560
       },
@@ -588,8 +743,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 146,
         "fig_number": "4.17",
         "caption_en": "Fig. 4.17: Sites of entrapment in the thoracic outlet",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Sites of entrapment in the thoracic outlet",
-        "category": "redflags_pathology",
+        "caption_vi": "📸 Hình ảnh minh họa: Sites of entrapment in the thoracic outlet",
+        "role_type": "general",
         "width": 757,
         "height": 540
       },
@@ -598,8 +753,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 148,
         "fig_number": "4.18",
         "caption_en": "Fig. 4.18: The curved black structure is the disc",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: The curved black structure is the disc",
-        "category": "general_atlas",
+        "caption_vi": "📸 Hình ảnh minh họa: The curved black structure is the disc",
+        "role_type": "general",
         "width": 672,
         "height": 537
       },
@@ -608,8 +763,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 149,
         "fig_number": "4.19",
         "caption_en": "Fig. 4.19: Suboccipital muscles",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Suboccipital muscles",
-        "category": "anatomy_visceral",
+        "caption_vi": "📸 Hình ảnh minh họa: Suboccipital muscles",
+        "role_type": "general",
         "width": 1234,
         "height": 813
       },
@@ -618,8 +773,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 150,
         "fig_number": "4.20",
         "caption_en": "Fig. 4.20: Nerve representation in the scalp",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Nerve representation in the scalp",
-        "category": "anatomy_visceral",
+        "caption_vi": "📸 Hình ảnh minh họa: Nerve representation in the scalp",
+        "role_type": "general",
         "width": 842,
         "height": 532
       },
@@ -628,8 +783,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 151,
         "fig_number": "4.21",
         "caption_en": "Fig. 4.21: Forward bending",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Forward bending",
-        "category": "anatomy_visceral",
+        "caption_vi": "📸 Hình ảnh minh họa: Forward bending",
+        "role_type": "general",
         "width": 677,
         "height": 508
       },
@@ -638,8 +793,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 151,
         "fig_number": "4.21",
         "caption_en": "Fig. 4.21: Forward bending",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Forward bending",
-        "category": "anatomy_visceral",
+        "caption_vi": "📸 Hình ảnh minh họa: Forward bending",
+        "role_type": "general",
         "width": 677,
         "height": 508
       },
@@ -648,8 +803,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 152,
         "fig_number": "4.23A and B",
         "caption_en": "Figs 4.23A and B: Sidebending",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Sidebending",
-        "category": "general_atlas",
+        "caption_vi": "📸 Hình ảnh minh họa: Sidebending",
+        "role_type": "general",
         "width": 681,
         "height": 513
       },
@@ -658,8 +813,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 152,
         "fig_number": "4.23A and B",
         "caption_en": "Figs 4.23A and B: Sidebending",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Sidebending",
-        "category": "general_atlas",
+        "caption_vi": "📸 Hình ảnh minh họa: Sidebending",
+        "role_type": "general",
         "width": 681,
         "height": 511
       },
@@ -668,8 +823,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 153,
         "fig_number": "4.24A and B",
         "caption_en": "Figs 4.24A and B: Rotation",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Rotation",
-        "category": "general_atlas",
+        "caption_vi": "📸 Hình ảnh minh họa: Rotation",
+        "role_type": "general",
         "width": 681,
         "height": 511
       },
@@ -678,8 +833,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 153,
         "fig_number": "4.24A and B",
         "caption_en": "Figs 4.24A and B: Rotation",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Rotation",
-        "category": "general_atlas",
+        "caption_vi": "📸 Hình ảnh minh họa: Rotation",
+        "role_type": "general",
         "width": 681,
         "height": 511
       },
@@ -688,8 +843,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 154,
         "fig_number": "4.25",
         "caption_en": "Fig. 4.25: Levator scapula",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Levator scapula",
-        "category": "general_atlas",
+        "caption_vi": "📸 Hình ảnh minh họa: Levator scapula",
+        "role_type": "general",
         "width": 485,
         "height": 597
       },
@@ -698,8 +853,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 154,
         "fig_number": "4.25",
         "caption_en": "Fig. 4.25: Levator scapula",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Levator scapula",
-        "category": "general_atlas",
+        "caption_vi": "📸 Hình ảnh minh họa: Levator scapula",
+        "role_type": "general",
         "width": 485,
         "height": 597
       },
@@ -708,8 +863,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 155,
         "fig_number": "4.27",
         "caption_en": "Fig. 4.27: Scalenes",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Scalenes",
-        "category": "general_atlas",
+        "caption_vi": "📸 Hình ảnh minh họa: Scalenes",
+        "role_type": "general",
         "width": 717,
         "height": 538
       },
@@ -718,8 +873,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 155,
         "fig_number": "4.27",
         "caption_en": "Fig. 4.27: Scalenes",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Scalenes",
-        "category": "general_atlas",
+        "caption_vi": "📸 Hình ảnh minh họa: Scalenes",
+        "role_type": "general",
         "width": 717,
         "height": 538
       },
@@ -728,8 +883,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 156,
         "fig_number": "4.29",
         "caption_en": "Fig. 4.29: Suboccipitals",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Suboccipitals",
-        "category": "examination",
+        "caption_vi": "📸 Hình ảnh minh họa: Suboccipitals",
+        "role_type": "general",
         "width": 717,
         "height": 538
       },
@@ -738,8 +893,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 157,
         "fig_number": "4.30",
         "caption_en": "Fig. 4.30: Basic hold",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Basic hold",
-        "category": "examination",
+        "caption_vi": "📸 Hình ảnh minh họa: Basic hold",
+        "role_type": "general",
         "width": 717,
         "height": 538
       },
@@ -748,8 +903,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 157,
         "fig_number": "4.30",
         "caption_en": "Fig. 4.30: Basic hold",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Basic hold",
-        "category": "examination",
+        "caption_vi": "📸 Hình ảnh minh họa: Basic hold",
+        "role_type": "general",
         "width": 485,
         "height": 597
       },
@@ -758,8 +913,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 158,
         "fig_number": "4.32",
         "caption_en": "Fig. 4.32: Testing closing restriction on the right",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Testing closing restriction on the right",
-        "category": "examination",
+        "caption_vi": "📸 Hình ảnh minh họa: Testing closing restriction on the right",
+        "role_type": "general",
         "width": 485,
         "height": 597
       },
@@ -768,8 +923,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 159,
         "fig_number": "4.33",
         "caption_en": "Fig. 4.33: Atlanto occipital forward nodding",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Atlanto occipital forward nodding",
-        "category": "examination",
+        "caption_vi": "📸 Hình ảnh minh họa: Atlanto occipital forward nodding",
+        "role_type": "general",
         "width": 717,
         "height": 538
       },
@@ -778,8 +933,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 160,
         "fig_number": "4.34",
         "caption_en": "Fig. 4.34: Atlanto occipital backward nodding",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Atlanto occipital backward nodding",
-        "category": "general_atlas",
+        "caption_vi": "📸 Hình ảnh minh họa: Atlanto occipital backward nodding",
+        "role_type": "general",
         "width": 717,
         "height": 538
       },
@@ -788,8 +943,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 161,
         "fig_number": "4.35",
         "caption_en": "Fig. 4.35: Atlanto occipital sidebending",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Atlanto occipital sidebending",
-        "category": "general_atlas",
+        "caption_vi": "📸 Hình ảnh minh họa: Atlanto occipital sidebending",
+        "role_type": "general",
         "width": 717,
         "height": 538
       },
@@ -798,8 +953,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 162,
         "fig_number": "4.36",
         "caption_en": "Fig. 4.36: Atlanto axial rotation",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Atlanto axial rotation",
-        "category": "examination",
+        "caption_vi": "📸 Hình ảnh minh họa: Atlanto axial rotation",
+        "role_type": "general",
         "width": 717,
         "height": 538
       },
@@ -808,8 +963,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 163,
         "fig_number": "4.37",
         "caption_en": "Fig. 4.37: Testing biceps reflex C5",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Testing biceps reflex C5",
-        "category": "examination",
+        "caption_vi": "📸 Hình ảnh minh họa: Testing biceps reflex C5",
+        "role_type": "general",
         "width": 717,
         "height": 538
       },
@@ -818,8 +973,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 163,
         "fig_number": "4.37",
         "caption_en": "Fig. 4.37: Testing biceps reflex C5",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Testing biceps reflex C5",
-        "category": "examination",
+        "caption_vi": "📸 Hình ảnh minh họa: Testing biceps reflex C5",
+        "role_type": "general",
         "width": 717,
         "height": 538
       },
@@ -828,8 +983,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 164,
         "fig_number": "4.39",
         "caption_en": "Fig. 4.39: Testing brachioradialis reflex C6",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Testing brachioradialis reflex C6",
-        "category": "examination",
+        "caption_vi": "📸 Hình ảnh minh họa: Testing brachioradialis reflex C6",
+        "role_type": "general",
         "width": 681,
         "height": 511
       },
@@ -838,8 +993,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 165,
         "fig_number": "4.40",
         "caption_en": "Fig. 4.40: Neutral",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Neutral",
-        "category": "examination",
+        "caption_vi": "📸 Hình ảnh minh họa: Neutral",
+        "role_type": "general",
         "width": 681,
         "height": 511
       },
@@ -848,8 +1003,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 165,
         "fig_number": "4.40",
         "caption_en": "Fig. 4.40: Neutral",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Neutral",
-        "category": "examination",
+        "caption_vi": "📸 Hình ảnh minh họa: Neutral",
+        "role_type": "general",
         "width": 681,
         "height": 511
       },
@@ -858,8 +1013,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 166,
         "fig_number": "4.42",
         "caption_en": "Fig. 4.42: Neck flexion indicating global weakness",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Neck flexion indicating global weakness",
-        "category": "examination",
+        "caption_vi": "📸 Hình ảnh minh họa: Neck flexion indicating global weakness",
+        "role_type": "general",
         "width": 681,
         "height": 511
       },
@@ -868,8 +1023,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 166,
         "fig_number": "4.42",
         "caption_en": "Fig. 4.42: Neck flexion indicating global weakness",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Neck flexion indicating global weakness",
-        "category": "examination",
+        "caption_vi": "📸 Hình ảnh minh họa: Neck flexion indicating global weakness",
+        "role_type": "general",
         "width": 485,
         "height": 597
       },
@@ -878,8 +1033,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 167,
         "fig_number": "4.44A and B",
         "caption_en": "Figs 4.44A and B: Testing median nerve tension",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Testing median nerve tension",
-        "category": "examination",
+        "caption_vi": "📸 Hình ảnh minh họa: Testing median nerve tension",
+        "role_type": "general",
         "width": 717,
         "height": 538
       },
@@ -888,8 +1043,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 167,
         "fig_number": "4.44A and B",
         "caption_en": "Figs 4.44A and B: Testing median nerve tension",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Testing median nerve tension",
-        "category": "examination",
+        "caption_vi": "📸 Hình ảnh minh họa: Testing median nerve tension",
+        "role_type": "general",
         "width": 717,
         "height": 538
       },
@@ -898,8 +1053,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 169,
         "fig_number": "4.45A and B",
         "caption_en": "Figs 4.45A and B: Testing radial nerve tension",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Testing radial nerve tension",
-        "category": "examination",
+        "caption_vi": "📸 Hình ảnh minh họa: Testing radial nerve tension",
+        "role_type": "general",
         "width": 717,
         "height": 538
       },
@@ -908,8 +1063,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 169,
         "fig_number": "4.45A and B",
         "caption_en": "Figs 4.45A and B: Testing radial nerve tension",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Testing radial nerve tension",
-        "category": "examination",
+        "caption_vi": "📸 Hình ảnh minh họa: Testing radial nerve tension",
+        "role_type": "general",
         "width": 717,
         "height": 538
       },
@@ -918,8 +1073,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 171,
         "fig_number": "4.46",
         "caption_en": "Fig. 4.46: Testing ulnar nerve tension",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Testing ulnar nerve tension",
-        "category": "examination",
+        "caption_vi": "📸 Hình ảnh minh họa: Testing ulnar nerve tension",
+        "role_type": "general",
         "width": 717,
         "height": 538
       },
@@ -928,8 +1083,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 172,
         "fig_number": "4.47",
         "caption_en": "Fig. 4.47: Spurling compression",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Spurling compression",
-        "category": "examination",
+        "caption_vi": "📸 Hình ảnh minh họa: Spurling compression",
+        "role_type": "general",
         "width": 717,
         "height": 538
       },
@@ -938,8 +1093,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 173,
         "fig_number": "4.48",
         "caption_en": "Fig. 4.48: Distraction",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Distraction",
-        "category": "examination",
+        "caption_vi": "📸 Hình ảnh minh họa: Distraction",
+        "role_type": "general",
         "width": 717,
         "height": 538
       },
@@ -948,8 +1103,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 173,
         "fig_number": "4.48",
         "caption_en": "Fig. 4.48: Distraction",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Distraction",
-        "category": "examination",
+        "caption_vi": "📸 Hình ảnh minh họa: Distraction",
+        "role_type": "general",
         "width": 717,
         "height": 484
       },
@@ -958,8 +1113,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 174,
         "fig_number": "4.50",
         "caption_en": "Fig. 4.50: Roos test",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Roos test",
-        "category": "examination",
+        "caption_vi": "📸 Hình ảnh minh họa: Roos test",
+        "role_type": "general",
         "width": 717,
         "height": 538
       },
@@ -968,8 +1123,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 175,
         "fig_number": "4.51",
         "caption_en": "Fig. 4.51: Testing alar ligament integrity in sitting",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Testing alar ligament integrity in sitting",
-        "category": "examination",
+        "caption_vi": "📸 Hình ảnh minh họa: Testing alar ligament integrity in sitting",
+        "role_type": "general",
         "width": 717,
         "height": 538
       },
@@ -978,8 +1133,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 176,
         "fig_number": "4.52A and B",
         "caption_en": "Figs 4.52A and B: Testing transverse ligament integrity",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Testing transverse ligament integrity",
-        "category": "examination",
+        "caption_vi": "📸 Hình ảnh minh họa: Testing transverse ligament integrity",
+        "role_type": "general",
         "width": 717,
         "height": 538
       },
@@ -988,8 +1143,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 176,
         "fig_number": "4.52A and B",
         "caption_en": "Figs 4.52A and B: Testing transverse ligament integrity",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Testing transverse ligament integrity",
-        "category": "examination",
+        "caption_vi": "📸 Hình ảnh minh họa: Testing transverse ligament integrity",
+        "role_type": "general",
         "width": 717,
         "height": 538
       },
@@ -998,8 +1153,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 177,
         "fig_number": "4.53",
         "caption_en": "Fig. 4.53: Testing the vertebral artery",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Testing the vertebral artery",
-        "category": "examination",
+        "caption_vi": "📸 Hình ảnh minh họa: Testing the vertebral artery",
+        "role_type": "general",
         "width": 717,
         "height": 538
       },
@@ -1008,8 +1163,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 178,
         "fig_number": "4.54",
         "caption_en": "Fig. 4.54: Vertex compression",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Vertex compression",
-        "category": "examination",
+        "caption_vi": "📸 Hình ảnh minh họa: Vertex compression",
+        "role_type": "general",
         "width": 717,
         "height": 538
       },
@@ -1018,8 +1173,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 179,
         "fig_number": "4.55",
         "caption_en": "Fig. 4.55: Checking pupillary light reflex",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Checking pupillary light reflex",
-        "category": "examination",
+        "caption_vi": "📸 Hình ảnh minh họa: Checking pupillary light reflex",
+        "role_type": "general",
         "width": 717,
         "height": 538
       },
@@ -1028,8 +1183,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 180,
         "fig_number": "4.56",
         "caption_en": "Fig. 4.56: Checking for tenderness over C7",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Checking for tenderness over C7",
-        "category": "examination",
+        "caption_vi": "📸 Hình ảnh minh họa: Checking for tenderness over C7",
+        "role_type": "general",
         "width": 717,
         "height": 538
       },
@@ -1038,8 +1193,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 180,
         "fig_number": "4.56",
         "caption_en": "Fig. 4.56: Checking for tenderness over C7",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Checking for tenderness over C7",
-        "category": "examination",
+        "caption_vi": "📸 Hình ảnh minh họa: Checking for tenderness over C7",
+        "role_type": "general",
         "width": 437,
         "height": 597
       },
@@ -1048,8 +1203,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 181,
         "fig_number": "4.58",
         "caption_en": "Fig. 4.58: Testing Hoffmann’s sign",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Testing Hoffmann’s sign",
-        "category": "examination",
+        "caption_vi": "📸 Hình ảnh minh họa: Testing Hoffmann’s sign",
+        "role_type": "general",
         "width": 717,
         "height": 538
       },
@@ -1058,8 +1213,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 182,
         "fig_number": "4.59",
         "caption_en": "Fig. 4.59: Assessing the first rib",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Assessing the first rib",
-        "category": "examination",
+        "caption_vi": "📸 Hình ảnh minh họa: Assessing the first rib",
+        "role_type": "general",
         "width": 717,
         "height": 538
       },
@@ -1068,8 +1223,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 183,
         "fig_number": "4.60",
         "caption_en": "Fig. 4.60: Shoulder protraction with pectoralis minor tightness left",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Shoulder protraction with pectoralis minor tightness left",
-        "category": "examination",
+        "caption_vi": "📸 Hình ảnh minh họa: Shoulder protraction with pectoralis minor tightness left",
+        "role_type": "general",
         "width": 717,
         "height": 497
       },
@@ -1078,8 +1233,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 184,
         "fig_number": "4.61",
         "caption_en": "Fig. 4.61: Mandibular deviation to the right",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Mandibular deviation to the right",
-        "category": "examination",
+        "caption_vi": "📸 Hình ảnh minh họa: Mandibular deviation to the right",
+        "role_type": "general",
         "width": 461,
         "height": 568
       },
@@ -1088,8 +1243,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 185,
         "fig_number": "4.62",
         "caption_en": "Fig. 4.62: Palpating for tenderness",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Palpating for tenderness",
-        "category": "examination",
+        "caption_vi": "📸 Hình ảnh minh họa: Palpating for tenderness",
+        "role_type": "general",
         "width": 418,
         "height": 597
       },
@@ -1098,8 +1253,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 185,
         "fig_number": "4.62",
         "caption_en": "Fig. 4.62: Palpating for tenderness",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Palpating for tenderness",
-        "category": "examination",
+        "caption_vi": "📸 Hình ảnh minh họa: Palpating for tenderness",
+        "role_type": "general",
         "width": 413,
         "height": 597
       }
@@ -1172,13 +1327,55 @@ const STABLE_SCREENING_FALLBACK = [
         "category": "Nhồi Máu Cơ Tim & Vỡ Tạng Ổ Bụng",
         "signs": "Đau vai trái kèm đau ngực khó thở hoặc dấu hiệu Kehr sau ngã đụng bụng.",
         "action": "Đo ECG / Siêu âm FAST ổ bụng cấp cứu.",
-        "figures": []
+        "figures": [
+          {
+            "file": "assets/deepak_images/ch09_shoulder_pain/p439_img1.jpeg",
+            "page": 439,
+            "fig_number": "9.8",
+            "caption_en": "Fig. 9.8: Quadrilateral space and triangular interval",
+            "caption_vi": "🚨 Phim X-quang / Cờ đỏ: Quadrilateral space and triangular interval",
+            "role_type": "redflag",
+            "width": 994,
+            "height": 753
+          },
+          {
+            "file": "assets/deepak_images/ch09_shoulder_pain/p445_img1.jpeg",
+            "page": 445,
+            "fig_number": "9.12",
+            "caption_en": "Fig. 9.12: Labral tear sites",
+            "caption_vi": "🚨 Phim X-quang / Cờ đỏ: Labral tear sites",
+            "role_type": "redflag",
+            "width": 1011,
+            "height": 722
+          }
+        ]
       },
       {
         "category": "Hoại Tử Vô Mạch Chỏm Xương Cánh Tay (Humeral Head AVN)",
         "signs": "Đau vai âm ỉ sâu, cứng khớp tiến triển ở bệnh nhân dùng corticoid liều cao kéo dài hoặc bệnh hồng cầu hình liềm.",
         "action": "Chụp MRI khớp vai đánh giá mức độ hoại tử dưới sụn.",
-        "figures": []
+        "figures": [
+          {
+            "file": "assets/deepak_images/ch09_shoulder_pain/p418_img1.jpeg",
+            "page": 418,
+            "fig_number": "9.1",
+            "caption_en": "Fig. 9.1: Shoulder anterior view",
+            "caption_vi": "🚨 Phim X-quang / Cờ đỏ: Shoulder anterior view",
+            "role_type": "redflag",
+            "width": 1290,
+            "height": 751
+          },
+          {
+            "file": "assets/deepak_images/ch09_shoulder_pain/p440_img1.jpeg",
+            "page": 440,
+            "fig_number": "9.9",
+            "caption_en": "Fig. 9.9: Sites of impingement: 1. Posterior-superior glenoid rim;",
+            "caption_vi": "🚨 Phim X-quang / Cờ đỏ: Sites of impingement: 1. Posterior-superior glenoid rim;",
+            "role_type": "redflag",
+            "width": 637,
+            "height": 753
+          }
+        ]
       }
     ],
     "visceral_referrals": [
@@ -1186,13 +1383,35 @@ const STABLE_SCREENING_FALLBACK = [
         "source": "Bệnh Lý Gan & Túi Mật (Liver Abscess & Cholecystitis)",
         "pattern": "Kích thích cơ hoành phải quy chiếu đau lên đỉnh vai phải và vùng bờ trên cơ thang phải (qua thần kinh hoành C3-C5). Kèm sốt, vàng da, ấn đau hạ sườn phải.",
         "differential": "Siêu âm gan mật tụy, xét nghiệm men gan AST/ALT, Bilirubin.",
-        "figures": []
+        "figures": [
+          {
+            "file": "assets/deepak_images/ch09_shoulder_pain/p436_img1.jpeg",
+            "page": 436,
+            "fig_number": "9.5",
+            "caption_en": "Fig. 9.5: Coracobrachialis (arrow)",
+            "caption_vi": "🫀 Chuyển đau tạng / Giải phẫu: Coracobrachialis (arrow)",
+            "role_type": "visceral",
+            "width": 543,
+            "height": 903
+          }
+        ]
       },
       {
         "source": "Đau Rễ Cổ C5 (Cervical Radiculopathy C5)",
         "pattern": "Đau nhức mặt ngoài cơ delta và đỉnh vai, tê bì dermatom C5, yếu cơ giạng vai (cơ delta).",
         "differential": "Spurling test (+), Kéo giãn cổ (+) làm giảm triệu chứng, cử động khớp vai nội khớp bình thường.",
-        "figures": []
+        "figures": [
+          {
+            "file": "assets/deepak_images/ch09_shoulder_pain/p437_img1.jpeg",
+            "page": 437,
+            "fig_number": "9.6",
+            "caption_en": "Fig. 9.6: Subacromial bursa (arrow)",
+            "caption_vi": "🫀 Chuyển đau tạng / Giải phẫu: Subacromial bursa (arrow)",
+            "role_type": "visceral",
+            "width": 735,
+            "height": 753
+          }
+        ]
       }
     ],
     "drug_induced": [
@@ -1208,7 +1427,18 @@ const STABLE_SCREENING_FALLBACK = [
         "sensitivity": "79% - 88%",
         "specificity": "53% - 60%",
         "diagnostic_role": "Độ nhạy cao để sàng lọc loại trừ xung đột dưới mỏm cùng vai (SAIS)",
-        "figures": []
+        "figures": [
+          {
+            "file": "assets/deepak_images/ch09_shoulder_pain/p456_img1.jpeg",
+            "page": 456,
+            "fig_number": "9.24",
+            "caption_en": "Fig. 9.24: Neer impingement test",
+            "caption_vi": "🩺 Thao tác khám: Neer impingement test",
+            "role_type": "exam",
+            "width": 557,
+            "height": 798
+          }
+        ]
       },
       {
         "name": "Nghiệm Pháp Hawkins-Kennedy (Hawkins-Kennedy Impingement Test)",
@@ -1219,24 +1449,14 @@ const STABLE_SCREENING_FALLBACK = [
         "diagnostic_role": "Độ nhạy cao phát hiện chèn kẹp gân cơ trên gai dưới dây chằng quạ cùng vai",
         "figures": [
           {
-            "file": "assets/deepak_images/ch09_shoulder_pain/p442_img1.jpeg",
-            "page": 442,
-            "fig_number": "9.10",
-            "caption_en": "Fig. 9.10: Location for rotator cuff pathology",
-            "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Location for rotator cuff pathology",
-            "category": "redflags_pathology",
-            "width": 1134,
-            "height": 754
-          },
-          {
-            "file": "assets/deepak_images/ch09_shoulder_pain/p460_img1.jpeg",
-            "page": 460,
-            "fig_number": "9.31A and B ",
-            "caption_en": "Figs 9.31A and B : External rotation lag sign",
-            "caption_vi": "Hình ảnh giải phẫu & lâm sàng: External rotation lag sign",
-            "category": "examination",
+            "file": "assets/deepak_images/ch09_shoulder_pain/p463_img1.jpeg",
+            "page": 463,
+            "fig_number": "9.35",
+            "caption_en": "Fig. 9.35: Hawkins-Kennedy test",
+            "caption_vi": "🩺 Thao tác khám: Hawkins-Kennedy test",
+            "role_type": "exam",
             "width": 958,
-            "height": 728
+            "height": 588
           }
         ]
       },
@@ -1249,22 +1469,12 @@ const STABLE_SCREENING_FALLBACK = [
         "diagnostic_role": "Sàng lọc tổn thương viêm hoặc rách gân cơ trên gai (Supraspinatus Tendon)",
         "figures": [
           {
-            "file": "assets/deepak_images/ch09_shoulder_pain/p423_img1.png",
-            "page": 423,
-            "fig_number": "9.3",
-            "caption_en": "Fig. 9.3: Normal mechanics during overhead activity",
-            "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Normal mechanics during overhead activity",
-            "category": "general_atlas",
-            "width": 994,
-            "height": 813
-          },
-          {
             "file": "assets/deepak_images/ch09_shoulder_pain/p442_img1.jpeg",
             "page": 442,
             "fig_number": "9.10",
             "caption_en": "Fig. 9.10: Location for rotator cuff pathology",
-            "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Location for rotator cuff pathology",
-            "category": "redflags_pathology",
+            "caption_vi": "🩺 Thao tác khám: Location for rotator cuff pathology",
+            "role_type": "exam",
             "width": 1134,
             "height": 754
           }
@@ -1279,22 +1489,12 @@ const STABLE_SCREENING_FALLBACK = [
         "diagnostic_role": "Đặc hiệu cực cao chẩn đoán rách lớn cơ dưới gai & tròn bé (+LR: 35.0)",
         "figures": [
           {
-            "file": "assets/deepak_images/ch09_shoulder_pain/p442_img1.jpeg",
-            "page": 442,
-            "fig_number": "9.10",
-            "caption_en": "Fig. 9.10: Location for rotator cuff pathology",
-            "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Location for rotator cuff pathology",
-            "category": "redflags_pathology",
-            "width": 1134,
-            "height": 754
-          },
-          {
             "file": "assets/deepak_images/ch09_shoulder_pain/p460_img1.jpeg",
             "page": 460,
             "fig_number": "9.31A and B ",
             "caption_en": "Figs 9.31A and B : External rotation lag sign",
-            "caption_vi": "Hình ảnh giải phẫu & lâm sàng: External rotation lag sign",
-            "category": "examination",
+            "caption_vi": "🩺 Thao tác khám: External rotation lag sign",
+            "role_type": "exam",
             "width": 958,
             "height": 728
           }
@@ -1313,20 +1513,10 @@ const STABLE_SCREENING_FALLBACK = [
             "page": 462,
             "fig_number": "9.33",
             "caption_en": "Fig. 9.33: Positioning for Gerber lift off",
-            "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Positioning for Gerber lift off",
-            "category": "examination",
+            "caption_vi": "🩺 Thao tác khám: Positioning for Gerber lift off",
+            "role_type": "exam",
             "width": 958,
             "height": 626
-          },
-          {
-            "file": "assets/deepak_images/ch09_shoulder_pain/p462_img2.jpeg",
-            "page": 462,
-            "fig_number": "9.33",
-            "caption_en": "Fig. 9.33: Positioning for Gerber lift off",
-            "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Positioning for Gerber lift off",
-            "category": "examination",
-            "width": 958,
-            "height": 685
           }
         ]
       },
@@ -1339,24 +1529,24 @@ const STABLE_SCREENING_FALLBACK = [
         "diagnostic_role": "Phối hợp đánh giá bệnh lý đầu dài gân cơ nhị đầu cánh tay (LHBT Tendinopathy)",
         "figures": [
           {
-            "file": "assets/deepak_images/ch09_shoulder_pain/p434_img1.jpeg",
-            "page": 434,
-            "fig_number": "9.4",
-            "caption_en": "Fig. 9.4: Bicipital tendinitis",
-            "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Bicipital tendinitis",
-            "category": "general_atlas",
-            "width": 1027,
-            "height": 754
-          },
-          {
             "file": "assets/deepak_images/ch09_shoulder_pain/p454_img1.jpeg",
             "page": 454,
             "fig_number": "9.21",
             "caption_en": "Fig. 9.21: Speeds test",
-            "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Speeds test",
-            "category": "examination",
+            "caption_vi": "🩺 Thao tác khám: Speeds test",
+            "role_type": "exam",
             "width": 958,
             "height": 781
+          },
+          {
+            "file": "assets/deepak_images/ch09_shoulder_pain/p455_img1.jpeg",
+            "page": 455,
+            "fig_number": "9.22",
+            "caption_en": "Fig. 9.22: Yergason’s test",
+            "caption_vi": "🩺 Thao tác khám: Yergason’s test",
+            "role_type": "exam",
+            "width": 827,
+            "height": 798
           }
         ]
       },
@@ -1367,7 +1557,18 @@ const STABLE_SCREENING_FALLBACK = [
         "sensitivity": "88% - 100%",
         "specificity": "73% - 98%",
         "diagnostic_role": "Độ chính xác cao chẩn đoán rách sụn viền ổ chảo từ trước ra sau (SLAP Tear)",
-        "figures": []
+        "figures": [
+          {
+            "file": "assets/deepak_images/ch09_shoulder_pain/p458_img1.jpeg",
+            "page": 458,
+            "fig_number": "9.28",
+            "caption_en": "Fig. 9.28: Active compression of O’Brien position two",
+            "caption_vi": "🩺 Thao tác khám: Active compression of O’Brien position two",
+            "role_type": "exam",
+            "width": 958,
+            "height": 651
+          }
+        ]
       },
       {
         "name": "Nghiệm Pháp Cross-Body Adduction (Khám Khớp Cùng Đòn AC Joint)",
@@ -1376,7 +1577,28 @@ const STABLE_SCREENING_FALLBACK = [
         "sensitivity": "77%",
         "specificity": "79%",
         "diagnostic_role": "Tái hiện đau khu trú tại đỉnh khớp cùng vai - đòn (AC Joint Arthrosis)",
-        "figures": []
+        "figures": [
+          {
+            "file": "assets/deepak_images/ch09_shoulder_pain/p454_img2.jpeg",
+            "page": 454,
+            "fig_number": "9.21",
+            "caption_en": "Fig. 9.21: Speeds test",
+            "caption_vi": "🩺 Thao tác khám: Speeds test",
+            "role_type": "exam",
+            "width": 958,
+            "height": 628
+          },
+          {
+            "file": "assets/deepak_images/ch09_shoulder_pain/p452_img1.jpeg",
+            "page": 452,
+            "fig_number": "9.18",
+            "caption_en": "Fig. 9.18: Assessing acromioclavicular mobility",
+            "caption_vi": "🩺 Thao tác khám: Assessing acromioclavicular mobility",
+            "role_type": "exam",
+            "width": 958,
+            "height": 706
+          }
+        ]
       }
     ],
     "differential_table": [
@@ -1419,8 +1641,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 418,
         "fig_number": "9.1",
         "caption_en": "Fig. 9.1: Shoulder anterior view",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Shoulder anterior view",
-        "category": "general_atlas",
+        "caption_vi": "📸 Hình ảnh minh họa: Shoulder anterior view",
+        "role_type": "general",
         "width": 1290,
         "height": 751
       },
@@ -1429,8 +1651,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 418,
         "fig_number": "9.1",
         "caption_en": "Fig. 9.1: Shoulder anterior view",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Shoulder anterior view",
-        "category": "general_atlas",
+        "caption_vi": "📸 Hình ảnh minh họa: Shoulder anterior view",
+        "role_type": "general",
         "width": 934,
         "height": 753
       },
@@ -1439,8 +1661,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 423,
         "fig_number": "9.3",
         "caption_en": "Fig. 9.3: Normal mechanics during overhead activity",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Normal mechanics during overhead activity",
-        "category": "general_atlas",
+        "caption_vi": "📸 Hình ảnh minh họa: Normal mechanics during overhead activity",
+        "role_type": "general",
         "width": 994,
         "height": 813
       },
@@ -1449,8 +1671,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 434,
         "fig_number": "9.4",
         "caption_en": "Fig. 9.4: Bicipital tendinitis",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Bicipital tendinitis",
-        "category": "general_atlas",
+        "caption_vi": "📸 Hình ảnh minh họa: Bicipital tendinitis",
+        "role_type": "general",
         "width": 1027,
         "height": 754
       },
@@ -1459,8 +1681,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 436,
         "fig_number": "9.5",
         "caption_en": "Fig. 9.5: Coracobrachialis (arrow)",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Coracobrachialis (arrow)",
-        "category": "general_atlas",
+        "caption_vi": "📸 Hình ảnh minh họa: Coracobrachialis (arrow)",
+        "role_type": "general",
         "width": 543,
         "height": 903
       },
@@ -1469,8 +1691,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 437,
         "fig_number": "9.6",
         "caption_en": "Fig. 9.6: Subacromial bursa (arrow)",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Subacromial bursa (arrow)",
-        "category": "general_atlas",
+        "caption_vi": "📸 Hình ảnh minh họa: Subacromial bursa (arrow)",
+        "role_type": "general",
         "width": 735,
         "height": 753
       },
@@ -1479,8 +1701,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 438,
         "fig_number": "9.7",
         "caption_en": "Fig. 9.7: Scapular notch; spinoglenoid notch (posterior view)",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Scapular notch; spinoglenoid notch (posterior view)",
-        "category": "general_atlas",
+        "caption_vi": "📸 Hình ảnh minh họa: Scapular notch; spinoglenoid notch (posterior view)",
+        "role_type": "general",
         "width": 842,
         "height": 903
       },
@@ -1489,8 +1711,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 439,
         "fig_number": "9.8",
         "caption_en": "Fig. 9.8: Quadrilateral space and triangular interval",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Quadrilateral space and triangular interval",
-        "category": "redflags_pathology",
+        "caption_vi": "📸 Hình ảnh minh họa: Quadrilateral space and triangular interval",
+        "role_type": "general",
         "width": 994,
         "height": 753
       },
@@ -1499,8 +1721,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 440,
         "fig_number": "9.9",
         "caption_en": "Fig. 9.9: Sites of impingement: 1. Posterior-superior glenoid rim;",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Sites of impingement: 1. Posterior-superior glenoid rim;",
-        "category": "redflags_pathology",
+        "caption_vi": "📸 Hình ảnh minh họa: Sites of impingement: 1. Posterior-superior glenoid rim;",
+        "role_type": "general",
         "width": 637,
         "height": 753
       },
@@ -1509,8 +1731,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 442,
         "fig_number": "9.10",
         "caption_en": "Fig. 9.10: Location for rotator cuff pathology",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Location for rotator cuff pathology",
-        "category": "redflags_pathology",
+        "caption_vi": "📸 Hình ảnh minh họa: Location for rotator cuff pathology",
+        "role_type": "general",
         "width": 1134,
         "height": 754
       },
@@ -1519,8 +1741,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 443,
         "fig_number": "9.11",
         "caption_en": "Fig. 9.11: Posterior-superior glenoid impingement",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Posterior-superior glenoid impingement",
-        "category": "redflags_pathology",
+        "caption_vi": "📸 Hình ảnh minh họa: Posterior-superior glenoid impingement",
+        "role_type": "general",
         "width": 1000,
         "height": 753
       },
@@ -1529,8 +1751,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 445,
         "fig_number": "9.12",
         "caption_en": "Fig. 9.12: Labral tear sites",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Labral tear sites",
-        "category": "redflags_pathology",
+        "caption_vi": "📸 Hình ảnh minh họa: Labral tear sites",
+        "role_type": "general",
         "width": 1011,
         "height": 722
       },
@@ -1539,8 +1761,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 447,
         "fig_number": "9.13",
         "caption_en": "Fig. 9.13: Assessing an anterior humerus",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Assessing an anterior humerus",
-        "category": "examination",
+        "caption_vi": "📸 Hình ảnh minh họa: Assessing an anterior humerus",
+        "role_type": "general",
         "width": 958,
         "height": 717
       },
@@ -1549,8 +1771,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 447,
         "fig_number": "9.13",
         "caption_en": "Fig. 9.13: Assessing an anterior humerus",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Assessing an anterior humerus",
-        "category": "examination",
+        "caption_vi": "📸 Hình ảnh minh họa: Assessing an anterior humerus",
+        "role_type": "general",
         "width": 958,
         "height": 723
       },
@@ -1559,8 +1781,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 448,
         "fig_number": "9.15",
         "caption_en": "Fig. 9.15: Assessing a superior humerus",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Assessing a superior humerus",
-        "category": "examination",
+        "caption_vi": "📸 Hình ảnh minh họa: Assessing a superior humerus",
+        "role_type": "general",
         "width": 958,
         "height": 711
       },
@@ -1569,8 +1791,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 449,
         "fig_number": "9.16",
         "caption_en": "Fig. 9.16: Assessing scapula downward rotation",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Assessing scapula downward rotation",
-        "category": "examination",
+        "caption_vi": "📸 Hình ảnh minh họa: Assessing scapula downward rotation",
+        "role_type": "general",
         "width": 958,
         "height": 718
       },
@@ -1579,8 +1801,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 450,
         "fig_number": "9.17",
         "caption_en": "Fig. 9.17: Assessing protracted scapula",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Assessing protracted scapula",
-        "category": "examination",
+        "caption_vi": "📸 Hình ảnh minh họa: Assessing protracted scapula",
+        "role_type": "general",
         "width": 958,
         "height": 711
       },
@@ -1589,8 +1811,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 452,
         "fig_number": "9.18",
         "caption_en": "Fig. 9.18: Assessing acromioclavicular mobility",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Assessing acromioclavicular mobility",
-        "category": "examination",
+        "caption_vi": "📸 Hình ảnh minh họa: Assessing acromioclavicular mobility",
+        "role_type": "general",
         "width": 958,
         "height": 706
       },
@@ -1599,8 +1821,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 453,
         "fig_number": "9.19",
         "caption_en": "Fig. 9.19: Assessing sternoclavicular mobility",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Assessing sternoclavicular mobility",
-        "category": "examination",
+        "caption_vi": "📸 Hình ảnh minh họa: Assessing sternoclavicular mobility",
+        "role_type": "general",
         "width": 958,
         "height": 685
       },
@@ -1609,8 +1831,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 454,
         "fig_number": "9.21",
         "caption_en": "Fig. 9.21: Speeds test",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Speeds test",
-        "category": "examination",
+        "caption_vi": "📸 Hình ảnh minh họa: Speeds test",
+        "role_type": "general",
         "width": 958,
         "height": 781
       },
@@ -1619,8 +1841,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 454,
         "fig_number": "9.21",
         "caption_en": "Fig. 9.21: Speeds test",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Speeds test",
-        "category": "examination",
+        "caption_vi": "📸 Hình ảnh minh họa: Speeds test",
+        "role_type": "general",
         "width": 958,
         "height": 628
       },
@@ -1629,8 +1851,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 455,
         "fig_number": "9.22",
         "caption_en": "Fig. 9.22: Yergason’s test",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Yergason’s test",
-        "category": "examination",
+        "caption_vi": "📸 Hình ảnh minh họa: Yergason’s test",
+        "role_type": "general",
         "width": 827,
         "height": 798
       },
@@ -1639,8 +1861,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 455,
         "fig_number": "9.22",
         "caption_en": "Fig. 9.22: Yergason’s test",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Yergason’s test",
-        "category": "examination",
+        "caption_vi": "📸 Hình ảnh minh họa: Yergason’s test",
+        "role_type": "general",
         "width": 958,
         "height": 709
       },
@@ -1649,8 +1871,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 456,
         "fig_number": "9.24",
         "caption_en": "Fig. 9.24: Neer impingement test",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Neer impingement test",
-        "category": "examination",
+        "caption_vi": "📸 Hình ảnh minh họa: Neer impingement test",
+        "role_type": "general",
         "width": 557,
         "height": 798
       },
@@ -1659,8 +1881,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 457,
         "fig_number": "9.26",
         "caption_en": "Fig. 9.26: Crank test modified in supine",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Crank test modified in supine",
-        "category": "examination",
+        "caption_vi": "📸 Hình ảnh minh họa: Crank test modified in supine",
+        "role_type": "general",
         "width": 958,
         "height": 631
       },
@@ -1669,8 +1891,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 457,
         "fig_number": "9.26",
         "caption_en": "Fig. 9.26: Crank test modified in supine",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Crank test modified in supine",
-        "category": "examination",
+        "caption_vi": "📸 Hình ảnh minh họa: Crank test modified in supine",
+        "role_type": "general",
         "width": 958,
         "height": 614
       },
@@ -1679,8 +1901,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 457,
         "fig_number": "9.26",
         "caption_en": "Fig. 9.26: Crank test modified in supine",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Crank test modified in supine",
-        "category": "examination",
+        "caption_vi": "📸 Hình ảnh minh họa: Crank test modified in supine",
+        "role_type": "general",
         "width": 958,
         "height": 748
       },
@@ -1689,8 +1911,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 458,
         "fig_number": "9.28",
         "caption_en": "Fig. 9.28: Active compression of O’Brien position two",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Active compression of O’Brien position two",
-        "category": "examination",
+        "caption_vi": "📸 Hình ảnh minh họa: Active compression of O’Brien position two",
+        "role_type": "general",
         "width": 958,
         "height": 651
       },
@@ -1699,8 +1921,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 458,
         "fig_number": "9.28",
         "caption_en": "Fig. 9.28: Active compression of O’Brien position two",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Active compression of O’Brien position two",
-        "category": "examination",
+        "caption_vi": "📸 Hình ảnh minh họa: Active compression of O’Brien position two",
+        "role_type": "general",
         "width": 958,
         "height": 625
       },
@@ -1709,8 +1931,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 459,
         "fig_number": "9.30",
         "caption_en": "Fig. 9.30: Sulcus sign",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Sulcus sign",
-        "category": "examination",
+        "caption_vi": "📸 Hình ảnh minh họa: Sulcus sign",
+        "role_type": "general",
         "width": 958,
         "height": 646
       },
@@ -1719,8 +1941,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 460,
         "fig_number": "9.31A and B ",
         "caption_en": "Figs 9.31A and B : External rotation lag sign",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: External rotation lag sign",
-        "category": "examination",
+        "caption_vi": "📸 Hình ảnh minh họa: External rotation lag sign",
+        "role_type": "general",
         "width": 958,
         "height": 728
       },
@@ -1729,8 +1951,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 460,
         "fig_number": "9.31A and B ",
         "caption_en": "Figs 9.31A and B : External rotation lag sign",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: External rotation lag sign",
-        "category": "examination",
+        "caption_vi": "📸 Hình ảnh minh họa: External rotation lag sign",
+        "role_type": "general",
         "width": 958,
         "height": 719
       },
@@ -1739,8 +1961,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 461,
         "fig_number": "9.32A and B",
         "caption_en": "Figs 9.32A and B: Internal rotation lag sign",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Internal rotation lag sign",
-        "category": "examination",
+        "caption_vi": "📸 Hình ảnh minh họa: Internal rotation lag sign",
+        "role_type": "general",
         "width": 958,
         "height": 733
       },
@@ -1749,8 +1971,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 461,
         "fig_number": "9.32A and B",
         "caption_en": "Figs 9.32A and B: Internal rotation lag sign",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Internal rotation lag sign",
-        "category": "examination",
+        "caption_vi": "📸 Hình ảnh minh họa: Internal rotation lag sign",
+        "role_type": "general",
         "width": 958,
         "height": 716
       },
@@ -1759,8 +1981,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 462,
         "fig_number": "9.33",
         "caption_en": "Fig. 9.33: Positioning for Gerber lift off",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Positioning for Gerber lift off",
-        "category": "examination",
+        "caption_vi": "📸 Hình ảnh minh họa: Positioning for Gerber lift off",
+        "role_type": "general",
         "width": 958,
         "height": 626
       },
@@ -1769,8 +1991,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 462,
         "fig_number": "9.33",
         "caption_en": "Fig. 9.33: Positioning for Gerber lift off",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Positioning for Gerber lift off",
-        "category": "examination",
+        "caption_vi": "📸 Hình ảnh minh họa: Positioning for Gerber lift off",
+        "role_type": "general",
         "width": 958,
         "height": 685
       },
@@ -1779,8 +2001,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 463,
         "fig_number": "9.35",
         "caption_en": "Fig. 9.35: Hawkins-Kennedy test",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Hawkins-Kennedy test",
-        "category": "examination",
+        "caption_vi": "📸 Hình ảnh minh họa: Hawkins-Kennedy test",
+        "role_type": "general",
         "width": 958,
         "height": 588
       },
@@ -1789,8 +2011,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 463,
         "fig_number": "9.35",
         "caption_en": "Fig. 9.35: Hawkins-Kennedy test",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Hawkins-Kennedy test",
-        "category": "examination",
+        "caption_vi": "📸 Hình ảnh minh họa: Hawkins-Kennedy test",
+        "role_type": "general",
         "width": 958,
         "height": 597
       },
@@ -1799,8 +2021,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 463,
         "fig_number": "9.35",
         "caption_en": "Fig. 9.35: Hawkins-Kennedy test",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Hawkins-Kennedy test",
-        "category": "examination",
+        "caption_vi": "📸 Hình ảnh minh họa: Hawkins-Kennedy test",
+        "role_type": "general",
         "width": 958,
         "height": 717
       },
@@ -1809,8 +2031,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 464,
         "fig_number": "9.38",
         "caption_en": "Fig. 9.38: Internal rotation resisted strength test (external impingement)",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Internal rotation resisted strength test (external impingement)",
-        "category": "examination",
+        "caption_vi": "📸 Hình ảnh minh họa: Internal rotation resisted strength test (external impingement)",
+        "role_type": "general",
         "width": 958,
         "height": 795
       },
@@ -1819,8 +2041,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 464,
         "fig_number": "9.38",
         "caption_en": "Fig. 9.38: Internal rotation resisted strength test (external impingement)",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Internal rotation resisted strength test (external impingement)",
-        "category": "examination",
+        "caption_vi": "📸 Hình ảnh minh họa: Internal rotation resisted strength test (external impingement)",
+        "role_type": "general",
         "width": 904,
         "height": 677
       }
@@ -1912,13 +2134,35 @@ const STABLE_SCREENING_FALLBACK = [
         "category": "Bóc Tách Động Mạch Chủ & Nhồi Máu Cơ Tim Ngực",
         "signs": "Đau xé rách xuyên lưng giữa hai bả vai, khó thở, vã mồ hôi, chênh lệch huyết áp hai tay.",
         "action": "Cấp cứu Tim mạch - CTA ngực ngay.",
-        "figures": []
+        "figures": [
+          {
+            "file": "assets/deepak_images/ch05_thoracic_pain/p188_img1.png",
+            "page": 188,
+            "fig_number": "5.1",
+            "caption_en": "Fig. 5.1: Typical thoracic vertebra",
+            "caption_vi": "🚨 Phim X-quang / Cờ đỏ: Typical thoracic vertebra",
+            "role_type": "redflag",
+            "width": 1169,
+            "height": 602
+          }
+        ]
       },
       {
         "category": "Nhiễm Trùng Đĩa Đệm Đốt Sống Ngực (Thoracic Spondylodiscitis / TB Spine)",
         "signs": "Sốt nhẹ về chiều, đổ mồ hôi trộm, đau lưng dữ dội, gù nhọn cột sống ngực (Lao cột sống Pott).",
         "action": "Chụp MRI ngực, xét nghiệm máu lắng ESR, QuantiFERON-TB.",
-        "figures": []
+        "figures": [
+          {
+            "file": "assets/deepak_images/ch05_thoracic_pain/p209_img1.jpeg",
+            "page": 209,
+            "fig_number": "5.2",
+            "caption_en": "Fig. 5.2: Clinical representation of the T2 spinal nerve",
+            "caption_vi": "🚨 Phim X-quang / Cờ đỏ: Clinical representation of the T2 spinal nerve",
+            "role_type": "redflag",
+            "width": 939,
+            "height": 766
+          }
+        ]
       }
     ],
     "visceral_referrals": [
@@ -1926,7 +2170,18 @@ const STABLE_SCREENING_FALLBACK = [
         "source": "Bệnh Lý Túi Mật & Đường Mật (Cholecystitis & Cholelithiasis)",
         "pattern": "Đau quy chiếu lên góc dưới xương bả vai phải và vùng gian bả vai phải (do các nhánh thần kinh cảm giác T8-T9). Đau tăng sau bữa ăn nhiều dầu mỡ, dấu hiệu Murphy (+).",
         "differential": "Siêu âm ổ bụng tổng quát gan mật là chỉ định bắt buộc trước khi điều trị thoái hóa cột sống ngực bên phải.",
-        "figures": []
+        "figures": [
+          {
+            "file": "assets/deepak_images/ch05_thoracic_pain/p209_img1.jpeg",
+            "page": 209,
+            "fig_number": "5.2",
+            "caption_en": "Fig. 5.2: Clinical representation of the T2 spinal nerve",
+            "caption_vi": "🫀 Chuyển đau tạng / Giải phẫu: Clinical representation of the T2 spinal nerve",
+            "role_type": "visceral",
+            "width": 939,
+            "height": 766
+          }
+        ]
       },
       {
         "source": "Bệnh Lý Tụy (Ung Thư Tụy & Viêm Tụy Cấp / Mạn)",
@@ -1961,22 +2216,12 @@ const STABLE_SCREENING_FALLBACK = [
         "diagnostic_role": "Phân biệt đau thành ngực cơ học với đau kích thích màng tủy / rễ thần kinh gian sườn",
         "figures": [
           {
-            "file": "assets/deepak_images/ch05_thoracic_pain/p188_img1.png",
-            "page": 188,
-            "fig_number": "5.1",
-            "caption_en": "Fig. 5.1: Typical thoracic vertebra",
-            "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Typical thoracic vertebra",
-            "category": "general_atlas",
-            "width": 1169,
-            "height": 602
-          },
-          {
             "file": "assets/deepak_images/ch05_thoracic_pain/p209_img1.jpeg",
             "page": 209,
             "fig_number": "5.2",
             "caption_en": "Fig. 5.2: Clinical representation of the T2 spinal nerve",
-            "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Clinical representation of the T2 spinal nerve",
-            "category": "anatomy_visceral",
+            "caption_vi": "🩺 Thao tác khám: Clinical representation of the T2 spinal nerve",
+            "role_type": "exam",
             "width": 939,
             "height": 766
           }
@@ -1995,18 +2240,18 @@ const STABLE_SCREENING_FALLBACK = [
             "page": 211,
             "fig_number": "5.3",
             "caption_en": "Fig. 5.3: Assessing opening restriction in the upper thoracic spine",
-            "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Assessing opening restriction in the upper thoracic spine",
-            "category": "examination",
+            "caption_vi": "🩺 Thao tác khám: Assessing opening restriction in the upper thoracic spine",
+            "role_type": "exam",
             "width": 1080,
             "height": 810
           },
           {
-            "file": "assets/deepak_images/ch05_thoracic_pain/p212_img1.jpeg",
-            "page": 212,
-            "fig_number": "5.5",
-            "caption_en": "Fig. 5.5: Assessing opening restriction in the lower thoracic region",
-            "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Assessing opening restriction in the lower thoracic region",
-            "category": "examination",
+            "file": "assets/deepak_images/ch05_thoracic_pain/p213_img1.jpeg",
+            "page": 213,
+            "fig_number": "5.6",
+            "caption_en": "Fig. 5.6: Assessing closing restriction in the lower thoracic region",
+            "caption_vi": "🩺 Thao tác khám: Assessing closing restriction in the lower thoracic region",
+            "role_type": "exam",
             "width": 1080,
             "height": 810
           }
@@ -2025,18 +2270,8 @@ const STABLE_SCREENING_FALLBACK = [
             "page": 215,
             "fig_number": "5.7A and B",
             "caption_en": "Figs 5.7A and B: Posterior rib dysfunction right",
-            "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Posterior rib dysfunction right",
-            "category": "general_atlas",
-            "width": 1080,
-            "height": 720
-          },
-          {
-            "file": "assets/deepak_images/ch05_thoracic_pain/p215_img2.jpeg",
-            "page": 215,
-            "fig_number": "5.7A and B",
-            "caption_en": "Figs 5.7A and B: Posterior rib dysfunction right",
-            "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Posterior rib dysfunction right",
-            "category": "general_atlas",
+            "caption_vi": "🩺 Thao tác khám: Posterior rib dysfunction right",
+            "role_type": "exam",
             "width": 1080,
             "height": 720
           }
@@ -2055,18 +2290,8 @@ const STABLE_SCREENING_FALLBACK = [
             "page": 215,
             "fig_number": "5.7A and B",
             "caption_en": "Figs 5.7A and B: Posterior rib dysfunction right",
-            "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Posterior rib dysfunction right",
-            "category": "general_atlas",
-            "width": 1080,
-            "height": 720
-          },
-          {
-            "file": "assets/deepak_images/ch05_thoracic_pain/p215_img2.jpeg",
-            "page": 215,
-            "fig_number": "5.7A and B",
-            "caption_en": "Figs 5.7A and B: Posterior rib dysfunction right",
-            "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Posterior rib dysfunction right",
-            "category": "general_atlas",
+            "caption_vi": "🩺 Thao tác khám: Posterior rib dysfunction right",
+            "role_type": "exam",
             "width": 1080,
             "height": 720
           }
@@ -2113,8 +2338,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 188,
         "fig_number": "5.1",
         "caption_en": "Fig. 5.1: Typical thoracic vertebra",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Typical thoracic vertebra",
-        "category": "general_atlas",
+        "caption_vi": "📸 Hình ảnh minh họa: Typical thoracic vertebra",
+        "role_type": "general",
         "width": 1169,
         "height": 602
       },
@@ -2123,8 +2348,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 209,
         "fig_number": "5.2",
         "caption_en": "Fig. 5.2: Clinical representation of the T2 spinal nerve",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Clinical representation of the T2 spinal nerve",
-        "category": "anatomy_visceral",
+        "caption_vi": "📸 Hình ảnh minh họa: Clinical representation of the T2 spinal nerve",
+        "role_type": "general",
         "width": 939,
         "height": 766
       },
@@ -2133,8 +2358,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 211,
         "fig_number": "5.3",
         "caption_en": "Fig. 5.3: Assessing opening restriction in the upper thoracic spine",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Assessing opening restriction in the upper thoracic spine",
-        "category": "examination",
+        "caption_vi": "📸 Hình ảnh minh họa: Assessing opening restriction in the upper thoracic spine",
+        "role_type": "general",
         "width": 1080,
         "height": 810
       },
@@ -2143,8 +2368,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 212,
         "fig_number": "5.5",
         "caption_en": "Fig. 5.5: Assessing opening restriction in the lower thoracic region",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Assessing opening restriction in the lower thoracic region",
-        "category": "examination",
+        "caption_vi": "📸 Hình ảnh minh họa: Assessing opening restriction in the lower thoracic region",
+        "role_type": "general",
         "width": 1080,
         "height": 810
       },
@@ -2153,8 +2378,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 212,
         "fig_number": "5.5",
         "caption_en": "Fig. 5.5: Assessing opening restriction in the lower thoracic region",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Assessing opening restriction in the lower thoracic region",
-        "category": "examination",
+        "caption_vi": "📸 Hình ảnh minh họa: Assessing opening restriction in the lower thoracic region",
+        "role_type": "general",
         "width": 1080,
         "height": 810
       },
@@ -2163,8 +2388,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 213,
         "fig_number": "5.6",
         "caption_en": "Fig. 5.6: Assessing closing restriction in the lower thoracic region",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Assessing closing restriction in the lower thoracic region",
-        "category": "examination",
+        "caption_vi": "📸 Hình ảnh minh họa: Assessing closing restriction in the lower thoracic region",
+        "role_type": "general",
         "width": 1080,
         "height": 810
       },
@@ -2173,8 +2398,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 215,
         "fig_number": "5.7A and B",
         "caption_en": "Figs 5.7A and B: Posterior rib dysfunction right",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Posterior rib dysfunction right",
-        "category": "general_atlas",
+        "caption_vi": "📸 Hình ảnh minh họa: Posterior rib dysfunction right",
+        "role_type": "general",
         "width": 1080,
         "height": 720
       },
@@ -2183,8 +2408,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 215,
         "fig_number": "5.7A and B",
         "caption_en": "Figs 5.7A and B: Posterior rib dysfunction right",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Posterior rib dysfunction right",
-        "category": "general_atlas",
+        "caption_vi": "📸 Hình ảnh minh họa: Posterior rib dysfunction right",
+        "role_type": "general",
         "width": 1080,
         "height": 720
       }
@@ -2246,13 +2471,55 @@ const STABLE_SCREENING_FALLBACK = [
         "category": "Chùm Đuôi Ngựa & Phình Động Mạch Chủ Bụng",
         "signs": "Tê yên ngựa, mất kiểm soát bàng quang / ruột, khối u đập nảy bụng.",
         "action": "Cấp cứu Ngoại thần kinh / Phẫu thuật mạch máu ngay.",
-        "figures": []
+        "figures": [
+          {
+            "file": "assets/deepak_images/ch06_lumbopelvic_pain/p231_img1.jpeg",
+            "page": 231,
+            "fig_number": "6.4",
+            "caption_en": "Fig. 6.4: Sites to elicit bruits",
+            "caption_vi": "🚨 Phim X-quang / Cờ đỏ: Sites to elicit bruits",
+            "role_type": "redflag",
+            "width": 1377,
+            "height": 903
+          },
+          {
+            "file": "assets/deepak_images/ch06_lumbopelvic_pain/p258_img1.jpeg",
+            "page": 258,
+            "fig_number": "6.7",
+            "caption_en": "Fig. 6.7: Disc herniation with nerve root entrapment L2 L3",
+            "caption_vi": "🚨 Phim X-quang / Cờ đỏ: Disc herniation with nerve root entrapment L2 L3",
+            "role_type": "redflag",
+            "width": 676,
+            "height": 993
+          }
+        ]
       },
       {
         "category": "Gãy Xẹp Đốt Sống Do Loãng Xương (Osteoporotic Vertebral Fracture)",
         "signs": "Đau nhói thắt lưng đột ngột sau ho rặn, cúi người hoặc chấn thương ngã dập mông ở người cao tuổi dùng corticoid.",
         "action": "X-quang, MRI đánh giá phù tủy xương đốt sống, cân nhắc tạo hình đốt sống bằng bơm xi măng (Vertebroplasty).",
-        "figures": []
+        "figures": [
+          {
+            "file": "assets/deepak_images/ch06_lumbopelvic_pain/p236_img1.jpeg",
+            "page": 236,
+            "fig_number": "6.5",
+            "caption_en": "Fig. 6.5: Spondylolysis L5",
+            "caption_vi": "🚨 Phim X-quang / Cờ đỏ: Spondylolysis L5",
+            "role_type": "redflag",
+            "width": 527,
+            "height": 788
+          },
+          {
+            "file": "assets/deepak_images/ch06_lumbopelvic_pain/p273_img1.jpeg",
+            "page": 273,
+            "fig_number": "6.8",
+            "caption_en": "Fig. 6.8: Vulnerable structures in non-traumatic vertical compression",
+            "caption_vi": "🚨 Phim X-quang / Cờ đỏ: Vulnerable structures in non-traumatic vertical compression",
+            "role_type": "redflag",
+            "width": 949,
+            "height": 843
+          }
+        ]
       }
     ],
     "visceral_referrals": [
@@ -2260,13 +2527,35 @@ const STABLE_SCREENING_FALLBACK = [
         "source": "Sỏi Thận & Sỏi Niệu Quản (Nephrolithiasis)",
         "pattern": "Cơn đau quặn thận khởi phát từ góc sườn cột sống L1-L2 lan ra trước bụng xuống hố chậu và bẹn bìu/môi lớn, đau từng cơn dữ dội làm bệnh nhân lăn lộn.",
         "differential": "Siêu âm thận tiết niệu, xét nghiệm nước tiểu tìm hồng cầu vi thể.",
-        "figures": []
+        "figures": [
+          {
+            "file": "assets/deepak_images/ch06_lumbopelvic_pain/p229_img1.jpeg",
+            "page": 229,
+            "fig_number": "6.3",
+            "caption_en": "Fig. 6.3: Abdominal quadrants. (Abbreviations: LLQ, left lower quadrant; LUQ,",
+            "caption_vi": "🫀 Chuyển đau tạng / Giải phẫu: Abdominal quadrants. (Abbreviations: LLQ, left lower quadrant; LUQ,",
+            "role_type": "visceral",
+            "width": 1000,
+            "height": 903
+          }
+        ]
       },
       {
         "source": "Bệnh Lý Phụ Khoa (Lạc Nội Mạc Tử Cung, U Xoắn Buồng Trứng, Thai Ngoài Tử Cung)",
         "pattern": "Đau vùng thắt lưng thấp và khung chậu liên quan chu kỳ kinh nguyệt, đau sâu khi giao hợp (Dyspareunia), trễ kinh kèm tụt huyết áp.",
         "differential": "Siêu âm đầu dò âm đạo, xét nghiệm Beta-hCG.",
-        "figures": []
+        "figures": [
+          {
+            "file": "assets/deepak_images/ch06_lumbopelvic_pain/p225_img1.png",
+            "page": 225,
+            "fig_number": "6.2",
+            "caption_en": "Fig. 6.2: The sacrum with the oblique axis depicted",
+            "caption_vi": "🫀 Chuyển đau tạng / Giải phẫu: The sacrum with the oblique axis depicted",
+            "role_type": "visceral",
+            "width": 1161,
+            "height": 603
+          }
+        ]
       },
       {
         "source": "Bệnh Tuyến Tiền Liệt (Prostatitis & Prostate Cancer)",
@@ -2295,24 +2584,14 @@ const STABLE_SCREENING_FALLBACK = [
         "diagnostic_role": "Nghiệm pháp lâm sàng hỗ trợ sàng lọc chẩn đoán phân biệt",
         "figures": [
           {
-            "file": "assets/deepak_images/ch06_lumbopelvic_pain/p258_img1.jpeg",
-            "page": 258,
-            "fig_number": "6.7",
-            "caption_en": "Fig. 6.7: Disc herniation with nerve root entrapment L2 L3",
-            "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Disc herniation with nerve root entrapment L2 L3",
-            "category": "redflags_pathology",
-            "width": 676,
-            "height": 993
-          },
-          {
-            "file": "assets/deepak_images/ch06_lumbopelvic_pain/p285_img1.jpeg",
-            "page": 285,
-            "fig_number": "6.21",
-            "caption_en": "Fig. 6.21: Inability to tuck in",
-            "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Inability to tuck in",
-            "category": "examination",
+            "file": "assets/deepak_images/ch06_lumbopelvic_pain/p288_img1.jpeg",
+            "page": 288,
+            "fig_number": "6.27",
+            "caption_en": "Fig. 6.27: Testing multifidus",
+            "caption_vi": "🩺 Thao tác khám: Testing multifidus",
+            "role_type": "exam",
             "width": 1080,
-            "height": 715
+            "height": 720
           }
         ]
       },
@@ -2325,24 +2604,14 @@ const STABLE_SCREENING_FALLBACK = [
         "diagnostic_role": "Nghiệm pháp lâm sàng hỗ trợ sàng lọc chẩn đoán phân biệt",
         "figures": [
           {
-            "file": "assets/deepak_images/ch06_lumbopelvic_pain/p258_img1.jpeg",
-            "page": 258,
-            "fig_number": "6.7",
-            "caption_en": "Fig. 6.7: Disc herniation with nerve root entrapment L2 L3",
-            "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Disc herniation with nerve root entrapment L2 L3",
-            "category": "redflags_pathology",
-            "width": 676,
-            "height": 993
-          },
-          {
-            "file": "assets/deepak_images/ch06_lumbopelvic_pain/p285_img1.jpeg",
-            "page": 285,
-            "fig_number": "6.21",
-            "caption_en": "Fig. 6.21: Inability to tuck in",
-            "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Inability to tuck in",
-            "category": "examination",
+            "file": "assets/deepak_images/ch06_lumbopelvic_pain/p281_img1.jpeg",
+            "page": 281,
+            "fig_number": "6.16",
+            "caption_en": "Fig. 6.16: Visualizing apparent leg length discrepancy",
+            "caption_vi": "🩺 Thao tác khám: Visualizing apparent leg length discrepancy",
+            "role_type": "exam",
             "width": 1080,
-            "height": 715
+            "height": 717
           }
         ]
       },
@@ -2355,14 +2624,24 @@ const STABLE_SCREENING_FALLBACK = [
         "diagnostic_role": "Nghiệm pháp lâm sàng hỗ trợ sàng lọc chẩn đoán phân biệt",
         "figures": [
           {
-            "file": "assets/deepak_images/ch06_lumbopelvic_pain/p258_img1.jpeg",
-            "page": 258,
-            "fig_number": "6.7",
-            "caption_en": "Fig. 6.7: Disc herniation with nerve root entrapment L2 L3",
-            "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Disc herniation with nerve root entrapment L2 L3",
-            "category": "redflags_pathology",
-            "width": 676,
-            "height": 993
+            "file": "assets/deepak_images/ch06_lumbopelvic_pain/p288_img2.jpeg",
+            "page": 288,
+            "fig_number": "6.27",
+            "caption_en": "Fig. 6.27: Testing multifidus",
+            "caption_vi": "🩺 Thao tác khám: Testing multifidus",
+            "role_type": "exam",
+            "width": 1080,
+            "height": 810
+          },
+          {
+            "file": "assets/deepak_images/ch06_lumbopelvic_pain/p289_img1.jpeg",
+            "page": 289,
+            "fig_number": "6.29",
+            "caption_en": "Fig. 6.29: Release of cervical flexion",
+            "caption_vi": "🩺 Thao tác khám: Release of cervical flexion",
+            "role_type": "exam",
+            "width": 1080,
+            "height": 810
           }
         ]
       },
@@ -2375,22 +2654,22 @@ const STABLE_SCREENING_FALLBACK = [
         "diagnostic_role": "Tiêu chuẩn vàng lâm sàng chẩn đoán đau khớp cùng chậu SIJ khi có >= 3/5 nghiệm pháp dương tính (+LR: 6.97)",
         "figures": [
           {
-            "file": "assets/deepak_images/ch06_lumbopelvic_pain/p225_img1.png",
-            "page": 225,
-            "fig_number": "6.2",
-            "caption_en": "Fig. 6.2: The sacrum with the oblique axis depicted",
-            "caption_vi": "Hình ảnh giải phẫu & lâm sàng: The sacrum with the oblique axis depicted",
-            "category": "general_atlas",
-            "width": 1161,
-            "height": 603
+            "file": "assets/deepak_images/ch06_lumbopelvic_pain/p292_img1.jpeg",
+            "page": 292,
+            "fig_number": "6.31",
+            "caption_en": "Fig. 6.31: Palpating for tenderness over the sacroiliac joint secondary to an",
+            "caption_vi": "🩺 Thao tác khám: Palpating for tenderness over the sacroiliac joint secondary to an",
+            "role_type": "exam",
+            "width": 633,
+            "height": 900
           },
           {
-            "file": "assets/deepak_images/ch06_lumbopelvic_pain/p276_img1.jpeg",
-            "page": 276,
-            "fig_number": "6.11",
-            "caption_en": "Fig. 6.11: Stork test",
-            "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Stork test",
-            "category": "examination",
+            "file": "assets/deepak_images/ch06_lumbopelvic_pain/p294_img1.jpeg",
+            "page": 294,
+            "fig_number": "6.32C to E",
+            "caption_en": "Figs 6.32C to E: Sacroiliac provocation",
+            "caption_vi": "🩺 Thao tác khám: Sacroiliac provocation",
+            "role_type": "exam",
             "width": 1080,
             "height": 810
           }
@@ -2405,22 +2684,12 @@ const STABLE_SCREENING_FALLBACK = [
         "diagnostic_role": "Phân biệt sai lệch chuyển động chậu Innominate (bất đối xứng khi đứng) vs xương cùng Sacrum (bất đối xứng khi ngồi)",
         "figures": [
           {
-            "file": "assets/deepak_images/ch06_lumbopelvic_pain/p225_img1.png",
-            "page": 225,
-            "fig_number": "6.2",
-            "caption_en": "Fig. 6.2: The sacrum with the oblique axis depicted",
-            "caption_vi": "Hình ảnh giải phẫu & lâm sàng: The sacrum with the oblique axis depicted",
-            "category": "general_atlas",
-            "width": 1161,
-            "height": 603
-          },
-          {
             "file": "assets/deepak_images/ch06_lumbopelvic_pain/p276_img1.jpeg",
             "page": 276,
             "fig_number": "6.11",
             "caption_en": "Fig. 6.11: Stork test",
-            "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Stork test",
-            "category": "examination",
+            "caption_vi": "🩺 Thao tác khám: Stork test",
+            "role_type": "exam",
             "width": 1080,
             "height": 810
           }
@@ -2435,24 +2704,14 @@ const STABLE_SCREENING_FALLBACK = [
         "diagnostic_role": "Đặc hiệu đánh giá khóa khớp cùng chậu chuyển động cùng bên khi gập gối nhấc chân",
         "figures": [
           {
-            "file": "assets/deepak_images/ch06_lumbopelvic_pain/p225_img1.png",
-            "page": 225,
-            "fig_number": "6.2",
-            "caption_en": "Fig. 6.2: The sacrum with the oblique axis depicted",
-            "caption_vi": "Hình ảnh giải phẫu & lâm sàng: The sacrum with the oblique axis depicted",
-            "category": "general_atlas",
-            "width": 1161,
-            "height": 603
-          },
-          {
-            "file": "assets/deepak_images/ch06_lumbopelvic_pain/p276_img1.jpeg",
+            "file": "assets/deepak_images/ch06_lumbopelvic_pain/p276_img2.jpeg",
             "page": 276,
             "fig_number": "6.11",
             "caption_en": "Fig. 6.11: Stork test",
-            "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Stork test",
-            "category": "examination",
+            "caption_vi": "🩺 Thao tác khám: Stork test",
+            "role_type": "exam",
             "width": 1080,
-            "height": 810
+            "height": 811
           }
         ]
       }
@@ -2505,8 +2764,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 218,
         "fig_number": "6.1",
         "caption_en": "Fig. 6.1: Lumbar vertebra",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Lumbar vertebra",
-        "category": "general_atlas",
+        "caption_vi": "📸 Hình ảnh minh họa: Lumbar vertebra",
+        "role_type": "general",
         "width": 1260,
         "height": 513
       },
@@ -2515,8 +2774,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 225,
         "fig_number": "6.2",
         "caption_en": "Fig. 6.2: The sacrum with the oblique axis depicted",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: The sacrum with the oblique axis depicted",
-        "category": "general_atlas",
+        "caption_vi": "📸 Hình ảnh minh họa: The sacrum with the oblique axis depicted",
+        "role_type": "general",
         "width": 1161,
         "height": 603
       },
@@ -2525,8 +2784,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 229,
         "fig_number": "6.3",
         "caption_en": "Fig. 6.3: Abdominal quadrants. (Abbreviations: LLQ, left lower quadrant; LUQ,",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Abdominal quadrants. (Abbreviations: LLQ, left lower quadrant; LUQ,",
-        "category": "anatomy_visceral",
+        "caption_vi": "📸 Hình ảnh minh họa: Abdominal quadrants. (Abbreviations: LLQ, left lower quadrant; LUQ,",
+        "role_type": "general",
         "width": 1000,
         "height": 903
       },
@@ -2535,8 +2794,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 231,
         "fig_number": "6.4",
         "caption_en": "Fig. 6.4: Sites to elicit bruits",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Sites to elicit bruits",
-        "category": "redflags_pathology",
+        "caption_vi": "📸 Hình ảnh minh họa: Sites to elicit bruits",
+        "role_type": "general",
         "width": 1377,
         "height": 903
       },
@@ -2545,8 +2804,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 236,
         "fig_number": "6.5",
         "caption_en": "Fig. 6.5: Spondylolysis L5",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Spondylolysis L5",
-        "category": "redflags_pathology",
+        "caption_vi": "📸 Hình ảnh minh họa: Spondylolysis L5",
+        "role_type": "general",
         "width": 527,
         "height": 788
       },
@@ -2555,8 +2814,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 257,
         "fig_number": "6.6",
         "caption_en": "Fig. 6.6: Lumbar spondylosis",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Lumbar spondylosis",
-        "category": "redflags_pathology",
+        "caption_vi": "📸 Hình ảnh minh họa: Lumbar spondylosis",
+        "role_type": "general",
         "width": 860,
         "height": 993
       },
@@ -2565,8 +2824,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 258,
         "fig_number": "6.7",
         "caption_en": "Fig. 6.7: Disc herniation with nerve root entrapment L2 L3",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Disc herniation with nerve root entrapment L2 L3",
-        "category": "redflags_pathology",
+        "caption_vi": "📸 Hình ảnh minh họa: Disc herniation with nerve root entrapment L2 L3",
+        "role_type": "general",
         "width": 676,
         "height": 993
       },
@@ -2575,8 +2834,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 273,
         "fig_number": "6.8",
         "caption_en": "Fig. 6.8: Vulnerable structures in non-traumatic vertical compression",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Vulnerable structures in non-traumatic vertical compression",
-        "category": "examination",
+        "caption_vi": "📸 Hình ảnh minh họa: Vulnerable structures in non-traumatic vertical compression",
+        "role_type": "general",
         "width": 949,
         "height": 843
       },
@@ -2585,8 +2844,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 274,
         "fig_number": "6.9",
         "caption_en": "Fig. 6.9: Palpating transverse processes",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Palpating transverse processes",
-        "category": "examination",
+        "caption_vi": "📸 Hình ảnh minh họa: Palpating transverse processes",
+        "role_type": "general",
         "width": 1080,
         "height": 808
       },
@@ -2595,8 +2854,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 276,
         "fig_number": "6.11",
         "caption_en": "Fig. 6.11: Stork test",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Stork test",
-        "category": "examination",
+        "caption_vi": "📸 Hình ảnh minh họa: Stork test",
+        "role_type": "general",
         "width": 1080,
         "height": 810
       },
@@ -2605,8 +2864,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 276,
         "fig_number": "6.11",
         "caption_en": "Fig. 6.11: Stork test",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Stork test",
-        "category": "examination",
+        "caption_vi": "📸 Hình ảnh minh họa: Stork test",
+        "role_type": "general",
         "width": 1080,
         "height": 811
       },
@@ -2615,8 +2874,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 277,
         "fig_number": "6.12",
         "caption_en": "Fig. 6.12: Palpating pubic tubercles in supine",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Palpating pubic tubercles in supine",
-        "category": "examination",
+        "caption_vi": "📸 Hình ảnh minh họa: Palpating pubic tubercles in supine",
+        "role_type": "general",
         "width": 1080,
         "height": 804
       },
@@ -2625,8 +2884,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 278,
         "fig_number": "6.13",
         "caption_en": "Fig. 6.13: Locating the inferior aspect of the sacrum",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Locating the inferior aspect of the sacrum",
-        "category": "examination",
+        "caption_vi": "📸 Hình ảnh minh họa: Locating the inferior aspect of the sacrum",
+        "role_type": "general",
         "width": 1080,
         "height": 808
       },
@@ -2635,8 +2894,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 278,
         "fig_number": "6.13",
         "caption_en": "Fig. 6.13: Locating the inferior aspect of the sacrum",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Locating the inferior aspect of the sacrum",
-        "category": "examination",
+        "caption_vi": "📸 Hình ảnh minh họa: Locating the inferior aspect of the sacrum",
+        "role_type": "general",
         "width": 1080,
         "height": 810
       },
@@ -2645,8 +2904,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 279,
         "fig_number": "6.15",
         "caption_en": "Fig. 6.15: Locating the base",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Locating the base",
-        "category": "general_atlas",
+        "caption_vi": "📸 Hình ảnh minh họa: Locating the base",
+        "role_type": "general",
         "width": 1080,
         "height": 774
       },
@@ -2655,8 +2914,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 281,
         "fig_number": "6.16",
         "caption_en": "Fig. 6.16: Visualizing apparent leg length discrepancy",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Visualizing apparent leg length discrepancy",
-        "category": "general_atlas",
+        "caption_vi": "📸 Hình ảnh minh họa: Visualizing apparent leg length discrepancy",
+        "role_type": "general",
         "width": 1080,
         "height": 717
       },
@@ -2665,8 +2924,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 281,
         "fig_number": "6.16",
         "caption_en": "Fig. 6.16: Visualizing apparent leg length discrepancy",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Visualizing apparent leg length discrepancy",
-        "category": "general_atlas",
+        "caption_vi": "📸 Hình ảnh minh họa: Visualizing apparent leg length discrepancy",
+        "role_type": "general",
         "width": 1080,
         "height": 793
       },
@@ -2675,8 +2934,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 282,
         "fig_number": "6.18",
         "caption_en": "Fig. 6.18: Supine to sit",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Supine to sit",
-        "category": "examination",
+        "caption_vi": "📸 Hình ảnh minh họa: Supine to sit",
+        "role_type": "general",
         "width": 1080,
         "height": 810
       },
@@ -2685,8 +2944,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 283,
         "fig_number": "6.20",
         "caption_en": "Fig. 6.20: Patellar reflex (L2, L3)",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Patellar reflex (L2, L3)",
-        "category": "examination",
+        "caption_vi": "📸 Hình ảnh minh họa: Patellar reflex (L2, L3)",
+        "role_type": "general",
         "width": 710,
         "height": 900
       },
@@ -2695,8 +2954,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 283,
         "fig_number": "6.20",
         "caption_en": "Fig. 6.20: Patellar reflex (L2, L3)",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Patellar reflex (L2, L3)",
-        "category": "examination",
+        "caption_vi": "📸 Hình ảnh minh họa: Patellar reflex (L2, L3)",
+        "role_type": "general",
         "width": 715,
         "height": 900
       },
@@ -2705,8 +2964,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 285,
         "fig_number": "6.21",
         "caption_en": "Fig. 6.21: Inability to tuck in",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Inability to tuck in",
-        "category": "examination",
+        "caption_vi": "📸 Hình ảnh minh họa: Inability to tuck in",
+        "role_type": "general",
         "width": 1080,
         "height": 715
       },
@@ -2715,8 +2974,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 285,
         "fig_number": "6.21",
         "caption_en": "Fig. 6.21: Inability to tuck in",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Inability to tuck in",
-        "category": "examination",
+        "caption_vi": "📸 Hình ảnh minh họa: Inability to tuck in",
+        "role_type": "general",
         "width": 1080,
         "height": 720
       },
@@ -2725,8 +2984,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 286,
         "fig_number": "6.23",
         "caption_en": "Fig. 6.23: Able to tuck in and move legs",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Able to tuck in and move legs",
-        "category": "examination",
+        "caption_vi": "📸 Hình ảnh minh họa: Able to tuck in and move legs",
+        "role_type": "general",
         "width": 1080,
         "height": 724
       },
@@ -2735,8 +2994,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 286,
         "fig_number": "6.23",
         "caption_en": "Fig. 6.23: Able to tuck in and move legs",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Able to tuck in and move legs",
-        "category": "examination",
+        "caption_vi": "📸 Hình ảnh minh họa: Able to tuck in and move legs",
+        "role_type": "general",
         "width": 1080,
         "height": 717
       },
@@ -2745,8 +3004,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 287,
         "fig_number": "6.25",
         "caption_en": "Fig. 6.25: On verbal cueing tuck in position reinforced",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: On verbal cueing tuck in position reinforced",
-        "category": "examination",
+        "caption_vi": "📸 Hình ảnh minh họa: On verbal cueing tuck in position reinforced",
+        "role_type": "general",
         "width": 1080,
         "height": 723
       },
@@ -2755,8 +3014,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 287,
         "fig_number": "6.25",
         "caption_en": "Fig. 6.25: On verbal cueing tuck in position reinforced",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: On verbal cueing tuck in position reinforced",
-        "category": "examination",
+        "caption_vi": "📸 Hình ảnh minh họa: On verbal cueing tuck in position reinforced",
+        "role_type": "general",
         "width": 624,
         "height": 900
       },
@@ -2765,8 +3024,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 288,
         "fig_number": "6.27",
         "caption_en": "Fig. 6.27: Testing multifidus",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Testing multifidus",
-        "category": "examination",
+        "caption_vi": "📸 Hình ảnh minh họa: Testing multifidus",
+        "role_type": "general",
         "width": 1080,
         "height": 720
       },
@@ -2775,8 +3034,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 288,
         "fig_number": "6.27",
         "caption_en": "Fig. 6.27: Testing multifidus",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Testing multifidus",
-        "category": "examination",
+        "caption_vi": "📸 Hình ảnh minh họa: Testing multifidus",
+        "role_type": "general",
         "width": 1080,
         "height": 810
       },
@@ -2785,8 +3044,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 289,
         "fig_number": "6.29",
         "caption_en": "Fig. 6.29: Release of cervical flexion",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Release of cervical flexion",
-        "category": "examination",
+        "caption_vi": "📸 Hình ảnh minh họa: Release of cervical flexion",
+        "role_type": "general",
         "width": 1080,
         "height": 810
       },
@@ -2795,8 +3054,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 290,
         "fig_number": "6.30",
         "caption_en": "Fig. 6.30: Side lying knee bend",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Side lying knee bend",
-        "category": "general_atlas",
+        "caption_vi": "📸 Hình ảnh minh họa: Side lying knee bend",
+        "role_type": "general",
         "width": 1080,
         "height": 834
       },
@@ -2805,8 +3064,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 292,
         "fig_number": "6.31",
         "caption_en": "Fig. 6.31: Palpating for tenderness over the sacroiliac joint secondary to an",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Palpating for tenderness over the sacroiliac joint secondary to an",
-        "category": "examination",
+        "caption_vi": "📸 Hình ảnh minh họa: Palpating for tenderness over the sacroiliac joint secondary to an",
+        "role_type": "general",
         "width": 633,
         "height": 900
       },
@@ -2815,8 +3074,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 293,
         "fig_number": "6.32A and B",
         "caption_en": "Figs 6.32A and B: A",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: A",
-        "category": "examination",
+        "caption_vi": "📸 Hình ảnh minh họa: A",
+        "role_type": "general",
         "width": 1080,
         "height": 755
       },
@@ -2825,8 +3084,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 293,
         "fig_number": "6.32A and B",
         "caption_en": "Figs 6.32A and B: A",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: A",
-        "category": "examination",
+        "caption_vi": "📸 Hình ảnh minh họa: A",
+        "role_type": "general",
         "width": 1080,
         "height": 810
       },
@@ -2835,8 +3094,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 294,
         "fig_number": "6.32C to E",
         "caption_en": "Figs 6.32C to E: Sacroiliac provocation",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Sacroiliac provocation",
-        "category": "examination",
+        "caption_vi": "📸 Hình ảnh minh họa: Sacroiliac provocation",
+        "role_type": "general",
         "width": 1080,
         "height": 810
       },
@@ -2845,8 +3104,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 294,
         "fig_number": "6.32C to E",
         "caption_en": "Figs 6.32C to E: Sacroiliac provocation",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Sacroiliac provocation",
-        "category": "examination",
+        "caption_vi": "📸 Hình ảnh minh họa: Sacroiliac provocation",
+        "role_type": "general",
         "width": 1080,
         "height": 810
       },
@@ -2855,8 +3114,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 294,
         "fig_number": "6.32C to E",
         "caption_en": "Figs 6.32C to E: Sacroiliac provocation",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Sacroiliac provocation",
-        "category": "examination",
+        "caption_vi": "📸 Hình ảnh minh họa: Sacroiliac provocation",
+        "role_type": "general",
         "width": 1080,
         "height": 810
       },
@@ -2865,8 +3124,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 295,
         "fig_number": "6.33A and B",
         "caption_en": "Figs 6.33A and B: Prone instability test",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Prone instability test",
-        "category": "examination",
+        "caption_vi": "📸 Hình ảnh minh họa: Prone instability test",
+        "role_type": "general",
         "width": 621,
         "height": 900
       },
@@ -2875,8 +3134,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 295,
         "fig_number": "6.33A and B",
         "caption_en": "Figs 6.33A and B: Prone instability test",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Prone instability test",
-        "category": "examination",
+        "caption_vi": "📸 Hình ảnh minh họa: Prone instability test",
+        "role_type": "general",
         "width": 1080,
         "height": 760
       },
@@ -2885,8 +3144,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 296,
         "fig_number": "6.34",
         "caption_en": "Fig. 6.34: Hip internal rotation",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Hip internal rotation",
-        "category": "examination",
+        "caption_vi": "📸 Hình ảnh minh họa: Hip internal rotation",
+        "role_type": "general",
         "width": 659,
         "height": 900
       },
@@ -2895,8 +3154,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 297,
         "fig_number": "6.35",
         "caption_en": "Fig. 6.35: Thomas test",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Thomas test",
-        "category": "examination",
+        "caption_vi": "📸 Hình ảnh minh họa: Thomas test",
+        "role_type": "general",
         "width": 1080,
         "height": 720
       }
@@ -2983,13 +3242,55 @@ const STABLE_SCREENING_FALLBACK = [
         "category": "Gãy Cổ Xương Đùi & Viêm Khớp Nhiễm Trùng",
         "signs": "Chân ngắn xoay ngoài sau ngã, sốt cao co cứng khớp háng hoàn toàn.",
         "action": "Chụp X-quang/MRI háng, phẫu thuật cấp cứu.",
-        "figures": []
+        "figures": [
+          {
+            "file": "assets/deepak_images/ch07_hip_pain/p304_img1.jpeg",
+            "page": 304,
+            "fig_number": "7.2",
+            "caption_en": "Fig. 7.2: Hip joint vasculature",
+            "caption_vi": "🚨 Phim X-quang / Cờ đỏ: Hip joint vasculature",
+            "role_type": "redflag",
+            "width": 1285,
+            "height": 813
+          },
+          {
+            "file": "assets/deepak_images/ch07_hip_pain/p324_img1.jpeg",
+            "page": 324,
+            "fig_number": "7.9",
+            "caption_en": "Fig. 7.9: Femoral head posterolateral",
+            "caption_vi": "🚨 Phim X-quang / Cờ đỏ: Femoral head posterolateral",
+            "role_type": "redflag",
+            "width": 958,
+            "height": 720
+          }
+        ]
       },
       {
         "category": "Thoát Vị Bẹn / Đùi Nghẹt (Strangulated Hernia)",
         "signs": "Khối phồng vùng bẹn đùi đau dữ dội, không đẩy lên được, kèm nôn mửa, chướng bụng, bí trung đại tiện.",
         "action": "Cấp cứu Ngoại tổng quát mổ giải phóng tạng nghẹt tránh hoại tử ruột.",
-        "figures": []
+        "figures": [
+          {
+            "file": "assets/deepak_images/ch07_hip_pain/p301_img1.jpeg",
+            "page": 301,
+            "fig_number": "7.1",
+            "caption_en": "Fig. 7.1: Hip anterior view",
+            "caption_vi": "🚨 Phim X-quang / Cờ đỏ: Hip anterior view",
+            "role_type": "redflag",
+            "width": 1249,
+            "height": 813
+          },
+          {
+            "file": "assets/deepak_images/ch07_hip_pain/p320_img1.jpeg",
+            "page": 320,
+            "fig_number": "7.7",
+            "caption_en": "Fig. 7.7: Right thigh anterior view",
+            "caption_vi": "🚨 Phim X-quang / Cờ đỏ: Right thigh anterior view",
+            "role_type": "redflag",
+            "width": 974,
+            "height": 903
+          }
+        ]
       }
     ],
     "visceral_referrals": [
@@ -2997,13 +3298,35 @@ const STABLE_SCREENING_FALLBACK = [
         "source": "Áp-xe Cơ Thắt Lưng Chậu (Psoas Abscess)",
         "pattern": "Đau vùng bẹn và mặt trước trong khớp háng kèm sốt dao động, gầy sút cân. Bệnh nhân có tư thế gập háng và xoay trong để chùng cơ thắt lưng chậu; Duỗi háng thụ động gây đau dữ dội (Dấu hiệu cơ thắt lưng chậu / Psoas sign +).",
         "differential": "Chụp CT hoặc MRI vùng bụng chậu tìm ổ áp-xe trong cơ thắt lưng chậu.",
-        "figures": []
+        "figures": [
+          {
+            "file": "assets/deepak_images/ch07_hip_pain/p301_img1.jpeg",
+            "page": 301,
+            "fig_number": "7.1",
+            "caption_en": "Fig. 7.1: Hip anterior view",
+            "caption_vi": "🫀 Chuyển đau tạng / Giải phẫu: Hip anterior view",
+            "role_type": "visceral",
+            "width": 1249,
+            "height": 813
+          }
+        ]
       },
       {
         "source": "Bệnh Lý Thần Kinh Bì Đùi Ngoài (Meralgia Paresthetica)",
         "pattern": "Tê bì, bỏng rát, giảm cảm giác hình bầu dục ở mặt trước ngoài đùi do dây thần kinh bì đùi ngoài bị chèn ép dưới dây chằng bẹn (ở người béo phì, mặc quần chật, đeo thắt lưng đồ nghề nặng).",
         "differential": "Khám vận động cơ lực và phản xạ gân xương hoàn toàn bình thường (dây thần kinh thuần cảm giác).",
-        "figures": []
+        "figures": [
+          {
+            "file": "assets/deepak_images/ch07_hip_pain/p322_img1.jpeg",
+            "page": 322,
+            "fig_number": "7.8",
+            "caption_en": "Fig. 7.8: Sites of entrapment of the lateral cutaneous nerve",
+            "caption_vi": "🫀 Chuyển đau tạng / Giải phẫu: Sites of entrapment of the lateral cutaneous nerve",
+            "role_type": "visceral",
+            "width": 968,
+            "height": 891
+          }
+        ]
       }
     ],
     "drug_induced": [
@@ -3024,8 +3347,8 @@ const STABLE_SCREENING_FALLBACK = [
             "page": 316,
             "fig_number": "7.5",
             "caption_en": "Fig. 7.5: Anterior view of the hip showing a cam impingement",
-            "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Anterior view of the hip showing a cam impingement",
-            "category": "redflags_pathology",
+            "caption_vi": "🩺 Thao tác khám: Anterior view of the hip showing a cam impingement",
+            "role_type": "exam",
             "width": 990,
             "height": 1019
           },
@@ -3034,8 +3357,8 @@ const STABLE_SCREENING_FALLBACK = [
             "page": 317,
             "fig_number": "7.6",
             "caption_en": "Fig. 7.6: Anterior view of the hip showing a pincer impingement",
-            "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Anterior view of the hip showing a pincer impingement",
-            "category": "redflags_pathology",
+            "caption_vi": "🩺 Thao tác khám: Anterior view of the hip showing a pincer impingement",
+            "role_type": "exam",
             "width": 990,
             "height": 1019
           }
@@ -3054,19 +3377,9 @@ const STABLE_SCREENING_FALLBACK = [
             "page": 301,
             "fig_number": "7.1",
             "caption_en": "Fig. 7.1: Hip anterior view",
-            "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Hip anterior view",
-            "category": "general_atlas",
+            "caption_vi": "🩺 Thao tác khám: Hip anterior view",
+            "role_type": "exam",
             "width": 1249,
-            "height": 813
-          },
-          {
-            "file": "assets/deepak_images/ch07_hip_pain/p304_img1.jpeg",
-            "page": 304,
-            "fig_number": "7.2",
-            "caption_en": "Fig. 7.2: Hip joint vasculature",
-            "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Hip joint vasculature",
-            "category": "anatomy_visceral",
-            "width": 1285,
             "height": 813
           }
         ]
@@ -3084,20 +3397,20 @@ const STABLE_SCREENING_FALLBACK = [
             "page": 330,
             "fig_number": "7.18",
             "caption_en": "Fig. 7.18: Hip scouring test",
-            "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Hip scouring test",
-            "category": "examination",
+            "caption_vi": "🩺 Thao tác khám: Hip scouring test",
+            "role_type": "exam",
             "width": 958,
             "height": 703
           },
           {
-            "file": "assets/deepak_images/ch07_hip_pain/p330_img2.jpeg",
-            "page": 330,
-            "fig_number": "7.18",
-            "caption_en": "Fig. 7.18: Hip scouring test",
-            "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Hip scouring test",
-            "category": "examination",
+            "file": "assets/deepak_images/ch07_hip_pain/p331_img1.jpeg",
+            "page": 331,
+            "fig_number": "7.19",
+            "caption_en": "Fig. 7.19: Hip telescoping test",
+            "caption_vi": "🩺 Thao tác khám: Hip telescoping test",
+            "role_type": "exam",
             "width": 958,
-            "height": 685
+            "height": 693
           }
         ]
       },
@@ -3114,8 +3427,8 @@ const STABLE_SCREENING_FALLBACK = [
             "page": 326,
             "fig_number": "7.12",
             "caption_en": "Fig. 7.12: Thomas test",
-            "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Thomas test",
-            "category": "examination",
+            "caption_vi": "🩺 Thao tác khám: Thomas test",
+            "role_type": "exam",
             "width": 958,
             "height": 718
           }
@@ -3128,7 +3441,18 @@ const STABLE_SCREENING_FALLBACK = [
         "sensitivity": "85%",
         "specificity": "90%",
         "diagnostic_role": "Đánh giá co rút dải chậu chày (ITB) và cơ căng mạc đùi (TFL) gây hội chứng đau mấu chuyển lớn",
-        "figures": []
+        "figures": [
+          {
+            "file": "assets/deepak_images/ch07_hip_pain/p327_img1.jpeg",
+            "page": 327,
+            "fig_number": "7.13",
+            "caption_en": "Fig. 7.13: Assessing gluteus medius strength",
+            "caption_vi": "🩺 Thao tác khám: Assessing gluteus medius strength",
+            "role_type": "exam",
+            "width": 532,
+            "height": 798
+          }
+        ]
       },
       {
         "name": "Dấu Hiệu Trendelenburg (Trendelenburg Sign Khám Cơ Mông Nhỡ)",
@@ -3139,22 +3463,12 @@ const STABLE_SCREENING_FALLBACK = [
         "diagnostic_role": "Phát hiện suy yếu/rách cơ mông nhỡ (Gluteus Medius) hoặc ức chế rễ L5 / thần kinh mông trên",
         "figures": [
           {
-            "file": "assets/deepak_images/ch07_hip_pain/p315_img1.jpeg",
-            "page": 315,
-            "fig_number": "7.4",
-            "caption_en": "Fig. 7.4: Location of friction on the trochanteric bursa",
-            "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Location of friction on the trochanteric bursa",
-            "category": "redflags_pathology",
-            "width": 1246,
-            "height": 813
-          },
-          {
             "file": "assets/deepak_images/ch07_hip_pain/p325_img1.jpeg",
             "page": 325,
             "fig_number": "7.10",
             "caption_en": "Fig. 7.10: Hip abduction firing pattern",
-            "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Hip abduction firing pattern",
-            "category": "examination",
+            "caption_vi": "🩺 Thao tác khám: Hip abduction firing pattern",
+            "role_type": "exam",
             "width": 958,
             "height": 711
           }
@@ -3201,8 +3515,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 301,
         "fig_number": "7.1",
         "caption_en": "Fig. 7.1: Hip anterior view",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Hip anterior view",
-        "category": "general_atlas",
+        "caption_vi": "📸 Hình ảnh minh họa: Hip anterior view",
+        "role_type": "general",
         "width": 1249,
         "height": 813
       },
@@ -3211,8 +3525,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 304,
         "fig_number": "7.2",
         "caption_en": "Fig. 7.2: Hip joint vasculature",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Hip joint vasculature",
-        "category": "anatomy_visceral",
+        "caption_vi": "📸 Hình ảnh minh họa: Hip joint vasculature",
+        "role_type": "general",
         "width": 1285,
         "height": 813
       },
@@ -3221,8 +3535,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 314,
         "fig_number": "7.3",
         "caption_en": "Fig. 7.3: Osteoarthritis of the coxafemoral joint",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Osteoarthritis of the coxafemoral joint",
-        "category": "general_atlas",
+        "caption_vi": "📸 Hình ảnh minh họa: Osteoarthritis of the coxafemoral joint",
+        "role_type": "general",
         "width": 1230,
         "height": 813
       },
@@ -3231,8 +3545,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 315,
         "fig_number": "7.4",
         "caption_en": "Fig. 7.4: Location of friction on the trochanteric bursa",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Location of friction on the trochanteric bursa",
-        "category": "redflags_pathology",
+        "caption_vi": "📸 Hình ảnh minh họa: Location of friction on the trochanteric bursa",
+        "role_type": "general",
         "width": 1246,
         "height": 813
       },
@@ -3241,8 +3555,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 316,
         "fig_number": "7.5",
         "caption_en": "Fig. 7.5: Anterior view of the hip showing a cam impingement",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Anterior view of the hip showing a cam impingement",
-        "category": "redflags_pathology",
+        "caption_vi": "📸 Hình ảnh minh họa: Anterior view of the hip showing a cam impingement",
+        "role_type": "general",
         "width": 990,
         "height": 1019
       },
@@ -3251,8 +3565,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 317,
         "fig_number": "7.6",
         "caption_en": "Fig. 7.6: Anterior view of the hip showing a pincer impingement",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Anterior view of the hip showing a pincer impingement",
-        "category": "redflags_pathology",
+        "caption_vi": "📸 Hình ảnh minh họa: Anterior view of the hip showing a pincer impingement",
+        "role_type": "general",
         "width": 990,
         "height": 1019
       },
@@ -3261,8 +3575,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 320,
         "fig_number": "7.7",
         "caption_en": "Fig. 7.7: Right thigh anterior view",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Right thigh anterior view",
-        "category": "general_atlas",
+        "caption_vi": "📸 Hình ảnh minh họa: Right thigh anterior view",
+        "role_type": "general",
         "width": 974,
         "height": 903
       },
@@ -3271,8 +3585,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 322,
         "fig_number": "7.8",
         "caption_en": "Fig. 7.8: Sites of entrapment of the lateral cutaneous nerve",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Sites of entrapment of the lateral cutaneous nerve",
-        "category": "redflags_pathology",
+        "caption_vi": "📸 Hình ảnh minh họa: Sites of entrapment of the lateral cutaneous nerve",
+        "role_type": "general",
         "width": 968,
         "height": 891
       },
@@ -3281,8 +3595,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 324,
         "fig_number": "7.9",
         "caption_en": "Fig. 7.9: Femoral head posterolateral",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Femoral head posterolateral",
-        "category": "examination",
+        "caption_vi": "📸 Hình ảnh minh họa: Femoral head posterolateral",
+        "role_type": "general",
         "width": 958,
         "height": 720
       },
@@ -3291,8 +3605,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 325,
         "fig_number": "7.10",
         "caption_en": "Fig. 7.10: Hip abduction firing pattern",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Hip abduction firing pattern",
-        "category": "examination",
+        "caption_vi": "📸 Hình ảnh minh họa: Hip abduction firing pattern",
+        "role_type": "general",
         "width": 958,
         "height": 711
       },
@@ -3301,8 +3615,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 325,
         "fig_number": "7.10",
         "caption_en": "Fig. 7.10: Hip abduction firing pattern",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Hip abduction firing pattern",
-        "category": "examination",
+        "caption_vi": "📸 Hình ảnh minh họa: Hip abduction firing pattern",
+        "role_type": "general",
         "width": 525,
         "height": 798
       },
@@ -3311,8 +3625,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 326,
         "fig_number": "7.12",
         "caption_en": "Fig. 7.12: Thomas test",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Thomas test",
-        "category": "examination",
+        "caption_vi": "📸 Hình ảnh minh họa: Thomas test",
+        "role_type": "general",
         "width": 958,
         "height": 718
       },
@@ -3321,8 +3635,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 327,
         "fig_number": "7.13",
         "caption_en": "Fig. 7.13: Assessing gluteus medius strength",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Assessing gluteus medius strength",
-        "category": "examination",
+        "caption_vi": "📸 Hình ảnh minh họa: Assessing gluteus medius strength",
+        "role_type": "general",
         "width": 532,
         "height": 798
       },
@@ -3331,8 +3645,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 327,
         "fig_number": "7.13",
         "caption_en": "Fig. 7.13: Assessing gluteus medius strength",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Assessing gluteus medius strength",
-        "category": "examination",
+        "caption_vi": "📸 Hình ảnh minh họa: Assessing gluteus medius strength",
+        "role_type": "general",
         "width": 958,
         "height": 602
       },
@@ -3341,8 +3655,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 328,
         "fig_number": "7.15",
         "caption_en": "Fig. 7.15: Palpation for tenderness over the trochanteric bursa",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Palpation for tenderness over the trochanteric bursa",
-        "category": "examination",
+        "caption_vi": "📸 Hình ảnh minh họa: Palpation for tenderness over the trochanteric bursa",
+        "role_type": "general",
         "width": 958,
         "height": 639
       },
@@ -3351,8 +3665,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 329,
         "fig_number": "7.16",
         "caption_en": "Fig. 7.16: Palpation for tenderness over the ischial bursa",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Palpation for tenderness over the ischial bursa",
-        "category": "examination",
+        "caption_vi": "📸 Hình ảnh minh họa: Palpation for tenderness over the ischial bursa",
+        "role_type": "general",
         "width": 958,
         "height": 474
       },
@@ -3361,8 +3675,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 330,
         "fig_number": "7.18",
         "caption_en": "Fig. 7.18: Hip scouring test",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Hip scouring test",
-        "category": "examination",
+        "caption_vi": "📸 Hình ảnh minh họa: Hip scouring test",
+        "role_type": "general",
         "width": 958,
         "height": 703
       },
@@ -3371,8 +3685,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 330,
         "fig_number": "7.18",
         "caption_en": "Fig. 7.18: Hip scouring test",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Hip scouring test",
-        "category": "examination",
+        "caption_vi": "📸 Hình ảnh minh họa: Hip scouring test",
+        "role_type": "general",
         "width": 958,
         "height": 685
       },
@@ -3381,8 +3695,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 331,
         "fig_number": "7.19",
         "caption_en": "Fig. 7.19: Hip telescoping test",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Hip telescoping test",
-        "category": "examination",
+        "caption_vi": "📸 Hình ảnh minh họa: Hip telescoping test",
+        "role_type": "general",
         "width": 958,
         "height": 693
       },
@@ -3391,8 +3705,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 331,
         "fig_number": "7.19",
         "caption_en": "Fig. 7.19: Hip telescoping test",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Hip telescoping test",
-        "category": "examination",
+        "caption_vi": "📸 Hình ảnh minh họa: Hip telescoping test",
+        "role_type": "general",
         "width": 958,
         "height": 803
       }
@@ -3479,7 +3793,28 @@ const STABLE_SCREENING_FALLBACK = [
         "category": "Huyết Khối Tĩnh Mạch Sâu & Hội Chứng Khoang",
         "signs": "Bắp chân sưng nóng đỏ đau đột ngột, đau quá mức khi gập duỗi thụ động.",
         "action": "Siêu âm Doppler / Mở cân giải áp cấp cứu.",
-        "figures": []
+        "figures": [
+          {
+            "file": "assets/deepak_images/ch08_knee_ankle_foot_pain/p380_img1.jpeg",
+            "page": 380,
+            "fig_number": "8.16",
+            "caption_en": "Fig. 8.16: March fracture",
+            "caption_vi": "🚨 Phim X-quang / Cờ đỏ: March fracture",
+            "role_type": "redflag",
+            "width": 1161,
+            "height": 753
+          },
+          {
+            "file": "assets/deepak_images/ch08_knee_ankle_foot_pain/p385_img1.jpeg",
+            "page": 385,
+            "fig_number": "8.20",
+            "caption_en": "Fig. 8.20: Vulnerable ligaments in inversion sprains",
+            "caption_vi": "🚨 Phim X-quang / Cờ đỏ: Vulnerable ligaments in inversion sprains",
+            "role_type": "redflag",
+            "width": 1194,
+            "height": 752
+          }
+        ]
       },
       {
         "category": "Đứt Hoàn Toàn Gân Gót Achilles (Achilles Rupture)",
@@ -3491,20 +3826,20 @@ const STABLE_SCREENING_FALLBACK = [
             "page": 390,
             "fig_number": "8.24",
             "caption_en": "Fig. 8.24: Tendoachilles tendon",
-            "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Tendoachilles tendon",
-            "category": "redflags_pathology",
+            "caption_vi": "🚨 Phim X-quang / Cờ đỏ: Tendoachilles tendon",
+            "role_type": "redflag",
             "width": 523,
             "height": 752
           },
           {
-            "file": "assets/deepak_images/ch08_knee_ankle_foot_pain/p390_img2.jpeg",
-            "page": 390,
-            "fig_number": "8.24",
-            "caption_en": "Fig. 8.24: Tendoachilles tendon",
-            "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Tendoachilles tendon",
-            "category": "redflags_pathology",
-            "width": 512,
-            "height": 752
+            "file": "assets/deepak_images/ch08_knee_ankle_foot_pain/p389_img1.jpeg",
+            "page": 389,
+            "fig_number": "8.23",
+            "caption_en": "Fig. 8.23: Retrocalcaneal bursitis",
+            "caption_vi": "🚨 Phim X-quang / Cờ đỏ: Retrocalcaneal bursitis",
+            "role_type": "redflag",
+            "width": 774,
+            "height": 693
           }
         ]
       }
@@ -3516,24 +3851,14 @@ const STABLE_SCREENING_FALLBACK = [
         "differential": "Ở trẻ em hoặc người lớn tuổi than phiền đau gối nhưng khám gối hoàn toàn bình thường -> BẮT BUỘC PHẢI KHÁM KHỚP HÁNG!",
         "figures": [
           {
-            "file": "assets/deepak_images/ch08_knee_ankle_foot_pain/p369_img1.jpeg",
-            "page": 369,
-            "fig_number": "8.12",
-            "caption_en": "Fig. 8.12: Sites for superficial nerve entrapment",
-            "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Sites for superficial nerve entrapment",
-            "category": "redflags_pathology",
-            "width": 920,
-            "height": 962
-          },
-          {
-            "file": "assets/deepak_images/ch08_knee_ankle_foot_pain/p377_img1.png",
-            "page": 377,
-            "fig_number": "8.14",
-            "caption_en": "Fig. 8.14: Tibial nerve and its branches",
-            "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Tibial nerve and its branches",
-            "category": "anatomy_visceral",
-            "width": 1259,
-            "height": 903
+            "file": "assets/deepak_images/ch08_knee_ankle_foot_pain/p335_img1.jpeg",
+            "page": 335,
+            "fig_number": "8.1",
+            "caption_en": "Fig. 8.1: Knee joint anterior view",
+            "caption_vi": "🫀 Chuyển đau tạng / Giải phẫu: Knee joint anterior view",
+            "role_type": "visceral",
+            "width": 1196,
+            "height": 663
           }
         ]
       },
@@ -3541,7 +3866,18 @@ const STABLE_SCREENING_FALLBACK = [
         "source": "Đau Rễ Thần Kinh Thắt Lưng (L3-L4-L5-S1 Radiculopathy)",
         "pattern": "Rễ L3-L4 đau mặt trước đùi và trước trong gối; Rễ L5 đau mặt ngoài cẳng chân và mu chân ngón cái; Rễ S1 đau bắp chân lan xuống gót và bờ ngoài bàn chân.",
         "differential": "Khám cột sống thắt lưng, nghiệm pháp SLR, Slump test và đánh giá phản xạ gân gót.",
-        "figures": []
+        "figures": [
+          {
+            "file": "assets/deepak_images/ch08_knee_ankle_foot_pain/p377_img1.png",
+            "page": 377,
+            "fig_number": "8.14",
+            "caption_en": "Fig. 8.14: Tibial nerve and its branches",
+            "caption_vi": "🫀 Chuyển đau tạng / Giải phẫu: Tibial nerve and its branches",
+            "role_type": "visceral",
+            "width": 1259,
+            "height": 903
+          }
+        ]
       }
     ],
     "drug_induced": [
@@ -3559,24 +3895,14 @@ const STABLE_SCREENING_FALLBACK = [
         "diagnostic_role": "Nghiệm pháp lâm sàng hỗ trợ sàng lọc chẩn đoán phân biệt",
         "figures": [
           {
-            "file": "assets/deepak_images/ch08_knee_ankle_foot_pain/p336_img1.jpeg",
-            "page": 336,
-            "fig_number": "8.2",
-            "caption_en": "Fig. 8.2: Primary ligaments of the knee and menisci",
-            "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Primary ligaments of the knee and menisci",
-            "category": "general_atlas",
-            "width": 1348,
-            "height": 664
-          },
-          {
-            "file": "assets/deepak_images/ch08_knee_ankle_foot_pain/p365_img1.jpeg",
-            "page": 365,
-            "fig_number": "8.9",
-            "caption_en": "Fig. 8.9: Types of meniscal tears",
-            "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Types of meniscal tears",
-            "category": "redflags_pathology",
-            "width": 1339,
-            "height": 678
+            "file": "assets/deepak_images/ch08_knee_ankle_foot_pain/p407_img1.jpeg",
+            "page": 407,
+            "fig_number": "8.49",
+            "caption_en": "Fig. 8.49: Lachman test",
+            "caption_vi": "🩺 Thao tác khám: Lachman test",
+            "role_type": "exam",
+            "width": 958,
+            "height": 650
           }
         ]
       },
@@ -3593,20 +3919,10 @@ const STABLE_SCREENING_FALLBACK = [
             "page": 411,
             "fig_number": "8.53A and B",
             "caption_en": "Figs 8.53A and B: Pivot shift maneuver",
-            "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Pivot shift maneuver",
-            "category": "examination",
+            "caption_vi": "🩺 Thao tác khám: Pivot shift maneuver",
+            "role_type": "exam",
             "width": 958,
             "height": 706
-          },
-          {
-            "file": "assets/deepak_images/ch08_knee_ankle_foot_pain/p411_img2.jpeg",
-            "page": 411,
-            "fig_number": "8.53A and B",
-            "caption_en": "Figs 8.53A and B: Pivot shift maneuver",
-            "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Pivot shift maneuver",
-            "category": "examination",
-            "width": 958,
-            "height": 725
           }
         ]
       },
@@ -3619,24 +3935,24 @@ const STABLE_SCREENING_FALLBACK = [
         "diagnostic_role": "Đặc hiệu cao phát hiện rách sụn chêm khi có tiếng kêu click và đau chói khe khớp (+LR: 4.5)",
         "figures": [
           {
-            "file": "assets/deepak_images/ch08_knee_ankle_foot_pain/p336_img1.jpeg",
-            "page": 336,
-            "fig_number": "8.2",
-            "caption_en": "Fig. 8.2: Primary ligaments of the knee and menisci",
-            "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Primary ligaments of the knee and menisci",
-            "category": "general_atlas",
-            "width": 1348,
-            "height": 664
+            "file": "assets/deepak_images/ch08_knee_ankle_foot_pain/p406_img1.jpeg",
+            "page": 406,
+            "fig_number": "8.47",
+            "caption_en": "Fig. 8.47: McMurray’s test",
+            "caption_vi": "🩺 Thao tác khám: McMurray’s test",
+            "role_type": "exam",
+            "width": 958,
+            "height": 721
           },
           {
-            "file": "assets/deepak_images/ch08_knee_ankle_foot_pain/p337_img1.jpeg",
-            "page": 337,
-            "fig_number": "8.3",
-            "caption_en": "Fig. 8.3: Transverse view of the knee menisci",
-            "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Transverse view of the knee menisci",
-            "category": "general_atlas",
-            "width": 1331,
-            "height": 564
+            "file": "assets/deepak_images/ch08_knee_ankle_foot_pain/p365_img1.jpeg",
+            "page": 365,
+            "fig_number": "8.9",
+            "caption_en": "Fig. 8.9: Types of meniscal tears",
+            "caption_vi": "🩺 Thao tác khám: Types of meniscal tears",
+            "role_type": "exam",
+            "width": 1339,
+            "height": 678
           }
         ]
       },
@@ -3649,24 +3965,24 @@ const STABLE_SCREENING_FALLBACK = [
         "diagnostic_role": "Khám hội chứng đau bánh chè - đùi (PFPS) và thoái hóa sụn khớp bánh chè",
         "figures": [
           {
-            "file": "assets/deepak_images/ch08_knee_ankle_foot_pain/p359_img1.jpeg",
-            "page": 359,
-            "fig_number": "8.4",
-            "caption_en": "Fig. 8.4: Causes for patella tracking dysfunction",
-            "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Causes for patella tracking dysfunction",
-            "category": "general_atlas",
-            "width": 1256,
-            "height": 903
+            "file": "assets/deepak_images/ch08_knee_ankle_foot_pain/p401_img1.jpeg",
+            "page": 401,
+            "fig_number": "8.41",
+            "caption_en": "Fig. 8.41: Tenderness over the lateral retinaculum",
+            "caption_vi": "🩺 Thao tác khám: Tenderness over the lateral retinaculum",
+            "role_type": "exam",
+            "width": 958,
+            "height": 638
           },
           {
-            "file": "assets/deepak_images/ch08_knee_ankle_foot_pain/p361_img1.jpeg",
-            "page": 361,
-            "fig_number": "8.5",
-            "caption_en": "Fig. 8.5: Anterior view of the knee joint showing a bipartite patella",
-            "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Anterior view of the knee joint showing a bipartite patella",
-            "category": "redflags_pathology",
-            "width": 1039,
-            "height": 664
+            "file": "assets/deepak_images/ch08_knee_ankle_foot_pain/p402_img1.jpeg",
+            "page": 402,
+            "fig_number": "8.43",
+            "caption_en": "Fig. 8.43: Active knee extension lag",
+            "caption_vi": "🩺 Thao tác khám: Active knee extension lag",
+            "role_type": "exam",
+            "width": 958,
+            "height": 697
           }
         ]
       },
@@ -3679,24 +3995,24 @@ const STABLE_SCREENING_FALLBACK = [
         "diagnostic_role": "Đặc hiệu cao chẩn đoán viêm phì đại đệm mỡ dưới bánh chè Hoffa (Hoffa Disease)",
         "figures": [
           {
-            "file": "assets/deepak_images/ch08_knee_ankle_foot_pain/p359_img1.jpeg",
-            "page": 359,
-            "fig_number": "8.4",
-            "caption_en": "Fig. 8.4: Causes for patella tracking dysfunction",
-            "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Causes for patella tracking dysfunction",
-            "category": "general_atlas",
-            "width": 1256,
-            "height": 903
+            "file": "assets/deepak_images/ch08_knee_ankle_foot_pain/p401_img1.jpeg",
+            "page": 401,
+            "fig_number": "8.41",
+            "caption_en": "Fig. 8.41: Tenderness over the lateral retinaculum",
+            "caption_vi": "🩺 Thao tác khám: Tenderness over the lateral retinaculum",
+            "role_type": "exam",
+            "width": 958,
+            "height": 638
           },
           {
-            "file": "assets/deepak_images/ch08_knee_ankle_foot_pain/p361_img1.jpeg",
-            "page": 361,
-            "fig_number": "8.5",
-            "caption_en": "Fig. 8.5: Anterior view of the knee joint showing a bipartite patella",
-            "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Anterior view of the knee joint showing a bipartite patella",
-            "category": "redflags_pathology",
-            "width": 1039,
-            "height": 664
+            "file": "assets/deepak_images/ch08_knee_ankle_foot_pain/p402_img1.jpeg",
+            "page": 402,
+            "fig_number": "8.43",
+            "caption_en": "Fig. 8.43: Active knee extension lag",
+            "caption_vi": "🩺 Thao tác khám: Active knee extension lag",
+            "role_type": "exam",
+            "width": 958,
+            "height": 697
           }
         ]
       },
@@ -3709,22 +4025,12 @@ const STABLE_SCREENING_FALLBACK = [
         "diagnostic_role": "Tiêu chuẩn vàng khám lâm sàng đứt hoàn toàn gân gót Achilles (+LR: 15.0, -LR: 0.03)",
         "figures": [
           {
-            "file": "assets/deepak_images/ch08_knee_ankle_foot_pain/p390_img1.jpeg",
-            "page": 390,
-            "fig_number": "8.24",
-            "caption_en": "Fig. 8.24: Tendoachilles tendon",
-            "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Tendoachilles tendon",
-            "category": "redflags_pathology",
-            "width": 523,
-            "height": 752
-          },
-          {
             "file": "assets/deepak_images/ch08_knee_ankle_foot_pain/p390_img2.jpeg",
             "page": 390,
             "fig_number": "8.24",
             "caption_en": "Fig. 8.24: Tendoachilles tendon",
-            "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Tendoachilles tendon",
-            "category": "redflags_pathology",
+            "caption_vi": "🩺 Thao tác khám: Tendoachilles tendon",
+            "role_type": "exam",
             "width": 512,
             "height": 752
           }
@@ -3739,24 +4045,24 @@ const STABLE_SCREENING_FALLBACK = [
         "diagnostic_role": "Đặc hiệu cao chẩn đoán tổn thương dây chằng khớp chày mác dưới (Bong gân mắt cá chân cao)",
         "figures": [
           {
-            "file": "assets/deepak_images/ch08_knee_ankle_foot_pain/p335_img1.jpeg",
-            "page": 335,
-            "fig_number": "8.1",
-            "caption_en": "Fig. 8.1: Knee joint anterior view",
-            "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Knee joint anterior view",
-            "category": "general_atlas",
-            "width": 1196,
-            "height": 663
+            "file": "assets/deepak_images/ch08_knee_ankle_foot_pain/p392_img1.jpeg",
+            "page": 392,
+            "fig_number": "8.27",
+            "caption_en": "Fig. 8.27: Right lower leg anterior view (EHL, extensor hallucis longus;",
+            "caption_vi": "🩺 Thao tác khám: Right lower leg anterior view (EHL, extensor hallucis longus;",
+            "role_type": "exam",
+            "width": 996,
+            "height": 962
           },
           {
-            "file": "assets/deepak_images/ch08_knee_ankle_foot_pain/p361_img1.jpeg",
-            "page": 361,
-            "fig_number": "8.5",
-            "caption_en": "Fig. 8.5: Anterior view of the knee joint showing a bipartite patella",
-            "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Anterior view of the knee joint showing a bipartite patella",
-            "category": "redflags_pathology",
-            "width": 1039,
-            "height": 664
+            "file": "assets/deepak_images/ch08_knee_ankle_foot_pain/p394_img1.jpeg",
+            "page": 394,
+            "fig_number": "8.29",
+            "caption_en": "Fig. 8.29: Assessing fibular head asymmetry",
+            "caption_vi": "🩺 Thao tác khám: Assessing fibular head asymmetry",
+            "role_type": "exam",
+            "width": 958,
+            "height": 713
           }
         ]
       },
@@ -3767,7 +4073,18 @@ const STABLE_SCREENING_FALLBACK = [
         "sensitivity": "88%",
         "specificity": "92%",
         "diagnostic_role": "Độ chính xác cao chẩn đoán U thần kinh Morton gian đốt bàn ngón chân 3-4",
-        "figures": []
+        "figures": [
+          {
+            "file": "assets/deepak_images/ch08_knee_ankle_foot_pain/p412_img1.jpeg",
+            "page": 412,
+            "fig_number": "8.55",
+            "caption_en": "Fig. 8.55: Mulder click test",
+            "caption_vi": "🩺 Thao tác khám: Mulder click test",
+            "role_type": "exam",
+            "width": 525,
+            "height": 798
+          }
+        ]
       },
       {
         "name": "Nghiệm Pháp Windlass (Windlass Test Khám Viêm Cân Gan Chân)",
@@ -3776,7 +4093,28 @@ const STABLE_SCREENING_FALLBACK = [
         "sensitivity": "32%",
         "specificity": "100%",
         "diagnostic_role": "Đặc hiệu tuyệt đối khẳng định viêm cân gan chân (Plantar Fasciitis) khi gập mu ngón cái làm căng dải cân",
-        "figures": []
+        "figures": [
+          {
+            "file": "assets/deepak_images/ch08_knee_ankle_foot_pain/p377_img2.jpeg",
+            "page": 377,
+            "fig_number": "8.14",
+            "caption_en": "Fig. 8.14: Tibial nerve and its branches",
+            "caption_vi": "🩺 Thao tác khám: Tibial nerve and its branches",
+            "role_type": "exam",
+            "width": 991,
+            "height": 752
+          },
+          {
+            "file": "assets/deepak_images/ch08_knee_ankle_foot_pain/p378_img1.jpeg",
+            "page": 378,
+            "fig_number": "8.15",
+            "caption_en": "Fig. 8.15: Tarsal tunnel",
+            "caption_vi": "🩺 Thao tác khám: Tarsal tunnel",
+            "role_type": "exam",
+            "width": 1193,
+            "height": 751
+          }
+        ]
       }
     ],
     "differential_table": [
@@ -3827,8 +4165,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 335,
         "fig_number": "8.1",
         "caption_en": "Fig. 8.1: Knee joint anterior view",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Knee joint anterior view",
-        "category": "general_atlas",
+        "caption_vi": "📸 Hình ảnh minh họa: Knee joint anterior view",
+        "role_type": "general",
         "width": 1196,
         "height": 663
       },
@@ -3837,8 +4175,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 336,
         "fig_number": "8.2",
         "caption_en": "Fig. 8.2: Primary ligaments of the knee and menisci",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Primary ligaments of the knee and menisci",
-        "category": "general_atlas",
+        "caption_vi": "📸 Hình ảnh minh họa: Primary ligaments of the knee and menisci",
+        "role_type": "general",
         "width": 1348,
         "height": 664
       },
@@ -3847,8 +4185,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 337,
         "fig_number": "8.3",
         "caption_en": "Fig. 8.3: Transverse view of the knee menisci",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Transverse view of the knee menisci",
-        "category": "general_atlas",
+        "caption_vi": "📸 Hình ảnh minh họa: Transverse view of the knee menisci",
+        "role_type": "general",
         "width": 1331,
         "height": 564
       },
@@ -3857,8 +4195,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 359,
         "fig_number": "8.4",
         "caption_en": "Fig. 8.4: Causes for patella tracking dysfunction",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Causes for patella tracking dysfunction",
-        "category": "general_atlas",
+        "caption_vi": "📸 Hình ảnh minh họa: Causes for patella tracking dysfunction",
+        "role_type": "general",
         "width": 1256,
         "height": 903
       },
@@ -3867,8 +4205,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 361,
         "fig_number": "8.5",
         "caption_en": "Fig. 8.5: Anterior view of the knee joint showing a bipartite patella",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Anterior view of the knee joint showing a bipartite patella",
-        "category": "redflags_pathology",
+        "caption_vi": "📸 Hình ảnh minh họa: Anterior view of the knee joint showing a bipartite patella",
+        "role_type": "general",
         "width": 1039,
         "height": 664
       },
@@ -3877,8 +4215,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 361,
         "fig_number": "8.5",
         "caption_en": "Fig. 8.5: Anterior view of the knee joint showing a bipartite patella",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Anterior view of the knee joint showing a bipartite patella",
-        "category": "redflags_pathology",
+        "caption_vi": "📸 Hình ảnh minh họa: Anterior view of the knee joint showing a bipartite patella",
+        "role_type": "general",
         "width": 876,
         "height": 719
       },
@@ -3887,8 +4225,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 362,
         "fig_number": "8.7",
         "caption_en": "Fig. 8.7: Osteochondral lesion over the inferior joint surface of the femur",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Osteochondral lesion over the inferior joint surface of the femur",
-        "category": "redflags_pathology",
+        "caption_vi": "📸 Hình ảnh minh họa: Osteochondral lesion over the inferior joint surface of the femur",
+        "role_type": "general",
         "width": 1003,
         "height": 664
       },
@@ -3897,8 +4235,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 364,
         "fig_number": "8.8",
         "caption_en": "Fig. 8.8: Bursitis of the knee",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Bursitis of the knee",
-        "category": "redflags_pathology",
+        "caption_vi": "📸 Hình ảnh minh họa: Bursitis of the knee",
+        "role_type": "general",
         "width": 924,
         "height": 725
       },
@@ -3907,8 +4245,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 365,
         "fig_number": "8.9",
         "caption_en": "Fig. 8.9: Types of meniscal tears",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Types of meniscal tears",
-        "category": "redflags_pathology",
+        "caption_vi": "📸 Hình ảnh minh họa: Types of meniscal tears",
+        "role_type": "general",
         "width": 1339,
         "height": 678
       },
@@ -3917,8 +4255,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 366,
         "fig_number": "8.10",
         "caption_en": "Fig. 8.10: Right thigh anterior view",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Right thigh anterior view",
-        "category": "redflags_pathology",
+        "caption_vi": "📸 Hình ảnh minh họa: Right thigh anterior view",
+        "role_type": "general",
         "width": 1315,
         "height": 903
       },
@@ -3927,8 +4265,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 367,
         "fig_number": "8.11",
         "caption_en": "Fig. 8.11: Knee plica",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Knee plica",
-        "category": "general_atlas",
+        "caption_vi": "📸 Hình ảnh minh họa: Knee plica",
+        "role_type": "general",
         "width": 798,
         "height": 663
       },
@@ -3937,8 +4275,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 369,
         "fig_number": "8.12",
         "caption_en": "Fig. 8.12: Sites for superficial nerve entrapment",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Sites for superficial nerve entrapment",
-        "category": "redflags_pathology",
+        "caption_vi": "📸 Hình ảnh minh họa: Sites for superficial nerve entrapment",
+        "role_type": "general",
         "width": 920,
         "height": 962
       },
@@ -3947,8 +4285,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 377,
         "fig_number": "8.14",
         "caption_en": "Fig. 8.14: Tibial nerve and its branches",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Tibial nerve and its branches",
-        "category": "anatomy_visceral",
+        "caption_vi": "📸 Hình ảnh minh họa: Tibial nerve and its branches",
+        "role_type": "general",
         "width": 1259,
         "height": 903
       },
@@ -3957,8 +4295,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 377,
         "fig_number": "8.14",
         "caption_en": "Fig. 8.14: Tibial nerve and its branches",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Tibial nerve and its branches",
-        "category": "anatomy_visceral",
+        "caption_vi": "📸 Hình ảnh minh họa: Tibial nerve and its branches",
+        "role_type": "general",
         "width": 991,
         "height": 752
       },
@@ -3967,8 +4305,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 378,
         "fig_number": "8.15",
         "caption_en": "Fig. 8.15: Tarsal tunnel",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Tarsal tunnel",
-        "category": "anatomy_visceral",
+        "caption_vi": "📸 Hình ảnh minh họa: Tarsal tunnel",
+        "role_type": "general",
         "width": 1193,
         "height": 751
       },
@@ -3977,8 +4315,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 380,
         "fig_number": "8.16",
         "caption_en": "Fig. 8.16: March fracture",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: March fracture",
-        "category": "redflags_pathology",
+        "caption_vi": "📸 Hình ảnh minh họa: March fracture",
+        "role_type": "general",
         "width": 1161,
         "height": 753
       },
@@ -3987,8 +4325,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 380,
         "fig_number": "8.16",
         "caption_en": "Fig. 8.16: March fracture",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: March fracture",
-        "category": "redflags_pathology",
+        "caption_vi": "📸 Hình ảnh minh họa: March fracture",
+        "role_type": "general",
         "width": 1248,
         "height": 751
       },
@@ -3997,8 +4335,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 383,
         "fig_number": "8.18",
         "caption_en": "Fig. 8.18: Osteochondral lesion of the talus",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Osteochondral lesion of the talus",
-        "category": "redflags_pathology",
+        "caption_vi": "📸 Hình ảnh minh họa: Osteochondral lesion of the talus",
+        "role_type": "general",
         "width": 1219,
         "height": 751
       },
@@ -4007,8 +4345,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 385,
         "fig_number": "8.20",
         "caption_en": "Fig. 8.20: Vulnerable ligaments in inversion sprains",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Vulnerable ligaments in inversion sprains",
-        "category": "redflags_pathology",
+        "caption_vi": "📸 Hình ảnh minh họa: Vulnerable ligaments in inversion sprains",
+        "role_type": "general",
         "width": 1194,
         "height": 752
       },
@@ -4017,8 +4355,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 385,
         "fig_number": "8.20",
         "caption_en": "Fig. 8.20: Vulnerable ligaments in inversion sprains",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Vulnerable ligaments in inversion sprains",
-        "category": "redflags_pathology",
+        "caption_vi": "📸 Hình ảnh minh họa: Vulnerable ligaments in inversion sprains",
+        "role_type": "general",
         "width": 493,
         "height": 753
       },
@@ -4027,8 +4365,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 386,
         "fig_number": "8.21",
         "caption_en": "Fig. 8.21: Location of sinus tarsi",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Location of sinus tarsi",
-        "category": "redflags_pathology",
+        "caption_vi": "📸 Hình ảnh minh họa: Location of sinus tarsi",
+        "role_type": "general",
         "width": 1018,
         "height": 693
       },
@@ -4037,8 +4375,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 387,
         "fig_number": "8.22",
         "caption_en": "Fig. 8.22: Peroneal tendon and retinaculum",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Peroneal tendon and retinaculum",
-        "category": "general_atlas",
+        "caption_vi": "📸 Hình ảnh minh họa: Peroneal tendon and retinaculum",
+        "role_type": "general",
         "width": 957,
         "height": 753
       },
@@ -4047,8 +4385,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 389,
         "fig_number": "8.23",
         "caption_en": "Fig. 8.23: Retrocalcaneal bursitis",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Retrocalcaneal bursitis",
-        "category": "redflags_pathology",
+        "caption_vi": "📸 Hình ảnh minh họa: Retrocalcaneal bursitis",
+        "role_type": "general",
         "width": 774,
         "height": 693
       },
@@ -4057,8 +4395,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 390,
         "fig_number": "8.24",
         "caption_en": "Fig. 8.24: Tendoachilles tendon",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Tendoachilles tendon",
-        "category": "redflags_pathology",
+        "caption_vi": "📸 Hình ảnh minh họa: Tendoachilles tendon",
+        "role_type": "general",
         "width": 523,
         "height": 752
       },
@@ -4067,8 +4405,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 390,
         "fig_number": "8.24",
         "caption_en": "Fig. 8.24: Tendoachilles tendon",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Tendoachilles tendon",
-        "category": "redflags_pathology",
+        "caption_vi": "📸 Hình ảnh minh họa: Tendoachilles tendon",
+        "role_type": "general",
         "width": 512,
         "height": 752
       },
@@ -4077,8 +4415,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 391,
         "fig_number": "8.26",
         "caption_en": "Fig. 8.26: Sites of impingement",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Sites of impingement",
-        "category": "redflags_pathology",
+        "caption_vi": "📸 Hình ảnh minh họa: Sites of impingement",
+        "role_type": "general",
         "width": 1199,
         "height": 753
       },
@@ -4087,8 +4425,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 392,
         "fig_number": "8.27",
         "caption_en": "Fig. 8.27: Right lower leg anterior view (EHL, extensor hallucis longus;",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Right lower leg anterior view (EHL, extensor hallucis longus;",
-        "category": "examination",
+        "caption_vi": "📸 Hình ảnh minh họa: Right lower leg anterior view (EHL, extensor hallucis longus;",
+        "role_type": "general",
         "width": 996,
         "height": 962
       },
@@ -4097,8 +4435,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 393,
         "fig_number": "8.28",
         "caption_en": "Fig. 8.28: Assessing tibial rotation",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Assessing tibial rotation",
-        "category": "examination",
+        "caption_vi": "📸 Hình ảnh minh họa: Assessing tibial rotation",
+        "role_type": "general",
         "width": 958,
         "height": 711
       },
@@ -4107,8 +4445,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 394,
         "fig_number": "8.29",
         "caption_en": "Fig. 8.29: Assessing fibular head asymmetry",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Assessing fibular head asymmetry",
-        "category": "examination",
+        "caption_vi": "📸 Hình ảnh minh họa: Assessing fibular head asymmetry",
+        "role_type": "general",
         "width": 958,
         "height": 713
       },
@@ -4117,8 +4455,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 394,
         "fig_number": "8.29",
         "caption_en": "Fig. 8.29: Assessing fibular head asymmetry",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Assessing fibular head asymmetry",
-        "category": "examination",
+        "caption_vi": "📸 Hình ảnh minh họa: Assessing fibular head asymmetry",
+        "role_type": "general",
         "width": 958,
         "height": 641
       },
@@ -4127,8 +4465,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 395,
         "fig_number": "8.31",
         "caption_en": "Fig. 8.31: Patella superolateral",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Patella superolateral",
-        "category": "examination",
+        "caption_vi": "📸 Hình ảnh minh họa: Patella superolateral",
+        "role_type": "general",
         "width": 958,
         "height": 708
       },
@@ -4137,8 +4475,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 396,
         "fig_number": "8.32",
         "caption_en": "Fig. 8.32: Subtalar neutral",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Subtalar neutral",
-        "category": "general_atlas",
+        "caption_vi": "📸 Hình ảnh minh họa: Subtalar neutral",
+        "role_type": "general",
         "width": 958,
         "height": 715
       },
@@ -4147,8 +4485,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 396,
         "fig_number": "8.32",
         "caption_en": "Fig. 8.32: Subtalar neutral",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Subtalar neutral",
-        "category": "general_atlas",
+        "caption_vi": "📸 Hình ảnh minh họa: Subtalar neutral",
+        "role_type": "general",
         "width": 681,
         "height": 543
       },
@@ -4157,8 +4495,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 396,
         "fig_number": "8.32",
         "caption_en": "Fig. 8.32: Subtalar neutral",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Subtalar neutral",
-        "category": "general_atlas",
+        "caption_vi": "📸 Hình ảnh minh họa: Subtalar neutral",
+        "role_type": "general",
         "width": 292,
         "height": 544
       },
@@ -4167,8 +4505,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 396,
         "fig_number": "8.32",
         "caption_en": "Fig. 8.32: Subtalar neutral",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Subtalar neutral",
-        "category": "general_atlas",
+        "caption_vi": "📸 Hình ảnh minh họa: Subtalar neutral",
+        "role_type": "general",
         "width": 280,
         "height": 543
       },
@@ -4177,8 +4515,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 397,
         "fig_number": "8.36",
         "caption_en": "Fig. 8.36: Plantar flexed talus",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Plantar flexed talus",
-        "category": "general_atlas",
+        "caption_vi": "📸 Hình ảnh minh họa: Plantar flexed talus",
+        "role_type": "general",
         "width": 958,
         "height": 711
       },
@@ -4187,8 +4525,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 397,
         "fig_number": "8.36",
         "caption_en": "Fig. 8.36: Plantar flexed talus",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Plantar flexed talus",
-        "category": "general_atlas",
+        "caption_vi": "📸 Hình ảnh minh họa: Plantar flexed talus",
+        "role_type": "general",
         "width": 280,
         "height": 544
       },
@@ -4197,8 +4535,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 398,
         "fig_number": "8.37",
         "caption_en": "Fig. 8.37: Inversion/eversion of calcaneus",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Inversion/eversion of calcaneus",
-        "category": "general_atlas",
+        "caption_vi": "📸 Hình ảnh minh họa: Inversion/eversion of calcaneus",
+        "role_type": "general",
         "width": 958,
         "height": 717
       },
@@ -4207,8 +4545,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 399,
         "fig_number": "8.38",
         "caption_en": "Fig. 8.38: Midfoot rotation",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Midfoot rotation",
-        "category": "examination",
+        "caption_vi": "📸 Hình ảnh minh họa: Midfoot rotation",
+        "role_type": "general",
         "width": 958,
         "height": 710
       },
@@ -4217,8 +4555,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 400,
         "fig_number": "8.39",
         "caption_en": "Fig. 8.39: Assessment of the first ray",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Assessment of the first ray",
-        "category": "examination",
+        "caption_vi": "📸 Hình ảnh minh họa: Assessment of the first ray",
+        "role_type": "general",
         "width": 958,
         "height": 711
       },
@@ -4227,8 +4565,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 401,
         "fig_number": "8.41",
         "caption_en": "Fig. 8.41: Tenderness over the lateral retinaculum",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Tenderness over the lateral retinaculum",
-        "category": "examination",
+        "caption_vi": "📸 Hình ảnh minh họa: Tenderness over the lateral retinaculum",
+        "role_type": "general",
         "width": 958,
         "height": 638
       },
@@ -4237,8 +4575,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 401,
         "fig_number": "8.41",
         "caption_en": "Fig. 8.41: Tenderness over the lateral retinaculum",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Tenderness over the lateral retinaculum",
-        "category": "examination",
+        "caption_vi": "📸 Hình ảnh minh họa: Tenderness over the lateral retinaculum",
+        "role_type": "general",
         "width": 958,
         "height": 579
       },
@@ -4247,8 +4585,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 401,
         "fig_number": "8.41",
         "caption_en": "Fig. 8.41: Tenderness over the lateral retinaculum",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Tenderness over the lateral retinaculum",
-        "category": "examination",
+        "caption_vi": "📸 Hình ảnh minh họa: Tenderness over the lateral retinaculum",
+        "role_type": "general",
         "width": 958,
         "height": 558
       },
@@ -4257,8 +4595,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 402,
         "fig_number": "8.43",
         "caption_en": "Fig. 8.43: Active knee extension lag",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Active knee extension lag",
-        "category": "general_atlas",
+        "caption_vi": "📸 Hình ảnh minh họa: Active knee extension lag",
+        "role_type": "general",
         "width": 958,
         "height": 697
       },
@@ -4267,8 +4605,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 402,
         "fig_number": "8.43",
         "caption_en": "Fig. 8.43: Active knee extension lag",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Active knee extension lag",
-        "category": "general_atlas",
+        "caption_vi": "📸 Hình ảnh minh họa: Active knee extension lag",
+        "role_type": "general",
         "width": 958,
         "height": 640
       },
@@ -4277,8 +4615,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 403,
         "fig_number": "8.44A and B",
         "caption_en": "Figs 8.44A and B: Photographs showing: A. A positive ‘active lag’ on the right;",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Photographs showing: A. A positive ‘active lag’ on the right;",
-        "category": "examination",
+        "caption_vi": "📸 Hình ảnh minh họa: Photographs showing: A. A positive ‘active lag’ on the right;",
+        "role_type": "general",
         "width": 958,
         "height": 713
       },
@@ -4287,8 +4625,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 403,
         "fig_number": "8.44A and B",
         "caption_en": "Figs 8.44A and B: Photographs showing: A. A positive ‘active lag’ on the right;",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Photographs showing: A. A positive ‘active lag’ on the right;",
-        "category": "examination",
+        "caption_vi": "📸 Hình ảnh minh họa: Photographs showing: A. A positive ‘active lag’ on the right;",
+        "role_type": "general",
         "width": 958,
         "height": 713
       },
@@ -4297,8 +4635,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 404,
         "fig_number": "8.45",
         "caption_en": "Fig. 8.45: Apprehension sign",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Apprehension sign",
-        "category": "examination",
+        "caption_vi": "📸 Hình ảnh minh họa: Apprehension sign",
+        "role_type": "general",
         "width": 958,
         "height": 638
       },
@@ -4307,8 +4645,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 405,
         "fig_number": "8.46A and B",
         "caption_en": "Fig. 8.46A and B: Hoffa’s test",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Hoffa’s test",
-        "category": "examination",
+        "caption_vi": "📸 Hình ảnh minh họa: Hoffa’s test",
+        "role_type": "general",
         "width": 958,
         "height": 683
       },
@@ -4317,8 +4655,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 405,
         "fig_number": "8.46A and B",
         "caption_en": "Fig. 8.46A and B: Hoffa’s test",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Hoffa’s test",
-        "category": "examination",
+        "caption_vi": "📸 Hình ảnh minh họa: Hoffa’s test",
+        "role_type": "general",
         "width": 958,
         "height": 723
       },
@@ -4327,8 +4665,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 406,
         "fig_number": "8.47",
         "caption_en": "Fig. 8.47: McMurray’s test",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: McMurray’s test",
-        "category": "examination",
+        "caption_vi": "📸 Hình ảnh minh họa: McMurray’s test",
+        "role_type": "general",
         "width": 958,
         "height": 721
       },
@@ -4337,8 +4675,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 406,
         "fig_number": "8.47",
         "caption_en": "Fig. 8.47: McMurray’s test",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: McMurray’s test",
-        "category": "examination",
+        "caption_vi": "📸 Hình ảnh minh họa: McMurray’s test",
+        "role_type": "general",
         "width": 462,
         "height": 798
       },
@@ -4347,8 +4685,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 406,
         "fig_number": "8.47",
         "caption_en": "Fig. 8.47: McMurray’s test",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: McMurray’s test",
-        "category": "examination",
+        "caption_vi": "📸 Hình ảnh minh họa: McMurray’s test",
+        "role_type": "general",
         "width": 523,
         "height": 798
       },
@@ -4357,8 +4695,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 407,
         "fig_number": "8.49",
         "caption_en": "Fig. 8.49: Lachman test",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Lachman test",
-        "category": "examination",
+        "caption_vi": "📸 Hình ảnh minh họa: Lachman test",
+        "role_type": "general",
         "width": 958,
         "height": 650
       },
@@ -4367,8 +4705,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 407,
         "fig_number": "8.49",
         "caption_en": "Fig. 8.49: Lachman test",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Lachman test",
-        "category": "examination",
+        "caption_vi": "📸 Hình ảnh minh họa: Lachman test",
+        "role_type": "general",
         "width": 958,
         "height": 639
       },
@@ -4377,8 +4715,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 407,
         "fig_number": "8.49",
         "caption_en": "Fig. 8.49: Lachman test",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Lachman test",
-        "category": "examination",
+        "caption_vi": "📸 Hình ảnh minh họa: Lachman test",
+        "role_type": "general",
         "width": 958,
         "height": 805
       },
@@ -4387,8 +4725,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 408,
         "fig_number": "8.51A and B",
         "caption_en": "Figs 8.51A and B: Plica test",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Plica test",
-        "category": "examination",
+        "caption_vi": "📸 Hình ảnh minh họa: Plica test",
+        "role_type": "general",
         "width": 958,
         "height": 738
       },
@@ -4397,8 +4735,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 408,
         "fig_number": "8.51A and B",
         "caption_en": "Figs 8.51A and B: Plica test",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Plica test",
-        "category": "examination",
+        "caption_vi": "📸 Hình ảnh minh họa: Plica test",
+        "role_type": "general",
         "width": 958,
         "height": 693
       },
@@ -4407,8 +4745,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 410,
         "fig_number": "8.52A to C",
         "caption_en": "Figs 8.52A to C: Drawer’s test with variations",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Drawer’s test with variations",
-        "category": "examination",
+        "caption_vi": "📸 Hình ảnh minh họa: Drawer’s test with variations",
+        "role_type": "general",
         "width": 958,
         "height": 665
       },
@@ -4417,8 +4755,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 410,
         "fig_number": "8.52A to C",
         "caption_en": "Figs 8.52A to C: Drawer’s test with variations",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Drawer’s test with variations",
-        "category": "examination",
+        "caption_vi": "📸 Hình ảnh minh họa: Drawer’s test with variations",
+        "role_type": "general",
         "width": 958,
         "height": 631
       },
@@ -4427,8 +4765,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 410,
         "fig_number": "8.52A to C",
         "caption_en": "Figs 8.52A to C: Drawer’s test with variations",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Drawer’s test with variations",
-        "category": "examination",
+        "caption_vi": "📸 Hình ảnh minh họa: Drawer’s test with variations",
+        "role_type": "general",
         "width": 865,
         "height": 798
       },
@@ -4437,8 +4775,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 411,
         "fig_number": "8.53A and B",
         "caption_en": "Figs 8.53A and B: Pivot shift maneuver",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Pivot shift maneuver",
-        "category": "examination",
+        "caption_vi": "📸 Hình ảnh minh họa: Pivot shift maneuver",
+        "role_type": "general",
         "width": 958,
         "height": 706
       },
@@ -4447,8 +4785,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 411,
         "fig_number": "8.53A and B",
         "caption_en": "Figs 8.53A and B: Pivot shift maneuver",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Pivot shift maneuver",
-        "category": "examination",
+        "caption_vi": "📸 Hình ảnh minh họa: Pivot shift maneuver",
+        "role_type": "general",
         "width": 958,
         "height": 725
       },
@@ -4457,8 +4795,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 411,
         "fig_number": "8.53A and B",
         "caption_en": "Figs 8.53A and B: Pivot shift maneuver",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Pivot shift maneuver",
-        "category": "examination",
+        "caption_vi": "📸 Hình ảnh minh họa: Pivot shift maneuver",
+        "role_type": "general",
         "width": 958,
         "height": 630
       },
@@ -4467,8 +4805,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 412,
         "fig_number": "8.55",
         "caption_en": "Fig. 8.55: Mulder click test",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Mulder click test",
-        "category": "examination",
+        "caption_vi": "📸 Hình ảnh minh họa: Mulder click test",
+        "role_type": "general",
         "width": 525,
         "height": 798
       },
@@ -4477,8 +4815,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 412,
         "fig_number": "8.55",
         "caption_en": "Fig. 8.55: Mulder click test",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Mulder click test",
-        "category": "examination",
+        "caption_vi": "📸 Hình ảnh minh họa: Mulder click test",
+        "role_type": "general",
         "width": 958,
         "height": 700
       },
@@ -4487,8 +4825,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 413,
         "fig_number": "8.57",
         "caption_en": "Fig. 8.57: External rotation stress test",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: External rotation stress test",
-        "category": "examination",
+        "caption_vi": "📸 Hình ảnh minh họa: External rotation stress test",
+        "role_type": "general",
         "width": 958,
         "height": 639
       }
@@ -4590,13 +4928,55 @@ const STABLE_SCREENING_FALLBACK = [
         "category": "Nhiễm Trùng Bao Gân Kanavel & Khoang Sâu Bàn Tay",
         "signs": "Ngón tay xúc xích, đau dữ dội khi duỗi ngón, sưng phồng ô mô cái / gan tay.",
         "action": "Rạch mổ dẫn lưu cấp cứu Ngoại chấn thương bàn tay.",
-        "figures": []
+        "figures": [
+          {
+            "file": "assets/deepak_images/ch10_elbow_wrist_hand_pain/p491_img1.jpeg",
+            "page": 491,
+            "fig_number": "10.9",
+            "caption_en": "Fig. 10.9: Olecranon bursa (arrow)",
+            "caption_vi": "🚨 Phim X-quang / Cờ đỏ: Olecranon bursa (arrow)",
+            "role_type": "redflag",
+            "width": 668,
+            "height": 603
+          },
+          {
+            "file": "assets/deepak_images/ch10_elbow_wrist_hand_pain/p496_img1.jpeg",
+            "page": 496,
+            "fig_number": "10.14",
+            "caption_en": "Fig. 10.14: Ulnar collateral ligament tear",
+            "caption_vi": "🚨 Phim X-quang / Cờ đỏ: Ulnar collateral ligament tear",
+            "role_type": "redflag",
+            "width": 890,
+            "height": 903
+          }
+        ]
       },
       {
         "category": "Tắc Mạch / Hoại Tử Ngón Tay (Raynaud Nặng / Allen Test Bất Thường)",
         "signs": "Ngón tay tím tái hoặc đen hoại tử đầu ngón, loét trợt, Allen test cho thấy tắc động mạch quay hoặc trụ.",
         "action": "Chuyển Phẫu thuật Mạch máu, khảo sát Doppler mạch ngọn chi.",
-        "figures": []
+        "figures": [
+          {
+            "file": "assets/deepak_images/ch10_elbow_wrist_hand_pain/p473_img1.png",
+            "page": 473,
+            "fig_number": "10.4",
+            "caption_en": "Fig. 10.4: Right wrist and hand (palmar view)",
+            "caption_vi": "🚨 Phim X-quang / Cờ đỏ: Right wrist and hand (palmar view)",
+            "role_type": "redflag",
+            "width": 1275,
+            "height": 903
+          },
+          {
+            "file": "assets/deepak_images/ch10_elbow_wrist_hand_pain/p499_img1.jpeg",
+            "page": 499,
+            "fig_number": "10.16",
+            "caption_en": "Fig. 10.16: Guyon’s canal",
+            "caption_vi": "🚨 Phim X-quang / Cờ đỏ: Guyon’s canal",
+            "role_type": "redflag",
+            "width": 835,
+            "height": 903
+          }
+        ]
       }
     ],
     "visceral_referrals": [
@@ -4604,7 +4984,28 @@ const STABLE_SCREENING_FALLBACK = [
         "source": "Đau Rễ Cổ C6 - C7 - C8 (Cervical Radiculopathy)",
         "pattern": "Đau lan từ cổ gáy dọc xuống chi trên: Rễ C6 đau lan ra ngón cái và ngón trỏ (dễ nhầm với De Quervain và HC ống cổ tay); Rễ C7 đau ngón giữa; Rễ C8 đau ngón út và bờ trụ bàn tay (dễ nhầm với HC ống Guyon).",
         "differential": "Khám Spurling cổ (+), nghiệm pháp căng đám rối cánh tay ULTT (+), cử động gập duỗi cổ tay không làm thay đổi triệu chứng.",
-        "figures": []
+        "figures": [
+          {
+            "file": "assets/deepak_images/ch10_elbow_wrist_hand_pain/p467_img1.jpeg",
+            "page": 467,
+            "fig_number": "10.1",
+            "caption_en": "Fig. 10.1: Elbow joint medial aspect",
+            "caption_vi": "🫀 Chuyển đau tạng / Giải phẫu: Elbow joint medial aspect",
+            "role_type": "visceral",
+            "width": 1044,
+            "height": 589
+          },
+          {
+            "file": "assets/deepak_images/ch10_elbow_wrist_hand_pain/p468_img1.png",
+            "page": 468,
+            "fig_number": "10.2",
+            "caption_en": "Fig. 10.2: Elbow joint lateral aspect",
+            "caption_vi": "🫀 Chuyển đau tạng / Giải phẫu: Elbow joint lateral aspect",
+            "role_type": "visceral",
+            "width": 1061,
+            "height": 601
+          }
+        ]
       }
     ],
     "drug_induced": [
@@ -4622,24 +5023,14 @@ const STABLE_SCREENING_FALLBACK = [
         "diagnostic_role": "Sàng lọc viêm lồi cầu ngoài xương cánh tay (Lateral Epicondylalgia / Tennis Elbow)",
         "figures": [
           {
-            "file": "assets/deepak_images/ch10_elbow_wrist_hand_pain/p468_img1.png",
-            "page": 468,
-            "fig_number": "10.2",
-            "caption_en": "Fig. 10.2: Elbow joint lateral aspect",
-            "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Elbow joint lateral aspect",
-            "category": "general_atlas",
-            "width": 1061,
-            "height": 601
-          },
-          {
-            "file": "assets/deepak_images/ch10_elbow_wrist_hand_pain/p468_img2.png",
-            "page": 468,
-            "fig_number": "10.2",
-            "caption_en": "Fig. 10.2: Elbow joint lateral aspect",
-            "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Elbow joint lateral aspect",
-            "category": "general_atlas",
-            "width": 956,
-            "height": 659
+            "file": "assets/deepak_images/ch10_elbow_wrist_hand_pain/p507_img2.jpeg",
+            "page": 507,
+            "fig_number": "10.26",
+            "caption_en": "Fig. 10.26: Finkelstein’s test",
+            "caption_vi": "🩺 Thao tác khám: Finkelstein’s test",
+            "role_type": "exam",
+            "width": 958,
+            "height": 798
           }
         ]
       },
@@ -4652,24 +5043,14 @@ const STABLE_SCREENING_FALLBACK = [
         "diagnostic_role": "Kéo căng thụ động gân cơ duỗi cổ tay quay ngắn để khẳng định tổn thương lồi cầu ngoài",
         "figures": [
           {
-            "file": "assets/deepak_images/ch10_elbow_wrist_hand_pain/p468_img1.png",
-            "page": 468,
-            "fig_number": "10.2",
-            "caption_en": "Fig. 10.2: Elbow joint lateral aspect",
-            "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Elbow joint lateral aspect",
-            "category": "general_atlas",
-            "width": 1061,
-            "height": 601
-          },
-          {
-            "file": "assets/deepak_images/ch10_elbow_wrist_hand_pain/p468_img2.png",
-            "page": 468,
-            "fig_number": "10.2",
-            "caption_en": "Fig. 10.2: Elbow joint lateral aspect",
-            "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Elbow joint lateral aspect",
-            "category": "general_atlas",
-            "width": 956,
-            "height": 659
+            "file": "assets/deepak_images/ch10_elbow_wrist_hand_pain/p493_img1.jpeg",
+            "page": 493,
+            "fig_number": "10.12",
+            "caption_en": "Fig. 10.12: Common extensor origin",
+            "caption_vi": "🩺 Thao tác khám: Common extensor origin",
+            "role_type": "exam",
+            "width": 1089,
+            "height": 603
           }
         ]
       },
@@ -4680,7 +5061,18 @@ const STABLE_SCREENING_FALLBACK = [
         "sensitivity": "88%",
         "specificity": "74%",
         "diagnostic_role": "Khu trú tổn thương cơ duỗi chung các ngón và ECRB",
-        "figures": []
+        "figures": [
+          {
+            "file": "assets/deepak_images/ch10_elbow_wrist_hand_pain/p508_img1.jpeg",
+            "page": 508,
+            "fig_number": "10.29",
+            "caption_en": "Fig. 10.29: Radiocapitellar chondromalacia test hand placement",
+            "caption_vi": "🩺 Thao tác khám: Radiocapitellar chondromalacia test hand placement",
+            "role_type": "exam",
+            "width": 958,
+            "height": 626
+          }
+        ]
       },
       {
         "name": "Nghiệm Pháp Phalen & Phalen Ngược (Phalen & Prayer Sign Khám Hội Chứng Ống Cổ Tay)",
@@ -4691,24 +5083,24 @@ const STABLE_SCREENING_FALLBACK = [
         "diagnostic_role": "Khám kích thích thiếu máu thần kinh giữa trong ống cổ tay khi gập cổ tay 90 độ",
         "figures": [
           {
-            "file": "assets/deepak_images/ch10_elbow_wrist_hand_pain/p500_img1.jpeg",
-            "page": 500,
-            "fig_number": "10.17",
-            "caption_en": "Fig. 10.17: Carpal tunnel",
-            "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Carpal tunnel",
-            "category": "general_atlas",
-            "width": 986,
-            "height": 903
-          },
-          {
             "file": "assets/deepak_images/ch10_elbow_wrist_hand_pain/p504_img1.jpeg",
             "page": 504,
             "fig_number": "10.21",
             "caption_en": "Fig. 10.21: Joint play assessment",
-            "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Joint play assessment",
-            "category": "examination",
+            "caption_vi": "🩺 Thao tác khám: Joint play assessment",
+            "role_type": "exam",
             "width": 958,
             "height": 718
+          },
+          {
+            "file": "assets/deepak_images/ch10_elbow_wrist_hand_pain/p505_img1.jpeg",
+            "page": 505,
+            "fig_number": "10.22",
+            "caption_en": "Fig. 10.22: Prayer sign",
+            "caption_vi": "🩺 Thao tác khám: Prayer sign",
+            "role_type": "exam",
+            "width": 958,
+            "height": 637
           }
         ]
       },
@@ -4725,20 +5117,10 @@ const STABLE_SCREENING_FALLBACK = [
             "page": 500,
             "fig_number": "10.17",
             "caption_en": "Fig. 10.17: Carpal tunnel",
-            "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Carpal tunnel",
-            "category": "general_atlas",
+            "caption_vi": "🩺 Thao tác khám: Carpal tunnel",
+            "role_type": "exam",
             "width": 986,
             "height": 903
-          },
-          {
-            "file": "assets/deepak_images/ch10_elbow_wrist_hand_pain/p504_img1.jpeg",
-            "page": 504,
-            "fig_number": "10.21",
-            "caption_en": "Fig. 10.21: Joint play assessment",
-            "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Joint play assessment",
-            "category": "examination",
-            "width": 958,
-            "height": 718
           }
         ]
       },
@@ -4751,24 +5133,24 @@ const STABLE_SCREENING_FALLBACK = [
         "diagnostic_role": "Đánh giá tái sinh sợi trục thần kinh hoặc chèn ép thần kinh giữa / thần kinh trụ",
         "figures": [
           {
-            "file": "assets/deepak_images/ch10_elbow_wrist_hand_pain/p500_img1.jpeg",
-            "page": 500,
-            "fig_number": "10.17",
-            "caption_en": "Fig. 10.17: Carpal tunnel",
-            "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Carpal tunnel",
-            "category": "general_atlas",
-            "width": 986,
-            "height": 903
+            "file": "assets/deepak_images/ch10_elbow_wrist_hand_pain/p488_img1.jpeg",
+            "page": 488,
+            "fig_number": "10.7",
+            "caption_en": "Fig. 10.7: Cubital tunnel",
+            "caption_vi": "🩺 Thao tác khám: Cubital tunnel",
+            "role_type": "exam",
+            "width": 932,
+            "height": 603
           },
           {
-            "file": "assets/deepak_images/ch10_elbow_wrist_hand_pain/p504_img1.jpeg",
-            "page": 504,
-            "fig_number": "10.21",
-            "caption_en": "Fig. 10.21: Joint play assessment",
-            "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Joint play assessment",
-            "category": "examination",
-            "width": 958,
-            "height": 718
+            "file": "assets/deepak_images/ch10_elbow_wrist_hand_pain/p497_img1.png",
+            "page": 497,
+            "fig_number": "10.15",
+            "caption_en": "Fig. 10.15: Sites of irritation of the median nerve",
+            "caption_vi": "🩺 Thao tác khám: Sites of irritation of the median nerve",
+            "role_type": "exam",
+            "width": 917,
+            "height": 903
           }
         ]
       },
@@ -4781,24 +5163,14 @@ const STABLE_SCREENING_FALLBACK = [
         "diagnostic_role": "Tiêu chuẩn vàng chẩn đoán Viêm bao gân mỏm trâm quay De Quervain (Ngăn duỗi số 1)",
         "figures": [
           {
-            "file": "assets/deepak_images/ch10_elbow_wrist_hand_pain/p493_img1.jpeg",
-            "page": 493,
-            "fig_number": "10.12",
-            "caption_en": "Fig. 10.12: Common extensor origin",
-            "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Common extensor origin",
-            "category": "general_atlas",
-            "width": 1089,
-            "height": 603
-          },
-          {
-            "file": "assets/deepak_images/ch10_elbow_wrist_hand_pain/p496_img1.jpeg",
-            "page": 496,
-            "fig_number": "10.14",
-            "caption_en": "Fig. 10.14: Ulnar collateral ligament tear",
-            "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Ulnar collateral ligament tear",
-            "category": "redflags_pathology",
-            "width": 890,
-            "height": 903
+            "file": "assets/deepak_images/ch10_elbow_wrist_hand_pain/p506_img2.jpeg",
+            "page": 506,
+            "fig_number": "10.24",
+            "caption_en": "Fig. 10.24: Valgus stress",
+            "caption_vi": "🩺 Thao tác khám: Valgus stress",
+            "role_type": "exam",
+            "width": 958,
+            "height": 718
           }
         ]
       },
@@ -4809,7 +5181,18 @@ const STABLE_SCREENING_FALLBACK = [
         "sensitivity": "92%",
         "specificity": "88%",
         "diagnostic_role": "Đánh giá sự thông suốt của cung động mạch quay - trụ trước các thủ thuật xâm lấn cổ bàn tay",
-        "figures": []
+        "figures": [
+          {
+            "file": "assets/deepak_images/ch10_elbow_wrist_hand_pain/p473_img1.png",
+            "page": 473,
+            "fig_number": "10.4",
+            "caption_en": "Fig. 10.4: Right wrist and hand (palmar view)",
+            "caption_vi": "🩺 Thao tác khám: Right wrist and hand (palmar view)",
+            "role_type": "exam",
+            "width": 1275,
+            "height": 903
+          }
+        ]
       }
     ],
     "differential_table": [
@@ -4860,8 +5243,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 467,
         "fig_number": "10.1",
         "caption_en": "Fig. 10.1: Elbow joint medial aspect",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Elbow joint medial aspect",
-        "category": "general_atlas",
+        "caption_vi": "📸 Hình ảnh minh họa: Elbow joint medial aspect",
+        "role_type": "general",
         "width": 1044,
         "height": 589
       },
@@ -4870,8 +5253,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 468,
         "fig_number": "10.2",
         "caption_en": "Fig. 10.2: Elbow joint lateral aspect",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Elbow joint lateral aspect",
-        "category": "general_atlas",
+        "caption_vi": "📸 Hình ảnh minh họa: Elbow joint lateral aspect",
+        "role_type": "general",
         "width": 1061,
         "height": 601
       },
@@ -4880,8 +5263,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 468,
         "fig_number": "10.2",
         "caption_en": "Fig. 10.2: Elbow joint lateral aspect",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Elbow joint lateral aspect",
-        "category": "general_atlas",
+        "caption_vi": "📸 Hình ảnh minh họa: Elbow joint lateral aspect",
+        "role_type": "general",
         "width": 956,
         "height": 659
       },
@@ -4890,8 +5273,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 473,
         "fig_number": "10.4",
         "caption_en": "Fig. 10.4: Right wrist and hand (palmar view)",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Right wrist and hand (palmar view)",
-        "category": "general_atlas",
+        "caption_vi": "📸 Hình ảnh minh họa: Right wrist and hand (palmar view)",
+        "role_type": "general",
         "width": 1275,
         "height": 903
       },
@@ -4900,8 +5283,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 487,
         "fig_number": "10.5",
         "caption_en": "Fig. 10.5: Common flexor origin",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Common flexor origin",
-        "category": "general_atlas",
+        "caption_vi": "📸 Hình ảnh minh họa: Common flexor origin",
+        "role_type": "general",
         "width": 946,
         "height": 604
       },
@@ -4910,8 +5293,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 487,
         "fig_number": "10.5",
         "caption_en": "Fig. 10.5: Common flexor origin",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Common flexor origin",
-        "category": "general_atlas",
+        "caption_vi": "📸 Hình ảnh minh họa: Common flexor origin",
+        "role_type": "general",
         "width": 926,
         "height": 603
       },
@@ -4920,8 +5303,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 488,
         "fig_number": "10.7",
         "caption_en": "Fig. 10.7: Cubital tunnel",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Cubital tunnel",
-        "category": "general_atlas",
+        "caption_vi": "📸 Hình ảnh minh họa: Cubital tunnel",
+        "role_type": "general",
         "width": 932,
         "height": 603
       },
@@ -4930,8 +5313,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 489,
         "fig_number": "10.8",
         "caption_en": "Fig. 10.8: Triangular fibrocartilage complex (arrow)",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Triangular fibrocartilage complex (arrow)",
-        "category": "general_atlas",
+        "caption_vi": "📸 Hình ảnh minh họa: Triangular fibrocartilage complex (arrow)",
+        "role_type": "general",
         "width": 658,
         "height": 903
       },
@@ -4940,8 +5323,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 491,
         "fig_number": "10.9",
         "caption_en": "Fig. 10.9: Olecranon bursa (arrow)",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Olecranon bursa (arrow)",
-        "category": "general_atlas",
+        "caption_vi": "📸 Hình ảnh minh họa: Olecranon bursa (arrow)",
+        "role_type": "general",
         "width": 668,
         "height": 603
       },
@@ -4950,8 +5333,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 491,
         "fig_number": "10.9",
         "caption_en": "Fig. 10.9: Olecranon bursa (arrow)",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Olecranon bursa (arrow)",
-        "category": "general_atlas",
+        "caption_vi": "📸 Hình ảnh minh họa: Olecranon bursa (arrow)",
+        "role_type": "general",
         "width": 515,
         "height": 607
       },
@@ -4960,8 +5343,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 492,
         "fig_number": "10.11",
         "caption_en": "Fig. 10.11: Intersection syndrome (Abbreviations: APL, Abductor pollicis longus;",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Intersection syndrome (Abbreviations: APL, Abductor pollicis longus;",
-        "category": "general_atlas",
+        "caption_vi": "📸 Hình ảnh minh họa: Intersection syndrome (Abbreviations: APL, Abductor pollicis longus;",
+        "role_type": "general",
         "width": 1157,
         "height": 904
       },
@@ -4970,8 +5353,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 493,
         "fig_number": "10.12",
         "caption_en": "Fig. 10.12: Common extensor origin",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Common extensor origin",
-        "category": "general_atlas",
+        "caption_vi": "📸 Hình ảnh minh họa: Common extensor origin",
+        "role_type": "general",
         "width": 1089,
         "height": 603
       },
@@ -4980,8 +5363,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 494,
         "fig_number": "10.13",
         "caption_en": "Fig. 10.13: Radial tunnel",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Radial tunnel",
-        "category": "general_atlas",
+        "caption_vi": "📸 Hình ảnh minh họa: Radial tunnel",
+        "role_type": "general",
         "width": 925,
         "height": 604
       },
@@ -4990,8 +5373,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 496,
         "fig_number": "10.14",
         "caption_en": "Fig. 10.14: Ulnar collateral ligament tear",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Ulnar collateral ligament tear",
-        "category": "redflags_pathology",
+        "caption_vi": "📸 Hình ảnh minh họa: Ulnar collateral ligament tear",
+        "role_type": "general",
         "width": 890,
         "height": 903
       },
@@ -5000,8 +5383,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 497,
         "fig_number": "10.15",
         "caption_en": "Fig. 10.15: Sites of irritation of the median nerve",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Sites of irritation of the median nerve",
-        "category": "redflags_pathology",
+        "caption_vi": "📸 Hình ảnh minh họa: Sites of irritation of the median nerve",
+        "role_type": "general",
         "width": 917,
         "height": 903
       },
@@ -5010,8 +5393,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 499,
         "fig_number": "10.16",
         "caption_en": "Fig. 10.16: Guyon’s canal",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Guyon’s canal",
-        "category": "general_atlas",
+        "caption_vi": "📸 Hình ảnh minh họa: Guyon’s canal",
+        "role_type": "general",
         "width": 835,
         "height": 903
       },
@@ -5020,8 +5403,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 500,
         "fig_number": "10.17",
         "caption_en": "Fig. 10.17: Carpal tunnel",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Carpal tunnel",
-        "category": "general_atlas",
+        "caption_vi": "📸 Hình ảnh minh họa: Carpal tunnel",
+        "role_type": "general",
         "width": 986,
         "height": 903
       },
@@ -5030,8 +5413,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 502,
         "fig_number": "10.18",
         "caption_en": "Fig. 10.18: Radial head superior/inferior",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Radial head superior/inferior",
-        "category": "general_atlas",
+        "caption_vi": "📸 Hình ảnh minh họa: Radial head superior/inferior",
+        "role_type": "general",
         "width": 958,
         "height": 716
       },
@@ -5040,8 +5423,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 503,
         "fig_number": "10.20",
         "caption_en": "Fig. 10.20: Lunate anterior",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Lunate anterior",
-        "category": "examination",
+        "caption_vi": "📸 Hình ảnh minh họa: Lunate anterior",
+        "role_type": "general",
         "width": 958,
         "height": 715
       },
@@ -5050,8 +5433,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 503,
         "fig_number": "10.20",
         "caption_en": "Fig. 10.20: Lunate anterior",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Lunate anterior",
-        "category": "examination",
+        "caption_vi": "📸 Hình ảnh minh họa: Lunate anterior",
+        "role_type": "general",
         "width": 958,
         "height": 701
       },
@@ -5060,8 +5443,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 504,
         "fig_number": "10.21",
         "caption_en": "Fig. 10.21: Joint play assessment",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Joint play assessment",
-        "category": "examination",
+        "caption_vi": "📸 Hình ảnh minh họa: Joint play assessment",
+        "role_type": "general",
         "width": 958,
         "height": 718
       },
@@ -5070,8 +5453,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 505,
         "fig_number": "10.22",
         "caption_en": "Fig. 10.22: Prayer sign",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Prayer sign",
-        "category": "examination",
+        "caption_vi": "📸 Hình ảnh minh họa: Prayer sign",
+        "role_type": "general",
         "width": 958,
         "height": 637
       },
@@ -5080,8 +5463,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 505,
         "fig_number": "10.22",
         "caption_en": "Fig. 10.22: Prayer sign",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Prayer sign",
-        "category": "examination",
+        "caption_vi": "📸 Hình ảnh minh họa: Prayer sign",
+        "role_type": "general",
         "width": 895,
         "height": 798
       },
@@ -5090,8 +5473,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 506,
         "fig_number": "10.24",
         "caption_en": "Fig. 10.24: Valgus stress",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Valgus stress",
-        "category": "examination",
+        "caption_vi": "📸 Hình ảnh minh họa: Valgus stress",
+        "role_type": "general",
         "width": 958,
         "height": 735
       },
@@ -5100,8 +5483,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 506,
         "fig_number": "10.24",
         "caption_en": "Fig. 10.24: Valgus stress",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Valgus stress",
-        "category": "examination",
+        "caption_vi": "📸 Hình ảnh minh họa: Valgus stress",
+        "role_type": "general",
         "width": 958,
         "height": 718
       },
@@ -5110,8 +5493,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 507,
         "fig_number": "10.26",
         "caption_en": "Fig. 10.26: Finkelstein’s test",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Finkelstein’s test",
-        "category": "examination",
+        "caption_vi": "📸 Hình ảnh minh họa: Finkelstein’s test",
+        "role_type": "general",
         "width": 958,
         "height": 590
       },
@@ -5120,8 +5503,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 507,
         "fig_number": "10.26",
         "caption_en": "Fig. 10.26: Finkelstein’s test",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Finkelstein’s test",
-        "category": "examination",
+        "caption_vi": "📸 Hình ảnh minh họa: Finkelstein’s test",
+        "role_type": "general",
         "width": 958,
         "height": 798
       },
@@ -5130,8 +5513,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 508,
         "fig_number": "10.29",
         "caption_en": "Fig. 10.29: Radiocapitellar chondromalacia test hand placement",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Radiocapitellar chondromalacia test hand placement",
-        "category": "examination",
+        "caption_vi": "📸 Hình ảnh minh họa: Radiocapitellar chondromalacia test hand placement",
+        "role_type": "general",
         "width": 958,
         "height": 626
       },
@@ -5140,8 +5523,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 508,
         "fig_number": "10.29",
         "caption_en": "Fig. 10.29: Radiocapitellar chondromalacia test hand placement",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Radiocapitellar chondromalacia test hand placement",
-        "category": "examination",
+        "caption_vi": "📸 Hình ảnh minh họa: Radiocapitellar chondromalacia test hand placement",
+        "role_type": "general",
         "width": 958,
         "height": 630
       },
@@ -5150,8 +5533,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 509,
         "fig_number": "10.30",
         "caption_en": "Fig. 10.30: Radiocapitellar chondromalacia test",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Radiocapitellar chondromalacia test",
-        "category": "examination",
+        "caption_vi": "📸 Hình ảnh minh họa: Radiocapitellar chondromalacia test",
+        "role_type": "general",
         "width": 958,
         "height": 703
       },
@@ -5160,8 +5543,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 509,
         "fig_number": "10.30",
         "caption_en": "Fig. 10.30: Radiocapitellar chondromalacia test",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Radiocapitellar chondromalacia test",
-        "category": "examination",
+        "caption_vi": "📸 Hình ảnh minh họa: Radiocapitellar chondromalacia test",
+        "role_type": "general",
         "width": 958,
         "height": 683
       },
@@ -5170,8 +5553,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 510,
         "fig_number": "10.32A and B",
         "caption_en": "Figs 10.32A and B: Trigger finger",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Trigger finger",
-        "category": "examination",
+        "caption_vi": "📸 Hình ảnh minh họa: Trigger finger",
+        "role_type": "general",
         "width": 958,
         "height": 740
       },
@@ -5180,8 +5563,8 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 510,
         "fig_number": "10.32A and B",
         "caption_en": "Figs 10.32A and B: Trigger finger",
-        "caption_vi": "Hình ảnh giải phẫu & lâm sàng: Trigger finger",
-        "category": "examination",
+        "caption_vi": "📸 Hình ảnh minh họa: Trigger finger",
+        "role_type": "general",
         "width": 958,
         "height": 705
       }
@@ -5231,6 +5614,7 @@ const STABLE_SCREENING_FALLBACK = [
     ]
   }
 ];
+
 const STABLE_GUIDEMAP_ALGORITHM = {
   "title": "Thuật Toán Sàng Lọc Lâm Sàng 3 Giai Đoạn (Sebastian 3-Stage Decision Algorithm)",
   "description": "Bản đồ chỉ dẫn ra quyết định lâm sàng từng bước khi tiếp cận bệnh nhân đau khớp, đau cơ hoặc đau cột sống khó, không điển hình hoặc thất bại với các điều trị ban đầu.",
@@ -5340,6 +5724,7 @@ const STABLE_GUIDEMAP_ALGORITHM = {
     }
   ]
 };
+
 const STABLE_RED_FLAGS_MASTER = [
   {
     "id": "rf-01",
@@ -5432,6 +5817,7 @@ const STABLE_RED_FLAGS_MASTER = [
     "urgency": "Tối khẩn"
   }
 ];
+
 const STABLE_LAB_TESTS_GUIDE = [
   {
     "test_name": "Tốc độ máu lắng (ESR - Erythrocyte Sedimentation Rate)",
@@ -5518,6 +5904,7 @@ const STABLE_LAB_TESTS_GUIDE = [
     "red_flag_value": "PSA > 10 - 20 ng/mL ở bệnh nhân nam đau thắt lưng chậu: Cờ đỏ khẩn cấp của Ung thư tiền liệt tuyến di căn xương."
   }
 ];
+
 const STABLE_DRUG_INDUCED_PAIN_GUIDE = [
   {
     "drug_class": "Thuốc hạ mỡ máu nhóm Statins",

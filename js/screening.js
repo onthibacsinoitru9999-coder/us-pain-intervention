@@ -197,6 +197,37 @@ function setupEventListeners() {
       else if (e.key === 'ArrowRight') lightboxNext();
     }
   });
+
+  // Mobile Touch Swipe Gestures for Lightbox
+  let touchStartX = 0;
+  let touchEndX = 0;
+  let touchStartY = 0;
+  let touchEndY = 0;
+  if (lightbox) {
+    lightbox.addEventListener('touchstart', (e) => {
+      if (e.touches && e.touches.length > 0) {
+        touchStartX = e.touches[0].screenX;
+        touchStartY = e.touches[0].screenY;
+      }
+    }, { passive: true });
+
+    lightbox.addEventListener('touchend', (e) => {
+      if (e.changedTouches && e.changedTouches.length > 0) {
+        touchEndX = e.changedTouches[0].screenX;
+        touchEndY = e.changedTouches[0].screenY;
+        const diffX = touchEndX - touchStartX;
+        const diffY = touchEndY - touchStartY;
+        // Dominant horizontal swipe > 45px
+        if (Math.abs(diffX) > 45 && Math.abs(diffX) > Math.abs(diffY)) {
+          if (diffX < 0) {
+            lightboxNext(); // Vuốt sang trái -> xem ảnh tiếp
+          } else {
+            lightboxPrev(); // Vuốt sang phải -> xem ảnh trước
+          }
+        }
+      }
+    }, { passive: true });
+  }
 }
 
 function switchMode(mode) {
@@ -795,19 +826,19 @@ function selectModule(moduleId, updateCards = true) {
       <!-- SECTION 6: TARGETED INTERVENTION & WEB 1 LINK -->
       ${interventionHtml}
 
-      <!-- SECTION 7: EXPANDABLE ATLAS FIGURES -->
+      <!-- SECTION 7: EXPANDABLE ATLAS FIGURES (COLLAPSED BY DEFAULT FOR COMPACT READING) -->
       ${figuresList.length > 0 ? `
-        <details class="mt-6 rounded-xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 overflow-hidden" open>
-          <summary class="cursor-pointer p-4 font-bold text-sm text-blue-900 dark:text-blue-300 flex items-center justify-between hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors select-none">
+        <details class="mt-6 rounded-xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 overflow-hidden">
+          <summary class="cursor-pointer p-4 font-bold text-sm text-teal-900 dark:text-teal-300 flex items-center justify-between hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors select-none">
             <div class="flex items-center gap-2">
-              <span>🖼️</span>
-              <span>Bộ Sưu Tập Atlas Minh Họa Vùng ${module.region_vi} (${figuresList.length} Hình Ảnh Bản Dương Sắc Nét)</span>
+              <span>📚</span>
+              <span>Thư Viện Atlas Toàn Bộ Hình Ảnh Bổ Trợ Vùng ${module.region_vi} (${figuresList.length} Hình Dương Bản)</span>
             </div>
-            <span class="text-xs font-normal text-teal-700 dark:text-teal-400 bg-white dark:bg-slate-800 px-2.5 py-1 rounded-full border border-teal-200 dark:border-teal-800 shadow-2xs">Thu gọn / Mở rộng ▾</span>
+            <span class="text-xs font-semibold text-teal-700 dark:text-teal-400 bg-white dark:bg-slate-800 px-3 py-1 rounded-full border border-teal-200 dark:border-teal-800 shadow-2xs">Bấm để mở rộng tra cứu thêm ▾</span>
           </summary>
           <div class="p-4 pt-2 border-t border-slate-200 dark:border-slate-800">
             <p class="text-xs text-slate-500 dark:text-slate-400 mb-3 italic">
-              Toàn bộ hình ảnh giải phẫu, cơ sinh học và nghiệm pháp trích xuất nguyên bản từ giáo trình GS. Deepak Sebastian, đã xử lý màu dương bản sắc nét:
+              Thư viện tra cứu bổ trợ: Toàn bộ ảnh giải phẫu, cơ sinh học và nghiệm pháp trích xuất nguyên bản từ giáo trình GS. Deepak Sebastian (đã chuẩn hóa dương bản 100%):
             </p>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
               ${figuresHtml}

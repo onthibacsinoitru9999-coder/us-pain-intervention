@@ -94,11 +94,164 @@
       box-shadow: 0 2px 6px rgba(20, 184, 166, 0.4);
     }
     .figure-mini-card {
-      transition: all 0.2s ease;
+      transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+      border-radius: 8px;
+      overflow: hidden;
+      border: 1px solid var(--border-color, #e2e8f0);
+      background: var(--bg-card, #ffffff);
     }
     .figure-mini-card:hover {
       transform: translateY(-2px);
-      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      border-color: #0d9488;
+    }
+    [data-theme="dark"] .figure-mini-card {
+      background: #1e293b;
+      border-color: #334155;
+    }
+
+    /* Sub-header Result Line (Anti-Collision for Mobile Screens) */
+    .sub-header-line {
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
+      margin-bottom: 1rem;
+      padding: 0.25rem 0.5rem;
+      background: var(--bg-subtle, rgba(0,0,0,0.02));
+      border-radius: 8px;
+      border: 1px solid var(--border-color, #e2e8f0);
+    }
+    @media (min-width: 640px) {
+      .sub-header-line {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+      }
+    }
+    .sub-header-left {
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--text-main, #334155);
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      flex-wrap: wrap;
+    }
+    .sub-header-right {
+      font-size: 0.725rem;
+      color: var(--text-muted, #64748b);
+      line-height: 1.35;
+    }
+    .counter-highlight {
+      color: #0d9488;
+      font-weight: 700;
+    }
+    [data-theme="dark"] .sub-header-line {
+      background: rgba(30, 41, 59, 0.5);
+      border-color: #334155;
+    }
+    [data-theme="dark"] .sub-header-left {
+      color: #e2e8f0;
+    }
+    [data-theme="dark"] .counter-highlight {
+      color: #2dd4bf;
+    }
+
+    /* Bullet-proof Image Lightbox Modal */
+    .image-lightbox-modal {
+      position: fixed !important;
+      top: 0 !important;
+      left: 0 !important;
+      right: 0 !important;
+      bottom: 0 !important;
+      width: 100vw !important;
+      height: 100vh !important;
+      z-index: 99999 !important;
+      background-color: rgba(10, 15, 29, 0.94) !important;
+      backdrop-filter: blur(8px);
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      padding: 1rem !important;
+      box-sizing: border-box !important;
+    }
+    .image-lightbox-modal.hidden {
+      display: none !important;
+    }
+    .lightbox-dialog {
+      position: relative;
+      max-width: 900px;
+      width: 100%;
+      max-height: 92vh;
+      background: #0f172a;
+      border-radius: 12px;
+      border: 1px solid #334155;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.6);
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+    .lightbox-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.75rem 1rem;
+      background: #090d16;
+      border-bottom: 1px solid #1e293b;
+      font-size: 0.75rem;
+    }
+    .lightbox-body {
+      position: relative;
+      background: #000000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 250px;
+      max-height: 62vh;
+      overflow: hidden;
+      padding: 0.5rem;
+    }
+    .lightbox-img {
+      max-height: 60vh;
+      max-width: 100%;
+      object-fit: contain;
+      user-select: none;
+      border-radius: 4px;
+    }
+    .lightbox-nav-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(15, 23, 42, 0.8);
+      color: #ffffff;
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      border-radius: 50%;
+      width: 44px;
+      height: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      z-index: 10;
+      transition: all 0.2s ease;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    }
+    .lightbox-nav-btn:hover {
+      background: #0d9488;
+      border-color: #0d9488;
+      transform: translateY(-50%) scale(1.08);
+    }
+    .lightbox-nav-btn.prev-btn {
+      left: 0.75rem;
+    }
+    .lightbox-nav-btn.next-btn {
+      right: 0.75rem;
+    }
+    .lightbox-footer {
+      padding: 0.85rem 1rem;
+      background: #0f172a;
+      border-top: 1px solid #1e293b;
     }
 
     /* Mode Navigation Tabs */
@@ -312,12 +465,12 @@
       </div>
 
       <!-- Result Count Line -->
-      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1 mb-4 px-1" id="sub-header-line">
-        <div class="text-xs text-slate-600 dark:text-slate-300 font-semibold flex items-center gap-1.5 flex-wrap">
+      <div class="sub-header-line" id="sub-header-line">
+        <div class="sub-header-left">
           <span>🧭 Tiếp cận theo phàn nàn lâm sàng:</span>
-          <span id="search-result-count" class="text-teal-700 dark:text-teal-400 font-bold">8 vùng phàn nàn chính</span>
+          <span id="search-result-count" class="counter-highlight">8 vùng phàn nàn chính</span>
         </div>
-        <div class="text-xs text-slate-500 dark:text-slate-400 leading-tight">
+        <div class="sub-header-right">
           Clinical Guidemap tra cứu Cờ đỏ, Đau chuyển tạng, Khám chuyên biệt & 279 ảnh Atlas
         </div>
       </div>
@@ -369,37 +522,37 @@
     </main>
 
     <!-- Global Image Lightbox Modal with Atlas Navigation -->
-    <div id="image-lightbox" class="fixed inset-0 z-50 bg-black/90 flex items-center justify-center p-3 sm:p-4 hidden" role="dialog" aria-modal="true" aria-label="Atlas Image Viewer">
-      <div class="relative max-w-4xl w-full bg-slate-900 rounded-xl overflow-hidden shadow-2xl border border-slate-700 flex flex-col max-h-[92vh]">
+    <div id="image-lightbox" class="image-lightbox-modal hidden" role="dialog" aria-modal="true" aria-label="Atlas Image Viewer">
+      <div class="lightbox-dialog">
         <!-- Top bar inside modal -->
-        <div class="flex items-center justify-between px-4 py-2.5 bg-slate-950/80 border-b border-slate-800 text-xs">
+        <div class="lightbox-header">
           <div class="flex items-center gap-2">
             <span class="font-bold text-teal-400">Deepak Sebastian Atlas</span>
             <span id="lightbox-counter" class="text-slate-400 font-mono text-[11px] bg-slate-800 px-2 py-0.5 rounded">Hình 1 / 1</span>
           </div>
           <div class="flex items-center gap-2">
             <span class="text-[11px] text-slate-500 hidden sm:inline">Phím tắt: [←] / [→] chuyển ảnh, [ESC] đóng</span>
-            <button id="close-lightbox" class="text-white/80 hover:text-white bg-slate-800 hover:bg-slate-700 rounded-full p-1.5 transition-colors" title="Đóng hình ảnh (ESC)">
+            <button id="close-lightbox" class="text-white/80 hover:text-white bg-slate-800 hover:bg-slate-700 rounded-full p-1.5 transition-colors cursor-pointer" title="Đóng hình ảnh (ESC)">
               <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
             </button>
           </div>
         </div>
 
         <!-- Center Image View with Prev/Next Overlay Buttons -->
-        <div class="relative p-2 sm:p-4 bg-black flex items-center justify-center min-h-[40vh] max-h-[68vh] overflow-hidden">
-          <button id="prev-lightbox" class="absolute left-3 top-1/2 -translate-y-1/2 text-white bg-black/60 hover:bg-teal-600/90 rounded-full p-2.5 z-10 transition-all shadow-lg border border-white/20" title="Hình trước (Phím mũi tên trái ←)">
+        <div class="lightbox-body">
+          <button id="prev-lightbox" class="lightbox-nav-btn prev-btn" title="Hình trước (Phím mũi tên trái ← hoặc vuốt phải)">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"/></svg>
           </button>
 
-          <img id="lightbox-img" src="" alt="Deepak Sebastian Atlas Figure" class="max-h-[64vh] max-w-full object-contain transition-opacity duration-150 select-none">
+          <img id="lightbox-img" src="" alt="Deepak Sebastian Atlas Figure" class="lightbox-img">
 
-          <button id="next-lightbox" class="absolute right-3 top-1/2 -translate-y-1/2 text-white bg-black/60 hover:bg-teal-600/90 rounded-full p-2.5 z-10 transition-all shadow-lg border border-white/20" title="Hình tiếp theo (Phím mũi tên phải →)">
+          <button id="next-lightbox" class="lightbox-nav-btn next-btn" title="Hình tiếp theo (Phím mũi tên phải → hoặc vuốt trái)">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
           </button>
         </div>
 
         <!-- Bottom Description Bar -->
-        <div class="p-3.5 bg-slate-900 border-t border-slate-800">
+        <div class="lightbox-footer">
           <p id="lightbox-desc" class="text-xs text-slate-200 font-medium leading-relaxed"></p>
           <div id="lightbox-springer" class="text-[11px] text-teal-400 mt-1 italic flex items-center gap-1.5"></div>
         </div>
