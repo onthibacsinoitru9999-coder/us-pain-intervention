@@ -365,32 +365,63 @@
       
       <!-- Modal Header -->
       <div class="modal-header">
-        <div>
-          <h3 id="modal-title" class="modal-title">Tên thủ thuật</h3>
-          <p id="modal-subtitle" class="modal-subtitle">Tên tiếng Anh & ICD-10</p>
+        <div class="modal-header-top">
+          <div class="modal-meta-badges" id="modal-meta-badges">
+            <span id="modal-cat-badge" class="badge">Nội khớp</span>
+            <span id="modal-diff-badge" class="diff-chip diff-basic">● Cơ bản</span>
+          </div>
+          <div class="modal-actions">
+            <button id="modal-fav-btn" class="modal-btn-action" title="Lưu thủ thuật">
+              <svg class="w-4 h-4 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"/></svg>
+              <span class="btn-action-text">Lưu</span>
+            </button>
+            <button id="modal-print-btn" class="modal-btn-action btn-print-mobile-hide" title="In phiếu quy trình">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"/></svg>
+              <span class="btn-action-text">In</span>
+            </button>
+            <button id="modal-close-btn" class="modal-close-circle" title="Đóng cửa sổ">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12"/></svg>
+            </button>
+          </div>
         </div>
-        <div class="modal-actions">
-          <button id="modal-fav-btn" class="btn-icon">
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"/></svg>
-            <span>Lưu thủ thuật</span>
-          </button>
-          <button id="modal-print-btn" class="btn-icon" title="In phiếu quy trình">
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"/></svg>
-            <span>In quy trình</span>
-          </button>
-          <button id="modal-close-btn" class="btn-icon text-slate-400 hover:text-slate-700" title="Đóng">
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
-          </button>
+
+        <div class="modal-title-container">
+          <h3 id="modal-title" class="modal-title">Tên thủ thuật</h3>
+          <div class="modal-subtitle-box">
+            <p id="modal-subtitle-en" class="modal-subtitle-en">English Name</p>
+            <div id="modal-icd-pill" class="modal-icd-pill">ICD-10</div>
+          </div>
+          <p id="modal-subtitle" class="hidden"></p>
         </div>
       </div>
 
-      <!-- Modal Sub-tabs Navigation -->
+      <!-- Modal Sub-tabs Navigation (Optimized for Mobile Touch) -->
       <div class="modal-sub-tabs-bar">
-        <button class="modal-sub-tab active" onclick="switchModalSubTab(1)">1. Chỉ định & Chống chỉ định</button>
-        <button class="modal-sub-tab" onclick="switchModalSubTab(2)">2. Siêu âm & Kỹ thuật đi kim</button>
-        <button class="modal-sub-tab" onclick="switchModalSubTab(3)">3. Thuốc & Liều lượng</button>
-        <button class="modal-sub-tab" onclick="switchModalSubTab(4)">4. Cạm bẫy & Lưu ý An toàn</button>
-        <button class="modal-sub-tab" onclick="switchModalSubTab(5)">5. Hình ảnh Siêu âm thực tế</button>
+        <button class="modal-sub-tab active" onclick="switchModalSubTab(1)">
+          <span class="tab-index-badge">1</span>
+          <span class="tab-txt-desktop">Chỉ định & Chống CĐ</span>
+          <span class="tab-txt-mobile">Chỉ định</span>
+        </button>
+        <button class="modal-sub-tab" onclick="switchModalSubTab(2)">
+          <span class="tab-index-badge">2</span>
+          <span class="tab-txt-desktop">Siêu âm & Kỹ thuật kim</span>
+          <span class="tab-txt-mobile">Kỹ thuật kim</span>
+        </button>
+        <button class="modal-sub-tab" onclick="switchModalSubTab(3)">
+          <span class="tab-index-badge">3</span>
+          <span class="tab-txt-desktop">Thuốc & Liều lượng</span>
+          <span class="tab-txt-mobile">Thuốc & Liều</span>
+        </button>
+        <button class="modal-sub-tab" onclick="switchModalSubTab(4)">
+          <span class="tab-index-badge">4</span>
+          <span class="tab-txt-desktop">Cạm bẫy & Lưu ý An toàn</span>
+          <span class="tab-txt-mobile">Cạm bẫy</span>
+        </button>
+        <button class="modal-sub-tab" onclick="switchModalSubTab(5)">
+          <span class="tab-index-badge">5</span>
+          <span class="tab-txt-desktop">Hình ảnh Siêu âm (Atlas)</span>
+          <span class="tab-txt-mobile">Atlas ảnh</span>
+        </button>
       </div>
 
       <!-- Modal Body -->
@@ -421,6 +452,28 @@
       </div>
     </div>
   </div>
+
+  <!-- ============================================== -->
+  <!-- MOBILE BOTTOM NAVIGATION (Thanh điều hướng đáy cho di động) -->
+  <!-- ============================================== -->
+  <nav class="mobile-bottom-nav">
+    <button class="mobile-nav-item active" data-tab="procedures" onclick="switchMainTab('procedures')">
+      <svg class="mobile-nav-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
+      <span class="mobile-nav-label">Quy trình</span>
+    </button>
+    <button class="mobile-nav-item" data-tab="calculator" onclick="switchMainTab('calculator')">
+      <svg class="mobile-nav-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>
+      <span class="mobile-nav-label">Tính liều</span>
+    </button>
+    <button class="mobile-nav-item" data-tab="checklist" onclick="switchMainTab('checklist')">
+      <svg class="mobile-nav-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+      <span class="mobile-nav-label">Checklist</span>
+    </button>
+    <button class="mobile-nav-item" data-tab="about" onclick="switchMainTab('about')">
+      <svg class="mobile-nav-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+      <span class="mobile-nav-label">Giới thiệu</span>
+    </button>
+  </nav>
 
   <!-- Scripts -->
   <script src="data/procedures.js"></script>

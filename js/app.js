@@ -180,13 +180,24 @@ function setupEventListeners() {
 
 function switchMainTab(tabName) {
   appState.activeTab = tabName;
+  
+  // Desktop header nav tabs
   document.querySelectorAll('.nav-tab').forEach(t => {
     t.classList.toggle('active', t.getAttribute('data-tab') === tabName);
   });
 
+  // Mobile bottom navigation bar items
+  document.querySelectorAll('.mobile-nav-item').forEach(btn => {
+    btn.classList.toggle('active', btn.getAttribute('data-tab') === tabName);
+  });
+
+  // Section contents
   document.querySelectorAll('.tab-content-section').forEach(sec => {
     sec.classList.toggle('hidden', sec.id !== `section-${tabName}`);
   });
+
+  // Smooth scroll to top on tab switch
+  window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
 function toggleFavorite(procId, event) {
@@ -210,8 +221,9 @@ function toggleFavorite(procId, event) {
 
 function updateModalFavButton(btn, isFav) {
   btn.innerHTML = isFav 
-    ? `<svg class="w-5 h-5 text-amber-500 fill-current" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg> <span>Đã lưu</span>`
-    : `<svg class="w-5 h-5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"/></svg> <span>Lưu thủ thuật</span>`;
+    ? `<svg class="w-4 h-4 text-amber-500 fill-current" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg> <span class="btn-action-text">Đã lưu</span>`
+    : `<svg class="w-4 h-4 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"/></svg> <span class="btn-action-text">Lưu</span>`;
+  btn.classList.toggle('active-fav', isFav);
 }
 
 function filterProcedures() {
@@ -386,9 +398,27 @@ function openProcedureDetail(procId) {
   appState.currentProcedure = item;
   const isFav = appState.favorites.includes(item.id);
 
-  // Set modal headers
-  document.getElementById('modal-title').textContent = item.nameVi;
-  document.getElementById('modal-subtitle').textContent = `${item.nameEn} • ICD-10: ${item.icd10}`;
+  // Set modal headers (Optimized for 7.5-inch mobile)
+  const modalTitle = document.getElementById('modal-title');
+  if (modalTitle) modalTitle.textContent = item.nameVi;
+
+  const modalSubtitleEn = document.getElementById('modal-subtitle-en');
+  if (modalSubtitleEn) modalSubtitleEn.textContent = item.nameEn;
+
+  const modalIcdPill = document.getElementById('modal-icd-pill');
+  if (modalIcdPill) modalIcdPill.textContent = `ICD-10: ${item.icd10}`;
+
+  const modalSubtitle = document.getElementById('modal-subtitle');
+  if (modalSubtitle) modalSubtitle.textContent = `${item.nameEn} • ICD-10: ${item.icd10}`;
+
+  // Populate category & difficulty badges in header top row
+  const metaBadges = document.getElementById('modal-meta-badges');
+  if (metaBadges) {
+    metaBadges.innerHTML = `
+      ${getTypeBadge(item.type)}
+      ${getDifficultyBadge(item.difficulty)}
+    `;
+  }
   
   const modalFavBtn = document.getElementById('modal-fav-btn');
   if (modalFavBtn) {
@@ -629,12 +659,23 @@ function openProcedureDetail(procId) {
 }
 
 function switchModalSubTab(tabIndex) {
-  document.querySelectorAll('.modal-sub-tab').forEach((t, idx) => {
-    t.classList.toggle('active', idx + 1 === tabIndex);
+  const subTabs = document.querySelectorAll('.modal-sub-tab');
+  subTabs.forEach((t, idx) => {
+    const isActive = (idx + 1 === tabIndex);
+    t.classList.toggle('active', isActive);
+    if (isActive) {
+      // Auto smooth-scroll active tab into view horizontally on mobile
+      t.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+    }
   });
+
   document.querySelectorAll('.modal-sub-content').forEach((c, idx) => {
     c.classList.toggle('hidden', idx + 1 !== tabIndex);
   });
+
+  // Scroll modal body to top upon subtab switch
+  const modalBody = document.querySelector('.modal-body');
+  if (modalBody) modalBody.scrollTop = 0;
 }
 
 function closeModal() {
