@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="vi" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MSK-Differential Screening Pro | Bản Đồ Sàng Lọc Lâm Sàng & Cờ Đỏ Cơ Xương Khớp</title>
+  <meta name="description" content="Clinical Guidemap Sàng lọc Chẩn đoán Phân biệt Đau Vùng Cơ Xương Khớp, Rà soát Cờ Đỏ Cấp Cứu, Đau Chuyển Tạng, Đau Do Thuốc & 279 Hình Ảnh Atlas - Dựa trên chuyên khảo GS. Deepak Sebastian">
+  <link rel="stylesheet" href="css/style.css?v=20260926_guidemap">
+  <style>
+    /* Clinical Guidemap Layout & Styling */
+    .screening-layout {
+      display: grid;
+      grid-template-columns: 380px 1fr;
+      gap: 1.5rem;
+      align-items: start;
+    }
+    @media (max-width: 1024px) {
+      .screening-layout {
+        grid-template-columns: 1fr;
+      }
+    }
+    .badge-foundation { background: #f3e8ff; color: #7e22ce; }
+    .badge-spine { background: #e0f2fe; color: #0369a1; }
+    .badge-upper_limb { background: #fef3c7; color: #b45309; }
+    .badge-lower_limb { background: #dcfce7; color: #15803d; }
+    
+    [data-theme="dark"] .badge-foundation { background: #3b0764; color: #d8b4fe; }
+    [data-theme="dark"] .badge-spine { background: #082f49; color: #7dd3fc; }
+    [data-theme="dark"] .badge-upper_limb { background: #451a03; color: #fde68a; }
+    [data-theme="dark"] .badge-lower_limb { background: #052e16; color: #86efac; }
+
+    /* Mode Navigation Tabs */
+    .guidemap-modes-nav {
+      display: flex;
+      gap: 0.5rem;
+      overflow-x: auto;
+      padding-bottom: 0.5rem;
+      margin-bottom: 1.25rem;
+      border-bottom: 2px solid var(--border-color, #e2e8f0);
+    }
+    .mode-tab-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.6rem 1rem;
+      border-radius: 8px 8px 0 0;
+      font-size: 0.825rem;
+      font-weight: 600;
+      border: 1px solid transparent;
+      border-bottom: none;
+      background: transparent;
+      color: var(--text-muted, #64748b);
+      cursor: pointer;
+      white-space: nowrap;
+      transition: all 0.2s ease;
+    }
+    .mode-tab-btn:hover {
+      color: var(--primary, #0d9488);
+      background: var(--bg-subtle, #f1f5f9);
+    }
+    .mode-tab-btn.active {
+      color: #0d9488;
+      background: var(--bg-card, #ffffff);
+      border-color: var(--border-color, #e2e8f0);
+      border-bottom: 2px solid #0d9488;
+      margin-bottom: -2px;
+    }
+    [data-theme="dark"] .mode-tab-btn.active {
+      color: #2dd4bf;
+      border-bottom-color: #2dd4bf;
+    }
+
+    /* Algorithm Card Styling */
+    .algo-stage-card {
+      background: var(--bg-card, #ffffff);
+      border: 1px solid var(--border-color, #e2e8f0);
+      border-radius: 12px;
+      padding: 1.25rem;
+      margin-bottom: 1.25rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+      position: relative;
+    }
+    .algo-stage-badge {
+      display: inline-block;
+      padding: 0.25rem 0.75rem;
+      border-radius: 9999px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    /* Interactive Decision Tree Box */
+    .interactive-guidemap-box {
+      background: linear-gradient(135deg, rgba(13, 148, 136, 0.05), rgba(79, 70, 229, 0.05));
+      border: 1px solid rgba(13, 148, 136, 0.2);
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    /* Table Sticky & Hover */
+    .screening-table th {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    .screening-table tr:hover {
+      background-color: var(--bg-subtle, rgba(0,0,0,0.02));
+    }
+  </style>
+</head>
+<body>
+  <div class="app-container">
+    <!-- Header Bar -->
+    <header class="header-bar" id="app-header-bar">
+      <div class="header-inner">
+        <a href="screening.html" class="brand-badge">
+          <div class="brand-logo-icon" style="background: linear-gradient(135deg, #0284c7, #0d9488);">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+            </svg>
+          </div>
+          <div>
+            <div class="brand-title">MSK-Differential Screening Pro</div>
+            <div class="brand-subtitle">Clinical Guidemap Sàng Lọc Phân Biệt & Cờ Đỏ Lâm Sàng (GS. Deepak Sebastian)</div>
+          </div>
+        </a>
+
+        <!-- Right actions -->
+        <div class="flex items-center gap-2">
+          <a href="index.html" class="btn btn-outline text-xs text-teal-700 font-semibold" style="border-color: #0d9488;" title="Chuyển sang Cẩm Nang Tiêm Khớp & Siêu Âm Can Thiệp (Philip Peng)">
+            💉 Cẩm Nang Tiêm Can Thiệp ↗
+          </a>
+          <button id="theme-toggle-btn" class="btn btn-outline text-xs" title="Chuyển đổi giao diện Sáng / Tối">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
+            Giao diện Tối
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="main-content">
+      <!-- Top Guidemap Modes Navigation Tabs -->
+      <nav class="guidemap-modes-nav" aria-label="Guidemap Modes">
+        <button class="mode-tab-btn active" data-mode="modules">
+          <span>📑</span> 10 Chuyên Đề Lâm Sàng (Chapters 1-10)
+        </button>
+        <button class="mode-tab-btn" data-mode="algorithm">
+          <span>🌲</span> Cây Quyết Định 3 Giai Đoạn (Guidemap Wizard)
+        </button>
+        <button class="mode-tab-btn" data-mode="redflags">
+          <span>🚨</span> Bảng Tra Cứu Cờ Đỏ Khẩn Cấp (Red Flags Triage)
+        </button>
+        <button class="mode-tab-btn" data-mode="labs">
+          <span>🧪</span> Tra Cứu Xét Nghiệm Cận Lâm Sàng (Ch 2 Lab Tests)
+        </button>
+        <button class="mode-tab-btn" data-mode="drugs">
+          <span>💊</span> Tra Cứu Đau Khớp Do Thuốc (Ch 3 Drug-Induced Pain)
+        </button>
+      </nav>
+
+      <!-- Global Filter & Search Controls -->
+      <div class="filter-section">
+        <!-- Search Bar -->
+        <div class="search-box-wrapper">
+          <svg class="search-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+          </svg>
+          <input type="text" id="search-input" class="search-input" placeholder="Tìm kiếm theo triệu chứng, vị trí đau, cờ đỏ, nghiệm pháp khám, thuốc, xét nghiệm (Ví dụ: cổ, ngực, thắt lưng, lasegue, spurling, lách, pancoast, statin, esr, hla-b27...)">
+          <button id="clear-search-btn" class="clear-search-btn" title="Xóa tìm kiếm">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+          </button>
+        </div>
+
+        <!-- Category Pills Row (Hiển thị khi ở tab modules) -->
+        <div class="cat-filters-row" id="cat-filters-container">
+          <div class="cat-buttons-group">
+            <button class="cat-filter-btn active" data-cat="all">
+              <span>Tất cả</span>
+              <span id="count-all" class="counter-pill">10</span>
+            </button>
+            <button class="cat-filter-btn" data-cat="foundation">
+              <span>Nền tảng & Cận lâm sàng (Ch 1-3)</span>
+              <span id="count-foundation" class="counter-pill">3</span>
+            </button>
+            <button class="cat-filter-btn" data-cat="spine">
+              <span>Cột sống (Cổ/Ngực/Thắt lưng)</span>
+              <span id="count-spine" class="counter-pill">3</span>
+            </button>
+            <button class="cat-filter-btn" data-cat="upper">
+              <span>Chi Trên (Vai/Khuỷu/Tay)</span>
+              <span id="count-upper" class="counter-pill">2</span>
+            </button>
+            <button class="cat-filter-btn" data-cat="lower">
+              <span>Chi Dưới (Háng/Gối/Bàn chân)</span>
+              <span id="count-lower" class="counter-pill">2</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Result Count Line -->
+      <div class="flex items-center justify-between mb-4 px-1" id="sub-header-line">
+        <div class="text-xs text-slate-500 font-semibold">
+          Chuyên đề sàng lọc lâm sàng: <span id="search-result-count" class="text-teal-700 font-bold">10 chuyên đề</span>
+        </div>
+        <div class="text-xs text-slate-400">
+          Clinical Guidemap tra cứu Cờ đỏ, Đau quy chiếu tạng, Đau do thuốc, Xét nghiệm & 279 ảnh Atlas
+        </div>
+      </div>
+
+      <!-- DYNAMIC VIEWS CONTAINER -->
+      
+      <!-- VIEW 1: MODULES EXPLORER (Mặc định) -->
+      <div id="view-modules" class="screening-view-content">
+        <div class="screening-layout">
+          <!-- Left: List of Regional Cards -->
+          <div id="screening-cards-grid" class="flex flex-col gap-3">
+            <!-- Rendered dynamically by js/screening.js -->
+          </div>
+
+          <!-- Right: Detail View -->
+          <div id="screening-detail-container">
+            <!-- Rendered dynamically by js/screening.js -->
+          </div>
+        </div>
+      </div>
+
+      <!-- VIEW 2: 3-STAGE DECISION ALGORITHM GUIDEMAP WIZARD -->
+      <div id="view-algorithm" class="screening-view-content hidden">
+        <div id="algorithm-container">
+          <!-- Rendered dynamically by js/screening.js -->
+        </div>
+      </div>
+
+      <!-- VIEW 3: RED FLAGS EMERGENCY TRIAGE -->
+      <div id="view-redflags" class="screening-view-content hidden">
+        <div id="redflags-container">
+          <!-- Rendered dynamically by js/screening.js -->
+        </div>
+      </div>
+
+      <!-- VIEW 4: LAB TESTS CHECKER (CHAPTER 2) -->
+      <div id="view-labs" class="screening-view-content hidden">
+        <div id="labs-container">
+          <!-- Rendered dynamically by js/screening.js -->
+        </div>
+      </div>
+
+      <!-- VIEW 5: DRUG-INDUCED PAIN CHECKER (CHAPTER 3) -->
+      <div id="view-drugs" class="screening-view-content hidden">
+        <div id="drugs-container">
+          <!-- Rendered dynamically by js/screening.js -->
+        </div>
+      </div>
+    </main>
+
+    <!-- Global Image Lightbox Modal with Atlas Navigation -->
+    <div id="image-lightbox" class="fixed inset-0 z-50 bg-black/90 flex items-center justify-center p-3 sm:p-4 hidden" role="dialog" aria-modal="true" aria-label="Atlas Image Viewer">
+      <div class="relative max-w-4xl w-full bg-slate-900 rounded-xl overflow-hidden shadow-2xl border border-slate-700 flex flex-col max-h-[92vh]">
+        <!-- Top bar inside modal -->
+        <div class="flex items-center justify-between px-4 py-2.5 bg-slate-950/80 border-b border-slate-800 text-xs">
+          <div class="flex items-center gap-2">
+            <span class="font-bold text-teal-400">Deepak Sebastian Atlas</span>
+            <span id="lightbox-counter" class="text-slate-400 font-mono text-[11px] bg-slate-800 px-2 py-0.5 rounded">Hình 1 / 1</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="text-[11px] text-slate-500 hidden sm:inline">Phím tắt: [←] / [→] chuyển ảnh, [ESC] đóng</span>
+            <button id="close-lightbox" class="text-white/80 hover:text-white bg-slate-800 hover:bg-slate-700 rounded-full p-1.5 transition-colors" title="Đóng hình ảnh (ESC)">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Center Image View with Prev/Next Overlay Buttons -->
+        <div class="relative p-2 sm:p-4 bg-black flex items-center justify-center min-h-[40vh] max-h-[68vh] overflow-hidden">
+          <button id="prev-lightbox" class="absolute left-3 top-1/2 -translate-y-1/2 text-white bg-black/60 hover:bg-teal-600/90 rounded-full p-2.5 z-10 transition-all shadow-lg border border-white/20" title="Hình trước (Phím mũi tên trái ←)">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"/></svg>
+          </button>
+
+          <img id="lightbox-img" src="" alt="Deepak Sebastian Atlas Figure" class="max-h-[64vh] max-w-full object-contain transition-opacity duration-150 select-none">
+
+          <button id="next-lightbox" class="absolute right-3 top-1/2 -translate-y-1/2 text-white bg-black/60 hover:bg-teal-600/90 rounded-full p-2.5 z-10 transition-all shadow-lg border border-white/20" title="Hình tiếp theo (Phím mũi tên phải →)">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
+          </button>
+        </div>
+
+        <!-- Bottom Description Bar -->
+        <div class="p-3.5 bg-slate-900 border-t border-slate-800">
+          <p id="lightbox-desc" class="text-xs text-slate-200 font-medium leading-relaxed"></p>
+          <div id="lightbox-springer" class="text-[11px] text-teal-400 mt-1 italic flex items-center gap-1.5"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts with Resilient Fallback Architecture -->
+  <!-- 1. Stable Fallback Dataset (Lá chắn an toàn nạp trước) -->
+  <script src="data/screening.fallback.js?v=20260926_guidemap"></script>
+  <!-- 2. Primary Dataset (Tệp dữ liệu chính) -->
+  <script src="data/screening.js?v=20260926_guidemap"></script>
+  <!-- 3. Application Controller -->
+  <script src="js/screening.js?v=20260926_guidemap"></script>
+</body>
+</html>

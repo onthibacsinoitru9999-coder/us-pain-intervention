@@ -1,0 +1,1320 @@
+// MSK-Differential Screening Pro: Master Clinical Guidemap Controller
+// Based on Prof. Deepak Sebastian: Differential Screening of Regional Pain in Musculoskeletal Practice (526 pages)
+// 10 Comprehensive Chapters + 3-Stage Decision Algorithm + Red Flags Master + Lab Tests Checker + Drug-Induced Pain Checker + 279 Deepak Atlas Images
+
+document.addEventListener('DOMContentLoaded', () => {
+  initScreeningApp();
+});
+
+// Multi-Tier Resilient Fallback Resolution
+function resolveInitialScreeningData() {
+  let data = [];
+  let isFallback = false;
+  let source = 'primary';
+
+  // Primary check
+  if (typeof SCREENING_DATA !== 'undefined' && Array.isArray(SCREENING_DATA) && SCREENING_DATA.length > 0) {
+    data = SCREENING_DATA;
+    try {
+      localStorage.setItem('deepak_screening_backup_v2', JSON.stringify(SCREENING_DATA));
+    } catch (e) {
+      console.warn('Cannot write snapshot to localStorage:', e);
+    }
+  } else if (typeof STABLE_SCREENING_FALLBACK !== 'undefined' && Array.isArray(STABLE_SCREENING_FALLBACK) && STABLE_SCREENING_FALLBACK.length > 0) {
+    console.warn('[RECOVERY] SCREENING_DATA lỗi! Tự động kích hoạt STABLE_SCREENING_FALLBACK');
+    data = STABLE_SCREENING_FALLBACK;
+    isFallback = true;
+    source = 'stable_file';
+  } else {
+    try {
+      const cached = localStorage.getItem('deepak_screening_backup_v2');
+      if (cached) {
+        const parsed = JSON.parse(cached);
+        if (Array.isArray(parsed) && parsed.length > 0) {
+          data = parsed;
+          isFallback = true;
+          source = 'local_storage';
+        }
+      }
+    } catch (e) {
+      console.error('Error reading localStorage backup:', e);
+    }
+  }
+
+  // Resolve auxiliary guidemap data
+  const algorithm = (typeof GUIDEMAP_ALGORITHM !== 'undefined' && GUIDEMAP_ALGORITHM) 
+    ? GUIDEMAP_ALGORITHM 
+    : (typeof STABLE_GUIDEMAP_ALGORITHM !== 'undefined' ? STABLE_GUIDEMAP_ALGORITHM : null);
+
+  const redFlags = (typeof RED_FLAGS_MASTER !== 'undefined' && Array.isArray(RED_FLAGS_MASTER)) 
+    ? RED_FLAGS_MASTER 
+    : (typeof STABLE_RED_FLAGS_MASTER !== 'undefined' ? STABLE_RED_FLAGS_MASTER : []);
+
+  const labTests = (typeof LAB_TESTS_GUIDE !== 'undefined' && Array.isArray(LAB_TESTS_GUIDE)) 
+    ? LAB_TESTS_GUIDE 
+    : (typeof STABLE_LAB_TESTS_GUIDE !== 'undefined' ? STABLE_LAB_TESTS_GUIDE : []);
+
+  const drugInduced = (typeof DRUG_INDUCED_PAIN_GUIDE !== 'undefined' && Array.isArray(DRUG_INDUCED_PAIN_GUIDE)) 
+    ? DRUG_INDUCED_PAIN_GUIDE 
+    : (typeof STABLE_DRUG_INDUCED_PAIN_GUIDE !== 'undefined' ? STABLE_DRUG_INDUCED_PAIN_GUIDE : []);
+
+  return {
+    modules: data,
+    algorithm,
+    redFlags,
+    labTests,
+    drugInduced,
+    isFallback,
+    source
+  };
+}
+
+const resolvedScreening = resolveInitialScreeningData();
+
+const screeningState = {
+  activeMode: 'modules', // 'modules' | 'algorithm' | 'redflags' | 'labs' | 'drugs'
+  allModules: resolvedScreening.modules,
+  filteredModules: [...resolvedScreening.modules],
+  algorithm: resolvedScreening.algorithm,
+  redFlags: resolvedScreening.redFlags,
+  labTests: resolvedScreening.labTests,
+  drugInduced: resolvedScreening.drugInduced,
+  selectedModuleId: resolvedScreening.modules.length > 0 ? resolvedScreening.modules[0].id : null,
+  activeFilter: 'all',
+  searchQuery: '',
+  theme: localStorage.getItem('us_pain_theme') || 'light',
+  // Lightbox State
+  currentModuleFigures: [],
+  lightboxIndex: 0,
+  // Interactive Guidemap Checklist State
+  guidemapChecklist: {
+    hasRedFlags: false,
+    hasVisceral: false,
+    hasDrugHistory: false,
+    painOrigin: 'radicular' // 'radicular' | 'discogenic' | 'facet' | 'tendon' | 'capsular' | 'entrapment' | 'somatic'
+  }
+};
+
+function initScreeningApp() {
+  initTheme();
+  setupEventListeners();
+  updateCategoryCounts();
+  applyFilters();
+}
+
+function initTheme() {
+  document.documentElement.setAttribute('data-theme', screeningState.theme);
+  const themeBtn = document.getElementById('theme-toggle-btn');
+  if (themeBtn) {
+    themeBtn.addEventListener('click', () => {
+      screeningState.theme = screeningState.theme === 'light' ? 'dark' : 'light';
+      document.documentElement.setAttribute('data-theme', screeningState.theme);
+      localStorage.setItem('us_pain_theme', screeningState.theme);
+      themeBtn.innerHTML = screeningState.theme === 'dark' 
+        ? `<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg> Giao diện Sáng`
+        : `<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg> Giao diện Tối`;
+    });
+  }
+}
+
+function setupEventListeners() {
+  // Mode Navigation Tabs
+  document.querySelectorAll('.mode-tab-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.mode-tab-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      switchMode(btn.dataset.mode);
+    });
+  });
+
+  // Search input
+  const searchInput = document.getElementById('search-input');
+  const clearBtn = document.getElementById('clear-search-btn');
+
+  if (searchInput) {
+    searchInput.addEventListener('input', (e) => {
+      screeningState.searchQuery = e.target.value.toLowerCase().trim();
+      applyFilters();
+      if (clearBtn) {
+        clearBtn.style.display = screeningState.searchQuery ? 'flex' : 'none';
+      }
+    });
+  }
+
+  if (clearBtn) {
+    clearBtn.addEventListener('click', () => {
+      if (searchInput) {
+        searchInput.value = '';
+        screeningState.searchQuery = '';
+        clearBtn.style.display = 'none';
+        applyFilters();
+      }
+    });
+  }
+
+  // Category filter buttons
+  document.querySelectorAll('.cat-filter-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.cat-filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      screeningState.activeFilter = btn.dataset.cat;
+      applyFilters();
+    });
+  });
+
+  // Lightbox Close & Controls
+  const closeLightboxBtn = document.getElementById('close-lightbox');
+  const prevLightboxBtn = document.getElementById('prev-lightbox');
+  const nextLightboxBtn = document.getElementById('next-lightbox');
+  const lightbox = document.getElementById('image-lightbox');
+
+  if (closeLightboxBtn) {
+    closeLightboxBtn.addEventListener('click', closeLightbox);
+  }
+  if (prevLightboxBtn) {
+    prevLightboxBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      lightboxPrev();
+    });
+  }
+  if (nextLightboxBtn) {
+    nextLightboxBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      lightboxNext();
+    });
+  }
+  if (lightbox) {
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox) closeLightbox();
+    });
+  }
+
+  // Keyboard navigation for Lightbox
+  document.addEventListener('keydown', (e) => {
+    if (lightbox && !lightbox.classList.contains('hidden')) {
+      if (e.key === 'Escape') closeLightbox();
+      else if (e.key === 'ArrowLeft') lightboxPrev();
+      else if (e.key === 'ArrowRight') lightboxNext();
+    }
+  });
+}
+
+function switchMode(mode) {
+  screeningState.activeMode = mode;
+
+  // Toggle view visibility
+  const views = {
+    modules: document.getElementById('view-modules'),
+    algorithm: document.getElementById('view-algorithm'),
+    redflags: document.getElementById('view-redflags'),
+    labs: document.getElementById('view-labs'),
+    drugs: document.getElementById('view-drugs')
+  };
+
+  Object.keys(views).forEach(key => {
+    if (views[key]) {
+      if (key === mode) {
+        views[key].classList.remove('hidden');
+      } else {
+        views[key].classList.add('hidden');
+      }
+    }
+  });
+
+  // Show/Hide category filter row based on mode
+  const catFilterRow = document.getElementById('cat-filters-container');
+  if (catFilterRow) {
+    catFilterRow.style.display = (mode === 'modules') ? 'block' : 'none';
+  }
+
+  // Update search input placeholder according to mode
+  const searchInput = document.getElementById('search-input');
+  if (searchInput) {
+    if (mode === 'modules') {
+      searchInput.placeholder = 'Tìm chuyên đề, triệu chứng, cờ đỏ, nghiệm pháp khám, thuốc, xét nghiệm (Ví dụ: cổ, ngực, thắt lưng, lasegue, spurling, statin, gout...)';
+    } else if (mode === 'algorithm') {
+      searchInput.placeholder = 'Tìm kiếm trong thuật toán 3 giai đoạn: tiêu chí cờ đỏ, đau tạng, cơ học, phân loại thể dịch...';
+    } else if (mode === 'redflags') {
+      searchInput.placeholder = 'Tìm kiếm trong cờ đỏ khẩn cấp: chùm đuôi ngựa, VBI, phình bóc tách ĐMC, nhiễm trùng mủ, u di căn...';
+    } else if (mode === 'labs') {
+      searchInput.placeholder = 'Tìm xét nghiệm cận lâm sàng: ESR, CRP, Acid Uric, Canxi, ALP, HLA-B27, RF, Anti-CCP, ANA, PSA, Bence-Jones...';
+    } else if (mode === 'drugs') {
+      searchInput.placeholder = 'Tìm thuốc gây đau cơ khớp: Statin, Quinolone, Corticoid, Aromatase inhibitors, Bisphosphonate, Hóa chất ung thư...';
+    }
+  }
+
+  // Re-run filter and render
+  applyFilters();
+}
+
+function applyFilters() {
+  const query = screeningState.searchQuery;
+  const cat = screeningState.activeFilter;
+  const mode = screeningState.activeMode;
+  const countEl = document.getElementById('search-result-count');
+
+  if (mode === 'modules') {
+    screeningState.filteredModules = screeningState.allModules.filter(m => {
+      // Category match
+      let matchCat = true;
+      if (cat === 'foundation') matchCat = (m.region === 'foundation');
+      else if (cat === 'spine') matchCat = (m.region === 'spine');
+      else if (cat === 'upper') matchCat = (m.region === 'upper_limb');
+      else if (cat === 'lower') matchCat = (m.region === 'lower_limb');
+
+      // Search query match
+      let matchQuery = true;
+      if (query) {
+        const corpus = [
+          m.title,
+          m.title_vi,
+          m.region_vi,
+          m.summary,
+          JSON.stringify(m.red_flags),
+          JSON.stringify(m.visceral_referrals),
+          JSON.stringify(m.examination_procedures),
+          JSON.stringify(m.differential_table),
+          JSON.stringify(m.stage_2_somatic_dysfunctions || []),
+          JSON.stringify(m.drug_induced || []),
+          JSON.stringify(m.recommended_web1_procedures || [])
+        ].join(' ').toLowerCase();
+
+        matchQuery = corpus.includes(query);
+      }
+
+      return matchCat && matchQuery;
+    });
+
+    // Fix Selection & Filter Sync Bug:
+    // If the currently selected module is not in filtered modules, auto-select the first matching module
+    if (screeningState.filteredModules.length > 0) {
+      const stillPresent = screeningState.filteredModules.some(m => m.id === screeningState.selectedModuleId);
+      if (!stillPresent) {
+        screeningState.selectedModuleId = screeningState.filteredModules[0].id;
+      }
+      selectModule(screeningState.selectedModuleId, false); // false = don't re-render cards loop
+    } else {
+      screeningState.selectedModuleId = null;
+      renderEmptyDetailState(query);
+    }
+
+    renderCards();
+
+    if (countEl) {
+      countEl.textContent = `${screeningState.filteredModules.length} / ${screeningState.allModules.length} chuyên đề`;
+    }
+  } else if (mode === 'algorithm') {
+    renderAlgorithmView();
+    if (countEl) {
+      countEl.textContent = `Thuật toán 3 Giai đoạn (Sebastian Guidemap)`;
+    }
+  } else if (mode === 'redflags') {
+    const list = renderRedFlagsView();
+    if (countEl) {
+      countEl.textContent = `${list.length} / ${screeningState.redFlags.length} Cờ đỏ khẩn cấp`;
+    }
+  } else if (mode === 'labs') {
+    const list = renderLabsView();
+    if (countEl) {
+      countEl.textContent = `${list.length} / ${screeningState.labTests.length} Xét nghiệm MSK`;
+    }
+  } else if (mode === 'drugs') {
+    const list = renderDrugsView();
+    if (countEl) {
+      countEl.textContent = `${list.length} / ${screeningState.drugInduced.length} Nhóm thuốc gây đau`;
+    }
+  }
+}
+
+function updateCategoryCounts() {
+  const allCount = screeningState.allModules.length;
+  const foundationCount = screeningState.allModules.filter(m => m.region === 'foundation').length;
+  const spineCount = screeningState.allModules.filter(m => m.region === 'spine').length;
+  const upperCount = screeningState.allModules.filter(m => m.region === 'upper_limb').length;
+  const lowerCount = screeningState.allModules.filter(m => m.region === 'lower_limb').length;
+
+  const setEl = (id, val) => {
+    const el = document.getElementById(id);
+    if (el) el.textContent = val;
+  };
+
+  setEl('count-all', allCount);
+  setEl('count-foundation', foundationCount);
+  setEl('count-spine', spineCount);
+  setEl('count-upper', upperCount);
+  setEl('count-lower', lowerCount);
+}
+
+function renderCards() {
+  const grid = document.getElementById('screening-cards-grid');
+  if (!grid) return;
+
+  if (screeningState.filteredModules.length === 0) {
+    grid.innerHTML = `
+      <div class="col-span-full py-12 text-center text-slate-400">
+        <svg class="w-12 h-12 mx-auto mb-3 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+        <p class="font-medium text-slate-600 dark:text-slate-300">Không tìm thấy chuyên đề sàng lọc phù hợp</p>
+        <p class="text-xs text-slate-400 mt-1">Thử tìm kiếm với từ khóa khác (ví dụ: cổ, ngực, vai, gối, cờ đỏ, lasegue, statin, gout...)</p>
+      </div>
+    `;
+    return;
+  }
+
+  grid.innerHTML = screeningState.filteredModules.map(m => {
+    const isSelected = screeningState.selectedModuleId === m.id;
+    const rfCount = m.red_flags ? m.red_flags.length : 0;
+    const testCount = m.examination_procedures ? m.examination_procedures.length : 0;
+    const figCount = m.figures ? m.figures.length : 0;
+    const web1Count = m.recommended_web1_procedures ? m.recommended_web1_procedures.length : 0;
+
+    return `
+      <div class="proc-card ${isSelected ? 'active-card' : ''}" onclick="selectModule('${m.id}')" style="cursor: pointer;">
+        <div class="card-header-badge">
+          <span class="badge-cat badge-${m.region}">
+            ${m.region_vi}
+          </span>
+          <span class="badge-code font-bold">Chương ${m.chapter}</span>
+        </div>
+        <h3 class="card-title text-base font-bold text-slate-800 dark:text-white mt-2 leading-snug">
+          ${m.title_vi}
+        </h3>
+        <p class="text-xs text-slate-500 italic mt-0.5">${m.title}</p>
+        <p class="card-snippet text-xs text-slate-600 dark:text-slate-300 mt-2 line-clamp-2">
+          ${m.summary}
+        </p>
+        <div class="card-footer-tags mt-3 pt-2 border-t border-slate-100 dark:border-slate-800 flex flex-wrap gap-2 text-[11px]">
+          <span class="text-rose-600 font-semibold bg-rose-50 dark:bg-rose-950/40 px-2 py-0.5 rounded">🚨 ${rfCount} Cờ đỏ</span>
+          ${testCount > 0 ? `<span class="text-teal-600 font-semibold bg-teal-50 dark:bg-teal-950/40 px-2 py-0.5 rounded">🩺 ${testCount} Nghiệm pháp</span>` : ''}
+          ${figCount > 0 ? `<span class="text-blue-600 font-semibold bg-blue-50 dark:bg-blue-950/40 px-2 py-0.5 rounded">🖼️ ${figCount} Atlas</span>` : `<span class="text-purple-600 font-semibold bg-purple-50 dark:bg-purple-950/40 px-2 py-0.5 rounded">📊 Bảng Ma Trận</span>`}
+          ${web1Count > 0 ? `<span class="text-emerald-700 font-semibold bg-emerald-50 dark:bg-emerald-950/40 px-2 py-0.5 rounded">💉 ${web1Count} Thủ thuật Web 1</span>` : ''}
+        </div>
+      </div>
+    `;
+  }).join('');
+}
+
+function renderEmptyDetailState(query) {
+  const detailContainer = document.getElementById('screening-detail-container');
+  if (!detailContainer) return;
+
+  detailContainer.innerHTML = `
+    <div class="bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 p-12 text-center text-slate-400 shadow-sm">
+      <svg class="w-16 h-16 mx-auto mb-4 text-slate-300 dark:text-slate-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+      </svg>
+      <h3 class="text-base font-bold text-slate-700 dark:text-slate-200">Không tìm thấy nội dung phù hợp</h3>
+      <p class="text-xs text-slate-500 mt-1 max-w-md mx-auto">
+        Không có chuyên đề lâm sàng nào khớp với từ khóa "<strong>${query || ''}</strong>". Hãy thử tìm theo tên vùng, tên nghiệm pháp hoặc tên thuốc.
+      </p>
+      <button onclick="document.getElementById('clear-search-btn').click()" class="mt-4 btn btn-outline text-xs text-teal-700 font-semibold">
+        Xóa bộ lọc tìm kiếm
+      </button>
+    </div>
+  `;
+}
+
+function selectModule(moduleId, updateCards = true) {
+  screeningState.selectedModuleId = moduleId;
+  if (updateCards) {
+    renderCards();
+  }
+
+  const module = screeningState.allModules.find(m => m.id === moduleId);
+  if (!module) return;
+
+  // Store figures for lightbox navigation
+  screeningState.currentModuleFigures = module.figures || [];
+
+  const detailContainer = document.getElementById('screening-detail-container');
+  if (!detailContainer) return;
+
+  // Render Red flags
+  const redFlagsHtml = (module.red_flags || []).map(rf => `
+    <div class="bg-rose-50 dark:bg-rose-950/30 border border-rose-200 dark:border-rose-900 rounded-lg p-3.5 mb-3">
+      <div class="flex items-center gap-2 text-rose-700 dark:text-rose-400 font-bold text-sm">
+        <svg class="w-4 h-4 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd"/></svg>
+        <span>${rf.category}</span>
+      </div>
+      <div class="mt-2 text-xs text-slate-700 dark:text-slate-300 whitespace-pre-line">
+        <strong class="text-rose-900 dark:text-rose-200">Dấu hiệu nhận biết:</strong> ${rf.signs}
+      </div>
+      <div class="mt-2 text-xs text-rose-800 dark:text-rose-300 bg-white/70 dark:bg-black/40 p-2.5 rounded border border-rose-200/50">
+        <strong>⚡ Xử trí khẩn cấp:</strong> ${rf.action}
+      </div>
+    </div>
+  `).join('');
+
+  // Render Visceral referrals
+  const referralsHtml = (module.visceral_referrals || []).map(ref => `
+    <div class="border-l-4 border-amber-500 bg-amber-50/60 dark:bg-amber-950/20 p-3 rounded-r-lg mb-2.5">
+      <div class="font-bold text-xs text-amber-900 dark:text-amber-300">🫀 ${ref.source}</div>
+      <div class="text-xs text-slate-700 dark:text-slate-300 mt-1"><strong>Kiểu chuyển đau:</strong> ${ref.pattern}</div>
+      <div class="text-[11px] text-amber-800 dark:text-amber-400 mt-1 italic"><strong>Phân biệt lâm sàng:</strong> ${ref.differential}</div>
+    </div>
+  `).join('');
+
+  // Render Examination procedures with Sn / Sp badges
+  const testsHtml = (module.examination_procedures || []).map((t, idx) => `
+    <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-lg p-4 mb-3 shadow-sm">
+      <div class="flex flex-wrap items-start justify-between gap-2 pb-2 border-b border-slate-100 dark:border-slate-800">
+        <h5 class="font-bold text-teal-800 dark:text-teal-300 text-sm">
+          ${idx + 1}. ${t.name}
+        </h5>
+        <div class="flex items-center gap-1.5 flex-wrap">
+          <span class="text-[10px] font-mono font-bold bg-teal-50 dark:bg-teal-950 text-teal-700 dark:text-teal-300 border border-teal-200 dark:border-teal-800 px-2 py-0.5 rounded">
+            Độ nhạy (Sn): ${t.sensitivity || 'N/A'}
+          </span>
+          <span class="text-[10px] font-mono font-bold bg-indigo-50 dark:bg-indigo-950 text-indigo-700 dark:text-indigo-300 border border-indigo-200 dark:border-indigo-800 px-2 py-0.5 rounded">
+            Độ đặc hiệu (Sp): ${t.specificity || 'N/A'}
+          </span>
+        </div>
+      </div>
+      ${t.diagnostic_role ? `
+        <div class="text-[11px] font-medium text-slate-600 dark:text-slate-400 mt-1.5 italic">
+          🎯 <strong>Vai trò chẩn đoán:</strong> ${t.diagnostic_role}
+        </div>
+      ` : ''}
+      <div class="text-xs text-slate-700 dark:text-slate-300 mt-2 whitespace-pre-line leading-relaxed">
+        <strong class="text-slate-900 dark:text-white">Kỹ thuật thao tác:</strong> ${t.technique}
+      </div>
+      <div class="text-xs text-emerald-800 dark:text-emerald-300 bg-emerald-50/80 dark:bg-emerald-950/30 p-2.5 rounded mt-2.5 border border-emerald-100 dark:border-emerald-900">
+        <strong>Ý nghĩa lâm sàng:</strong> ${t.significance}
+      </div>
+    </div>
+  `).join('');
+
+  // Render Somatic Dysfunctions
+  const somaticHtml = (module.stage_2_somatic_dysfunctions && module.stage_2_somatic_dysfunctions.length > 0) ? `
+    <div class="mb-6 p-4 rounded-xl bg-purple-50/50 dark:bg-purple-950/20 border border-purple-200/60 dark:border-purple-900/40">
+      <h3 class="font-bold text-purple-900 dark:text-purple-300 text-sm uppercase tracking-wide mb-2 flex items-center gap-1.5">
+        <span>🧬</span> Rối Loạn Chức Năng Thể Dịch Chuyên Sâu (Deepak Somatic Diagnosis)
+      </h3>
+      <p class="text-xs text-slate-600 dark:text-slate-400 mb-3 italic">
+        Các sai lệch cơ sinh học trượt khớp, vặn trục khung chậu, hoặc khóa diện khớp gây đau cơ học mạn tính hoặc tái phát:
+      </p>
+      <ul class="text-xs text-slate-700 dark:text-slate-300 space-y-1.5 list-disc list-inside">
+        ${module.stage_2_somatic_dysfunctions.map(s => `<li>${s}</li>`).join('')}
+      </ul>
+    </div>
+  ` : '';
+
+  // Render Differential table with Confirmatory & Gold standard columns
+  const diffRows = (module.differential_table || []).map(row => `
+    <tr class="border-b border-slate-100 dark:border-slate-800 text-xs hover:bg-slate-50 dark:hover:bg-slate-800/40 transition-colors">
+      <td class="py-2.5 px-3 font-semibold text-teal-900 dark:text-teal-300">${row.condition}</td>
+      <td class="py-2.5 px-3 text-slate-600 dark:text-slate-300">${row.onset}</td>
+      <td class="py-2.5 px-3 text-slate-600 dark:text-slate-300">${row.aggravating}</td>
+      <td class="py-2.5 px-3 text-indigo-700 dark:text-indigo-400 font-medium">${row.confirmatory_test || 'Khám nghiệm pháp chuyên biệt'}</td>
+      <td class="py-2.5 px-3 text-amber-800 dark:text-amber-400 font-medium">${row.gold_standard || 'Cận lâm sàng chuyên sâu'}</td>
+      <td class="py-2.5 px-3 font-medium text-emerald-700 dark:text-emerald-400">${row.key_differentiator}</td>
+    </tr>
+  `).join('');
+
+  // Render Web 1 Procedures Recommended Mapping
+  const web1ProceduresList = module.recommended_web1_procedures || [];
+  const web1ProceduresHtml = web1ProceduresList.length > 0 ? `
+    <div class="mt-4 pt-3 border-t border-teal-200 dark:border-teal-800/60">
+      <h4 class="text-xs font-bold text-teal-900 dark:text-teal-300 uppercase tracking-wide mb-2 flex items-center gap-1.5">
+        <span>💉</span> Các Quy Trình Tiêm Siêu Âm Can Thiệp Web 1 Khuyến Cáo Cho Vùng Này (${web1ProceduresList.length} Quy trình):
+      </h4>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
+        ${web1ProceduresList.map(proc => `
+          <a href="index.html" class="p-2.5 rounded-lg bg-white dark:bg-slate-900 border border-teal-200 dark:border-teal-800 hover:border-teal-500 dark:hover:border-teal-400 transition-all flex flex-col justify-between group shadow-2xs" title="Nhảy sang Cẩm Nang Tiêm Can Thiệp Web 1">
+            <div>
+              <div class="font-bold text-teal-800 dark:text-teal-300 group-hover:text-teal-600 dark:group-hover:text-teal-400 flex items-center justify-between">
+                <span>${proc.nameVi}</span>
+                <span class="text-[10px] text-teal-600 font-mono">↗</span>
+              </div>
+              <p class="text-[11px] text-slate-600 dark:text-slate-400 mt-1 leading-snug">${proc.role}</p>
+            </div>
+            <div class="text-[10px] text-slate-400 font-mono mt-2 pt-1 border-t border-slate-100 dark:border-slate-800">
+              Mã: ${proc.id}
+            </div>
+          </a>
+        `).join('')}
+      </div>
+    </div>
+  ` : '';
+
+  // Render Intervention Guidance & Web 1 Cross Link
+  const interventionHtml = module.stage_3_guidemap_intervention ? `
+    <div class="mb-6 p-4 rounded-xl bg-teal-50 dark:bg-teal-950/30 border border-teal-200 dark:border-teal-800">
+      <div class="flex items-center justify-between flex-wrap gap-2 mb-2">
+        <h3 class="font-bold text-teal-900 dark:text-teal-300 text-sm uppercase tracking-wide flex items-center gap-2">
+          <span>🎯</span> Định Hướng Can Thiệp Lâm Sàng & Kết Nối Cẩm Nang Tiêm Web 1 (Philip Peng)
+        </h3>
+        <a href="index.html" class="btn btn-primary text-xs font-semibold px-3 py-1 flex items-center gap-1.5" title="Mở Cẩm nang Siêu âm can thiệp khớp Philip Peng">
+          💉 Mở Web 1 Philip Peng ↗
+        </a>
+      </div>
+      <p class="text-xs text-slate-700 dark:text-slate-300 leading-relaxed">
+        ${module.stage_3_guidemap_intervention}
+      </p>
+      ${web1ProceduresHtml}
+    </div>
+  ` : '';
+
+  // Render Figures with safe index-based lightbox triggers
+  const figuresList = screeningState.currentModuleFigures;
+  const figuresHtml = figuresList.map((fig, idx) => {
+    const captionText = (fig.captions && fig.captions.length > 0) 
+      ? fig.captions[0] 
+      : (fig.page_captions && fig.page_captions.length > 0 ? fig.page_captions[0] : `Hình minh họa trang ${fig.page} (${module.title})`);
+
+    return `
+      <div class="figure-card bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-lg overflow-hidden group">
+        <div class="h-44 overflow-hidden relative cursor-pointer" onclick="openLightboxIndex(${idx})">
+          <img src="${fig.file}" alt="Hình ${idx + 1} - Trang ${fig.page}" loading="lazy" class="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-200">
+          <div class="absolute inset-0 bg-black/0 group-hover:bg-black/25 transition-colors flex items-center justify-center">
+            <span class="opacity-0 group-hover:opacity-100 bg-slate-900/85 text-white text-xs px-2.5 py-1 rounded shadow-md flex items-center gap-1">
+              🔍 Phóng to (Ảnh ${idx + 1}/${figuresList.length})
+            </span>
+          </div>
+        </div>
+        <div class="p-2.5 text-[11px] text-slate-600 dark:text-slate-400 border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950">
+          <span class="font-bold text-teal-700 dark:text-teal-400">Trang ${fig.page}:</span> ${escapeHtml(captionText)}
+        </div>
+      </div>
+    `;
+  }).join('');
+
+  detailContainer.innerHTML = `
+    <div class="bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 p-6 shadow-sm">
+      <!-- Title & Header -->
+      <div class="flex flex-wrap items-start justify-between gap-4 pb-4 border-b border-slate-100 dark:border-slate-800">
+        <div>
+          <div class="flex items-center gap-2 mb-1.5">
+            <span class="badge-cat badge-${module.region}">${module.region_vi}</span>
+            <span class="text-xs text-slate-400 font-bold">Chương ${module.chapter}</span>
+          </div>
+          <h2 class="text-xl font-bold text-slate-900 dark:text-white leading-tight">
+            ${module.title_vi}
+          </h2>
+          <p class="text-xs text-slate-500 italic mt-0.5">${module.title}</p>
+          <p class="text-xs text-teal-700 dark:text-teal-400 font-medium mt-1">📚 ${module.author}</p>
+        </div>
+        <a href="index.html" class="btn btn-outline text-xs text-teal-700 font-semibold flex items-center gap-1.5" style="border-color: #0d9488;" title="Mở cẩm nang quy trình tiêm siêu âm tương ứng trong Web 1">
+          💉 Sang Cẩm Nang Tiêm Can Thiệp ↗
+        </a>
+      </div>
+
+      <!-- Clinical Summary / Philosophy -->
+      <div class="my-5 p-4 rounded-xl bg-teal-50/50 dark:bg-teal-950/20 border border-teal-100 dark:border-teal-900/50">
+        <h4 class="text-xs font-bold uppercase tracking-wider text-teal-900 dark:text-teal-300 mb-1.5">
+          💡 Nguyên Lý Sàng Lọc Lâm Sàng (Clinical Screening Concept)
+        </h4>
+        <p class="text-xs leading-relaxed text-slate-700 dark:text-slate-300">
+          ${module.summary}
+        </p>
+      </div>
+
+      <!-- SECTION 1: RED FLAGS -->
+      <div class="mb-6">
+        <div class="flex items-center gap-2 mb-3">
+          <span class="w-2.5 h-2.5 rounded-full bg-rose-600 animate-pulse"></span>
+          <h3 class="font-bold text-rose-700 dark:text-rose-400 text-sm uppercase tracking-wide">
+            1. Hệ Thống Cờ Đỏ Khẩn Cấp Cần Loại Trừ Trước Khi Can Thiệp (Red Flags)
+          </h3>
+        </div>
+        <div>${redFlagsHtml}</div>
+      </div>
+
+      <!-- SECTION 2: VISCERAL REFERRALS & DRUG-INDUCED -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+        <div class="bg-amber-50/30 dark:bg-amber-950/10 border border-amber-200/60 dark:border-amber-900/40 rounded-xl p-4">
+          <h3 class="font-bold text-amber-800 dark:text-amber-300 text-xs uppercase tracking-wide mb-3 flex items-center gap-1.5">
+            <span>🫀</span> Đau Quy Chiếu Từ Nội Tạng (Visceral Referrals)
+          </h3>
+          ${referralsHtml}
+        </div>
+
+        <div class="bg-indigo-50/30 dark:bg-indigo-950/10 border border-indigo-200/60 dark:border-indigo-900/40 rounded-xl p-4">
+          <h3 class="font-bold text-indigo-800 dark:text-indigo-300 text-xs uppercase tracking-wide mb-3 flex items-center gap-1.5">
+            <span>💊</span> Đau Do Tác Dụng Phụ Của Thuốc (Drug-Induced Pain)
+          </h3>
+          <ul class="text-xs text-slate-700 dark:text-slate-300 space-y-2 list-disc list-inside">
+            ${(module.drug_induced || []).map(d => `<li>${d}</li>`).join('')}
+          </ul>
+        </div>
+      </div>
+
+      <!-- SECTION 3: PHYSICAL EXAMINATION TESTS -->
+      ${testsHtml ? `
+        <div class="mb-6">
+          <h3 class="font-bold text-teal-800 dark:text-teal-300 text-sm uppercase tracking-wide mb-3 flex items-center gap-2">
+            <span>🩺</span> 2. Các Nghiệm Pháp Khám Thực Thể Phân Biệt (Provocative Tests)
+          </h3>
+          <div>${testsHtml}</div>
+        </div>
+      ` : ''}
+
+      <!-- SECTION 4: SOMATIC DYSFUNCTIONS -->
+      ${somaticHtml}
+
+      <!-- SECTION 5: DIFFERENTIAL DIAGNOSIS TABLE -->
+      ${diffRows ? `
+        <div class="mb-6">
+          <h3 class="font-bold text-slate-800 dark:text-slate-200 text-sm uppercase tracking-wide mb-3 flex items-center gap-2">
+            <span>⚖️</span> 3. Bảng Đối Chiếu Chẩn Đoán Phân Biệt Lâm Sàng Chuyên Sâu (Differential Table)
+          </h3>
+          <div class="overflow-x-auto rounded-lg border border-slate-200 dark:border-slate-800">
+            <table class="w-full text-left border-collapse">
+              <thead>
+                <tr class="bg-slate-50 dark:bg-slate-800 text-[11px] font-bold text-slate-700 dark:text-slate-300 uppercase tracking-wider">
+                  <th class="py-2.5 px-3 border-b border-slate-200 dark:border-slate-700">Tình trạng bệnh lý</th>
+                  <th class="py-2.5 px-3 border-b border-slate-200 dark:border-slate-700">Khởi phát</th>
+                  <th class="py-2.5 px-3 border-b border-slate-200 dark:border-slate-700">Yếu tố tăng/giảm</th>
+                  <th class="py-2.5 px-3 border-b border-slate-200 dark:border-slate-700 text-indigo-700 dark:text-indigo-400">Nghiệm pháp khẳng định</th>
+                  <th class="py-2.5 px-3 border-b border-slate-200 dark:border-slate-700 text-amber-800 dark:text-amber-400">Tiêu chuẩn vàng CLS</th>
+                  <th class="py-2.5 px-3 border-b border-slate-200 dark:border-slate-700">Dấu hiệu phân biệt cốt lõi</th>
+                </tr>
+              </thead>
+              <tbody>
+                ${diffRows}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      ` : ''}
+
+      <!-- SECTION 6: TARGETED INTERVENTION & WEB 1 LINK -->
+      ${interventionHtml}
+
+      <!-- SECTION 7: ATLAS FIGURES -->
+      ${figuresList.length > 0 ? `
+        <div>
+          <div class="flex items-center justify-between mb-3">
+            <h3 class="font-bold text-blue-800 dark:text-blue-300 text-sm uppercase tracking-wide flex items-center gap-2">
+              <span>🖼️</span> 4. Atlas Hình Ảnh Giải Phẫu & Khám Lâm Sàng (${figuresList.length} Hình ảnh Deepak Sebastian)
+            </h3>
+            <span class="text-xs text-slate-400 font-medium">Bấm ảnh để xem phóng to với bộ duyệt Atlas</span>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+            ${figuresHtml}
+          </div>
+        </div>
+      ` : ''}
+    </div>
+  `;
+
+  // Scroll smoothly to detail on mobile
+  if (window.innerWidth < 1024) {
+    detailContainer.scrollIntoView({ behavior: 'smooth' });
+  }
+}
+
+// ----------------------------------------------------
+// LIGHTBOX ATLAS GALLERY NAVIGATION
+// ----------------------------------------------------
+function openLightboxIndex(index) {
+  const gallery = screeningState.currentModuleFigures;
+  if (!gallery || gallery.length === 0) return;
+
+  // Circular bounds wrap
+  if (index < 0) index = gallery.length - 1;
+  if (index >= gallery.length) index = 0;
+
+  screeningState.lightboxIndex = index;
+  const fig = gallery[index];
+
+  const lightbox = document.getElementById('image-lightbox');
+  const img = document.getElementById('lightbox-img');
+  const desc = document.getElementById('lightbox-desc');
+  const metaEl = document.getElementById('lightbox-springer');
+  const counterEl = document.getElementById('lightbox-counter');
+
+  const captionText = (fig.captions && fig.captions.length > 0) 
+    ? fig.captions[0] 
+    : (fig.page_captions && fig.page_captions.length > 0 ? fig.page_captions[0] : `Hình minh họa trang ${fig.page}`);
+
+  if (lightbox && img) {
+    img.src = fig.file;
+    if (desc) desc.textContent = captionText;
+    if (metaEl) {
+      metaEl.innerHTML = `<span>📖 Trang ${fig.page}</span> &bull; <span>Giáo trình GS. Deepak Sebastian: Differential Screening of Regional Pain in Musculoskeletal</span>`;
+    }
+    if (counterEl) {
+      counterEl.textContent = `Hình ${index + 1} / ${gallery.length}`;
+    }
+    lightbox.classList.remove('hidden');
+    document.body.style.overflow = 'hidden';
+  }
+}
+
+function lightboxPrev() {
+  openLightboxIndex(screeningState.lightboxIndex - 1);
+}
+
+function lightboxNext() {
+  openLightboxIndex(screeningState.lightboxIndex + 1);
+}
+
+function closeLightbox() {
+  const lightbox = document.getElementById('image-lightbox');
+  if (lightbox) {
+    lightbox.classList.add('hidden');
+    document.body.style.overflow = '';
+  }
+}
+
+// ----------------------------------------------------
+// VIEW 2: 3-STAGE DECISION ALGORITHM GUIDEMAP WIZARD
+// ----------------------------------------------------
+function renderAlgorithmView() {
+  const container = document.getElementById('algorithm-container');
+  if (!container || !screeningState.algorithm) return;
+
+  const algo = screeningState.algorithm;
+  const query = screeningState.searchQuery;
+
+  const stagesHtml = algo.stages.map(st => {
+    // Filter steps if query
+    const filteredSteps = st.steps.filter(step => {
+      if (!query) return true;
+      const corpus = `${st.name} ${step.title} ${JSON.stringify(step.criteria || [])} ${JSON.stringify(step.options || [])} ${JSON.stringify(step.branches || [])} ${JSON.stringify(step.decision || {})}`.toLowerCase();
+      return corpus.includes(query);
+    });
+
+    if (filteredSteps.length === 0 && query) {
+      return '';
+    }
+
+    return `
+      <div class="algo-stage-card">
+        <div class="flex items-center justify-between mb-2">
+          <span class="algo-stage-badge ${st.stage === 1 ? 'bg-rose-100 text-rose-800 dark:bg-rose-950 dark:text-rose-300' : (st.stage === 2 ? 'bg-blue-100 text-blue-800 dark:bg-blue-950 dark:text-blue-300' : 'bg-teal-100 text-teal-800 dark:bg-teal-950 dark:text-teal-300')}">
+            Giai Đoạn ${st.stage}
+          </span>
+        </div>
+        <h3 class="text-base font-bold text-slate-900 dark:text-white">
+          ${st.name}
+        </h3>
+        <p class="text-xs text-slate-500 italic mt-0.5 mb-3">${st.subtitle}</p>
+
+        ${filteredSteps.map(step => `
+          <div class="bg-slate-50 dark:bg-slate-800/60 rounded-lg p-3.5 mb-3 border border-slate-200 dark:border-slate-700/60">
+            <h4 class="text-xs font-bold text-teal-800 dark:text-teal-300 mb-2">
+              ${step.step_id ? `Bước ${step.step_id}: ` : ''}${step.title}
+            </h4>
+            
+            ${step.criteria ? `
+              <ul class="text-xs text-slate-700 dark:text-slate-300 space-y-1.5 list-disc list-inside mb-3">
+                ${step.criteria.map(c => `<li>${c}</li>`).join('')}
+              </ul>
+            ` : ''}
+
+            ${step.options ? `
+              <div class="grid grid-cols-1 gap-2 text-xs text-slate-700 dark:text-slate-300 mb-2">
+                ${step.options.map(opt => `
+                  <div class="p-2 rounded bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
+                    ${opt}
+                  </div>
+                `).join('')}
+              </div>
+            ` : ''}
+
+            ${step.branches ? `
+              <div class="grid grid-cols-1 md:grid-cols-3 gap-3 text-xs mt-2">
+                ${step.branches.map(b => `
+                  <div class="p-3 rounded-lg bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 flex flex-col justify-between">
+                    <div>
+                      <h5 class="font-bold text-teal-800 dark:text-teal-300 text-xs mb-1">${b.type}</h5>
+                      <p class="text-[11px] text-slate-600 dark:text-slate-400 mb-2"><strong>Chỉ định:</strong> ${b.indication}</p>
+                    </div>
+                    <div class="text-[11px] text-emerald-700 dark:text-emerald-400 font-semibold bg-emerald-50 dark:bg-emerald-950/40 p-2 rounded">
+                      ${b.action}
+                    </div>
+                  </div>
+                `).join('')}
+              </div>
+            ` : ''}
+
+            ${step.decision ? `
+              <div class="text-xs p-2.5 rounded bg-amber-50 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-800 flex flex-col sm:flex-row justify-between gap-2">
+                <span class="text-rose-700 dark:text-rose-400"><strong>🚨 Nếu Có Bất Kỳ Tiêu Chí Nào:</strong> ${step.decision.positive}</span>
+                <span class="text-teal-700 dark:text-teal-400"><strong>✅ Nếu Không Có:</strong> ${step.decision.negative}</span>
+              </div>
+            ` : ''}
+          </div>
+        `).join('')}
+      </div>
+    `;
+  }).filter(Boolean).join('');
+
+  container.innerHTML = `
+    <div class="bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 p-6 shadow-sm">
+      <div class="mb-5 pb-4 border-b border-slate-100 dark:border-slate-800 flex flex-wrap items-center justify-between gap-3">
+        <div>
+          <h2 class="text-xl font-bold text-slate-900 dark:text-white">
+            🌲 Cây Quyết Định & Thuật Toán Sàng Lọc Lâm Sàng 3 Giai Đoạn (Sebastian Guidemap Algorithm)
+          </h2>
+          <p class="text-xs text-slate-500 mt-1">
+            Bản đồ chỉ dẫn ra quyết định lâm sàng từng bước khi tiếp cận ca đau khớp, đau cơ hoặc đau cột sống khó, không điển hình hoặc kháng trị.
+          </p>
+        </div>
+        <a href="index.html" class="btn btn-outline text-xs text-teal-700 font-semibold" style="border-color: #0d9488;">
+          💉 Sang Cẩm Nang Tiêm Can Thiệp ↗
+        </a>
+      </div>
+
+      <!-- Interactive Checklist Box -->
+      <div class="interactive-guidemap-box">
+        <h4 class="text-sm font-bold text-teal-900 dark:text-teal-300 mb-2 flex items-center gap-2">
+          <span>🩺</span> Bộ Kiểm Tra Sàng Lọc Tương Tác 3 Giai Đoạn (Interactive Guidemap Wizard)
+        </h4>
+        <p class="text-xs text-slate-600 dark:text-slate-400 mb-4">
+          Tích chọn các yếu tố nghi ngờ của bệnh nhân và nguồn gốc cơ sinh học để nhận khuyến cáo điều trị và chỉ dẫn thủ thuật tương ứng trong Web 1:
+        </p>
+
+        <!-- Stage 1 Inputs -->
+        <div class="mb-3">
+          <div class="text-xs font-bold text-slate-700 dark:text-slate-300 uppercase tracking-wider mb-2">
+            Giai đoạn 1: Rà soát yếu tố Cờ đỏ & Căn nguyên toàn thân
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs">
+            <label class="flex items-center gap-2 p-2.5 rounded bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 cursor-pointer">
+              <input type="checkbox" id="chk-rf" ${screeningState.guidemapChecklist.hasRedFlags ? 'checked' : ''} onchange="updateInteractiveGuidemap()">
+              <span class="text-rose-700 dark:text-rose-400 font-semibold">🚨 Cờ đỏ (Sốt, sụt cân, liệt, đau đêm)</span>
+            </label>
+            <label class="flex items-center gap-2 p-2.5 rounded bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 cursor-pointer">
+              <input type="checkbox" id="chk-visceral" ${screeningState.guidemapChecklist.hasVisceral ? 'checked' : ''} onchange="updateInteractiveGuidemap()">
+              <span class="text-amber-700 dark:text-amber-400 font-semibold">🫀 Đau quy chiếu tạng (Tim, mật, tụy, thận)</span>
+            </label>
+            <label class="flex items-center gap-2 p-2.5 rounded bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 cursor-pointer">
+              <input type="checkbox" id="chk-drugs" ${screeningState.guidemapChecklist.hasDrugHistory ? 'checked' : ''} onchange="updateInteractiveGuidemap()">
+              <span class="text-indigo-700 dark:text-indigo-400 font-semibold">💊 Dùng Statin, Quinolone, Steroid, AI...</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Stage 2 Inputs: Pain Mechanism / Origin -->
+        <div class="mb-4">
+          <div class="text-xs font-bold text-slate-700 dark:text-slate-300 uppercase tracking-wider mb-2">
+            Giai đoạn 2: Định hướng Cơ chế phát sinh đau (Pain Mechanism / Tissue Source)
+          </div>
+          <select id="sel-pain-origin" class="w-full text-xs p-2.5 rounded bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-800 dark:text-slate-200 font-medium" onchange="updateInteractiveGuidemap()">
+            <option value="radicular" ${screeningState.guidemapChecklist.painOrigin === 'radicular' ? 'selected' : ''}>⚡ Rễ thần kinh (Radicular: tê, buốt, điện giật lan theo khoanh, Spurling/SLR dương tính)</option>
+            <option value="discogenic" ${screeningState.guidemapChecklist.painOrigin === 'discogenic' ? 'selected' : ''}>⚡ Đĩa đệm (Discogenic: đau tăng khi cúi gập cột sống, ngồi lâu, ho rặn)</option>
+            <option value="facet" ${screeningState.guidemapChecklist.painOrigin === 'facet' ? 'selected' : ''}>⚡ Diện khớp cột sống (Facet / Z-Joint: đau tăng khi ưỡn và xoay người cùng bên)</option>
+            <option value="tendon" ${screeningState.guidemapChecklist.painOrigin === 'tendon' ? 'selected' : ''}>⚡ Gân - Bao gân (Myotendinous / Enthesopathy: đau khi co cơ kháng lực hoặc sờ nắn gân)</option>
+            <option value="capsular" ${screeningState.guidemapChecklist.painOrigin === 'capsular' ? 'selected' : ''}>⚡ Bao khớp / Khớp thoái hóa (Capsular Pattern: giới hạn tầm vận động cả chủ động và thụ động)</option>
+            <option value="entrapment" ${screeningState.guidemapChecklist.painOrigin === 'entrapment' ? 'selected' : ''}>⚡ Chèn ép thần kinh ngoại biên (Peripheral Entrapment: CTS ống cổ tay, gõ Tinel, dị cảm)</option>
+            <option value="somatic" ${screeningState.guidemapChecklist.painOrigin === 'somatic' ? 'selected' : ''}>⚡ Rối loạn cơ sinh học thể dịch (Deepak Somatic Dysfunction: xoay chậu Innominate, vặn xương cùng Sacrum)</option>
+          </select>
+        </div>
+
+        <!-- Output Guidance Card -->
+        <div id="interactive-guidemap-output" class="p-4 rounded-lg bg-teal-50 dark:bg-teal-950/40 border border-teal-200 dark:border-teal-800 text-xs">
+          <!-- Populated by updateInteractiveGuidemap -->
+        </div>
+      </div>
+
+      <!-- Complete Stages Flow -->
+      <div class="space-y-4">
+        ${stagesHtml || `<div class="py-8 text-center text-slate-400">Không tìm thấy bước thuật toán khớp với từ khóa tìm kiếm</div>`}
+      </div>
+    </div>
+  `;
+
+  // Trigger output calculation
+  updateInteractiveGuidemap();
+}
+
+function updateInteractiveGuidemap(fromState = false) {
+  const chkRf = document.getElementById('chk-rf');
+  const chkVisceral = document.getElementById('chk-visceral');
+  const chkDrugs = document.getElementById('chk-drugs');
+  const selOrigin = document.getElementById('sel-pain-origin');
+  const output = document.getElementById('interactive-guidemap-output');
+  if (!output) return;
+
+  if (fromState) {
+    if (chkRf) chkRf.checked = screeningState.guidemapChecklist.hasRedFlags;
+    if (chkVisceral) chkVisceral.checked = screeningState.guidemapChecklist.hasVisceral;
+    if (chkDrugs) chkDrugs.checked = screeningState.guidemapChecklist.hasDrugHistory;
+    if (selOrigin && screeningState.guidemapChecklist.painOrigin) selOrigin.value = screeningState.guidemapChecklist.painOrigin;
+  } else {
+    if (chkRf) screeningState.guidemapChecklist.hasRedFlags = !!chkRf.checked;
+    if (chkVisceral) screeningState.guidemapChecklist.hasVisceral = !!chkVisceral.checked;
+    if (chkDrugs) screeningState.guidemapChecklist.hasDrugHistory = !!chkDrugs.checked;
+    if (selOrigin && selOrigin.value) screeningState.guidemapChecklist.painOrigin = selOrigin.value;
+  }
+
+  const hasRf = screeningState.guidemapChecklist.hasRedFlags;
+  const hasVisceral = screeningState.guidemapChecklist.hasVisceral;
+  const hasDrugs = screeningState.guidemapChecklist.hasDrugHistory;
+  const origin = screeningState.guidemapChecklist.painOrigin;
+
+  let warningsHtml = [];
+  let isContraindicated = false;
+
+  if (hasRf) {
+    isContraindicated = true;
+    warningsHtml.push(`
+      <div class="p-2.5 rounded bg-rose-100 dark:bg-rose-950/70 border border-rose-300 dark:border-rose-800 text-rose-900 dark:text-rose-200 mb-2">
+        <strong>🚨 CỜ ĐỎ KHẨN CẤP:</strong> Bệnh nhân có dấu hiệu cờ đỏ (Mạch máu / Tủy sống / Nhiễm trùng khớp / Ung thư ác tính). 
+        <div class="mt-1 font-bold text-rose-700 dark:text-rose-300">CHỐNG CHỈ ĐỊNH MỌI THỦ THUẬT TIÊM TẠI CHỖ.</div>
+        Chỉ định chụp MRI / CTA khẩn cấp và chuyển viện / hội chẩn chuyên khoa Cấp cứu / Ngoại thần kinh ngay trong ngày!
+      </div>
+    `);
+  }
+
+  if (hasVisceral) {
+    warningsHtml.push(`
+      <div class="p-2.5 rounded bg-amber-100 dark:bg-amber-950/70 border border-amber-300 dark:border-amber-800 text-amber-900 dark:text-amber-200 mb-2">
+        <strong>🫀 NGUY CƠ ĐAU CHUYỂN TẠNG:</strong> Bệnh nhân có triệu chứng đau không thay đổi theo vận động cơ học.
+        Bắt buộc kiểm tra: ECG & Men tim Troponin (nếu đau ngực / vai); Siêu âm ổ bụng & Men tụy Amylase/Lipase (nếu đau hạ sườn / thắt lưng) trước khi can thiệp cơ xương khớp!
+      </div>
+    `);
+  }
+
+  if (hasDrugs) {
+    warningsHtml.push(`
+      <div class="p-2.5 rounded bg-indigo-100 dark:bg-indigo-950/70 border border-indigo-300 dark:border-indigo-800 text-indigo-900 dark:text-indigo-200 mb-2">
+        <strong>💊 NGUY CƠ ĐAU DO TÁC DỤNG PHỤ CỦA THUỐC:</strong> 
+        Kiểm tra nồng độ men cơ Creatine Kinase (nếu dùng Statin); Kiểm tra nguy cơ đứt gân gót Achilles (nếu dùng Quinolone); 
+        Chụp MRI khớp háng phát hiện sớm hoại tử vô mạch AVN (nếu dùng Corticoid). Tạm ngừng hoặc chuyển đổi thuốc theo hướng dẫn tại Tab "Tra cứu thuốc".
+      </div>
+    `);
+  }
+
+  // Tissue Mechanism Guidance & Web 1 Recommendations
+  const mechanismGuides = {
+    radicular: {
+      title: "Tổn thương Rễ thần kinh (Radiculopathy / Neurogenic Pain)",
+      tests: "Spurling Test, ULTT 1 (Cổ); SLR Lasegue, Crossed SLR, Slump Test (Thắt lưng)",
+      goldStandard: "MRI Cột sống xác định tầng rễ và mức độ thoát vị chèn ép",
+      web1Link: "cervical-nerve-root / caudal-epidural / piriformis-muscle",
+      web1Procs: [
+        { id: "cervical-nerve-root", nameVi: "Phong bế rễ thần kinh gai sống cổ chọn lọc C5, C6, C7" },
+        { id: "caudal-epidural", nameVi: "Tiêm ngoài màng cứng qua khe xương cùng (Caudal Epidural)" },
+        { id: "piriformis-muscle", nameVi: "Tiêm cơ hình lê dưới siêu âm điều trị đau thần kinh tọa" }
+      ]
+    },
+    discogenic: {
+      title: "Đau phát sinh do đĩa đệm (Discogenic MSK Pain)",
+      tests: "Centralization phenomenon (Hiện tượng trung tâm hóa Mackenzie), Slump Test",
+      goldStandard: "MRI Cột sống phát hiện rách vòng sợi đĩa đệm (HIZ / Annular tear)",
+      web1Link: "caudal-epidural",
+      web1Procs: [
+        { id: "caudal-epidural", nameVi: "Tiêm ngoài màng cứng qua khe xương cùng giải áp đĩa đệm" }
+      ]
+    },
+    facet: {
+      title: "Hội chứng diện khớp cạnh sống (Facet / Zygapophyseal Joint)",
+      tests: "Nghiệm pháp Kemps, Khám đau chói diện khớp khi ưỡn và xoay cột sống cùng bên",
+      goldStandard: "Phong bế nhánh trong (Medial Branch Block) chẩn đoán giảm > 80% đau",
+      web1Link: "cervical-medial-branch-ton / lumbar-medial-branch",
+      web1Procs: [
+        { id: "cervical-medial-branch-ton", nameVi: "Phong bế nhánh trong cột sống cổ & thần kinh chẩm thứ 3" },
+        { id: "lumbar-medial-branch", nameVi: "Phong bế nhánh trong cột sống thắt lưng & rễ sau L5" }
+      ]
+    },
+    tendon: {
+      title: "Bệnh lý gân & Điểm bám (Tendinopathy / Enthesopathy)",
+      tests: "Co cơ kháng lực chọn lọc, Nghiệm pháp Neer/Hawkins (Vai), Cozen/Mill (Khuỷu), Thompson (Gót)",
+      goldStandard: "Siêu âm Doppler năng lượng đánh giá tân mạch và mất cấu trúc sợi gân",
+      web1Link: "sasd-bursa / tennis-elbow / patellar-tendon-fenestration / prp-platelet-rich-plasma",
+      web1Procs: [
+        { id: "sasd-bursa", nameVi: "Tiêm bao hoạt dịch dưới mỏm cùng - dưới cơ delta (SASD Bursa)" },
+        { id: "tennis-elbow", nameVi: "Tiêm điểm bám gân lồi cầu ngoài xương cánh tay (Tennis Elbow)" },
+        { id: "patellar-tendon-fenestration", nameVi: "Can thiệp châm kim đa điểm và bóc tách gân bánh chè" },
+        { id: "prp-platelet-rich-plasma", nameVi: "Liệu pháp Huyết tương giàu tiểu cầu (PRP) cơ xương khớp" }
+      ]
+    },
+    capsular: {
+      title: "Bệnh lý bao khớp & Ổ khớp (Capsular / Articular Pattern)",
+      tests: "Khám giới hạn tầm vận động chủ động và thụ động (AROM / PROM), Dấu hiệu rãnh khớp",
+      goldStandard: "Siêu âm khớp độ phân giải cao & X-quang khớp đánh giá hẹp khe khớp",
+      web1Link: "glenohumeral-posterior / hip-intraarticular / knee-suprapatellar",
+      web1Procs: [
+        { id: "glenohumeral-posterior", nameVi: "Tiêm khớp ổ chảo cánh tay lối sau (Frozen Shoulder)" },
+        { id: "hip-intraarticular", nameVi: "Tiêm nội khớp háng dưới siêu âm" },
+        { id: "knee-suprapatellar", nameVi: "Tiêm nội khớp gối qua ngách trên bánh chè" }
+      ]
+    },
+    entrapment: {
+      title: "Hội chứng chèn ép thần kinh ngoại biên (Peripheral Nerve Entrapment)",
+      tests: "Dấu hiệu Durkan, Nghiệm pháp Phalen (Cổ tay); Dấu hiệu Tinel, Nghiệm pháp Roos (TOS)",
+      goldStandard: "Điện cơ (EMG / NCV) và Siêu âm đo diện tích cắt ngang CSA dây thần kinh",
+      web1Link: "carpal-tunnel / lfcn-block / ankle-nerve-blocks",
+      web1Procs: [
+        { id: "carpal-tunnel", nameVi: "Bóc tách thủy dịch thần kinh giữa trong Hội chứng Ống Cổ Tay" },
+        { id: "lfcn-block", nameVi: "Phong bế thần kinh bì đùi ngoài - Meralgia Paresthetica" },
+        { id: "ankle-nerve-blocks", nameVi: "Bộ phong bế dây thần kinh cảm giác cổ bàn chân (Ống cổ chân)" }
+      ]
+    },
+    somatic: {
+      title: "Rối loạn cơ sinh học thể dịch theo GS. Deepak Sebastian (Somatic Dysfunction)",
+      tests: "Nghiệm pháp Cúi ngồi & Cúi đứng, Nghiệm pháp Gillet / Stork, Cụm Laslett SIJ Cluster",
+      goldStandard: "Đánh giá động học chỉnh hình cơ sinh học (Biomechanical Assessment) & Tiêm SIJ",
+      web1Link: "sacroiliac-joint / sacroiliac-joint-rfa / esp-block",
+      web1Procs: [
+        { id: "sacroiliac-joint", nameVi: "Tiêm khớp cùng chậu dưới siêu âm (SIJ Injection)" },
+        { id: "sacroiliac-joint-rfa", nameVi: "Đốt sóng cao tần (RFA) khớp cùng chậu" },
+        { id: "esp-block", nameVi: "Phong bế mặt phẳng cơ dựng gai (ESP Block)" }
+      ]
+    }
+  };
+
+  const mech = mechanismGuides[origin] || mechanismGuides.radicular;
+
+  const stage3Html = isContraindicated ? `
+    <div class="mt-3 p-3 rounded bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">
+      ⛔ <strong>Giai đoạn 3 (Can thiệp):</strong> Đang tạm hoãn thủ thuật tiêm can thiệp do có cờ đỏ cấp cứu. Hãy chuyển bệnh nhân đi chẩn đoán hình ảnh chuyên khoa trước.
+    </div>
+  ` : `
+    <div class="mt-3 p-3.5 rounded-lg bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-200 dark:border-emerald-800 text-emerald-950 dark:text-emerald-200">
+      <div class="font-bold text-emerald-900 dark:text-emerald-300 text-sm mb-1.5 flex items-center justify-between">
+        <span>✅ KẾT QUẢ GIAI ĐOẠN 3: BỆNH NHÂN PHÙ HỢP CAN THIỆP SIÊU ÂM WEB 1</span>
+        <a href="index.html" class="btn btn-primary text-xs px-2.5 py-1">💉 Mở Web 1 Philip Peng ↗</a>
+      </div>
+      <div class="space-y-1.5 text-xs text-slate-700 dark:text-slate-300">
+        <div><strong>Chẩn đoán hướng tới:</strong> ${mech.title}</div>
+        <div><strong>Nghiệm pháp cần thực hiện để khẳng định:</strong> ${mech.tests}</div>
+        <div><strong>Cận lâm sàng xác nhận:</strong> ${mech.goldStandard}</div>
+        <div class="mt-2.5 pt-2 border-t border-emerald-200 dark:border-emerald-800">
+          <strong class="text-emerald-800 dark:text-emerald-300">Khuyến cáo thủ thuật tiêm can thiệp tương ứng trong Cẩm Nang Web 1:</strong>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 mt-2">
+            ${mech.web1Procs.map(p => `
+              <a href="index.html" class="p-2 rounded bg-white dark:bg-slate-900 border border-emerald-300 dark:border-emerald-700 font-semibold text-teal-800 dark:text-teal-300 flex items-center justify-between hover:bg-emerald-50 dark:hover:bg-emerald-950/60">
+                <span>${p.nameVi}</span>
+                <span class="text-xs text-teal-600">↗</span>
+              </a>
+            `).join('')}
+          </div>
+        </div>
+      </div>
+    </div>
+  `;
+
+  output.innerHTML = `
+    <div>
+      ${warningsHtml.join('')}
+      ${stage3Html}
+    </div>
+  `;
+}
+
+// ----------------------------------------------------
+// VIEW 3: RED FLAGS EMERGENCY TRIAGE TABLE
+// ----------------------------------------------------
+function renderRedFlagsView() {
+  const container = document.getElementById('redflags-container');
+  if (!container) return [];
+
+  const query = screeningState.searchQuery;
+  const list = (screeningState.redFlags || []).filter(rf => {
+    if (!query) return true;
+    const corpus = `${rf.system} ${rf.condition} ${rf.signs} ${rf.investigation} ${rf.action} ${rf.urgency}`.toLowerCase();
+    return corpus.includes(query);
+  });
+
+  const rows = list.map(rf => `
+    <tr class="border-b border-slate-100 dark:border-slate-800 text-xs hover:bg-slate-50 dark:hover:bg-slate-800/50">
+      <td class="py-3 px-3 font-bold text-slate-800 dark:text-slate-200">${rf.system}</td>
+      <td class="py-3 px-3 font-semibold text-rose-700 dark:text-rose-400">${rf.condition}</td>
+      <td class="py-3 px-3 text-slate-700 dark:text-slate-300">${rf.signs}</td>
+      <td class="py-3 px-3 text-teal-800 dark:text-teal-300 font-medium">${rf.investigation}</td>
+      <td class="py-3 px-3 text-rose-900 dark:text-rose-300 bg-rose-50/50 dark:bg-rose-950/20 font-medium">${rf.action}</td>
+      <td class="py-3 px-3 text-center">
+        <span class="px-2 py-0.5 rounded text-[10px] font-bold ${rf.urgency === 'Tối khẩn' ? 'bg-rose-600 text-white animate-pulse' : 'bg-amber-100 text-amber-800 dark:bg-amber-950 dark:text-amber-300'}">
+          ${rf.urgency}
+        </span>
+      </td>
+    </tr>
+  `).join('');
+
+  container.innerHTML = `
+    <div class="bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 p-6 shadow-sm">
+      <div class="mb-5 pb-4 border-b border-slate-100 dark:border-slate-800 flex flex-wrap items-center justify-between gap-3">
+        <div>
+          <h2 class="text-xl font-bold text-slate-900 dark:text-white flex items-center gap-2">
+            <span>🚨</span> Bảng Tra Cứu Cờ Đỏ Lâm Sàng Khẩn Cấp Cần Loại Trừ (Red Flags Triage)
+          </h2>
+          <p class="text-xs text-slate-500 mt-1">
+            Tổng hợp các tình huống cấp cứu thần kinh, mạch máu, nhiễm trùng khớp và u ác tính đe dọa tính mạng hoặc tàn phế.
+          </p>
+        </div>
+        <span class="text-xs font-semibold text-rose-700 bg-rose-50 dark:bg-rose-950/50 px-3 py-1 rounded-full border border-rose-200">
+          Hiển thị: ${list.length} / ${screeningState.redFlags.length} Cờ đỏ
+        </span>
+      </div>
+
+      <div class="overflow-x-auto rounded-lg border border-slate-200 dark:border-slate-800">
+        <table class="w-full text-left border-collapse screening-table">
+          <thead>
+            <tr class="bg-slate-100 dark:bg-slate-800 text-[11px] font-bold text-slate-700 dark:text-slate-300 uppercase tracking-wider">
+              <th class="py-3 px-3 border-b border-slate-200 dark:border-slate-700">Hệ Cơ Quan</th>
+              <th class="py-3 px-3 border-b border-slate-200 dark:border-slate-700">Tình Trạng Cờ Đỏ</th>
+              <th class="py-3 px-3 border-b border-slate-200 dark:border-slate-700">Dấu Hiệu Nhận Biết Cốt Lõi</th>
+              <th class="py-3 px-3 border-b border-slate-200 dark:border-slate-700">Cận Lâm Sàng Cần Chỉ Định</th>
+              <th class="py-3 px-3 border-b border-slate-200 dark:border-slate-700">Hành Động Cấp Cứu</th>
+              <th class="py-3 px-3 border-b border-slate-200 dark:border-slate-700 text-center">Mức Khẩn</th>
+            </tr>
+          </thead>
+          <tbody>
+            ${rows || `<tr><td colspan="6" class="py-8 text-center text-slate-400">Không tìm thấy cờ đỏ khớp với từ khóa tìm kiếm</td></tr>`}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  `;
+
+  return list;
+}
+
+// ----------------------------------------------------
+// VIEW 4: LAB TESTS CHECKER (CHAPTER 2)
+// ----------------------------------------------------
+function renderLabsView() {
+  const container = document.getElementById('labs-container');
+  if (!container) return [];
+
+  const query = screeningState.searchQuery;
+  const list = (screeningState.labTests || []).filter(item => {
+    if (!query) return true;
+    const corpus = `${item.test_name} ${item.category} ${item.normal_range} ${item.clinical_meaning} ${item.red_flag_value}`.toLowerCase();
+    return corpus.includes(query);
+  });
+
+  const cardsHtml = list.map(item => `
+    <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-4 shadow-sm">
+      <div class="flex items-start justify-between gap-2 mb-2">
+        <h4 class="font-bold text-teal-800 dark:text-teal-300 text-sm">
+          ${item.test_name}
+        </h4>
+        <span class="text-[10px] font-semibold bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 px-2 py-0.5 rounded">
+          ${item.category}
+        </span>
+      </div>
+      <div class="text-xs text-slate-600 dark:text-slate-400 mb-2">
+        <strong>Giá trị bình thường:</strong> <span class="text-slate-900 dark:text-slate-100 font-mono font-medium">${item.normal_range}</span>
+      </div>
+      <p class="text-xs text-slate-700 dark:text-slate-300 mb-3 leading-relaxed">
+        ${item.clinical_meaning}
+      </p>
+      <div class="text-xs text-rose-800 dark:text-rose-300 bg-rose-50 dark:bg-rose-950/30 p-2.5 rounded border border-rose-200/60 dark:border-rose-900">
+        <strong>🚨 Ngưỡng cảnh báo cờ đỏ:</strong> ${item.red_flag_value}
+      </div>
+    </div>
+  `).join('');
+
+  container.innerHTML = `
+    <div class="bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 p-6 shadow-sm">
+      <div class="mb-5 pb-4 border-b border-slate-100 dark:border-slate-800 flex flex-wrap items-center justify-between gap-3">
+        <div>
+          <h2 class="text-xl font-bold text-slate-900 dark:text-white flex items-center gap-2">
+            <span>🧪</span> Bảng Tra Cứu Xét Nghiệm Cận Lâm Sàng Cơ Xương Khớp (Deepak Chapter 2)
+          </h2>
+          <p class="text-xs text-slate-500 mt-1">
+            Tra cứu khoảng tham chiếu chuẩn, chỉ định lâm sàng và ngưỡng báo động của các xét nghiệm huyết học, sinh hóa, tự miễn dịch và dấu ấn u.
+          </p>
+        </div>
+        <span class="text-xs font-semibold text-teal-700 bg-teal-50 dark:bg-teal-950/50 px-3 py-1 rounded-full border border-teal-200">
+          Hiển thị: ${list.length} / ${screeningState.labTests.length} Xét nghiệm
+        </span>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        ${cardsHtml || `<div class="col-span-full py-8 text-center text-slate-400">Không tìm thấy xét nghiệm khớp với từ khóa</div>`}
+      </div>
+    </div>
+  `;
+
+  return list;
+}
+
+// ----------------------------------------------------
+// VIEW 5: DRUG-INDUCED PAIN CHECKER (CHAPTER 3)
+// ----------------------------------------------------
+function renderDrugsView() {
+  const container = document.getElementById('drugs-container');
+  if (!container) return [];
+
+  const query = screeningState.searchQuery;
+  const list = (screeningState.drugInduced || []).filter(item => {
+    if (!query) return true;
+    const corpus = `${item.drug_class} ${item.examples} ${item.symptoms} ${item.mechanism} ${item.timeline} ${item.management}`.toLowerCase();
+    return corpus.includes(query);
+  });
+
+  const cardsHtml = list.map(item => `
+    <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-5 shadow-sm">
+      <div class="flex items-start justify-between gap-2 mb-2 pb-2 border-b border-slate-100 dark:border-slate-800">
+        <div>
+          <h4 class="font-bold text-indigo-800 dark:text-indigo-300 text-sm">
+            💊 ${item.drug_class}
+          </h4>
+          <p class="text-xs text-slate-500 mt-0.5"><strong>Thuốc đại diện:</strong> ${item.examples}</p>
+        </div>
+      </div>
+      
+      <div class="space-y-2 text-xs text-slate-700 dark:text-slate-300 mt-3">
+        <div class="p-2.5 rounded bg-rose-50/60 dark:bg-rose-950/20 border border-rose-100 dark:border-rose-900/50">
+          <strong class="text-rose-900 dark:text-rose-300">Biểu hiện đau lâm sàng:</strong> ${item.symptoms}
+        </div>
+        <div>
+          <strong>Cơ chế bệnh sinh:</strong> ${item.mechanism}
+        </div>
+        <div>
+          <strong>Thời gian khởi phát điển hình:</strong> ${item.timeline}
+        </div>
+        <div class="p-2.5 rounded bg-emerald-50/80 dark:bg-emerald-950/30 border border-emerald-100 dark:border-emerald-900">
+          <strong class="text-emerald-900 dark:text-emerald-300">⚡ Hướng xử trí lâm sàng:</strong> ${item.management}
+        </div>
+      </div>
+    </div>
+  `).join('');
+
+  container.innerHTML = `
+    <div class="bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 p-6 shadow-sm">
+      <div class="mb-5 pb-4 border-b border-slate-100 dark:border-slate-800 flex flex-wrap items-center justify-between gap-3">
+        <div>
+          <h2 class="text-xl font-bold text-slate-900 dark:text-white flex items-center gap-2">
+            <span>💊</span> Bảng Tra Cứu Đau Cơ Xương Khớp & Bệnh Thần Kinh Do Thuốc (Deepak Chapter 3)
+          </h2>
+          <p class="text-xs text-slate-500 mt-1">
+            Nhận diện đau cơ, viêm đứt gân, thoái hóa hoại tử vô mạch và bệnh thần kinh ngoại biên khởi phát do tác dụng phụ của thuốc tân dược.
+          </p>
+        </div>
+        <span class="text-xs font-semibold text-indigo-700 bg-indigo-50 dark:bg-indigo-950/50 px-3 py-1 rounded-full border border-indigo-200">
+          Hiển thị: ${list.length} / ${screeningState.drugInduced.length} Nhóm thuốc
+        </span>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        ${cardsHtml || `<div class="col-span-full py-8 text-center text-slate-400">Không tìm thấy nhóm thuốc khớp với từ khóa</div>`}
+      </div>
+    </div>
+  `;
+
+  return list;
+}
+
+// Utility: HTML escaping
+function escapeHtml(str) {
+  if (!str) return '';
+  return String(str)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
+}
+
+// Export for Node/testing environment
+if (typeof module !== 'undefined' && module.exports) {
+  module.exports = {
+    screeningState,
+    initScreeningApp,
+    applyFilters,
+    selectModule,
+    switchMode,
+    openLightboxIndex,
+    lightboxPrev,
+    lightboxNext,
+    closeLightbox,
+    updateInteractiveGuidemap
+  };
+}

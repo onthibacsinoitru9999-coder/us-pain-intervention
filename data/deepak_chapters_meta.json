@@ -1,0 +1,243 @@
+[
+  {
+    "id": "ch01",
+    "number": 1,
+    "title": "Introduction and Thought Process in Regional Pain",
+    "title_vi": "Giới thiệu & Tư duy Khám Sàng lọc Chẩn đoán Phân biệt Đau Vùng",
+    "category": "Foundations",
+    "pages": "16-21",
+    "page_count": 6,
+    "word_count": 2302,
+    "sample_red_flags": [
+      "red flag or a systemic source of pain may",
+      "red flags, which are trauma related or",
+      "red flags, where malignancy has occupied the priority list",
+      "red flag right away, e",
+      "fracture, tendon rupture, etc",
+      "vascular and musculoskeletal red flags",
+      "red flags and systemic mediation to the"
+    ],
+    "sample_tests": []
+  },
+  {
+    "id": "ch02",
+    "number": 2,
+    "title": "Chemical Basis of the Human Body with Relevance to Regional Musculoskeletal Pain",
+    "title_vi": "Cơ sở Hóa sinh & Xét nghiệm Cận lâm sàng trong Đau Cơ Xương Khớp",
+    "category": "Diagnostics",
+    "pages": "22-78",
+    "page_count": 57,
+    "word_count": 19556,
+    "sample_red_flags": [
+      "vascular system, pulmonary system, etc",
+      "infections and",
+      "infection, and constipation",
+      "myelopathy, anemia, leukopenia, fatigue, bleeding",
+      "vascular system",
+      "infection, and",
+      "infection is identified, a microbiology test is performed to identify",
+      "infection by attacking invading bacteria,",
+      "infection or",
+      "infection such as osteomyelitis or an autoimmune"
+    ],
+    "sample_tests": [
+      "test: 3",
+      "test: 500–2,000 mg/day or 0",
+      "test: There should be no bilirubin in the urine for a normal finding",
+      "test: There should be no nitrite in the urine for a normal finding",
+      "test: 1",
+      "test: Measures the pH (acidity) of the urine",
+      "test: There should be no WBC’s in the urine for a normal finding"
+    ]
+  },
+  {
+    "id": "ch03",
+    "number": 3,
+    "title": "Drug-induced Regional Pain",
+    "title_vi": "Đau Cơ Xương Khớp & Bệnh Thần kinh do Thuốc (Drug-Induced Pain)",
+    "category": "Pharmacology",
+    "pages": "79-104",
+    "page_count": 26,
+    "word_count": 9383,
+    "sample_red_flags": [
+      "infection (UTI)",
+      "Infection/Autoimmune disease",
+      "Infections of bone, skin, respiratory and gynecological",
+      "vascular/Drugs",
+      "vascular event or a metabolic neurologic process",
+      "infection have a potential for muscle and joint pain",
+      "infection and causes",
+      "infections and causes",
+      "infections and tumors",
+      "infections including pneumonia, respiratory tract infections,"
+    ],
+    "sample_tests": []
+  },
+  {
+    "id": "ch04",
+    "number": 4,
+    "title": "Cervical Pain",
+    "title_vi": "Sàng lọc & Chẩn đoán Phân biệt Đau Cột sống Cổ",
+    "category": "Spine",
+    "pages": "105-187",
+    "page_count": 83,
+    "word_count": 21469,
+    "sample_red_flags": [
+      "vascular structures and the special organs including the",
+      "fractures and in such situations the alar ligaments, by virtue",
+      "fractured dens to be pulled upwards into the foramen magnum and possibly",
+      "vascular ischemia",
+      "red flags in the cervical region",
+      "VASCULAR, MUSCULOSKELETAL AND SYSTEMIC RED FLAGS",
+      "Vascular Red Flags",
+      "infection is possible",
+      "vascular history and diabetes should",
+      "vascular history"
+    ],
+    "sample_tests": [
+      "test: A reliability"
+    ]
+  },
+  {
+    "id": "ch05",
+    "number": 5,
+    "title": "Thoracic Pain",
+    "title_vi": "Sàng lọc & Chẩn đoán Phân biệt Đau Cột sống Ngực & Thành Ngực",
+    "category": "Spine",
+    "pages": "188-217",
+    "page_count": 30,
+    "word_count": 9988,
+    "sample_red_flags": [
+      "vascular thoracic outlet syndromes as opposed to neural, which is more",
+      "Vascular, and musculo­skeletal",
+      "vascular and musculoskeletal red flags in the",
+      "red flags and systemic mediation to the pain in",
+      "VASCULAR, MUSCULOSKELETAL AND SYSTEMIC RED FLAGS",
+      "Vascular Red Flags",
+      "fractures are most commonly seen in the elderly although",
+      "fractures may be",
+      "Fracture/Costochondral Separation",
+      "fractures warrant attention to the physical therapist examining a patient with"
+    ],
+    "sample_tests": []
+  },
+  {
+    "id": "ch06",
+    "number": 6,
+    "title": "Lumbopelvic Pain",
+    "title_vi": "Sàng lọc & Chẩn đoán Phân biệt Đau Thắt lưng - Khung Chậu",
+    "category": "Spine & Pelvis",
+    "pages": "218-300",
+    "page_count": 83,
+    "word_count": 25721,
+    "sample_red_flags": [
+      "Vascular, systemic and",
+      "red flags in the lumbopelvic",
+      "VASCULAR, MUSCULOSKELETAL AND SYSTEMIC RED FLAGS",
+      "Vascular Red Flags",
+      "vascular Necrosis of the Hip",
+      "vascular necrosis, also known as osteonecrosis, of the femoral head is a condition",
+      "fracture of the hip), pressure or",
+      "vascular accident either within the spinal cord or the",
+      "vascular Disease (Stenosis and Embolism)",
+      "malignancy and coagulation disorders"
+    ],
+    "sample_tests": []
+  },
+  {
+    "id": "ch07",
+    "number": 7,
+    "title": "Hip Pain",
+    "title_vi": "Sàng lọc & Chẩn đoán Phân biệt Đau Khớp Háng & Vùng Bẹn",
+    "category": "Lower Limb",
+    "pages": "301-333",
+    "page_count": 33,
+    "word_count": 8774,
+    "sample_red_flags": [
+      "VASCULAR ANATOMY",
+      "infection in the lower extremities or spread from malignancy in",
+      "infection or disease states",
+      "Vascular and Musculoskeletal",
+      "red flags in the hip region",
+      "Vascular Red Flags",
+      "vascular necrosis",
+      "fractures in the hip result from overuse activity",
+      "fractures can occur in other areas of the hip and",
+      "fractures occur due to repetitive microtrauma to the"
+    ],
+    "sample_tests": []
+  },
+  {
+    "id": "ch08",
+    "number": 8,
+    "title": "Knee, Ankle and Foot Pain",
+    "title_vi": "Sàng lọc & Chẩn đoán Phân biệt Đau Khớp Gối, Cổ chân & Bàn chân",
+    "category": "Lower Limb",
+    "pages": "334-416",
+    "page_count": 83,
+    "word_count": 22065,
+    "sample_red_flags": [
+      "Vascular, systemic and musculo­",
+      "vascular and musculoskeletal red flags in the",
+      "red flags and systemic mediation to the pain in",
+      "Vascular Red Flags",
+      "vascular and neural",
+      "vascular insufficiency",
+      "vascular necrosis",
+      "INFECTION/INFLAMMATION",
+      "infection characterized by a painful blistering rash",
+      "infection caused by Staphylococcus,"
+    ],
+    "sample_tests": [
+      "test: an inter-rather reliability"
+    ]
+  },
+  {
+    "id": "ch09",
+    "number": 9,
+    "title": "Shoulder Pain",
+    "title_vi": "Sàng lọc & Chẩn đoán Phân biệt Đau Khớp Vai & Đai Vai",
+    "category": "Upper Limb",
+    "pages": "417-466",
+    "page_count": 50,
+    "word_count": 12057,
+    "sample_red_flags": [
+      "Vascular, systemic and musculoskeletal",
+      "vascular and musculoskeletal red",
+      "red flags and systemic mediation",
+      "Vascular Red Flags",
+      "vascular necrosis",
+      "vascular necrosis or osteonecrosis, is a",
+      "infection of the common bile duct, which carries bile from",
+      "infection is usually",
+      "infection and pus in the liver is a liver abscess, which can cause",
+      "infection is considered as a possibility"
+    ],
+    "sample_tests": [
+      "test: a new and"
+    ]
+  },
+  {
+    "id": "ch10",
+    "number": 10,
+    "title": "Elbow, Wrist and Hand Pain",
+    "title_vi": "Sàng lọc & Chẩn đoán Phân biệt Đau Khớp Khuỷu, Cổ tay & Bàn tay",
+    "category": "Upper Limb",
+    "pages": "467-512",
+    "page_count": 46,
+    "word_count": 12053,
+    "sample_red_flags": [
+      "Vascular and",
+      "vascular and",
+      "red flags in the elbow, wrist and hand",
+      "Vascular Red Flags",
+      "vascular necrosis of the",
+      "infection in the skin by a group",
+      "infection associated with the index finger",
+      "infection caused by herpes simplex virus",
+      "infection involving a flexor",
+      "infection, ganglion or"
+    ],
+    "sample_tests": []
+  }
+]

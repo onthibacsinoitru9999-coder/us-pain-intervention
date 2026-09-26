@@ -15,3 +15,6 @@ desktop.ini
 
 # Temporary extraction files
 extracted_sample/
+
+# Large PDF Books (keep locally, avoid repo bloat)
+*.pdf
