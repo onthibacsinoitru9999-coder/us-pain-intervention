@@ -1506,3 +1506,106 @@
   background-color: var(--gm-primary);
   color: #ffffff;
 }
+
+/* ==========================================================================
+   MULTI-TAB CLINICAL DOSSIER STYLES (DEEPAK SEBASTIAN 6-TAB SUITE)
+   ========================================================================== */
+.dossier-tabs-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  padding: 0.45rem;
+  background: var(--gm-bg-subtle, #f1f5f9);
+  border-radius: 12px;
+  border: 1px solid var(--gm-card-border, #e2e8f0);
+  margin-bottom: 1.25rem;
+  overflow-x: auto;
+}
+
+.dossier-tab-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.55rem 0.85rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  background: transparent;
+  color: var(--gm-text-muted, #64748b);
+  cursor: pointer;
+  transition: all 0.15s ease-in-out;
+  white-space: nowrap;
+}
+
+.dossier-tab-btn:hover {
+  color: var(--gm-primary, #0d9488);
+  background: rgba(13, 148, 136, 0.08);
+}
+
+.dossier-tab-btn.active {
+  background: #ffffff;
+  color: var(--gm-primary, #0d9488);
+  border-color: var(--gm-card-border, #cbd5e1);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+[data-theme="dark"] .dossier-tabs-nav {
+  background: #0f172a;
+  border-color: #334155;
+}
+
+[data-theme="dark"] .dossier-tab-btn {
+  color: #94a3b8;
+}
+
+[data-theme="dark"] .dossier-tab-btn:hover {
+  color: #2dd4bf;
+  background: rgba(45, 212, 191, 0.12);
+}
+
+[data-theme="dark"] .dossier-tab-btn.active {
+  background: #1e293b;
+  color: #2dd4bf;
+  border-color: #475569;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+}
+
+.dossier-tab-pane {
+  display: none;
+  animation: fadeInPane 0.2s ease-in-out;
+}
+
+.dossier-tab-pane.active {
+  display: block;
+}
+
+@keyframes fadeInPane {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Inline figure preview cards */
+.figure-inline-container {
+  margin-top: 0.85rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid rgba(226, 232, 240, 0.8);
+}
+
+[data-theme="dark"] .figure-inline-container {
+  border-top-color: #334155;
+}
+
+.figure-inline-card {
+  transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+}
+
+.figure-inline-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+[data-theme="dark"] .figure-inline-card:hover {
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.45);
+}
+
