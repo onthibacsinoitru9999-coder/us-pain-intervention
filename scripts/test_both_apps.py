@@ -63,21 +63,21 @@ for m in screening_data:
             if kw in cap:
                 total_bone_sketches += 1
 
-assert total_deepak_figs == 57, f"Expected 57 elite Deepak figures, got {total_deepak_figs}"
+assert total_deepak_figs == 58, f"Expected 58 elite Deepak figures, got {total_deepak_figs}"
 assert total_bone_sketches == 0, f"Expected 0 bone sketches in elite figures, got {total_bone_sketches}"
 
 rf_figs_count = sum(len(rf.get('figures', [])) for m in screening_data for rf in m.get('red_flags', []))
 ep_figs_count = sum(len(ep.get('figures', [])) for m in screening_data for ep in m.get('examination_procedures', []))
-assert rf_figs_count + ep_figs_count == 57, f"Expected 57 embedded figures (21 RF + 36 EP), got {rf_figs_count + ep_figs_count}"
+assert rf_figs_count + ep_figs_count == 58, f"Expected 58 embedded figures (21 RF + 37 EP), got {rf_figs_count + ep_figs_count}"
 assert rf_figs_count == 21, f"Expected 21 red flag figures, got {rf_figs_count}"
-assert ep_figs_count == 36, f"Expected 36 provocative test figures, got {ep_figs_count}"
+assert ep_figs_count == 37, f"Expected 37 provocative test figures, got {ep_figs_count}"
 
 assert len(guidemap_algo['stages']) == 3, f"Expected 3 stages in algorithm, got {len(guidemap_algo['stages'])}"
 assert len(red_flags_master) >= 10, f"Expected >= 10 red flags in master, got {len(red_flags_master)}"
 assert len(lab_tests_guide) >= 10, f"Expected >= 10 lab tests, got {len(lab_tests_guide)}"
 assert len(drug_induced_guide) >= 6, f"Expected >= 6 drug classes, got {len(drug_induced_guide)}"
 
-print(f"  [PASS] Web 2 (Sàng Lọc Chẩn Đoán Phân Biệt Deepak Sebastian): Đủ 8 Vùng Triệu Chứng Lâm Sàng, Thuật toán 3 Giai đoạn, Master Cờ đỏ, Lab tests, Drug-induced & 57 ảnh Tinh hoa (0 sơ đồ xương) sẵn sàng 100%!")
+print(f"  [PASS] Web 2 (Sàng Lọc Chẩn Đoán Phân Biệt Deepak Sebastian): Đủ 8 Vùng Triệu Chứng Lâm Sàng, Thuật toán 3 Giai đoạn, Master Cờ đỏ, Lab tests, Drug-induced & 58 ảnh Tinh hoa (0 sơ đồ xương) sẵn sàng 100%!")
 
 # 3. Test Fallback files
 assert os.path.exists('data/procedures.fallback.js'), "Missing procedures.fallback.js"
@@ -89,10 +89,10 @@ with open('data/screening.fallback.js', 'r', encoding='utf-8') as f:
 fb_screening_data = extract_js_var('STABLE_SCREENING_FALLBACK', fb_text)
 assert len(fb_screening_data) == 8, f"Expected 8 fallback symptom modules, got {len(fb_screening_data)}"
 fb_deepak_figs = sum(len(m.get('figures', [])) for m in fb_screening_data)
-assert fb_deepak_figs == 57, f"Expected 57 fallback elite figures, got {fb_deepak_figs}"
+assert fb_deepak_figs == 58, f"Expected 58 fallback elite figures, got {fb_deepak_figs}"
 
 assert os.path.exists('backup/stable_v1.0/manifest.json'), "Missing backup manifest"
-print("  [PASS] Cơ chế Fallback dự phòng độc lập cho cả 2 ứng dụng đã đồng bộ và hoạt động chuẩn xác (8 modules, 57 figures)!")
+print("  [PASS] Cơ chế Fallback dự phòng độc lập cho cả 2 ứng dụng đã đồng bộ và hoạt động chuẩn xác (8 modules, 58 figures)!")
 
 # 4. Check HTML integrity
 assert os.path.exists('index.html'), "Missing index.html"

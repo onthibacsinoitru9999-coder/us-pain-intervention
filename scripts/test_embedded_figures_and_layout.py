@@ -37,8 +37,8 @@ for m in modules:
 
 assert len(bone_sketches_found) == 0, f"Found bone sketches in examination procedures: {bone_sketches_found}"
 assert total_rf_figs == 21, f"Expected 21 red flag figures, got {total_rf_figs}"
-assert total_ep_figs == 36, f"Expected 36 provocative test figures, got {total_ep_figs}"
-assert total_rf_figs + total_ep_figs == 57, f"Expected 57 total elite figures, got {total_rf_figs + total_ep_figs}"
+assert total_ep_figs == 37, f"Expected 37 provocative test figures, got {total_ep_figs}"
+assert total_rf_figs + total_ep_figs == 58, f"Expected 58 total elite figures, got {total_rf_figs + total_ep_figs}"
 
 print(f"[PASS] All 8 modules have in-context figures attached:")
 print(f"       - Red Flags: {total_rf_figs} figures")

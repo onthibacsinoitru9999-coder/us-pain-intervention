@@ -501,10 +501,10 @@ screeningData.forEach(mod => {
 try {
   assert.strictEqual(missingPhysicalFiles.length, 0, `Missing physical image files on disk: ${JSON.stringify(missingPhysicalFiles)}`);
   assert.strictEqual(totalRedFlagsFigures, 21, `Expected exactly 21 Red Flag pathology figures, found ${totalRedFlagsFigures}`);
-  assert.strictEqual(totalProvocativeFigures, 36, `Expected exactly 36 Provocative Test maneuver figures, found ${totalProvocativeFigures}`);
+  assert.strictEqual(totalProvocativeFigures, 37, `Expected exactly 37 Provocative Test maneuver figures, found ${totalProvocativeFigures}`);
   const eliteTotal = totalRedFlagsFigures + totalProvocativeFigures;
-  assert.strictEqual(eliteTotal, 57, `Expected exactly 57 curated elite figures in Steps 1 & 2, found ${eliteTotal}`);
-  reportPass(`4.1 Physical assets verified: Exactly 57 elite figures (21 Red flag pathology + 36 Exam maneuver) verified 100% present on disk`);
+  assert.strictEqual(eliteTotal, 58, `Expected exactly 58 curated elite figures in Steps 1 & 2, found ${eliteTotal}`);
+  reportPass(`4.1 Physical assets verified: Exactly 58 elite figures (21 Red flag pathology + 37 Exam maneuver) verified 100% present on disk`);
 } catch (e) {
   reportFail('4.1 Physical image file check failed', e);
 }
@@ -527,8 +527,8 @@ try {
     });
   });
 
-  assert.strictEqual(checkedFiguresInHtml, 57, `Expected 57 figure click handlers in HTML, checked ${checkedFiguresInHtml}`);
-  reportPass(`4.2 All 57 figures in Steps 1 and 2 contain valid onclick="openLightboxByFile('{file}', ...)" triggers`);
+  assert.strictEqual(checkedFiguresInHtml, 58, `Expected 58 figure click handlers in HTML, checked ${checkedFiguresInHtml}`);
+  reportPass(`4.2 All 58 figures in Steps 1 and 2 contain valid onclick="openLightboxByFile('{file}', ...)" triggers`);
 } catch (e) {
   reportFail('4.2 HTML click handler check failed', e);
 }

@@ -213,7 +213,7 @@ runTest('2.4 Red flags audit: Warning signs, action, and verified pathology imag
   console.log(`      -> Verified ${totalRedFlags} red flag emergency alerts with ${totalRedFlagFigures} pathology images.`);
 });
 
-runTest('2.5 Curated 57 Elite Clinical Figures: Exactly 57 slots, 55 unique files on disk', () => {
+runTest('2.5 Curated 58 Elite Clinical Figures: Exactly 58 slots, 56 unique files on disk', () => {
   let totalFiguresCount = 0;
   const uniquePaths = new Set();
   const sharedPaths = {};
@@ -231,14 +231,14 @@ runTest('2.5 Curated 57 Elite Clinical Figures: Exactly 57 slots, 55 unique file
     });
   });
 
-  assert.strictEqual(totalFiguresCount, 57, `Total figures in module.figures must be exactly 57, got ${totalFiguresCount}`);
-  assert.strictEqual(uniquePaths.size, 55, `Unique figures must be exactly 55, got ${uniquePaths.size}`);
+  assert.strictEqual(totalFiguresCount, 58, `Total figures in module.figures must be exactly 58, got ${totalFiguresCount}`);
+  assert.strictEqual(uniquePaths.size, 56, `Unique figures must be exactly 56, got ${uniquePaths.size}`);
   
   // Verify the 2 intentional shared cross-regional figures
   assert.strictEqual(sharedPaths['assets/deepak_images/ch08_knee_ankle_foot_pain/p362_img1.jpeg'], 2, 'Fig 8.7 shared between systemic and knee');
   assert.strictEqual(sharedPaths['assets/deepak_images/ch06_lumbopelvic_pain/p288_img2.jpeg'], 2, 'Fig 6.28 shared between systemic and lumbopelvic');
 
-  console.log(`      -> Exactly 57 figure placements (55 unique physical assets) verified present on disk.`);
+  console.log(`      -> Exactly 58 figure placements (56 unique physical assets) verified present on disk.`);
 });
 
 runTest('2.6 Purge Verification: Zero occurrences of the 13 mislabeled raw bone diagrams', () => {

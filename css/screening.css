@@ -1430,3 +1430,79 @@
 [data-theme="dark"] .dark\:border-emerald-900  { border-color: #064e3b !important; }
 
 [data-theme="dark"] .dark\:border-purple-900\/40 { border-color: rgba(88, 28, 135, 0.5) !important; }
+
+/* --------------------------------------------------------------------------
+   ATLAS 279 FIGURES GALLERY STYLES
+   -------------------------------------------------------------------------- */
+.atlas-chapter-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.atlas-chapter-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 0.4rem 0.85rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border: 1px solid var(--gm-card-border);
+  background-color: var(--gm-bg-surface);
+  color: var(--gm-text-muted);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  user-select: none;
+}
+
+.atlas-chapter-pill:hover {
+  border-color: var(--gm-primary);
+  color: var(--gm-primary);
+}
+
+.atlas-chapter-pill.active {
+  background-color: var(--gm-primary);
+  color: #ffffff;
+  border-color: var(--gm-primary);
+  box-shadow: var(--gm-shadow-sm);
+}
+
+.atlas-chapter-pill .atlas-pill-badge {
+  font-size: 0.65rem;
+  padding: 0.1rem 0.45rem;
+  border-radius: 9999px;
+  background-color: rgba(0, 0, 0, 0.08);
+  font-family: monospace;
+}
+
+.atlas-chapter-pill.active .atlas-pill-badge {
+  background-color: rgba(255, 255, 255, 0.25);
+  color: #ffffff;
+}
+
+.atlas-figure-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.atlas-figure-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--gm-shadow-md);
+}
+
+[data-theme="dark"] .atlas-chapter-pill {
+  background-color: var(--gm-card-bg);
+  border-color: var(--gm-card-border);
+  color: var(--gm-text-muted);
+}
+
+[data-theme="dark"] .atlas-chapter-pill:hover {
+  border-color: var(--gm-primary);
+  color: var(--gm-primary);
+}
+
+[data-theme="dark"] .atlas-chapter-pill.active {
+  background-color: var(--gm-primary);
+  color: #ffffff;
+}

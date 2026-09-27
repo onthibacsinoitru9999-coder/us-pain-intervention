@@ -34,8 +34,8 @@ screening.SCREENING_DATA.forEach(m => {
     assert.ok(t.diagnostic_role, `Test ${t.name} in ${m.id} missing diagnostic_role`);
   });
 });
-assert.strictEqual(totalTests, 36, 'Must have exactly 36 provocative tests with metrics');
-console.log(`  [PASS] All ${totalTests}/36 provocative tests have explicit Sn, Sp, and diagnostic_role.`);
+assert.strictEqual(totalTests, 37, 'Must have exactly 37 provocative tests with metrics');
+console.log(`  [PASS] All ${totalTests}/37 provocative tests have explicit Sn, Sp, and diagnostic_role.`);
 
 let totalDiffRows = 0;
 screening.SCREENING_DATA.forEach(m => {
@@ -52,8 +52,8 @@ let totalAtlasFigs = 0;
 screening.SCREENING_DATA.forEach(m => {
   totalAtlasFigs += (m.figures || []).length;
 });
-assert.strictEqual(totalAtlasFigs, 57, 'Must have exactly 57 Deepak Atlas figures');
-console.log(`  [PASS] All 57/57 Deepak Atlas figures present across modules.`);
+assert.strictEqual(totalAtlasFigs, 58, 'Must have exactly 58 Deepak Atlas figures');
+console.log(`  [PASS] All 58/58 Deepak Atlas figures present across modules.`);
 
 console.log('\n=== TEST 3: CONTROLLER & DOM INTERACTION SUITE ===');
 

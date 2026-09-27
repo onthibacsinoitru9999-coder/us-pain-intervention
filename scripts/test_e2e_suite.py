@@ -187,13 +187,13 @@ with open('js/app.js', 'r', encoding='utf-8') as f:
 screening_data = extract_js_var('SCREENING_DATA', scr_js_text)
 fallback_data = extract_js_var('STABLE_SCREENING_FALLBACK', scr_fb_text)
 
-# --- Feature 1: 57 Elite Clinical Images Curation ---
+# --- Feature 1: 58 Elite Clinical Images Curation ---
 try:
     all_elite_figs = [fig for m in screening_data for fig in m.get('figures', [])]
-    report.record("T1.1.1", "Total elite clinical figures across all 8 modules equals exactly 57",
-                  len(all_elite_figs) == 57, f"Expected 57, got {len(all_elite_figs)}")
+    report.record("T1.1.1", "Total elite clinical figures across all 8 modules equals exactly 58",
+                  len(all_elite_figs) == 58, f"Expected 58, got {len(all_elite_figs)}")
 except Exception as e:
-    report.record("T1.1.1", "Total elite clinical figures across all 8 modules equals exactly 57", False, e)
+    report.record("T1.1.1", "Total elite clinical figures across all 8 modules equals exactly 58", False, e)
 
 try:
     rf_figs_count = sum(len(rf.get('figures', [])) for m in screening_data for rf in m.get('red_flags', []))
@@ -204,10 +204,10 @@ except Exception as e:
 
 try:
     ep_figs_count = sum(len(ep.get('figures', [])) for m in screening_data for ep in m.get('examination_procedures', []))
-    report.record("T1.1.3", "Provocative physical examination maneuver figures equals exactly 36",
-                  ep_figs_count == 36, f"Expected 36, got {ep_figs_count}")
+    report.record("T1.1.3", "Provocative physical examination maneuver figures equals exactly 37",
+                  ep_figs_count == 37, f"Expected 37, got {ep_figs_count}")
 except Exception as e:
-    report.record("T1.1.3", "Provocative physical examination maneuver figures equals exactly 36", False, e)
+    report.record("T1.1.3", "Provocative physical examination maneuver figures equals exactly 37", False, e)
 
 try:
     bone_keywords = ['bone diagram', 'skeleton', 'pelvis diagram', 'khung chậu', 'sơ đồ xương']
@@ -226,10 +226,10 @@ except Exception as e:
 
 try:
     missing_files = [fig['file'] for fig in all_elite_figs if not (os.path.exists(fig['file']) and os.path.getsize(fig['file']) > 0)]
-    report.record("T1.1.5", "100% of 57 curated image files physically exist on disk with valid file size",
+    report.record("T1.1.5", "100% of 58 curated image files physically exist on disk with valid file size",
                   len(missing_files) == 0, f"Missing or empty image files: {missing_files}")
 except Exception as e:
-    report.record("T1.1.5", "100% of 57 curated image files physically exist on disk with valid file size", False, e)
+    report.record("T1.1.5", "100% of 58 curated image files physically exist on disk with valid file size", False, e)
 
 # --- Feature 2: Data Schema & Fallback Synchronization ---
 try:
@@ -260,10 +260,10 @@ except Exception as e:
 
 try:
     fb_figs = [fig for m in fallback_data for fig in m.get('figures', [])]
-    report.record("T1.2.5", "Fallback dataset figures count mirrors primary dataset (57 figures)",
-                  len(fb_figs) == 57, f"Expected 57, got {len(fb_figs)}")
+    report.record("T1.2.5", "Fallback dataset figures count mirrors primary dataset (58 figures)",
+                  len(fb_figs) == 58, f"Expected 58, got {len(fb_figs)}")
 except Exception as e:
-    report.record("T1.2.5", "Fallback dataset figures count mirrors primary dataset (57 figures)", False, e)
+    report.record("T1.2.5", "Fallback dataset figures count mirrors primary dataset (58 figures)", False, e)
 
 # --- Feature 3: Dedicated CSS Architecture (css/screening.css) ---
 try:
@@ -918,7 +918,7 @@ context.openLightboxIndex(0);
 const lb = dom.getElementById('image-lightbox');
 const passed = resolved.isFallback === true &&
                context.screeningState.selectedModuleId === 'shoulder-pain' &&
-               context.screeningState.currentModuleFigures.length === 8 &&
+               context.screeningState.currentModuleFigures.length === 9 &&
                !lb.classList.contains('hidden');
 
 console.log(JSON.stringify({{ ok: passed, figs: context.screeningState.currentModuleFigures.length }}));
@@ -1075,14 +1075,14 @@ const renderedHtml = dom.getElementById('screening-detail-container').innerHTML;
 const hasContent = renderedHtml.length > 500;
 
 console.log(JSON.stringify({{
-  ok: allModulesAccessible && (totalFiguresInFallback === 57) && hasContent,
+  ok: allModulesAccessible && (totalFiguresInFallback === 58) && hasContent,
   modules: context.screeningState.allModules.length,
   figures: totalFiguresInFallback,
   hasContent
 }}));
 """
 res_t4_4 = run_node_eval(node_t4_4)
-report.record("T4.4", "Scenario 4: Offline clinic network disruption: Fallback shield renders all 8 modules & 57 figures seamlessly",
+report.record("T4.4", "Scenario 4: Offline clinic network disruption: Fallback shield renders all 8 modules & 58 figures seamlessly",
               res_t4_4.get("ok") is True, res_t4_4.get("error") or res_t4_4)
 
 # T4.5: Scenario 5 — Web 1 Integrity & Safety Audit (Deep Link + 51 Procedures + 111 Images)

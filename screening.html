@@ -58,6 +58,9 @@
         <button class="mode-tab-btn" data-mode="drugs">
           <span>💊</span> Tra Cứu Đau Khớp Do Thuốc (Ch 3 Drug-Induced Pain)
         </button>
+        <button class="mode-tab-btn" data-mode="atlas">
+          <span>🖼️</span> Thư Viện Atlas (279 Ảnh)
+        </button>
       </nav>
 
       <!-- Global Filter & Search Controls -->
@@ -193,6 +196,13 @@
           <!-- Rendered dynamically by js/screening.js -->
         </div>
       </div>
+
+      <!-- VIEW 6: DEEPAK ATLAS 279 FIGURES GALLERY -->
+      <div id="view-atlas" class="screening-view-content hidden">
+        <div id="atlas-container">
+          <!-- Rendered dynamically by js/screening.js -->
+        </div>
+      </div>
     </main>
 
     <!-- Global Image Lightbox Modal with Atlas Navigation -->
@@ -237,6 +247,8 @@
   </div>
 
   <!-- Scripts with Resilient Fallback Architecture -->
+  <!-- 0. Atlas Catalog Dataset -->
+  <script src="data/deepak_atlas_catalog.js?v=20260926_guidemap"></script>
   <!-- 1. Stable Fallback Dataset (Lá chắn an toàn nạp trước) -->
   <script src="data/screening.fallback.js?v=20260926_guidemap"></script>
   <!-- 2. Primary Dataset (Tệp dữ liệu chính) -->

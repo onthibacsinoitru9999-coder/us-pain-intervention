@@ -17,10 +17,12 @@ function resolveInitialScreeningData() {
   // Primary check
   if (typeof SCREENING_DATA !== 'undefined' && Array.isArray(SCREENING_DATA) && SCREENING_DATA.length > 0) {
     data = SCREENING_DATA;
-    try {
-      localStorage.setItem('deepak_screening_backup_v2', JSON.stringify(SCREENING_DATA));
-    } catch (e) {
-      console.warn('Cannot write snapshot to localStorage:', e);
+    if (typeof localStorage !== 'undefined' && localStorage.setItem) {
+      try {
+        localStorage.setItem('deepak_screening_backup_v2', JSON.stringify(SCREENING_DATA));
+      } catch (e) {
+        console.warn('Cannot write snapshot to localStorage:', e);
+      }
     }
   } else if (typeof STABLE_SCREENING_FALLBACK !== 'undefined' && Array.isArray(STABLE_SCREENING_FALLBACK) && STABLE_SCREENING_FALLBACK.length > 0) {
     console.warn('[RECOVERY] SCREENING_DATA lỗi! Tự động kích hoạt STABLE_SCREENING_FALLBACK');
@@ -60,12 +62,19 @@ function resolveInitialScreeningData() {
     ? DRUG_INDUCED_PAIN_GUIDE 
     : (typeof STABLE_DRUG_INDUCED_PAIN_GUIDE !== 'undefined' ? STABLE_DRUG_INDUCED_PAIN_GUIDE : []);
 
+  const atlasCatalog = (typeof DEEPAK_ATLAS_CATALOG !== 'undefined' && Array.isArray(DEEPAK_ATLAS_CATALOG))
+    ? DEEPAK_ATLAS_CATALOG
+    : (typeof STABLE_DEEPAK_ATLAS_CATALOG !== 'undefined' && Array.isArray(STABLE_DEEPAK_ATLAS_CATALOG))
+      ? STABLE_DEEPAK_ATLAS_CATALOG
+      : [];
+
   return {
     modules: data,
     algorithm,
     redFlags,
     labTests,
     drugInduced,
+    atlasCatalog,
     isFallback,
     source
   };
@@ -74,13 +83,16 @@ function resolveInitialScreeningData() {
 const resolvedScreening = resolveInitialScreeningData();
 
 const screeningState = {
-  activeMode: 'modules', // 'modules' | 'algorithm' | 'redflags' | 'labs' | 'drugs'
+  activeMode: 'modules', // 'modules' | 'algorithm' | 'redflags' | 'labs' | 'drugs' | 'atlas'
   allModules: resolvedScreening.modules,
   filteredModules: [...resolvedScreening.modules],
   algorithm: resolvedScreening.algorithm,
   redFlags: resolvedScreening.redFlags,
   labTests: resolvedScreening.labTests,
   drugInduced: resolvedScreening.drugInduced,
+  atlasCatalog: resolvedScreening.atlasCatalog || [],
+  filteredAtlas: [...(resolvedScreening.atlasCatalog || [])],
+  atlasChapterFilter: 'all',
   selectedModuleId: resolvedScreening.modules.length > 0 ? resolvedScreening.modules[0].id : null,
   activeFilter: 'all',
   searchQuery: '',
@@ -241,7 +253,8 @@ function switchMode(mode) {
     algorithm: document.getElementById('view-algorithm'),
     redflags: document.getElementById('view-redflags'),
     labs: document.getElementById('view-labs'),
-    drugs: document.getElementById('view-drugs')
+    drugs: document.getElementById('view-drugs'),
+    atlas: document.getElementById('view-atlas')
   };
 
   Object.keys(views).forEach(key => {
@@ -259,6 +272,10 @@ function switchMode(mode) {
   if (catFilterRow) {
     catFilterRow.style.display = (mode === 'modules') ? 'block' : 'none';
   }
+  const quickPills = document.getElementById('symptom-quick-pills');
+  if (quickPills) {
+    quickPills.style.display = (mode === 'modules') ? 'block' : 'none';
+  }
 
   // Update search input placeholder according to mode
   const searchInput = document.getElementById('search-input');
@@ -266,13 +283,15 @@ function switchMode(mode) {
     if (mode === 'modules') {
       searchInput.placeholder = 'Tìm chuyên đề, triệu chứng, cờ đỏ, nghiệm pháp khám, thuốc, xét nghiệm (Ví dụ: cổ, ngực, thắt lưng, lasegue, spurling, statin, gout...)';
     } else if (mode === 'algorithm') {
-      searchInput.placeholder = 'Tìm kiếm trong thuật toán 3 giai đoạn: tiêu chí cờ đỏ, đau tạng, cơ học, phân loại thể dịch...';
+      searchInput.placeholder = 'Tìm kiếm trong thuật toán 3 giai đoạn: tiêu chí cờ đỏ, đau tạng, cơ học, rối loạn cơ sinh học hệ vận động (Somatic Dysfunctions)...';
     } else if (mode === 'redflags') {
       searchInput.placeholder = 'Tìm kiếm trong cờ đỏ khẩn cấp: chùm đuôi ngựa, VBI, phình bóc tách ĐMC, nhiễm trùng mủ, u di căn...';
     } else if (mode === 'labs') {
       searchInput.placeholder = 'Tìm xét nghiệm cận lâm sàng: ESR, CRP, Acid Uric, Canxi, ALP, HLA-B27, RF, Anti-CCP, ANA, PSA, Bence-Jones...';
     } else if (mode === 'drugs') {
       searchInput.placeholder = 'Tìm thuốc gây đau cơ khớp: Statin, Quinolone, Corticoid, Aromatase inhibitors, Bisphosphonate, Hóa chất ung thư...';
+    } else if (mode === 'atlas') {
+      searchInput.placeholder = 'Tìm kiếm trong 279 ảnh Atlas Deepak: số hiệu (Fig 4.1, Fig 9.39...), trang, giải phẫu, nghiệm pháp...';
     }
   }
 
@@ -356,6 +375,11 @@ function applyFilters() {
     const list = renderDrugsView();
     if (countEl) {
       countEl.textContent = `${list.length} / ${screeningState.drugInduced.length} Nhóm thuốc gây đau`;
+    }
+  } else if (mode === 'atlas') {
+    const list = renderAtlasView();
+    if (countEl) {
+      countEl.textContent = `${list.length} / ${(screeningState.atlasCatalog || []).length} Hình ảnh Atlas`;
     }
   }
 }
@@ -603,7 +627,7 @@ function renderScreeningDetail(module) {
   const somaticHtml = somaticDysfunctions.length > 0 ? `
     <div class="mt-4 p-4 rounded-xl bg-purple-50/50 dark:bg-purple-950/20 border border-purple-200/60 dark:border-purple-900/40">
       <h4 class="font-bold text-purple-900 dark:text-purple-300 text-xs uppercase tracking-wide mb-2 flex items-center gap-1.5">
-        <span>🧬</span> Rối Loạn Chức Năng Thể Dịch Chuyên Sâu (Deepak Somatic Diagnosis)
+        <span>🧬</span> Rối Loạn Cơ Sinh Học Hệ Vận Động (Somatic Dysfunctions) Chuyên Sâu (Deepak Somatic Diagnosis)
       </h4>
       <p class="text-xs text-slate-600 dark:text-slate-400 mb-2.5 italic">
         Các sai lệch cơ sinh học trượt khớp, vặn trục khung chậu, hoặc khóa diện khớp gây đau cơ học mạn tính hoặc tái phát:
@@ -1223,7 +1247,7 @@ function renderAlgorithmView() {
             <option value="tendon" ${screeningState.guidemapChecklist.painOrigin === 'tendon' ? 'selected' : ''}>⚡ Gân - Bao gân (Myotendinous / Enthesopathy: đau khi co cơ kháng lực hoặc sờ nắn gân)</option>
             <option value="capsular" ${screeningState.guidemapChecklist.painOrigin === 'capsular' ? 'selected' : ''}>⚡ Bao khớp / Khớp thoái hóa (Capsular Pattern: giới hạn tầm vận động cả chủ động và thụ động)</option>
             <option value="entrapment" ${screeningState.guidemapChecklist.painOrigin === 'entrapment' ? 'selected' : ''}>⚡ Chèn ép thần kinh ngoại biên (Peripheral Entrapment: CTS ống cổ tay, gõ Tinel, dị cảm)</option>
-            <option value="somatic" ${screeningState.guidemapChecklist.painOrigin === 'somatic' ? 'selected' : ''}>⚡ Rối loạn cơ sinh học thể dịch (Deepak Somatic Dysfunction: xoay chậu Innominate, vặn xương cùng Sacrum)</option>
+            <option value="somatic" ${screeningState.guidemapChecklist.painOrigin === 'somatic' ? 'selected' : ''}>⚡ Rối loạn cơ sinh học hệ vận động (Somatic Dysfunctions) (Deepak Somatic Dysfunction: xoay chậu Innominate, vặn xương cùng Sacrum)</option>
           </select>
         </div>
 
@@ -1369,7 +1393,7 @@ function updateInteractiveGuidemap(fromState = false) {
       ]
     },
     somatic: {
-      title: "Rối loạn cơ sinh học thể dịch theo GS. Deepak Sebastian (Somatic Dysfunction)",
+      title: "Rối loạn cơ sinh học hệ vận động (Somatic Dysfunctions) theo GS. Deepak Sebastian",
       tests: "Nghiệm pháp Cúi ngồi & Cúi đứng, Nghiệm pháp Gillet / Stork, Cụm Laslett SIJ Cluster",
       goldStandard: "Đánh giá động học chỉnh hình cơ sinh học (Biomechanical Assessment) & Tiêm SIJ",
       web1Link: "sacroiliac-joint / sacroiliac-joint-rfa / esp-block",
@@ -1616,6 +1640,145 @@ function renderDrugsView() {
   return list;
 }
 
+// ----------------------------------------------------
+// VIEW 6: DEEPAK ATLAS 279 FIGURES GALLERY
+// ----------------------------------------------------
+function renderAtlasView() {
+  const container = document.getElementById('atlas-container');
+  if (!container) return [];
+
+  const query = (screeningState.searchQuery || '').toLowerCase().trim();
+  const selectedChapter = screeningState.atlasChapterFilter || 'all';
+
+  const chapterMeta = [
+    { id: 'all', label: 'Tất cả các chương', count: (screeningState.atlasCatalog || []).length },
+    { id: '4', label: 'Ch 4: Cột Sống Cổ & VBI', icon: '👤', count: (screeningState.atlasCatalog || []).filter(c => c.chapter === 4).length },
+    { id: '5', label: 'Ch 5: Cột Sống Ngực & Sườn', icon: '🛡️', count: (screeningState.atlasCatalog || []).filter(c => c.chapter === 5).length },
+    { id: '6', label: 'Ch 6: Thắt Lưng - Chậu', icon: '🦴', count: (screeningState.atlasCatalog || []).filter(c => c.chapter === 6).length },
+    { id: '7', label: 'Ch 7: Khớp Háng & Bẹn', icon: '👖', count: (screeningState.atlasCatalog || []).filter(c => c.chapter === 7).length },
+    { id: '8', label: 'Ch 8: Gối, Cổ & Bàn Chân', icon: '🦵', count: (screeningState.atlasCatalog || []).filter(c => c.chapter === 8).length },
+    { id: '9', label: 'Ch 9: Khớp Vai & Đai Vai', icon: '🏹', count: (screeningState.atlasCatalog || []).filter(c => c.chapter === 9).length },
+    { id: '10', label: 'Ch 10: Khuỷu & Bàn Tay', icon: '🖐️', count: (screeningState.atlasCatalog || []).filter(c => c.chapter === 10).length }
+  ];
+
+  const list = (screeningState.atlasCatalog || []).filter(item => {
+    // Chapter match
+    if (selectedChapter !== 'all' && String(item.chapter) !== String(selectedChapter)) {
+      return false;
+    }
+    // Search query match
+    if (query) {
+      const corpus = `${item.chapter} ${item.chapter_name} trang ${item.page} p${item.page} ${item.formal_title || ''} ${(item.all_titles || []).join(' ')}`.toLowerCase();
+      if (!corpus.includes(query)) return false;
+    }
+    return true;
+  });
+
+  screeningState.filteredAtlas = list;
+
+  // Render chapter tabs
+  const chapterPillsHtml = chapterMeta.map(ch => `
+    <button type="button" onclick="filterAtlasByChapter('${ch.id}')" class="atlas-chapter-pill ${selectedChapter === ch.id ? 'active' : ''}">
+      <span>${ch.icon ? ch.icon + ' ' : ''}${ch.label}</span>
+      <span class="atlas-pill-badge">${ch.count}</span>
+    </button>
+  `).join('');
+
+  // Render cards
+  const cardsHtml = list.map((item, idx) => {
+    const titleText = item.formal_title || `Hình minh họa trang ${item.page}`;
+    return `
+      <div class="atlas-figure-card bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden hover:border-teal-500 dark:hover:border-teal-400 transition-all flex flex-col justify-between group shadow-2xs">
+        <div class="h-48 overflow-hidden relative cursor-pointer bg-slate-50 dark:bg-slate-950 flex items-center justify-center p-2" onclick="openAtlasLightbox(${idx})">
+          <img src="${item.file}" alt="${escapeHtml(titleText)}" loading="lazy" class="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-200">
+          <div class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-colors flex items-center justify-center">
+            <span class="opacity-0 group-hover:opacity-100 bg-slate-900/90 text-white text-xs px-3 py-1.5 rounded-lg shadow-md flex items-center gap-1.5 font-medium">
+              🔍 Phóng to (${idx + 1}/${list.length})
+            </span>
+          </div>
+          <span class="absolute top-2 left-2 bg-slate-900/80 text-white text-[10px] font-mono px-2 py-0.5 rounded backdrop-blur-xs">
+            Trang ${item.page}
+          </span>
+          <span class="absolute top-2 right-2 bg-teal-600/90 text-white text-[10px] font-bold px-2 py-0.5 rounded backdrop-blur-xs">
+            Ch ${item.chapter}
+          </span>
+        </div>
+        <div class="p-3 border-t border-slate-100 dark:border-slate-800 flex flex-col justify-between flex-1">
+          <div class="text-xs font-semibold text-slate-800 dark:text-slate-200 line-clamp-2 leading-snug" title="${escapeHtml(titleText)}">
+            ${escapeHtml(titleText)}
+          </div>
+          <div class="mt-2.5 pt-2 border-t border-slate-100 dark:border-slate-800/60 flex items-center justify-between text-[11px]">
+            <span class="text-teal-700 dark:text-teal-400 font-mono font-medium">${item.chapter_name || ''}</span>
+            <button type="button" onclick="openAtlasLightbox(${idx})" class="text-teal-600 dark:text-teal-400 hover:underline font-semibold cursor-pointer">
+              Xem ảnh →
+            </button>
+          </div>
+        </div>
+      </div>
+    `;
+  }).join('');
+
+  container.innerHTML = `
+    <div class="bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 p-6 shadow-sm">
+      <div class="mb-5 pb-4 border-b border-slate-100 dark:border-slate-800 flex flex-wrap items-center justify-between gap-3">
+        <div>
+          <h2 class="text-xl font-bold text-slate-900 dark:text-white flex items-center gap-2">
+            <span>🖼️</span> Thư Viện Atlas 279 Hình Ảnh Lâm Sàng Deepak Sebastian
+          </h2>
+          <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">
+            Toàn bộ 279 sơ đồ giải phẫu, cơ chế chấn thương, phim bệnh lý và thao tác nghiệm pháp bóc tách nguyên bản từ giáo trình 526 trang của GS. Deepak Sebastian.
+          </p>
+        </div>
+        <div class="flex items-center gap-2">
+          <span class="text-xs font-semibold text-teal-800 dark:text-teal-300 bg-teal-50 dark:bg-teal-950/60 px-3 py-1 rounded-full border border-teal-200 dark:border-teal-800">
+            Hiển thị: ${list.length} / ${(screeningState.atlasCatalog || []).length} Hình ảnh
+          </span>
+        </div>
+      </div>
+
+      <!-- Chapter Filter Pills -->
+      <div class="atlas-chapter-filters flex flex-wrap gap-2 mb-5">
+        ${chapterPillsHtml}
+      </div>
+
+      <!-- Grid of Atlas Cards -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+        ${cardsHtml || `
+          <div class="col-span-full py-12 text-center text-slate-400">
+            <p class="text-sm">Không tìm thấy hình ảnh phù hợp với tiêu chí lọc.</p>
+            <button type="button" onclick="screeningState.searchQuery=''; screeningState.atlasChapterFilter='all'; applyFilters();" class="mt-3 btn btn-outline text-xs text-teal-600">
+              Đặt lại bộ lọc
+            </button>
+          </div>
+        `}
+      </div>
+    </div>
+  `;
+
+  return list;
+}
+
+function filterAtlasByChapter(ch) {
+  screeningState.atlasChapterFilter = ch;
+  applyFilters();
+}
+
+function openAtlasLightbox(idx) {
+  if (!screeningState.filteredAtlas || screeningState.filteredAtlas.length === 0) return;
+  
+  screeningState.currentModuleFigures = screeningState.filteredAtlas.map(item => ({
+    file: item.file,
+    page: item.page,
+    fig_number: (item.formal_title && item.formal_title.includes(':')) ? item.formal_title.split(':')[0].trim() : ('Trang ' + item.page),
+    caption_vi: item.formal_title || `Hình minh họa trang ${item.page}`,
+    caption_en: item.formal_title || `Figure on page ${item.page}`,
+    width: item.width,
+    height: item.height
+  }));
+
+  openLightboxIndex(idx);
+}
+
 // Utility: HTML escaping
 function escapeHtml(str) {
   if (!str) return '';
@@ -1636,6 +1799,8 @@ if (typeof window !== 'undefined') {
   window.scrollToCardsList = scrollToCardsList;
   window.renderScreeningDetail = renderScreeningDetail;
   window.toggleGuidemapSteps = toggleGuidemapSteps;
+  window.filterAtlasByChapter = filterAtlasByChapter;
+  window.openAtlasLightbox = openAtlasLightbox;
 }
 
 // Export for Node/testing environment
@@ -1655,6 +1820,9 @@ if (typeof module !== 'undefined' && module.exports) {
     closeLightbox,
     updateInteractiveGuidemap,
     renderScreeningDetail,
-    toggleGuidemapSteps
+    toggleGuidemapSteps,
+    renderAtlasView,
+    filterAtlasByChapter,
+    openAtlasLightbox
   };
 }

@@ -1,6 +1,6 @@
 // MSK-Differential Screening Pro & Clinical Guidemap Database (Autonomous Fallback)
 // Master Edition based on Prof. Deepak Sebastian: Differential Screening of Regional Pain in Musculoskeletal Practice (526 pages)
-// 8 Symptom-based Clinical Guidemaps + 3-Stage Decision Algorithm + Red Flags Master + Lab Tests Checker + Drug-Induced Pain Checker + Curated 57 Elite Clinical Figures
+// 8 Symptom-based Clinical Guidemaps + 3-Stage Decision Algorithm + Red Flags Master + Lab Tests Checker + Drug-Induced Pain Checker + Curated 58 Elite Clinical Figures
 
 const STABLE_SCREENING_FALLBACK = [
   {
@@ -58,8 +58,8 @@ const STABLE_SCREENING_FALLBACK = [
             "file": "assets/deepak_images/ch06_lumbopelvic_pain/p273_img1.jpeg",
             "page": 273,
             "fig_number": "6.8",
-            "caption_en": "Fig. 6.8: Osteoporotic vertebral compression fracture",
-            "caption_vi": "🚨 Phim X-quang / Cờ đỏ: Lún xẹp đốt sống do loãng xương / Đa u tủy xương (Fig. 6.8)",
+            "caption_en": "Fig. 6.8: Vulnerable structures in lower thoracic syndrome",
+            "caption_vi": "📐 Sơ đồ giải phẫu: Cấu trúc cơ răng bé sau dưới trong hội chứng ngực dưới (Fig. 6.8: Vulnerable structures in lower thoracic syndrome)",
             "role_type": "redflag",
             "width": 527,
             "height": 788
@@ -76,7 +76,7 @@ const STABLE_SCREENING_FALLBACK = [
             "page": 390,
             "fig_number": "8.25",
             "caption_en": "Fig. 8.25: Disruption of the Achilles tendon",
-            "caption_vi": "🚨 Phim X-quang / Cờ đỏ: Đứt ngang hoàn toàn gân gót Achilles do Quinolone/Steroid (Fig. 8.25)",
+            "caption_vi": "📐 Sơ đồ giải phẫu: Đứt ngang hoàn toàn gân gót Achilles do Quinolone/Steroid (Fig. 8.25)",
             "role_type": "redflag",
             "width": 958,
             "height": 624
@@ -201,8 +201,8 @@ const STABLE_SCREENING_FALLBACK = [
         "file": "assets/deepak_images/ch06_lumbopelvic_pain/p273_img1.jpeg",
         "page": 273,
         "fig_number": "6.8",
-        "caption_en": "Fig. 6.8: Osteoporotic vertebral compression fracture",
-        "caption_vi": "🚨 Phim X-quang / Cờ đỏ: Lún xẹp đốt sống do loãng xương / Đa u tủy xương (Fig. 6.8)",
+        "caption_en": "Fig. 6.8: Vulnerable structures in lower thoracic syndrome",
+        "caption_vi": "📐 Sơ đồ giải phẫu: Cấu trúc cơ răng bé sau dưới trong hội chứng ngực dưới (Fig. 6.8: Vulnerable structures in lower thoracic syndrome)",
         "role_type": "redflag",
         "width": 527,
         "height": 788
@@ -212,7 +212,7 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 390,
         "fig_number": "8.25",
         "caption_en": "Fig. 8.25: Disruption of the Achilles tendon",
-        "caption_vi": "🚨 Phim X-quang / Cờ đỏ: Đứt ngang hoàn toàn gân gót Achilles do Quinolone/Steroid (Fig. 8.25)",
+        "caption_vi": "📐 Sơ đồ giải phẫu: Đứt ngang hoàn toàn gân gót Achilles do Quinolone/Steroid (Fig. 8.25)",
         "role_type": "redflag",
         "width": 958,
         "height": 624
@@ -491,8 +491,8 @@ const STABLE_SCREENING_FALLBACK = [
         ]
       },
       {
-        "name": "Nghiệm pháp Sharp-Purser (Kiểm tra mất vững Dây chằng ngang & Khớp Đội Trục C1-C2)",
-        "technique": "Bệnh nhân ngồi, gập nhẹ đầu. Bác sĩ đặt ngón cái của một tay lên mỏm gai C2 cố định vững chắc, tay kia đặt lên trán bệnh nhân đẩy nhẹ nhàng ra sau (Posterior translation force).",
+        "name": "Nghiệm pháp Gập Cổ Khám Dây Chằng Ngang (Cervical Flexion / Testing Transverse Ligament Integrity)",
+        "technique": "Bệnh nhân ngồi hoặc nằm ngửa, gập nhẹ đầu. Bác sĩ đặt ngón cái của một tay lên mỏm gai C2 cố định vững chắc, tay kia đặt lên trán hoặc chẩm bệnh nhân tạo lực trượt nhẹ nhàng ra sau (Posterior translation force) để kiểm tra độ vững của dây chằng ngang C1-C2 (Trang 175-176, Figs. 4.52A-B).",
         "significance": "Nếu mỏm nha trượt lùi vào trong và nghe tiếng 'khục' nhẹ kèm theo cảm giác giảm nghẹt thở hoặc giảm chèn ép tủy cổ, nghiệm pháp dương tính báo hiệu đứt dây chằng ngang.",
         "sensitivity": "69%",
         "specificity": "96%",
@@ -506,9 +506,9 @@ const STABLE_SCREENING_FALLBACK = [
           {
             "file": "assets/deepak_images/ch04_cervical_pain/p176_img1.jpeg",
             "page": 176,
-            "fig_number": "4.52A",
-            "caption_en": "Fig. 4.52A: Sharp-Purser test",
-            "caption_vi": "🩺 Thao tác khám: Nghiệm pháp Sharp-Purser đánh giá dây chằng ngang C1-C2 (Fig. 4.52A)",
+            "fig_number": "4.52A-B",
+            "caption_en": "Figs. 4.52A-B: Cervical flexion test for transverse ligament integrity",
+            "caption_vi": "🩺 Thao tác khám: Nghiệm pháp Gập Cổ Khám Dây Chằng Ngang C1-C2 (Testing Transverse Ligament Integrity) (Figs. 4.52A-B)",
             "role_type": "exam",
             "width": 717,
             "height": 538
@@ -517,8 +517,8 @@ const STABLE_SCREENING_FALLBACK = [
       },
       {
         "name": "Nghiệm pháp Động mạch Đốt sống (Vertebral Artery Test / VBI Screening)",
-        "technique": "Bệnh nhân nằm ngửa, đầu ở ngoài mép bàn khám. Bác sĩ đỡ đầu bệnh nhân nhẹ nhàng ưỡn ra sau, nghiêng sang một bên và xoay tối đa sang cùng bên đó trong 30 giây, liên tục quan sát mắt và trò chuyện với bệnh nhân.",
-        "significance": "Gây hẹp cơ học động mạch đốt sống đối bên. Xuất hiện 5 chữ D: Dizziness (chóng mặt), Diplopia (nhìn đôi), Dysarthria (nói khó), Dysphagia (nuốt khó), Drop attacks (quỵ ngã) kèm nystagmus là dương tính.",
+        "technique": "Bệnh nhân nằm ngửa hoàn toàn trên bàn khám, đầu KHÔNG đưa ra ngoài mép bàn khám (kê gối mỏng hoặc đệm dưới vùng xương bả vai để hỗ trợ cột sống). Bác sĩ nâng đỡ đầu bệnh nhân, nhẹ nhàng đưa đầu vào tư thế duỗi (extension), nghiêng bên (sidebending) và xoay tối đa (rotation) sang cùng một bên. Giữ tư thế này trong 15–20 giây. Trong suốt thời gian giữ tư thế, yêu cầu bệnh nhân đếm ngược từ 15 về 1 để theo dõi sát tri giác, phát âm và quan sát cử động mắt (nystagmus). Nếu bệnh nhân xuất hiện bất kỳ triệu chứng nào trong nhóm 5D/3N (Dizziness - chóng mặt, Diplopia - nhìn đôi, Dysarthria - nói khó, Dysphagia - nuốt khó, Drop attacks - sụp ngã; Nausea - buồn nôn, Numbness - tê bì, Nystagmus - rung giật nhãn cầu), phải hạ đầu bệnh nhân về vị trí trung tính/thăng bằng ngay lập tức và dừng nghiệm pháp.",
+        "significance": "Gây hẹp cơ học động mạch đốt sống đối bên nhằm đánh giá lưu lượng tuần hoàn não sau. Dương tính khi xuất hiện dấu hiệu thiếu máu não hệ sống - nền (5D: Chóng mặt, Nhìn đôi, Nói khó, Nuốt khó, Sụp ngã; 3N: Rung giật nhãn cầu, Buồn nôn, Tê bì dị cảm). Bắt buộc đưa đầu về vị trí trung tính ngay lập tức khi xuất hiện triệu chứng.",
         "sensitivity": "65–85%",
         "specificity": "90%",
         "accuracy": {
@@ -658,9 +658,9 @@ const STABLE_SCREENING_FALLBACK = [
       {
         "file": "assets/deepak_images/ch04_cervical_pain/p176_img1.jpeg",
         "page": 176,
-        "fig_number": "4.52A",
-        "caption_en": "Fig. 4.52A: Sharp-Purser test",
-        "caption_vi": "🩺 Thao tác khám: Nghiệm pháp Sharp-Purser đánh giá dây chằng ngang C1-C2 (Fig. 4.52A)",
+        "fig_number": "4.52A-B",
+        "caption_en": "Figs. 4.52A-B: Cervical flexion test for transverse ligament integrity",
+        "caption_vi": "🩺 Thao tác khám: Nghiệm pháp Gập Cổ Khám Dây Chằng Ngang C1-C2 (Testing Transverse Ligament Integrity) (Figs. 4.52A-B)",
         "role_type": "exam",
         "width": 717,
         "height": 538
@@ -767,8 +767,8 @@ const STABLE_SCREENING_FALLBACK = [
         ]
       },
       {
-        "name": "Nghiệm pháp Sharp-Purser (Kiểm tra mất vững Dây chằng ngang & Khớp Đội Trục C1-C2)",
-        "technique": "Bệnh nhân ngồi, gập nhẹ đầu. Bác sĩ đặt ngón cái của một tay lên mỏm gai C2 cố định vững chắc, tay kia đặt lên trán bệnh nhân đẩy nhẹ nhàng ra sau (Posterior translation force).",
+        "name": "Nghiệm pháp Gập Cổ Khám Dây Chằng Ngang (Cervical Flexion / Testing Transverse Ligament Integrity)",
+        "technique": "Bệnh nhân ngồi hoặc nằm ngửa, gập nhẹ đầu. Bác sĩ đặt ngón cái của một tay lên mỏm gai C2 cố định vững chắc, tay kia đặt lên trán hoặc chẩm bệnh nhân tạo lực trượt nhẹ nhàng ra sau (Posterior translation force) để kiểm tra độ vững của dây chằng ngang C1-C2 (Trang 175-176, Figs. 4.52A-B).",
         "significance": "Nếu mỏm nha trượt lùi vào trong và nghe tiếng 'khục' nhẹ kèm theo cảm giác giảm nghẹt thở hoặc giảm chèn ép tủy cổ, nghiệm pháp dương tính báo hiệu đứt dây chằng ngang.",
         "sensitivity": "69%",
         "specificity": "96%",
@@ -782,9 +782,9 @@ const STABLE_SCREENING_FALLBACK = [
           {
             "file": "assets/deepak_images/ch04_cervical_pain/p176_img1.jpeg",
             "page": 176,
-            "fig_number": "4.52A",
-            "caption_en": "Fig. 4.52A: Sharp-Purser test",
-            "caption_vi": "🩺 Thao tác khám: Nghiệm pháp Sharp-Purser đánh giá dây chằng ngang C1-C2 (Fig. 4.52A)",
+            "fig_number": "4.52A-B",
+            "caption_en": "Figs. 4.52A-B: Cervical flexion test for transverse ligament integrity",
+            "caption_vi": "🩺 Thao tác khám: Nghiệm pháp Gập Cổ Khám Dây Chằng Ngang C1-C2 (Testing Transverse Ligament Integrity) (Figs. 4.52A-B)",
             "role_type": "exam",
             "width": 717,
             "height": 538
@@ -793,8 +793,8 @@ const STABLE_SCREENING_FALLBACK = [
       },
       {
         "name": "Nghiệm pháp Động mạch Đốt sống (Vertebral Artery Test / VBI Screening)",
-        "technique": "Bệnh nhân nằm ngửa, đầu ở ngoài mép bàn khám. Bác sĩ đỡ đầu bệnh nhân nhẹ nhàng ưỡn ra sau, nghiêng sang một bên và xoay tối đa sang cùng bên đó trong 30 giây, liên tục quan sát mắt và trò chuyện với bệnh nhân.",
-        "significance": "Gây hẹp cơ học động mạch đốt sống đối bên. Xuất hiện 5 chữ D: Dizziness (chóng mặt), Diplopia (nhìn đôi), Dysarthria (nói khó), Dysphagia (nuốt khó), Drop attacks (quỵ ngã) kèm nystagmus là dương tính.",
+        "technique": "Bệnh nhân nằm ngửa hoàn toàn trên bàn khám, đầu KHÔNG đưa ra ngoài mép bàn khám (kê gối mỏng hoặc đệm dưới vùng xương bả vai để hỗ trợ cột sống). Bác sĩ nâng đỡ đầu bệnh nhân, nhẹ nhàng đưa đầu vào tư thế duỗi (extension), nghiêng bên (sidebending) và xoay tối đa (rotation) sang cùng một bên. Giữ tư thế này trong 15–20 giây. Trong suốt thời gian giữ tư thế, yêu cầu bệnh nhân đếm ngược từ 15 về 1 để theo dõi sát tri giác, phát âm và quan sát cử động mắt (nystagmus). Nếu bệnh nhân xuất hiện bất kỳ triệu chứng nào trong nhóm 5D/3N (Dizziness - chóng mặt, Diplopia - nhìn đôi, Dysarthria - nói khó, Dysphagia - nuốt khó, Drop attacks - sụp ngã; Nausea - buồn nôn, Numbness - tê bì, Nystagmus - rung giật nhãn cầu), phải hạ đầu bệnh nhân về vị trí trung tính/thăng bằng ngay lập tức và dừng nghiệm pháp.",
+        "significance": "Gây hẹp cơ học động mạch đốt sống đối bên nhằm đánh giá lưu lượng tuần hoàn não sau. Dương tính khi xuất hiện dấu hiệu thiếu máu não hệ sống - nền (5D: Chóng mặt, Nhìn đôi, Nói khó, Nuốt khó, Sụp ngã; 3N: Rung giật nhãn cầu, Buồn nôn, Tê bì dị cảm). Bắt buộc đưa đầu về vị trí trung tính ngay lập tức khi xuất hiện triệu chứng.",
         "sensitivity": "65–85%",
         "specificity": "90%",
         "accuracy": {
@@ -925,7 +925,7 @@ const STABLE_SCREENING_FALLBACK = [
             "page": 442,
             "fig_number": "9.10",
             "caption_en": "Fig. 9.10: Critical vascular zone and full-thickness rupture of the supraspinatus tendon",
-            "caption_vi": "🚨 Phim X-quang / Cờ đỏ: Vùng mạch máu nguy cơ & rách toàn phần gân trên gai chóp xoay (Fig. 9.10)",
+            "caption_vi": "📐 Sơ đồ giải phẫu: Vùng mạch máu nguy cơ & rách gân trên gai chóp xoay (Fig. 9.10)",
             "role_type": "redflag",
             "width": 1134,
             "height": 754
@@ -942,7 +942,7 @@ const STABLE_SCREENING_FALLBACK = [
             "page": 445,
             "fig_number": "9.12",
             "caption_en": "Fig. 9.12: Glenoid labral tear sites: Bankart and SLAP lesions",
-            "caption_vi": "🚨 Phim X-quang / Cờ đỏ: Tổn thương rách sụn viền ổ chảo Bankart & SLAP khớp vai (Fig. 9.12)",
+            "caption_vi": "📐 Sơ đồ giải phẫu: Tổn thương sụn viền ổ chảo Bankart & SLAP khớp vai (Fig. 9.12)",
             "role_type": "redflag",
             "width": 1011,
             "height": 722
@@ -1119,6 +1119,31 @@ const STABLE_SCREENING_FALLBACK = [
             "height": 628
           }
         ]
+      },
+      {
+        "name": "Nghiệm pháp Nghiêng Xương Bả Vai Ra Sau (Scapula Backward Tipping Test - SBTT)",
+        "technique": "Nghiệm pháp độc quyền do chính GS. Deepak Sebastian nghiên cứu sáng chế (trang 451, 464). Bệnh nhân nằm sấp thả lỏng, đầu và cổ được nâng đỡ thẳng trục, hai lòng bàn tay để ở tư thế giải phẫu. Bác sĩ đứng bên cạnh, đặt một bàn tay lên góc dưới của xương bả vai (inferior angle), các ngón của bàn tay kia móc nhẹ nhàng dưới mỏm quạ (coracoid process). Thực hiện lực kéo nhẹ nhàng nâng mỏm quạ lên trên (hướng ra sau) để cảm nhận độ căng cứng và biên độ trượt. Cần lưu ý không móc ngón tay dưới xương đòn để tránh kéo căng quá mức khớp cùng - đòn (AC joint). So sánh đối chiếu hai bên vai.",
+        "significance": "Phát hiện tình trạng xương bả vai bị nghiêng đổ ra trước (Forward tipping) do co rút dây chằng quạ - đòn (coracoclavicular ligaments) và cơ ngực bé (pectoralis minor). Đây là nguyên nhân cơ sinh học then chốt gây hẹp khoang dưới mỏm cùng vai dẫn đến hội chứng chèn ép chóp xoay (subacromial impingement) và chèn ép thần kinh trên vai / thần kinh nách.",
+        "sensitivity": "Định tính (Qualitative)",
+        "specificity": "Định tính (Qualitative)",
+        "accuracy": {
+          "sn": "Định tính (Qualitative)",
+          "sp": "Định tính (Qualitative)"
+        },
+        "clinical_role": "Nghiệm pháp độc quyền của GS. Deepak Sebastian: Đánh giá cử động phân đoạn cơ sinh học và rối loạn xoay bả vai ra sau trong hội chứng chèn ép dưới mỏm cùng vai (Qualitative Motion Assessment)",
+        "diagnostic_role": "Nghiệm pháp độc quyền của GS. Deepak Sebastian: Đánh giá cử động phân đoạn cơ sinh học và rối loạn xoay bả vai ra sau trong hội chứng chèn ép dưới mỏm cùng vai (Qualitative Motion Assessment)",
+        "figures": [
+          {
+            "file": "assets/deepak_images/ch09_shoulder_pain/p464_img2.jpeg",
+            "page": 464,
+            "fig_number": "9.39",
+            "caption_en": "Fig. 9.39: The scapula backward tipping test",
+            "caption_vi": "🩺 Thao tác khám: Nghiệm pháp SBTT (Deepak Sebastian) đánh giá hạn chế xoay bả vai ra sau (Fig. 9.39)",
+            "role_type": "exam",
+            "width": 904,
+            "height": 677
+          }
+        ]
       }
     ],
     "differential_table": [
@@ -1165,7 +1190,7 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 442,
         "fig_number": "9.10",
         "caption_en": "Fig. 9.10: Critical vascular zone and full-thickness rupture of the supraspinatus tendon",
-        "caption_vi": "🚨 Phim X-quang / Cờ đỏ: Vùng mạch máu nguy cơ & rách toàn phần gân trên gai chóp xoay (Fig. 9.10)",
+        "caption_vi": "📐 Sơ đồ giải phẫu: Vùng mạch máu nguy cơ & rách gân trên gai chóp xoay (Fig. 9.10)",
         "role_type": "redflag",
         "width": 1134,
         "height": 754
@@ -1175,7 +1200,7 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 445,
         "fig_number": "9.12",
         "caption_en": "Fig. 9.12: Glenoid labral tear sites: Bankart and SLAP lesions",
-        "caption_vi": "🚨 Phim X-quang / Cờ đỏ: Tổn thương rách sụn viền ổ chảo Bankart & SLAP khớp vai (Fig. 9.12)",
+        "caption_vi": "📐 Sơ đồ giải phẫu: Tổn thương sụn viền ổ chảo Bankart & SLAP khớp vai (Fig. 9.12)",
         "role_type": "redflag",
         "width": 1011,
         "height": 722
@@ -1239,6 +1264,16 @@ const STABLE_SCREENING_FALLBACK = [
         "role_type": "exam",
         "width": 958,
         "height": 628
+      },
+      {
+        "file": "assets/deepak_images/ch09_shoulder_pain/p464_img2.jpeg",
+        "page": 464,
+        "fig_number": "9.39",
+        "caption_en": "Fig. 9.39: The scapula backward tipping test",
+        "caption_vi": "🩺 Thao tác khám: Nghiệm pháp SBTT (Deepak Sebastian) đánh giá hạn chế xoay bả vai ra sau (Fig. 9.39)",
+        "role_type": "exam",
+        "width": 904,
+        "height": 677
       }
     ],
     "stage_2_somatic_dysfunctions": [
@@ -1439,6 +1474,31 @@ const STABLE_SCREENING_FALLBACK = [
             "height": 628
           }
         ]
+      },
+      {
+        "name": "Nghiệm pháp Nghiêng Xương Bả Vai Ra Sau (Scapula Backward Tipping Test - SBTT)",
+        "technique": "Nghiệm pháp độc quyền do chính GS. Deepak Sebastian nghiên cứu sáng chế (trang 451, 464). Bệnh nhân nằm sấp thả lỏng, đầu và cổ được nâng đỡ thẳng trục, hai lòng bàn tay để ở tư thế giải phẫu. Bác sĩ đứng bên cạnh, đặt một bàn tay lên góc dưới của xương bả vai (inferior angle), các ngón của bàn tay kia móc nhẹ nhàng dưới mỏm quạ (coracoid process). Thực hiện lực kéo nhẹ nhàng nâng mỏm quạ lên trên (hướng ra sau) để cảm nhận độ căng cứng và biên độ trượt. Cần lưu ý không móc ngón tay dưới xương đòn để tránh kéo căng quá mức khớp cùng - đòn (AC joint). So sánh đối chiếu hai bên vai.",
+        "significance": "Phát hiện tình trạng xương bả vai bị nghiêng đổ ra trước (Forward tipping) do co rút dây chằng quạ - đòn (coracoclavicular ligaments) và cơ ngực bé (pectoralis minor). Đây là nguyên nhân cơ sinh học then chốt gây hẹp khoang dưới mỏm cùng vai dẫn đến hội chứng chèn ép chóp xoay (subacromial impingement) và chèn ép thần kinh trên vai / thần kinh nách.",
+        "sensitivity": "Định tính (Qualitative)",
+        "specificity": "Định tính (Qualitative)",
+        "accuracy": {
+          "sn": "Định tính (Qualitative)",
+          "sp": "Định tính (Qualitative)"
+        },
+        "clinical_role": "Nghiệm pháp độc quyền của GS. Deepak Sebastian: Đánh giá cử động phân đoạn cơ sinh học và rối loạn xoay bả vai ra sau trong hội chứng chèn ép dưới mỏm cùng vai (Qualitative Motion Assessment)",
+        "diagnostic_role": "Nghiệm pháp độc quyền của GS. Deepak Sebastian: Đánh giá cử động phân đoạn cơ sinh học và rối loạn xoay bả vai ra sau trong hội chứng chèn ép dưới mỏm cùng vai (Qualitative Motion Assessment)",
+        "figures": [
+          {
+            "file": "assets/deepak_images/ch09_shoulder_pain/p464_img2.jpeg",
+            "page": 464,
+            "fig_number": "9.39",
+            "caption_en": "Fig. 9.39: The scapula backward tipping test",
+            "caption_vi": "🩺 Thao tác khám: Nghiệm pháp SBTT (Deepak Sebastian) đánh giá hạn chế xoay bả vai ra sau (Fig. 9.39)",
+            "role_type": "exam",
+            "width": 904,
+            "height": 677
+          }
+        ]
       }
     ],
     "differential_matrix": [
@@ -1524,7 +1584,7 @@ const STABLE_SCREENING_FALLBACK = [
             "page": 146,
             "fig_number": "4.17",
             "caption_en": "Fig. 4.17: Thoracic apex compression: Pancoast tumor and thoracic outlet structures",
-            "caption_vi": "🚨 Phim X-quang / Cờ đỏ: U đỉnh phổi Pancoast xâm lấn lỗ ngực trên & đám rối TK cánh tay (Fig. 4.17)",
+            "caption_vi": "📐 Sơ đồ giải phẫu: Vị trí chèn ép lối thoát lồng ngực TOS & u đỉnh phổi Pancoast (Fig. 4.17)",
             "role_type": "redflag",
             "width": 757,
             "height": 540
@@ -1567,14 +1627,14 @@ const STABLE_SCREENING_FALLBACK = [
         "name": "Khám Cử Động Xương Sườn 1 (Lindgren Test / Elevated First Rib Assessment)",
         "technique": "Bệnh nhân ngồi thẳng lưng thả lỏng cổ vai. Bác sĩ cho bệnh nhân xoay đầu tối đa sang bên đối diện, sau đó giữ nguyên góc xoay đó và nghiêng đầu nhẹ nhàng về phía bên đau (hướng tai về phía ngực cùng bên).",
         "significance": "Nếu biên độ nghiêng đầu bị cản trở hoặc đau nhói ở vùng nền cổ/hố trên đòn, nghiệm pháp dương tính báo hiệu xương sườn 1 bị co kéo treo cao bởi cơ bậc thang trước/giữa kẹt khớp sườn sống 1.",
-        "sensitivity": "75–85%",
-        "specificity": "88–95%",
+        "sensitivity": "Định tính (Qualitative)",
+        "specificity": "Định tính (Qualitative)",
         "accuracy": {
-          "sn": "75–85%",
-          "sp": "88–95%"
+          "sn": "Định tính (Qualitative)",
+          "sp": "Định tính (Qualitative)"
         },
-        "clinical_role": "Chẩn đoán kẹt xương sườn 1 gây hội chứng lối thoát lồng ngực và đau lưng ngực trên",
-        "diagnostic_role": "Chẩn đoán kẹt xương sườn 1 gây hội chứng lối thoát lồng ngực và đau lưng ngực trên",
+        "clinical_role": "Đánh giá cử động phân đoạn cơ sinh học (Qualitative Motion Assessment)",
+        "diagnostic_role": "Đánh giá cử động phân đoạn cơ sinh học (Qualitative Motion Assessment)",
         "figures": [
           {
             "file": "assets/deepak_images/ch04_cervical_pain/p182_img1.jpeg",
@@ -1591,15 +1651,15 @@ const STABLE_SCREENING_FALLBACK = [
       {
         "name": "Khám Hạn Chế Mở Diện Khớp Ngực Trên (Upper Thoracic Opening Restriction Assessment)",
         "technique": "Bệnh nhân ngồi khoanh tay trước ngực. Bác sĩ đặt các đầu ngón tay lên mỏm gai và diện khớp đốt sống ngực T1–T4. Yêu cầu bệnh nhân cúi gập lưng và gập cổ từng đốt, bác sĩ đánh giá độ tách xa mở ra của các mỏm khớp.",
-        "significance": "Phát hiện rối loạn chức năng thể dịch FRS (Flexion-Rotation-Sidebending restriction): Diện khớp ngực trên bị kẹt không mở được khi cúi người gây đau lưng trên và đau lan tỏa kiểu T4 syndrome.",
-        "sensitivity": "70–80%",
-        "specificity": "75–85%",
+        "significance": "Phát hiện rối loạn cơ sinh học hệ vận động (Somatic Dysfunctions) FRS (Flexion-Rotation-Sidebending restriction): Diện khớp ngực trên bị kẹt không mở được khi cúi người gây đau lưng trên và đau lan tỏa kiểu T4 syndrome.",
+        "sensitivity": "Định tính (Qualitative)",
+        "specificity": "Định tính (Qualitative)",
         "accuracy": {
-          "sn": "70–80%",
-          "sp": "75–85%"
+          "sn": "Định tính (Qualitative)",
+          "sp": "Định tính (Qualitative)"
         },
-        "clinical_role": "Xác định chính xác phân đoạn đốt sống ngực bị hạn chế vận động trước can thiệp tiêm/vận động",
-        "diagnostic_role": "Xác định chính xác phân đoạn đốt sống ngực bị hạn chế vận động trước can thiệp tiêm/vận động",
+        "clinical_role": "Đánh giá cử động phân đoạn cơ sinh học (Qualitative Motion Assessment)",
+        "diagnostic_role": "Đánh giá cử động phân đoạn cơ sinh học (Qualitative Motion Assessment)",
         "figures": [
           {
             "file": "assets/deepak_images/ch05_thoracic_pain/p211_img1.jpeg",
@@ -1616,15 +1676,15 @@ const STABLE_SCREENING_FALLBACK = [
       {
         "name": "Khám Hạn Chế Đóng Diện Khớp Ngực Dưới (Lower Thoracic Closing Restriction Assessment)",
         "technique": "Bệnh nhân ngồi thẳng, hai tay ôm sau gáy. Bác sĩ luồn tay qua nách hỗ trợ vận động ưỡn, nghiêng và xoay thân mình ra sau trong khi ngón tay cái bên kia đặt tì vào mỏm khớp đốt sống T5–T12 bên đau.",
-        "significance": "Đánh giá rối loạn thể dịch ERS (Extension-Rotation-Sidebending): Khi ưỡn và xoay, diện khớp ngực không trượt đóng được hoặc bị đè kẹp gây đau chói tại chỗ kèm co cứng cơ cạnh sống ngực.",
-        "sensitivity": "70–80%",
-        "specificity": "75–85%",
+        "significance": "Đánh giá rối loạn cơ sinh học hệ vận động (Somatic Dysfunctions) ERS (Extension-Rotation-Sidebending): Khi ưỡn và xoay, diện khớp ngực không trượt đóng được hoặc bị đè kẹp gây đau chói tại chỗ kèm co cứng cơ cạnh sống ngực.",
+        "sensitivity": "Định tính (Qualitative)",
+        "specificity": "Định tính (Qualitative)",
         "accuracy": {
-          "sn": "70–80%",
-          "sp": "75–85%"
+          "sn": "Định tính (Qualitative)",
+          "sp": "Định tính (Qualitative)"
         },
-        "clinical_role": "Phân biệt đau diện khớp cột sống ngực với đau rễ thần kinh liên sườn chuyển vị",
-        "diagnostic_role": "Phân biệt đau diện khớp cột sống ngực với đau rễ thần kinh liên sườn chuyển vị",
+        "clinical_role": "Đánh giá cử động phân đoạn cơ sinh học (Qualitative Motion Assessment)",
+        "diagnostic_role": "Đánh giá cử động phân đoạn cơ sinh học (Qualitative Motion Assessment)",
         "figures": [
           {
             "file": "assets/deepak_images/ch05_thoracic_pain/p213_img1.jpeg",
@@ -1642,14 +1702,14 @@ const STABLE_SCREENING_FALLBACK = [
         "name": "Nghiệm pháp Ấn Lò Xo Khớp Sườn - Sống (Costovertebral Joint Springing Test)",
         "technique": "Bệnh nhân nằm sấp thả lỏng. Bác sĩ đặt mô út bàn tay lên góc sau của xương sườn (cách gai sau đốt sống khoảng 3–4 cm) rồi dùng trọng lượng cơ thể tạo lực nhún lò xo vuông góc xuống dưới theo nhịp thở.",
         "significance": "Tác động trực tiếp lên khớp sườn sống và sườn ngang. Nếu xuất hiện đau chói tái hiện đúng cảm giác đau ngực lan vòng ra trước ngực của bệnh nhân, xác nhận viêm hoặc bán trật khớp sườn đốt sống.",
-        "sensitivity": "72–82%",
-        "specificity": "80–90%",
+        "sensitivity": "Định tính (Qualitative)",
+        "specificity": "Định tính (Qualitative)",
         "accuracy": {
-          "sn": "72–82%",
-          "sp": "80–90%"
+          "sn": "Định tính (Qualitative)",
+          "sp": "Định tính (Qualitative)"
         },
-        "clinical_role": "Chẩn đoán đau khớp sườn sống / sườn ngang, chỉ định phong bế dây thần kinh liên sườn",
-        "diagnostic_role": "Chẩn đoán đau khớp sườn sống / sườn ngang, chỉ định phong bế dây thần kinh liên sườn",
+        "clinical_role": "Đánh giá cử động phân đoạn cơ sinh học (Qualitative Motion Assessment)",
+        "diagnostic_role": "Đánh giá cử động phân đoạn cơ sinh học (Qualitative Motion Assessment)",
         "figures": [
           {
             "file": "assets/deepak_images/ch05_thoracic_pain/p215_img1.jpeg",
@@ -1708,7 +1768,7 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 146,
         "fig_number": "4.17",
         "caption_en": "Fig. 4.17: Thoracic apex compression: Pancoast tumor and thoracic outlet structures",
-        "caption_vi": "🚨 Phim X-quang / Cờ đỏ: U đỉnh phổi Pancoast xâm lấn lỗ ngực trên & đám rối TK cánh tay (Fig. 4.17)",
+        "caption_vi": "📐 Sơ đồ giải phẫu: Vị trí chèn ép lối thoát lồng ngực TOS & u đỉnh phổi Pancoast (Fig. 4.17)",
         "role_type": "redflag",
         "width": 757,
         "height": 540
@@ -1777,14 +1837,14 @@ const STABLE_SCREENING_FALLBACK = [
         "name": "Khám Cử Động Xương Sườn 1 (Lindgren Test / Elevated First Rib Assessment)",
         "technique": "Bệnh nhân ngồi thẳng lưng thả lỏng cổ vai. Bác sĩ cho bệnh nhân xoay đầu tối đa sang bên đối diện, sau đó giữ nguyên góc xoay đó và nghiêng đầu nhẹ nhàng về phía bên đau (hướng tai về phía ngực cùng bên).",
         "significance": "Nếu biên độ nghiêng đầu bị cản trở hoặc đau nhói ở vùng nền cổ/hố trên đòn, nghiệm pháp dương tính báo hiệu xương sườn 1 bị co kéo treo cao bởi cơ bậc thang trước/giữa kẹt khớp sườn sống 1.",
-        "sensitivity": "75–85%",
-        "specificity": "88–95%",
+        "sensitivity": "Định tính (Qualitative)",
+        "specificity": "Định tính (Qualitative)",
         "accuracy": {
-          "sn": "75–85%",
-          "sp": "88–95%"
+          "sn": "Định tính (Qualitative)",
+          "sp": "Định tính (Qualitative)"
         },
-        "clinical_role": "Chẩn đoán kẹt xương sườn 1 gây hội chứng lối thoát lồng ngực và đau lưng ngực trên",
-        "diagnostic_role": "Chẩn đoán kẹt xương sườn 1 gây hội chứng lối thoát lồng ngực và đau lưng ngực trên",
+        "clinical_role": "Đánh giá cử động phân đoạn cơ sinh học (Qualitative Motion Assessment)",
+        "diagnostic_role": "Đánh giá cử động phân đoạn cơ sinh học (Qualitative Motion Assessment)",
         "figures": [
           {
             "file": "assets/deepak_images/ch04_cervical_pain/p182_img1.jpeg",
@@ -1801,15 +1861,15 @@ const STABLE_SCREENING_FALLBACK = [
       {
         "name": "Khám Hạn Chế Mở Diện Khớp Ngực Trên (Upper Thoracic Opening Restriction Assessment)",
         "technique": "Bệnh nhân ngồi khoanh tay trước ngực. Bác sĩ đặt các đầu ngón tay lên mỏm gai và diện khớp đốt sống ngực T1–T4. Yêu cầu bệnh nhân cúi gập lưng và gập cổ từng đốt, bác sĩ đánh giá độ tách xa mở ra của các mỏm khớp.",
-        "significance": "Phát hiện rối loạn chức năng thể dịch FRS (Flexion-Rotation-Sidebending restriction): Diện khớp ngực trên bị kẹt không mở được khi cúi người gây đau lưng trên và đau lan tỏa kiểu T4 syndrome.",
-        "sensitivity": "70–80%",
-        "specificity": "75–85%",
+        "significance": "Phát hiện rối loạn cơ sinh học hệ vận động (Somatic Dysfunctions) FRS (Flexion-Rotation-Sidebending restriction): Diện khớp ngực trên bị kẹt không mở được khi cúi người gây đau lưng trên và đau lan tỏa kiểu T4 syndrome.",
+        "sensitivity": "Định tính (Qualitative)",
+        "specificity": "Định tính (Qualitative)",
         "accuracy": {
-          "sn": "70–80%",
-          "sp": "75–85%"
+          "sn": "Định tính (Qualitative)",
+          "sp": "Định tính (Qualitative)"
         },
-        "clinical_role": "Xác định chính xác phân đoạn đốt sống ngực bị hạn chế vận động trước can thiệp tiêm/vận động",
-        "diagnostic_role": "Xác định chính xác phân đoạn đốt sống ngực bị hạn chế vận động trước can thiệp tiêm/vận động",
+        "clinical_role": "Đánh giá cử động phân đoạn cơ sinh học (Qualitative Motion Assessment)",
+        "diagnostic_role": "Đánh giá cử động phân đoạn cơ sinh học (Qualitative Motion Assessment)",
         "figures": [
           {
             "file": "assets/deepak_images/ch05_thoracic_pain/p211_img1.jpeg",
@@ -1826,15 +1886,15 @@ const STABLE_SCREENING_FALLBACK = [
       {
         "name": "Khám Hạn Chế Đóng Diện Khớp Ngực Dưới (Lower Thoracic Closing Restriction Assessment)",
         "technique": "Bệnh nhân ngồi thẳng, hai tay ôm sau gáy. Bác sĩ luồn tay qua nách hỗ trợ vận động ưỡn, nghiêng và xoay thân mình ra sau trong khi ngón tay cái bên kia đặt tì vào mỏm khớp đốt sống T5–T12 bên đau.",
-        "significance": "Đánh giá rối loạn thể dịch ERS (Extension-Rotation-Sidebending): Khi ưỡn và xoay, diện khớp ngực không trượt đóng được hoặc bị đè kẹp gây đau chói tại chỗ kèm co cứng cơ cạnh sống ngực.",
-        "sensitivity": "70–80%",
-        "specificity": "75–85%",
+        "significance": "Đánh giá rối loạn cơ sinh học hệ vận động (Somatic Dysfunctions) ERS (Extension-Rotation-Sidebending): Khi ưỡn và xoay, diện khớp ngực không trượt đóng được hoặc bị đè kẹp gây đau chói tại chỗ kèm co cứng cơ cạnh sống ngực.",
+        "sensitivity": "Định tính (Qualitative)",
+        "specificity": "Định tính (Qualitative)",
         "accuracy": {
-          "sn": "70–80%",
-          "sp": "75–85%"
+          "sn": "Định tính (Qualitative)",
+          "sp": "Định tính (Qualitative)"
         },
-        "clinical_role": "Phân biệt đau diện khớp cột sống ngực với đau rễ thần kinh liên sườn chuyển vị",
-        "diagnostic_role": "Phân biệt đau diện khớp cột sống ngực với đau rễ thần kinh liên sườn chuyển vị",
+        "clinical_role": "Đánh giá cử động phân đoạn cơ sinh học (Qualitative Motion Assessment)",
+        "diagnostic_role": "Đánh giá cử động phân đoạn cơ sinh học (Qualitative Motion Assessment)",
         "figures": [
           {
             "file": "assets/deepak_images/ch05_thoracic_pain/p213_img1.jpeg",
@@ -1852,14 +1912,14 @@ const STABLE_SCREENING_FALLBACK = [
         "name": "Nghiệm pháp Ấn Lò Xo Khớp Sườn - Sống (Costovertebral Joint Springing Test)",
         "technique": "Bệnh nhân nằm sấp thả lỏng. Bác sĩ đặt mô út bàn tay lên góc sau của xương sườn (cách gai sau đốt sống khoảng 3–4 cm) rồi dùng trọng lượng cơ thể tạo lực nhún lò xo vuông góc xuống dưới theo nhịp thở.",
         "significance": "Tác động trực tiếp lên khớp sườn sống và sườn ngang. Nếu xuất hiện đau chói tái hiện đúng cảm giác đau ngực lan vòng ra trước ngực của bệnh nhân, xác nhận viêm hoặc bán trật khớp sườn đốt sống.",
-        "sensitivity": "72–82%",
-        "specificity": "80–90%",
+        "sensitivity": "Định tính (Qualitative)",
+        "specificity": "Định tính (Qualitative)",
         "accuracy": {
-          "sn": "72–82%",
-          "sp": "80–90%"
+          "sn": "Định tính (Qualitative)",
+          "sp": "Định tính (Qualitative)"
         },
-        "clinical_role": "Chẩn đoán đau khớp sườn sống / sườn ngang, chỉ định phong bế dây thần kinh liên sườn",
-        "diagnostic_role": "Chẩn đoán đau khớp sườn sống / sườn ngang, chỉ định phong bế dây thần kinh liên sườn",
+        "clinical_role": "Đánh giá cử động phân đoạn cơ sinh học (Qualitative Motion Assessment)",
+        "diagnostic_role": "Đánh giá cử động phân đoạn cơ sinh học (Qualitative Motion Assessment)",
         "figures": [
           {
             "file": "assets/deepak_images/ch05_thoracic_pain/p215_img1.jpeg",
@@ -1957,7 +2017,7 @@ const STABLE_SCREENING_FALLBACK = [
             "page": 231,
             "fig_number": "6.4",
             "caption_en": "Fig. 6.4: Sites for auscultation of abdominal vascular bruits",
-            "caption_vi": "🚨 Phim X-quang / Cờ đỏ: Các điểm nghe tiếng thổi mạch máu trong phình ĐM chủ bụng (AAA) (Fig. 6.4)",
+            "caption_vi": "🩺 Vị trí thăm khám: Các điểm nghe tiếng thổi mạch máu trong phình ĐM chủ bụng (AAA) (Fig. 6.4)",
             "role_type": "redflag",
             "width": 1377,
             "height": 903
@@ -1974,7 +2034,7 @@ const STABLE_SCREENING_FALLBACK = [
             "page": 236,
             "fig_number": "6.5",
             "caption_en": "Fig. 6.5: Spondylolysis: Defect in the pars interarticularis of L5",
-            "caption_vi": "🚨 Phim X-quang / Cờ đỏ: Tiêu eo đốt sống L5 & trượt đốt sống thắt lưng (Fig. 6.5)",
+            "caption_vi": "📐 Sơ đồ giải phẫu / cơ học: Tiêu eo đốt sống L5 & trượt đốt sống thắt lưng (Fig. 6.5)",
             "role_type": "redflag",
             "width": 527,
             "height": 788
@@ -1991,7 +2051,7 @@ const STABLE_SCREENING_FALLBACK = [
             "page": 258,
             "fig_number": "6.7",
             "caption_en": "Fig. 6.7: Lumbar disc herniation with nerve root entrapment",
-            "caption_vi": "🚨 Phim X-quang / Cờ đỏ: Thoát vị đĩa đệm rách bao xơ L2-L3 chèn ép bao màng cứng & rễ (Fig. 6.7)",
+            "caption_vi": "📐 Sơ đồ giải phẫu: Thoát vị đĩa đệm L2-L3 chèn ép bao màng cứng & rễ thần kinh (Fig. 6.7)",
             "role_type": "redflag",
             "width": 676,
             "height": 993
@@ -2209,7 +2269,7 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 231,
         "fig_number": "6.4",
         "caption_en": "Fig. 6.4: Sites for auscultation of abdominal vascular bruits",
-        "caption_vi": "🚨 Phim X-quang / Cờ đỏ: Các điểm nghe tiếng thổi mạch máu trong phình ĐM chủ bụng (AAA) (Fig. 6.4)",
+        "caption_vi": "🩺 Vị trí thăm khám: Các điểm nghe tiếng thổi mạch máu trong phình ĐM chủ bụng (AAA) (Fig. 6.4)",
         "role_type": "redflag",
         "width": 1377,
         "height": 903
@@ -2219,7 +2279,7 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 236,
         "fig_number": "6.5",
         "caption_en": "Fig. 6.5: Spondylolysis: Defect in the pars interarticularis of L5",
-        "caption_vi": "🚨 Phim X-quang / Cờ đỏ: Tiêu eo đốt sống L5 & trượt đốt sống thắt lưng (Fig. 6.5)",
+        "caption_vi": "📐 Sơ đồ giải phẫu / cơ học: Tiêu eo đốt sống L5 & trượt đốt sống thắt lưng (Fig. 6.5)",
         "role_type": "redflag",
         "width": 527,
         "height": 788
@@ -2229,7 +2289,7 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 258,
         "fig_number": "6.7",
         "caption_en": "Fig. 6.7: Lumbar disc herniation with nerve root entrapment",
-        "caption_vi": "🚨 Phim X-quang / Cờ đỏ: Thoát vị đĩa đệm rách bao xơ L2-L3 chèn ép bao màng cứng & rễ (Fig. 6.7)",
+        "caption_vi": "📐 Sơ đồ giải phẫu: Thoát vị đĩa đệm L2-L3 chèn ép bao màng cứng & rễ thần kinh (Fig. 6.7)",
         "role_type": "redflag",
         "width": 676,
         "height": 993
@@ -2547,7 +2607,7 @@ const STABLE_SCREENING_FALLBACK = [
             "page": 304,
             "fig_number": "7.2",
             "caption_en": "Fig. 7.2: Retinacular vessels of the femoral neck and avascular necrosis threat",
-            "caption_vi": "🚨 Phim X-quang / Cờ đỏ: Mạng mạch nuôi cổ xương đùi & nguy cơ hoại tử vô mạch chỏm (Fig. 7.2)",
+            "caption_vi": "📐 Sơ đồ giải phẫu: Mạng mạch nuôi cổ xương đùi & nguy cơ hoại tử vô mạch chỏm (Fig. 7.2)",
             "role_type": "redflag",
             "width": 1285,
             "height": 813
@@ -2563,8 +2623,8 @@ const STABLE_SCREENING_FALLBACK = [
             "file": "assets/deepak_images/ch07_hip_pain/p324_img1.jpeg",
             "page": 324,
             "fig_number": "7.9",
-            "caption_en": "Fig. 7.9: Avascular necrosis: Collapse and flattening of the femoral head",
-            "caption_vi": "🚨 Phim X-quang / Cờ đỏ: Hoại tử vô mạch chỏm xương đùi Ficat giai đoạn III-IV gây sụp chỏm (Fig. 7.9)",
+            "caption_en": "Fig. 7.9: Femoral head posterolateral glide",
+            "caption_vi": "📐 Sơ đồ cơ học: Hướng trượt chỏm xương đùi ra sau ngoài (Fig. 7.9: Femoral head posterolateral glide)",
             "role_type": "redflag",
             "width": 958,
             "height": 720
@@ -2581,7 +2641,7 @@ const STABLE_SCREENING_FALLBACK = [
             "page": 316,
             "fig_number": "7.5",
             "caption_en": "Fig. 7.5: Cam femoroacetabular impingement (FAI) and labral tear",
-            "caption_vi": "🚨 Phim X-quang / Cờ đỏ: Xung đột xương chậu - đùi Cam FAI & rách sụn viền ổ cối (Fig. 7.5)",
+            "caption_vi": "📐 Sơ đồ giải phẫu / cơ học: Xung đột xương chậu - đùi Cam FAI & rách sụn viền ổ cối (Fig. 7.5)",
             "role_type": "redflag",
             "width": 990,
             "height": 1019
@@ -2674,9 +2734,9 @@ const STABLE_SCREENING_FALLBACK = [
           {
             "file": "assets/deepak_images/ch07_hip_pain/p327_img2.jpeg",
             "page": 327,
-            "fig_number": "7.13",
-            "caption_en": "Fig. 7.13: Ober's test",
-            "caption_vi": "🩺 Thao tác khám: Nghiệm pháp Ober khám co ngắn dải chậu chày ITB (Fig. 7.13)",
+            "fig_number": "7.14",
+            "caption_en": "Fig. 7.14: Ober's test",
+            "caption_vi": "🩺 Thao tác khám: Nghiệm pháp Ober khám co ngắn dải chậu chày ITB (Fig. 7.14)",
             "role_type": "exam",
             "width": 958,
             "height": 602
@@ -2699,9 +2759,9 @@ const STABLE_SCREENING_FALLBACK = [
           {
             "file": "assets/deepak_images/ch07_hip_pain/p331_img2.jpeg",
             "page": 331,
-            "fig_number": "7.19",
-            "caption_en": "Fig. 7.19: Stinchfield test (Resisted straight leg raise)",
-            "caption_vi": "🩺 Thao tác khám: Nghiệm pháp nâng thẳng chân có kháng trở Stinchfield (Fig. 7.19)",
+            "fig_number": "7.20",
+            "caption_en": "Fig. 7.20: Stinchfield test (Resisted straight leg raise)",
+            "caption_vi": "🩺 Thao tác khám: Nghiệm pháp nâng thẳng chân có kháng trở Stinchfield (Fig. 7.20)",
             "role_type": "exam",
             "width": 958,
             "height": 803
@@ -2753,7 +2813,7 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 304,
         "fig_number": "7.2",
         "caption_en": "Fig. 7.2: Retinacular vessels of the femoral neck and avascular necrosis threat",
-        "caption_vi": "🚨 Phim X-quang / Cờ đỏ: Mạng mạch nuôi cổ xương đùi & nguy cơ hoại tử vô mạch chỏm (Fig. 7.2)",
+        "caption_vi": "📐 Sơ đồ giải phẫu: Mạng mạch nuôi cổ xương đùi & nguy cơ hoại tử vô mạch chỏm (Fig. 7.2)",
         "role_type": "redflag",
         "width": 1285,
         "height": 813
@@ -2762,8 +2822,8 @@ const STABLE_SCREENING_FALLBACK = [
         "file": "assets/deepak_images/ch07_hip_pain/p324_img1.jpeg",
         "page": 324,
         "fig_number": "7.9",
-        "caption_en": "Fig. 7.9: Avascular necrosis: Collapse and flattening of the femoral head",
-        "caption_vi": "🚨 Phim X-quang / Cờ đỏ: Hoại tử vô mạch chỏm xương đùi Ficat giai đoạn III-IV gây sụp chỏm (Fig. 7.9)",
+        "caption_en": "Fig. 7.9: Femoral head posterolateral glide",
+        "caption_vi": "📐 Sơ đồ cơ học: Hướng trượt chỏm xương đùi ra sau ngoài (Fig. 7.9: Femoral head posterolateral glide)",
         "role_type": "redflag",
         "width": 958,
         "height": 720
@@ -2773,7 +2833,7 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 316,
         "fig_number": "7.5",
         "caption_en": "Fig. 7.5: Cam femoroacetabular impingement (FAI) and labral tear",
-        "caption_vi": "🚨 Phim X-quang / Cờ đỏ: Xung đột xương chậu - đùi Cam FAI & rách sụn viền ổ cối (Fig. 7.5)",
+        "caption_vi": "📐 Sơ đồ giải phẫu / cơ học: Xung đột xương chậu - đùi Cam FAI & rách sụn viền ổ cối (Fig. 7.5)",
         "role_type": "redflag",
         "width": 990,
         "height": 1019
@@ -2801,9 +2861,9 @@ const STABLE_SCREENING_FALLBACK = [
       {
         "file": "assets/deepak_images/ch07_hip_pain/p327_img2.jpeg",
         "page": 327,
-        "fig_number": "7.13",
-        "caption_en": "Fig. 7.13: Ober's test",
-        "caption_vi": "🩺 Thao tác khám: Nghiệm pháp Ober khám co ngắn dải chậu chày ITB (Fig. 7.13)",
+        "fig_number": "7.14",
+        "caption_en": "Fig. 7.14: Ober's test",
+        "caption_vi": "🩺 Thao tác khám: Nghiệm pháp Ober khám co ngắn dải chậu chày ITB (Fig. 7.14)",
         "role_type": "exam",
         "width": 958,
         "height": 602
@@ -2811,9 +2871,9 @@ const STABLE_SCREENING_FALLBACK = [
       {
         "file": "assets/deepak_images/ch07_hip_pain/p331_img2.jpeg",
         "page": 331,
-        "fig_number": "7.19",
-        "caption_en": "Fig. 7.19: Stinchfield test (Resisted straight leg raise)",
-        "caption_vi": "🩺 Thao tác khám: Nghiệm pháp nâng thẳng chân có kháng trở Stinchfield (Fig. 7.19)",
+        "fig_number": "7.20",
+        "caption_en": "Fig. 7.20: Stinchfield test (Resisted straight leg raise)",
+        "caption_vi": "🩺 Thao tác khám: Nghiệm pháp nâng thẳng chân có kháng trở Stinchfield (Fig. 7.20)",
         "role_type": "exam",
         "width": 958,
         "height": 803
@@ -2929,9 +2989,9 @@ const STABLE_SCREENING_FALLBACK = [
           {
             "file": "assets/deepak_images/ch07_hip_pain/p327_img2.jpeg",
             "page": 327,
-            "fig_number": "7.13",
-            "caption_en": "Fig. 7.13: Ober's test",
-            "caption_vi": "🩺 Thao tác khám: Nghiệm pháp Ober khám co ngắn dải chậu chày ITB (Fig. 7.13)",
+            "fig_number": "7.14",
+            "caption_en": "Fig. 7.14: Ober's test",
+            "caption_vi": "🩺 Thao tác khám: Nghiệm pháp Ober khám co ngắn dải chậu chày ITB (Fig. 7.14)",
             "role_type": "exam",
             "width": 958,
             "height": 602
@@ -2954,9 +3014,9 @@ const STABLE_SCREENING_FALLBACK = [
           {
             "file": "assets/deepak_images/ch07_hip_pain/p331_img2.jpeg",
             "page": 331,
-            "fig_number": "7.19",
-            "caption_en": "Fig. 7.19: Stinchfield test (Resisted straight leg raise)",
-            "caption_vi": "🩺 Thao tác khám: Nghiệm pháp nâng thẳng chân có kháng trở Stinchfield (Fig. 7.19)",
+            "fig_number": "7.20",
+            "caption_en": "Fig. 7.20: Stinchfield test (Resisted straight leg raise)",
+            "caption_vi": "🩺 Thao tác khám: Nghiệm pháp nâng thẳng chân có kháng trở Stinchfield (Fig. 7.20)",
             "role_type": "exam",
             "width": 958,
             "height": 803
@@ -3064,7 +3124,7 @@ const STABLE_SCREENING_FALLBACK = [
             "page": 365,
             "fig_number": "8.9",
             "caption_en": "Fig. 8.9: Meniscal tear patterns: Bucket-handle, flap, complex",
-            "caption_vi": "🚨 Phim X-quang / Cờ đỏ: Các hình thái rách sụn chêm khớp gối phức tạp & rách quai vali (Fig. 8.9)",
+            "caption_vi": "📐 Sơ đồ giải phẫu / cơ học: Các hình thái rách sụn chêm khớp gối & rách quai vali (Fig. 8.9)",
             "role_type": "redflag",
             "width": 1339,
             "height": 678
@@ -3081,7 +3141,7 @@ const STABLE_SCREENING_FALLBACK = [
             "page": 380,
             "fig_number": "8.16",
             "caption_en": "Fig. 8.16: March fracture (Metatarsal stress fracture)",
-            "caption_vi": "🚨 Phim X-quang / Cờ đỏ: Gãy mỏi do stress xương bàn chân (March Fracture) (Fig. 8.16)",
+            "caption_vi": "📐 Sơ đồ cơ học: Vị trí gãy mỏi do stress xương bàn chân (March Fracture) (Fig. 8.16)",
             "role_type": "redflag",
             "width": 1161,
             "height": 753
@@ -3200,9 +3260,9 @@ const STABLE_SCREENING_FALLBACK = [
           {
             "file": "assets/deepak_images/ch08_knee_ankle_foot_pain/p407_img2.jpeg",
             "page": 407,
-            "fig_number": "8.49",
-            "caption_en": "Fig. 8.49: Valgus stress test for the medial collateral ligament",
-            "caption_vi": "🩺 Thao tác khám: Khám áp lực vẹo ngoài kiểm tra dây chằng bên chày MCL (Valgus Stress) (Fig. 8.49)",
+            "fig_number": "8.50A-B",
+            "caption_en": "Figs. 8.50A-B: Valgus and varus stress tests for collateral ligaments",
+            "caption_vi": "🩺 Thao tác khám: Khám áp lực vẹo ngoài/vẹo trong kiểm tra dây chằng bên MCL/LCL (Figs. 8.50A-B)",
             "role_type": "exam",
             "width": 958,
             "height": 639
@@ -3298,7 +3358,7 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 365,
         "fig_number": "8.9",
         "caption_en": "Fig. 8.9: Meniscal tear patterns: Bucket-handle, flap, complex",
-        "caption_vi": "🚨 Phim X-quang / Cờ đỏ: Các hình thái rách sụn chêm khớp gối phức tạp & rách quai vali (Fig. 8.9)",
+        "caption_vi": "📐 Sơ đồ giải phẫu / cơ học: Các hình thái rách sụn chêm khớp gối & rách quai vali (Fig. 8.9)",
         "role_type": "redflag",
         "width": 1339,
         "height": 678
@@ -3308,7 +3368,7 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 380,
         "fig_number": "8.16",
         "caption_en": "Fig. 8.16: March fracture (Metatarsal stress fracture)",
-        "caption_vi": "🚨 Phim X-quang / Cờ đỏ: Gãy mỏi do stress xương bàn chân (March Fracture) (Fig. 8.16)",
+        "caption_vi": "📐 Sơ đồ cơ học: Vị trí gãy mỏi do stress xương bàn chân (March Fracture) (Fig. 8.16)",
         "role_type": "redflag",
         "width": 1161,
         "height": 753
@@ -3346,9 +3406,9 @@ const STABLE_SCREENING_FALLBACK = [
       {
         "file": "assets/deepak_images/ch08_knee_ankle_foot_pain/p407_img2.jpeg",
         "page": 407,
-        "fig_number": "8.49",
-        "caption_en": "Fig. 8.49: Valgus stress test for the medial collateral ligament",
-        "caption_vi": "🩺 Thao tác khám: Khám áp lực vẹo ngoài kiểm tra dây chằng bên chày MCL (Valgus Stress) (Fig. 8.49)",
+        "fig_number": "8.50A-B",
+        "caption_en": "Figs. 8.50A-B: Valgus and varus stress tests for collateral ligaments",
+        "caption_vi": "🩺 Thao tác khám: Khám áp lực vẹo ngoài/vẹo trong kiểm tra dây chằng bên MCL/LCL (Figs. 8.50A-B)",
         "role_type": "exam",
         "width": 958,
         "height": 639
@@ -3514,9 +3574,9 @@ const STABLE_SCREENING_FALLBACK = [
           {
             "file": "assets/deepak_images/ch08_knee_ankle_foot_pain/p407_img2.jpeg",
             "page": 407,
-            "fig_number": "8.49",
-            "caption_en": "Fig. 8.49: Valgus stress test for the medial collateral ligament",
-            "caption_vi": "🩺 Thao tác khám: Khám áp lực vẹo ngoài kiểm tra dây chằng bên chày MCL (Valgus Stress) (Fig. 8.49)",
+            "fig_number": "8.50A-B",
+            "caption_en": "Figs. 8.50A-B: Valgus and varus stress tests for collateral ligaments",
+            "caption_vi": "🩺 Thao tác khám: Khám áp lực vẹo ngoài/vẹo trong kiểm tra dây chằng bên MCL/LCL (Figs. 8.50A-B)",
             "role_type": "exam",
             "width": 958,
             "height": 639
@@ -3641,7 +3701,7 @@ const STABLE_SCREENING_FALLBACK = [
             "page": 487,
             "fig_number": "10.5",
             "caption_en": "Fig. 10.5: Medial collateral ligament tear and flexor muscle origin avulsion",
-            "caption_vi": "🚨 Phim X-quang / Cờ đỏ: Rách dây chằng bên trụ khuỷu UCL & bong điểm bám gân gấp (Fig. 10.5)",
+            "caption_vi": "📐 Sơ đồ giải phẫu: Nguyên ủy gân cơ gấp chung cẳng tay & dây chằng bên trụ UCL (Fig. 10.5)",
             "role_type": "redflag",
             "width": 926,
             "height": 603
@@ -3658,7 +3718,7 @@ const STABLE_SCREENING_FALLBACK = [
             "page": 489,
             "fig_number": "10.8",
             "caption_en": "Fig. 10.8: Triangular fibrocartilage complex (TFCC) tear",
-            "caption_vi": "🚨 Phim X-quang / Cờ đỏ: Rách phức hợp sụn sợi tam giác cổ tay TFCC mỏm trâm trụ (Fig. 10.8)",
+            "caption_vi": "📐 Sơ đồ giải phẫu: Phức hợp sụn sợi tam giác cổ tay (TFCC) mỏm trâm trụ (Fig. 10.8)",
             "role_type": "redflag",
             "width": 658,
             "height": 903
@@ -3713,9 +3773,9 @@ const STABLE_SCREENING_FALLBACK = [
           {
             "file": "assets/deepak_images/ch10_elbow_wrist_hand_pain/p507_img2.jpeg",
             "page": 507,
-            "fig_number": "10.26",
-            "caption_en": "Fig. 10.26: Cozen's test",
-            "caption_vi": "🩺 Thao tác khám: Nghiệm pháp kháng duỗi cổ tay Cozen khám Tennis Elbow (Fig. 10.26)",
+            "fig_number": "10.27",
+            "caption_en": "Fig. 10.27: Cozen's test",
+            "caption_vi": "🩺 Thao tác khám: Nghiệm pháp kháng duỗi cổ tay Cozen khám Tennis Elbow (Fig. 10.27)",
             "role_type": "exam",
             "width": 958,
             "height": 798
@@ -3738,9 +3798,9 @@ const STABLE_SCREENING_FALLBACK = [
           {
             "file": "assets/deepak_images/ch10_elbow_wrist_hand_pain/p508_img1.jpeg",
             "page": 508,
-            "fig_number": "10.29",
-            "caption_en": "Fig. 10.29: Maudsley's test",
-            "caption_vi": "🩺 Thao tác khám: Nghiệm pháp kháng duỗi ngón 3 Maudsley phân biệt chèn ép PIN (Fig. 10.29)",
+            "fig_number": "10.28",
+            "caption_en": "Fig. 10.28: Maudsley's test",
+            "caption_vi": "🩺 Thao tác khám: Nghiệm pháp kháng duỗi ngón 3 Maudsley phân biệt chèn ép PIN (Fig. 10.28)",
             "role_type": "exam",
             "width": 958,
             "height": 626
@@ -3788,9 +3848,9 @@ const STABLE_SCREENING_FALLBACK = [
           {
             "file": "assets/deepak_images/ch10_elbow_wrist_hand_pain/p505_img2.jpeg",
             "page": 505,
-            "fig_number": "10.22",
-            "caption_en": "Fig. 10.22: Phalen's test",
-            "caption_vi": "🩺 Thao tác khám: Nghiệm pháp gập mu cổ tay Phalen khám Hội chứng ống cổ tay (Fig. 10.22)",
+            "fig_number": "10.23",
+            "caption_en": "Fig. 10.23: Phalen's test",
+            "caption_vi": "🩺 Thao tác khám: Nghiệm pháp gập mu cổ tay Phalen khám Hội chứng ống cổ tay (Fig. 10.23)",
             "role_type": "exam",
             "width": 895,
             "height": 798
@@ -3876,7 +3936,7 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 487,
         "fig_number": "10.5",
         "caption_en": "Fig. 10.5: Medial collateral ligament tear and flexor muscle origin avulsion",
-        "caption_vi": "🚨 Phim X-quang / Cờ đỏ: Rách dây chằng bên trụ khuỷu UCL & bong điểm bám gân gấp (Fig. 10.5)",
+        "caption_vi": "📐 Sơ đồ giải phẫu: Nguyên ủy gân cơ gấp chung cẳng tay & dây chằng bên trụ UCL (Fig. 10.5)",
         "role_type": "redflag",
         "width": 926,
         "height": 603
@@ -3886,7 +3946,7 @@ const STABLE_SCREENING_FALLBACK = [
         "page": 489,
         "fig_number": "10.8",
         "caption_en": "Fig. 10.8: Triangular fibrocartilage complex (TFCC) tear",
-        "caption_vi": "🚨 Phim X-quang / Cờ đỏ: Rách phức hợp sụn sợi tam giác cổ tay TFCC mỏm trâm trụ (Fig. 10.8)",
+        "caption_vi": "📐 Sơ đồ giải phẫu: Phức hợp sụn sợi tam giác cổ tay (TFCC) mỏm trâm trụ (Fig. 10.8)",
         "role_type": "redflag",
         "width": 658,
         "height": 903
@@ -3904,9 +3964,9 @@ const STABLE_SCREENING_FALLBACK = [
       {
         "file": "assets/deepak_images/ch10_elbow_wrist_hand_pain/p507_img2.jpeg",
         "page": 507,
-        "fig_number": "10.26",
-        "caption_en": "Fig. 10.26: Cozen's test",
-        "caption_vi": "🩺 Thao tác khám: Nghiệm pháp kháng duỗi cổ tay Cozen khám Tennis Elbow (Fig. 10.26)",
+        "fig_number": "10.27",
+        "caption_en": "Fig. 10.27: Cozen's test",
+        "caption_vi": "🩺 Thao tác khám: Nghiệm pháp kháng duỗi cổ tay Cozen khám Tennis Elbow (Fig. 10.27)",
         "role_type": "exam",
         "width": 958,
         "height": 798
@@ -3914,9 +3974,9 @@ const STABLE_SCREENING_FALLBACK = [
       {
         "file": "assets/deepak_images/ch10_elbow_wrist_hand_pain/p508_img1.jpeg",
         "page": 508,
-        "fig_number": "10.29",
-        "caption_en": "Fig. 10.29: Maudsley's test",
-        "caption_vi": "🩺 Thao tác khám: Nghiệm pháp kháng duỗi ngón 3 Maudsley phân biệt chèn ép PIN (Fig. 10.29)",
+        "fig_number": "10.28",
+        "caption_en": "Fig. 10.28: Maudsley's test",
+        "caption_vi": "🩺 Thao tác khám: Nghiệm pháp kháng duỗi ngón 3 Maudsley phân biệt chèn ép PIN (Fig. 10.28)",
         "role_type": "exam",
         "width": 958,
         "height": 626
@@ -3934,9 +3994,9 @@ const STABLE_SCREENING_FALLBACK = [
       {
         "file": "assets/deepak_images/ch10_elbow_wrist_hand_pain/p505_img2.jpeg",
         "page": 505,
-        "fig_number": "10.22",
-        "caption_en": "Fig. 10.22: Phalen's test",
-        "caption_vi": "🩺 Thao tác khám: Nghiệm pháp gập mu cổ tay Phalen khám Hội chứng ống cổ tay (Fig. 10.22)",
+        "fig_number": "10.23",
+        "caption_en": "Fig. 10.23: Phalen's test",
+        "caption_vi": "🩺 Thao tác khám: Nghiệm pháp gập mu cổ tay Phalen khám Hội chứng ống cổ tay (Fig. 10.23)",
         "role_type": "exam",
         "width": 895,
         "height": 798
@@ -4012,9 +4072,9 @@ const STABLE_SCREENING_FALLBACK = [
           {
             "file": "assets/deepak_images/ch10_elbow_wrist_hand_pain/p507_img2.jpeg",
             "page": 507,
-            "fig_number": "10.26",
-            "caption_en": "Fig. 10.26: Cozen's test",
-            "caption_vi": "🩺 Thao tác khám: Nghiệm pháp kháng duỗi cổ tay Cozen khám Tennis Elbow (Fig. 10.26)",
+            "fig_number": "10.27",
+            "caption_en": "Fig. 10.27: Cozen's test",
+            "caption_vi": "🩺 Thao tác khám: Nghiệm pháp kháng duỗi cổ tay Cozen khám Tennis Elbow (Fig. 10.27)",
             "role_type": "exam",
             "width": 958,
             "height": 798
@@ -4037,9 +4097,9 @@ const STABLE_SCREENING_FALLBACK = [
           {
             "file": "assets/deepak_images/ch10_elbow_wrist_hand_pain/p508_img1.jpeg",
             "page": 508,
-            "fig_number": "10.29",
-            "caption_en": "Fig. 10.29: Maudsley's test",
-            "caption_vi": "🩺 Thao tác khám: Nghiệm pháp kháng duỗi ngón 3 Maudsley phân biệt chèn ép PIN (Fig. 10.29)",
+            "fig_number": "10.28",
+            "caption_en": "Fig. 10.28: Maudsley's test",
+            "caption_vi": "🩺 Thao tác khám: Nghiệm pháp kháng duỗi ngón 3 Maudsley phân biệt chèn ép PIN (Fig. 10.28)",
             "role_type": "exam",
             "width": 958,
             "height": 626
@@ -4087,9 +4147,9 @@ const STABLE_SCREENING_FALLBACK = [
           {
             "file": "assets/deepak_images/ch10_elbow_wrist_hand_pain/p505_img2.jpeg",
             "page": 505,
-            "fig_number": "10.22",
-            "caption_en": "Fig. 10.22: Phalen's test",
-            "caption_vi": "🩺 Thao tác khám: Nghiệm pháp gập mu cổ tay Phalen khám Hội chứng ống cổ tay (Fig. 10.22)",
+            "fig_number": "10.23",
+            "caption_en": "Fig. 10.23: Phalen's test",
+            "caption_vi": "🩺 Thao tác khám: Nghiệm pháp gập mu cổ tay Phalen khám Hội chứng ống cổ tay (Fig. 10.23)",
             "role_type": "exam",
             "width": 895,
             "height": 798
@@ -4226,7 +4286,7 @@ const STABLE_GUIDEMAP_ALGORITHM = {
     },
     {
       "stage": 2,
-      "name": "Stage 2: Xác Định Nguồn Đau Vùng & Rối Loạn Thể Dịch (Lesion & Somatic Diagnosis)",
+      "name": "Stage 2: Xác Định Nguồn Đau Vùng & rối loạn cơ sinh học hệ vận động (Somatic Dysfunctions) (Lesion & Somatic Diagnosis)",
       "subtitle": "Mục tiêu: Định vị chính xác cấu trúc giải phẫu phát sinh đau và cơ chế sinh học gây rối loạn chức năng",
       "steps": [
         {
@@ -4242,7 +4302,7 @@ const STABLE_GUIDEMAP_ALGORITHM = {
         },
         {
           "step_id": "2.2",
-          "title": "Chẩn Đoán Rối Loạn Chức Năng Thể Dịch Cơ Học (Sebastian Somatic Diagnosis)",
+          "title": "Chẩn Đoán rối loạn cơ sinh học hệ vận động (Somatic Dysfunctions) Cơ Học (Sebastian Somatic Diagnosis)",
           "options": [
             "Rối loạn mở/đóng diện khớp cột sống (ERS/FRS Dysfunctions): Giảm trượt mấu khớp khi cúi/ngửa.",
             "Lệch xoay khung chậu & xương cùng (Innominate Rotations & Sacral Torsions): Gây mất cân bằng trục cột sống và đau thắt lưng kháng trị.",
@@ -4262,7 +4322,7 @@ const STABLE_GUIDEMAP_ALGORITHM = {
           "branches": [
             {
               "type": "Can Thiệp Bằng Nắn Chỉnh Cơ Sinh Học & PHCN (Manual Therapy & Exercise)",
-              "indication": "Rối loạn chức năng thể dịch thuần túy (Somatic dysfunctions: ERS/FRS, lệch xoay chậu cùng, co rút cơ mạc, hạn chế trượt khớp).",
+              "indication": "rối loạn cơ sinh học hệ vận động (Somatic Dysfunctions) thuần túy (Somatic dysfunctions: ERS/FRS, lệch xoay chậu cùng, co rút cơ mạc, hạn chế trượt khớp).",
               "action": "Kỹ thuật năng lượng cơ (MET), trượt khớp, giải phóng điểm kích hoạt cơ mạc, tập ổn định lõi và cân bằng cơ."
             },
             {
