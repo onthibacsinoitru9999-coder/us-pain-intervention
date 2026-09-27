@@ -18,3 +18,6 @@ extracted_sample/
 
 # Large PDF Books (keep locally, avoid repo bloat)
 *.pdf
+
+# Internal agent orchestration logs
+.agents/

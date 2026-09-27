@@ -71,6 +71,24 @@ function initApp() {
   renderProcedures();
   setupCalculator();
   setupChecklist();
+
+  // Safely check URL query parameter for deep-linking: ?proc=...
+  try {
+    if (typeof window !== 'undefined' && window.location && window.location.search) {
+      const procId = new URLSearchParams(window.location.search).get('proc');
+      if (procId) {
+        const procedureList = (typeof PROCEDURES_DATA !== 'undefined' && Array.isArray(PROCEDURES_DATA))
+          ? PROCEDURES_DATA
+          : (appState.procedures || []);
+        const exists = procedureList.some(p => p.id === procId);
+        if (exists) {
+          openProcedureDetail(procId);
+        }
+      }
+    }
+  } catch (err) {
+    console.warn('Cannot parse URL search parameters for procedure deep-link:', err);
+  }
 }
 
 function renderFallbackAlertBanner() {

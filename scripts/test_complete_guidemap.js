@@ -34,7 +34,8 @@ screening.SCREENING_DATA.forEach(m => {
     assert.ok(t.diagnostic_role, `Test ${t.name} in ${m.id} missing diagnostic_role`);
   });
 });
-console.log(`  [PASS] All ${totalTests}/53 provocative tests have explicit Sn, Sp, and diagnostic_role.`);
+assert.strictEqual(totalTests, 36, 'Must have exactly 36 provocative tests with metrics');
+console.log(`  [PASS] All ${totalTests}/36 provocative tests have explicit Sn, Sp, and diagnostic_role.`);
 
 let totalDiffRows = 0;
 screening.SCREENING_DATA.forEach(m => {
@@ -44,14 +45,15 @@ screening.SCREENING_DATA.forEach(m => {
     assert.ok(r.gold_standard, `Diff row ${r.condition} in ${m.id} missing gold_standard`);
   });
 });
-console.log(`  [PASS] All ${totalDiffRows}/42 differential table rows have confirmatory tests and gold standards.`);
+assert.strictEqual(totalDiffRows, 34, 'Must have exactly 34 differential table rows with gold standards');
+console.log(`  [PASS] All ${totalDiffRows}/34 differential table rows have confirmatory tests and gold standards.`);
 
 let totalAtlasFigs = 0;
 screening.SCREENING_DATA.forEach(m => {
   totalAtlasFigs += (m.figures || []).length;
 });
-assert.strictEqual(totalAtlasFigs, 279, 'Must have exactly 279 Deepak Atlas figures');
-console.log(`  [PASS] All 279/279 Deepak Atlas figures present across modules.`);
+assert.strictEqual(totalAtlasFigs, 57, 'Must have exactly 57 Deepak Atlas figures');
+console.log(`  [PASS] All 57/57 Deepak Atlas figures present across modules.`);
 
 console.log('\n=== TEST 3: CONTROLLER & DOM INTERACTION SUITE ===');
 
@@ -193,29 +195,29 @@ context.switchMode('modules');
 context.screeningState.activeFilter = 'all';
 context.screeningState.searchQuery = '';
 context.applyFilters();
-context.selectModule('cervical-pain'); // 70 figures
+context.selectModule('cervical-pain'); // 8 elite figures
 
-assert.strictEqual(context.screeningState.currentModuleFigures.length, 70);
+assert.strictEqual(context.screeningState.currentModuleFigures.length, 8);
 
 // Open first image
 context.openLightboxIndex(0);
 assert.strictEqual(context.screeningState.lightboxIndex, 0);
-assert.strictEqual(dom.getElementById('lightbox-counter').textContent, 'Hình 1 / 70');
+assert.strictEqual(dom.getElementById('lightbox-counter').textContent, 'Hình 1 / 8');
 
 // Click Next
 context.lightboxNext();
 assert.strictEqual(context.screeningState.lightboxIndex, 1);
-assert.strictEqual(dom.getElementById('lightbox-counter').textContent, 'Hình 2 / 70');
+assert.strictEqual(dom.getElementById('lightbox-counter').textContent, 'Hình 2 / 8');
 
 // Click Prev
 context.lightboxPrev();
 assert.strictEqual(context.screeningState.lightboxIndex, 0);
-assert.strictEqual(dom.getElementById('lightbox-counter').textContent, 'Hình 1 / 70');
+assert.strictEqual(dom.getElementById('lightbox-counter').textContent, 'Hình 1 / 8');
 
 // Click Prev at 0 (Circular Wrap Around to end)
 context.lightboxPrev();
-assert.strictEqual(context.screeningState.lightboxIndex, 69);
-assert.strictEqual(dom.getElementById('lightbox-counter').textContent, 'Hình 70 / 70');
+assert.strictEqual(context.screeningState.lightboxIndex, 7);
+assert.strictEqual(dom.getElementById('lightbox-counter').textContent, 'Hình 8 / 8');
 
 // Close Lightbox
 context.closeLightbox();

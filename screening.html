@@ -5,335 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MSK-Differential Screening Pro | Bản Đồ Sàng Lọc Lâm Sàng & Cờ Đỏ Cơ Xương Khớp</title>
   <meta name="description" content="Clinical Guidemap Sàng lọc Chẩn đoán Phân biệt Đau Vùng Cơ Xương Khớp, Rà soát Cờ Đỏ Cấp Cứu, Đau Chuyển Tạng, Đau Do Thuốc & 279 Hình Ảnh Atlas - Dựa trên chuyên khảo GS. Deepak Sebastian">
-  <link rel="stylesheet" href="css/style.css?v=20260926_guidemap">
-  <style>
-    /* Clinical Guidemap Layout & Styling */
-    .screening-layout {
-      display: grid;
-      grid-template-columns: 380px 1fr;
-      gap: 1.5rem;
-      align-items: start;
-    }
-    @media (max-width: 1024px) {
-      .screening-layout {
-        grid-template-columns: 1fr;
-      }
-    }
-    .badge-systemic { background: #f3e8ff; color: #7e22ce; border: 1px solid #d8b4fe; }
-    .badge-cervical { background: #e0f2fe; color: #0369a1; border: 1px solid #7dd3fc; }
-    .badge-shoulder { background: #fef3c7; color: #b45309; border: 1px solid #fde68a; }
-    .badge-thoracic { background: #fee2e2; color: #b91c1c; border: 1px solid #fca5a5; }
-    .badge-lumbopelvic { background: #e0e7ff; color: #4338ca; border: 1px solid #a5b4fc; }
-    .badge-hip { background: #fef9c3; color: #a16207; border: 1px solid #fef08a; }
-    .badge-knee_foot { background: #dcfce7; color: #15803d; border: 1px solid #86efac; }
-    .badge-elbow_hand { background: #ffedd5; color: #c2410c; border: 1px solid #fdba74; }
-    
-    [data-theme="dark"] .badge-systemic { background: #3b0764; color: #d8b4fe; border-color: #581c87; }
-    [data-theme="dark"] .badge-cervical { background: #082f49; color: #7dd3fc; border-color: #0369a1; }
-    [data-theme="dark"] .badge-shoulder { background: #451a03; color: #fde68a; border-color: #78350f; }
-    [data-theme="dark"] .badge-thoracic { background: #450a0a; color: #fca5a5; border-color: #7f1d1d; }
-    [data-theme="dark"] .badge-lumbopelvic { background: #1e1b4b; color: #a5b4fc; border-color: #312e81; }
-    [data-theme="dark"] .badge-hip { background: #422006; color: #fef08a; border-color: #713f12; }
-    [data-theme="dark"] .badge-knee_foot { background: #052e16; color: #86efac; border-color: #14532d; }
-    [data-theme="dark"] .badge-elbow_hand { background: #431407; color: #fdba74; border-color: #7c2d12; }
-
-    /* Quick Symptom Navigation Bar & Pills */
-    .symptom-quick-nav-bar {
-      margin-top: 0.75rem;
-      margin-bottom: 0.75rem;
-    }
-    .symptom-pills-scroll {
-      display: flex;
-      gap: 0.5rem;
-      overflow-x: auto;
-      padding: 0.25rem 0.1rem 0.5rem;
-      scrollbar-width: thin;
-      -webkit-overflow-scrolling: touch;
-    }
-    .symptom-pill-btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.35rem;
-      padding: 0.45rem 0.85rem;
-      border-radius: 9999px;
-      font-size: 0.775rem;
-      font-weight: 600;
-      white-space: nowrap;
-      cursor: pointer;
-      border: 1px solid var(--border-color, #e2e8f0);
-      background: var(--bg-card, #ffffff);
-      color: var(--text-main, #1e293b);
-      transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-      box-shadow: 0 1px 2px rgba(0,0,0,0.04);
-      flex-shrink: 0;
-    }
-    .symptom-pill-btn:hover {
-      border-color: #0d9488;
-      color: #0d9488;
-      transform: translateY(-1px);
-    }
-    .symptom-pill-btn.active {
-      background: #0d9488;
-      color: #ffffff;
-      border-color: #0d9488;
-      box-shadow: 0 2px 6px rgba(13, 148, 136, 0.3);
-    }
-    [data-theme="dark"] .symptom-pill-btn {
-      background: #1e293b;
-      border-color: #334155;
-      color: #cbd5e1;
-    }
-    [data-theme="dark"] .symptom-pill-btn:hover {
-      border-color: #2dd4bf;
-      color: #2dd4bf;
-    }
-    [data-theme="dark"] .symptom-pill-btn.active {
-      background: #14b8a6;
-      color: #042f2e;
-      border-color: #14b8a6;
-      box-shadow: 0 2px 6px rgba(20, 184, 166, 0.4);
-    }
-    .figure-mini-card {
-      transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-      border-radius: 8px;
-      overflow: hidden;
-      border: 1px solid var(--border-color, #e2e8f0);
-      background: var(--bg-card, #ffffff);
-    }
-    .figure-mini-card:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-      border-color: #0d9488;
-    }
-    [data-theme="dark"] .figure-mini-card {
-      background: #1e293b;
-      border-color: #334155;
-    }
-
-    /* Sub-header Result Line (Anti-Collision for Mobile Screens) */
-    .sub-header-line {
-      display: flex;
-      flex-direction: column;
-      gap: 0.35rem;
-      margin-bottom: 1rem;
-      padding: 0.25rem 0.5rem;
-      background: var(--bg-subtle, rgba(0,0,0,0.02));
-      border-radius: 8px;
-      border: 1px solid var(--border-color, #e2e8f0);
-    }
-    @media (min-width: 640px) {
-      .sub-header-line {
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-        gap: 1rem;
-      }
-    }
-    .sub-header-left {
-      font-size: 0.8rem;
-      font-weight: 600;
-      color: var(--text-main, #334155);
-      display: flex;
-      align-items: center;
-      gap: 0.4rem;
-      flex-wrap: wrap;
-    }
-    .sub-header-right {
-      font-size: 0.725rem;
-      color: var(--text-muted, #64748b);
-      line-height: 1.35;
-    }
-    .counter-highlight {
-      color: #0d9488;
-      font-weight: 700;
-    }
-    [data-theme="dark"] .sub-header-line {
-      background: rgba(30, 41, 59, 0.5);
-      border-color: #334155;
-    }
-    [data-theme="dark"] .sub-header-left {
-      color: #e2e8f0;
-    }
-    [data-theme="dark"] .counter-highlight {
-      color: #2dd4bf;
-    }
-
-    /* Bullet-proof Image Lightbox Modal */
-    .image-lightbox-modal {
-      position: fixed !important;
-      top: 0 !important;
-      left: 0 !important;
-      right: 0 !important;
-      bottom: 0 !important;
-      width: 100vw !important;
-      height: 100vh !important;
-      z-index: 99999 !important;
-      background-color: rgba(10, 15, 29, 0.94) !important;
-      backdrop-filter: blur(8px);
-      display: flex !important;
-      align-items: center !important;
-      justify-content: center !important;
-      padding: 1rem !important;
-      box-sizing: border-box !important;
-    }
-    .image-lightbox-modal.hidden {
-      display: none !important;
-    }
-    .lightbox-dialog {
-      position: relative;
-      max-width: 900px;
-      width: 100%;
-      max-height: 92vh;
-      background: #0f172a;
-      border-radius: 12px;
-      border: 1px solid #334155;
-      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.6);
-      display: flex;
-      flex-direction: column;
-      overflow: hidden;
-    }
-    .lightbox-header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0.75rem 1rem;
-      background: #090d16;
-      border-bottom: 1px solid #1e293b;
-      font-size: 0.75rem;
-    }
-    .lightbox-body {
-      position: relative;
-      background: #000000;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 250px;
-      max-height: 62vh;
-      overflow: hidden;
-      padding: 0.5rem;
-    }
-    .lightbox-img {
-      max-height: 60vh;
-      max-width: 100%;
-      object-fit: contain;
-      user-select: none;
-      border-radius: 4px;
-    }
-    .lightbox-nav-btn {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      background: rgba(15, 23, 42, 0.8);
-      color: #ffffff;
-      border: 1px solid rgba(255, 255, 255, 0.25);
-      border-radius: 50%;
-      width: 44px;
-      height: 44px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      z-index: 10;
-      transition: all 0.2s ease;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
-    }
-    .lightbox-nav-btn:hover {
-      background: #0d9488;
-      border-color: #0d9488;
-      transform: translateY(-50%) scale(1.08);
-    }
-    .lightbox-nav-btn.prev-btn {
-      left: 0.75rem;
-    }
-    .lightbox-nav-btn.next-btn {
-      right: 0.75rem;
-    }
-    .lightbox-footer {
-      padding: 0.85rem 1rem;
-      background: #0f172a;
-      border-top: 1px solid #1e293b;
-    }
-
-    /* Mode Navigation Tabs */
-    .guidemap-modes-nav {
-      display: flex;
-      gap: 0.5rem;
-      overflow-x: auto;
-      padding-bottom: 0.5rem;
-      margin-bottom: 1.25rem;
-      border-bottom: 2px solid var(--border-color, #e2e8f0);
-    }
-    .mode-tab-btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      padding: 0.6rem 1rem;
-      border-radius: 8px 8px 0 0;
-      font-size: 0.825rem;
-      font-weight: 600;
-      border: 1px solid transparent;
-      border-bottom: none;
-      background: transparent;
-      color: var(--text-muted, #64748b);
-      cursor: pointer;
-      white-space: nowrap;
-      transition: all 0.2s ease;
-    }
-    .mode-tab-btn:hover {
-      color: var(--primary, #0d9488);
-      background: var(--bg-subtle, #f1f5f9);
-    }
-    .mode-tab-btn.active {
-      color: #0d9488;
-      background: var(--bg-card, #ffffff);
-      border-color: var(--border-color, #e2e8f0);
-      border-bottom: 2px solid #0d9488;
-      margin-bottom: -2px;
-    }
-    [data-theme="dark"] .mode-tab-btn.active {
-      color: #2dd4bf;
-      border-bottom-color: #2dd4bf;
-    }
-
-    /* Algorithm Card Styling */
-    .algo-stage-card {
-      background: var(--bg-card, #ffffff);
-      border: 1px solid var(--border-color, #e2e8f0);
-      border-radius: 12px;
-      padding: 1.25rem;
-      margin-bottom: 1.25rem;
-      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
-      position: relative;
-    }
-    .algo-stage-badge {
-      display: inline-block;
-      padding: 0.25rem 0.75rem;
-      border-radius: 9999px;
-      font-size: 0.75rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-    }
-
-    /* Interactive Decision Tree Box */
-    .interactive-guidemap-box {
-      background: linear-gradient(135deg, rgba(13, 148, 136, 0.05), rgba(79, 70, 229, 0.05));
-      border: 1px solid rgba(13, 148, 136, 0.2);
-      border-radius: 12px;
-      padding: 1.5rem;
-      margin-bottom: 1.5rem;
-    }
-
-    /* Table Sticky & Hover */
-    .screening-table th {
-      position: sticky;
-      top: 0;
-      z-index: 10;
-    }
-    .screening-table tr:hover {
-      background-color: var(--bg-subtle, rgba(0,0,0,0.02));
-    }
-  </style>
+  <link rel="stylesheet" href="css/style.css?v=20260927">
+  <link rel="stylesheet" href="css/screening.css?v=20260927">
 </head>
 <body>
   <div class="app-container">
@@ -353,13 +26,14 @@
         </a>
 
         <!-- Right actions -->
-        <div class="flex items-center gap-2">
-          <a href="index.html" class="btn btn-outline text-xs text-teal-700 font-semibold" style="border-color: #0d9488;" title="Chuyển sang Cẩm Nang Tiêm Khớp & Siêu Âm Can Thiệp (Philip Peng)">
-            💉 Cẩm Nang Tiêm Can Thiệp ↗
+        <div class="header-actions flex items-center gap-2">
+          <a href="index.html" class="btn btn-outline text-xs text-teal-700 font-semibold header-web1-btn" style="border-color: #0d9488;" title="Chuyển sang Cẩm Nang Tiêm Khớp & Siêu Âm Can Thiệp (Philip Peng)">
+            <span class="web1-btn-full">💉 Cẩm Nang Tiêm Can Thiệp ↗</span>
+            <span class="web1-btn-short">💉 Web 1 ↗</span>
           </a>
-          <button id="theme-toggle-btn" class="btn btn-outline text-xs" title="Chuyển đổi giao diện Sáng / Tối">
+          <button id="theme-toggle-btn" class="btn btn-outline text-xs header-theme-btn" title="Chuyển đổi giao diện Sáng / Tối">
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
-            Giao diện Tối
+            <span class="theme-text">Giao diện Tối</span>
           </button>
         </div>
       </div>
@@ -523,39 +197,41 @@
 
     <!-- Global Image Lightbox Modal with Atlas Navigation -->
     <div id="image-lightbox" class="image-lightbox-modal hidden" role="dialog" aria-modal="true" aria-label="Atlas Image Viewer">
-      <div class="lightbox-dialog">
+      <div class="lightbox-dialog" role="document">
         <!-- Top bar inside modal -->
-        <div class="lightbox-header">
+        <header class="lightbox-header">
           <div class="flex items-center gap-2">
-            <span class="font-bold text-teal-400">Deepak Sebastian Atlas</span>
-            <span id="lightbox-counter" class="text-slate-400 font-mono text-[11px] bg-slate-800 px-2 py-0.5 rounded">Hình 1 / 1</span>
+            <span class="lightbox-brand-tag font-bold text-teal-400">Deepak Sebastian Atlas</span>
+            <span id="lightbox-counter" class="lightbox-counter-pill text-slate-400 font-mono text-[11px] bg-slate-800 px-2 py-0.5 rounded">Hình 1 / 1</span>
           </div>
           <div class="flex items-center gap-2">
-            <span class="text-[11px] text-slate-500 hidden sm:inline">Phím tắt: [←] / [→] chuyển ảnh, [ESC] đóng</span>
-            <button id="close-lightbox" class="text-white/80 hover:text-white bg-slate-800 hover:bg-slate-700 rounded-full p-1.5 transition-colors cursor-pointer" title="Đóng hình ảnh (ESC)">
-              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+            <span class="lightbox-kbd-hint text-[11px] text-slate-400 hidden sm:inline">Phím tắt: [←] / [→] chuyển ảnh, [ESC] đóng</span>
+            <button id="close-lightbox" class="lightbox-close-btn" aria-label="Đóng hình ảnh (ESC)" title="Đóng hình ảnh (ESC)">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12"/></svg>
             </button>
           </div>
-        </div>
+        </header>
 
         <!-- Center Image View with Prev/Next Overlay Buttons -->
         <div class="lightbox-body">
-          <button id="prev-lightbox" class="lightbox-nav-btn prev-btn" title="Hình trước (Phím mũi tên trái ← hoặc vuốt phải)">
+          <button id="prev-lightbox" class="lightbox-nav-btn prev-btn" aria-label="Hình trước" title="Hình trước (Phím mũi tên trái ← hoặc vuốt phải)">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"/></svg>
           </button>
 
-          <img id="lightbox-img" src="" alt="Deepak Sebastian Atlas Figure" class="lightbox-img">
+          <div class="lightbox-img-wrapper">
+            <img id="lightbox-img" src="" alt="Deepak Sebastian Atlas Figure" class="lightbox-img">
+          </div>
 
-          <button id="next-lightbox" class="lightbox-nav-btn next-btn" title="Hình tiếp theo (Phím mũi tên phải → hoặc vuốt trái)">
+          <button id="next-lightbox" class="lightbox-nav-btn next-btn" aria-label="Hình tiếp theo" title="Hình tiếp theo (Phím mũi tên phải → hoặc vuốt trái)">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
           </button>
         </div>
 
-        <!-- Bottom Description Bar -->
-        <div class="lightbox-footer">
-          <p id="lightbox-desc" class="text-xs text-slate-200 font-medium leading-relaxed"></p>
-          <div id="lightbox-springer" class="text-[11px] text-teal-400 mt-1 italic flex items-center gap-1.5"></div>
-        </div>
+        <!-- Bottom Description Bar (Scrollable Caption) -->
+        <footer class="lightbox-footer">
+          <p id="lightbox-desc" class="lightbox-desc-text text-xs text-slate-200 font-medium leading-relaxed"></p>
+          <div id="lightbox-springer" class="lightbox-source-meta text-[11px] text-teal-400 mt-1 italic flex items-center gap-1.5"></div>
+        </footer>
       </div>
     </div>
   </div>
@@ -567,5 +243,34 @@
   <script src="data/screening.js?v=20260926_guidemap"></script>
   <!-- 3. Application Controller -->
   <script src="js/screening.js?v=20260926_guidemap"></script>
+  <!-- 4. Touch Gestures & Lightbox Backdrop Dismissal Enhancements -->
+  <script>
+    (function() {
+      const lb = document.getElementById('image-lightbox');
+      if (!lb) return;
+      let startY = 0, startX = 0;
+      lb.addEventListener('touchstart', function(e) {
+        if (e.touches && e.touches.length > 0) {
+          startY = e.touches[0].clientY;
+          startX = e.touches[0].clientX;
+        }
+      }, { passive: true });
+      lb.addEventListener('touchend', function(e) {
+        if (e.changedTouches && e.changedTouches.length > 0) {
+          const diffY = e.changedTouches[0].clientY - startY;
+          const diffX = e.changedTouches[0].clientX - startX;
+          // Swipe down > 70px to dismiss
+          if (diffY > 70 && Math.abs(diffY) > Math.abs(diffX) * 1.4) {
+            if (typeof closeLightbox === 'function') {
+              closeLightbox();
+            } else {
+              lb.classList.add('hidden');
+              document.body.style.overflow = '';
+            }
+          }
+        }
+      }, { passive: true });
+    })();
+  </script>
 </body>
 </html>
