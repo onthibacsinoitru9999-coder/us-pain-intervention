@@ -4286,7 +4286,7 @@ const STABLE_GUIDEMAP_ALGORITHM = {
     },
     {
       "stage": 2,
-      "name": "Stage 2: Xác Định Nguồn Đau Vùng & rối loạn cơ sinh học hệ vận động (Somatic Dysfunctions) (Lesion & Somatic Diagnosis)",
+      "name": "Stage 2: Xác Định Nguồn Đau Vùng & Rối Loạn Cơ Sinh Học Hệ Vận Động (Somatic Dysfunctions) (Lesion & Somatic Diagnosis)",
       "subtitle": "Mục tiêu: Định vị chính xác cấu trúc giải phẫu phát sinh đau và cơ chế sinh học gây rối loạn chức năng",
       "steps": [
         {
@@ -4302,7 +4302,7 @@ const STABLE_GUIDEMAP_ALGORITHM = {
         },
         {
           "step_id": "2.2",
-          "title": "Chẩn Đoán rối loạn cơ sinh học hệ vận động (Somatic Dysfunctions) Cơ Học (Sebastian Somatic Diagnosis)",
+          "title": "Chẩn Đoán Rối Loạn Cơ Sinh Học Hệ Vận Động (Somatic Dysfunctions) Cơ Học (Sebastian Somatic Diagnosis)",
           "options": [
             "Rối loạn mở/đóng diện khớp cột sống (ERS/FRS Dysfunctions): Giảm trượt mấu khớp khi cúi/ngửa.",
             "Lệch xoay khung chậu & xương cùng (Innominate Rotations & Sacral Torsions): Gây mất cân bằng trục cột sống và đau thắt lưng kháng trị.",
@@ -4322,7 +4322,7 @@ const STABLE_GUIDEMAP_ALGORITHM = {
           "branches": [
             {
               "type": "Can Thiệp Bằng Nắn Chỉnh Cơ Sinh Học & PHCN (Manual Therapy & Exercise)",
-              "indication": "rối loạn cơ sinh học hệ vận động (Somatic Dysfunctions) thuần túy (Somatic dysfunctions: ERS/FRS, lệch xoay chậu cùng, co rút cơ mạc, hạn chế trượt khớp).",
+              "indication": "Rối loạn cơ sinh học hệ vận động (Somatic Dysfunctions) thuần túy (Somatic dysfunctions: ERS/FRS, lệch xoay chậu cùng, co rút cơ mạc, hạn chế trượt khớp).",
               "action": "Kỹ thuật năng lượng cơ (MET), trượt khớp, giải phóng điểm kích hoạt cơ mạc, tập ổn định lõi và cân bằng cơ."
             },
             {

@@ -38,7 +38,7 @@ modules = [
         "title": "Introduction and Thought Process in Regional Pain",
         "title_vi": "Tư Duy 3 Giai Đoạn Sàng Lọc Lâm Sàng & Thuật Toán Guidemap Ca Đau Khó",
         "author": "GS. Deepak Sebastian (Chapter 1, pp. 1-6)",
-        "summary": "Mô hình tư duy chẩn đoán phân biệt hiện đại (Direct Access MSK Model): Thoát khỏi lối mòn chỉ nghĩ đến 'Chấn thương & Thoái hóa', thiết lập tư duy sàng lọc toàn diện 10 nhóm căn nguyên hệ thống (Mạch máu, Nhiễm trùng, Ung thư, Bẩm sinh, Đau do thuốc, Nội tiết, Tự miễn, Dinh dưỡng, Chấn thương, Thoái hóa). Ứng dụng thuật toán 3 giai đoạn để phân định an toàn: Giai đoạn 1 (Rà soát Cờ đỏ & Bệnh hệ thống) -> Giai đoạn 2 (Xác định tổn thương mô & Rối loạn chức năng thể dịch Somatic Dysfunction) -> Giai đoạn 3 (Định hướng can thiệp: Phục hồi chức năng, Tiêm siêu âm can thiệp hay Chuyển tuyến cấp cứu).",
+        "summary": "Mô hình tư duy chẩn đoán phân biệt hiện đại (Direct Access MSK Model): Thoát khỏi lối mòn chỉ nghĩ đến 'Chấn thương & Thoái hóa', thiết lập tư duy sàng lọc toàn diện 10 nhóm căn nguyên hệ thống (Mạch máu, Nhiễm trùng, Ung thư, Bẩm sinh, Đau do thuốc, Nội tiết, Tự miễn, Dinh dưỡng, Chấn thương, Thoái hóa). Ứng dụng thuật toán 3 giai đoạn để phân định an toàn: Giai đoạn 1 (Rà soát Cờ đỏ & Bệnh hệ thống) -> Giai đoạn 2 (Xác định tổn thương mô & Rối loạn cơ sinh học hệ vận động (Somatic Dysfunctions)) -> Giai đoạn 3 (Định hướng can thiệp: Phục hồi chức năng, Tiêm siêu âm can thiệp hay Chuyển tuyến cấp cứu).",
         "stage_1_systemic_red_flags": [
             {
                 "category": "10 Nhóm Căn Nguyên Hệ Thống Cần Rà Soát (The 10 Systemic Categories)",
@@ -1123,7 +1123,7 @@ guidemap_algorithm = {
         },
         {
             "stage": 2,
-            "name": "Stage 2: Xác Định Nguồn Đau Vùng & Rối Loạn Thể Dịch (Lesion & Somatic Diagnosis)",
+            "name": "Stage 2: Xác Định Nguồn Đau Vùng & Rối Loạn Cơ Sinh Học Hệ Vận Động (Somatic Dysfunctions) (Lesion & Somatic Diagnosis)",
             "subtitle": "Mục tiêu: Định vị chính xác cấu trúc giải phẫu phát sinh đau và cơ chế sinh học gây rối loạn chức năng",
             "steps": [
                 {
@@ -1139,7 +1139,7 @@ guidemap_algorithm = {
                 },
                 {
                     "step_id": "2.2",
-                    "title": "Chẩn Đoán Rối Loạn Chức Năng Thể Dịch Cơ Học (Sebastian Somatic Diagnosis)",
+                    "title": "Chẩn Đoán Rối Loạn Cơ Sinh Học Hệ Vận Động (Somatic Dysfunctions) Cơ Học (Sebastian Somatic Diagnosis)",
                     "options": [
                         "Rối loạn mở/đóng diện khớp cột sống (ERS/FRS Dysfunctions): Giảm trượt mấu khớp khi cúi/ngửa.",
                         "Lệch xoay khung chậu & xương cùng (Innominate Rotations & Sacral Torsions): Gây mất cân bằng trục cột sống và đau thắt lưng kháng trị.",
@@ -1159,7 +1159,7 @@ guidemap_algorithm = {
                     "branches": [
                         {
                             "type": "Can Thiệp Bằng Nắn Chỉnh Cơ Sinh Học & PHCN (Manual Therapy & Exercise)",
-                            "indication": "Rối loạn chức năng thể dịch thuần túy (Somatic dysfunctions: ERS/FRS, lệch xoay chậu cùng, co rút cơ mạc, hạn chế trượt khớp).",
+                            "indication": "Rối loạn cơ sinh học hệ vận động (Somatic Dysfunctions) thuần túy (Somatic dysfunctions: ERS/FRS, lệch xoay chậu cùng, co rút cơ mạc, hạn chế trượt khớp).",
                             "action": "Kỹ thuật năng lượng cơ (MET), trượt khớp, giải phóng điểm kích hoạt cơ mạc, tập ổn định lõi và cân bằng cơ."
                         },
                         {

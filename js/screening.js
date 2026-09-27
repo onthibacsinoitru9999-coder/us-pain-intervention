@@ -114,6 +114,24 @@ function initScreeningApp() {
   setupEventListeners();
   updateCategoryCounts();
   applyFilters();
+
+  // Async dynamic loading from exact JSON if atlas catalog not yet populated
+  if ((!screeningState.atlasCatalog || screeningState.atlasCatalog.length === 0) && typeof fetch === 'function') {
+    fetch('data/deepak_figures_catalog_exact.json')
+      .then(res => res.json())
+      .then(json => {
+        if (Array.isArray(json) && json.length > 0) {
+          screeningState.atlasCatalog = json;
+          screeningState.filteredAtlas = [...json];
+          if (screeningState.activeMode === 'atlas') {
+            renderAtlasView();
+          }
+        }
+      })
+      .catch(e => {
+        console.warn('Fallback exact JSON fetch omitted:', e);
+      });
+  }
 }
 
 function initTheme() {
@@ -292,6 +310,14 @@ function switchMode(mode) {
       searchInput.placeholder = 'Tìm thuốc gây đau cơ khớp: Statin, Quinolone, Corticoid, Aromatase inhibitors, Bisphosphonate, Hóa chất ung thư...';
     } else if (mode === 'atlas') {
       searchInput.placeholder = 'Tìm kiếm trong 279 ảnh Atlas Deepak: số hiệu (Fig 4.1, Fig 9.39...), trang, giải phẫu, nghiệm pháp...';
+    }
+  }
+
+  // Restore currentModuleFigures to selected module figures when in modules mode
+  if (mode === 'modules' && screeningState.selectedModuleId) {
+    const currentMod = screeningState.allModules.find(m => m.id === screeningState.selectedModuleId);
+    if (currentMod) {
+      screeningState.currentModuleFigures = currentMod.figures || [];
     }
   }
 
@@ -1661,14 +1687,36 @@ function renderAtlasView() {
     { id: '10', label: 'Ch 10: Khuỷu & Bàn Tay', icon: '🖐️', count: (screeningState.atlasCatalog || []).filter(c => c.chapter === 10).length }
   ];
 
+  const chapterViKeywords = {
+    4: 'cột sống cổ cổ gáy vbi đm động mạch đốt sống chẩm c1 c2 rễ cổ thoái hóa cổ thoát vị đĩa đệm cổ dây chằng ngang tê tay hoffmann spurling',
+    5: 'cột sống ngực ngực sườn lồng ngực t4 liên sườn đau thành ngực sườn sống lindgren thở đau',
+    6: 'thắt lưng cột sống thắt lưng chậu l4 l5 s1 đau lưng đau thần kinh tọa thoát vị đĩa đệm lún xẹp lumbopelvic si joint cùng chậu',
+    7: 'khớp háng háng bẹn đùi chỏm đùi hoại tử chỏm avn fadir faber scour trượt chỏm stinchfield ober cơ căng mạc đùi',
+    8: 'khớp gối gối cẳng chân cổ chân bàn chân gót sụn chêm lcl mcl acl pcl bánh chè lachman ngăn kéo mcmurray march fracture canxi',
+    9: 'khớp vai vai đai vai chóp xoay dưới mỏm cùng vai gân trên gai supraspinatus slap bankart sbtt tipping neer hawkins cờ đỏ vai',
+    10: 'khuỷu tay cẳng tay cổ tay bàn tay ngón tay tennis elbow golfer elbow ống cổ tay carpal tunnel phalen de quervain trigger finger lò xo tfcc kienbock mỏm trâm'
+  };
+
+  // Build lookup of clinical figures in screening modules to enable Vietnamese search on captions
+  const screeningFigMap = {};
+  (screeningState.allModules || []).forEach(m => {
+    (m.figures || []).forEach(f => {
+      if (f.file && f.caption_vi) {
+        screeningFigMap[f.file] = f.caption_vi;
+      }
+    });
+  });
+
   const list = (screeningState.atlasCatalog || []).filter(item => {
     // Chapter match
     if (selectedChapter !== 'all' && String(item.chapter) !== String(selectedChapter)) {
       return false;
     }
-    // Search query match
+    // Search query match (supports English and Vietnamese terms)
     if (query) {
-      const corpus = `${item.chapter} ${item.chapter_name} trang ${item.page} p${item.page} ${item.formal_title || ''} ${(item.all_titles || []).join(' ')}`.toLowerCase();
+      const viChapter = chapterViKeywords[item.chapter] || '';
+      const viCaption = screeningFigMap[item.file] || '';
+      const corpus = `${item.chapter} ${item.chapter_name} ${viChapter} ${viCaption} trang ${item.page} p${item.page} ${item.formal_title || ''} ${(item.all_titles || []).join(' ')}`.toLowerCase();
       if (!corpus.includes(query)) return false;
     }
     return true;
@@ -1765,16 +1813,29 @@ function filterAtlasByChapter(ch) {
 
 function openAtlasLightbox(idx) {
   if (!screeningState.filteredAtlas || screeningState.filteredAtlas.length === 0) return;
-  
-  screeningState.currentModuleFigures = screeningState.filteredAtlas.map(item => ({
-    file: item.file,
-    page: item.page,
-    fig_number: (item.formal_title && item.formal_title.includes(':')) ? item.formal_title.split(':')[0].trim() : ('Trang ' + item.page),
-    caption_vi: item.formal_title || `Hình minh họa trang ${item.page}`,
-    caption_en: item.formal_title || `Figure on page ${item.page}`,
-    width: item.width,
-    height: item.height
-  }));
+
+  const screeningFigMap = {};
+  (screeningState.allModules || []).forEach(m => {
+    (m.figures || []).forEach(f => {
+      if (f.file && f.caption_vi) {
+        screeningFigMap[f.file] = f.caption_vi;
+      }
+    });
+  });
+
+  screeningState.currentModuleFigures = screeningState.filteredAtlas.map(item => {
+    const viCaption = screeningFigMap[item.file];
+    const formalTitle = item.formal_title || `Figure on page ${item.page}`;
+    return {
+      file: item.file,
+      page: item.page,
+      fig_number: (formalTitle.includes(':')) ? formalTitle.split(':')[0].trim() : ('Trang ' + item.page),
+      caption_vi: viCaption ? viCaption : formalTitle,
+      caption_en: formalTitle,
+      width: item.width,
+      height: item.height
+    };
+  });
 
   openLightboxIndex(idx);
 }
