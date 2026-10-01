@@ -79,7 +79,14 @@ const PROCEDURES_DATA = [
         "desc": "Kim 23G-25G đi In-plane từ ngoài vào trong, đầu kim nằm chính xác trong bao hoạt dịch SASD, bơm dung dịch tách bursa trơn tru.",
         "springerCaption": "Fig. 19.13 Subacromial bursa injection. In-plane needle insertion into the SASD bursa."
       }
-    ]
+    ],
+    "video": {
+      "videoId": "_rQx6mXq698",
+      "title": "Subacromial Bursa Injection - Ultrasound Scanning Technique",
+      "channel": "Clarius Mobile Health",
+      "url": "https://www.youtube.com/watch?v=_rQx6mXq698",
+      "embedUrl": "https://www.youtube.com/embed/_rQx6mXq698"
+    }
   },
   {
     "id": "glenohumeral-posterior",
@@ -157,7 +164,14 @@ const PROCEDURES_DATA = [
         "desc": "Kim đi từ ngoài vào trong, xuyên qua cơ dưới gai, đầu kim dừng tại khe khớp giữa sụn viền và chỏm xương cánh tay.",
         "springerCaption": "Fig. 19.12 Posterior approach to GHJ. Needle is advanced in-plane from lateral to medial through the infraspinatus into the joint cavity."
       }
-    ]
+    ],
+    "video": {
+      "videoId": "uQO6DxfHTkw",
+      "title": "Ultrasound guided glenohumeral joint injection - 2 min series MSKUS",
+      "channel": "SMUG MSK ultrasound training",
+      "url": "https://www.youtube.com/watch?v=uQO6DxfHTkw",
+      "embedUrl": "https://www.youtube.com/embed/uQO6DxfHTkw"
+    }
   },
   {
     "id": "biceps-tendon",
@@ -221,7 +235,14 @@ const PROCEDURES_DATA = [
         "figNumber": "19.6",
         "springerCaption": "Fig. 19.6c). From scan 2, moving medially and rotating the probe, the CHL can be followed to its origin at the cora- coid process of the scapula. The underlying LHB tendon and subscapularis muscle are visible. Externally rotating the shoulder will bring more of the subscapularis into view and tighten the CHL."
       }
-    ]
+    ],
+    "video": {
+      "videoId": "qMicNmIbyiw",
+      "title": "Ultrasound-Guided Biceps Tendon Peritendinous Sheath Injection NYSORA Medstudylab.com",
+      "channel": "Anesthesia and Pain medicine",
+      "url": "https://www.youtube.com/watch?v=qMicNmIbyiw",
+      "embedUrl": "https://www.youtube.com/embed/qMicNmIbyiw"
+    }
   },
   {
     "id": "ac-joint",
@@ -280,7 +301,14 @@ const PROCEDURES_DATA = [
         "figNumber": "19.8",
         "springerCaption": "Fig. 19.8, lower panel). From Scan 1, the probe is translated just lateral to bring the supraspinatus tendon into view. The supraspinatus tendon inserts onto the beak-shaped greater tuberosity (GT). Note the hypoechoic hyaline cartilage along the humeral head. The SASD bursa can be identified as a thin hypoechoic line flanked by the hyperechoic supra- spinatus tendon and subdeltoid fat. When bursitis is present, this bursal space will be fluid-filled with thickening of the peribursal fat. The st"
       }
-    ]
+    ],
+    "video": {
+      "videoId": "8xfcDMERiBQ",
+      "title": "How To: Shoulder Ultrasound-Guided Injection of the AC Joint 3D Video",
+      "channel": "Sonosite",
+      "url": "https://www.youtube.com/watch?v=8xfcDMERiBQ",
+      "embedUrl": "https://www.youtube.com/embed/8xfcDMERiBQ"
+    }
   },
   {
     "id": "suprascapular-nerve",
@@ -352,7 +380,14 @@ const PROCEDURES_DATA = [
         "desc": "Color Doppler bộc lộ động mạch trên vai đập tại khuyết trên vai; kim In-plane đi từ trong ra ngoài (Medial-to-Lateral) tiếp cận dây thần kinh dưới mạc sâu cơ trên gai.",
         "springerCaption": "Fig. 4.4 Color Doppler ultrasound imaging of the suprascapular vessels and in-plane needle trajectory."
       }
-    ]
+    ],
+    "video": {
+      "videoId": "KUx7dhaKSAk",
+      "title": "Diaphragm-Sparing Blocks for Shoulder Analgesia",
+      "channel": "NYSORA - Education",
+      "url": "https://www.youtube.com/watch?v=KUx7dhaKSAk",
+      "embedUrl": "https://www.youtube.com/embed/KUx7dhaKSAk"
+    }
   },
   {
     "id": "tennis-elbow",
@@ -422,7 +457,14 @@ const PROCEDURES_DATA = [
         "desc": "Kim 25G đi In-plane từ dưới lên trên dọc theo thớ gân, mũi kim hướng vào vùng thoái hóa giảm âm sát màng xương lồi cầu ngoài.",
         "springerCaption": "Fig. 20.10 Upper panel: In-plane needle insertion for common extensor tendon injection at the lateral epicondyle."
       }
-    ]
+    ],
+    "video": {
+      "videoId": "SuSiTJCBDRI",
+      "title": "Tennis elbow injection demonstration",
+      "channel": "Sports Medicine Ultrasound",
+      "url": "https://www.youtube.com/watch?v=SuSiTJCBDRI",
+      "embedUrl": "https://www.youtube.com/embed/SuSiTJCBDRI"
+    }
   },
   {
     "id": "golfers-elbow",
@@ -489,7 +531,14 @@ const PROCEDURES_DATA = [
         "desc": "Kim đi In-plane dọc trục gân, tiếp cận vùng thoái hóa gân gấp chung bám vào lồi cầu trong xương cánh tay.",
         "springerCaption": "Fig. 20.11 Sonograph showing the needle trajectory for common flexor tendon injection."
       }
-    ]
+    ],
+    "video": {
+      "videoId": "QkpSBLHoJhw",
+      "title": "Golfer's Elbow Medial Epicondyle Cortisone Injection - Scanning and Injection Training Video",
+      "channel": "Sports Medicine Ultrasound",
+      "url": "https://www.youtube.com/watch?v=QkpSBLHoJhw",
+      "embedUrl": "https://www.youtube.com/embed/QkpSBLHoJhw"
+    }
   },
   {
     "id": "carpal-tunnel",
@@ -560,7 +609,14 @@ const PROCEDURES_DATA = [
         "desc": "Kim đi In-plane từ phía bờ trụ sang bờ quay, nằm dưới mạc giữ gân gấp và luồn dưới thần kinh giữa để bóc tách thủy dịch (hydrodissection).",
         "springerCaption": "Fig. 21.4 In-plane needle insertion from ulnar aspect for median nerve hydrodissection in carpal tunnel."
       }
-    ]
+    ],
+    "video": {
+      "videoId": "RCz1RSvcFUI",
+      "title": "Non-Surgical Carpal Tunnel Treatment with Nerve Hydrodissection",
+      "channel": "Sebastian Klisiewicz | Integrative Rehab Medicine",
+      "url": "https://www.youtube.com/watch?v=RCz1RSvcFUI",
+      "embedUrl": "https://www.youtube.com/embed/RCz1RSvcFUI"
+    }
   },
   {
     "id": "de-quervain",
@@ -629,7 +685,14 @@ const PROCEDURES_DATA = [
         "figNumber": "21.11",
         "springerCaption": "Fig. 21.11). Deliver injectate when the needle (arrows) tip is visualized near the tendon sheath above the APL and EPB. 2. Out-of-Plane Injection Place the probe short axis over the abductor pollicis longus (APL) and extensor pollicis brevis (EPB) adjacent to radial styloid process. Note the radial artery that will be located toward the volar surface. Using an out-of-plane approach, steeply insert needle adjacent and centered to the transducer ("
       }
-    ]
+    ],
+    "video": {
+      "videoId": "3b1ML5gLNnQ",
+      "title": "Ultrasound-Guided Injection in De Quervain's Tenosynovitis | Clinical Demonstration",
+      "channel": "Asian Pain Academy ",
+      "url": "https://www.youtube.com/watch?v=3b1ML5gLNnQ",
+      "embedUrl": "https://www.youtube.com/embed/3b1ML5gLNnQ"
+    }
   },
   {
     "id": "trigger-finger",
@@ -696,7 +759,14 @@ const PROCEDURES_DATA = [
         "desc": "Kim 25G đi In-plane từ xa lại gần (hoặc gần ra xa) song song với bề mặt gân gấp, đầu kim luồn giữa ròng rọc A1 và gân gấp.",
         "springerCaption": "Fig. 21.14 In-plane needle approach along the long axis of the flexor tendon for A1 pulley injection."
       }
-    ]
+    ],
+    "video": {
+      "videoId": "RD_Z-cAHd20",
+      "title": "How To: Pathology Hand A1 Pulley Trigger Finger 3D Video",
+      "channel": "Sonosite",
+      "url": "https://www.youtube.com/watch?v=RD_Z-cAHd20",
+      "embedUrl": "https://www.youtube.com/embed/RD_Z-cAHd20"
+    }
   },
   {
     "id": "cmc1-joint",
@@ -766,7 +836,14 @@ const PROCEDURES_DATA = [
         "desc": "Kim 27G đi In-plane từ xa vào gần, chọc thẳng vào khe khớp hẹp giữa xương thang và xương bàn 1.",
         "springerCaption": "Fig. 21.17b In-plane needle insertion into the CMC1 joint space under ultrasound guidance."
       }
-    ]
+    ],
+    "video": {
+      "videoId": "FS0cBmUFoVc",
+      "title": "1st CMC  joint injection - MSKUS - Ultrasound guided 1st CMC  joint injection - 2 minute series",
+      "channel": "SMUG MSK ultrasound training",
+      "url": "https://www.youtube.com/watch?v=FS0cBmUFoVc",
+      "embedUrl": "https://www.youtube.com/embed/FS0cBmUFoVc"
+    }
   },
   {
     "id": "knee-suprapatellar",
@@ -842,7 +919,14 @@ const PROCEDURES_DATA = [
         "figNumber": "23.5",
         "springerCaption": "Fig. 23.5 Sonographic image of needle insertion. Needle indicated by arrow. ∗∗∗, suprapatellar recess; F, femur; QT, quadriceps tendon. (Reprinted with permission from Philip Peng Educational Series) T. Nouer Frederico and P. Peng"
       }
-    ]
+    ],
+    "video": {
+      "videoId": "eBFSs0ITaqM",
+      "title": "Intra articular Knee Joint Cortisone Injection",
+      "channel": "Clarius Mobile Health",
+      "url": "https://www.youtube.com/watch?v=eBFSs0ITaqM",
+      "embedUrl": "https://www.youtube.com/embed/eBFSs0ITaqM"
+    }
   },
   {
     "id": "bakers-cyst",
@@ -914,7 +998,14 @@ const PROCEDURES_DATA = [
         "figNumber": "23.9",
         "springerCaption": "Fig. 23.9 Needle (arrow) marking the pedicle of Baker’s cyst which communicates with the joint. The insert showed the position of the probe. PA, popliteal artery. (Reprinted with permission from Philip Peng Educational Series)"
       }
-    ]
+    ],
+    "video": {
+      "videoId": "ZfVuFH1AaMQ",
+      "title": "👨‍⚕️ Ultrasound-Guided Baker Cyst Aspiration: A video demonstration",
+      "channel": "DARADIA: The Pain Clinic",
+      "url": "https://www.youtube.com/watch?v=ZfVuFH1AaMQ",
+      "embedUrl": "https://www.youtube.com/embed/ZfVuFH1AaMQ"
+    }
   },
   {
     "id": "pes-anserinus",
@@ -981,7 +1072,14 @@ const PROCEDURES_DATA = [
         "figNumber": "23.15",
         "springerCaption": "Fig. 23.15). A linear pattern of spread is seen during the injection expand- ing the fascial plane with no changing in the echogenicity of the tendon (implying intratendinous injection). The lower two panel showed the positions of the probe and needle. Alternatively, the bursa can be injected when the probe is in short axis to the pes anserinus tendon ("
       }
-    ]
+    ],
+    "video": {
+      "videoId": "-pwbETCX1hk",
+      "title": "#ultrasound Guided Interventions: Pes Anserine (Imaging) #fyp #sport #sports #sportsmedicine",
+      "channel": "SportDrDinesh",
+      "url": "https://www.youtube.com/watch?v=-pwbETCX1hk",
+      "embedUrl": "https://www.youtube.com/embed/-pwbETCX1hk"
+    }
   },
   {
     "id": "genicular-nerves",
@@ -1051,7 +1149,14 @@ const PROCEDURES_DATA = [
         "figNumber": "27.11",
         "springerCaption": "Fig. 27.11 Ultrasound imaging technique and the corresponding sonographic image of the super- omedial knee. Upper left panel. The ultrasound probe was placed along the long axis of femur between the diaphysis and epiphysis. Upper right panel. A fascia expansion (∗∗∗) deep to the vastus medial (VM) could be seen. E, epiphysis. Lower left panel. The ultrasound probe was then turned 90 °C to obtain a short-axis view of the femur. Move or align the probe in the cephalad-­ caudal direction until the"
       }
-    ]
+    ],
+    "video": {
+      "videoId": "PxkSdSzUfGs",
+      "title": "Ultrasound Guided Genicular Nerve Blocks",
+      "channel": "Regional Anesthesiology and Acute Pain Medicine",
+      "url": "https://www.youtube.com/watch?v=PxkSdSzUfGs",
+      "embedUrl": "https://www.youtube.com/embed/PxkSdSzUfGs"
+    }
   },
   {
     "id": "hip-intraarticular",
@@ -1129,7 +1234,14 @@ const PROCEDURES_DATA = [
         "figNumber": "22.5",
         "springerCaption": "Fig. 22.5). Slide probe toward the femoral head to optimize image to visualize the femoral neck, femoral head, acetabulum, capsule (arrows), and anterior recess (∗∗). Color Doppler helps identify and avoid the ascending branch of the lateral femo- ral circumflex artery between iliopsoas and rectus femoris muscles when injecting ("
       }
-    ]
+    ],
+    "video": {
+      "videoId": "DKdhr4L21Rc",
+      "title": "Venue Family | Anterior hip assessment and injection",
+      "channel": "GE HealthCare",
+      "url": "https://www.youtube.com/watch?v=DKdhr4L21Rc",
+      "embedUrl": "https://www.youtube.com/embed/DKdhr4L21Rc"
+    }
   },
   {
     "id": "trochanteric-bursa",
@@ -1199,7 +1311,14 @@ const PROCEDURES_DATA = [
         "desc": "Kim đi từ trước ra sau hoặc từ ngoài vào, tiếp cận khoang bursa nông hơn gân cơ mông nhỡ.",
         "springerCaption": "Fig. 22.8 In-plane needle approach to the trochanteric complex."
       }
-    ]
+    ],
+    "video": {
+      "videoId": "4IRnvNuiUJo",
+      "title": "Ultrasound Guided Hip Greater Trochanteric Bursa Injection",
+      "channel": "Dr. Scott Weiss",
+      "url": "https://www.youtube.com/watch?v=4IRnvNuiUJo",
+      "embedUrl": "https://www.youtube.com/embed/4IRnvNuiUJo"
+    }
   },
   {
     "id": "piriformis-muscle",
@@ -1274,7 +1393,14 @@ const PROCEDURES_DATA = [
         "desc": "Kim dài 70-90mm đi In-plane từ ngoài vào trong qua cơ mông lớn cắm chính xác vào bụng cơ hình lê, tránh thần kinh tọa.",
         "springerCaption": "Fig. 8.7 Ultrasound probe and needle position for piriformis muscle injection."
       }
-    ]
+    ],
+    "video": {
+      "videoId": "C2MmN6rHq5w",
+      "title": "PIRIFORMIS MUSCLE INJECTION - NYSORA US Pain App",
+      "channel": "NYSORA - Education",
+      "url": "https://www.youtube.com/watch?v=C2MmN6rHq5w",
+      "embedUrl": "https://www.youtube.com/embed/C2MmN6rHq5w"
+    }
   },
   {
     "id": "lfcn-block",
@@ -1340,7 +1466,14 @@ const PROCEDURES_DATA = [
         "figNumber": "10.4",
         "springerCaption": "Fig. 10.4 Scanning at the fat-filled grove between sartorius and tensor fascia lata. (Reprinted with permission from Philip Peng Educational Series) 10 Lateral Femoral Cutaneous Nerve"
       }
-    ]
+    ],
+    "video": {
+      "videoId": "TOcvCKr9J18",
+      "title": "Femoral and lateral femoral cutaneous nerve blocks: Foundational overview",
+      "channel": "Regional Anesthesiology and Acute Pain Medicine",
+      "url": "https://www.youtube.com/watch?v=TOcvCKr9J18",
+      "embedUrl": "https://www.youtube.com/embed/TOcvCKr9J18"
+    }
   },
   {
     "id": "tibiotalar-joint",
@@ -1412,7 +1545,14 @@ const PROCEDURES_DATA = [
         "desc": "Kim đi In-plane từ dưới lên trên hoặc từ trên xuống dưới vào khoang hoạt dịch khớp chày - sên, tránh động mạch chày trước và TK mác sâu.",
         "springerCaption": "Fig. 24.16 (a) Out-of-plane and (b) In-plane needle insertion to the tibiotalar joint under ultrasound."
       }
-    ]
+    ],
+    "video": {
+      "videoId": "NwlRQwPAohU",
+      "title": "Intra-articular tibiotalar injection demonstration",
+      "channel": "Sports Medicine Ultrasound",
+      "url": "https://www.youtube.com/watch?v=NwlRQwPAohU",
+      "embedUrl": "https://www.youtube.com/embed/NwlRQwPAohU"
+    }
   },
   {
     "id": "plantar-fascia",
@@ -1481,7 +1621,14 @@ const PROCEDURES_DATA = [
         "desc": "Kim đi In-plane từ phía bờ trong gót chân, luồn dưới cân gan chân để bơm thuốc, tuyệt đối không tiêm vào mô mỡ gót.",
         "springerCaption": "Fig. 24.16b In-plane approach to the plantar fascia under ultrasound."
       }
-    ]
+    ],
+    "video": {
+      "videoId": "E5_TlTWMVKI",
+      "title": "Plantar Fascia injection with cortisone demonstation",
+      "channel": "Sports Medicine Ultrasound",
+      "url": "https://www.youtube.com/watch?v=E5_TlTWMVKI",
+      "embedUrl": "https://www.youtube.com/embed/E5_TlTWMVKI"
+    }
   },
   {
     "id": "sacroiliac-joint",
@@ -1551,7 +1698,14 @@ const PROCEDURES_DATA = [
         "figNumber": "15.4",
         "springerCaption": "Fig. 15.4 Needle placement for a sacroiliac joint injection. (a) right upper inset illustrates the probe placement on the skin surface; left lower inset illustrates the scan line on a skeletal model. Needle (N), S2 posterior foramen (S2), sacroiliac joint (SIJ). (b) color duplex Doppler scan during injection demonstrating spread of injectate in the joint cleft. Reprinted with permission from Philip Peng Educational Series 1. If an eventual SLB radiofrequency ablation procedure is being contem- p"
       }
-    ]
+    ],
+    "video": {
+      "videoId": "tNbLvql0TQU",
+      "title": "How To: Ultrasound Guided Sacro-iliac Injection - Sonosite Ultrasound 3D Video",
+      "channel": "Sonosite",
+      "url": "https://www.youtube.com/watch?v=tNbLvql0TQU",
+      "embedUrl": "https://www.youtube.com/embed/tNbLvql0TQU"
+    }
   },
   {
     "id": "caudal-epidural",
@@ -1627,7 +1781,14 @@ const PROCEDURES_DATA = [
         "desc": "Đầu kim xuyên qua dây chằng cùng cụt vào khoang ngoài màng cứng ống cùng dưới kiểm soát siêu âm thời gian thực.",
         "springerCaption": "Fig. 17.5 Needle insertion into the caudal epidural space under real-time ultrasound guidance."
       }
-    ]
+    ],
+    "video": {
+      "videoId": "yD6L4aSbSZA",
+      "title": "How To: Ultrasound Guided Caudal Epidural Steroid Injection",
+      "channel": "Sonosite",
+      "url": "https://www.youtube.com/watch?v=yD6L4aSbSZA",
+      "embedUrl": "https://www.youtube.com/embed/yD6L4aSbSZA"
+    }
   },
   {
     "id": "esp-block",
@@ -1699,7 +1860,14 @@ const PROCEDURES_DATA = [
         "figNumber": "11.14",
         "springerCaption": "Fig. 11.14). Different cath- eters have been successfully used (catheter over needle or catheter through needle). The preference of the author is to use the later due to the fact that the catheter can be advanced and securely left into the erector spinae muscle. • Needle/catheter: Catheter through needle (regular 18 G Tuohy needle) and regular epidural catheter (19 G) or catheter over needle can be used. • Drugs: For unilateral infusions, bupivacaine 0.2%; for bilateral infusions, bupivacaine 0."
       }
-    ]
+    ],
+    "video": {
+      "videoId": "gsyeeDLnEx4",
+      "title": "Erector Spinae Plane Block - Regional anesthesia Crash course with Dr. Hadzic",
+      "channel": "NYSORA - Education",
+      "url": "https://www.youtube.com/watch?v=gsyeeDLnEx4",
+      "embedUrl": "https://www.youtube.com/embed/gsyeeDLnEx4"
+    }
   },
   {
     "id": "lumbar-medial-branch",
@@ -1772,7 +1940,14 @@ const PROCEDURES_DATA = [
         "figNumber": "14.12",
         "springerCaption": "Fig. 14.12 Checking the needle position in the paramedian sagittal transverse process view. (Reprinted with permission from Philip Peng Educational Series) Second, the ultrasound transducer is placed in paramedian sagittal transverse process view to check the needle position (arrow) at the target point (asterisk),which should be at the cephalad edge of the sacrum ala (SA) caudal to the transverse pro- cess of L5 (TP) ("
       }
-    ]
+    ],
+    "video": {
+      "videoId": "oiV-O0y8zB0",
+      "title": "Pain Medicine - Lumbar Medial Branch, Facet Joint and Nerve Root Blocks",
+      "channel": "Regional Anesthesia",
+      "url": "https://www.youtube.com/watch?v=oiV-O0y8zB0",
+      "embedUrl": "https://www.youtube.com/embed/oiV-O0y8zB0"
+    }
   },
   {
     "id": "intercostal-nerve",
@@ -1845,7 +2020,14 @@ const PROCEDURES_DATA = [
         "figNumber": "5.7",
         "springerCaption": "Fig. 5.7). \u0007Postprocedure Follow-Up and Pitfalls • After completion of the procedure, an evaluation of the patient should be con- ducted. Auscultation using a stethoscope to confirm air movement in the chest wall is necessary to diagnose pneumothorax ("
       }
-    ]
+    ],
+    "video": {
+      "videoId": "m--qyUUzH5U",
+      "title": "Ultrasound-Guided Intercostal Nerve Block",
+      "channel": "Regional Anesthesiology and Acute Pain Medicine",
+      "url": "https://www.youtube.com/watch?v=m--qyUUzH5U",
+      "embedUrl": "https://www.youtube.com/embed/m--qyUUzH5U"
+    }
   },
   {
     "id": "occipital-nerve",
@@ -1914,7 +2096,14 @@ const PROCEDURES_DATA = [
         "figNumber": "2.9",
         "springerCaption": "Fig. 2.9 Sonography showed the injection around the greater occipital nerve. SSC semispinalis capitis; IOC inferior obliquus capitis. (Reprint with permission from Philip Peng Educational Series) 1. We recommend for less-experienced sonographers to start with the easier distal US-guided GON approach. 2. A block is successful if it creates absence of light-touch sensation in the dermatome of GON. 3. The target area in the proximal approach is not far from vertebral artery and epidural space; cons"
       }
-    ]
+    ],
+    "video": {
+      "videoId": "dXD9AEyAfKM",
+      "title": "USG Greater Occipital Nerve Block",
+      "channel": "Clarius Mobile Health",
+      "url": "https://www.youtube.com/watch?v=dXD9AEyAfKM",
+      "embedUrl": "https://www.youtube.com/embed/dXD9AEyAfKM"
+    }
   },
   {
     "id": "stellate-ganglion",
@@ -1988,7 +2177,14 @@ const PROCEDURES_DATA = [
         "figNumber": "3.4",
         "springerCaption": "Fig. 3.4 The corresponding anatomic structures revealed at C6. (Reprinted with permission from Philip Peng Educational Series)"
       }
-    ]
+    ],
+    "video": {
+      "videoId": "B6ROeVFUJSY",
+      "title": "Ultrasound guided stellate ganglion block",
+      "channel": "Regional Anesthesiology and Acute Pain Medicine",
+      "url": "https://www.youtube.com/watch?v=B6ROeVFUJSY",
+      "embedUrl": "https://www.youtube.com/embed/B6ROeVFUJSY"
+    }
   },
   {
     "id": "ilioinguinal-nerve",
@@ -2058,7 +2254,14 @@ const PROCEDURES_DATA = [
         "figNumber": "6.4",
         "springerCaption": "Fig. 6.4). At this level, all three layers of abdominal muscles can be easily visualized and the IH and II are quite consistently located between the transver- sus abdominis and internal oblique muscle. 2. Put the probe in short axis to the nerve. 3. Make sure the probe is perpendicular to the tangential plane of the skin. 4. Make sure the lateral part of the probe is on the iliac crest as the IH and II are usually located within 1.5 cm from the iliac crest. 5. Put more pressure on the medial pa"
       }
-    ]
+    ],
+    "video": {
+      "videoId": "WJPH6Ij3StA",
+      "title": "Ultrasound-guided Ilioinguinal and Iliohypogastric Nerve Blocks",
+      "channel": "Regional Anesthesiology and Acute Pain Medicine",
+      "url": "https://www.youtube.com/watch?v=WJPH6Ij3StA",
+      "embedUrl": "https://www.youtube.com/embed/WJPH6Ij3StA"
+    }
   },
   {
     "id": "prp-platelet-rich-plasma",
@@ -2134,7 +2337,14 @@ const PROCEDURES_DATA = [
         "desc": "So sánh PRP nghèo bạch cầu (LP-PRP) và PRP giàu bạch cầu (LR-PRP) trong điều trị bệnh lý gân và khớp.",
         "springerCaption": "Fig. 25.3 Classification of platelet-rich plasma systems."
       }
-    ]
+    ],
+    "video": {
+      "videoId": "oFtIwtkwOak",
+      "title": "PRP: Platelet Rich Plasma and Ultrasound Guided Injections",
+      "channel": "OrthoVirginia",
+      "url": "https://www.youtube.com/watch?v=oFtIwtkwOak",
+      "embedUrl": "https://www.youtube.com/embed/oFtIwtkwOak"
+    }
   },
   {
     "id": "calcific-tendinitis-barbotage",
@@ -2204,7 +2414,14 @@ const PROCEDURES_DATA = [
         "desc": "Sau khi hút sạch ổ vôi, rút kim lên khoang bao hoạt dịch dưới mỏm cùng vai (SASD) và tiêm steroid để chống viêm phản ứng cấp tính sau can thiệp.",
         "springerCaption": "Fig. 26.4f Subacromial-subdeltoid bursa steroid injection following calcific deposit barbotage."
       }
-    ]
+    ],
+    "video": {
+      "videoId": "1pz2QYNTyOo",
+      "title": "Ultrasound-guided Barbotage for Calcific Tendinitis",
+      "channel": "Lake Washington Sports & Spine",
+      "url": "https://www.youtube.com/watch?v=1pz2QYNTyOo",
+      "embedUrl": "https://www.youtube.com/embed/1pz2QYNTyOo"
+    }
   },
   {
     "id": "lesser-occipital-nerve",
@@ -2280,7 +2497,14 @@ const PROCEDURES_DATA = [
         "desc": "Mặt cắt ngang bờ sau cơ ức đòn chũm (SCM): Thần kinh chẩm bé là chấm giảm âm nằm trên mạc cơ gối đầu.",
         "springerCaption": "Fig. 2.4 Sonoanatomy of the lesser occipital nerve at the posterior border of the sternocleidomastoid muscle."
       }
-    ]
+    ],
+    "video": {
+      "videoId": "ENVRqkC-zQY",
+      "title": "The Ultrasound Guided Lesser Occipital Nerve Block  (NRAP Academy's Ultrasound Course excerpt)",
+      "channel": "NRAP Academy— David Rosenblum, MD  Pain Specialist",
+      "url": "https://www.youtube.com/watch?v=ENVRqkC-zQY",
+      "embedUrl": "https://www.youtube.com/embed/ENVRqkC-zQY"
+    }
   },
   {
     "id": "distal-gon",
@@ -2352,7 +2576,14 @@ const PROCEDURES_DATA = [
         "desc": "Doppler màu xác định động mạch chẩm (OA); thần kinh chẩm lớn (GON) nằm ngay phía trong động mạch.",
         "springerCaption": "Fig. 2.3 Color Doppler sonogram showing occipital artery and medial location of the greater occipital nerve."
       }
-    ]
+    ],
+    "video": {
+      "videoId": "dXD9AEyAfKM",
+      "title": "USG Greater Occipital Nerve Block",
+      "channel": "Clarius Mobile Health",
+      "url": "https://www.youtube.com/watch?v=dXD9AEyAfKM",
+      "embedUrl": "https://www.youtube.com/embed/dXD9AEyAfKM"
+    }
   },
   {
     "id": "cervical-nerve-root",
@@ -2443,7 +2674,14 @@ const PROCEDURES_DATA = [
         "desc": "Kim tiến từ sau ra trước, đầu kim nằm ở bờ sau ngoài rễ, thuốc tê lan bọc quanh rễ thần kinh.",
         "springerCaption": "Fig. 12.7 Real-time monitoring of the injectate spreading around the cervical nerve root."
       }
-    ]
+    ],
+    "video": {
+      "videoId": "PR_rsxi7ONU",
+      "title": "Avoiding Cervical Epidurals: Ultrasound Guided Cervical Selective Nerve Root Block- NRAP Academy",
+      "channel": "NRAP Academy— David Rosenblum, MD  Pain Specialist",
+      "url": "https://www.youtube.com/watch?v=PR_rsxi7ONU",
+      "embedUrl": "https://www.youtube.com/embed/PR_rsxi7ONU"
+    }
   },
   {
     "id": "cervical-medial-branch-ton",
@@ -2524,7 +2762,14 @@ const PROCEDURES_DATA = [
         "desc": "Kim tiến từ sau ra trước, chạm nhẹ xương eo trụ khớp C6, thuốc tê lan dưới cơ bán gai đầu.",
         "springerCaption": "Fig. 13.11 Needle insertion at C6 level showing injectate spread under the semispinalis capitis."
       }
-    ]
+    ],
+    "video": {
+      "videoId": "ey5aLOllrSE",
+      "title": "Third Occipital Nerve & Cervical Medial Branch Block",
+      "channel": "Regional Anesthesia",
+      "url": "https://www.youtube.com/watch?v=ey5aLOllrSE",
+      "embedUrl": "https://www.youtube.com/embed/ey5aLOllrSE"
+    }
   },
   {
     "id": "genitofemoral-nerve",
@@ -2602,7 +2847,14 @@ const PROCEDURES_DATA = [
         "desc": "Thuốc tê bơm vào trong bao thừng tinh làm bung tách các thành phần, bọc quanh nhánh thần kinh sinh dục.",
         "springerCaption": "Fig. 7.10 Injection inside the spermatic cord outlined by arrows for genitofemoral nerve block."
       }
-    ]
+    ],
+    "video": {
+      "videoId": "CHPMt_FXRKY",
+      "title": "Ultrasound-Guided Genitofemoral Nerve Block NYSORA Medstudylab.com",
+      "channel": "Anesthesia and Pain medicine",
+      "url": "https://www.youtube.com/watch?v=CHPMt_FXRKY",
+      "embedUrl": "https://www.youtube.com/embed/CHPMt_FXRKY"
+    }
   },
   {
     "id": "obturator-internus",
@@ -2681,7 +2933,14 @@ const PROCEDURES_DATA = [
         "desc": "Kim dài tiến từ ngoài vào trong, vượt qua thần kinh tọa vào sâu trong cơ bịt trong.",
         "springerCaption": "Fig. 8.10 Ultrasound probe and needle position for obturator internus muscle injection."
       }
-    ]
+    ],
+    "video": {
+      "videoId": "Xa0pbbEPFNk",
+      "title": "Ultrasound Guided Obturator Nerve Block",
+      "channel": "Regional Anesthesiology and Acute Pain Medicine",
+      "url": "https://www.youtube.com/watch?v=Xa0pbbEPFNk",
+      "embedUrl": "https://www.youtube.com/embed/Xa0pbbEPFNk"
+    }
   },
   {
     "id": "quadratus-femoris",
@@ -2750,7 +3009,14 @@ const PROCEDURES_DATA = [
         "desc": "Kỹ thuật đâm kim In-plane hoặc Out-of-plane vào bụng cơ vuông đùi tránh thần kinh tọa.",
         "springerCaption": "Fig. 8.12 Sonoanatomy and procedure for quadratus femoris muscle injection."
       }
-    ]
+    ],
+    "video": {
+      "videoId": "-BbsPX-5Nag",
+      "title": "Ischiofemoral Impingement with Dr. Drew Duerson | AMSSM Sports Ultrasound Case Presentation",
+      "channel": "The AMSSM",
+      "url": "https://www.youtube.com/watch?v=-BbsPX-5Nag",
+      "embedUrl": "https://www.youtube.com/embed/-BbsPX-5Nag"
+    }
   },
   {
     "id": "pudendal-nerve",
@@ -2830,7 +3096,14 @@ const PROCEDURES_DATA = [
         "desc": "Kim vượt qua dây chằng cùng ụ ngồi (đầu mũi tên), bơm thuốc bóc tách khoang quanh thần kinh thẹn.",
         "springerCaption": "Fig. 9.8 Needle insertion and hydrodissection of the interligamentary space around pudendal nerve."
       }
-    ]
+    ],
+    "video": {
+      "videoId": "BhEHVFTc6ls",
+      "title": "PUDENDAL NERVE BLOCK",
+      "channel": "Vicente Roques Escolar",
+      "url": "https://www.youtube.com/watch?v=BhEHVFTc6ls",
+      "embedUrl": "https://www.youtube.com/embed/BhEHVFTc6ls"
+    }
   },
   {
     "id": "inferior-cluneal-nerve",
@@ -2898,7 +3171,14 @@ const PROCEDURES_DATA = [
         "desc": "Kim tiêm dưới bờ cơ mông lớn tạo dải thuốc tê bọc quanh thần kinh bì mông dưới.",
         "springerCaption": "Fig. 9.10 Injection around the inferior cluneal nerve under ultrasound guidance."
       }
-    ]
+    ],
+    "video": {
+      "videoId": "hVjX8KrnSpQ",
+      "title": "Dr. David Rosenblum: The Ultrasound Guided Superior Cluneal Nerve Block",
+      "channel": "PainCast",
+      "url": "https://www.youtube.com/watch?v=hVjX8KrnSpQ",
+      "embedUrl": "https://www.youtube.com/embed/hVjX8KrnSpQ"
+    }
   },
   {
     "id": "sacral-lateral-branch",
@@ -2974,7 +3254,14 @@ const PROCEDURES_DATA = [
         "desc": "Kim tiếp cận mặt xương ngay ngoài bờ lỗ cùng sau, tránh đâm vào trong lỗ cùng.",
         "springerCaption": "Fig. 15.4 Needle placement for sacral lateral branch and SIJ target."
       }
-    ]
+    ],
+    "video": {
+      "videoId": "tNbLvql0TQU",
+      "title": "How To: Ultrasound Guided Sacro-iliac Injection - Sonosite Ultrasound 3D Video",
+      "channel": "Sonosite",
+      "url": "https://www.youtube.com/watch?v=tNbLvql0TQU",
+      "embedUrl": "https://www.youtube.com/embed/tNbLvql0TQU"
+    }
   },
   {
     "id": "sacroiliac-joint-rfa",
@@ -3053,7 +3340,14 @@ const PROCEDURES_DATA = [
         "desc": "Hàng kim RFA đặt dọc ngoài các lỗ cùng tạo dải tổn thương liên tục cắt đứt hoàn toàn dẫn truyền đau.",
         "springerCaption": "Fig. 16.4 Illustration of bilateral strip lesion and sagittal scan of cannula along lateral sacral crest."
       }
-    ]
+    ],
+    "video": {
+      "videoId": "t61ip9BEyoI",
+      "title": "Dr Agnes Stogicza - Radiofrequency E-Learning Seminar 1 Session 4: Sacroiliac joint denervation",
+      "channel": "Painschool International",
+      "url": "https://www.youtube.com/watch?v=t61ip9BEyoI",
+      "embedUrl": "https://www.youtube.com/embed/t61ip9BEyoI"
+    }
   },
   {
     "id": "glenohumeral-anterior",
@@ -3118,7 +3412,14 @@ const PROCEDURES_DATA = [
         "desc": "Mặt cắt ngang qua mỏm quạ và củ bé, kim đi In-plane qua gân cơ dưới vai vào ngách trước khớp vai.",
         "springerCaption": "Fig. 19.11 Anterior approach to glenohumeral joint under ultrasound guidance."
       }
-    ]
+    ],
+    "video": {
+      "videoId": "uQO6DxfHTkw",
+      "title": "Ultrasound guided glenohumeral joint injection - 2 min series MSKUS",
+      "channel": "SMUG MSK ultrasound training",
+      "url": "https://www.youtube.com/watch?v=uQO6DxfHTkw",
+      "embedUrl": "https://www.youtube.com/embed/uQO6DxfHTkw"
+    }
   },
   {
     "id": "elbow-intraarticular",
@@ -3197,7 +3498,14 @@ const PROCEDURES_DATA = [
         "desc": "Kim đi In-plane vào ngách hoạt dịch khớp khuỷu dưới kiểm soát siêu âm liên tục.",
         "springerCaption": "Fig. 20.12 In-plane needle approach for intra-articular elbow injection."
       }
-    ]
+    ],
+    "video": {
+      "videoId": "EcYZehvFWgI",
+      "title": "Ultrasound Guided Elbow Joint Injection (Step-by-Step)",
+      "channel": "My Injection Training",
+      "url": "https://www.youtube.com/watch?v=EcYZehvFWgI",
+      "embedUrl": "https://www.youtube.com/embed/EcYZehvFWgI"
+    }
   },
   {
     "id": "hip-lateral-approach",
@@ -3271,7 +3579,14 @@ const PROCEDURES_DATA = [
         "desc": "Kim dài tiến từ ngoài vào trong, đầu kim chạm điểm tiếp giáp cổ chỏm xương đùi trong bao khớp.",
         "springerCaption": "Fig. 22.8 In-plane needle reaching the junction of femoral head and neck."
       }
-    ]
+    ],
+    "video": {
+      "videoId": "LalkzCSeU8I",
+      "title": "How to Perform a Lateral Hip Injection (Ultrasound-Guided)",
+      "channel": "My Injection Training",
+      "url": "https://www.youtube.com/watch?v=LalkzCSeU8I",
+      "embedUrl": "https://www.youtube.com/embed/LalkzCSeU8I"
+    }
   },
   {
     "id": "iliopsoas-bursa",
@@ -3343,7 +3658,14 @@ const PROCEDURES_DATA = [
         "desc": "Kim tiến từ ngoài vào trong, luồn dưới gân thắt lưng chậu, bơm thuốc tách bao hoạt dịch khỏi mặt xương.",
         "springerCaption": "Fig. 22.14 Scan position and needle trajectory for iliopsoas tendon and bursa injection."
       }
-    ]
+    ],
+    "video": {
+      "videoId": "bfrMKfyN4SY",
+      "title": "Ultrasound Guided Iliopsoas Bursa Injection - International Society of Regenerative Medicine",
+      "channel": "International Society of Liver Ultrasound",
+      "url": "https://www.youtube.com/watch?v=bfrMKfyN4SY",
+      "embedUrl": "https://www.youtube.com/embed/bfrMKfyN4SY"
+    }
   },
   {
     "id": "distal-itb-bursa",
@@ -3412,7 +3734,14 @@ const PROCEDURES_DATA = [
         "desc": "Hình ảnh ITB dày phì đại và tụ dịch bao hoạt dịch (mũi tên) ở bệnh nhân hội chứng dải chậu chày.",
         "springerCaption": "Fig. 23.19 Distal ITB with bursitis. Thickened ITB with fluid collection in a patient with ITB syndrome."
       }
-    ]
+    ],
+    "video": {
+      "videoId": "5-D6lI7MauU",
+      "title": "#ultrasound Guided Interventions: Iliotibial Band Bursa (Injection)",
+      "channel": "SportDrDinesh",
+      "url": "https://www.youtube.com/watch?v=5-D6lI7MauU",
+      "embedUrl": "https://www.youtube.com/embed/5-D6lI7MauU"
+    }
   },
   {
     "id": "patellar-tendon-fenestration",
@@ -3483,7 +3812,14 @@ const PROCEDURES_DATA = [
         "desc": "Kim tiến vào mặt phẳng sâu dưới gân bánh chè, bơm thể tích dịch lớn bóc tách phá hủy tân mạch.",
         "springerCaption": "Fig. 23.23 High-volume injection deep to the patellar tendon under ultrasound guidance."
       }
-    ]
+    ],
+    "video": {
+      "videoId": "11kLBQq5bnU",
+      "title": "#ultrasound Guided Interventions: Patella Tendon (Injection) #fyp #sport #sports #sportsmedicine",
+      "channel": "SportDrDinesh",
+      "url": "https://www.youtube.com/watch?v=11kLBQq5bnU",
+      "embedUrl": "https://www.youtube.com/embed/11kLBQq5bnU"
+    }
   },
   {
     "id": "subtalar-joint",
@@ -3554,7 +3890,14 @@ const PROCEDURES_DATA = [
         "desc": "Kim tiến giữa xương gót và xương sên sử dụng kỹ thuật hydrolocation kiểm soát dòng thuốc.",
         "springerCaption": "Fig. 24.17 Needle tip passing between calcaneus and talus into the subtalar joint."
       }
-    ]
+    ],
+    "video": {
+      "videoId": "9BgGRJn4WWw",
+      "title": "Ultrasound guided ankle and subtalar joint injection technique for POCUS clinicians",
+      "channel": "MSK Australia",
+      "url": "https://www.youtube.com/watch?v=9BgGRJn4WWw",
+      "embedUrl": "https://www.youtube.com/embed/9BgGRJn4WWw"
+    }
   },
   {
     "id": "ankle-nerve-blocks",
@@ -3634,7 +3977,14 @@ const PROCEDURES_DATA = [
         "desc": "Thần kinh chày (mũi tên đậm) nằm cạnh động mạch chày sau trong ống cổ chân sau mắt cá trong.",
         "springerCaption": "Fig. 24.10 Sonoanatomy of the tibial nerve, posterior tibial artery, and flexor tendons."
       }
-    ]
+    ],
+    "video": {
+      "videoId": "6o5co6lp-4w",
+      "title": "Ultrasound Guided Ankle Block",
+      "channel": "Regional Anesthesiology and Acute Pain Medicine",
+      "url": "https://www.youtube.com/watch?v=6o5co6lp-4w",
+      "embedUrl": "https://www.youtube.com/embed/6o5co6lp-4w"
+    }
   },
   {
     "id": "hip-joint-denervation",
@@ -3722,7 +4072,14 @@ const PROCEDURES_DATA = [
         "desc": "Kim RFA tiếp cận mặt xương tại các mốc giải phẫu mục tiêu dưới kiểm soát siêu âm thời gian thực.",
         "springerCaption": "Fig. 27.8 Needle insertion and relevant landmarks for ultrasound-guided hip denervation."
       }
-    ]
+    ],
+    "video": {
+      "videoId": "V3wUBqryP7k",
+      "title": "Dr Agnes Stogicza - Radiofrequency E-Learning Seminar 1 Session 2: Hip denervation",
+      "channel": "Painschool International",
+      "url": "https://www.youtube.com/watch?v=V3wUBqryP7k",
+      "embedUrl": "https://www.youtube.com/embed/V3wUBqryP7k"
+    }
   }
 ];
 

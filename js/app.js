@@ -467,6 +467,7 @@ function renderProcedures() {
           <div class="card-badges">
             ${getTypeBadge(item.type)}
             ${getDifficultyBadge(item.difficulty)}
+            ${item.video ? `<span class="badge" style="background-color: #fee2e2; color: #b91c1c; border: 1px solid #fca5a5; display: inline-flex; align-items: center; gap: 3px;" title="Có video hướng dẫn thực hành"><svg style="width: 11px; height: 11px; fill: #dc2626;" viewBox="0 0 24 24"><path d="M21.58 7.19a2.7 2.7 0 0 0-1.9-1.9C18 4.8 12 4.8 12 4.8s-6 0-7.68.49a2.7 2.7 0 0 0-1.9 1.9C2 8.87 2 12 2 12s0 3.13.42 4.81a2.7 2.7 0 0 0 1.9 1.9C5.99 19.2 12 19.2 12 19.2s6 0 7.68-.49a2.7 2.7 0 0 0 1.9-1.9c.42-1.68.42-4.81.42-4.81s0-3.13-.42-4.81zM10 15V9l5.2 3-5.2 3z"/></svg>Video</span>` : ''}
           </div>
           <button class="card-fav-btn ${isFav ? 'is-fav' : ''}" onclick="toggleFavorite('${item.id}', event)" title="${isFav ? 'Bỏ lưu' : 'Lưu thủ thuật'}">
             <svg class="w-5 h-5" fill="${isFav ? 'currentColor' : 'none'}" stroke="currentColor" viewBox="0 0 24 24">
@@ -549,6 +550,7 @@ function openProcedureDetail(procId) {
     metaBadges.innerHTML = `
       ${getTypeBadge(item.type)}
       ${getDifficultyBadge(item.difficulty)}
+      ${item.video ? `<span class="badge" style="background-color: #fee2e2; color: #b91c1c; border: 1px solid #fca5a5; display: inline-flex; align-items: center; gap: 4px; cursor: pointer;" onclick="switchModalSubTab(3)" title="Xem video hướng dẫn thực hành lâm sàng"><svg style="width: 12px; height: 12px; fill: #dc2626;" viewBox="0 0 24 24"><path d="M21.58 7.19a2.7 2.7 0 0 0-1.9-1.9C18 4.8 12 4.8 12 4.8s-6 0-7.68.49a2.7 2.7 0 0 0-1.9 1.9C2 8.87 2 12 2 12s0 3.13.42 4.81a2.7 2.7 0 0 0 1.9 1.9C5.99 19.2 12 19.2 12 19.2s6 0 7.68-.49a2.7 2.7 0 0 0 1.9-1.9c.42-1.68.42-4.81.42-4.81s0-3.13-.42-4.81zM10 15V9l5.2 3-5.2 3z"/></svg>Video HD</span>` : ''}
     `;
   }
   
@@ -636,10 +638,75 @@ function openProcedureDetail(procId) {
     </div>
   `;
 
-  // Populate Tab 3: Drugs & Dosage
+  // Populate Tab 3: YouTube Video Tutorial (Placed directly next to Needle Technique Guide)
   const tab3 = document.getElementById('modal-tab-content-3');
+  if (item.video && item.video.videoId) {
+    const safeVideoTitle = (item.video.title || '').replace(/"/g, '&quot;');
+    tab3.innerHTML = `
+      <div class="video-tutorial-container space-y-4">
+        <!-- Responsive 16:9 Video Player -->
+        <div class="relative w-full overflow-hidden rounded-xl bg-black shadow-lg border border-slate-200 dark:border-slate-700" style="padding-top: 56.25%;">
+          <iframe 
+            id="procedure-youtube-iframe"
+            class="absolute inset-0 w-full h-full" 
+            src="${item.video.embedUrl}?rel=0" 
+            title="${safeVideoTitle}"
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            referrerpolicy="strict-origin-when-cross-origin" 
+            allowfullscreen>
+          </iframe>
+        </div>
+
+        <!-- Video Information Card -->
+        <div class="bg-gradient-to-r from-red-50 to-orange-50 dark:from-slate-800 dark:to-slate-800/80 border border-red-200 dark:border-slate-700 rounded-xl p-4 flex flex-col sm:flex-row sm:items-center justify-between gap-3 shadow-2xs">
+          <div class="flex items-start gap-3">
+            <div class="w-10 h-10 rounded-lg bg-red-600 text-white flex items-center justify-center shrink-0 shadow-sm mt-0.5">
+              <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            </div>
+            <div>
+              <h4 class="font-bold text-slate-900 dark:text-white text-sm leading-snug">${item.video.title}</h4>
+              <div class="flex flex-wrap items-center gap-2 mt-1 text-xs text-slate-600 dark:text-slate-400">
+                <span class="font-semibold text-red-700 dark:text-red-400">Kênh: ${item.video.channel}</span>
+                <span>•</span>
+                <span class="text-slate-500">Video thực hành lâm sàng chuẩn</span>
+              </div>
+            </div>
+          </div>
+          <div class="shrink-0 flex items-center gap-2">
+            <a href="${item.video.url}" target="_blank" rel="noopener noreferrer" class="btn btn-outline text-xs text-red-600 hover:bg-red-50 border-red-300 dark:border-red-800 flex items-center gap-1.5 px-3 py-2 rounded-lg font-bold">
+              <span>Mở trên YouTube</span>
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Clinical Needle Guidance Observation Box -->
+        <div class="bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl p-4 text-xs text-slate-700 dark:text-slate-300">
+          <h5 class="font-bold text-slate-800 dark:text-white text-xs mb-2 flex items-center gap-1.5">
+            <svg class="w-4 h-4 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            Điểm mấu chốt khi quan sát video thực hành:
+          </h5>
+          <ul class="list-disc pl-4 space-y-1.5 text-slate-600 dark:text-slate-400 leading-relaxed">
+            <li><strong>Đồng trục đầu dò & đường kim (In-plane):</strong> Đảm bảo trục đầu dò thẳng hàng hoàn toàn với thân kim để thấy toàn bộ chiều dài và mũi kim tăng âm theo thời gian thực.</li>
+            <li><strong>Kiểm tra Hydrolocation / Hydrodissection:</strong> Bơm thử 0.5 - 1 ml dịch thử nghiệm để xác nhận khoang giải phẫu mở rộng trước khi bơm liều chính thức.</li>
+            <li><strong>Bảo vệ thần kinh - mạch máu:</strong> Luôn quét Doppler màu khảo sát trước can thiệp và tránh chọc xuyên qua bao mạch.</li>
+          </ul>
+        </div>
+      </div>
+    `;
+  } else {
+    tab3.innerHTML = `
+      <div class="text-center py-10 text-slate-400 text-sm">
+        Video hướng dẫn cho quy trình này đang được cập nhật.
+      </div>
+    `;
+  }
+
+  // Populate Tab 4: Drugs & Dosage
+  const tab4 = document.getElementById('modal-tab-content-4');
   const d = item.drugsAndDosage;
-  tab3.innerHTML = `
+  tab4.innerHTML = `
     <div class="space-y-4 text-sm">
       <div class="border border-slate-200 rounded-lg p-4 bg-white shadow-sm">
         <h4 class="font-bold text-teal-900 text-base mb-3 flex items-center gap-2">
@@ -712,9 +779,9 @@ function openProcedureDetail(procId) {
     </div>
   `;
 
-  // Populate Tab 4: Pearls & Pitfalls
-  const tab4 = document.getElementById('modal-tab-content-4');
-  tab4.innerHTML = `
+  // Populate Tab 5: Pearls & Pitfalls
+  const tab5 = document.getElementById('modal-tab-content-5');
+  tab5.innerHTML = `
     <div class="space-y-4 text-sm">
       <div class="bg-rose-50/70 border border-rose-200 rounded-lg p-4">
         <h4 class="font-bold text-rose-900 text-sm mb-3 flex items-center gap-2">
@@ -738,10 +805,10 @@ function openProcedureDetail(procId) {
     </div>
   `;
 
-  // Populate Tab 5: Real Ultrasound Figures
-  const tab5 = document.getElementById('modal-tab-content-5');
+  // Populate Tab 6: Real Ultrasound Figures
+  const tab6 = document.getElementById('modal-tab-content-6');
   if (item.figures && item.figures.length > 0) {
-    tab5.innerHTML = `
+    tab6.innerHTML = `
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
         ${item.figures.map(fig => {
           const safeTitle = (fig.title || '').replace(/'/g, "\\'");
@@ -774,7 +841,7 @@ function openProcedureDetail(procId) {
       </div>
     `;
   } else {
-    tab5.innerHTML = `
+    tab6.innerHTML = `
       <div class="text-center py-8 text-slate-400 text-sm">
         Đang cập nhật thêm hình ảnh siêu âm cho quy trình này.
       </div>
@@ -805,6 +872,19 @@ function switchModalSubTab(tabIndex) {
     c.classList.toggle('hidden', idx + 1 !== tabIndex);
   });
 
+  // If leaving the Video Tab (Tab 3), pause YouTube playback to avoid background audio
+  if (tabIndex !== 3) {
+    const iframe = document.getElementById('procedure-youtube-iframe');
+    if (iframe && iframe.contentWindow) {
+      try {
+        iframe.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
+      } catch (e) {
+        // Fallback
+        iframe.src = iframe.src;
+      }
+    }
+  }
+
   // Reset compact header and scroll modal body to top upon subtab switch
   const modalHeader = document.getElementById('modal-header') || document.querySelector('.modal-header');
   if (modalHeader) modalHeader.classList.remove('is-compact');
@@ -816,6 +896,12 @@ function closeModal() {
   const modal = document.getElementById('procedure-modal');
   if (modal) modal.classList.add('hidden');
   document.body.style.overflow = '';
+
+  // Stop video playback when closing modal
+  const iframe = document.getElementById('procedure-youtube-iframe');
+  if (iframe) {
+    iframe.src = '';
+  }
 }
 
 // Lightbox logic
