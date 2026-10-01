@@ -1,7 +1,3 @@
-// US-PainIntervention Pro: Comprehensive Clinical Procedure Database
-// Based on: Ultrasound for Interventional Pain Management (Springer 2020) by Philip Peng et al.
-// Standardized for Clinical Practice in Vietnam with 100% Bilingual Springer Atlas Figures.
-
 const PROCEDURES_DATA = [
   {
     "id": "sasd-bursa",
@@ -382,11 +378,11 @@ const PROCEDURES_DATA = [
       }
     ],
     "video": {
-      "videoId": "KUx7dhaKSAk",
-      "title": "Diaphragm-Sparing Blocks for Shoulder Analgesia",
-      "channel": "NYSORA - Education",
-      "url": "https://www.youtube.com/watch?v=KUx7dhaKSAk",
-      "embedUrl": "https://www.youtube.com/embed/KUx7dhaKSAk"
+      "videoId": "nBS3N9efdWo",
+      "title": "Suprascapular Nerve Block- Ultrasound Guided",
+      "channel": "Leicester Pain Education",
+      "url": "https://www.youtube.com/watch?v=nBS3N9efdWo",
+      "embedUrl": "https://www.youtube.com/embed/nBS3N9efdWo"
     }
   },
   {
@@ -611,11 +607,11 @@ const PROCEDURES_DATA = [
       }
     ],
     "video": {
-      "videoId": "RCz1RSvcFUI",
-      "title": "Non-Surgical Carpal Tunnel Treatment with Nerve Hydrodissection",
-      "channel": "Sebastian Klisiewicz | Integrative Rehab Medicine",
-      "url": "https://www.youtube.com/watch?v=RCz1RSvcFUI",
-      "embedUrl": "https://www.youtube.com/embed/RCz1RSvcFUI"
+      "videoId": "sxNqVWDwmd0",
+      "title": "How To: Ultrasound Guided Carpal Tunnel Injection 3D Video",
+      "channel": "Sonosite",
+      "url": "https://www.youtube.com/watch?v=sxNqVWDwmd0",
+      "embedUrl": "https://www.youtube.com/embed/sxNqVWDwmd0"
     }
   },
   {
@@ -1000,11 +996,11 @@ const PROCEDURES_DATA = [
       }
     ],
     "video": {
-      "videoId": "ZfVuFH1AaMQ",
-      "title": "👨‍⚕️ Ultrasound-Guided Baker Cyst Aspiration: A video demonstration",
-      "channel": "DARADIA: The Pain Clinic",
-      "url": "https://www.youtube.com/watch?v=ZfVuFH1AaMQ",
-      "embedUrl": "https://www.youtube.com/embed/ZfVuFH1AaMQ"
+      "videoId": "hu5gODBof04",
+      "title": "How to Scan & Inject a Baker's Cyst with Ultrasound",
+      "channel": "Sports Medicine Ultrasound",
+      "url": "https://www.youtube.com/watch?v=hu5gODBof04",
+      "embedUrl": "https://www.youtube.com/embed/hu5gODBof04"
     }
   },
   {
@@ -1074,11 +1070,11 @@ const PROCEDURES_DATA = [
       }
     ],
     "video": {
-      "videoId": "-pwbETCX1hk",
-      "title": "#ultrasound Guided Interventions: Pes Anserine (Imaging) #fyp #sport #sports #sportsmedicine",
-      "channel": "SportDrDinesh",
-      "url": "https://www.youtube.com/watch?v=-pwbETCX1hk",
-      "embedUrl": "https://www.youtube.com/embed/-pwbETCX1hk"
+      "videoId": "Nw9UwEtMVn0",
+      "title": "Pes Anserine Bursitis Injection Under Ultrasound-Guidance",
+      "channel": "Dr HASSAN MUBARK",
+      "url": "https://www.youtube.com/watch?v=Nw9UwEtMVn0",
+      "embedUrl": "https://www.youtube.com/embed/Nw9UwEtMVn0"
     }
   },
   {
@@ -1942,11 +1938,11 @@ const PROCEDURES_DATA = [
       }
     ],
     "video": {
-      "videoId": "oiV-O0y8zB0",
-      "title": "Pain Medicine - Lumbar Medial Branch, Facet Joint and Nerve Root Blocks",
-      "channel": "Regional Anesthesia",
-      "url": "https://www.youtube.com/watch?v=oiV-O0y8zB0",
-      "embedUrl": "https://www.youtube.com/embed/oiV-O0y8zB0"
+      "videoId": "3fhPb-ZNml4",
+      "title": "Lumbar Medial Branch Block",
+      "channel": "The Spine & Pain Institute of New York",
+      "url": "https://www.youtube.com/watch?v=3fhPb-ZNml4",
+      "embedUrl": "https://www.youtube.com/embed/3fhPb-ZNml4"
     }
   },
   {
@@ -2339,11 +2335,11 @@ const PROCEDURES_DATA = [
       }
     ],
     "video": {
-      "videoId": "oFtIwtkwOak",
-      "title": "PRP: Platelet Rich Plasma and Ultrasound Guided Injections",
-      "channel": "OrthoVirginia",
-      "url": "https://www.youtube.com/watch?v=oFtIwtkwOak",
-      "embedUrl": "https://www.youtube.com/embed/oFtIwtkwOak"
+      "videoId": "kP0HzwMDZos",
+      "title": "Hip Joint PRP Injection with Ultrasound - Scanning and Injection Technique Training Video",
+      "channel": "Sports Medicine Ultrasound",
+      "url": "https://www.youtube.com/watch?v=kP0HzwMDZos",
+      "embedUrl": "https://www.youtube.com/embed/kP0HzwMDZos"
     }
   },
   {
@@ -2764,11 +2760,11 @@ const PROCEDURES_DATA = [
       }
     ],
     "video": {
-      "videoId": "ey5aLOllrSE",
-      "title": "Third Occipital Nerve & Cervical Medial Branch Block",
-      "channel": "Regional Anesthesia",
-      "url": "https://www.youtube.com/watch?v=ey5aLOllrSE",
-      "embedUrl": "https://www.youtube.com/embed/ey5aLOllrSE"
+      "videoId": "jdYiVV1LVzk",
+      "title": "Ultrasound-Guided Cervical Facet Joint Injection – Cervical Medial Branch Block Medstudylab.com",
+      "channel": "Anesthesia and Pain medicine",
+      "url": "https://www.youtube.com/watch?v=jdYiVV1LVzk",
+      "embedUrl": "https://www.youtube.com/embed/jdYiVV1LVzk"
     }
   },
   {
@@ -2935,11 +2931,11 @@ const PROCEDURES_DATA = [
       }
     ],
     "video": {
-      "videoId": "Xa0pbbEPFNk",
-      "title": "Ultrasound Guided Obturator Nerve Block",
-      "channel": "Regional Anesthesiology and Acute Pain Medicine",
-      "url": "https://www.youtube.com/watch?v=Xa0pbbEPFNk",
-      "embedUrl": "https://www.youtube.com/embed/Xa0pbbEPFNk"
+      "videoId": "rxAKwGq13Lo",
+      "title": "Obturator Internus Dysfunction, Tendonitis, Bursitis, and Injection",
+      "channel": "Dr. Terkawi Pain Medicine",
+      "url": "https://www.youtube.com/watch?v=rxAKwGq13Lo",
+      "embedUrl": "https://www.youtube.com/embed/rxAKwGq13Lo"
     }
   },
   {
@@ -3011,11 +3007,11 @@ const PROCEDURES_DATA = [
       }
     ],
     "video": {
-      "videoId": "-BbsPX-5Nag",
-      "title": "Ischiofemoral Impingement with Dr. Drew Duerson | AMSSM Sports Ultrasound Case Presentation",
-      "channel": "The AMSSM",
-      "url": "https://www.youtube.com/watch?v=-BbsPX-5Nag",
-      "embedUrl": "https://www.youtube.com/embed/-BbsPX-5Nag"
+      "videoId": "hIogbdYnkIs",
+      "title": "Ischiofemoral Impingement Ultrasound Guided Evaluation and Injection",
+      "channel": "Mehmet Mustafa Ertürk",
+      "url": "https://www.youtube.com/watch?v=hIogbdYnkIs",
+      "embedUrl": "https://www.youtube.com/embed/hIogbdYnkIs"
     }
   },
   {
@@ -3098,11 +3094,11 @@ const PROCEDURES_DATA = [
       }
     ],
     "video": {
-      "videoId": "BhEHVFTc6ls",
-      "title": "PUDENDAL NERVE BLOCK",
-      "channel": "Vicente Roques Escolar",
-      "url": "https://www.youtube.com/watch?v=BhEHVFTc6ls",
-      "embedUrl": "https://www.youtube.com/embed/BhEHVFTc6ls"
+      "videoId": "jhBZXwFm7nM",
+      "title": "Ultrasound Guided Pudendal Nerve Block",
+      "channel": "American Society For Post Surgical Pain",
+      "url": "https://www.youtube.com/watch?v=jhBZXwFm7nM",
+      "embedUrl": "https://www.youtube.com/embed/jhBZXwFm7nM"
     }
   },
   {
@@ -3173,11 +3169,11 @@ const PROCEDURES_DATA = [
       }
     ],
     "video": {
-      "videoId": "hVjX8KrnSpQ",
-      "title": "Dr. David Rosenblum: The Ultrasound Guided Superior Cluneal Nerve Block",
-      "channel": "PainCast",
-      "url": "https://www.youtube.com/watch?v=hVjX8KrnSpQ",
-      "embedUrl": "https://www.youtube.com/embed/hVjX8KrnSpQ"
+      "videoId": "2EwE3RMrvtU",
+      "title": "Locating the Inferior Cluneal Nerve - Neural Surface Anatomy Series - Stimpod NMS460",
+      "channel": "Xavant Technology",
+      "url": "https://www.youtube.com/watch?v=2EwE3RMrvtU",
+      "embedUrl": "https://www.youtube.com/embed/2EwE3RMrvtU"
     }
   },
   {
@@ -3256,11 +3252,11 @@ const PROCEDURES_DATA = [
       }
     ],
     "video": {
-      "videoId": "tNbLvql0TQU",
-      "title": "How To: Ultrasound Guided Sacro-iliac Injection - Sonosite Ultrasound 3D Video",
-      "channel": "Sonosite",
-      "url": "https://www.youtube.com/watch?v=tNbLvql0TQU",
-      "embedUrl": "https://www.youtube.com/embed/tNbLvql0TQU"
+      "videoId": "KwtPeTkgsfE",
+      "title": "Ultrasound Imaging of the Sacrum and Injection Techniques. Dr. C.P. Lin, Taiwan",
+      "channel": "isspsTV",
+      "url": "https://www.youtube.com/watch?v=KwtPeTkgsfE",
+      "embedUrl": "https://www.youtube.com/embed/KwtPeTkgsfE"
     }
   },
   {
@@ -3343,7 +3339,7 @@ const PROCEDURES_DATA = [
     ],
     "video": {
       "videoId": "t61ip9BEyoI",
-      "title": "Dr Agnes Stogicza - Radiofrequency E-Learning Seminar 1 Session 4: Sacroiliac joint denervation",
+      "title": "Dr Agnes Stogicza - Radiofrequency E-Learning Seminar 1 Session 4: Sacroiliac Joint Denervation",
       "channel": "Painschool International",
       "url": "https://www.youtube.com/watch?v=t61ip9BEyoI",
       "embedUrl": "https://www.youtube.com/embed/t61ip9BEyoI"
@@ -3414,11 +3410,11 @@ const PROCEDURES_DATA = [
       }
     ],
     "video": {
-      "videoId": "uQO6DxfHTkw",
-      "title": "Ultrasound guided glenohumeral joint injection - 2 min series MSKUS",
-      "channel": "SMUG MSK ultrasound training",
-      "url": "https://www.youtube.com/watch?v=uQO6DxfHTkw",
-      "embedUrl": "https://www.youtube.com/embed/uQO6DxfHTkw"
+      "videoId": "f9zo3Ti4CcI",
+      "title": "Rotator Cuff Interval Injection: 3-Step USG Approach | Frozen Shoulder | Dr. Chinmoy Roy",
+      "channel": "Asian Pain Academy",
+      "url": "https://www.youtube.com/watch?v=f9zo3Ti4CcI",
+      "embedUrl": "https://www.youtube.com/embed/f9zo3Ti4CcI"
     }
   },
   {
@@ -3736,11 +3732,11 @@ const PROCEDURES_DATA = [
       }
     ],
     "video": {
-      "videoId": "5-D6lI7MauU",
-      "title": "#ultrasound Guided Interventions: Iliotibial Band Bursa (Injection)",
-      "channel": "SportDrDinesh",
-      "url": "https://www.youtube.com/watch?v=5-D6lI7MauU",
-      "embedUrl": "https://www.youtube.com/embed/5-D6lI7MauU"
+      "videoId": "aKZugeNA0zM",
+      "title": "Ultrasound Guided Injection for ITB Syndrome",
+      "channel": "The Podiatry Clinic",
+      "url": "https://www.youtube.com/watch?v=aKZugeNA0zM",
+      "embedUrl": "https://www.youtube.com/embed/aKZugeNA0zM"
     }
   },
   {
@@ -3814,11 +3810,11 @@ const PROCEDURES_DATA = [
       }
     ],
     "video": {
-      "videoId": "11kLBQq5bnU",
-      "title": "#ultrasound Guided Interventions: Patella Tendon (Injection) #fyp #sport #sports #sportsmedicine",
-      "channel": "SportDrDinesh",
-      "url": "https://www.youtube.com/watch?v=11kLBQq5bnU",
-      "embedUrl": "https://www.youtube.com/embed/11kLBQq5bnU"
+      "videoId": "fEwF3smEZ0c",
+      "title": "Ultrasound Guided Percutaneous Needle Tenotomy of the Patellar Tendon and PRP Infiltration",
+      "channel": "Dr. Abdallah Allam",
+      "url": "https://www.youtube.com/watch?v=fEwF3smEZ0c",
+      "embedUrl": "https://www.youtube.com/embed/fEwF3smEZ0c"
     }
   },
   {
@@ -4074,11 +4070,11 @@ const PROCEDURES_DATA = [
       }
     ],
     "video": {
-      "videoId": "V3wUBqryP7k",
-      "title": "Dr Agnes Stogicza - Radiofrequency E-Learning Seminar 1 Session 2: Hip denervation",
-      "channel": "Painschool International",
-      "url": "https://www.youtube.com/watch?v=V3wUBqryP7k",
-      "embedUrl": "https://www.youtube.com/embed/V3wUBqryP7k"
+      "videoId": "LjjVeCFlEXA",
+      "title": "PENG Block (Pericapsular Nerve Group Block)",
+      "channel": "Regional Anesthesiology and Acute Pain Medicine",
+      "url": "https://www.youtube.com/watch?v=LjjVeCFlEXA",
+      "embedUrl": "https://www.youtube.com/embed/LjjVeCFlEXA"
     }
   }
 ];
