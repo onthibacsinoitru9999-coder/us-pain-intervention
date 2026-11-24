@@ -2211,3 +2211,213 @@ body {
     box-shadow: none !important;
   }
 }
+
+
+/* ==========================================================================
+   EXTERNAL SURFACE ANATOMY & CROSS-SECTIONAL ANATOMY EXTENSIONS (v1.2.0)
+   ========================================================================== */
+.flex-1 {
+  flex: 1 1 0%;
+  min-width: 0;
+}
+
+.anatomy-stage-title-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.anatomy-source-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.68rem;
+  font-weight: 600;
+  color: #0f766e;
+  background-color: #f0fdfa;
+  border: 1px solid #99f6e4;
+  border-radius: 9999px;
+  padding: 0.16rem 0.55rem;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.anatomy-stage-surface .anatomy-source-pill {
+  color: #92400e;
+  background-color: #fffbeb;
+  border-color: #fde68a;
+}
+
+.cross-plane-banner {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  background-color: #f0fdfa;
+  border: 1px solid #99f6e4;
+  border-left: 3px solid #0d9488;
+  border-radius: var(--radius-sm);
+  padding: 0.65rem 0.85rem;
+  margin-bottom: 0.85rem;
+  font-size: 0.79rem;
+  line-height: 1.55;
+}
+
+.cross-plane-label {
+  font-weight: 800;
+  color: #115e59;
+  flex-shrink: 0;
+}
+
+.cross-plane-text {
+  color: var(--text-main);
+  font-weight: 600;
+}
+
+.cross-layers-box {
+  background-color: var(--bg-subtle);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  padding: 0.85rem 0.9rem;
+  margin-bottom: 0.85rem;
+}
+
+.cross-layers-title {
+  font-size: 0.78rem;
+  font-weight: 800;
+  color: var(--text-main);
+  margin-bottom: 0.55rem;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.cross-layer-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.cross-layer-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-left: 3px solid #64748b;
+  border-radius: 6px;
+  padding: 0.55rem 0.7rem;
+  transition: border-color 0.15s ease;
+}
+
+.cross-layer-item.is-target-layer {
+  background-color: #ecfdf5;
+  border-color: #6ee7b7;
+  border-left: 4px solid #059669;
+  box-shadow: 0 1px 3px rgba(5, 150, 105, 0.08);
+}
+
+.cross-layer-badge {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 56px;
+  padding: 0.15rem 0.45rem;
+  border-radius: 4px;
+  background-color: #f1f5f9;
+  color: #334155;
+  font-size: 0.67rem;
+  font-weight: 800;
+  margin-top: 0.1rem;
+}
+
+.cross-layer-item.is-target-layer .cross-layer-badge {
+  background-color: #059669;
+  color: #ffffff;
+}
+
+.cross-layer-body {
+  font-size: 0.78rem;
+  color: var(--text-main);
+  line-height: 1.56;
+  flex: 1;
+}
+
+.anatomy-fig-source {
+  margin-top: 0.4rem;
+  padding-top: 0.35rem;
+  border-top: 1px solid var(--border-subtle);
+  font-size: 0.68rem;
+  color: #0f766e;
+  font-style: italic;
+  line-height: 1.35;
+}
+
+[data-theme="dark"] .anatomy-source-pill {
+  background-color: rgba(19, 78, 74, 0.4);
+  border-color: #115e59;
+  color: #5eead4;
+}
+
+[data-theme="dark"] .anatomy-stage-surface .anatomy-source-pill {
+  background-color: rgba(120, 53, 15, 0.35);
+  border-color: #78350f;
+  color: #fcd34d;
+}
+
+[data-theme="dark"] .cross-plane-banner {
+  background-color: rgba(19, 78, 74, 0.32);
+  border-color: #115e59;
+  border-left-color: #14b8a6;
+}
+
+[data-theme="dark"] .cross-plane-label {
+  color: #5eead4;
+}
+
+[data-theme="dark"] .cross-layer-item {
+  background-color: var(--bg-card);
+  border-color: var(--border-color);
+  border-left-color: #94a3b8;
+}
+
+[data-theme="dark"] .cross-layer-item.is-target-layer {
+  background-color: rgba(6, 78, 59, 0.38);
+  border-color: #047857;
+  border-left-color: #10b981;
+}
+
+[data-theme="dark"] .cross-layer-badge {
+  background-color: #1e293b;
+  color: #cbd5e1;
+}
+
+[data-theme="dark"] .cross-layer-item.is-target-layer .cross-layer-badge {
+  background-color: #059669;
+  color: #ffffff;
+}
+
+[data-theme="dark"] .anatomy-fig-source {
+  color: #5eead4;
+}
+
+@media (max-width: 768px) {
+  .anatomy-source-pill {
+    white-space: normal;
+    line-height: 1.3;
+    border-radius: 6px;
+  }
+  .cross-layer-item {
+    flex-direction: column;
+    gap: 0.3rem;
+    padding: 0.5rem 0.65rem;
+  }
+}

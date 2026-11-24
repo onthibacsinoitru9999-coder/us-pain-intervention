@@ -1,8 +1,8 @@
 /**
- * US-PainIntervention Pro - STABLE FALLBACK DATA (Bản sao dự phòng ổn định v1.1.0)
+ * US-PainIntervention Pro - STABLE FALLBACK DATA (Bản sao dự phòng ổn định v1.2.0)
  * Tự động kích hoạt khi tệp dữ liệu chính data/procedures.js gặp lỗi cú pháp, bị hỏng hoặc mất kết nối.
- * Ngày tạo bản sao: 2026-11-24 18:23:55
- * Phiên bản: v1.1.0-stable (51 quy trình lâm sàng Springer kèm Giải phẫu & Giải phẫu bề mặt)
+ * Ngày tạo bản sao: 2026-11-24 19:45:17
+ * Phiên bản: v1.2.0-stable (51 quy trình kèm Giải phẫu Bề mặt & Giải phẫu Thiết đồ nguồn Atlas kinh điển ngoài sách)
  */
 
 var STABLE_PROCEDURES_FALLBACK = [];
@@ -37,45 +37,56 @@ var STABLE_PROCEDURES_FALLBACK = [];
         "Rối loạn đông máu nặng (INR > 2.0 hoặc tiểu cầu < 50 G/L)."
       ]
     },
-    "anatomy": {
-      "overview": "Bao hoạt dịch dưới mỏm cùng vai – dưới cơ delta (Subacromial-Subdeltoid Bursa - SASD) là bao hoạt dịch lớn nhất vùng vai, cấu tạo gồm hai khoang thanh mạc thông nối trực tiếp với nhau ở khoảng 95% người trưởng thành. Túi SASD lót ngay dưới vòm quạ – cùng vai (gồm mỏm cùng vai, dây chằng quạ – cùng vai và mỏm quạ) cùng mặt sâu cơ delta, đồng thời phủ lên mặt nông gân cơ trên gai, phần trước gân dưới gai và đoạn gần rãnh nhị đầu để giảm ma sát khi dạng và nâng vai.",
-      "targetStructure": "Khoang ảo bao hoạt dịch SASD (bình thường dày < 2 mm gồm lớp thanh mạc và lớp mỡ quanh bao) nằm kẹp giữa mạc sâu cơ delta ở nông và bề mặt gân cơ trên gai ở sâu.",
-      "innervation": "Nhánh cảm giác từ thần kinh trên vai (Suprascapular nerve - C5, C6), thần kinh nách (Axillary nerve) và thần kinh ngực ngoài (Lateral pectoral nerve).",
-      "vascularAndDangerZones": [
-        "Nhánh cùng vai của động mạch ngực – cùng vai (Acromial branch of thoracoacromial artery) chạy dọc theo dây chằng quạ – cùng vai và mặt nông bao hoạt dịch.",
-        "Mạng mạch nuôi vùng nguy hiểm tới hạn (Critical zone) của gân trên gai cách điểm bám củ lớn khoảng 1 cm.",
-        "Bề mặt gân cơ trên gai (Supraspinatus tendon): Tuyệt đối tránh đâm xuyên hoặc bơm corticoid vào nội chất gân gây hoại tử sợi collagen và đứt gân thứ phát."
+    "surfaceAnatomy": {
+      "sourceRef": "Gray's Anatomy (42nd Ed., Standring) – Surface Anatomy of Shoulder; Moore's Clinically Oriented Anatomy (9th Ed.)",
+      "surfaceLandmarks": [
+        "Bờ ngoài và góc trước ngoài mỏm cùng vai (Anterolateral acromial edge): Gờ xương dẹt nằm nông ngay dưới da đỉnh vai, dễ sờ dọc từ gai vai ra trước.",
+        "Củ lớn xương cánh tay (Greater tubercle of humerus): Khối xương lồi tròn nằm thấp hơn bờ ngoài mỏm cùng vai 1.5 – 2.0 cm, tạo nên đường cong tròn tự nhiên của ụ vai dưới cơ delta.",
+        "Mỏm quạ xương vai (Coracoid process): Sờ thấy ở sâu trong hố dưới đòn thuộc rãnh delta – ngực, cách bờ dưới xương đòn ~2.0 cm tại ranh giới 1/3 ngoài và 2/3 trong.",
+        "Điểm Codman (Codman's point): Điểm chiếu bề mặt kinh điển của vùng tới hạn gân trên gai và túi hoạt dịch dưới mỏm cùng vai, nằm ngay trước góc trước ngoài mỏm cùng vai ~1 cm khi cánh tay duỗi và xoay trong."
+      ],
+      "surfaceProjections": "Hình chiếu bề mặt của bao hoạt dịch SASD trải rộng như một mũ vòm từ dưới mỏm cùng vai và dây chằng quạ – cùng vai (trần vòm cùng vai) vượt ra ngoài bờ mỏm cùng vai khoảng 2.5 – 3.5 cm xuống phủ mặt ngoài củ lớn xương cánh tay dưới bó giữa cơ delta. Đường nối đỉnh mỏm quạ tới góc trước ngoài mỏm cùng vai đánh dấu chính xác bờ bề mặt của dây chằng quạ – cùng vai (mái cứng gây hội chứng chạm mỏm cùng vai).",
+      "palpationSteps": [
+        "1. Đứng sau hoặc bên bệnh nhân ngồi thẳng: dùng ngón trỏ lần dọc bờ trên gai vai ra ngoài tới góc sau ngoài mỏm cùng vai (góc 90°), rồi miết dọc bờ ngoài tới góc trước ngoài mỏm cùng vai.",
+        "2. Hạ ngón tay xuống dưới bờ ngoài mỏm cùng vai 1.5 cm để tìm khe lõm dưới mỏm cùng vai (Subacromial sulcus) và khối củ lớn xương cánh tay ở ngay bên dưới.",
+        "3. Đưa tay bệnh nhân về tư thế Crass cải tiến (chống mu bàn tay lên mào chậu sau, khuỷu hướng ra sau ngoài): lúc này củ lớn và điểm Codman xoay lồi hẳn ra phía trước ngoài vòm cùng vai để đặt đầu dò và đi kim không vướng trần xương."
       ],
       "figures": [
         {
-          "path": "assets/images/anatomy/fig_19_02_rotator_cuff_sasd.jpg",
-          "figNumber": "19.2",
-          "title": "Giải phẫu 4 cơ chóp xoay, vòm quạ - cùng vai và bao hoạt dịch SASD (Fig. 19.2)",
-          "desc": "Bao hoạt dịch SASD (màu xanh mờ) nằm dưới cơ delta và vòm dây chằng quạ - cùng vai, phủ trực tiếp lên mặt nông gân cơ trên gai.",
-          "springerCaption": "Fig. 19.2 The four rotator cuff muscles and SASD bursa located deep to the acromion and deltoid muscle and superficial to the supraspinatus tendon."
+          "path": "assets/images/external_anatomy/ext_surf_upper_front_nerves_arteries_gray1235.png",
+          "figNumber": "Gray 1235",
+          "title": "Giải phẫu bề mặt mặt trước vùng vai - cánh tay: Hình chiếu xương, mạch máu và thần kinh (Gray's Plate 1235)",
+          "desc": "Đối chiếu bề mặt đầu ngoài xương đòn, mỏm cùng vai, mỏm quạ, chỏm - củ lớn xương cánh tay và đường chiếu động mạch nách - thần kinh mũ dưới cơ delta.",
+          "atlasSource": "Gray's Anatomy (20th Ed., Plate 1235) – Surface markings of right upper extremity (anterior aspect)."
         }
       ]
     },
-    "surfaceAnatomy": {
-      "bonyLandmarks": [
-        "Bờ ngoài mỏm cùng vai (Anterolateral & Lateral border of acromion): Gờ xương phẳng sờ rất rõ trên đỉnh ngoài vai.",
-        "Củ lớn xương cánh tay (Greater tuberosity): Gồ xương tròn nằm ngay phía dưới ngoài bờ mỏm cùng vai khoảng 1.5 - 2 cm.",
-        "Mỏm quạ xương vai (Coracoid process): Điểm xương nhô ra ở rãnh delta – ngực phía trước dưới xương đòn."
+    "crossSectionalAnatomy": {
+      "sourceRef": "Ellis, Logan & Dixon – Human Sectional Anatomy; Gray's Anatomy – Coronal Section of Glenohumeral & Subacromial Space",
+      "sectionPlane": "Thiết đồ đứng ngang (Oblique Coronal Section) cắt dọc theo trục cơ trên gai qua mỏm cùng vai, khoang dưới mỏm cùng vai và củ lớn xương cánh tay.",
+      "layeredStructure": [
+        "Lớp 1 – Da và mô mỡ dưới da vùng ụ vai (dày ~4 – 10 mm): Chứa các nhánh bì của thần kinh trên đòn ngoài (C3–C4) ở phần trên và nhánh bì cánh tay ngoài trên của thần kinh nách (C5–C6) ở phần dưới.",
+        "Lớp 2 – Mạc nông và Mạc cơ delta (Deltoid fascia): Bao bọc bó giữa cơ delta cấu trúc nhiều vách sợi lông vũ (Multipennate).",
+        "Lớp 3 – Bó giữa cơ delta (Middle head of deltoid, dày ~10 – 18 mm) và lớp mỡ dưới cơ delta – dưới mỏm cùng vai (Peribursal fat plane dày ~1 – 2 mm, chứa nhánh cùng vai của động mạch ngực – cùng vai).",
+        "Lớp 4 – KHOANG ĐÍCH: Bao hoạt dịch dưới mỏm cùng vai – dưới cơ delta (SASD bursa) gồm lá thành dính vào mạc sâu cơ delta/mặt dưới mỏm cùng vai và lá tạng dính chặt mặt nông gân cơ trên gai (khoang ảo bình thường < 1.5 mm).",
+        "Lớp 5 – Gân cơ trên gai (Supraspinatus tendon, dày ~5 – 7 mm) hòa nhập cùng lá trên bao khớp ổ chảo – cánh tay bám tận vào diện trên (Superior facet) củ lớn xương cánh tay.",
+        "Lớp 6 (Đáy thiết đồ) – Sụn khớp hyalin chỏm xương cánh tay, vỏ xương củ lớn và ngách trên khoang khớp ổ chảo – cánh tay (bình thường KHÔNG thông với túi SASD trừ khi rách xuyên bề dày chóp xoay!)."
       ],
-      "referenceLines": "Khe dưới mỏm cùng vai (Subacromial space): Rãnh lõm sờ thấy ngay dưới bờ trước ngoài mỏm cùng vai khi kéo nhẹ cánh tay xuôi xuống; trục gân trên gai chạy chếch từ hố trên gai qua dưới mỏm cùng vai tới củ lớn.",
-      "palpationSteps": [
-        "1. Dùng ngón trỏ và ngón giữa lần dọc từ gai vai ra phía ngoài để xác định góc sau ngoài và bờ ngoài mỏm cùng vai.",
-        "2. Trượt ngón tay xuống dưới bờ ngoài mỏm cùng vai khoảng 1 khoát ngón tay để chạm vào củ lớn xương cánh tay; xoay trong – xoay ngoài nhẹ cánh tay để cảm nhận củ lớn lăn dưới ngón tay.",
-        "3. Đưa tay bệnh nhân về tư thế Crass cải tiến (đặt lòng bàn tay lên mào chậu/túi quần sau, khuỷu hướng ra sau) để kéo củ lớn và gân trên gai trồi ra phía trước ngoài khỏi bóng cản của mỏm cùng vai."
+      "topographicRelations": {
+        "superficialAndDeep": "Phía nông trên thiết đồ là bó giữa cơ delta, trần mỏm cùng vai và dây chằng quạ – cùng vai; phía sâu là mặt hoạt dịch gân trên gai, bao khớp trên và diện xương củ lớn.",
+        "medialAndLateral": "Phía trong là khe khớp cùng – đòn và hố trên gai; phía ngoài là ngách túi cùng bên của túi SASD trùm xuống dưới củ lớn ~2 – 3 cm (cách thần kinh nách và động mạch mũ cánh tay sau vòng quanh cổ phẫu thuật khoảng 3 – 4 cm về phía dưới)."
+      },
+      "dangerCorridors": [
+        "Tránh chọc thấp quá 5 cm dưới bờ ngoài mỏm cùng vai trên mặt phẳng đứng ngang vì thần kinh nách và động mạch mũ cánh tay sau chạy ngang mặt sâu cơ delta quanh cổ phẫu thuật xương cánh tay.",
+        "Tránh đâm xuyên qua lá tạng bao hoạt dịch xuống Lớp 5 (vùng vô mạch Critical zone của gân trên gai cách diện bám củ lớn 10 mm) gây hoại tử đứt gân."
       ],
-      "probePlacement": "Đặt đầu dò Linear theo mặt phẳng trán chếch (Oblique coronal / trục dọc gân trên gai) ngay sát bờ trước ngoài mỏm cùng vai, đầu trong tựa mép mỏm cùng vai, đầu ngoài phủ lên sườn củ lớn xương cánh tay.",
       "figures": [
         {
-          "path": "assets/images/anatomy/fig_19_09b_acromion_sagittal_probe.jpg",
-          "figNumber": "19.9b",
-          "title": "Mốc bề mặt mỏm cùng vai và cách đặt đầu dò định vị trên vai (Fig. 19.9b)",
-          "desc": "Xác định bề mặt xương mỏm cùng vai làm mốc chuẩn trước khi trượt đầu dò ra bờ ngoài xuống khoang dưới mỏm cùng vai.",
-          "springerCaption": "Fig. 19.9b Surface probe placement over the acromion landmark."
+          "path": "assets/images/external_anatomy/ext_sec_shoulder_coronal_dbcls.png",
+          "figNumber": "Coronal Sec.",
+          "title": "Thiết đồ đứng ngang (Coronal Section) qua khớp vai và bao hoạt dịch SASD (DBCLS Anatomical Atlas)",
+          "desc": "Thiết đồ cắt lớp chuẩn hiển thị rõ 6 tầng từ ngoài vào: cơ delta, khoang bao hoạt dịch SASD (xanh đậm phía trên ngoài), gân cơ trên gai, khoang khớp ổ chảo - cánh tay, sụn viền và ngách nách.",
+          "atlasSource": "DBCLS Anatomical Atlas (CC-BY 4.0) – Coronal section of the shoulder joint and subacromial-subdeltoid bursa."
         }
       ]
     },
@@ -163,45 +174,63 @@ var STABLE_PROCEDURES_FALLBACK = [];
         "Rách sụn viền sau hoặc nang sụn viền lớn có chèn ép thần kinh trên vai chưa đánh giá kỹ."
       ]
     },
-    "anatomy": {
-      "overview": "Khớp ổ chảo – cánh tay (Glenohumeral Joint - GHJ) là khớp chỏm cầu hoạt dịch biên độ rộng giữa chỏm xương cánh tay lớn và ổ chảo xương vai nông, được mở rộng và làm sâu thêm bởi sụn viền ổ chảo (Glenoid labrum). Bao khớp phía sau mỏng và chùng hơn phía trước, được che phủ trực tiếp bởi bụng cơ và gân cơ dưới gai (Infraspinatus) ở trên và cơ tròn bé (Teres minor) ở dưới, không có các bó mạch thần kinh lớn đi ngang qua trung tâm khe khớp sau.",
-      "targetStructure": "Ngách sau khoang khớp ổ chảo – cánh tay (Posterior glenohumeral recess), nằm giữa lớp sụn hyalin chỏm xương cánh tay và bờ tự do sụn viền sau ổ chảo, ngay mặt sâu của gân cơ dưới gai.",
-      "innervation": "Thần kinh trên vai (Suprascapular nerve - chi phối 70% cảm giác bao khớp trên và sau), thần kinh nách (Axillary nerve - bao khớp dưới) và thần kinh dưới vai.",
-      "vascularAndDangerZones": [
-        "Thần kinh trên vai và động mạch trên vai đi qua khuyết quạ – gai vai (Spinoglenoid notch) nằm cách bờ ổ chảo khoảng 1.5 - 2 cm về phía trong (cần tránh đưa kim hoặc đặt đầu dò quá sâu vào phía trong ổ chảo).",
-        "Động mạch mũ cánh tay sau và thần kinh nách đi qua lỗ tứ giác (Quadrangular space) ở phía dưới cơ tròn bé (tránh trượt đầu dò quá thấp xuống nách sau).",
-        "Sụn viền sau (Posterior labrum): Cấu trúc sụn sợi hình tam giác bám bờ sau ổ chảo – tuyệt đối không đâm xuyên mũi kim qua sụn viền."
+    "surfaceAnatomy": {
+      "sourceRef": "Gray's Anatomy (42nd Ed.) – Surface Markings of Back & Scapula; Moore's Clinically Oriented Anatomy",
+      "surfaceLandmarks": [
+        "Gai vai (Spine of scapula): Gờ xương ngang bắt đầu từ bờ sống xương vai ngang mức mỏm gai đốt sống ngực T3 chạy chếch lên trên – ra ngoài.",
+        "Góc sau ngoài mỏm cùng vai (Posterolateral angle of acromion): Mấu xương nhô gập góc rõ rệt nơi bờ dưới gai vai nối tiếp bờ ngoài mỏm cùng vai.",
+        "Mỏm quạ (Coracoid process) ở mặt trước: Tạo với điểm sau ngoài trục định hướng trước – sau của khe khớp ổ chảo.",
+        "Điểm mềm nội khớp vai sau (Posterior arthroscopic/injection soft spot): Hõm cơ mềm nằm thấp hơn góc sau ngoài mỏm cùng vai 2.0 cm và lệch vào phía trong 1.0 – 1.5 cm."
+      ],
+      "surfaceProjections": "Trên mặt da vùng vai sau, khe khớp ổ chảo – cánh tay sau chiếu thành một đường cong đứng dọc hơi lõm vào trong nằm cách góc sau ngoài mỏm cùng vai ~2 cm về phía trong dưới. Bờ ổ chảo không hướng thẳng ra ngoài mà nghiêng ra trước ~30° so với mặt phẳng trán của cơ thể (góc nghiêng xương bả vai – Scapular plane).",
+      "palpationSteps": [
+        "1. Cho bệnh nhân ngồi thẳng, vắt bàn tay bên đau đặt lên vai lành đối diện (khép ngang và xoay trong cánh tay giúp kéo căng mở rộng tối đa bao khớp sau).",
+        "2. Dùng ngón cái tay không thuận sờ dọc bờ dưới gai vai ra ngoài tìm đúng góc gập vuông sau ngoài của mỏm cùng vai.",
+        "3. Đặt ngón trỏ phía trước vào đỉnh mỏm quạ, ngón cái phía sau trượt từ góc sau ngoài mỏm cùng vai xuống dưới 2 cm và vào trong 1.5 cm: xoay nhẹ cánh tay bệnh nhân sẽ thấy chỏm xương cánh tay lăn dưới ngón cái còn ổ chảo đứng yên."
       ],
       "figures": [
         {
-          "path": "assets/images/anatomy/fig_19_01_gh_capsule_ligaments.jpg",
-          "figNumber": "19.1",
-          "title": "Giải phẫu bao khớp ổ chảo - cánh tay, dây chằng và sụn viền ổ chảo (Fig. 19.1)",
-          "desc": "Hệ thống bao khớp ổ chảo - cánh tay, các dây chằng gia cố và thiết đồ diện khớp ổ chảo kèm vòng sụn viền (Labrum).",
-          "springerCaption": "Fig. 19.1 The GH joint capsule, surrounding ligaments, and inset showing the glenoid articular surface and labrum."
+          "path": "assets/images/external_anatomy/ext_surf_upper_back_nerves_bones_gray1236.png",
+          "figNumber": "Gray 1236",
+          "title": "Giải phẫu bề mặt mặt sau vai và chi trên: Hình chiếu gai vai, mỏm cùng vai và thần kinh nách - quay (Gray's Plate 1236)",
+          "desc": "Hình chiếu bề mặt gai vai, góc sau mỏm cùng vai, khe khớp vai sau và đường đi của thần kinh nách qua lỗ tứ giác ngay phía dưới cơ tròn bé.",
+          "atlasSource": "Gray's Anatomy (20th Ed., Plate 1236) – Back of right upper extremity showing surface markings for bones and nerves."
         }
       ]
     },
-    "surfaceAnatomy": {
-      "bonyLandmarks": [
-        "Gai vai (Spine of scapula): Gờ xương ngang chạy suốt mặt sau xương vai ra phía ngoài.",
-        "Góc sau ngoài mỏm cùng vai (Posterolateral corner of acromion): Mốc xương gồ rõ nơi gai vai chuyển góc ra trước thành mỏm cùng vai.",
-        "Mỏm quạ (Coracoid process) ở phía trước (dùng làm mốc định hướng trục trước – sau của khớp)."
+    "crossSectionalAnatomy": {
+      "sourceRef": "Gray's Anatomy – Axial & Coronal Sectional Anatomy of Glenohumeral Joint; Netter's Cross-Sectional Anatomy",
+      "sectionPlane": "Thiết đồ cắt ngang (Axial / Transverse Section) đi ngay dưới gai vai qua hố dưới gai, sụn viền ổ chảo sau và chỏm xương cánh tay.",
+      "layeredStructure": [
+        "Lớp 1 – Da và lớp mỡ dưới da vùng vai sau (dày ~5 – 15 mm tùy thể trạng): Chứa các nhánh bì từ ngành sau thần kinh ngực trên và nhánh bì cánh tay ngoài trên.",
+        "Lớp 2 – Mạc cơ delta và Bó sau cơ delta (Posterior deltoid muscle): Phủ phần ngoài của thiết đồ, mỏng dần khi tiến vào phía trong hố dưới gai.",
+        "Lớp 3 – Mạc dưới gai dày chắc và Bụng cơ / Gân cơ dưới gai (Infraspinatus muscle & tendon; ở bờ dưới hơn là cơ tròn bé Teres minor).",
+        "Lớp 4 – Bao xơ khớp ổ chảo – cánh tay sau (Posterior fibrous capsule – mỏng nhất trong các thành bao khớp) và màng hoạt dịch lót trong.",
+        "Lớp 5 – KHOANG ĐÍCH: Ngách sau ổ khớp ổ chảo – cánh tay (Posterior glenohumeral joint recess) nằm ngay khoảng tam giác giữa bờ tự do sụn viền sau (Posterior glenoid labrum) và lớp sụn hyalin chỏm xương cánh tay.",
+        "Lớp 6 (Đáy thiết đồ) – Vỏ xương chỏm cánh tay (phía ngoài) và cổ xương vai / bờ sau ổ chảo (phía trong)."
       ],
-      "referenceLines": "Điểm mềm khớp vai sau (Posterior soft spot): Nằm cách góc sau ngoài mỏm cùng vai khoảng 2 cm xuống dưới và 1 - 1.5 cm vào trong, ngay bờ dưới gai vai.",
-      "palpationSteps": [
-        "1. Cho bệnh nhân ngồi thẳng hoặc nằm nghiêng bên lành, bàn tay bên đau đặt vắt lên vai đối diện để khép và xoay trong cánh tay (giúp kéo căng mở rộng ngách bao khớp sau).",
-        "2. Dùng ngón cái sờ dọc bờ dưới gai vai từ trong ra ngoài cho đến khi chạm góc gập vuông ở phía sau ngoài (góc sau ngoài mỏm cùng vai).",
-        "3. Từ góc sau ngoài mỏm cùng vai, trượt ngón tay xuống dưới 2 cm vào hố dưới gai, yêu cầu bệnh nhân xoay nhẹ cánh tay qua lại để cảm nhận chỏm xương cánh tay lăn sâu dưới cơ dưới gai."
+      "topographicRelations": {
+        "superficialAndDeep": "Phía nông là bó sau cơ delta và gân cơ dưới gai; phía sâu là sụn chỏm xương cánh tay, sụn viền sau và diện khớp ổ chảo.",
+        "medialAndLateral": "Cách bờ sau ổ chảo 1.5 – 2.0 cm về phía TRONG là khuyết quạ – gai vai (Spinoglenoid notch) chứa bó mạch và thần kinh trên vai (nhánh dưới gai); phía DƯỚI cơ tròn bé ~2 – 3 cm là lỗ tứ giác Velpeau chứa thần kinh nách và động mạch mũ cánh tay sau."
+      },
+      "dangerCorridors": [
+        "Hành lang cấm phía trong: Tuyệt đối không đặt điểm chọc hoặc hướng kim lệch vào trong cổ ổ chảo (vào khuyết quạ – gai vai) để tránh chọc trúng động mạch và thần kinh trên vai.",
+        "Hành lang bảo vệ sụn viền: Đi kim chếch từ ngoài vào trong tiếp tuyến với độ cong chỏm xương cánh tay để lách vào khe giữa sụn chỏm và mặt khớp sụn viền, tránh đâm xuyên qua nền tam giác sụn viền sau."
       ],
-      "probePlacement": "Đặt đầu dò Linear (hoặc Curvilinear ở người cơ dày) nằm ngang song song và ngay sát bờ dưới gai vai (Transverse axial view over infraspinatus fossa), dịch đầu dò ra ngoài – vào trong cho tới khi thấy đồng thời đường cong chỏm cánh tay và bờ sau ổ chảo.",
       "figures": [
         {
-          "path": "assets/images/ch19_shoulder/p223_img1.jpeg",
-          "figNumber": "19.7",
-          "title": "Giải phẫu bề mặt vai sau và vị trí đặt đầu dò dưới gai vai (Fig. 19.7)",
-          "desc": "Đầu dò đặt song song ngay dưới gai vai với bàn tay bệnh nhân vắt sang vai đối diện để bộc lộ khe khớp ổ chảo - cánh tay sau.",
-          "springerCaption": "Fig. 19.7 Posterior view of glenohumeral joint showing surface probe position inferior and parallel to the scapular spine."
+          "path": "assets/images/external_anatomy/ext_sec_shoulder_coronal_dbcls.png",
+          "figNumber": "Joint Sec.",
+          "title": "Thiết đồ cắt lớp bao khớp ổ chảo - cánh tay, sụn viền ổ chảo và các ngách hoạt dịch (DBCLS Atlas)",
+          "desc": "Mối liên quan giải phẫu thiết đồ giữa khoang bao khớp ổ chảo - cánh tay (xanh nhạt), sụn viền bám rìa ổ chảo và lớp cơ chóp xoay phủ ngoài.",
+          "atlasSource": "DBCLS Anatomical Atlas (CC-BY 4.0) – Sectional anatomy of glenohumeral joint cavity and labrum."
+        },
+        {
+          "path": "assets/images/external_anatomy/ext_sec_scapula_suprascapular_gray412.png",
+          "figNumber": "Gray 412",
+          "title": "Giải phẫu phân lớp cơ dưới gai, cơ tròn bé và lỗ tứ giác thần kinh nách mặt sau vai (Gray's Plate 412)",
+          "desc": "Tương quan mặt sau khớp vai giữa cơ dưới gai (phủ trực tiếp bao khớp sau), cơ tròn bé và các lỗ tam giác - tứ giác chứa mạch thần kinh bên dưới.",
+          "atlasSource": "Gray's Anatomy (20th Ed., Plate 412) – Dorsal muscles of the scapula and posterior shoulder spaces."
         }
       ]
     },
@@ -288,45 +317,63 @@ var STABLE_PROCEDURES_FALLBACK = [];
         "Thoái hóa gân nặng có rách dọc nội gân (nguy cơ đứt gân khi tiêm corticoid)."
       ]
     },
-    "anatomy": {
-      "overview": "Gân đầu dài cơ nhị đầu cánh tay (Long Head of Biceps Tendon - LHBT) nguyên ủy từ củ trên ổ chảo và sụn viền trên, đi chéo qua khoang gian chóp xoay (được giữ cố định bởi puli dây chằng quạ – cánh tay CHL và dây chằng ổ chảo – cánh tay trên SGHL) trước khi chui vào rãnh gian củ (Bicipital / Intertubercular groove) giữa củ lớn ở ngoài và củ bé ở trong. Bao hoạt dịch gân nhị đầu là một phần kéo dài trực tiếp của màng hoạt dịch khớp ổ chảo – cánh tay bọc quanh gân trong rãnh xương và được che phủ phía nông bởi dây chằng ngang cánh tay.",
-      "targetStructure": "Khoang bao hoạt dịch quanh gân đầu dài cơ nhị đầu (Bicipital tendon sheath) bên trong rãnh gian củ (ưu tiên ngách bờ trong hoặc bờ sâu quanh gân, không chọc vào lõi gân).",
-      "innervation": "Các nhánh cảm giác từ thần kinh cơ bì (Musculocutaneous nerve), thần kinh nách và mạng lưới sợi giao cảm đi kèm nhánh lên động mạch mũ cánh tay trước.",
-      "vascularAndDangerZones": [
-        "Nhánh lên của động mạch mũ cánh tay trước (Ascending branch of anterior circumflex humeral artery): Luôn chạy song song sát bờ ngoài (đôi khi bờ sau ngoài) của gân LHBT ngay trong rãnh gian củ – bắt buộc bật Color Doppler trước khi chọc kim!",
-        "Lõi sợi gân nhị đầu (LHBT substance): Tiêm steroid trực tiếp vào nội gân gây đứt gân nhị đầu tự phát (biến dạng cơ 'Popeye').",
-        "Gân cơ dưới vai bám vào củ bé ngay sát bờ trong rãnh nhị đầu."
+    "surfaceAnatomy": {
+      "sourceRef": "Gray's Anatomy (42nd Ed.) – Surface Markings of Upper Arm; Moore's Clinically Oriented Anatomy",
+      "surfaceLandmarks": [
+        "Bờ trước mỏm cùng vai (Anterior margin of acromion) ở phía trên.",
+        "Củ bé xương cánh tay (Lesser tubercle – thành trong rãnh gian củ) và Củ lớn xương cánh tay (Greater tubercle – thành ngoài rãnh gian củ).",
+        "Rãnh gian củ / Rãnh nhị đầu (Intertubercular / Bicipital sulcus): Nằm ở chính diện mặt trước chỏm xương cánh tay khi cẳng tay xoay ngoài nhẹ 10° – 15°.",
+        "Bụng cơ nhị đầu cánh tay ở mặt trước 1/3 giữa cánh tay (làm mốc dóng trục gân ngược lên trên)."
+      ],
+      "surfaceProjections": "Khi bệnh nhân để cánh tay xuôi dọc thân mình với lòng bàn tay hướng ra trước nhẹ (xoay ngoài ~10°), rãnh nhị đầu chứa gân đầu dài cơ nhị đầu (LHBT) chiếu thẳng thành một đường dọc dài ~4 – 5 cm ngay chính giữa mặt trước vai, bắt đầu từ điểm cách bờ trước mỏm cùng vai 2.5 cm đi thẳng xuống dọc bờ ngoài rãnh delta – ngực.",
+      "palpationSteps": [
+        "1. Bệnh nhân ngồi thẳng, khuỷu gấp 90°, cẳng tay để ngửa trung tính hoặc xoay ngoài 10° – 15°.",
+        "2. Đặt 2 đầu ngón tay (trỏ và giữa) ấn vừa phải cách dưới bờ trước mỏm cùng vai 3 cm ngay chính diện mặt trước đầu trên xương cánh tay.",
+        "3. Tay kia xoay trong – xoay ngoài thụ động cẳng tay qua lại góc 20°: cảm nhận rõ rãnh xương hình máng cùng thớ gân tròn lăn dưới đầu ngón tay và nghiệm pháp ấn đau Speed / Yergason khu trú."
       ],
       "figures": [
         {
-          "path": "assets/images/anatomy/fig_19_03_biceps_rotator_interval.jpg",
-          "figNumber": "19.3",
-          "title": "Giải phẫu bao hoạt dịch gân đầu dài cơ nhị đầu và puli gian chóp xoay (Fig. 19.3)",
-          "desc": "Bao hoạt dịch gân đầu dài cơ nhị đầu thông nối trực tiếp với ổ khớp vai và đi xuống trong rãnh gian củ giữa củ lớn và củ bé.",
-          "springerCaption": "Fig. 19.3 Synovial sheath of the long head of biceps tendon and rotator interval structures (CHL, SGHL)."
+          "path": "assets/images/external_anatomy/ext_surf_upper_front_nerves_arteries_gray1235.png",
+          "figNumber": "Gray 1235",
+          "title": "Hình chiếu bề mặt rãnh nhị đầu, chỏm xương cánh tay và bó mạch cánh tay mặt trước (Gray's Plate 1235)",
+          "desc": "Đường chiếu bề mặt trục dọc đầu trên xương cánh tay và cơ nhị đầu so với tĩnh mạch đầu và động mạch nách - cánh tay ở bờ trong.",
+          "atlasSource": "Gray's Anatomy (20th Ed., Plate 1235) – Surface markings of anterior shoulder and arm."
         }
       ]
     },
-    "surfaceAnatomy": {
-      "bonyLandmarks": [
-        "Củ bé xương cánh tay (Lesser tuberosity): Thành xương sắc nét phía trong rãnh nhị đầu.",
-        "Củ lớn xương cánh tay (Greater tuberosity): Thành xương rộng hơn ở phía ngoài rãnh nhị đầu.",
-        "Bờ trước mỏm cùng vai và đỉnh mỏm quạ."
+    "crossSectionalAnatomy": {
+      "sourceRef": "Gray's Anatomy – Cross-Sectional Anatomy of Proximal Humerus & Bicipital Groove",
+      "sectionPlane": "Thiết đồ cắt ngang (Axial / Transverse Section) vuông góc trục đầu trên xương cánh tay ngang qua rãnh gian củ (giữa củ lớn và củ bé).",
+      "layeredStructure": [
+        "Lớp 1 – Da và mô mỡ dưới da mặt trước vai (tĩnh mạch đầu chạy chếch ở góc trước trong của thiết đồ trong rãnh delta – ngực).",
+        "Lớp 2 – Bó trước cơ delta (Anterior deltoid muscle) và lá mạc sâu dưới cơ delta (kèm túi cùng trước của bao hoạt dịch SASD ở phần cao).",
+        "Lớp 3 – Mái hầm rãnh nhị đầu: Dây chằng ngang cánh tay (Transverse humeral ligament) hòa cùng trẽ sợi mở rộng của gân cơ dưới vai (và ở đoạn thấp hơn là trẽ gân cơ ngực lớn ở mép ngoài).",
+        "Lớp 4 – KHOANG ĐÍCH: Bao hoạt dịch gân đầu dài cơ nhị đầu (Synovial tendon sheath – túi cùng kéo dài từ bao hoạt dịch khớp vai bọc quanh gân rồi quặt ngược đóng kín cách rãnh 2 – 3 cm về phía xa).",
+        "Lớp 5 – Lõi gân đầu dài cơ nhị đầu (LHBT – thiết đồ hình bầu dục dẹt kích thước ~4.5 × 2.5 mm) VÀ nhánh lên của động mạch mũ cánh tay trước nằm sát bờ ngoài gân.",
+        "Lớp 6 (Đáy thiết đồ) – Sàn xương rãnh gian củ (sâu ~4 – 5 mm, góc thành trong củ bé tạo góc ~56° giữ gân không trật vào trong)."
       ],
-      "referenceLines": "Rãnh gian củ (Bicipital groove): Khi bệnh nhân ngồi thẳng, khuỷu gấp 90 độ, cẳng tay ngửa trung tính hướng thẳng ra trước (hoặc xoay ngoài nhẹ 10-15 độ), rãnh nhị đầu hướng thẳng ra mặt chính diện trước vai, cách bờ trước mỏm cùng vai khoảng 3 cm xuống dưới.",
-      "palpationSteps": [
-        "1. Đặt ngón trỏ và ngón giữa lên mặt trước chỏm xương cánh tay, ngay dưới bờ trước mỏm cùng vai khoảng 2 - 3 cm.",
-        "2. Tay kia cầm cổ tay bệnh nhân thực hiện xoay trong – xoay ngoài cánh tay thụ động biên độ nhỏ (15 - 20 độ).",
-        "3. Cảm nhận rõ hai gờ xương (củ lớn ở ngoài, củ bé ở trong) và một rãnh lõm chứa sợi gân tròn lăn qua lại dưới đầu ngón tay – đó chính là rãnh gian củ."
+      "topographicRelations": {
+        "superficialAndDeep": "Phía nông là cơ delta trước và mái dây chằng ngang cánh tay; phía sâu là sàn vỏ xương rãnh gian củ.",
+        "medialAndLateral": "Thành TRONG là củ bé có gân cơ dưới vai bám (nếu rách dây chằng quạ – cánh tay / gân dưới vai, gân LHBT sẽ trật vào trong lên trên hoặc dưới gân dưới vai!); thành NGOÀI là củ lớn VÀ nhánh lên động mạch mũ cánh tay trước (Ascending branch of anterior circumflex humeral artery) luôn chạy dọc góc ngoài rãnh!"
+      },
+      "dangerCorridors": [
+        "Góc ngoài rãnh gian củ chứa nhánh lên động mạch mũ cánh tay trước: Luôn đi kim từ ngoài vào trong vượt qua trên gân tới NGÁCH BỜ TRONG (Medial recess of sheath) hoặc bật Doppler màu tránh góc ngoài.",
+        "Tuyệt đối không đâm vào Lớp 5 (nhu mô gân LHBT) gây thoái hóa đứt gân nhị đầu."
       ],
-      "probePlacement": "Đặt đầu dò Linear nằm ngang (Short-axis transverse view) vuông góc với trục xương cánh tay ngay trên mặt trước chỏm cánh tay để thấy hình ảnh cắt ngang gân nhị đầu tròn tăng âm ('Donut sign' khi có dịch) nằm gọn giữa hai mấu củ.",
       "figures": [
         {
-          "path": "assets/images/ch19_shoulder/p222_img1.jpeg",
-          "figNumber": "19.6a",
-          "title": "Vị trí đặt đầu dò bề mặt cắt ngang rãnh nhị đầu mặt trước vai (Fig. 19.6a)",
-          "desc": "Đặt đầu dò ngang trên mặt trước chỏm xương cánh tay với cẳng tay gấp 90 độ xoay ngoài nhẹ để đưa rãnh gian củ hướng thẳng ra trước.",
-          "springerCaption": "Fig. 19.6a Surface probe placement and short-axis scan of long head of biceps (LHB) in the bicipital groove."
+          "path": "assets/images/external_anatomy/ext_sec_shoulder_capsule_gray327.png",
+          "figNumber": "Gray 327",
+          "title": "Thiết đồ bao hoạt dịch khớp vai kéo dài bọc quanh gân đầu dài cơ nhị đầu trong rãnh gian củ (Gray's Plate 327)",
+          "desc": "Minh họa trực quan túi hoạt dịch bao quanh gân đầu dài nhị đầu trong rãnh xương gian củ là phần nối thông trực tiếp từ ổ khớp vai.",
+          "atlasSource": "Gray's Anatomy (20th Ed., Plate 327) – Synovial prolongation around the tendon of Biceps brachii."
+        },
+        {
+          "path": "assets/images/external_anatomy/ext_sec_arm_cross_section_gray413.png",
+          "figNumber": "Gray 413",
+          "title": "Thiết đồ cắt ngang cánh tay đối chiếu cơ nhị đầu, tĩnh mạch đầu và bó mạch thần kinh trong (Gray's Plate 413)",
+          "desc": "Tương quan cắt lớp giữa cơ nhị đầu phía trước, tĩnh mạch đầu ở rãnh ngoài và toàn bộ bó mạch cánh tay - thần kinh giữa/trụ nằm tách biệt ở vách gian cơ trong.",
+          "atlasSource": "Gray's Anatomy (20th Ed., Plate 413) – Cross-section through the arm."
         }
       ]
     },
@@ -399,44 +446,54 @@ var STABLE_PROCEDURES_FALLBACK = [];
         "Sai khớp cùng đòn độ III trở lên (chỉ định phẫu thuật tái tạo dây chằng)."
       ]
     },
-    "anatomy": {
-      "overview": "Khớp cùng vai – đòn (Acromioclavicular Joint - ACJ) là khớp hoạt dịch phẳng nhỏ nối giữa đầu ngoài xương đòn (hướng chếch xuống dưới – ra ngoài) và bờ trong mỏm cùng vai. Bên trong khe khớp hẹp (rộng 2 - 5 mm) thường có một đĩa sụn sợi hình chêm (Fibrocartilaginous articular disc) thoái hóa dần theo tuổi. Bao khớp được gia cố rất chắc ở mặt trên bởi dây chằng cùng – đòn trên (dày nhất, hòa lẫn cân cơ thang và cơ delta), trong khi mặt dưới tiếp xúc trực tiếp với bao hoạt dịch dưới mỏm cùng vai (SASD) và gân cơ trên gai.",
-      "targetStructure": "Khoang hoạt dịch khớp cùng vai – đòn nằm ngay dưới dây chằng bao khớp cùng – đòn trên và giữa hai bờ vỏ xương đòn – mỏm cùng vai (thể tích khoang khớp rất nhỏ, chỉ chứa tối đa 0.5 - 1.0 ml).",
-      "innervation": "Nhánh khớp từ thần kinh trên vai (Suprascapular nerve) và thần kinh ngực ngoài (Lateral pectoral nerve - C5, C6).",
-      "vascularAndDangerZones": [
-        "Nhánh cùng vai của động mạch ngực – cùng vai và động mạch trên vai tạo mạng mạch nông quanh bao khớp trên.",
-        "Bao khớp dưới mỏng hoặc rách ở người thoái hóa nặng (dấu hiệu Geyser sign): Nếu đâm kim quá sâu (> 1 - 1.5 cm) sẽ xuyên thủng mặt dưới khớp đi thẳng vào gân cơ trên gai bên dưới."
+    "surfaceAnatomy": {
+      "sourceRef": "Gray's Anatomy (42nd Ed.) – Surface Markings of Clavicle & Acromion; Moore's Clinically Oriented Anatomy",
+      "surfaceLandmarks": [
+        "Đầu ngoài xương đòn (Acromial end of clavicle): Tạo một gờ xương nổi bậc thang cao hơn mặt trên mỏm cùng vai ngay dưới da đỉnh vai.",
+        "Bờ trong mỏm cùng vai (Medial articular margin of acromion): Nằm ngay sát phía ngoài bậc thang đầu ngoài xương đòn.",
+        "Góc chữ V cùng – đòn phía sau (Acromioclavicular V-angle / Neviaser portal landmark): Nơi bờ sau xương đòn gặp bờ trước gai vai."
+      ],
+      "surfaceProjections": "Khe khớp cùng vai – đòn chiếu lên mặt trên vai thành một vạch thẳng chạy theo hướng trước – sau nhưng hơi nghiêng chếch từ trước ngoài vào sau trong (~15° – 20°), nằm cách bờ ngoài mỏm cùng vai khoảng 2.5 – 3.0 cm về phía trong.",
+      "palpationSteps": [
+        "1. Bệnh nhân ngồi thẳng thả xuôi cánh tay tự nhiên (trọng lực tay kéo nhẹ mỏm cùng vai xuống giúp bậc thang khớp AC nổi rõ hơn).",
+        "2. Dùng đầu ngón trỏ miết dọc bờ trước – mặt trên xương đòn từ trong ra ngoài cho tới khi qua gờ nhô đầu ngoài xương đòn tụt xuống rãnh hẹp.",
+        "3. Kết hợp nghiệm pháp khép ngang cánh tay tối đa qua trước ngực (Scarf / Cross-arm test) để xác nhận đúng khe khớp gây đau."
       ],
       "figures": [
         {
-          "path": "assets/images/anatomy/fig_19_04_ac_joint_anatomy.jpg",
-          "figNumber": "19.4",
-          "title": "Giải phẫu khớp cùng vai - đòn và đĩa sụn sợi nội khớp (Fig. 19.4)",
-          "desc": "Khe khớp hoạt dịch cùng vai - đòn ngăn cách bởi đĩa sụn sợi hình chêm (*), mặt dưới tiếp giáp sát bao hoạt dịch dưới mỏm cùng vai và cơ trên gai.",
-          "springerCaption": "Fig. 19.4 The acromioclavicular joint with wedge-shaped fibrocartilaginous disk (*) and direct relation to the subacromial bursa."
+          "path": "assets/images/external_anatomy/ext_surf_upper_front_topography_gray1231.png",
+          "figNumber": "Gray 1231",
+          "title": "Giải phẫu bề mặt lồi đầu ngoài xương đòn và bậc thang khớp cùng vai - đòn (Gray's Plate 1231)",
+          "desc": "Hình thái bậc thang giải phẫu bề mặt giữa đầu ngoài xương đòn và mỏm cùng vai trên đỉnh vai.",
+          "atlasSource": "Gray's Anatomy (20th Ed., Plate 1231) – Surface anatomy of clavicular-acromial prominence."
         }
       ]
     },
-    "surfaceAnatomy": {
-      "bonyLandmarks": [
-        "Đầu ngoài xương đòn (Distal end of clavicle): Thường nhô cao hơn nhẹ so với mỏm cùng vai tạo bậc thang nhỏ dễ sờ nhất trên đỉnh vai.",
-        "Bờ trong mỏm cùng vai (Medial border of acromion): Mặt xương phẳng nằm ngay sát phía ngoài bậc thang đầu ngoài xương đòn.",
-        "Hõm chữ V cùng – đòn ở phía sau (Apex of V between posterior clavicle and scapular spine)."
+    "crossSectionalAnatomy": {
+      "sourceRef": "Gray's Anatomy – Coronal Section of Acromioclavicular Articulation",
+      "sectionPlane": "Thiết đồ đứng ngang (Coronal Section) đi dọc theo trục đầu ngoài xương đòn qua khe khớp cùng vai – đòn và khoang dưới mỏm cùng vai.",
+      "layeredStructure": [
+        "Lớp 1 – Da và lớp mô dưới da rất mỏng trên đỉnh vai (chỉ dày ~2 – 5 mm, chứa các nhánh thần kinh trên đòn ngoài C4).",
+        "Lớp 2 – Cân đan chéo dày chắc (Aponeurotic expansion) hợp bởi thớ bám của cơ thang (phía sau trên) và cơ delta (phía trước ngoài).",
+        "Lớp 3 – Dây chằng cùng – đòn trên (Superior acromioclavicular ligament) dày khỏe che kín trần bao khớp (kèm nhánh mạch nhỏ từ động mạch ngực – cùng vai).",
+        "Lớp 4 – KHOANG ĐÍCH: Khe khớp hoạt dịch cùng vai – đòn (rộng 2 – 4 mm, nghiêng vát chéo từ trên ngoài xuống dưới trong!) chứa sụn sợi diện khớp và một đĩa sụn chêm hình chêm không hoàn toàn (Articular disc / Meniscoid).",
+        "Lớp 5 (Đáy thiết đồ) – Dây chằng cùng – đòn dưới rất mỏng ngăn cách khe khớp với lớp mỡ dưới mỏm cùng vai, bao hoạt dịch SASD và bụng cơ – gân trên gai ngay sát bên dưới!"
       ],
-      "referenceLines": "Trục dọc xương đòn dẫn thẳng ra ngoài tới gờ nhô đầu ngoài xương đòn; khe khớp AC chạy theo hướng trước – sau (hơi chếch từ trước ngoài vào sau trong khoảng 10 - 20 độ).",
-      "palpationSteps": [
-        "1. Dùng ngón trỏ miết dọc mặt trên xương đòn từ trong ra ngoài cho tới khi chạm một gờ nhô lên rồi tụt xuống một bậc lõm nhỏ – đó chính là khe khớp AC.",
-        "2. Thực hiện nghiệm pháp khép ngang cánh tay (Cross-body adduction test) hoặc ấn nhẹ trực tiếp vào khe lõm để xác nhận điểm đau chói đặc trưng tại khớp AC.",
-        "3. Đánh dấu vết ấn móng tay nhẹ cách bờ trước hoặc bờ trên khe khớp để định hướng đặt đầu dò vô khuẩn."
+      "topographicRelations": {
+        "superficialAndDeep": "Phía nông nằm ngay sát dưới da – cân cơ thang/delta (độ sâu từ da tới tâm khớp chỉ ~8 – 12 mm); phía sâu tiếp giáp trực tiếp với túi hoạt dịch SASD và chỗ nối cơ – gân trên gai (khi rách bao dưới + chóp xoay sẽ thông dịch từ ổ khớp vai vọt lên thành nang Geyser trên khớp AC!).",
+        "medialAndLateral": "Phía trong là đầu ngoài xương đòn và cách vào trong ~1.5 – 2 cm dưới xương đòn là dây chằng quạ – đòn (nón & thang); phía ngoài là bản xương mỏm cùng vai."
+      },
+      "dangerCorridors": [
+        "Độ sâu quá mức (> 15 mm): Xuyên thủng sàn dây chằng cùng – đòn dưới đi thẳng vào cơ/gân trên gai bên dưới.",
+        "Do khoang khớp cực hẹp (dung tích sinh lý 0.5 – 1.0 ml), bơm quá thể tích gây căng rách bao khớp trên và trào steroid ra lớp dưới da mỏng gây teo lõm mất sắc tố da đỉnh vai."
       ],
-      "probePlacement": "Đặt đầu dò Linear dọc theo trục dài đầu ngoài xương đòn bắc cầu sang mỏm cùng vai theo mặt phẳng trán (Coronal plane) trên đỉnh vai để thấy khe khớp giảm âm hình chữ V nằm giữa hai đầu xương tăng âm.",
       "figures": [
         {
-          "path": "assets/images/ch19_shoulder/p225_img1.jpeg",
-          "figNumber": "19.9a",
-          "title": "Giải phẫu bề mặt đỉnh vai và vị trí đặt đầu dò trên khớp cùng vai - đòn (Fig. 19.9a)",
-          "desc": "Đầu dò đặt trên đỉnh vai dọc theo mặt phẳng trán bắc cầu qua bậc thang giữa đầu ngoài xương đòn và mỏm cùng vai.",
-          "springerCaption": "Fig. 19.9a Surface probe position in coronal plane bridging the distal clavicle and acromion over the AC joint."
+          "path": "assets/images/external_anatomy/ext_sec_ac_scapula_ligaments_gray326.png",
+          "figNumber": "Gray 326",
+          "title": "Giải phẫu khớp cùng vai - đòn, dây chằng quạ - đòn và trần vòm quạ - cùng vai (Gray's Plate 326)",
+          "desc": "Cấu trúc bao dây chằng khớp cùng vai - đòn, dây chằng nón - thang, dây chằng ngang vai trên và khoảng dưới mỏm cùng vai ngay mặt dưới khớp.",
+          "atlasSource": "Gray's Anatomy (20th Ed., Plate 326) – Acromioclavicular joint and proper ligaments of the scapula."
         }
       ]
     },
@@ -508,44 +565,62 @@ var STABLE_PROCEDURES_FALLBACK = [];
         "Bệnh phổi tắc nghẽn mạn tính nặng (tránh nguy cơ tràn khí màng phổi)."
       ]
     },
-    "anatomy": {
-      "overview": "Thần kinh trên vai (Suprascapular Nerve - SSN) tách ra từ thân trên đám rối thần kinh cánh tay (rễ C5, C6; đôi khi có C4), chạy ra sau – xuống dưới – ra ngoài băng qua tam giác cổ sau để tới khuyết trên vai (Suprascapular notch). Thần kinh chui dưới dây chằng ngang vai trên (Superior transverse scapular ligament - STSL) vào sàn hố trên gai (Supraspinous fossa) nằm sâu dưới cơ thang và bụng cơ trên gai, sau đó vòng qua khuyết quạ – gai vai (Spinoglenoid notch) xuống hố dưới gai. SSN chi phối vận động cơ trên gai, cơ dưới gai và đảm nhận tới 70% cảm giác đau của khớp ổ chảo – cánh tay, khớp cùng – đòn và bao hoạt dịch SASD.",
-      "targetStructure": "Sàn xương hố trên gai (Supraspinous fossa floor) hoặc rãnh khuyết trên vai nằm ngay sâu dưới mạc sâu cơ trên gai và dây chằng ngang vai trên (tiếp cận lối sau Harmon & Hearty an toàn hơn rất nhiều so với khuyết trên vai cổ điển).",
-      "innervation": "Bản thân thần kinh trên vai (C5–C6) mang sợi cảm giác cho 70% bao khớp vai trên – sau và sợi vận động cho cơ trên gai, cơ dưới gai.",
-      "vascularAndDangerZones": [
-        "Động mạch và tĩnh mạch trên vai (Suprascapular artery & vein): Theo quy luật kinh điển 'Army over Navy', động mạch thường đi TRÊN dây chằng ngang vai trên còn thần kinh đi DƯỚI dây chằng, nhưng trong sàn hố trên gai bó mạch và thần kinh nằm sát cạnh nhau – cần bật Doppler màu!",
-        "Đỉnh màng phổi (Pleural apex / Dome of lung) nằm ngay phía trước khuyết trên vai: Tuyệt đối không chọc kim hướng ra trước vượt quá khuyết trên vai để tránh tràn khí màng phổi (Pneumothorax)!"
+    "surfaceAnatomy": {
+      "sourceRef": "Gray's Anatomy (42nd Ed.) – Scapular Region Surface Markings; Wertheim & Rovenstine / Harmon Landmarks",
+      "surfaceLandmarks": [
+        "Gai vai (Spine of scapula): Kéo dài từ bờ trong xương vai (ngang mỏm gai T3) tới góc mỏm cùng vai.",
+        "Góc trên xương vai (Superior angle of scapula – ngang mức T2) và bờ sau xương đòn ở phía trước.",
+        "Hố trên gai (Supraspinous fossa): Vùng lõm hình tam giác nằm ngay phía trên gai vai và phía sau xương đòn."
+      ],
+      "surfaceProjections": "Đường định hướng kinh điển Wertheim – Rovenstine: Kẻ đường thẳng dọc theo toàn bộ gai vai (đường A) và đường thẳng đứng từ góc dưới xương vai đi lên chia đôi gai vai (đường B); tia phân giác góc phần tư trên – ngoài cách giao điểm ~2.0 – 2.5 cm chiếu đúng vào đáy hố trên gai sát khuyết trên vai, trong khi khuyết quạ – gai vai (Spinoglenoid notch) chiếu ngay tại chỗ nối 1/3 ngoài và 2/3 trong bờ trên gai vai.",
+      "palpationSteps": [
+        "1. Bệnh nhân ngồi thẳng, vắt bàn tay bên bệnh nắm lấy vai đối diện để kéo xương bả vai xoay ngoài và mở rộng hố trên gai.",
+        "2. Sờ xác định toàn bộ chiều dài gai vai từ đầu trong (T3) ra tới mỏm cùng vai và đánh dấu điểm chia giữa / 1/3 ngoài gai vai.",
+        "3. Ấn sâu nhẹ ngay phía trên bờ trên gai vai 1.5 cm tại vùng 1/3 ngoài – giữa để xác định cửa sổ đặt đầu dò trên khối cơ thang."
       ],
       "figures": [
         {
-          "path": "assets/images/anatomy/fig_04_01_suprascapular_course.jpg",
-          "figNumber": "4.1",
-          "title": "Đường đi giải phẫu của thần kinh trên vai qua khuyết trên vai và khuyết quạ - gai vai (Fig. 4.1)",
-          "desc": "Thần kinh trên vai đi qua khuyết trên vai vào sàn hố trên gai rồi vòng qua khuyết quạ - gai vai phân nhánh cảm giác bao khớp sau.",
-          "springerCaption": "Fig. 4.1 Schematic drawing of the anatomical course of the suprascapular nerve along the supraspinous and infraspinous fossae."
+          "path": "assets/images/external_anatomy/ext_surf_back_spine_scapula_gray1211.png",
+          "figNumber": "Gray 1211",
+          "title": "Giải phẫu bề mặt vùng lưng - vai: Mốc gai vai, cơ thang và xương bả vai (Gray's Plate 1211)",
+          "desc": "Các mốc bề mặt chuẩn của vùng bả vai sau gồm gai vai (Spine of scapula), cơ thang (Trapezius), góc dưới xương vai và khối cơ delta.",
+          "atlasSource": "Gray's Anatomy (20th Ed., Plate 1211) – Surface anatomy of the back and scapular landmarks."
         }
       ]
     },
-    "surfaceAnatomy": {
-      "bonyLandmarks": [
-        "Gai vai (Spine of the scapula): Mốc xương dài nằm ngang mặt sau trên xương bả vai.",
-        "Góc trong gai vai (Root of scapular spine - ngang mức T3) và mỏm cùng vai ở phía ngoài.",
-        "Bờ sau xương đòn (Posterior border of clavicle): Tạo với gai vai một hố cơ hình thang ở mặt trên vai (hố trên gai)."
+    "crossSectionalAnatomy": {
+      "sourceRef": "Gray's Anatomy – Supraspinous Fossa & Scapular Notch Sectional Anatomy; Ellis Sectional Anatomy",
+      "sectionPlane": "Thiết đồ đứng ngang hơi nghiêng trước (Oblique Coronal Section) cắt song song ngay phía trên gai vai dọc theo sàn xương hố trên gai.",
+      "layeredStructure": [
+        "Lớp 1 – Da và mô mỡ dưới da vùng vai trên sau (dày ~6 – 15 mm).",
+        "Lớp 2 – Bó ngang – trên của Cơ thang (Trapezius muscle, dày ~8 – 12 mm) và lá mạc dưới cơ thang (nơi thần kinh phụ CN XI chạy ở phần trong gần góc trên xương vai!).",
+        "Lớp 3 – Mạc trên gai (Supraspinatus fascia – cân căng chắc đậy kín hố trên gai) và Bụng cơ trên gai (Supraspinatus muscle belly, dày ~15 – 22 mm).",
+        "Lớp 4 – Dây chằng ngang vai trên (Superior transverse scapular ligament – tại khuyết trên vai) hoặc mạc sâu phủ sàn hố trên gai (dây chằng quạ – gai vai dưới ở phía ngoài).",
+        "Lớp 5 – KHOANG ĐÍCH: Ngăn sâu dưới mạc cơ trên gai sát mặt xương đáy hố trên gai / khuyết trên vai, chứa THẦN KINH TRÊN VAI (C5–C6) đi cùng động mạch và tĩnh mạch trên vai.",
+        "Lớp 6 (Đáy thiết đồ) – Bản xương lõm hình thuyền của sàn hố trên gai (Supraspinous fossa floor – tấm chắn xương bảo vệ an toàn ngăn cách với đỉnh màng phổi nằm ở phía trước xương vai!)."
       ],
-      "referenceLines": "Đường kẻ dọc bờ trên gai vai nối từ góc trong gai vai tới bờ sau mỏm cùng vai; điểm giữa hoặc 1/3 ngoài đường này tương ứng với vùng sàn hố trên gai dẫn ra khuyết quạ – gai vai.",
-      "palpationSteps": [
-        "1. Bệnh nhân ngồi thẳng, bàn tay bên cần phong bế đặt lên vai đối diện để kéo xương bả vai dịch ra ngoài và tách xa cột sống.",
-        "2. Sờ xác định toàn bộ chiều dài gai vai từ đầu trong tới mỏm cùng vai ở phía ngoài.",
-        "3. Ấn nhẹ ngón tay ngay phía trên bờ trên gai vai (khoảng điểm nối 1/3 giữa và 1/3 ngoài) để cảm nhận khối cơ thang – cơ trên gai phủ trên hố trên gai."
+      "topographicRelations": {
+        "superficialAndDeep": "Tại khuyết trên vai: Động mạch trên vai đi PHÍA TRÊN dây chằng ngang vai trên, còn thần kinh trên vai chui PHÍA DƯỚI dây chằng ('Army over Navy'); nhưng khi đã vào trong sàn hố trên gai (sau khuyết 1 cm), cả động mạch và thần kinh đều nằm sát nhau ngay trên màng xương dưới bụng cơ trên gai!",
+        "medialAndLateral": "Phía TRƯỚC khuyết trên vai (nếu trượt kim vọt qua bờ trước xương vai) chỉ cách ĐỈNH MÀNG PHỔI (Cupula pleurae) khoảng 1 – 1.5 cm; phía NGOÀI hố trên gai dẫn ra khuyết quạ – gai vai vòng xuống hố dưới gai."
+      },
+      "dangerCorridors": [
+        "Hành lang nguy hiểm màng phổi: Tuyệt đối KHÔNG chọc kim vuông góc từ sau ra trước qua khuyết trên vai không có xương đỡ; bắt buộc giữ chùm tia trên sàn xương hố trên gai và đi kim In-plane từ trong ra ngoài có đáy xương hố trên gai làm tấm chắn.",
+        "Bật Color Doppler tại đáy hố trên gai để nhận diện động mạch trên vai trước khi bơm thuốc."
       ],
-      "probePlacement": "Đặt đầu dò Linear theo mặt phẳng trán hơi chếch ngay phía trên và song song với gai vai (Coronal plane just cephalad to scapular spine), sau đó nghiêng nhẹ chùm tia ra trước (tilt anteriorly) để thấy đáy xương hố trên gai hình lòng thuyền.",
       "figures": [
         {
-          "path": "assets/images/anatomy/fig_04_02_suprascapular_probe.jpg",
-          "figNumber": "4.2",
-          "title": "Mốc bề mặt gai vai và vị trí đặt đầu dò phong bế thần kinh trên vai lối sau (Fig. 4.2)",
-          "desc": "Đặt đầu dò ngay phía trên và song song với gai vai, đâm kim In-plane từ trong ra ngoài luôn có sàn xương hố trên gai che chắn màng phổi.",
-          "springerCaption": "Fig. 4.2 Surface landmark of scapular spine and ultrasound probe position for posterior approach suprascapular nerve block."
+          "path": "assets/images/external_anatomy/ext_sec_scapula_suprascapular_gray412.png",
+          "figNumber": "Gray 412",
+          "title": "Giải phẫu phân lớp hố trên gai, khuyết trên vai và cơ vùng bả vai sau khi bóc tách cơ thang (Gray's Plate 412)",
+          "desc": "Cấu trúc hố trên gai chứa cơ trên gai dưới cơ thang, liên quan gai vai, mỏm cùng vai và đường đi thần kinh - mạch máu vùng vai sau.",
+          "atlasSource": "Gray's Anatomy (20th Ed., Plate 412) – Deep dissection of dorsal scapular fossae and muscles."
+        },
+        {
+          "path": "assets/images/external_anatomy/ext_sec_ac_scapula_ligaments_gray326.png",
+          "figNumber": "Gray 326",
+          "title": "Giải phẫu khuyết trên vai và dây chằng ngang vai trên tạo lỗ thần kinh trên vai (Gray's Plate 326)",
+          "desc": "Chi tiết dây chằng ngang vai trên (Superior transverse scapular ligament) bắc ngang khuyết trên vai chuyển khuyết thành lỗ xương - xơ cho thần kinh đi qua.",
+          "atlasSource": "Gray's Anatomy (20th Ed., Plate 326) – Suprascapular notch and superior transverse scapular ligament."
         }
       ]
     },
@@ -627,52 +702,63 @@ var STABLE_PROCEDURES_FALLBACK = [];
         "Có mất vững dây chằng bên quay (LCL)."
       ]
     },
-    "anatomy": {
-      "overview": "Gân duỗi chung (Common Extensor Tendon - CET) bám tận vào mặt trước ngoài của mỏm trên lồi cầu ngoài xương cánh tay (Lateral epicondyle), được hợp thành từ nguyên ủy của 4 cơ khu cẳng tay sau ngoài: cơ duỗi cổ tay quay ngắn (ECRB – nằm sâu và phía trước nhất, chiếm phần lớn diện bám xương và là tâm điểm thoái hóa sợi collagen trong 95% ca Tennis Elbow), cơ duỗi chung các ngón (EDC – nằm nông), cơ duỗi ngón út (EDM) và cơ duỗi cổ tay trụ (ECU). Ngay sâu dưới gân ECRB là dây chằng bên quay (RCL) và bao khớp quay – lồi cầu con.",
-      "targetStructure": "Vùng bám tận xương – gân (Enthesis) của bó sâu gân cơ duỗi cổ tay quay ngắn (ECRB) tại mỏm trên lồi cầu ngoài (để châm kim tạo cửa sổ Fenestration / tiêm PRP) hoặc mặt nông cân gân chung (nếu tiêm bóc tách).",
-      "innervation": "Các nhánh khớp và nhánh màng xương từ thần kinh quay (Radial nerve) và nhánh gian cốt sau (Posterior interosseous nerve - PIN).",
-      "vascularAndDangerZones": [
-        "Dây chằng bên ngoài / bên quay (Radial collateral ligament - RCL) và dây chằng bên trụ ngoài (LUCL) nằm ngay lớp sâu sát khe khớp dưới gân ECRB: Tuyệt đối tránh tiêm Corticosteroid hoặc châm rách hệ thống dây chằng này vì sẽ gây mất vững xoay sau ngoài khuỷu tay!",
-        "Thần kinh gian cốt sau (PIN): Chạy chếch qua chỏm và cổ xương quay giữa hai bó cơ ngửa (Supinator / Arcade of Frohse) cách lồi cầu ngoài khoảng 3 - 4 cm về phía xa (tránh đi kim quá xa xuống dưới chỏm quay).",
-        "Lớp mỡ dưới da mặt ngoài khuỷu rất mỏng: Tiêm trào Corticoid nông dưới da gây teo lõm mỡ và mất sắc tố trắng da (Hypopigmentation)."
+    "surfaceAnatomy": {
+      "sourceRef": "Gray's Anatomy (42nd Ed.) – Elbow Surface Markings (Hueter's Line); Moore's Clinically Oriented Anatomy",
+      "surfaceLandmarks": [
+        "Mỏm trên lồi cầu ngoài xương cánh tay (Lateral epicondyle): Mấu xương nhô ở mặt ngoài đầu dưới xương cánh tay.",
+        "Chỏm xương quay (Head of radius): Sờ thấy trong hõm lõm da nhỏ ở mặt sau ngoài khuỷu cách lồi cầu ngoài ~1.5 – 2.0 cm về phía xa.",
+        "Gờ trên lồi cầu ngoài (Lateral supracondylar ridge): Bờ xương sắc chạy từ lồi cầu ngoài ngược lên thân xương cánh tay (nơi bám cơ cánh tay quay và ECRL).",
+        "Đỉnh mỏm khuỷu (Olecranon) ở phía sau."
+      ],
+      "surfaceProjections": "Đường Hueter và Tam giác Hueter khuỷu: Khi khuỷu duỗi thẳng 180°, lồi cầu ngoài – đỉnh mỏm khuỷu – lồi cầu trong nằm trên một đường ngang (đường Hueter); khi khuỷu gấp 90°, ba mốc tạo thành một tam giác cân. Gân duỗi chung (đặc biệt ECRB) chiếu lên một vùng hình chữ nhật rộng ~1.5 × 2.5 cm chạy từ mặt trước dưới mỏm trên lồi cầu ngoài thẳng tới chỏm xương quay; trong khi thần kinh gian cốt sau (PIN) chui vào cung Frohse cơ ngửa ở điểm cách chỏm quay ~3 – 4 cm về phía xa.",
+      "palpationSteps": [
+        "1. Bệnh nhân ngồi đặt cẳng tay trên bàn, khuỷu gấp 90°, cẳng tay sấp nhẹ.",
+        "2. Dùng ngón cái sờ từ gờ trên lồi cầu ngoài xuống đỉnh mỏm trên lồi cầu ngoài và ấn vào mặt dốc phía trước – xa của mỏm này (tâm điểm đau ECRB khi duỗi cổ tay có đối kháng).",
+        "3. Đặt ngón trỏ dịch xuống xa 2 cm đồng thời sấp – ngửa cẳng tay để cảm nhận chỏm xương quay xoay tròn và định vị khe khớp cánh tay – quay nằm ngay giữa hai ngón tay."
       ],
       "figures": [
         {
-          "path": "assets/images/anatomy/fig_20_01_lateral_elbow_anatomy.jpg",
-          "figNumber": "20.1",
-          "title": "Giải phẫu nhóm cơ gân duỗi chung mặt ngoài khuỷu và khung đặt đầu dò (Fig. 20.1)",
-          "desc": "Khung chữ nhật màu xanh minh họa chính xác vùng gân duỗi chung (ECRB, EDC) bám vào mỏm trên lồi cầu ngoài cần đặt đầu dò khảo sát.",
-          "springerCaption": "Fig. 20.1 Anatomy of the lateral elbow. The blue box indicates the common extensor tendon and area of interest for ultrasound scanning."
-        },
-        {
-          "path": "assets/images/anatomy/fig_20_02_lateral_elbow_ligaments.jpg",
-          "figNumber": "20.2",
-          "title": "Giải phẫu phức hợp dây chằng bên ngoài khuỷu nằm sâu dưới gân duỗi chung (Fig. 20.2)",
-          "desc": "Dây chằng bên quay (RCL), dây chằng vòng quay (Annular ligament) và LUCL nằm ngay mặt sâu của gân ECRB cần bảo tồn tuyệt đối.",
-          "springerCaption": "Fig. 20.2 The lateral collateral ligament complex deep to the common extensor tendon."
+          "path": "assets/images/external_anatomy/ext_surf_upper_back_nerves_bones_gray1236.png",
+          "figNumber": "Gray 1236",
+          "title": "Giải phẫu bề mặt mặt ngoài - sau khuỷu tay: Lồi cầu ngoài, chỏm quay và đường chiếu thần kinh quay - gian cốt sau (Gray's Plate 1236)",
+          "desc": "Hình chiếu bề mặt mỏm trên lồi cầu ngoài, chỏm xương quay và vị trí thần kinh quay chia nhánh gian cốt sau đi vòng qua cổ xương quay.",
+          "atlasSource": "Gray's Anatomy (20th Ed., Plate 1236) – Surface markings of bones and radial/posterior interosseous nerve at the elbow."
         }
       ]
     },
-    "surfaceAnatomy": {
-      "bonyLandmarks": [
-        "Mỏm trên lồi cầu ngoài xương cánh tay (Lateral epicondyle): Gồ xương nhô rõ nhất ở mặt ngoài khuỷu tay.",
-        "Chỏm xương quay (Radial head): Nằm cách lồi cầu ngoài khoảng 1.5 - 2 cm về phía xa, lăn tròn dưới ngón tay khi sấp – ngửa cẳng tay.",
-        "Gờ trên lồi cầu ngoài (Lateral supracondylar ridge): Nơi nguyên ủy của cơ cánh tay quay (Brachioradialis) và cơ ECRL ở phía trên."
+    "crossSectionalAnatomy": {
+      "sourceRef": "Gray's Anatomy – Coronal & Transverse Sectional Anatomy of Lateral Elbow & Proximal Forearm",
+      "sectionPlane": "Thiết đồ đứng ngang dọc (Coronal Longitudinal Section) đi qua mỏm trên lồi cầu ngoài, chỏm con xương cánh tay và chỏm – cổ xương quay.",
+      "layeredStructure": [
+        "Lớp 1 – Da và lớp mỡ dưới da vùng khuỷu ngoài rất mỏng (dày chỉ ~2 – 4 mm; chứa nhánh thần kinh bì cẳng tay sau từ thần kinh quay).",
+        "Lớp 2 – Mạc sâu cẳng tay ngoài (Antebrachial fascia) hòa chặt vào mặt nông khối cơ duỗi.",
+        "Lớp 3 – Lớp nông gân duỗi chung: Gân cơ duỗi chung các ngón (Extensor digitorum communis - EDC) ở nông và cơ duỗi cổ tay quay dài (ECRL – nguyên ủy cơ từ gờ trên lồi cầu ngoài che phủ phía trước trên).",
+        "Lớp 4 – KHOANG ĐÍCH: Lớp sâu gân duỗi chung – Gân cơ duỗi cổ tay quay ngắn (Extensor carpi radialis brevis - ECRB) có diện bám hình thoi áp trực tiếp vào sườn trước ngoài mỏm trên lồi cầu ngoài.",
+        "Lớp 5 – Hệ thống dây chằng giữ vững khuỷu ngoài: Dây chằng bên quay (Radial collateral ligament - RCL), dây chằng bên trụ ngoài (LUCL) và dây chằng vòng quay (Annular ligament ôm chỏm quay) nằm áp sát ngay mặt sâu của gân ECRB!",
+        "Lớp 6 (Đáy thiết đồ) – Màng hoạt dịch, khe khớp quay – lồi cầu con (Radiocapitellar joint), sụn chỏm con (Capitellum) và vành sụn chỏm xương quay."
       ],
-      "referenceLines": "Đường nối từ đỉnh mỏm trên lồi cầu ngoài tới tâm chỏm xương quay (dài ~2 cm) trùng hoàn toàn với trục dọc của gân cơ ECRB và dây chằng bên quay.",
-      "palpationSteps": [
-        "1. Cho bệnh nhân ngồi cạnh bàn khám, khuỷu gấp 90 độ, cẳng tay sấp (lòng bàn tay úp xuống mặt bàn) để đưa lồi cầu ngoài hướng lên trên.",
-        "2. Dùng ngón cái ấn xác định đỉnh mỏm trên lồi cầu ngoài và mặt dốc phía trước xa của mỏm này (điểm đau chói nhất khi duỗi cổ tay có đối kháng – Cozen test).",
-        "3. Đặt ngón trỏ dịch xuống xa 2 cm đồng thời xoay sấp – ngửa nhẹ cẳng tay để cảm nhận chỏm xương quay và khe khớp quay – lồi cầu con."
+      "topographicRelations": {
+        "superficialAndDeep": "Gân ECRB (Lớp 4) không thể tách rời bằng mắt thường khỏi dây chằng bên quay RCL (Lớp 5) nằm sát mặt khớp bên dưới (tổng độ dày phức hợp gân + dây chằng chỉ ~4 – 6 mm).",
+        "medialAndLateral": "Phía gần (trên) là gờ trên lồi cầu ngoài nơi thần kinh quay đi giữa cơ cánh tay và cơ cánh tay quay; phía xa dưới cổ xương quay 3 – 4 cm là cung xơ Frohse của cơ ngửa chứa thần kinh gian cốt sau (PIN) và động mạch quặt ngược gian cốt."
+      },
+      "dangerCorridors": [
+        "Bảo tồn Lớp 5 (Dây chằng RCL / LUCL): Tuyệt đối không châm kim sâu xuống nửa dưới sát khe khớp chỏm con – chỏm quay hoặc tiêm lặp lại Corticosteroid gây đứt/nhão LUCL dẫn tới mất vững xoay sau ngoài khuỷu tay (Posterolateral rotatory instability)!",
+        "Không đâm kim vượt quá bờ xa chỏm xương quay xuống cổ quay tránh chạm nhánh vận động thần kinh gian cốt sau (PIN)."
       ],
-      "probePlacement": "Đặt đầu dò Linear dọc theo trục dài cẳng tay (Coronal longitudinal view), đầu gần gối lên đỉnh mỏm trên lồi cầu ngoài, đầu xa bắc qua khe khớp nằm trên chỏm xương quay (đúng vị trí khung xanh Fig. 20.1).",
       "figures": [
         {
-          "path": "assets/images/ch20_elbow/p238_img1.jpeg",
-          "figNumber": "20.5",
-          "title": "Vị trí đặt đầu dò dọc trên bề mặt ngoài khuỷu và đối chiếu siêu âm (Fig. 20.5)",
-          "desc": "Đầu dò đặt dọc bắc cầu từ mỏm trên lồi cầu ngoài sang chỏm xương quay khi khuỷu gấp 90 độ.",
-          "springerCaption": "Fig. 20.5 Surface probe placement and sonoanatomy of the lateral elbow."
+          "path": "assets/images/external_anatomy/ext_sec_elbow_annular_section_gray333.png",
+          "figNumber": "Gray 333",
+          "title": "Thiết đồ cắt ngang qua đầu trên xương quay - trụ, dây chằng vòng quay và hõm quay (Gray's Plate 333)",
+          "desc": "Cấu trúc cắt ngang vòng dây chằng ôm lấy chỏm xương quay nằm ngay sâu dưới gân duỗi chung và cơ ngửa.",
+          "atlasSource": "Gray's Anatomy (20th Ed., Plate 333) – Transverse view of annular ligament and proximal radioulnar joint."
+        },
+        {
+          "path": "assets/images/external_anatomy/ext_sec_forearm_mid_gray417.png",
+          "figNumber": "Gray 417",
+          "title": "Thiết đồ cắt ngang cẳng tay phân định khu cơ duỗi ngoài (ECRL, ECRB, EDC) và mạch thần kinh (Gray's Plate 417)",
+          "desc": "Tương quan thiết đồ các ngăn cơ duỗi quay ngắn, duỗi quay dài, duỗi chung các ngón so với xương quay và bó mạch thần kinh quay.",
+          "atlasSource": "Gray's Anatomy (20th Ed., Plate 417) – Cross-section through the forearm."
         }
       ]
     },
@@ -751,45 +837,62 @@ var STABLE_PROCEDURES_FALLBACK = [];
         "Có chèn ép thần kinh trụ đi kèm (Cubital tunnel syndrome) - cần chẩn đoán phân biệt rõ ràng."
       ]
     },
-    "anatomy": {
-      "overview": "Gân gấp chung (Common Flexor-Pronator Tendon - CFT) bám vào mặt trước dưới của mỏm trên lồi cầu trong xương cánh tay (Medial epicondyle), tập hợp nguyên ủy của 5 cơ khu cẳng tay trước: cơ sấp tròn (Pronator teres - bờ quay nhất), cơ gấp cổ tay quay (FCR), cơ gan tay dài (Palmaris longus), cơ gấp các ngón nông (FDS) và cơ gấp cổ tay trụ (FCU - bờ trụ nhất). Tổn thương bệnh lý trong Golfer's Elbow thường tập trung ở giao diện sợi giữa cơ sấp tròn và cơ gấp cổ tay quay. Ngay mặt sâu gân CFT là bó trước dây chằng bên trụ (Anterior band of UCL), và ngay sát phía sau mỏm trên lồi cầu trong là ống khuỷu chứa dây thần kinh trụ.",
-      "targetStructure": "Vùng bám tận mặt trước mỏm trên lồi cầu trong của khối gân gấp – sấp chung (CFT) hoặc lớp cân nông quanh gân (tuyệt đối đi kim từ trước ra sau / xa lên gần ở phía trước lồi cầu trong, tránh hoàn toàn phía sau).",
-      "innervation": "Nhánh khớp từ thần kinh giữa (Median nerve) và thần kinh trụ (Ulnar nerve).",
-      "vascularAndDangerZones": [
-        "Dây thần kinh trụ (Ulnar nerve): Nằm trong rãnh ròng rọc – khuỷu (Cubital tunnel) ngay mặt sau mỏm trên lồi cầu trong; ĐẶC BIỆT có tới 16 - 20% dân số bị bán trật/trật thần kinh trụ tự nhiên trượt tràn ra mặt trước mỏm trên lồi cầu trong khi gấp khuỷu (> 90 độ)!",
-        "Động mạch bên trụ trên và động mạch quặt ngược trụ chạy sát đường đi thần kinh trụ.",
-        "Bó trước dây chằng bên trong (UCL): Cấu trúc giữ vững chính chống vẹo ngoài khuỷu nằm ngay mặt sâu của gân CFT."
+    "surfaceAnatomy": {
+      "sourceRef": "Gray's Anatomy (42nd Ed.) – Medial Elbow & Cubital Tunnel Surface Markings; Moore's Clinically Oriented Anatomy",
+      "surfaceLandmarks": [
+        "Mỏm trên lồi cầu trong xương cánh tay (Medial epicondyle): Mấu xương lồi rất lớn và nhọn ở bờ trong khuỷu tay.",
+        "Mỏm khuỷu xương trụ (Olecranon) ở phía sau ngoài so với lồi cầu trong.",
+        "Rãnh thần kinh trụ / Ống khuỷu (Cubital / Retrocondylar groove): Rãnh xương lõm rõ rệt nằm giữa mặt sau mỏm trên lồi cầu trong và bờ trong mỏm khuỷu.",
+        "Củ vẹt / Củ dưới lồi cầu của mỏm vẹt xương trụ (Sublime tubercle of coronoid process): Nằm cách đỉnh lồi cầu trong ~2 cm về phía xa hơi chếch ra sau."
+      ],
+      "surfaceProjections": "Khối gân gấp – sấp chung (Common flexor-pronator tendon) bám vào nửa trước – dưới của mỏm trên lồi cầu trong và tỏa hình nan quạt xuống mặt trước trong cẳng tay: bờ ngoài cùng là cơ sấp tròn (hướng chéo sang giữa xương quay), ở giữa là cơ gấp cổ tay quay FCR (hướng thẳng tới củ xương thuyền cổ tay), và bờ trong cùng là cơ gấp cổ tay trụ FCU (hướng thẳng tới xương đậu). Dây thần kinh trụ đi dọc ngay sát MẶT SAU mỏm trên lồi cầu trong rồi lách giữa hai đầu cơ FCU.",
+      "palpationSteps": [
+        "1. Bệnh nhân nằm ngửa hoặc ngồi, cánh tay dạng nhẹ xoay ngoài, cẳng tay ngửa hoàn toàn và khuỷu chỉ hơi gấp nhẹ 20° – 30° (TUYỆT ĐỐI tránh gấp khuỷu > 90° vì ở 16 – 20% người bình thường thần kinh trụ sẽ trượt bật qua đỉnh lồi cầu trong tràn sang mặt trước!).",
+        "2. Sờ đỉnh mỏm trên lồi cầu trong và ấn điểm đau khu trú cách đỉnh 0.5 – 1.0 cm về phía trước – xa (khi gấp cổ tay và sấp cẳng tay có đối kháng).",
+        "3. Đặt một ngón tay bảo vệ trong rãnh ròng rọc – khuỷu phía sau để xác nhận vị trí thừng thần kinh trụ trước khi đặt đầu dò."
       ],
       "figures": [
         {
-          "path": "assets/images/anatomy/fig_20_03_medial_elbow_anatomy.jpg",
-          "figNumber": "20.3",
-          "title": "Giải phẫu nhóm cơ gân gấp - sấp chung mặt trong khuỷu và khung quét siêu âm (Fig. 20.3)",
-          "desc": "Khung màu xanh xác định vị trí gân gấp chung bám vào mỏm trên lồi cầu trong (cơ sấp tròn, FCR, gan tay dài, FCU).",
-          "springerCaption": "Fig. 20.3 Anatomy of the medial elbow showing the common flexor tendon and blue box scanning region."
+          "path": "assets/images/external_anatomy/ext_surf_upper_front_nerves_arteries_gray1235.png",
+          "figNumber": "Gray 1235",
+          "title": "Giải phẫu bề mặt mặt trước trong khuỷu: Mỏm trên lồi cầu trong, động mạch cánh tay và thần kinh trụ - giữa (Gray's Plate 1235)",
+          "desc": "Hình chiếu bề mặt lồi cầu trong, đường đi thần kinh trụ vòng sau lồi cầu trong, còn động mạch cánh tay và thần kinh giữa nằm ở hố trụ phía ngoài cơ sấp tròn.",
+          "atlasSource": "Gray's Anatomy (20th Ed., Plate 1235) – Surface markings for bones, brachial artery, median and ulnar nerves."
         }
       ]
     },
-    "surfaceAnatomy": {
-      "bonyLandmarks": [
-        "Mỏm trên lồi cầu trong xương cánh tay (Medial epicondyle): Mấu xương nhô rất lớn và dễ sờ nhất ở mặt trong khuỷu.",
-        "Mỏm khuỷu xương trụ (Olecranon process) ở phía sau: Tạo với mỏm trên lồi cầu trong rãnh thần kinh trụ.",
-        "Củ vẹt xương trụ (Sublime tubercle of coronoid process) nằm cách đỉnh lồi cầu trong khoảng 1.5 - 2 cm về phía xa."
+    "crossSectionalAnatomy": {
+      "sourceRef": "Gray's Anatomy – Medial Elbow & Forearm Cross-Sectional Anatomy; Ellis Sectional Anatomy",
+      "sectionPlane": "Thiết đồ đứng ngang trong (Medial Coronal Section) và Thiết đồ cắt ngang (Axial Section) qua mỏm trên lồi cầu trong – mỏm vẹt xương trụ.",
+      "layeredStructure": [
+        "Lớp 1 – Da và mô mỡ dưới da vùng khuỷu trong (chứa tĩnh mạch nền Basilic vein và các nhánh của thần kinh bì cẳng tay trong – Medial antebrachial cutaneous nerve chạy ngay trên mạc nông, rất dễ bị tổn thương nếu chọc mù!).",
+        "Lớp 2 – Mạc sâu cẳng tay trong và cân cơ nhị đầu (Bicipital aponeurosis / Lacertus fibrosus) tỏa che phía trước.",
+        "Lớp 3 – KHOANG ĐÍCH: Gân gấp – sấp chung (Common flexor tendon, dày ~4 – 6 mm) hợp nguyên ủy của cơ sấp tròn, FCR, gan tay dài, FDS và đầu cánh tay của FCU bám vào mặt trước dưới mỏm trên lồi cầu trong.",
+        "Lớp 4 – Bó trước dây chằng bên trụ (Anterior bundle of Ulnar Collateral Ligament - UCL): Chạy căng từ mặt dưới mỏm trên lồi cầu trong tới củ vẹt xương trụ ngay sát mặt sâu của gân gấp chung (chốt giữ vững chính chống vẹo ngoài Valgus khuỷu!).",
+        "Lớp 5 (Đáy thiết đồ) – Bao khớp trong và khe khớp cánh tay – trụ (ròng rọc – khuyết ròng rọc)."
       ],
-      "referenceLines": "Đường trục từ đỉnh mỏm trên lồi cầu trong hướng chéo nhẹ về phía xương thuyền cổ tay (theo hướng thớ cơ gấp cổ tay quay FCR); rãnh thần kinh trụ nằm hoàn toàn ở mặt sau đường nối lồi cầu trong – mỏm khuỷu khi khuỷu duỗi nhẹ.",
-      "palpationSteps": [
-        "1. Đặt bệnh nhân nằm ngửa hoặc ngồi, dạng nhẹ vai, xoay ngoài cánh tay và ngửa hoàn toàn cẳng tay (Supination), khuỷu chỉ hơi gấp nhẹ 20 - 30 độ (TRÁNH gấp khuỷu quá 90 độ để không làm trật thần kinh trụ ra trước!).",
-        "2. Dùng ngón trỏ sờ đỉnh mỏm trên lồi cầu trong và ấn kiểm tra điểm đau chói ở bờ trước xa của mỏm xương này.",
-        "3. Dùng ngón cái sờ vào rãnh sau lồi cầu trong đồng thời gấp – duỗi khuỷu thử nghiệm để chắc chắn dây thần kinh trụ không trượt qua đỉnh lồi cầu trong ra vùng chọc kim."
+      "topographicRelations": {
+        "superficialAndDeep": "Phía nông là tĩnh mạch nền và thần kinh bì cẳng tay trong trong lớp mỡ dưới da; phía sâu ngay dưới gân gấp chung là bó trước dây chằng bên trụ (UCL) và khe khớp ròng rọc.",
+        "medialAndLateral": "Ngay sát PHÍA SAU mỏm trên lồi cầu trong (< 5 mm) là ống khuỷu (mái là dây chằng Osborne) chứa DÂY THẦN KINH TRỤ và động mạch bên trụ trên; cách ~2.5 – 3 cm về PHÍA NGOÀI (bờ quay cơ sấp tròn tại hố trụ) là thần kinh giữa (chui giữa hai đầu cơ sấp tròn) và động mạch cánh tay!"
+      },
+      "dangerCorridors": [
+        "Cửa sổ cấm phía sau: Luôn kiểm tra trên thiết đồ cắt ngang trước khi đâm kim để loại trừ bán trật thần kinh trụ ra mặt trước lồi cầu trong; luôn đi kim ở sườn trước mỏm trên lồi cầu trong, không bao giờ xuyên ra sau.",
+        "Bảo tồn Lớp 4 (bó trước dây chằng bên trụ UCL) ở mặt sâu."
       ],
-      "probePlacement": "Đặt đầu dò Linear dọc theo trục dài gân gấp chung (Long-axis coronal-oblique view) với đầu gần đặt trên đỉnh mặt trước mỏm trên lồi cầu trong, đầu xa hướng dọc theo cơ FCR xuống mặt trong cẳng tay; sau đó xoay ngang 90 độ quét kiểm tra vị trí dây thần kinh trụ ở rãnh sau.",
       "figures": [
         {
-          "path": "assets/images/ch20_elbow/p239_img1.jpeg",
-          "figNumber": "20.6",
-          "title": "Giải phẫu bề mặt khuỷu trong và vị trí đặt đầu dò khảo sát gân gấp chung (Fig. 20.6)",
-          "desc": "Cẳng tay ngửa, khuỷu duỗi nhẹ, đầu dò đặt dọc trên mỏm trên lồi cầu trong theo đúng trục thớ gân gấp chung.",
-          "springerCaption": "Fig. 20.6 Surface probe placement (position 1) and sonoanatomy of the medial elbow."
+          "path": "assets/images/external_anatomy/ext_sec_arm_cross_section_gray413.png",
+          "figNumber": "Gray 413",
+          "title": "Thiết đồ cắt ngang 1/3 dưới cánh tay trên khuỷu: Vách gian cơ trong, thần kinh trụ, thần kinh giữa và động mạch cánh tay (Gray's Plate 413)",
+          "desc": "Trên thiết đồ ngang, thần kinh trụ kèm động mạch bên trụ trên đã chuyển ra sau vách gian cơ trong tiến vào rãnh sau lồi cầu trong.",
+          "atlasSource": "Gray's Anatomy (20th Ed., Plate 413) – Cross-section showing medial neurovascular compartments."
+        },
+        {
+          "path": "assets/images/external_anatomy/ext_sec_forearm_mid_gray417.png",
+          "figNumber": "Gray 417",
+          "title": "Thiết đồ cắt ngang cẳng tay qua nhóm cơ gấp - sấp (Sấp tròn, FCR, Gan tay dài, FDS, FCU) và bó mạch trụ (Gray's Plate 417)",
+          "desc": "Cấu trúc phân tầng từ nông vào sâu của 5 cơ xuất phát từ gân gấp chung và vị trí thần kinh trụ nằm dưới cơ gấp cổ tay trụ (FCU).",
+          "atlasSource": "Gray's Anatomy (20th Ed., Plate 417) – Cross-section of flexor-pronator compartment."
         }
       ]
     },
@@ -869,52 +972,71 @@ var STABLE_PROCEDURES_FALLBACK = [];
         "Teo cơ mô cái nặng (chỉ định phẫu thuật giải áp cắt dây chằng vòng cổ tay)."
       ]
     },
-    "anatomy": {
-      "overview": "Ống cổ tay (Carpal Tunnel) là một đường hầm xương – xơ không giãn nở nằm ở mặt gan cổ tay. Sàn và hai thành bên tạo bởi rãnh các xương cổ tay (bờ quay: củ xương thuyền và củ xương thang; bờ trụ: xương đậu và móc xương móc), còn mái trần được căng ngang bởi mạc giữ gân gấp dày chắc (Flexor retinaculum / Transverse carpal ligament - TCL). Bên trong ống cổ tay chứa 9 gân gấp (4 gân gấp nông FDS, 4 gân gấp sâu FDP bọc trong bao hoạt dịch trụ, và 1 gân gấp ngón cái dài FPL ở phía quay) cùng dây thần kinh giữa (Median nerve) nằm nông nhất ngay dưới mạc giữ gân gấp.",
-      "targetStructure": "Khoang mô liên kết dưới bao hoạt dịch (Subsynovial connective tissue plane) bao quanh chu vi dây thần kinh giữa (mặt sâu tách khỏi các gân gấp và mặt nông tách khỏi mạc giữ gân gấp TCL để bóc tách thủy dịch 360 độ).",
-      "innervation": "Thần kinh giữa (C5–T1) cảm giác mặt gan 3 ngón rưỡi bên quay và vận động mô cái (qua nhánh quặt ngược mô cái). Lưu ý nhánh bì gan tay (Palmar cutaneous branch) tách ra trước ống cổ tay 5 cm đi nông TRÊN mạc giữ gân gấp.",
-      "vascularAndDangerZones": [
-        "Động mạch trụ và thần kinh trụ (Ulnar artery & nerve) trong kênh Guyon: Nằm ngay phía nông – bờ quay của xương đậu (Pisiform) – khi đi kim In-plane từ bờ trụ, BẮT BUỘC nhận diện động mạch trụ trên siêu âm và đi kim nông hoặc sâu tránh đâm xuyên động mạch trụ!",
-        "Nhánh bì gan tay của thần kinh giữa (Palmar cutaneous branch): Đi nông ở phía bờ quay gân cơ gấp cổ tay quay / gan tay dài.",
-        "Nhánh vận động quặt ngược mô cái (Recurrent motor branch) tách ở đầu xa ống cổ tay và biến thể thần kinh giữa chẻ đôi (Bifid median nerve) kèm động mạch giữa tồn lưu (Persistent median artery - gặp ở ~5-10% dân số, cần bật Doppler màu kiểm tra giữa 2 bó thần kinh!)."
+    "surfaceAnatomy": {
+      "sourceRef": "Gray's Anatomy (42nd Ed.) – Wrist Creases, Carpal Tunnel & Kaplan's Cardinal Line; Moore's Clinically Oriented Anatomy",
+      "surfaceLandmarks": [
+        "Nếp gấp cổ tay xa (Distal wrist flexion crease): Đánh dấu chính xác bờ gần (cửa vào – Proximal inlet) của mạc giữ gân gấp (TCL).",
+        "Xương đậu (Pisiform): Nút xương tròn nổi rõ ở đầu bờ trụ của nếp gấp cổ tay xa (ngay chỗ bám gân FCU).",
+        "Củ xương thuyền (Tubercle of scaphoid): Gồ xương cứng ở đầu bờ quay của nếp gấp cổ tay xa (ngay điểm gân FCR chui sâu xuống).",
+        "Móc xương móc (Hook of hamate – nằm cách xương đậu ~1.5 cm chếch xuống xa và sang phía quay 45° theo hướng ngón nhẫn) và Củ xương thang (ở nền mô cái).",
+        "Gân cơ gan tay dài (Palmaris longus - PL, vắng mặt ở ~14% người) và Gân gấp cổ tay quay (FCR)."
+      ],
+      "surfaceProjections": "Ống cổ tay chiếu lên mặt gan bàn tay thành một hình chữ nhật dài ~2.5 – 3.0 cm từ nếp gấp cổ tay xa đi xuống tới đường chuẩn Kaplan (Kaplan's cardinal line – kẻ từ đỉnh kẽ ngón cái – trỏ ngang song song nếp gan tay gần sang bờ trụ). Dây thần kinh giữa chiếu dọc ngay sát bờ quay của gân gan tay dài (giữa gân PL và FCR); nhánh vận động quặt ngược mô cái (Recurrent motor branch) tách ra gần giao điểm đường dọc khe ngón nhẫn/giữa với đường Kaplan; còn động mạch trụ và thần kinh trụ nằm ngay sát BỜ QUAY của xương đậu trong kênh Guyon.",
+      "palpationSteps": [
+        "1. Đặt ngửa bàn tay bệnh nhân trên gối đệm nhỏ dưới cổ tay (duỗi nhẹ cổ tay 15° – 20°).",
+        "2. Yêu cầu bệnh nhân chụm đầu ngón cái vào đầu ngón út và gấp nhẹ cổ tay để gân PL (nằm chính giữa) và gân FCR (nằm phía quay) nổi rõ; khe hẹp giữa hai gân này tại nếp cổ tay xa chính là vị trí thần kinh giữa.",
+        "3. Sờ rõ mấu xương đậu ở bờ trụ nếp cổ tay xa và bắt mạch đập của động mạch trụ nằm ngay sát phía ngoài xương đậu."
       ],
       "figures": [
         {
-          "path": "assets/images/anatomy/fig_21_01_carpal_tunnel_surface.jpg",
-          "figNumber": "21.1",
-          "title": "Giải phẫu bề mặt ống cổ tay, nhánh bì gan tay và nhánh quặt ngược mô cái (Fig. 21.1)",
-          "desc": "Đường đi thần kinh giữa chui dưới mạc giữ gân gấp, lưu ý nhánh bì gan tay tách sớm ở cổ tay và nhánh vận động quặt ngược ra ô mô cái.",
-          "springerCaption": "Fig. 21.1 Carpal tunnel surface projection showing the median nerve, flexor retinaculum, recurrent motor branch, and palmar cutaneous branch."
+          "path": "assets/images/external_anatomy/ext_surf_wrist_flexor_sheaths_gray1233.png",
+          "figNumber": "Gray 1233",
+          "title": "Giải phẫu bề mặt cổ tay - gan tay: Hình chiếu mạc giữ gân gấp, bao hoạt dịch gân gấp và nếp da (Gray's Plate 1233)",
+          "desc": "Đối chiếu bề mặt cửa vào - cửa ra của mạc giữ gân gấp (dây chằng ngang cổ tay), bao hoạt dịch trụ, bao hoạt dịch quay (FPL) và các nếp gấp cổ - bàn tay.",
+          "atlasSource": "Gray's Anatomy (20th Ed., Plate 1233) – Surface markings of flexor retinaculum and mucous sheaths on the front of wrist and digits."
         },
         {
-          "path": "assets/images/anatomy/fig_21_02_carpal_tunnel_cross_section.jpg",
-          "figNumber": "21.2",
-          "title": "Thiết đồ cắt ngang giải phẫu ống cổ tay và liên quan bó mạch trụ ở bờ trụ (Fig. 21.2)",
-          "desc": "Thần kinh giữa nằm ngay dưới mạc giữ gân gấp phía trên các gân FDS/FDP; bó mạch thần kinh trụ nằm ở phía trụ sát xương đậu.",
-          "springerCaption": "Fig. 21.2 Cross-sectional anatomy of the wrist at the carpal tunnel level."
+          "path": "assets/images/external_anatomy/ext_surf_palm_creases_arches_gray1237.png",
+          "figNumber": "Gray 1237",
+          "title": "Giải phẫu bề mặt lòng bàn tay: Đối chiếu nếp da, xương cổ tay và cung động mạch gan tay nông - sâu (Gray's Plate 1237)",
+          "desc": "Mốc xương đậu, móc xương móc, củ xương thuyền và giới hạn xa của ống cổ tay trước cung động mạch gan tay nông.",
+          "atlasSource": "Gray's Anatomy (20th Ed., Plate 1237) – Palm of hand showing skin creases, bones, and surface markings for volar arches."
         }
       ]
     },
-    "surfaceAnatomy": {
-      "bonyLandmarks": [
-        "Xương đậu (Pisiform bone): Mốc xương tròn nổi gồ rất rõ ở bờ trụ nếp gấp cổ tay xa (ngay điểm bám gân gấp cổ tay trụ FCU).",
-        "Củ xương thuyền (Tubercle of scaphoid): Mốc xương cứng sờ thấy ở bờ quay nếp gấp cổ tay xa (ngay đầu xa gân gấp cổ tay quay FCR).",
-        "Móc xương móc (Hook of hamate): Nằm cách xương đậu khoảng 1 cm xuống dưới và 1 cm nghiêng về phía bờ quay (hướng về ngón nhẫn)."
+    "crossSectionalAnatomy": {
+      "sourceRef": "Gray's Anatomy – Transverse Section of Carpal Tunnel & Guyon's Canal",
+      "sectionPlane": "Thiết đồ cắt ngang (Axial / Transverse Cross-Section) đi ngang qua cửa vào ống cổ tay (mức xương thuyền – xương đậu) và đoạn xa (mức xương thang – xương thê – xương cả – xương móc).",
+      "layeredStructure": [
+        "Lớp 1 – Da mặt gan cổ tay và lớp mỡ dưới da mỏng: Chứa NHÁNH BÌ GAN TAY của thần kinh giữa (Palmar cutaneous branch – đi nông TRÊN mạc giữ gân gấp trong rãnh giữa FCR và PL) và các nhánh bì gan tay của thần kinh trụ.",
+        "Lớp 2 – Mạc nông gan cổ tay (Volar carpal ligament – tạo mái kênh Guyon ở phía trụ bọc lấy động mạch trụ và thần kinh trụ!) và gân cơ gan tay dài (PL) bám vào mặt nông trung tâm.",
+        "Lớp 3 – Mái cứng ống cổ tay: Mạc giữ gân gấp / Dây chằng ngang cổ tay (Transverse carpal ligament / Flexor retinaculum, dày ~1.5 – 2.5 mm, căng từ xương đậu – móc xương móc sang củ xương thuyền – củ xương thang; ở bờ quay tách đôi thành đường hầm riêng cho gân FCR!).",
+        "Lớp 4 – KHOANG ĐÍCH: Hàng nông trong ống cổ tay ngay dưới mạc giữ gân gấp gồm DÂY THẦN KINH GIỮA (nằm lệch phía trước – quay, hình bầu dục dẹt diện tích bình thường < 9 – 10 mm²) bọc bởi mô liên kết dưới bao hoạt dịch (SSCT), cạnh 4 gân gấp nông (FDS của ngón III, IV ở nông; ngón II, V ở sâu hơn) và gân gấp ngón cái dài (FPL ở cực quay nhất).",
+        "Lớp 5 – Hàng sâu trong ống cổ tay: 4 gân gấp sâu các ngón (FDP II–V nằm xếp hàng ngang sát nhau trong bao hoạt dịch trụ).",
+        "Lớp 6 (Đáy thiết đồ) – Dây chằng cổ tay gan tay phủ trên vòm lõm của các xương cổ tay (Xương thuyền/thang -> Nguyệt/thê -> Cả -> Tháp/móc)."
       ],
-      "referenceLines": "Nếp gấp cổ tay xa (Distal wrist crease): Đánh dấu cửa vào đầu gần của ống cổ tay (Proximal carpal tunnel inlet) nối ngang từ củ xương thuyền ở bờ quay sang xương đậu ở bờ trụ.",
-      "palpationSteps": [
-        "1. Bệnh nhân ngồi đối diện, đặt ngửa hoàn toàn bàn tay trên mặt bàn, kê một cuộn khăn nhỏ dưới mặt lưng cổ tay để cổ tay hơi duỗi nhẹ 15 - 20 độ.",
-        "2. Cho bệnh nhân chụm ngón cái và ngón út đồng thời hơi gấp cổ tay nhẹ để làm nổi gân cơ gan tay dài (Palmaris longus - ở chính giữa) và gân gấp cổ tay quay (FCR - ở phía quay); thần kinh giữa nằm ngay khe giữa hai gân này tại nếp cổ tay.",
-        "3. Sờ xác định rõ xương đậu ở bờ trụ nếp cổ tay xa (làm mốc tựa đầu trong đầu dò và định vị động mạch trụ nằm ngay sát bờ ngoài xương đậu)."
+      "topographicRelations": {
+        "superficialAndDeep": "Thần kinh giữa nằm ngay sát mặt sâu mạc giữ gân gấp (Lớp 3), đè lên mặt trước của gân FDS ngón trỏ/ngón giữa và bờ trụ gân FPL.",
+        "medialAndLateral": "Ở PHÍA TRỤ (ngoài ống cổ tay nhưng ngay trên đường đi kim bờ trụ!) là kênh Guyon chứa ĐỘNG MẠCH TRỤ (nằm phía quay hơn, chỉ cách bờ trụ thần kinh giữa ~8 – 12 mm!) và thần kinh trụ (nằm sát xương đậu); ở PHÍA QUAY ngoài vách sợi ống cổ tay là gân FCR và động mạch quay."
+      },
+      "dangerCorridors": [
+        "Hành lang kênh Guyon khi đi kim In-plane từ bờ trụ: Kim phải luồn nông ngay dưới mạc giữ gân gấp hoặc lách an toàn dưới/trên động mạch trụ dưới quan sát trực tiếp Doppler màu, tuyệt đối không chọc mù qua bờ ngoài xương đậu!",
+        "Kiểm tra biến thể thần kinh giữa đôi (Bifid median nerve) kèm động mạch giữa tồn lưu chạy kẹp ngay giữa hai bó thần kinh."
       ],
-      "probePlacement": "Đặt đầu dò Linear tần số cao cắt ngang (Short-axis transverse view) trùng ngay trên nếp gấp cổ tay xa, nối từ củ xương thuyền (bờ quay) tới xương đậu (bờ trụ) để bộc lộ cửa vào ống cổ tay.",
       "figures": [
         {
-          "path": "assets/images/ch21_wrist_hand/p250_img1.jpeg",
-          "figNumber": "21.3",
-          "title": "Mốc đặt đầu dò ngang nếp gấp cổ tay xa và hình ảnh siêu âm ống cổ tay (Fig. 21.3)",
-          "desc": "Đặt đầu dò ngang qua nếp gấp cổ tay xa nối củ xương thuyền và xương đậu để nhận diện thần kinh giữa hình tổ ong nằm dưới mạc giữ gân gấp.",
-          "springerCaption": "Fig. 21.3 Transverse transducer placement over the distal wrist crease and corresponding carpal tunnel sonogram."
+          "path": "assets/images/external_anatomy/ext_sec_carpal_tunnel_color.png",
+          "figNumber": "Axial Sec.",
+          "title": "Thiết đồ cắt ngang giải phẫu ống cổ tay, kênh Guyon và 6 ngăn gân duỗi (Classical Cross-Section)",
+          "desc": "Thiết đồ ngang chuẩn màu chỉ rõ dây thần kinh giữa (vàng) nằm ngay dưới dây chằng ngang cổ tay, bó mạch thần kinh trụ (đỏ - vàng) ở phía trụ, gân FCR/FPL ở phía quay và vòm xương thang - thê - cả - móc ở sàn.",
+          "atlasSource": "Wikimedia Classical Anatomical Atlas (after Gray's Plate 422) – Transverse cross-section across the wrist and carpal tunnel."
+        },
+        {
+          "path": "assets/images/external_anatomy/ext_sec_distal_forearm_wrist_section_gray421.png",
+          "figNumber": "Gray 421",
+          "title": "Thiết đồ cắt ngang ngay cửa vào cổ tay qua đầu xa xương quay - trụ (Gray's Plate 421)",
+          "desc": "Thiết đồ ngang ngay trước nếp cổ tay xa hiển thị tương quan của thần kinh giữa, gân gan tay dài, FCR, động mạch quay và bó mạch thần kinh trụ.",
+          "atlasSource": "Gray's Anatomy (20th Ed., Plate 421) – Transverse section across distal ends of radius and ulna."
         }
       ]
     },
@@ -995,52 +1117,55 @@ var STABLE_PROCEDURES_FALLBACK = [];
         "Có nhánh nông thần kinh quay bắt chéo sát bao gân."
       ]
     },
-    "anatomy": {
-      "overview": "Ngăn gân duỗi số 1 của cổ tay (First Dorsal Extensor Compartment) là một đường hầm xương – sợi dài khoảng 2 cm chạy trên mặt ngoài mỏm trâm quay (Radial styloid), sàn là rãnh xương đầu dưới xương quay và mái là mạc giữ gân duỗi dày lên (Extensor retinaculum). Bên trong ngăn số 1 chứa hai gân duỗi – dạng ngón cái đi sát nhau: gân cơ dạng ngón cái dài (Abductor Pollicis Longus - APL, nằm phía gan tay hơn, thường có nhiều dải gân phụ) và gân cơ duỗi ngón cái ngắn (Extensor Pollicis Brevis - EPB, nằm phía mu tay hơn). Khoảng 30 - 40% bệnh nhân có một vách xơ phụ (Subcompartmental septum) chia ngăn số 1 thành hai buồng riêng biệt bọc riêng EPB – nguyên nhân hàng đầu gây thất bại nếu chỉ tiêm một ngăn!",
-      "targetStructure": "Khoang bao hoạt dịch chung ngăn duỗi số 1 (dưới mạc giữ gân duỗi, bao quanh cả APL và EPB; nếu có vách ngăn phụ tăng âm giữa 2 gân thì bắt buộc tiêm vào cả 2 tiểu ngăn đặc biệt là ngăn của EPB).",
-      "innervation": "Nhánh nông thần kinh quay (Superficial radial nerve - SRN) chạy ngay trong lớp mỡ dưới da vắt chéo qua mặt nông của ngăn duỗi số 1.",
-      "vascularAndDangerZones": [
-        "Nhánh nông thần kinh quay (Superficial branch of radial nerve - SRN) và tĩnh mạch đầu (Cephalic vein): Nằm ngay trong mô dưới da phía trên mạc giữ gân duỗi – đâm xuyên gây đau rát bỏng thần kinh kéo dài (Cheiralgia paresthetica).",
-        "Động mạch quay (Radial artery): Nằm về phía gan tay rồi lách qua đáy hố lào giải phẫu ở ngay phía xa mỏm trâm quay – bật Doppler màu kiểm tra trước khi đi kim!",
-        "Lớp mỡ dưới da mỏm trâm quay cực mỏng: Tuyệt đối tránh để dịch steroid trào ra mô dưới da gây mảng bạch biến mất sắc tố và teo da rõ rệt."
+    "surfaceAnatomy": {
+      "sourceRef": "Gray's Anatomy (42nd Ed.) – Anatomical Snuffbox & Dorsal Wrist Compartments; Moore's Clinically Oriented Anatomy",
+      "surfaceLandmarks": [
+        "Mỏm trâm quay (Radial styloid process): Đỉnh xương nhọn ở bờ quay cổ tay (xuống thấp hơn mỏm trâm trụ khoảng 1.0 cm).",
+        "Hố lào giải phẫu (Anatomical snuffbox / Tabatière anatomique): Hõm tam giác nổi rõ ở mặt ngoài cổ tay khi dạng và duỗi ngón cái hết cỡ.",
+        "Bờ trước (bờ gan tay) của hố lào: Nổi rõ hai dải gân căng của ngăn duỗi số 1 là cơ dạng ngón cái dài (APL) và cơ duỗi ngón cái ngắn (EPB).",
+        "Bờ sau (bờ mu tay) của hố lào: Gân cơ duỗi ngón cái dài (EPL – thuộc ngăn số 3 vòng qua củ Lister)."
+      ],
+      "surfaceProjections": "Bao hoạt dịch của ngăn gân duỗi số 1 bắt đầu từ phía trên mạc giữ gân duỗi ~2 – 3 cm, chạy dọc trong rãnh xương mặt ngoài đầu dưới xương quay (đoạn đường hầm xơ dài ~2 cm ngay trên mỏm trâm quay) và kéo dài xuống tới nền xương bàn tay 1. Tĩnh mạch đầu và nhánh nông thần kinh quay (Superficial radial nerve) vắt chéo ngay trên bề mặt nông của mái ngăn số 1.",
+      "palpationSteps": [
+        "1. Đặt bờ trụ bàn tay bệnh nhân tựa trên mặt bàn, ngón cái hướng thẳng lên trên (tư thế trung tính nửa sấp).",
+        "2. Yêu cầu bệnh nhân duỗi và dạng mạnh ngón cái để làm nổi rõ hai gờ gân giới hạn hố lào giải phẫu; lần dọc gờ gân phía trước ngược lên 1 – 1.5 cm ngay trên mặt ngoài mỏm trâm quay.",
+        "3. Ấn kiểm tra khối sưng dày cứng bao gân trên mỏm trâm quay và làm nghiệm pháp Finkelstein / Eichhoff xác nhận đau chói."
       ],
       "figures": [
         {
-          "path": "assets/images/anatomy/fig_21_06_anatomical_snuffbox.jpg",
-          "figNumber": "21.6",
-          "title": "Giải phẫu hố lào và các gân ngăn duỗi số 1 (APL, EPB) trên mỏm trâm quay (Fig. 21.6)",
-          "desc": "Gân cơ dạng ngón cái dài (APL) và duỗi ngón cái ngắn (EPB) tạo nên bờ trước (bờ quay) của hố lào giải phẫu, trong khi gân EPL (ngăn số 3) tạo bờ sau.",
-          "springerCaption": "Fig. 21.6 Anatomical snuffbox bounded anteriorly by APL and EPB tendons of the first dorsal compartment."
-        },
-        {
-          "path": "assets/images/ch21_wrist_hand/p254_img1.jpeg",
-          "figNumber": "21.7",
-          "title": "Thiết đồ cắt ngang 6 ngăn gân duỗi mặt mu cổ tay và mốc củ Lister (Fig. 21.7)",
-          "desc": "Vị trí ngăn duỗi số 1 (EPB, APL) ở bờ ngoài mỏm trâm quay so với ngăn 2 (ECRL, ECRB) và ngăn 3 (EPL bờ trụ củ Lister).",
-          "springerCaption": "Fig. 21.7 Six compartments of the extensor tendons in the wrist."
+          "path": "assets/images/external_anatomy/ext_surf_wrist_extensor_sheaths_gray1234.png",
+          "figNumber": "Gray 1234",
+          "title": "Giải phẫu bề mặt mặt mu - quay cổ tay: Hình chiếu 6 bao hoạt dịch gân duỗi và hố lào (Gray's Plate 1234)",
+          "desc": "Hình chiếu bề mặt chi tiết bao hoạt dịch ngăn số 1 (Abductor pollicis longus & Extensor pollicis brevis) chạy dọc bờ ngoài mỏm trâm quay tạo bờ trước hố lào.",
+          "atlasSource": "Gray's Anatomy (20th Ed., Plate 1234) – Surface markings of mucous sheaths of tendons on the back of the wrist."
         }
       ]
     },
-    "surfaceAnatomy": {
-      "bonyLandmarks": [
-        "Mỏm trâm quay (Radial styloid process): Gồ xương nhọn ở bờ ngoài (bờ quay) đầu xa xương quay.",
-        "Hố lào giải phẫu (Anatomical snuffbox): Hõm tam giác nổi rõ ngay phía xa mỏm trâm quay khi dạng và duỗi tối đa ngón cái.",
-        "Củ Lister (Lister's tubercle): Mấu xương nhô ở mặt mu đầu dưới xương quay (làm mốc đối chiếu giữa ngăn 2 và ngăn 3)."
+    "crossSectionalAnatomy": {
+      "sourceRef": "Gray's Anatomy – Transverse Section of Distal Radius & Six Extensor Compartments",
+      "sectionPlane": "Thiết đồ cắt ngang (Axial / Transverse Section) qua đầu dưới xương quay cách đỉnh mỏm trâm quay 1.0 – 1.5 cm về phía gần.",
+      "layeredStructure": [
+        "Lớp 1 – Da rất mỏng vùng bờ quay cổ tay và lớp mỡ dưới da (dày chỉ ~2 – 3 mm): Chứa TĨNH MẠCH ĐẦU (Cephalic vein) và các nhánh tận của NHÁNH NÔNG THẦN KINH QUAY (Superficial branch of radial nerve - SRN) nằm ngay trên mạc!",
+        "Lớp 2 – Mái đường hầm: Dải sợi ngăn số 1 của Mạc giữ gân duỗi (Extensor retinaculum – bình thường dày ~0.5 – 1.0 mm; trong viêm De Quervain dày gấp 3 – 4 lần thành dải giảm âm bó chặt gân).",
+        "Lớp 3 – KHOANG ĐÍCH: Khoang bao hoạt dịch ngăn duỗi số 1 bọc quanh Gân cơ dạng ngón cái dài (APL – nằm phía gan tay hơn, thường chẻ 2 – 4 dải gân phụ 'lotus root sign') và Gân cơ duỗi ngón cái ngắn (EPB – mảnh hơn, nằm phía mu tay hơn).",
+        "Lớp 4 – Vách xơ gian tiểu ngăn (Intracompartmental septum – tồn tại ở 30 – 40% cá thể, mọc từ vỏ xương quay lên mạc giữ gân duỗi ngăn cách hoàn toàn EPB thành một ống riêng biệt!).",
+        "Lớp 5 (Đáy thiết đồ) – Rãnh xương nông có gờ xương nhỏ trên mặt ngoài mỏm trâm xương quay."
       ],
-      "referenceLines": "Bờ trước (bờ gan tay) của hố lào giải phẫu chạy ngược lên trên mỏm trâm quay chính là đường đi bề mặt của bộ đôi gân APL và EPB trong ngăn số 1.",
-      "palpationSteps": [
-        "1. Đặt bàn tay bệnh nhân ở tư thế trung tính cạnh bàn (bờ trụ tựa mặt bàn, ngón cái hướng thẳng lên trần nhà – Radial side up), kê khăn cuộn nhỏ dưới bờ trụ cổ tay để nghiêng trụ nhẹ.",
-        "2. Yêu cầu bệnh nhân dạng và duỗi ngón cái ('giơ ngón cái hướng lên') để làm nổi rõ hai bờ gân hố lào; sờ bờ gân phía trước trồi lên ngay trên mỏm trâm quay.",
-        "3. Ấn nhẹ lên mỏm trâm quay cách đỉnh mỏm trâm 1 cm về phía gần và kiểm tra dấu hiệu Finkelstein (nắm ngón cái trong lòng bàn tay rồi nghiêng trụ cổ tay gây đau chói dọc ngăn số 1)."
+      "topographicRelations": {
+        "superficialAndDeep": "Ngay phía nông trên mái mạc giữ gân duỗi là nhánh nông thần kinh quay và tĩnh mạch đầu; phía sâu là vỏ xương mặt ngoài đầu xa xương quay.",
+        "medialAndLateral": "Phía GAN TAY (trước) cách ngăn số 1 khoảng 5 – 8 mm là ĐỘNG MẠCH QUAY (Radial artery) chuẩn bị vòng ra dưới các gân APL/EPB để vào đáy hố lào; phía MU TAY (sau) là ngăn gân duỗi số 2 (ECRL, ECRB – nơi giao chéo trên cao cách cổ tay 4 cm gây hội chứng Intersection syndrome)."
+      },
+      "dangerCorridors": [
+        "Tổn thương nhánh nông thần kinh quay (Lớp 1): Luôn nhận diện các chấm sáng nhỏ của SRN và tĩnh mạch đầu trong mô dưới da trước khi đâm kim từ mu tay sang gan tay (Dorsal-to-volar).",
+        "Bỏ sót tiểu ngăn riêng của gân EPB (Lớp 4): Nếu thấy vách dọc tăng âm giữa APL và EPB mà dịch chỉ bao quanh APL, bắt buộc hướng mũi kim sang bao quanh cả gân EPB ở phía mu!"
       ],
-      "probePlacement": "Đặt đầu dò Linear (hoặc Hockey-stick) cắt ngang (Short-axis transverse view) vuông góc trực tiếp lên mặt ngoài mỏm trâm quay (cách đỉnh mỏm trâm ~1 cm về phía gần) để nhận diện 2 gân APL – EPB và tìm vách ngăn phụ trước khi đâm kim.",
       "figures": [
         {
-          "path": "assets/images/anatomy/fig_21_08_finkelstein_maneuver.jpg",
-          "figNumber": "21.8",
-          "title": "Nghiệm pháp Finkelstein định vị lâm sàng bao gân De Quervain trên mỏm trâm quay (Fig. 21.8)",
-          "desc": "Gấp ngón cái vào lòng bàn tay và nghiêng trụ cổ tay làm căng tối đa gân APL và EPB qua mỏm trâm quay.",
-          "springerCaption": "Fig. 21.8 Finkelstein maneuver stretching the first dorsal compartment tendons over the radial styloid."
+          "path": "assets/images/external_anatomy/ext_sec_distal_forearm_wrist_section_gray421.png",
+          "figNumber": "Gray 421",
+          "title": "Thiết đồ cắt ngang đầu xa xương quay hiển thị rõ Ngăn duỗi số 1 (Abd. poll. long. & Ext. poll. brev.) và Động mạch quay (Gray's Plate 421)",
+          "desc": "Trên thiết đồ ngang, hai gân APL và EPB nằm sát bờ ngoài xương quay, ngay phía sau động mạch quay (màu đỏ) và phía trước ngăn số 2 (ECRL, ECRB).",
+          "atlasSource": "Gray's Anatomy (20th Ed., Plate 421) – Transverse section across distal radius showing all six extensor compartments."
         }
       ]
     },
@@ -1119,45 +1244,63 @@ var STABLE_PROCEDURES_FALLBACK = [];
         "Ngón tay co cứng bất động hoàn toàn giai đoạn IV (cần phẫu thuật cắt ròng rọc A1)."
       ]
     },
-    "anatomy": {
-      "overview": "Tại mỗi ngón tay dài (ngón II–V), gân gấp nông (FDS - tách đôi thành chiasma Camper bám đốt giữa) và gân gấp sâu (FDP - bám đốt xa) trượt trong một ống bao hoạt dịch xơ được giữ sát vào mặt gan xương đốt ngón tay bởi hệ thống 5 ròng rọc vòng (Annular pulleys A1–A5) và 3 ròng rọc chéo (Cruciform pulleys C1–C3); riêng ngón cái có gân FPL đi qua ròng rọc A1, ròng rọc chéo và A2. Ròng rọc A1 (dài ~8 - 10 mm, dày bình thường < 0.6 mm) bám vào sụn gan tay (Volar plate) ngay mức chỏm xương bàn tay – khớp bàn ngón (MCP). Trong ngón tay lò xo, sự phì đại xơ hóa ròng rọc A1 kết hợp nốt phồng gân gấp gây kẹt cơ học khi gấp – duỗi.",
-      "targetStructure": "Khoang bao hoạt dịch gân gấp (Flexor tendon sheath) ngay mặt sâu của ròng rọc A1 (hoặc sát rìa nông/sâu ròng rọc A1 mà tuyệt đối không đâm vào lõi sợi gân FDS/FDP).",
-      "innervation": "Các dây thần kinh gan ngón tay riêng (Proper palmar digital nerves - tách từ thần kinh giữa cho ngón I, II, III, nửa ngón IV và từ thần kinh trụ cho nửa ngón IV, ngón V).",
-      "vascularAndDangerZones": [
-        "Bó mạch – thần kinh gan ngón tay riêng hai bên (Radial & Ulnar proper digital arteries and nerves): Chạy dọc sát hai bên bờ quay và bờ trụ của bao gân gấp; ĐẶC BIỆT ở ngón cái, nhánh thần kinh gan ngón cái bờ quay vắt chéo rất nông ngay trước ròng rọc A1!",
-        "Sợi gân gấp FDS/FDP (hoặc FPL): Tiêm steroid nội gân với lực bơm căng có nguy cơ gây đứt gân gấp ngón tay.",
-        "Sụn gan tay (Volar plate) và khoang khớp bàn – ngón (MCP joint) nằm ngay mặt sâu của gân gấp."
+    "surfaceAnatomy": {
+      "sourceRef": "Gray's Anatomy (42nd Ed.) – Palmar Skin Creases & Digital Fibrous Sheaths; Doyle's Pulley Landmarks",
+      "surfaceLandmarks": [
+        "Nếp gấp gan tay xa (Distal palmar crease – tương ứng cổ xương bàn ngón III, IV, V) và Nếp gấp gan tay gần (tương ứng ngón trỏ II).",
+        "Nếp gấp gốc ngón tay / Nếp bàn – ngón (Palmar digital crease – nằm xa hơn khớp MCP thực sự khoảng 12 – 15 mm!).",
+        "Chỏm xương bàn tay (Metacarpal head): Khối xương tròn lồi rõ trong gan tay ngay dưới nếp gấp gan tay.",
+        "Nếp gấp khớp bàn – ngón cái (Thumb MCP flexion crease – nằm trùng ngay trên ròng rọc A1 của ngón cái!)."
+      ],
+      "surfaceProjections": "Định luật khoảng cách bề mặt của Wilbur & Doyle: Khoảng cách từ bờ gần ròng rọc A1 tới nếp gấp gốc ngón tay (Palmar digital crease) bằng đúng khoảng cách từ nếp gấp gốc ngón tay tới nếp gấp liên đốt gần (PIP crease), trung bình ~1.8 – 2.2 cm! Nói cách khác, ròng rọc A1 (dài ~8 – 10 mm ở ngón dài, ~6 mm ở ngón cái) chiếu đúng lên mặt gan chỏm xương bàn tay ở nửa giữa khoảng cách từ nếp gấp gan tay xa tới nếp gốc ngón tay.",
+      "palpationSteps": [
+        "1. Đặt ngửa bàn tay bệnh nhân trên mặt phẳng cứng, các ngón duỗi tự nhiên.",
+        "2. Dùng đầu ngón trỏ ấn lên đường trục giữa ngón tay ngay trên chỏm xương bàn tay (ngay phía xa nếp gấp gan tay xa ~0.5 cm; ở ngón cái ấn ngay trên nếp gấp MCP).",
+        "3. Yêu cầu bệnh nhân nắm – duỗi ngón tay chủ động để cảm nhận nốt dày gân (Notta's nodule) trượt bật cấn dưới bờ gần ròng rọc A1."
       ],
       "figures": [
         {
-          "path": "assets/images/anatomy/fig_21_13_finger_pulley_anatomy.jpg",
-          "figNumber": "21.13",
-          "title": "Giải phẫu hệ thống ròng rọc vòng (A1–A5) và ròng rọc chéo (C1–C3) ngón tay (Fig. 21.13)",
-          "desc": "Ròng rọc A1 nằm ngay mức chỏm xương bàn tay - khớp bàn ngón (MCP), là vị trí kẹt cơ học điển hình của ngón tay lò xo.",
-          "springerCaption": "Fig. 21.13 Annular (A1–A5) and cruciform (C1–C3) pulleys over the volar aspect of the finger; A1 pulley overlies the MCP joint."
+          "path": "assets/images/external_anatomy/ext_surf_wrist_flexor_sheaths_gray1233.png",
+          "figNumber": "Gray 1233",
+          "title": "Giải phẫu bề mặt bao hoạt dịch gân gấp các ngón tay so với các nếp gấp gan bàn tay (Gray's Plate 1233)",
+          "desc": "Đối chiếu đầu gần bao hoạt dịch gân gấp các ngón II, III, IV (kết thúc ngang cổ xương bàn tay - mức ròng rọc A1) và bao riêng ngón I, ngón V thông lên cổ tay.",
+          "atlasSource": "Gray's Anatomy (20th Ed., Plate 1233) – Mucous sheaths of tendons on the front of wrist and digits."
         }
       ]
     },
-    "surfaceAnatomy": {
-      "bonyLandmarks": [
-        "Chỏm xương bàn tay (Metacarpal head): Khối xương tròn sờ thấy rõ trong lòng bàn tay ngay gốc ngón tay.",
-        "Nếp gấp gan bàn tay xa (Distal palmar crease) đối với ngón III, IV, V; nếp gấp ngang gan bàn tay gần đối với ngón trỏ (II); và nếp gấp bàn – ngón cái (Thumb MCP crease) đối với ngón cái (I).",
-        "Nếp gấp gốc ngón tay (Proximal digital crease)."
+    "crossSectionalAnatomy": {
+      "sourceRef": "Gray's Anatomy – Transverse & Sagittal Sectional Anatomy of Metacarpophalangeal Joint & Flexor Apparatus",
+      "sectionPlane": "Thiết đồ cắt ngang (Axial Section) và Thiết đồ đứng dọc giữa (Mid-sagittal Section) qua khớp bàn – ngón tay (MCP) ngang mức ròng rọc A1.",
+      "layeredStructure": [
+        "Lớp 1 – Da gan bàn tay dày có lớp sừng chắc và đệm mỡ dưới da có các vách xơ dọc giữ da không trượt.",
+        "Lớp 2 – Cân gan tay dọc (Pretendinous band of palmar aponeurosis) tách đôi hai chân đi sang hai bên cổ xương bàn.",
+        "Lớp 3 – Mái ống xơ: Ròng rọc vòng số 1 (First annular pulley - A1, bình thường mỏng < 0.5 – 0.6 mm bám hai bên vào bờ sụn gan tay; khi viêm dày giảm âm lên 1.2 – 2.5 mm).",
+        "Lớp 4 – KHOANG ĐÍCH: Khoang bao hoạt dịch gân gấp (Synovial tendon sheath space – viền dịch mỏng ôm mặt nông và hai bên bờ gân gấp ngay dưới mặt sâu ròng rọc A1).",
+        "Lớp 5 – Cặp gân gấp: Gân gấp nông (FDS – nằm nông, bắt đầu dẹt lõm mặt dưới ôm lấy FDP) và Gân gấp sâu (FDP – nằm sâu, hình bầu dục tròn); ở ngón cái chỉ có 1 gân duy nhất là gân gấp ngón cái dài (FPL) kẹp giữa 2 xương vừng!",
+        "Lớp 6 (Đáy thiết đồ) – Sụn sợi gan tay dày chắc (Volar plate), khoang khớp bàn – ngón (MCP) và chỏm xương bàn tay."
       ],
-      "referenceLines": "Quy tắc định vị bề mặt ròng rọc A1: Bờ gần của ròng rọc A1 nằm ngay mức nếp gấp gan tay xa (ngón III–V), kéo dài khoảng 1 cm về phía gốc ngón tay (tức nằm đúng khoảng giữa nếp gấp gan tay xa và nếp gấp gốc ngón tay); riêng ở ngón cái, A1 nằm ngay chính dưới nếp gấp khớp MCP ngón cái.",
-      "palpationSteps": [
-        "1. Đặt bàn tay bệnh nhân ngửa hoàn toàn trên bàn phẳng, các ngón tay duỗi thoải mái.",
-        "2. Đặt đầu ngón trỏ bác sĩ ấn nhẹ ngay trên chỏm xương bàn tay (giữa nếp gấp gan tay xa và nếp gốc ngón tay).",
-        "3. Yêu cầu bệnh nhân chủ động gấp – duỗi ngón tay đau: cảm nhận rõ hạt gân (Notta's nodule) bật khục qua bờ gần ròng rọc A1 dày cứng ngay dưới đầu ngón tay khám."
+      "topographicRelations": {
+        "superficialAndDeep": "Từ da lòng bàn tay tới mặt nông ròng rọc A1 chỉ sâu ~3 – 5 mm; phía sâu của gân gấp được đệm bởi sụn gan tay (Volar plate) ngăn cách với chỏm xương bàn tay.",
+        "medialAndLateral": "Sát hai bên bờ quay và bờ trụ của ròng rọc A1 (trong hầm lumbrical canal) là BÓ MẠCH VÀ THẦN KINH GAN NGÓN TAY RIÊNG (Proper palmar digital artery & nerve – thần kinh luôn nằm NÔNG/GAN TAY hơn động mạch!). CẢNH BÁO ĐẶC BIỆT Ở NGÓN CÁI: Thần kinh gan ngón cái bờ quay vắt chéo rất nông ngay mặt trước ròng rọc A1 cách dưới da chỉ 1.5 – 2 mm!"
+      },
+      "dangerCorridors": [
+        "Luôn giữ đường đi kim đúng chính giữa trục dọc gân gấp (Midline sagittal corridor) hoặc kiểm soát trên cắt ngang để tránh tuyệt đối hai bó mạch thần kinh gan ngón tay chạy hai bên sườn A1.",
+        "Riêng ở ngón cái: Luôn quét ngang trước bằng đầu dò tần số cao tìm nhánh thần kinh gan ngón cái bờ quay vắt trước A1 để tránh đâm xuyên thần kinh."
       ],
-      "probePlacement": "Đặt đầu dò Linear tần số cao (12 - 18 MHz hoặc Hockey-stick, bôi lớp gel dày tạo đệm âm) dọc theo trục chính giữa mặt gan khớp MCP (Long-axis view) rồi xoay 90 độ cắt ngang (Short-axis view) để đo độ dày ròng rọc A1 và bật Doppler định vị hai động mạch ngón tay hai bên.",
       "figures": [
         {
-          "path": "assets/images/ch21_wrist_hand/p260_img1.jpeg",
-          "figNumber": "21.14",
-          "title": "Đặt đầu dò mặt cắt dọc trên nếp gấp bàn - ngón bộc lộ ròng rọc A1 và gân gấp (Fig. 21.14)",
-          "desc": "Đầu dò đặt dọc chính giữa mặt gan khớp bàn - ngón (MCP) hiển thị chỏm xương bàn, đốt gần, gân FDS/FDP và ròng rọc A1 phía nông.",
-          "springerCaption": "Fig. 21.14 Surface probe placement and long-axis scan of the digit over the MCP joint and A1 pulley."
+          "path": "assets/images/external_anatomy/ext_sec_finger_tendon_pulley_gray338.png",
+          "figNumber": "Gray 338",
+          "title": "Thiết đồ bên khớp bàn - ngón tay, sụn gan tay (Volar accessory lig.) và quan hệ bao gân (Gray's Plate 338)",
+          "desc": "Cấu trúc sụn sợi gan tay (Volar plate) làm sàn đỡ cho ròng rọc A1 và gân gấp ngay mặt trước chỏm xương bàn tay - nền đốt gần.",
+          "atlasSource": "Gray's Anatomy (20th Ed., Plate 338) – Metacarpophalangeal articulation showing volar plate and collateral ligaments."
+        },
+        {
+          "path": "assets/images/external_anatomy/ext_sec_forearm_cross_section_gray416.png",
+          "figNumber": "Gray 416",
+          "title": "Giải phẫu chẻ gân gấp nông (FDS), gân gấp sâu (FDP) và mạc treo mạch máu gân Vincula (Gray's Plate 416)",
+          "desc": "Mối liên quan giữa gân FDS chẻ đôi ôm lấy FDP và hệ thống mạc treo gân (Vincula brevia & longa) bên trong bao gân ngón tay.",
+          "atlasSource": "Gray's Anatomy (20th Ed., Plate 416) – Flexor tendons, lumbricals, and vincula tendinum."
         }
       ]
     },
@@ -1236,45 +1379,61 @@ var STABLE_PROCEDURES_FALLBACK = [];
         "Gai xương lớn che lấp hoàn toàn khe khớp."
       ]
     },
-    "anatomy": {
-      "overview": "Khớp thang – bàn ngón cái (First Carpometacarpal Joint - CMC-1 / Trapeziometacarpal joint) là khớp hình yên ngựa hai trục (Biconcave-convex saddle synovial joint) giữa diện khớp xa xương thang (Trapezium) và nền xương bàn tay số 1 (First metacarpal base), cho phép thực hiện các động tác phức hợp đặc trưng của bàn tay người (gấp – duỗi, dạng – khép và đối chiếu ngón cái). Do biên độ vận động lớn và chịu lực kẹp nhón gấp 10 - 12 lần lực đầu ngón cái, bao khớp và hệ thống dây chằng (đặc biệt dây chằng mỏ gan trước – Anterior oblique 'beak' ligament) rất dễ lỏng lẻo, dẫn đến bán trật nền xương bàn 1 ra ngoài và thoái hóa khớp gốc ngón cái (Rhizarthrosis).",
-      "targetStructure": "Khe khớp hoạt dịch thang – bàn ngón 1 ở mặt mu – quay (Dorsoradial joint recess), nằm giữa gờ xương thang ở phía gần và nền xương bàn 1 ở phía xa, sâu dưới các gân APL/EPB.",
-      "innervation": "Nhánh khớp từ nhánh nông thần kinh quay (Superficial radial nerve), nhánh bì ngoài cẳng tay (Lateral antebrachial cutaneous nerve) và các sợi nhỏ từ nhánh gan tay thần kinh giữa.",
-      "vascularAndDangerZones": [
-        "Động mạch quay (Radial artery): Đi chéo qua sàn hố lào giải phẫu ở mức khớp thuyền – thang (Scaphotrapezial joint - ngay phía gần hơn so với khớp CMC-1 khoảng 1 cm) rồi lách vào khoang gian cốt bàn tay 1 ở phía mu – BẮT BUỘC bật Doppler màu để phân biệt khớp thuyền – thang (có động mạch quay nằm trên) với khớp CMC-1!",
-        "Các nhánh cảm giác của thần kinh quay nông chạy trong lớp dưới da vùng mu – quay gốc ngón cái.",
-        "Gân cơ dạng ngón cái dài (APL) bám tận ngay vào bờ ngoài nền xương bàn 1 (cần tránh tiêm steroid vào điểm bám gân)."
+    "surfaceAnatomy": {
+      "sourceRef": "Gray's Anatomy (42nd Ed.) – Anatomical Snuffbox & First Carpometacarpal Joint; Moore's Clinically Oriented Anatomy",
+      "surfaceLandmarks": [
+        "Nền xương bàn tay số 1 (Base of 1st metacarpal): Gồ xương sờ thấy rõ ở gốc ngón cái (thường nhô gồ vuông góc 'Shoulder sign' do bán trật ra ngoài trong thoái hóa khớp CMC-1).",
+        "Xương thang (Trapezium): Nằm ở nửa xa sàn hố lào giải phẫu, ngay phía gần nền xương bàn 1.",
+        "Hố lào giải phẫu (Anatomical snuffbox): Giới hạn trước bởi APL/EPB và sau bởi EPL; nửa gần sàn hố lào là xương thuyền (Scaphoid) và mạch đập động mạch quay."
+      ],
+      "surfaceProjections": "Từ đỉnh mỏm trâm quay đi dọc xuống sàn hố lào giải phẫu lần lượt đi qua 2 khe khớp cách nhau chỉ ~1.0 cm: Khe thứ nhất (cách mỏm trâm quay ~1 cm, nằm ngay dưới động mạch quay) là khớp thuyền – thang (Scaphotrapezial joint); đi tiếp xuống xa thêm 1 cm nữa ngay dưới bờ gồ nền xương bàn 1 mới chính là KHE KHỚP THANG – BÀN NGÓN CÁI (CMC-1 joint)!",
+      "palpationSteps": [
+        "1. Đặt bờ trụ bàn tay tựa trên bàn, ngón cái hướng lên trên thả lỏng nhẹ.",
+        "2. Dùng ngón cái và ngón trỏ tay khám miết dọc thân xương bàn 1 từ xa về phía cổ tay cho tới khi qua gờ nhô nền xương bàn 1 rơi xuống khe lõm ngang.",
+        "3. Vừa kéo nhẹ vừa đẩy/xoay dọc trục xương bàn 1 (Axial traction & Grind maneuver) để cảm nhận khe khớp CMC-1 mở ra; đồng thời bắt rõ nhịp đập động mạch quay ở sàn hố lào ngay phía gần hơn ~1 cm để đánh dấu tránh."
       ],
       "figures": [
         {
-          "path": "assets/images/anatomy/fig_21_17_cmc1_joint_anatomy.jpg",
-          "figNumber": "21.17",
-          "title": "Giải phẫu xương khớp thang - bàn ngón cái (CMC-1) bình thường và khi thoái hóa (Fig. 21.17)",
-          "desc": "Khớp hình yên ngựa tạo bởi xương thang (Trapezium) và nền xương bàn 1 (a), kèm hình ảnh hẹp khe khớp, gai xương và bán trật gốc ngón cái khi thoái hóa (b).",
-          "springerCaption": "Fig. 21.17 (a) First carpometacarpal joint formed between first metacarpal and trapezium. (b) Osteoarthritis of first CMC joint."
+          "path": "assets/images/external_anatomy/ext_surf_wrist_extensor_sheaths_gray1234.png",
+          "figNumber": "Gray 1234",
+          "title": "Giải phẫu bề mặt gốc ngón cái, hố lào giải phẫu và đường chiếu các gân APL - EPB - EPL (Gray's Plate 1234)",
+          "desc": "Hình chiếu bề mặt khớp thang - bàn ngón 1 nằm ở đỉnh xa hố lào ngay giữa hai dải gân APL/EPB và EPL.",
+          "atlasSource": "Gray's Anatomy (20th Ed., Plate 1234) – Surface relations of tendons crossing the first carpometacarpal region."
         }
       ]
     },
-    "surfaceAnatomy": {
-      "bonyLandmarks": [
-        "Nền xương bàn tay số 1 (Base of first metacarpal): Thường gồ nhẹ ra ngoài (dấu hiệu 'vai vuông' - Shoulder sign trong thoái hóa CMC-1).",
-        "Xương thang (Trapezium): Nằm ở sàn phần xa của hố lào giải phẫu, ngay phía gần nền xương bàn 1.",
-        "Đỉnh mỏm trâm quay (Radial styloid) ở phía gần hố lào."
+    "crossSectionalAnatomy": {
+      "sourceRef": "Gray's Anatomy – Coronal Section of Wrist Synovial Cavities & First CMC Articulation",
+      "sectionPlane": "Thiết đồ đứng ngang dọc bờ quay (Radial Coronal / Longitudinal Section) cắt qua xương thuyền, xương thang (Trapezium) và nền xương bàn tay 1.",
+      "layeredStructure": [
+        "Lớp 1 – Da và mô dưới da vùng mu – quay gốc ngón cái (dày ~2 – 4 mm): Chứa nhánh thần kinh mu ngón cái bờ quay tách từ NHÁNH NÔNG THẦN KINH QUAY (SRN) và nhánh của thần kinh bì cẳng tay ngoài.",
+        "Lớp 2 – Mạc nông và các dải gân bám tận của cơ dạng ngón cái dài (APL – bám vào mặt ngoài nền xương bàn 1) cùng gân duỗi ngón cái ngắn (EPB – chạy lướt qua mặt mu khớp xuống đốt gần).",
+        "Lớp 3 – Bao xơ khớp thang – bàn ngón 1 và dây chằng mu – quay (Dorsoradial ligament – dây chằng dày và giàu thụ thể cảm giác đau nhất mặt sau ngoài khớp!).",
+        "Lớp 4 – KHOANG ĐÍCH: Buồng hoạt dịch biệt lập của khớp thang – bàn ngón 1 (Isolated synovial cavity of 1st CMC joint – hoàn toàn tách biệt, KHÔNG thông nối với khớp giữa cổ tay hay khớp thuyền – thang!).",
+        "Lớp 5 (Đáy thiết đồ) – Hai diện sụn hình yên ngựa đối xứng nhau của xương thang và nền xương bàn 1; sâu hơn ở mặt gan – trụ là dây chằng mỏ gan trước (Anterior oblique beak ligament) và cơ mô cái."
       ],
-      "referenceLines": "Trục dọc bờ mu – quay xương bàn tay 1 vuốt ngược về phía cổ tay: bậc hõm đầu tiên chạm phải ngay dưới nền xương bàn 1 là khe khớp CMC-1; đi tiếp lên phía gần 1 cm nữa là khe khớp thuyền – thang (nơi có mạch đập động mạch quay).",
-      "palpationSteps": [
-        "1. Đặt bàn tay bệnh nhân ở tư thế nửa sấp trung tính (Thumb-up / bờ trụ tựa bàn, ngón cái hướng lên trên).",
-        "2. Dùng ngón trỏ miết dọc thân xương bàn 1 từ xa về gần cho tới khi qua gờ nhô nền xương bàn 1 rơi xuống khe khớp nhỏ.",
-        "3. Tay kia nắm thân xương bàn 1 thực hiện nghiệm pháp nghiền trục – bẩy (Grind & Lever test: ép dọc trục và xoay nhẹ hoặc lắc ngang gốc ngón cái) để cảm nhận khe khớp mở – đóng và tiếng lạo xạo đặc trưng; đồng thời bắt mạch động mạch quay ở hố lào phía gần để đánh dấu vùng tránh."
+      "topographicRelations": {
+        "superficialAndDeep": "Từ mặt da mu – quay tới khe khớp CMC-1 rất nông (chỉ ~4 – 8 mm); tuy nhiên ở khớp thoái hóa độ III–IV thường có gai xương rìa (Osteophytes) chồm che kín miệng khe khớp.",
+        "medialAndLateral": "Cách khe khớp CMC-1 khoảng 8 – 12 mm về PHÍA GẦN – MU (tại đáy hố lào trên lưng xương thang và đầu khoang gian cốt 1) là ĐỘNG MẠCH QUAY (Radial artery) chuẩn bị xuyên qua hai đầu cơ gian cốt mu tay 1 vào cung gan tay sâu!"
+      },
+      "dangerCorridors": [
+        "Nhầm khớp thuyền – thang với khớp CMC-1 trên thiết đồ dọc: Nếu đâm vào khe khớp gần hơn không những tiêm sai khoang (hai khoang không thông nhau!) mà còn có nguy cơ xuyên thủng trực tiếp ĐỘNG MẠCH QUAY nằm vắt ngay trên xương thang!",
+        "Tránh đâm xuyên qua điểm bám gân APL ở nền xương bàn 1."
       ],
-      "probePlacement": "Đặt đầu dò Linear (ưu tiên Hockey-stick) dọc theo trục xương bàn 1 tại bờ mu – quay gốc ngón cái (Longitudinal view along first metacarpal-trapezium axis), căn khe khớp hình chữ V nằm chính giữa màn hình.",
       "figures": [
         {
-          "path": "assets/images/anatomy/fig_21_18_cmc1_grind_test.jpg",
-          "figNumber": "21.18",
-          "title": "Nghiệm pháp Grind & Lever định vị bề mặt khe khớp thang - bàn ngón cái (Fig. 21.18)",
-          "desc": "Thao tác ép xoay trục (Grind test) và lắc bẩy nền xương bàn 1 (Lever test) giúp sờ chính xác khe khớp CMC-1 trước khi đặt đầu dò.",
-          "springerCaption": "Fig. 21.18 Grind and lever test for clinical localization of the first carpometacarpal joint."
+          "path": "assets/images/external_anatomy/ext_sec_wrist_coronal_cavities_gray336.png",
+          "figNumber": "Gray 336",
+          "title": "Thiết đồ đứng ngang toàn bộ các khoang hoạt dịch cổ tay - bàn ngón cái (Gray's Plate 336)",
+          "desc": "Thiết đồ kinh điển chứng minh khoang hoạt dịch khớp thang - bàn ngón 1 (giữa Greater multangular/Trapezium và 1st Metacarpal) là một buồng kín biệt lập hoàn toàn với khớp thuyền - thang ở trên.",
+          "atlasSource": "Gray's Anatomy (20th Ed., Plate 336) – Vertical coronal section through wrist articulations showing distinct synovial cavities."
+        },
+        {
+          "path": "assets/images/external_anatomy/ext_sec_forearm_cross_section_gray416.png",
+          "figNumber": "Gray 416",
+          "title": "Tương quan xương thang (Greater multangular), gân APL, EPB và động mạch quay xuyên khoang gian cốt 1 (Gray's Plate 416)",
+          "desc": "Vị trí động mạch quay đi qua sát bờ mu xương thang ngay cạnh khớp CMC-1 trước khi lách giữa hai đầu cơ gian cốt mu tay 1.",
+          "atlasSource": "Gray's Anatomy (20th Ed., Plate 416) – Deep radial aspect showing Trapezium, 1st CMC, APL, EPB, and Radial artery."
         }
       ]
     },
@@ -1359,52 +1518,63 @@ var STABLE_PROCEDURES_FALLBACK = [];
         "Rối loạn đông máu (INR > 2.0)."
       ]
     },
-    "anatomy": {
-      "overview": "Ngách trên bánh chè (Suprapatellar Recess / Bursa - SPR) là phần mở rộng lớn nhất lên phía trên của khoang hoạt dịch khớp gối, thông nối hoàn toàn với ổ khớp gối chính ở > 85–90% người trưởng thành. Về mặt giải phẫu phân tầng từ nông vào sâu ngay phía trên cực trên xương bánh chè: dưới da và mô dưới da là gân cơ tứ đầu đùi (Quadriceps tendon), tiếp đến là đệm mỡ trên bánh chè (Suprapatellar fat pad - bám ngay mặt trên nền xương bánh chè), khoang hoạt dịch ngách trên bánh chè (SPR), đệm mỡ trước đùi (Prefemoral fat pad - phủ mặt trước đầu dưới xương đùi) và cuối cùng là vỏ xương đùi.",
-      "targetStructure": "Khoang hoạt dịch ngách trên bánh chè (Suprapatellar recess) nằm kẹp giữa đệm mỡ trên bánh chè (hoặc mặt sâu gân tứ đầu) ở phía nông và đệm mỡ trước đùi ở phía sâu.",
-      "innervation": "Các nhánh khớp trên trong và trên ngoài (Superior medial & superior lateral genicular nerves) cùng nhánh thần kinh cơ rộng trong, rộng ngoài và rộng giữa (từ thần kinh đùi).",
-      "vascularAndDangerZones": [
-        "Động mạch gối trên ngoài (Superior lateral genicular artery) và động mạch gối xuống: Đi sát bờ trên lồi cầu đùi – cần bật Doppler màu kiểm tra đường đi kim ở ngách ngoài.",
-        "Gân cơ tứ đầu đùi (Quadriceps tendon): Cần xoay hoặc đặt đầu dò ngang trên bánh chè để đi kim từ bờ ngoài qua dưới cơ rộng ngoài thẳng vào ngách hoạt dịch, tránh đâm xuyên qua lõi gân tứ đầu đùi.",
-        "Sụn khớp bánh chè – đùi (Trochlear cartilage): Tránh đi kim quá thấp sát khe bánh chè gây xước sụn khớp."
+    "surfaceAnatomy": {
+      "sourceRef": "Gray's Anatomy (42nd Ed.) – Surface Anatomy of Knee & Suprapatellar Pouch; Moore's Clinically Oriented Anatomy",
+      "surfaceLandmarks": [
+        "Nền (cực trên) xương bánh chè (Base / Superior pole of patella): Gờ xương ngang dễ sờ nhất ở trung tâm gối trước.",
+        "Bờ ngoài xương bánh chè và Gân cơ tứ đầu đùi (Quadriceps femoris tendon).",
+        "Bụng cơ rộng ngoài (Vastus lateralis – kết thúc cao hơn nền bánh chè ~2 – 3 cm) và cơ rộng trong (Vastus medialis obliquus - VMO – xuống thấp tận bờ trong giữa xương bánh chè).",
+        "Hõm cạnh bánh chè trên ngoài (Superolateral parapatellar sulcus): Vùng cửa sổ mềm ít cơ che phủ nhất."
+      ],
+      "surfaceProjections": "Túi cùng trên bánh chè (Suprapatellar bursa/recess) phóng chiếu lên mặt trước đùi dưới thành một túi vòm rộng mở cao hơn nền xương bánh chè từ 5.0 đến 6.0 cm (khoảng 3 – 4 khoát ngón tay) nằm sâu dưới gân cơ tứ đầu đùi! Cửa sổ chọc kim bề mặt chuẩn nằm cách góc trên ngoài xương bánh chè 1.0 – 2.0 cm lên trên và ra ngoài (ngay dưới bờ dưới gân cơ rộng ngoài).",
+      "palpationSteps": [
+        "1. Bệnh nhân nằm ngửa, kê gối cuộn mỏng dưới khoeo để gối gấp nhẹ 15° – 25° giúp thư giãn cơ tứ đầu và tập trung dịch lên ngách trên bánh chè.",
+        "2. Dùng lòng bàn tay vuốt dồn dịch từ ngách trong và ngoài dưới bánh chè dồn lên trên nền bánh chè (nghiệm pháp vắt túi cùng và chạm xương bánh chè – Patellar tap).",
+        "3. Sờ xác định góc trên ngoài xương bánh chè và bờ ngoài gân cơ tứ đầu đùi để định vị điểm đặt đầu dò ngang."
       ],
       "figures": [
         {
-          "path": "assets/images/ch23_knee/p284_img1.jpeg",
-          "figNumber": "23.1",
-          "title": "Giải phẫu thiết đồ dọc ngách hoạt dịch trên bánh chè và các đệm mỡ khớp gối (Fig. 23.1)",
-          "desc": "Ngách trên bánh chè (SPR) nằm kẹp giữa gân cơ tứ đầu đùi / đệm mỡ trên bánh chè ở phía trước và đệm mỡ trước đùi sát xương đùi ở phía sau.",
-          "springerCaption": "Fig. 23.1 Sagittal anatomy of the suprapatellar recess (SPR), suprapatellar fat pad, and prefemoral fat pad."
+          "path": "assets/images/external_anatomy/ext_surf_thigh_front_topography_gray1238.png",
+          "figNumber": "Gray 1238",
+          "title": "Giải phẫu bề mặt mặt trước đùi - gối: Cực trên bánh chè, cơ rộng ngoài, cơ rộng trong và gân tứ đầu (Gray's Plate 1238)",
+          "desc": "Hình thái bề mặt các bụng cơ tứ đầu đùi hội tụ vào nền xương bánh chè và hõm trên ngoài xương bánh chè.",
+          "atlasSource": "Gray's Anatomy (20th Ed., Plate 1238) – Surface topography of the front and medial aspect of right thigh and knee."
         }
       ]
     },
-    "surfaceAnatomy": {
-      "bonyLandmarks": [
-        "Cực trên (nền) xương bánh chè (Superior pole / Base of patella): Gờ xương ngang sờ rất rõ ở mặt trước gối.",
-        "Bờ ngoài xương bánh chè và gân cơ tứ đầu đùi (Quadriceps tendon).",
-        "Mỏm trên lồi cầu ngoài xương đùi (Lateral femoral epicondyle) ở phía sau ngoài."
+    "crossSectionalAnatomy": {
+      "sourceRef": "Gray's Anatomy (Plate 350) & OpenStax Sectional Anatomy – Mid-Sagittal & Axial Section of Suprapatellar Recess",
+      "sectionPlane": "Thiết đồ đứng dọc giữa (Mid-sagittal Section) và Thiết đồ cắt ngang trên nền xương bánh chè 2 cm (Suprapatellar Axial Section).",
+      "layeredStructure": [
+        "Lớp 1 – Da và mô mỡ dưới da mặt trước ngoài trên gối (dày ~5 – 12 mm; chứa các nhánh thần kinh bì đùi trước và bì đùi ngoài).",
+        "Lớp 2 – Mạc đùi rộng (Fascia lata) liên tục với mạc giữ bánh chè ngoài (Lateral patellar retinaculum) ở bờ bên.",
+        "Lớp 3 – Gân chung cơ tứ đầu đùi 3 lá ở chính giữa (thẳng đùi ở nông, rộng ngoài & rộng trong ở giữa, rộng giữa ở sâu) HOẶC chỉ còn lá cân mỏng dưới bờ cơ rộng ngoài khi cắt chếch từ bờ ngoài vào.",
+        "Lớp 4 – Đệm mỡ trên bánh chè (Suprapatellar / Quadriceps fat pad – khối mỡ hình tam giác bám ngay mặt sau gân tứ đầu sát bờ trên xương bánh chè).",
+        "Lớp 5 – KHOANG ĐÍCH: Ngách hoạt dịch trên bánh chè (Suprapatellar synovial pouch – được kéo căng lên trên bởi cơ khớp gối Articularis genu để không bị kẹt khi duỗi gối!).",
+        "Lớp 6 (Đáy thiết đồ) – Đệm mỡ trước xương đùi (Prefemoral fat pad dày ~5 – 8 mm) phủ trực tiếp lên màng xương mặt trước đầu dưới thân xương đùi."
       ],
-      "referenceLines": "Vùng lõm trên ngoài bánh chè (Superolateral parapatellar fossa): Nằm cao hơn cực trên xương bánh chè khoảng 1 - 2 cm (1 khoát ngón tay cái) và lệch ra bờ ngoài gân cơ tứ đầu đùi.",
-      "palpationSteps": [
-        "1. Đặt bệnh nhân nằm ngửa thoải mái, kê một cuộn gối tròn nhỏ dưới khoeo chân để khớp gối gấp nhẹ 20 - 30 độ (làm căng vừa phải gân tứ đầu và dồn dịch khớp tập trung lên ngách trên bánh chè).",
-        "2. Dùng hai ngón cái và ngón trỏ bóp nhẹ hai bên ngách dưới bánh chè / khe khớp (nghiệm pháp vắt sữa – Milking maneuver) đẩy dịch dồn lên túi cùng trên bánh chè nếu lượng dịch ít.",
-        "3. Sờ xác định chính xác cực trên xương bánh chè và bờ ngoài gân cơ tứ đầu đùi."
+      "topographicRelations": {
+        "superficialAndDeep": "Khoang đích (Lớp 5) luôn nằm kẹp như 'nhân bánh sandwich' giữa Đệm mỡ trên bánh chè (phía nông) và Đệm mỡ trước đùi (phía sâu), cách sụn ròng rọc xương đùi ở dưới ~1 – 2 cm.",
+        "medialAndLateral": "Trên thiết đồ ngang, đi kim từ BỜ NGOÀI (dưới cơ rộng ngoài) ngắn hơn và ít cơ hơn hẳn so với bờ trong (do cơ rộng trong VMO xuống rất thấp và có nhánh xuống động mạch gối trên + thần kinh hiển đi ở mặt trong!)."
+      },
+      "dangerCorridors": [
+        "Động mạch gối trên ngoài (Superior lateral genicular artery) chạy sát màng xương trên lồi cầu ngoài trong đệm mỡ trước đùi (Lớp 6): Dừng mũi kim ngay trong lòng ngách hoạt dịch (Lớp 5), không chọc sâu xuyên vào đệm mỡ trước đùi sát xương.",
+        "Không đi kim xuyên thẳng từ trước ra sau qua giữa Lớp 3 (gân tứ đầu đùi dày cứng)."
       ],
-      "probePlacement": "Bước 1: Đặt đầu dò Linear dọc chính giữa ngay trên cực trên xương bánh chè (Suprapatellar longitudinal scan) để nhận diện dịch ngách SPR giữa hai đệm mỡ. Bước 2: Xoay đầu dò 90 độ sang mặt cắt ngang (Transverse view) ngay trên nền bánh chè 1 - 2 cm (hoặc chếch trên ngoài 45 độ) để đi kim In-plane từ ngoài vào trong mà không xuyên gân tứ đầu.",
       "figures": [
         {
-          "path": "assets/images/anatomy/fig_23_02_suprapatellar_probe_scan1.jpg",
-          "figNumber": "23.2",
-          "title": "Đặt đầu dò mặt cắt dọc trên cực trên xương bánh chè (Scan 1 - Fig. 23.2)",
-          "desc": "Đầu dò đặt dọc từ nền xương bánh chè lên gân cơ tứ đầu đùi để xác định ngách hoạt dịch trên bánh chè (SPR).",
-          "springerCaption": "Fig. 23.2 Suprapatellar longitudinal probe placement (inset) and corresponding sonogram."
+          "path": "assets/images/external_anatomy/ext_sec_knee_sagittal_gray350.png",
+          "figNumber": "Gray 350",
+          "title": "Thiết đồ đứng dọc chính giữa khớp gối: Ngách hoạt dịch dưới cơ tứ đầu và 3 đệm mỡ khớp gối (Gray's Plate 350)",
+          "desc": "Thiết đồ dọc kinh điển chỉ rõ ngách trên bánh chè (Bursa under Quadriceps femoris) kẹp giữa gân tứ đầu và lớp mỡ trước xương đùi (Adipose tissue).",
+          "atlasSource": "Gray's Anatomy (20th Ed., Plate 350) – Sagittal section of right knee-joint."
         },
         {
-          "path": "assets/images/anatomy/fig_23_03_suprapatellar_probe_scan2.jpg",
-          "figNumber": "23.3",
-          "title": "Xoay ngang đầu dò ngay trên xương bánh chè sẵn sàng đi kim In-plane từ ngoài vào trong (Scan 2 - Fig. 23.3)",
-          "desc": "Xoay đầu dò 90 độ sang mặt phẳng ngang giúp đường kim đi từ ngoài vào trong tránh hoàn toàn tổn thương gân cơ tứ đầu.",
-          "springerCaption": "Fig. 23.3 Transverse probe position just superior to the patella ready for lateral-to-medial in-plane injection."
+          "path": "assets/images/external_anatomy/ext_sec_knee_capsule_lateral_gray351.png",
+          "figNumber": "Gray 351",
+          "title": "Hình chiếu không gian toàn bộ bao hoạt dịch khớp gối căng giãn nhìn từ mặt ngoài (Gray's Plate 351)",
+          "desc": "Độ vươn cao rộng của ngách trên bánh chè dưới gân cơ tứ đầu đùi và ngách bên ngoài dưới cơ rộng ngoài.",
+          "atlasSource": "Gray's Anatomy (20th Ed., Plate 351) – Distended capsule of right knee-joint (lateral aspect)."
         }
       ]
     },
@@ -1488,44 +1658,54 @@ var STABLE_PROCEDURES_FALLBACK = [];
         "Túi phình động mạch khoeo (bắt buộc phải loại trừ bằng Doppler màu trước khi chọc!)."
       ]
     },
-    "anatomy": {
-      "overview": "Nang Baker (Popliteal / Baker's Cyst) thực chất là sự căng giãn của bao hoạt dịch cơ bán màng – cơ bụng chân trong (Semimembranosus-Medial Gastrocnemius Bursa) nằm ở góc phần tư sau trong của hố khoeo. Điểm mấu chốt giải phẫu bắt buộc phải tìm trên siêu âm là 'cuống nang' (Cyst neck / Pedicle) hình khe hẹp giống cổ chai hoặc dấu phẩy lách qua khe giữa gân cơ bán màng (ở phía trong/trước) và đầu trong cơ bụng chân (ở phía ngoài/sau) để thông nối với bao khớp gối sau qua cơ chế van một chiều.",
-      "targetStructure": "Thân túi nang hoạt dịch Baker (để chọc hút hết dịch nhầy/mảnh vụn fibrin bằng kim lớn) VÀ thành vách/cuống nang nằm giữa gân bán màng và đầu trong cơ bụng chân (để châm phá vách Fenestration & tiêm steroid chống tái phát).",
-      "innervation": "Nhánh khớp sau của thần kinh chày (Posterior articular branch of tibial nerve / Posterior genicular plexus) và nhánh thần kinh bịt.",
-      "vascularAndDangerZones": [
-        "Bó mạch thần kinh khoeo (Popliteal artery, Popliteal vein & Tibial nerve): Nằm ở trung tâm hố khoeo ngay phía NGOÀI (lateral) so với đầu trong cơ bụng chân – BẮT BUỘC bật Color Doppler để loại trừ giả phình động mạch khoeo (Popliteal aneurysm) hoặc huyết khối tĩnh mạch khoeo trước khi chọc kim!",
-        "Tĩnh mạch hiển bé (Small saphenous vein) và thần kinh bì bắp chân trong chạy nông dưới mạc khoeo."
+    "surfaceAnatomy": {
+      "sourceRef": "Gray's Anatomy (42nd Ed.) – Popliteal Fossa Surface Anatomy; Foucher's Clinical Sign",
+      "surfaceLandmarks": [
+        "Trám khoeo (Popliteal diamond): Giới hạn trên – trong bởi gân cơ bán gân & bán màng; trên – ngoài bởi gân cơ nhị đầu đùi; dưới – trong và dưới – ngoài bởi hai đầu cơ bụng chân (Gastrocnemius).",
+        "Nếp lằn da khoeo ngang (Transverse popliteal crease – lưu ý nằm CAO HƠN khe khớp gối thực sự khoảng 2 cm!).",
+        "Mạch đập động mạch khoeo ở sâu chính trục giữa trám khoeo."
+      ],
+      "surfaceProjections": "Nang hoạt dịch Baker (túi thanh mạc cơ bán màng – bụng chân trong) luôn xuất phát và trồi ra ở GÓC DƯỚI – TRONG của trám khoeo (ngay tại hoặc dưới nếp lằn khoeo 1 – 4 cm, lệch về phía bờ trong hơn so với trục mạch khoeo ở đường giữa). Khi duỗi thẳng gối (dấu hiệu Foucher), hai cơ bán màng và bụng chân ép chặt cổ nang làm khối nang căng cứng nổi rõ dưới da; khi gấp gối 45°, cổ nang mở thông làm nang mềm đi.",
+      "palpationSteps": [
+        "1. Khám đứng thẳng để quan sát khối phồng góc trong khoeo, sau đó đặt bệnh nhân nằm sấp duỗi chân thoải mái.",
+        "2. Yêu cầu bệnh nhân hơi gấp gối nhẹ có kháng lực để sờ rõ dải gân cơ bán gân (nông, tròn mảnh) và cơ bán màng (sâu, bè rộng) ở bờ trên trong trám khoeo.",
+        "3. Ấn hai tay sâu vào chính giữa hố khoeo bắt mạch đập động mạch khoeo để vạch ranh giới cấm ở phía ngoài khối nang."
       ],
       "figures": [
         {
-          "path": "assets/images/ch23_knee/p288_img1.jpeg",
-          "figNumber": "23.6",
-          "title": "Giải phẫu thiết đồ ngang hố khoeo và cổ nang hoạt dịch Baker (Fig. 23.6)",
-          "desc": "Nang Baker phát triển từ bao hoạt dịch thông qua khe hẹp giữa gân cơ bán màng (Semimembranosus) và đầu trong cơ bụng chân (Medial gastrocnemius), nằm phía trong bó mạch khoeo.",
-          "springerCaption": "Fig. 23.6 Cross-sectional anatomy of Baker's cyst (semimembranosus-gastrocnemius bursa) and adjacent popliteal neurovascular bundle."
+          "path": "assets/images/external_anatomy/ext_surf_lower_back_popliteal_gray1239.png",
+          "figNumber": "Gray 1239",
+          "title": "Giải phẫu bề mặt hố khoeo và mặt sau chi dưới: Các bờ cơ trám khoeo (Gray's Plate 1239)",
+          "desc": "Định khu bề mặt bốn cạnh cơ của hố khoeo và góc trong khoeo nơi nang hoạt dịch Baker trồi ra nông dưới mạc khoeo.",
+          "atlasSource": "Gray's Anatomy (20th Ed., Plate 1239) – Surface anatomy of the back of left lower extremity and popliteal fossa."
         }
       ]
     },
-    "surfaceAnatomy": {
-      "bonyLandmarks": [
-        "Nếp lằn khoeo ngang (Popliteal skin crease): Nếp gấp da ngang mặt sau khớp gối.",
-        "Gân cơ bán màng và gân cơ bán gân (Semimembranosus & Semitendinosus tendons): Tạo thành bờ trên trong rõ nét của trám khoeo.",
-        "Đầu trong cơ bụng chân (Medial head of gastrocnemius): Khối cơ căng tròn tạo bờ dưới trong của trám khoeo."
+    "crossSectionalAnatomy": {
+      "sourceRef": "Gray's Anatomy – Axial Section of Popliteal Fossa & Posterior Knee Recesses",
+      "sectionPlane": "Thiết đồ cắt ngang (Axial / Transverse Cross-Section) đi ngang qua lồi cầu trong xương đùi và góc sau trong hố khoeo.",
+      "layeredStructure": [
+        "Lớp 1 – Da mỏng vùng khoeo và lớp mỡ nông: Chứa tĩnh mạch hiển bé (Small saphenous vein) và thần kinh bì bắp chân trong ở gần đường giữa.",
+        "Lớp 2 – Mạc khoeo dày căng ngang (Popliteal fascia – liên tiếp mạc đùi rộng ở trên và mạc cẳng chân ở dưới).",
+        "Lớp 3 – PHẦN THÂN NANG (Superficial cyst body): Túi nang Baker căng dịch trồi ra nông ngay dưới mạc khoeo, ôm vòng lấy mặt sau – trong của đầu trong cơ bụng chân.",
+        "Lớp 4 – CỬA VAN CỔ NANG (Cyst neck / Pedicle – ĐÍCH PHÁ VÁCH): Khe hẹp hình chữ S hoặc dấu phẩy kẹp chặt giữa GÂN CƠ BÁN MÀNG (Semimembranosus tendon – ở phía trước trong) và ĐẦU TRONG CƠ BỤNG CHÂN (Medial head of gastrocnemius – ở phía sau ngoài).",
+        "Lớp 5 (Đáy thiết đồ) – Bao khớp gối sau trong (dây chằng khoeo chéo), sừng sau sụn chêm trong và vỏ xương lồi cầu trong xương đùi."
       ],
-      "referenceLines": "Trám khoeo góc trong (Posteromedial popliteal corner): Giao điểm giữa gờ gân bán màng – bán gân từ trên đi xuống và đầu trong cơ bụng chân ngay tại hoặc dưới nếp lằn khoeo 1 - 3 cm chính là vị trí xuất chiếu bề mặt của cổ nang Baker.",
-      "palpationSteps": [
-        "1. Đặt bệnh nhân nằm sấp hoàn toàn trên giường, kê gối mềm dưới cổ chân để cẳng chân thư giãn nhẹ; trước đó có thể khám lúc bệnh nhân đứng thẳng duỗi gối (dấu hiệu Foucher: khối nang khoeo căng cứng khi duỗi gối và mềm nhỏ lại khi gấp gối 45 độ).",
-        "2. Sờ xác định mạch đập động mạch khoeo ở sâu chính giữa hố khoeo để xác lập ranh giới an toàn phía ngoài.",
-        "3. Sờ nắn vùng góc sau trong hố khoeo (giữa gân bán màng và bụng chân trong) để đánh giá ranh giới trên – dưới của khối nang."
+      "topographicRelations": {
+        "superficialAndDeep": "Ở chính giữa hố khoeo (phía ngoài đầu trong cơ bụng chân), bó mạch thần kinh khoeo xếp theo bậc thang từ NÔNG VÀO SÂU: Thần kinh chày (nông nhất & ngoài nhất) -> Tĩnh mạch khoeo (ở giữa) -> ĐỘNG MẠCH KHOEO (sâu nhất, nằm sát ngay trên bao khớp sau / mặt khoeo xương đùi!).",
+        "medialAndLateral": "Đầu trong cơ bụng chân (Medial gastrocnemius) đóng vai trò 'bức tường cơ ngăn cách an toàn': Nang Baker và cuống nang nằm ở PHÍA TRONG đầu trong cơ bụng chân, còn toàn bộ bó mạch – thần kinh khoeo nằm ở PHÍA NGOÀI đầu trong cơ bụng chân!"
+      },
+      "dangerCorridors": [
+        "Giả phình động mạch khoeo (Popliteal artery aneurysm) hoặc u bao thần kinh Schwannoma ở trung tâm khoeo nhầm là nang Baker: Bắt buộc kiểm tra trên thiết đồ ngang thấy rõ cuống nang lách giữa gân bán màng – bụng chân trong VÀ bật Color Doppler âm tính bên trong lòng nang trước khi đâm kim 18G!",
+        "Luôn đi kim từ PHÍA TRONG ra ngoài (Medial-to-lateral), tuyệt đối không đâm xuyên vượt qua bờ ngoài đầu trong cơ bụng chân vào bó mạch khoeo."
       ],
-      "probePlacement": "Đặt đầu dò Linear cắt ngang (Short-axis transverse view) tại góc sau trong hố khoeo ngang mức nếp lằn khoeo để tìm hình ảnh 'chữ C / sừng trăng' của nang ôm lấy đầu trong cơ bụng chân và xác định khe cuống nang cạnh gân bán màng.",
       "figures": [
         {
-          "path": "assets/images/anatomy/fig_23_07_bakers_cyst_probe.jpg",
-          "figNumber": "23.7",
-          "title": "Vị trí đặt đầu dò ngang góc sau trong khoeo chân định vị cuống nang Baker (Fig. 23.7)",
-          "desc": "Đặt đầu dò cắt ngang góc sau trong hố khoeo để thấy đồng thời lồi cầu đùi trong, gân bán màng (SM) và đầu trong cơ bụng chân (MG).",
-          "springerCaption": "Fig. 23.7 Transverse probe placement over the posteromedial popliteal fossa and corresponding sonogram."
+          "path": "assets/images/external_anatomy/ext_sec_knee_popliteal_posterior_gray352.png",
+          "figNumber": "Gray 352",
+          "title": "Giải phẫu mặt sau bao khớp gối căng giãn, túi hoạt dịch bán màng - bụng chân và khe thông khớp (Gray's Plate 352)",
+          "desc": "Vị trí chính xác của bao hoạt dịch dưới đầu trong cơ bụng chân và gân bán màng thông nối với khoang khớp gối sau trong.",
+          "atlasSource": "Gray's Anatomy (20th Ed., Plate 352) – Posterior aspect of distended knee joint capsule and popliteal bursae."
         }
       ]
     },
@@ -1607,45 +1787,62 @@ var STABLE_PROCEDURES_FALLBACK = [];
         "Rách đứt gân chân ngỗng."
       ]
     },
-    "anatomy": {
-      "overview": "Phức hợp gân chân ngỗng (Pes Anserinus – 'chân ngỗng') là cấu trúc cân – gân hợp lưu hình nan quạt bám tận vào mặt trước trong đầu trên xương chày, được tạo thành bởi 3 gân xuất phát từ 3 khu đùi khác nhau (nhớ theo câu kinh điển 'Say Grace Before Tea'): cơ May (Sartorius – khu trước, thần kinh đùi), cơ Thon (Gracilis – khu trong, thần kinh bịt) và cơ Bán gân (Semitendinosus – khu sau, thần kinh tọa). Bao hoạt dịch chân ngỗng (Anserine bursa) nằm đệm ngay giữa mặt sâu của 3 dải gân chân ngỗng này và mặt nông của bản xa dây chằng bên chày (Medial Collateral Ligament - MCL) cùng vỏ xương chày.",
-      "targetStructure": "Khoang bao hoạt dịch chân ngỗng (Pes anserinus bursa) nằm kẹp giữa mặt sâu khối gân chân ngỗng và mặt nông dây chằng bên trong (MCL) / màng xương mặt trong đầu trên xương chày.",
-      "innervation": "Nhánh dưới bánh chè và các nhánh bì cẳng chân trong của thần kinh hiển (Saphenous nerve - L3, L4), cùng nhánh khớp gối dưới trong (IMGN).",
-      "vascularAndDangerZones": [
-        "Thần kinh hiển (Saphenous nerve) và tĩnh mạch hiển lớn (Great saphenous vein): Đi dọc bờ sau trong lồi cầu đùi – chày rất gần vùng gân chân ngỗng.",
-        "Động mạch và thần kinh gối dưới trong (Inferior medial genicular artery & nerve): Chạy ngang sát vỏ xương chày ngay mặt sâu dây chằng MCL – cần bật Doppler màu trước khi chọc kim.",
-        "Không đâm xuyên mũi kim vào chất gân chân ngỗng hoặc dây chằng bên chày (MCL)."
+    "surfaceAnatomy": {
+      "sourceRef": "Gray's Anatomy (42nd Ed.) – Anteromedial Proximal Tibia & Pes Anserinus Surface Markings",
+      "surfaceLandmarks": [
+        "Khe khớp gối trong (Medial tibiofemoral joint line).",
+        "Lồi củ xương chày (Tibial tuberosity): Gồ xương lớn phía trước cách khe khớp ~3 – 4 cm.",
+        "Bờ trong mâm chày (Medial tibial condyle) và diện xương phẳng mặt trước trong đầu trên xương chày."
+      ],
+      "surfaceProjections": "Diện bám hình chân ngỗng (Pes anserinus conjoined insertion) và bao hoạt dịch chân ngỗng chiếu lên vùng phẳng mặt trước trong đầu trên xương chày tại điểm nằm THẤP HƠN khe khớp gối trong 4.0 – 5.0 cm (khoảng 3 khoát ngón tay) và nằm PHÍA TRONG – SAU lồi củ xương chày 2.0 – 2.5 cm.",
+      "palpationSteps": [
+        "1. Bệnh nhân nằm ngửa, gấp nhẹ gối 20° – 30° và xoay ngoài nhẹ khớp háng.",
+        "2. Đặt ngón cái lên lồi củ xương chày, trượt ngang vào mặt phẳng xương chày phía trong 2.5 cm (kiểm tra đối chiếu cách dưới khe khớp trong ~4.5 cm).",
+        "3. Yêu cầu bệnh nhân gấp gối và xoay trong cẳng chân có đối kháng để làm căng 3 dải gân May – Thon – Bán gân và ấn tìm điểm đau khu trú phân biệt với đau khe khớp sụn chêm trong ở trên cao."
       ],
       "figures": [
         {
-          "path": "assets/images/anatomy/fig_23_13_pes_anserinus_anatomy.jpg",
-          "figNumber": "23.13",
-          "title": "Giải phẫu 3 gân chân ngỗng (May - Thon - Bán gân) và bao hoạt dịch chân ngỗng (Fig. 23.13)",
-          "desc": "Ba gân cơ May (Sartorius), Thon (Gracilis) và Bán gân (Semitendinosus) hội tụ bám mặt trước trong xương chày che phủ lên bao hoạt dịch chân ngỗng và dây chằng MCL.",
-          "springerCaption": "Fig. 23.13 Anatomy of the pes anserinus tendons and underlying anserine bursa over the anteromedial proximal tibia."
+          "path": "assets/images/external_anatomy/ext_surf_thigh_front_topography_gray1238.png",
+          "figNumber": "Gray 1238",
+          "title": "Giải phẫu bề mặt mặt trong đùi - gối: Đường hội tụ cơ May (Sartorius) và cơ Thon (Gracilis) xuống đầu trên xương chày (Gray's Plate 1238)",
+          "desc": "Hình thái bề mặt dải cơ may và cơ thon chạy vòng sau lồi cầu trong xương đùi xuống bám vào mặt trước trong xương chày.",
+          "atlasSource": "Gray's Anatomy (20th Ed., Plate 1238) – Medial aspect of knee and pes anserinus surface topography."
         }
       ]
     },
-    "surfaceAnatomy": {
-      "bonyLandmarks": [
-        "Khe khớp gối trong (Medial tibiofemoral joint line): Rãnh ngang giữa lồi cầu trong xương đùi và mâm chày trong.",
-        "Lồi củ chày (Tibial tuberosity): Gồ xương lớn phía trước nơi bám tận của gân bánh chè.",
-        "Mặt phẳng xương chày trước trong (Anteromedial flare of proximal tibia)."
+    "crossSectionalAnatomy": {
+      "sourceRef": "Gray's Anatomy – Sectional Anatomy of Proximal Tibia, MCL & Pes Anserinus",
+      "sectionPlane": "Thiết đồ đứng ngang chếch mặt trong đầu trên xương chày (Anteromedial Coronal-Oblique Section) cắt vuông góc với trục hội tụ của 3 gân chân ngỗng.",
+      "layeredStructure": [
+        "Lớp 1 – Da và mô mỡ dưới da mặt trong đầu trên cẳng chân (dày ~5 – 18 mm, thường có đệm mỡ dày ở phụ nữ trung niên thoái hóa gối): Chứa TĨNH MẠCH HIỂN LỚN (Great saphenous vein) và THẦN KINH HIỂN (Saphenous nerve + nhánh dưới bánh chè) chạy ngay trên mạc nông!",
+        "Lớp 2 – Mạc cẳng chân (Crural fascia) hòa lẫn trực tiếp với lá cân nông của cơ may.",
+        "Lớp 3 – Phức hợp 3 gân chân ngỗng xếp ngói từ trên trước xuống dưới sau: Gân cơ May (Sartorius – dẹt rộng nhất ở nông/trên), Gân cơ Thon (Gracilis – tròn mảnh ở giữa) và Gân cơ Bán gân (Semitendinosus – dày khỏe ở dưới/sau).",
+        "Lớp 4 – KHOANG ĐÍCH: Bao hoạt dịch chân ngỗng (Anserine bursa – khoang dẹt bình thường không thấy dịch, KHÔNG thông với ổ khớp gối!).",
+        "Lớp 5 – Bản bám xa của Dây chằng bên chày nông (Superficial Medial Collateral Ligament - sMCL, bám thấp cách khe khớp tới 6 – 7 cm!) cùng bó mạch và thần kinh gối dưới trong (IMGN & artery) lách ngang dưới sMCL.",
+        "Lớp 6 (Đáy thiết đồ) – Màng xương mặt trước trong đầu trên xương chày."
       ],
-      "referenceLines": "Điểm chân ngỗng kinh điển: Nằm thấp hơn khe khớp gối trong khoảng 4 - 5 cm (2 - 3 khoát ngón tay) VÀ nằm phía trong – sau so với lồi củ xương chày khoảng 2 - 3 cm.",
-      "palpationSteps": [
-        "1. Bệnh nhân nằm ngửa, khớp gối hơi gấp nhẹ 20 - 30 độ và đùi xoay ngoài nhẹ để bộc lộ toàn bộ mặt trước trong đầu trên xương chày.",
-        "2. Sờ xác định khe khớp gối trong (khi gấp – duỗi nhẹ cẳng chân) và lồi củ xương chày ở phía trước.",
-        "3. Từ lồi củ xương chày trượt ngón cái vào phía trong khoảng 2.5 cm (hoặc từ khe khớp trong đo thẳng xuống dưới 4 - 5 cm); yêu cầu bệnh nhân gấp gối có đối kháng nhẹ để cảm nhận dải gân căng lên và xác nhận điểm ấn đau chói khu trú."
+      "topographicRelations": {
+        "superficialAndDeep": "Bao hoạt dịch chân ngỗng (Lớp 4) luôn nằm kẹp đúng mặt phẳng phân cách giữa 3 gân chân ngỗng (ở nông) và bản xa dây chằng bên chày sMCL (ở sâu).",
+        "medialAndLateral": "Phía SAU khoảng 1 – 2 cm trong mô dưới da là thân chính tĩnh mạch hiển lớn và thần kinh hiển; ngay mặt sâu dưới dây chằng sMCL sát vỏ xương chày là động mạch và thần kinh gối dưới trong."
+      },
+      "dangerCorridors": [
+        "Quét nông nhẹ tay trước khi chọc kim để tránh đâm xuyên tĩnh mạch hiển lớn hoặc nhánh thần kinh hiển trong Lớp 1.",
+        "Dừng đầu kim ngay trong khe giữa gân chân ngỗng và mặt nông dây chằng sMCL (Lớp 4); không đâm xuyên qua sMCL xuống Lớp 5 chạm động mạch gối dưới trong."
       ],
-      "probePlacement": "Cách chuẩn nhất theo Philip Peng: Đặt đầu dò Linear dọc theo khe khớp trong tìm dải sợi dây chằng bên chày (MCL), trượt dọc xuống đầu xa MCL sẽ thấy 3 gân chân ngỗng cắt chéo bên trên; sau đó xoay đầu dò chếch ~20 - 30 độ dọc theo trục dài của gân chân ngỗng để thấy hình dải dẹt bám vào vỏ xương chày.",
       "figures": [
         {
-          "path": "assets/images/ch23_knee/p293_img1.jpeg",
-          "figNumber": "23.14",
-          "title": "Hướng đặt đầu dò chếch dọc gân chân ngỗng và đối chiếu siêu âm bao hoạt dịch (Fig. 23.14)",
-          "desc": "Đặt đầu dò chếch theo trục dài gân chân ngỗng ở mặt trước trong đầu trên xương chày bộc lộ khoang hoạt dịch (*) nằm trên xương chày và MCL.",
-          "springerCaption": "Fig. 23.14 Probe orientation and sonographic images of pes anserinus tendons and anserine bursa."
+          "path": "assets/images/external_anatomy/ext_sec_gluteal_deep_muscles_gray434.png",
+          "figNumber": "Gray 434",
+          "title": "Giải phẫu phân lớp vùng gối sau trong chỉ rõ thứ tự xếp lớp May - Thon - Bán gân - Bán màng (Gray's Plate 434)",
+          "desc": "Ở góc dưới hình minh họa chi tiết thứ tự sắp xếp 4 gân vùng trong gối (Sartorius, Gracilis, Semitendinosus và Semimembranosus ở lớp sâu hơn).",
+          "atlasSource": "Gray's Anatomy (20th Ed., Plate 434) – Insertional layering of Sartorius, Gracilis, Semitendinosus, and Semimembranosus."
+        },
+        {
+          "path": "assets/images/external_anatomy/ext_sec_thigh_cross_section_gray432.png",
+          "figNumber": "Gray 432",
+          "title": "Thiết đồ cắt ngang đùi đối chiếu nguyên ủy 3 khu cơ tạo gân chân ngỗng và thần kinh hiển (Gray's Plate 432)",
+          "desc": "Ba cơ May (khu trước), Thon (khu trong), Bán gân (khu sau) cùng vị trí tĩnh mạch hiển lớn và thần kinh hiển.",
+          "atlasSource": "Gray's Anatomy (20th Ed., Plate 432) – Cross-section showing Sartorius, Gracilis, Semitendinosus, and Saphenous nerve."
         }
       ]
     },
@@ -1724,46 +1921,61 @@ var STABLE_PROCEDURES_FALLBACK = [];
         "Rối loạn đông máu nặng (nếu làm đốt sóng cao tần RFA)."
       ]
     },
-    "anatomy": {
-      "overview": "Bao khớp gối phía trước được chi phối cảm giác rất phức tạp bởi 4 góc phần tư (theo giải phẫu chi tiết của GS. Philip Peng – Chương 27). Ba đích thần kinh gối kinh điển và an toàn nhất chạy hằng định sát màng xương chỗ tiếp nối thân xương – hành xương (Shaft-epicondylar / diaphyseal-metaphyseal flare) đi kèm động mạch gối cùng tên gồm: (1) Thần kinh gối trên trong (SMGN – tách từ nhánh cơ rộng trong/thần kinh chày, vòng sát chỗ uốn lồi cầu đùi trong sâu dưới cơ rộng trong/củ cơ khép), (2) Thần kinh gối trên ngoài (SLGN – tách từ thần kinh tọa/mác chung, đi sát chỗ uốn vỏ xương lồi cầu đùi ngoài), và (3) Thần kinh gối dưới trong (IMGN – tách từ thần kinh chày, lách ngang dưới dây chằng bên chày MCL sát cổ hành xương chày trong).",
-      "targetStructure": "Ba điểm tiếp xúc màng xương tại góc uốn thân xương – lồi cầu (Periosteal metaphyseal-diaphyseal junction) ngay sát cạnh động mạch gối tương ứng của SMGN (đùi trên trong), SLGN (đùi trên ngoài) và IMGN (chày dưới trong).",
-      "innervation": "Mạng lưới thần kinh cảm giác khớp gối trước (SMGN, SLGN, IMGN, nhánh thần kinh cơ rộng trong/ngoài/giữa và thần kinh dưới bánh chè); TUYỆT ĐỐI KHÔNG đốt nhánh gối dưới ngoài (ILGN) do nằm sát thần kinh mác chung.",
-      "vascularAndDangerZones": [
-        "Thần kinh mác chung (Common peroneal nerve) vòng qua cổ xương mác ở góc dưới ngoài gối: TUYỆT ĐỐI TRÁNH phong bế hủy thần kinh / đốt RFA nhánh gối dưới ngoài (ILGN) vì nguy cơ gây liệt bàn chân rũ (Foot drop)!",
-        "Các động mạch gối trên trong, trên ngoài và dưới trong (Superior medial, Superior lateral & Inferior medial genicular arteries): Vừa là mốc 'ngọn hải đăng' trên Color Doppler để tìm thần kinh, vừa phải tránh tiêm thuốc/hạt tinh thể trực tiếp vào lòng mạch.",
-        "Tại vị trí IMGN lớp mô mềm và da phủ mặt trong xương chày khá mỏng: Khi đốt sóng cao tần RFA cần kiểm tra độ sâu đầu kim để tránh bỏng nhiệt da (Skin burn) hoặc tổn thương dây chằng MCL."
+    "surfaceAnatomy": {
+      "sourceRef": "Gray's Anatomy (42nd Ed.) – Anastomosis Around the Knee & Genicular Neurovascular Landmarks; Tran & Peng Quadrant Map",
+      "surfaceLandmarks": [
+        "Củ cơ khép (Adductor tubercle) và Mỏm trên lồi cầu trong xương đùi (Medial femoral epicondyle) – mốc cho SMGN.",
+        "Mỏm trên lồi cầu ngoài xương đùi (Lateral femoral epicondyle) – mốc cho SLGN.",
+        "Mâm chày trong (Medial tibial condyle) và Lồi củ xương chày – mốc cho IMGN.",
+        "Chỏm xương mác và cổ xương mác ở góc dưới ngoài – VÙNG CẤM TUYỆT ĐỐI (nơi thần kinh mác chung vòng sát xương!)."
+      ],
+      "surfaceProjections": "Ba điểm chiếu bề mặt kinh điển của 3 bó mạch – thần kinh gối mục tiêu tại hõm chuyển tiếp thân xương – hành xương (Diaphyseal-metaphyseal concavity): (1) SMGN nằm cao hơn khe khớp gối trong ~4.5 – 5.0 cm ngay phía trên củ cơ khép; (2) SLGN nằm cao hơn khe khớp gối ngoài ~4.5 – 5.0 cm ngay phía trên lồi cầu ngoài đùi; (3) IMGN nằm thấp hơn khe khớp gối trong ~3.5 – 4.0 cm (ngang mức bờ dưới lồi củ chày chiếu sang mặt trong xương chày).",
+      "palpationSteps": [
+        "1. Bệnh nhân nằm ngửa, gối gấp nhẹ 20° – 30° trên gối cuộn.",
+        "2. Sờ khe khớp gối trong – ngoài, sau đó lần dọc hai sườn trong và ngoài đầu dưới xương đùi lên trên ~3 khoát ngón tay tìm chỗ hõm cong nơi lồi cầu thu nhỏ thành thân xương đùi.",
+        "3. Sờ chỏm xương mác ở phía dưới ngoài và đánh dấu chữ X đỏ cảnh báo không bao giờ đặt kim đốt RFA gần cổ xương mác."
       ],
       "figures": [
         {
-          "path": "assets/images/ch27_hip_knee_denervation/p346_img1.jpeg",
-          "figNumber": "27.10",
-          "title": "Bản đồ giải phẫu phân bố các nhánh thần kinh cảm giác bao khớp gối trước (Fig. 27.10)",
-          "desc": "Sơ đồ chi tiết 4 góc phần tư chi phối cảm giác khớp gối trước của Philip Peng (SMGN, SLGN, IMGN, nhánh cơ rộng và nhánh dưới bánh chè).",
-          "springerCaption": "Fig. 27.10 Detailed anatomical innervation of the anterior knee joint capsule across four quadrants."
+          "path": "assets/images/external_anatomy/ext_surf_thigh_femoral_markings_gray1245.png",
+          "figNumber": "Gray 1245",
+          "title": "Giải phẫu bề mặt đùi - gối: Đường chiếu xương đùi, xương chày và hệ mạch - thần kinh đùi xuống gối (Gray's Plate 1245)",
+          "desc": "Hình chiếu bề mặt đường nối hành - thân xương lồi cầu đùi hai bên và hành xương chày trong.",
+          "atlasSource": "Gray's Anatomy (20th Ed., Plate 1245) – Surface markings of femur, tibia, and lower limb neurovascular structures."
         }
       ]
     },
-    "surfaceAnatomy": {
-      "bonyLandmarks": [
-        "Mỏm trên lồi cầu trong và củ cơ khép xương đùi (Medial femoral epicondyle & Adductor tubercle) – mốc cho SMGN.",
-        "Mỏm trên lồi cầu ngoài xương đùi (Lateral femoral epicondyle) – mốc cho SLGN.",
-        "Lồi cầu trong xương chày và khe khớp gối trong – mốc cho IMGN.",
-        "Chỏm xương mác ở phía dưới ngoài (Vùng CẤM đốt RFA – nơi có thần kinh mác chung)."
+    "crossSectionalAnatomy": {
+      "sourceRef": "Gray's Anatomy & Ellis Sectional Anatomy – Axial Cross-Sections at Femoral & Tibial Metaphyses",
+      "sectionPlane": "Ba thiết đồ cắt ngang (Axial Cross-Sections): (A) Qua hành xương dưới xương đùi trên hai lồi cầu 4 cm (cho SMGN & SLGN) và (B) Qua hành xương trên xương chày dưới khe khớp 3.5 cm (cho IMGN).",
+      "layeredStructure": [
+        "Tại đích SMGN (Đùi trên trong): Da -> Mỡ dưới da (có tĩnh mạch hiển lớn & thần kinh hiển ở phía sau trong) -> Mạc đùi -> Cơ rộng trong (Vastus medialis) & cân gân cơ khép lớn (Adductor magnus tendon) -> ĐÍCH: Bó mạch & thần kinh gối trên trong (SMGN) nằm ngay trên màng xương góc trước – trong thân xương đùi.",
+        "Tại đích SLGN (Đùi trên ngoài): Da -> Mỡ dưới da -> Dải chậu chày (ITB) & Cơ rộng ngoài (Vastus lateralis) -> ĐÍCH: Bó mạch & thần kinh gối trên ngoài (SLGN) nằm sát màng xương góc sau – ngoài chỗ uốn lồi cầu ngoài đùi (phía trước vách gian cơ ngoài và đầu ngắn cơ nhị đầu).",
+        "Tại đích IMGN (Chày dưới trong): Da & mỡ dưới da mỏng (chỉ sâu ~8 – 15 mm!) -> Mạc cẳng chân -> Bản sâu/xa của Dây chằng bên chày (MCL) -> ĐÍCH: Bó mạch & thần kinh gối dưới trong (IMGN) chạy ngang sát rãnh vỏ xương chày ngay mặt sâu dây chằng MCL!",
+        "Đáy thiết đồ chung & Góc phần tư thứ 4 (ILGN – KHÔNG ĐỐT): Vỏ xương cứng hành xương đùi/chày làm tấm chắn phản âm sâu; riêng góc dưới ngoài (nhánh gối dưới ngoài – ILGN) đi sát chỏm mác và thần kinh mác chung nên tuyệt đối loại trừ khỏi danh mục đốt nhiệt RFA."
       ],
-      "referenceLines": "Ba hõm cong hành – thân xương (Epicondylar-shaft concavities): SMGN và SLGN nằm cao hơn khe khớp gối khoảng 4 - 5 cm tại chỗ thân xương đùi bắt đầu bè rộng thành hai lồi cầu; IMGN nằm thấp hơn khe khớp gối trong khoảng 3 - 4 cm ngay bờ dưới phần bám xương chày của dây chằng MCL.",
-      "palpationSteps": [
-        "1. Đặt bệnh nhân nằm ngửa, kê gối đệm dưới khoeo để gối gấp nhẹ 20 - 30 độ.",
-        "2. Sờ khe khớp gối hai bên, sau đó lần dọc sườn trong và sườn ngoài đầu dưới xương đùi lên trên khoảng 3 khoát ngón tay để tìm hõm cong tiếp giáp giữa lồi cầu và thân xương đùi (đích SMGN & SLGN).",
-        "3. Từ khe khớp gối trong lần dọc mặt trong xương chày xuống dưới khoảng 2 khoát ngón tay (ngang mức lồi củ chày nhưng ở mặt trong) để xác định vùng đi qua của IMGN dưới dây chằng MCL."
+      "topographicRelations": {
+        "superficialAndDeep": "Cả 3 thần kinh gối (SMGN, SLGN, IMGN) đều đi SÁT MÀNG XƯƠNG (Periosteal course) trong cùng bao mạch với động mạch gối cùng tên – giúp vỏ xương trở thành mốc chắn kim và phản xạ nhiệt lý tưởng.",
+        "medialAndLateral": "Tại thiết đồ SLGN: Dây thần kinh mác chung nằm ở khoang sau cách đích SLGN ~2.5 – 3.5 cm về phía sau bên kia vách gian cơ ngoài. Tại thiết đồ dưới gối ngoài: Nhánh gối dưới ngoài (ILGN) nằm ngay cạnh thân chính thần kinh mác chung quanh cổ xương mác (lý do tuyệt đối cấm đốt ILGN!)."
+      },
+      "dangerCorridors": [
+        "Tại đích IMGN (mặt trong xương chày): Khoảng cách từ màng xương tới mặt da rất mỏng (< 1 cm ở người gầy) – khi đốt RFA bắt buộc kiểm tra đầu hoạt động kim nằm sâu dưới dây chằng MCL và gây tê tẩm tách da phía nông để phòng bỏng nhiệt hoại tử da!",
+        "Tại đích SLGN: Luôn đi kim từ TRƯỚC RA SAU (Anterior-to-posterior) dừng ngay khi chạm vỏ xương đùi, tuyệt đối không trượt kim quá bờ sau xương đùi vào hố khoeo chạm thần kinh mác chung hoặc động mạch khoeo!"
       ],
-      "probePlacement": "Đặt đầu dò Linear theo mặt phẳng trán dọc trục xương (Coronal long-axis view) tại từng góc (trên trong đùi, trên ngoài đùi, dưới trong chày) để tìm đường cong lõm hành – thân xương và bật Color Doppler bắt mạch đập động mạch gối, sau đó xoay ngang 90 độ (Transverse view) để đi kim In-plane từ trước ra sau tiếp xúc màng xương.",
       "figures": [
         {
-          "path": "assets/images/anatomy/fig_27_12_imgn_tibia_probe.jpg",
-          "figNumber": "27.12",
-          "title": "Hai bước đặt đầu dò dọc - ngang định vị nhánh thần kinh gối dưới trong IMGN trên xương chày (Fig. 27.12)",
-          "desc": "Đặt đầu dò dọc theo mặt trong xương chày xác định chỗ lõm dưới mâm chày và dây chằng MCL (khung đỏ), sau đó xoay ngang 90 độ (khung xanh) để dẫn đường kim.",
-          "springerCaption": "Fig. 27.12 Coronal and transverse ultrasound probe positions over the medial proximal tibia for IMGN targeting."
+          "path": "assets/images/external_anatomy/ext_sec_knee_capsule_lateral_gray351.png",
+          "figNumber": "Gray 351",
+          "title": "Giải phẫu vùng hành xương lồi cầu đùi và hành xương chày nơi các bó mạch - thần kinh gối ôm sát màng xương (Gray's Plate 351)",
+          "desc": "Vị trí chỗ lõm chuyển tiếp thân xương - lồi cầu đùi và cổ trong xương chày dưới dây chằng bên.",
+          "atlasSource": "Gray's Anatomy (20th Ed., Plate 351) – Distal femoral and proximal tibial metaphyseal contours."
+        },
+        {
+          "path": "assets/images/external_anatomy/ext_sec_leg_cross_section_gray440.png",
+          "figNumber": "Gray 440",
+          "title": "Thiết đồ cắt ngang cẳng chân minh họa bề mặt xương chày trong rất nông dưới da và tĩnh mạch - thần kinh hiển (Gray's Plate 440)",
+          "desc": "Thiết đồ ngang cho thấy mặt trong xương chày có lớp phủ mô dưới da rất mỏng (chứa tĩnh mạch hiển lớn & thần kinh hiển), giải thích nguy cơ bỏng da nếu đặt kim RFA quá nông.",
+          "atlasSource": "Gray's Anatomy (20th Ed., Plate 440) – Cross-section of leg showing subcutaneous medial tibial surface and saphenous structures."
         }
       ]
     },
@@ -1846,52 +2058,62 @@ var STABLE_PROCEDURES_FALLBACK = [];
         "Béo phì nặng làm mờ cửa sổ siêu âm."
       ]
     },
-    "anatomy": {
-      "overview": "Khớp háng (Femoroacetabular / Hip Joint) là khớp chỏm cầu sâu vững chắc giữa chỏm xương đùi và ổ cối xương chậu có sụn viền ổ cối (Acetabular labrum) bao quanh. Bao khớp háng bám từ chu vi ổ cối phủ dọc cổ xương đùi tới đường gian mấu ở phía trước, tạo nên ngách hoạt dịch trước cổ xương đùi (Anterior synovial recess) nằm ngay mặt sâu của dây chằng chậu – đùi dày chắc (Iliofemoral ligament of Bigelow) và cơ thắt lưng chậu (Iliopsoas) – cơ thẳng đùi (Rectus femoris). Khi tràn dịch khớp háng, dịch sẽ tích tụ làm phồng bao khớp trước ngay tại chỗ lõm chuyển tiếp chỏm – cổ xương đùi.",
-      "targetStructure": "Ngách trước bao khớp háng tại chỗ nối chỏm – cổ xương đùi (Anterior head-neck junction beneath the iliofemoral capsule).",
-      "innervation": "Mặt trước bao khớp háng do các nhánh khớp của thần kinh đùi (Femoral nerve), thần kinh bịt (Obturator nerve) và thần kinh bịt phụ (Accessory obturator nerve); mặt sau do thần kinh cơ vuông đùi và thần kinh mông trên.",
-      "vascularAndDangerZones": [
-        "Bó mạch thần kinh đùi (Femoral nerve, artery & vein - NAV): Chạy dọc trong tam giác đùi ở PHÍA TRONG (Medial) so với cổ xương đùi và cơ thắt lưng chậu – tuyệt đối không đi kim từ phía trong!",
-        "Động mạch mũ đùi ngoài (Lateral circumflex femoral artery – đặc biệt nhánh lên Ascending branch): Thường vắt ngang ngay phía trước cổ xương đùi trên đường đi của kim – BẮT BUỘC bật Color Doppler quét toàn bộ hành trình dự kiến của kim trước khi chọc!",
-        "Thần kinh bì đùi ngoài (LFCN): Chạy nông ở phía ngoài dưới gai chậu trước trên (cần tránh chọc kim quá cao sát ngay dưới ASIS)."
+    "surfaceAnatomy": {
+      "sourceRef": "Gray's Anatomy (42nd Ed.) – Femoral Triangle (Scarpa) & Hip Joint Surface Markings",
+      "surfaceLandmarks": [
+        "Gai chậu trước trên (ASIS – ở đầu ngoài) và Củ mu (Pubic tubercle – ở đầu trong): Căng giữa hai mốc là Dây chằng bẹn (Inguinal / Poupart's ligament).",
+        "Điểm giữa bẹn (Mid-inguinal point – trung điểm đường nối ASIS tới khớp mu, khác với trung điểm dây chằng bẹn!): Chính là nơi ĐỘNG MẠCH ĐÙI đập rõ nhất ngay dưới dây chằng bẹn.",
+        "Đỉnh mấu chuyển lớn xương đùi (Greater trochanter) ở mặt ngoài hông."
+      ],
+      "surfaceProjections": "Trong Tam giác đùi Scarpa (giới hạn bởi dây chằng bẹn ở trên, cơ may ở ngoài, cơ khép dài ở trong), bó mạch thần kinh đùi xếp từ ngoài vào trong theo quy tắc 'NAVEL' (Nerve – Thần kinh đùi -> Artery – Động mạch đùi -> Vein – Tĩnh mạch đùi -> Empty space / Lymphatics). Chỏm xương đùi chiếu ngay phía sâu dưới động mạch đùi ~1.5 cm dưới điểm giữa bẹn, còn CỔ XƯƠNG ĐÙI chạy chếch từ đó xuống dưới – ra ngoài hướng về mấu chuyển lớn (tức nằm hoàn toàn ở PHÍA NGOÀI thần kinh và động mạch đùi!).",
+      "palpationSteps": [
+        "1. Đặt bệnh nhân nằm ngửa thẳng, hai chân duỗi trung tính (xoay trong nhẹ 10° để cổ xương đùi nằm song song mặt giường).",
+        "2. Sờ rõ ASIS ở ngoài và dùng 2 ngón tay bắt rõ nhịp đập của ĐỘNG MẠCH ĐÙI ngay dưới điểm giữa bẹn – dùng bút y khoa vạch dọc đường đi động mạch đùi làm 'ranh giới cấm phía trong'.",
+        "3. Sờ đỉnh mấu chuyển lớn ở mặt ngoài để vạch đường chếch của cổ xương đùi từ dưới nếp bẹn (ngoài động mạch đùi 2.5 – 3 cm) hướng ra mấu chuyển lớn."
       ],
       "figures": [
         {
-          "path": "assets/images/ch22_hip/p271_img1.jpeg",
-          "figNumber": "22.1",
-          "title": "Giải phẫu mặt trước khớp háng, dây chằng bao khớp và các nhánh thần kinh - mạch máu liên quan (Fig. 22.1)",
-          "desc": "Mối liên quan giải phẫu giữa bao khớp háng trước, dây chằng chậu - đùi, cơ thắt lưng chậu và bó mạch thần kinh đùi ở phía trong.",
-          "springerCaption": "Fig. 22.1 Anterior hip joint anatomy and articular nerve supply."
-        },
-        {
-          "path": "assets/images/ch22_hip/p272_img1.jpeg",
-          "figNumber": "22.2",
-          "title": "Thiết đồ dọc ngách hoạt dịch trước tại chỗ nối chỏm - cổ xương đùi (Fig. 22.2)",
-          "desc": "Ngách hoạt dịch trước khớp háng nằm ngay sâu dưới bao xơ dây chằng chậu - đùi và cơ thắt lưng chậu tại hõm cổ xương đùi.",
-          "springerCaption": "Fig. 22.2 Sagittal oblique view of the anterior recess of the hip joint at the femoral head-neck junction."
+          "path": "assets/images/external_anatomy/ext_surf_thigh_femoral_markings_gray1245.png",
+          "figNumber": "Gray 1245",
+          "title": "Giải phẫu bề mặt vùng bẹn - đùi trước: Hình chiếu chỏm - cổ xương đùi, động mạch đùi và thần kinh đùi (Gray's Plate 1245)",
+          "desc": "Bản đồ bề mặt kinh điển chỉ rõ động mạch đùi (đỏ) và thần kinh đùi (vàng) chạy dọc phía trong, trong khi cổ xương đùi chếch ra phía ngoài về mấu chuyển lớn.",
+          "atlasSource": "Gray's Anatomy (20th Ed., Plate 1245) – Front of right thigh showing surface markings for hip joint, femoral artery, and femoral nerve."
         }
       ]
     },
-    "surfaceAnatomy": {
-      "bonyLandmarks": [
-        "Gai chậu trước trên (Anterior Superior Iliac Spine - ASIS): Mốc xương nhô rõ phía trước ngoài mào chậu.",
-        "Củ mu và khớp mu (Pubic tubercle & symphysis) ở phía trong: Đường nối ASIS – củ mu tạo nên nếp dây chằng bẹn (Inguinal ligament).",
-        "Mấu chuyển lớn xương đùi (Greater trochanter) ở mặt ngoài háng."
+    "crossSectionalAnatomy": {
+      "sourceRef": "OpenStax (Fig. 9.16) & Gray's Anatomy (Plate 344) – Oblique Sagittal & Coronal Sectional Anatomy of the Hip Joint",
+      "sectionPlane": "Thiết đồ đứng dọc chếch theo trục cổ xương đùi (Parasagittal Oblique Section along the femoral neck axis).",
+      "layeredStructure": [
+        "Lớp 1 – Da và mô mỡ dưới da vùng bẹn – đùi trước trên (dày từ 1.5 cm ở người gầy đến > 5 cm ở người béo; nhánh thần kinh bì đùi ngoài đi ở mép ngoài thiết đồ).",
+        "Lớp 2 – Mạc đùi rộng (Fascia lata) ở nông; cơ may (Sartorius) và đầu thẳng/quặt ngược cơ thẳng đùi (Rectus femoris) ở phần trước ngoài, kèm nhánh lên của ĐỘNG MẠCH MŨ ĐÙI NGOÀI (Ascending branch of lateral circumflex femoral artery) chạy trong lớp mỡ gian cơ giữa cơ thẳng đùi – căng mạc đùi – thắt lưng chậu!",
+        "Lớp 3 – Khối cơ – gân Thắt lưng chậu (Iliopsoas muscle-tendon unit) đệm ngay trên mặt trước bao khớp (ngăn cách bởi bao hoạt dịch thắt lưng chậu ở phía trong).",
+        "Lớp 4 – Bao xơ khớp háng trước cực dày chắc được gia cố bởi Dây chằng chậu – đùi chữ Y của Bigelow (Iliofemoral ligament – dày tới 5 – 8 mm, dây chằng khỏe nhất cơ thể người!).",
+        "Lớp 5 – KHOANG ĐÍCH: Ngách hoạt dịch trước cổ xương đùi (Anterior intracapsular synovial recess – khoang ảo bọc mặt trước cổ xương đùi từ bờ sụn chỏm tới đường gian mấu).",
+        "Lớp 6 (Đáy thiết đồ) – Màng xương mặt trước chỗ lõm nối chỏm – cổ xương đùi (Head-neck junction) và sụn chỏm xương đùi – sụn viền ổ cối trước ở phía trên."
       ],
-      "referenceLines": "Trục cổ xương đùi xuất chiếu lên bề mặt da vùng bẹn chạy chếch từ trên trong (khoảng dưới điểm giữa dây chằng bẹn, ngay phía NGOÀI mạch đập động mạch đùi 2 - 3 cm) xuống dưới ngoài hướng về phía mấu chuyển lớn.",
-      "palpationSteps": [
-        "1. Đặt bệnh nhân nằm ngửa thẳng trên giường, chân duỗi tự nhiên ở tư thế trung tính hoặc hơi xoay trong nhẹ 10 - 15 độ (tránh xoay ngoài mạnh làm căng hẹp bao khớp trước và kéo bó mạch đùi lại gần cổ đùi).",
-        "2. Sờ xác định gai chậu trước trên (ASIS) ở phía ngoài và bắt rõ mạch đập của ĐỘNG MẠCH ĐÙI (Femoral artery pulse) ngay dưới nếp bẹn – đánh dấu đường đi động mạch đùi là 'vùng cấm phía trong'.",
-        "3. Sờ mấu chuyển lớn ở mặt ngoài đùi để hình dung hướng chếch của cổ xương đùi."
+      "topographicRelations": {
+        "superficialAndDeep": "Cổ xương đùi nằm ở độ sâu ~4 – 7 cm dưới da; ngay phía nông đường đi kim (Lớp 2) rất thường gặp nhánh lên của động mạch mũ đùi ngoài bắt ngang qua trục cổ đùi!",
+        "medialAndLateral": "Cách trục cổ xương đùi ~2 – 3 cm về PHÍA TRONG (trên mặt nông cơ chậu và cơ lược) là THẦN KINH ĐÙI, ĐỘNG MẠCH ĐÙI và TĨNH MẠCH ĐÙI; phía trên trong là sụn viền trước ổ cối."
+      },
+      "dangerCorridors": [
+        "Nhánh lên động mạch mũ đùi ngoài (Lớp 2): BẮT BUỘC bật Color Doppler trên toàn bộ hành trình dự kiến từ da tới cổ xương đùi (vì mạch này đi ngay giữa trường chọc kim ở phía ngoài bó mạch đùi chính!).",
+        "Tuyệt đối luôn đi kim từ DƯỚI – NGOÀI lên TRÊN – TRONG dọc trục cổ đùi, không bao giờ chọc kim từ phía trong tam giác Scarpa."
       ],
-      "probePlacement": "Phương pháp 2 bước chuẩn Philip Peng: Bước 1 – Đặt đầu dò Curvilinear 2-5 MHz nằm ngang ở 1/3 trên trước đùi tìm thân xương đùi cắt ngang hình vòm sáng. Bước 2 – Trượt đầu dò lên trên đồng thời xoay đầu trong của đầu dò chếch vào phía rốn (~30 - 45 độ, mặt phẳng Parasagittal oblique dọc theo trục cổ xương đùi) để thấy liên tục chỏm tròn và cổ xương đùi.",
       "figures": [
         {
-          "path": "assets/images/anatomy/fig_22_05_hip_anterior_recess_probe.jpg",
-          "figNumber": "22.5",
-          "title": "Đặt đầu dò chếch dọc theo trục cổ xương đùi trên bề mặt vùng bẹn trước (Fig. 22.5)",
-          "desc": "Đầu dò Curvilinear xoay chếch dọc theo trục cổ xương đùi ở phía ngoài bó mạch đùi, bộc lộ rõ chỏm - cổ xương đùi và ngách khớp trước.",
-          "springerCaption": "Fig. 22.5 Oblique sagittal ultrasound probe placement over the anterior hip recess aligned with the femoral neck."
+          "path": "assets/images/external_anatomy/ext_sec_hip_coronal_openstax916.jpg",
+          "figNumber": "OpenStax 9.16",
+          "title": "Thiết đồ đứng ngang (Coronal Section) qua khớp háng, ổ cối, sụn viền, bao khớp và ngách cổ xương đùi (OpenStax Atlas)",
+          "desc": "Thiết đồ cắt lớp màu hiển thị rõ khoang hoạt dịch khớp háng kéo dài dọc cổ xương đùi bên trong dây chằng bao khớp dày và sụn viền ổ cối.",
+          "atlasSource": "OpenStax Anatomy & Physiology (CC-BY 4.0, Fig. 9.16) – Coronal section of the hip joint."
+        },
+        {
+          "path": "assets/images/external_anatomy/ext_sec_hip_surrounding_section_gray344.png",
+          "figNumber": "Gray 344",
+          "title": "Thiết đồ cắt qua ổ cối định khu toàn bộ các lớp cơ, bao hoạt dịch và bó mạch thần kinh quanh khớp háng (Gray's Plate 344)",
+          "desc": "Bản đồ thiết đồ kinh điển của Gray xung quanh bao khớp háng: phía trước là cơ thắt lưng chậu - thẳng đùi - bó mạch thần kinh đùi; phía trên ngoài là cơ mông nhỡ - mông bé; phía sau là cơ hình lê - bịt trong - thần kinh tọa.",
+          "atlasSource": "Gray's Anatomy (20th Ed., Plate 344) – Sectional relation of structures surrounding right hip-joint."
         }
       ]
     },
@@ -1977,50 +2199,54 @@ var STABLE_PROCEDURES_FALLBACK = [];
         "Rách hoàn toàn gân cơ mông nhỡ có chỉ định phẫu thuật khâu gân."
       ]
     },
-    "anatomy": {
-      "overview": "Mấu chuyển lớn xương đùi (Greater Trochanter - GT) không phải một khối phẳng mà gồm 4 diện xương (Facets) riêng biệt giống như 'chóp xoay của khớp háng': (1) Diện trước (Anterior facet) là nơi bám tận của gân cơ mông bé (Gluteus minimus); (2) Diện bên (Lateral facet) và (3) Diện sau trên (Superoposterior facet) là nơi bám tận của hai bó gân cơ mông nhỡ (Gluteus medius); còn (4) Diện sau (Posterior facet) không có gân bám mà được phủ trực tiếp bởi dải chậu chày – cơ mông lớn qua trung gian bao hoạt dịch mấu chuyển lớn (Trochanteric / Subgluteus maximus bursa – lớn nhất). Ngoài ra còn có bao hoạt dịch dưới cơ mông nhỡ và dưới cơ mông bé.",
-      "targetStructure": "Khoang bao hoạt dịch mấu chuyển lớn (Subgluteus maximus bursa) nằm kẹp giữa mặt sâu dải chậu chày/cơ mông lớn ở nông và bề mặt gân cơ mông nhỡ (tại diện bên & diện sau) ở sâu.",
-      "innervation": "Nhánh thần kinh mông trên (Superior gluteal nerve), nhánh bì đùi ngoài và các nhánh cảm giác từ đám rối thắt lưng – cùng (L4–S1).",
-      "vascularAndDangerZones": [
-        "Các nhánh tận của động mạch mông trên, mông dưới và động mạch mũ đùi ngoài tạo mạng lưới nối mấu chuyển.",
-        "Gân cơ mông nhỡ và cơ mông bé (Gluteus medius & minimus tendons): Tuyệt đối KHÔNG bơm Corticosteroid trực tiếp vào trong chất gân đang thoái hóa/rách bán phần vì làm tăng nguy cơ đứt gân gây dáng đi lắc lư Trendelenburg!"
+    "surfaceAnatomy": {
+      "sourceRef": "Gray's Anatomy (42nd Ed.) – Greater Trochanteric Prominence & Nélaton's Line; Pfirrmann's Trochanteric Facets",
+      "surfaceLandmarks": [
+        "Lồi bên mấu chuyển lớn xương đùi (Lateral prominence of greater trochanter): Điểm xương rộng nhất của vùng hông đùi ngang mức khớp mu.",
+        "Bờ trước, bờ trên và góc sau trên mấu chuyển lớn (Superoposterior corner – nơi ấn đau chói nhất trong GTPS).",
+        "Đường Nélaton nối ASIS – ụ ngồi đi qua đỉnh trên mấu chuyển lớn."
+      ],
+      "surfaceProjections": "Mấu chuyển lớn chiếu lên mặt bên đùi trên một vùng tứ giác kích thước ~4 × 5 cm. Túi hoạt dịch mấu chuyển lớn (Subgluteus maximus bursa) nằm phủ trùm lên diện sau và một phần diện bên mấu chuyển lớn ngay dưới chỗ cơ mông lớn chuyển tiếp vào dải chậu chày.",
+      "palpationSteps": [
+        "1. Bệnh nhân nằm nghiêng sang bên lành, háng gấp ~30°, gối gấp ~45°.",
+        "2. Dùng ngón cái ấn hệ thống theo 4 điểm quanh mấu chuyển lớn (trước, bên giữa, đỉnh trên và góc sau trên) để tìm điểm nhảy đau ('Jump sign').",
+        "3. Đánh dấu đỉnh lồi nhất của mặt bên mấu chuyển lớn để đặt tâm đầu dò cắt ngang."
       ],
       "figures": [
         {
-          "path": "assets/images/anatomy/fig_22_10_greater_trochanter_facets.jpg",
-          "figNumber": "22.10",
-          "title": "Giải phẫu 4 diện xương (Facets) của mấu chuyển lớn xương đùi (Fig. 22.10)",
-          "desc": "Sơ đồ các diện bám gân đặc hiệu trên mấu chuyển lớn: diện trước (bám cơ mông bé), diện bên & diện sau trên (bám cơ mông nhỡ) và diện sau (nền bao hoạt dịch mấu chuyển).",
-          "springerCaption": "Fig. 22.10 Anatomical facets of the greater trochanter: anterior, lateral, superoposterior, and posterior facets."
-        },
-        {
-          "path": "assets/images/anatomy/fig_22_11_gluteus_muscles_insertions.jpg",
-          "figNumber": "22.11",
-          "title": "Liên quan bám tận của cơ mông bé, mông nhỡ và mông lớn trên mấu chuyển lớn (Fig. 22.11)",
-          "desc": "Cách sắp xếp lớp của 3 cơ mông và vị trí bao hoạt dịch mấu chuyển đệm dưới dải chậu chày - cơ mông lớn.",
-          "springerCaption": "Fig. 22.11 Relationship of the three gluteal muscles to their insertions on the greater trochanter."
+          "path": "assets/images/external_anatomy/ext_surf_hip_nelaton_bryant_gray1243.png",
+          "figNumber": "Gray 1243",
+          "title": "Định khu bề mặt vùng mấu chuyển lớn xương đùi theo đường Nélaton và tam giác Bryant (Gray's Plate 1243)",
+          "desc": "Xác định nhanh đỉnh và chu vi mấu chuyển lớn ngoài da dựa trên tương quan gai chậu trước trên (ASIS) và ụ ngồi.",
+          "atlasSource": "Gray's Anatomy (20th Ed., Plate 1243) – Surface landmarks of the greater trochanter."
         }
       ]
     },
-    "surfaceAnatomy": {
-      "bonyLandmarks": [
-        "Đỉnh và diện bên mấu chuyển lớn xương đùi (Lateral prominence of greater trochanter): Phần xương rộng nhất ngang hông đùi.",
-        "Gai chậu trước trên (ASIS) ở phía trước trên và ụ ngồi ở phía sau dưới."
+    "crossSectionalAnatomy": {
+      "sourceRef": "Gray's Anatomy (Plates 344, 434) – Axial Cross-Section of Greater Trochanteric Facets & Bursal Complex",
+      "sectionPlane": "Thiết đồ cắt ngang (Axial / Transverse Cross-Section) qua trung tâm khối mấu chuyển lớn xương đùi.",
+      "layeredStructure": [
+        "Lớp 1 – Da và lớp mỡ dưới da vùng hông đùi bên (dày ~1.5 – 5.0 cm).",
+        "Lớp 2 – Phức hợp cân dải chậu chày – cơ căng mạc đùi (ở phía trước ngoài) nối liên tục với dải cân gân cơ mông lớn (Gluteus maximus – ở phía sau ngoài) tạo thành một 'võng cân căng' trượt qua đỉnh mấu chuyển lớn.",
+        "Lớp 3 – KHOANG ĐÍCH CHÍNH: Bao hoạt dịch mấu chuyển lớn / dưới cơ mông lớn (Trochanteric / Subgluteus maximus bursa) nằm ngay mặt sâu của dải chậu chày – cơ mông lớn, phủ lên mặt nông của gân cơ mông nhỡ và diện sau xương mấu chuyển.",
+        "Lớp 4 – Lớp gân 'chóp xoay háng' bám vào các diện mấu chuyển: Ở DIỆN TRƯỚC là gân cơ mông bé (Gluteus minimus – có bao hoạt dịch dưới mông bé ở sâu); ở DIỆN BÊN & DIỆN SAU TRÊN là gân cơ mông nhỡ (Gluteus medius – có bao hoạt dịch dưới mông nhỡ ở mặt sâu).",
+        "Lớp 5 (Đáy thiết đồ) – Vỏ xương tạo góc chữ Λ (đỉnh nhọn Bald ridge phân cách diện trước và diện bên – sau) của mấu chuyển lớn xương đùi."
       ],
-      "referenceLines": "Đỉnh nhô cao nhất trên thiết đồ cắt ngang mấu chuyển lớn chính là 'đỉnh góc nhị diện' (Apex) phân chia diện trước (hướng ra trước trong) và diện bên – sau (hướng ra sau ngoài).",
-      "palpationSteps": [
-        "1. Đặt bệnh nhân nằm nghiêng hoàn toàn sang bên không đau (Lateral decubitus), khớp háng gấp nhẹ ~30 độ, khớp gối gấp ~45 độ có gối kê giữa hai chân.",
-        "2. Dùng ngón cái ấn tìm điểm đau chói điển hình ('Jump sign') dọc bờ bên và bờ sau trên của mấu chuyển lớn.",
-        "3. Yêu cầu bệnh nhân hơi xoay trong – xoay ngoài đùi nhẹ để xác nhận toàn bộ chu vi mấu chuyển lớn dưới lòng bàn tay."
+      "topographicRelations": {
+        "superficialAndDeep": "Bao hoạt dịch mấu chuyển lớn (Lớp 3) luôn nằm NÔNG hơn gân cơ mông nhỡ (giữa dải chậu chày và mặt ngoài gân mông nhỡ); trong khi bao hoạt dịch dưới mông nhỡ nằm SÂU giữa gân mông nhỡ và vỏ xương.",
+        "medialAndLateral": "Phía trước diện trước là cơ căng mạc đùi; phía sau diện sau cách ~4 – 5 cm vào khoang mông sâu qua khối cơ xoay ngoài mới tới dây thần kinh tọa (nên chọc kim trên sườn mấu chuyển lớn rất xa thần kinh tọa!)."
+      },
+      "dangerCorridors": [
+        "Không tiêm Corticosteroid xuyên vào Lớp 4 (nhu mô gân cơ mông nhỡ / mông bé đang viêm thoái hóa) vì có thể làm đứt hoàn toàn gân dạng háng gây liệt dáng đi Trendelenburg mạn tính!",
+        "Chỉ bơm thuốc tách nhẹ mở rộng mặt phẳng Lớp 3 giữa mặt sâu dải chậu chày và mặt nông gân mông nhỡ."
       ],
-      "probePlacement": "Đặt đầu dò Linear tần số trung bình (6-12 MHz) hoặc Curvilinear (ở người béo) cắt ngang (Short-axis transverse view) trực tiếp trên mặt bên mấu chuyển lớn để nhận diện đỉnh nhọn phân ranh giới giữa diện trước (cơ mông bé) và diện bên – sau (cơ mông nhỡ + dải chậu chày phủ lên trên).",
       "figures": [
         {
-          "path": "assets/images/ch22_hip/p278_img2.jpeg",
-          "figNumber": "22.12",
-          "title": "Đặt đầu dò cắt ngang trực tiếp trên mấu chuyển lớn xương đùi (Fig. 22.12)",
-          "desc": "Đặt đầu dò ngang trên mấu chuyển lớn ở tư thế nằm nghiêng giúp hiển thị cùng lúc diện trước, diện bên và mặt phẳng bao hoạt dịch dưới dải chậu chày.",
-          "springerCaption": "Fig. 22.12 Transverse probe position over the greater trochanter in lateral decubitus position."
+          "path": "assets/images/external_anatomy/ext_sec_gluteal_deep_muscles_gray434.png",
+          "figNumber": "Gray 434",
+          "title": "Giải phẫu cắt bóc tách cơ mông lớn bộc lộ diện bám cơ mông nhỡ, mông bé và vùng bao hoạt dịch trên mấu chuyển lớn (Gray's Plate 434)",
+          "desc": "Sau khi cắt lật cơ mông lớn và dải chậu chày, thấy rõ cơ mông nhỡ - mông bé bám vào mấu chuyển lớn và nền xương nơi túi hoạt dịch mấu chuyển đệm chống ma sát.",
+          "atlasSource": "Gray's Anatomy (20th Ed., Plate 434) – Deep gluteal and trochanteric dissection with gluteus maximus reflected."
         }
       ]
     },
@@ -2102,52 +2328,55 @@ var STABLE_PROCEDURES_FALLBACK = [];
         "Thần kinh tọa có biến thể đâm xuyên qua bụng cơ hình lê."
       ]
     },
-    "anatomy": {
-      "overview": "Cơ hình lê (Piriformis muscle) là cơ xoay ngoài háng chủ chốt định khu khoang mông sâu (Deep gluteal space), nguyên ủy từ mặt trước xương cùng (S2–S4), đi ra khỏi khung chậu qua khuyết ngồi lớn (Greater sciatic notch – chia khuyết này thành lỗ trên cơ hình lê và lỗ dưới cơ hình lê) để bám tận vào bờ trên mấu chuyển lớn xương đùi. Cơ nằm ngay sâu dưới cơ mông lớn (Gluteus maximus). Dây thần kinh tọa (Sciatic nerve) thoát qua lỗ dưới cơ hình lê ngay mặt sâu/bờ dưới cơ hình lê ở ~85% dân số, nhưng có tới ~15% biến thể giải phẫu Beaton & Anson trong đó nhánh mác chung đâm xuyên qua giữa bụng cơ hoặc đi vòng phía trên cơ hình lê!",
-      "targetStructure": "Bụng cơ hình lê (Piriformis muscle belly) hoặc mặt phẳng cân giữa cơ mông lớn và cơ hình lê ở đoạn ngay phía ngoài bờ khuyết ngồi lớn (nơi có xương cánh chậu che chắn phía sâu, tránh hoàn toàn khuyết ngồi lớn ở phía trong nơi thần kinh tọa đi ra).",
-      "innervation": "Thần kinh cơ hình lê trực tiếp từ đám rối cùng (Nerve to piriformis - S1, S2).",
-      "vascularAndDangerZones": [
-        "Dây thần kinh tọa (Sciatic nerve) và thần kinh bì đùi sau (Posterior femoral cutaneous nerve): Nằm ngay mặt sâu hoặc xuyên qua cơ hình lê (15% biến thể) – BẮT BUỘC quét nhận diện dây thần kinh tọa trước và tuyệt đối không bơm thuốc tê thể tích lớn gây liệt vận động chi dưới tạm thời!",
-        "Bó mạch thần kinh mông trên (đi qua bờ trên cơ hình lê) và bó mạch thần kinh mông dưới – bó mạch thẹn trong (đi qua bờ dưới cơ hình lê tại khuyết ngồi lớn) – bật Color Doppler kiểm tra!",
-        "Trực tràng và các tạng chậu hông nếu đâm kim quá sâu vào trong lòng khuyết ngồi lớn (không có nền xương đỡ)."
+    "surfaceAnatomy": {
+      "sourceRef": "Gray's Anatomy (42nd Ed., Plate 1244) – Classical Gluteal Surface Markings for Piriformis & Sciatic Nerve",
+      "surfaceLandmarks": [
+        "Gai chậu sau trên (PSIS – dưới lúm đồng tiền thắt lưng cùng, ngang mức đốt S2).",
+        "Đỉnh mấu chuyển lớn xương đùi (Apex of greater trochanter) ở mặt bên hông.",
+        "Ụ ngồi (Ischial tuberosity) ở phần trong nếp lằn mông dưới và Đỉnh xương cụt (Tip of coccyx) ở rãnh liên mông."
+      ],
+      "surfaceProjections": "Tam giác định khu mông kinh điển của Gray (Gray's Plate 1244): (1) Kẻ Đường trên nối PSIS tới đỉnh mấu chuyển lớn: điểm nối 1/3 trên – trong và 2/3 dưới – ngoài là điểm lộ ra của ĐỘNG MẠCH MÔNG TRÊN (bờ trên cơ hình lê); (2) Kẻ Đường dưới nối đỉnh xương cụt (hoặc S3–S4) tới đỉnh mấu chuyển lớn: đánh dấu BỜ DƯỚI CƠ HÌNH LÊ; (3) Điểm giữa đường nối PSIS – ụ ngồi là nơi thoát ra của ĐỘNG MẠCH MÔNG DƯỚI, ĐỘNG MẠCH THẸN TRONG và DÂY THẦN KINH TỌA ngay dưới bờ dưới cơ hình lê!",
+      "palpationSteps": [
+        "1. Bệnh nhân nằm sấp thoải mái trên bàn phẳng.",
+        "2. Sờ rõ 3 đỉnh xương của tam giác mông: PSIS (trên trong), ụ ngồi (dưới trong) và đỉnh mấu chuyển lớn (ngoài).",
+        "3. Xác định dải cơ hình lê nằm kẹp giữa đường PSIS – mấu chuyển lớn và đường S3 – mấu chuyển lớn; ấn kiểm tra điểm đau chói ở phần ba giữa mông."
       ],
       "figures": [
         {
-          "path": "assets/images/anatomy/fig_08_02_piriformis_neurovascular.jpg",
-          "figNumber": "8.2",
-          "title": "Giải phẫu cơ hình lê và các bó mạch - thần kinh đi qua khuyết ngồi lớn (Fig. 8.2)",
-          "desc": "Cơ hình lê chia khuyết ngồi lớn làm hai tầng: bó mạch thần kinh mông trên ở trên; thần kinh tọa, mông dưới và thẹn trong đi ra ở bờ dưới.",
-          "springerCaption": "Fig. 8.2 Piriformis muscle and surrounding neurovascular structures in the deep gluteal region."
-        },
-        {
-          "path": "assets/images/anatomy/fig_08_03_piriformis_variations.jpg",
-          "figNumber": "8.3",
-          "title": "Các biến thể giải phẫu Beaton & Anson giữa cơ hình lê và dây thần kinh tọa (Fig. 8.3)",
-          "desc": "Các dạng biến thể thần kinh tọa đi dưới toàn bộ cơ (phổ biến nhất), tách nhánh xuyên qua bụng cơ hoặc kẹp hai bên cơ hình lê.",
-          "springerCaption": "Fig. 8.3 Anatomical variations of the relationship between the piriformis muscle and the sciatic nerve."
+          "path": "assets/images/external_anatomy/ext_surf_gluteal_sciatic_markings_gray1244.png",
+          "figNumber": "Gray 1244",
+          "title": "Sơ đồ giải phẫu bề mặt vùng mông kinh điển của Gray: Tam giác định vị cơ hình lê, thần kinh tọa và các động mạch mông (Gray's Plate 1244)",
+          "desc": " Tam giác nối PSIS – Mấu chuyển lớn – Ụ ngồi chỉ chính xác vị trí xuất chiếu của động mạch mông trên (bờ trên cơ hình lê), thần kinh tọa và động mạch mông dưới (bờ dưới cơ hình lê).",
+          "atlasSource": "Gray's Anatomy (20th Ed., Plate 1244) – Left gluteal region showing surface markings for gluteal arteries and sciatic nerve."
         }
       ]
     },
-    "surfaceAnatomy": {
-      "bonyLandmarks": [
-        "Gai chậu sau trên (Posterior Superior Iliac Spine - PSIS): Hõm lúm đồng tiền vùng thắt lưng cùng phía trên trong mông.",
-        "Đỉnh mấu chuyển lớn xương đùi (Greater trochanter - GT) ở phía ngoài.",
-        "Ụ ngồi (Ischial tuberosity - IT) ở nếp lằn mông phía dưới trong và góc bên xương cùng – cụt."
+    "crossSectionalAnatomy": {
+      "sourceRef": "Gray's Anatomy (Plate 434) & Ellis Sectional Anatomy – Oblique Axial Section Through Greater Sciatic Foramen",
+      "sectionPlane": "Thiết đồ cắt ngang chếch dọc trục cơ hình lê (Oblique Axial Section từ khuyết ngồi lớn tới bờ trên mấu chuyển lớn).",
+      "layeredStructure": [
+        "Lớp 1 – Da và lớp mỡ dưới da vùng mông dày (dày ~1.5 – 5.0 cm; chứa các nhánh thần kinh bì mông trên L1–L3 và bì mông giữa S1–S3).",
+        "Lớp 2 – Mạc mông nông/sâu và Bụng cơ mông lớn rất dày (Gluteus maximus muscle, dày ~2.5 – 4.5 cm; ở nửa trên ngoài có thêm rìa sau cơ mông nhỡ xen giữa).",
+        "Lớp 3 – Lớp mô mỡ liên kết lỏng lẻo dưới cơ mông lớn (Khoang mông sâu – Deep gluteal space).",
+        "Lớp 4 – KHOANG ĐÍCH: Bụng cơ và gân cơ hình lê (Piriformis muscle, dày ~1.5 – 2.5 cm) lấp đầy lỗ khuyết ngồi lớn chạy ra ngoài bám vào bờ trên mấu chuyển lớn.",
+        "Lớp 5 – Mặt phẳng thần kinh – mạch máu ngay mặt sâu / bờ dưới cơ hình lê: Chứa DÂY THẦN KINH TỌA (Sciatic nerve – dây thần kinh to nhất cơ thể, rộng ~1.5 – 2 cm), thần kinh bì đùi sau, bó mạch thần kinh mông dưới và bó mạch thần kinh thẹn (ở góc trong).",
+        "Lớp 6 (Đáy thiết đồ) – Ở nửa NGOÀI là bản xương cánh chậu sau trên ổ cối và bao khớp háng sau (tấm chắn xương an toàn!); ở nửa TRONG là lòng khuyết ngồi lớn thông trực tiếp vào khoang chậu hông – trực tràng (KHÔNG có xương đỡ!)."
       ],
-      "referenceLines": "Tam giác định vị cơ hình lê: Nối đường từ PSIS (hoặc bờ ngoài xương cùng S3) chạy chéo xuống dưới – ra ngoài tới bờ trên mấu chuyển lớn; bụng cơ hình lê nằm dọc nửa dưới của đường nối PSIS – mấu chuyển lớn.",
-      "palpationSteps": [
-        "1. Đặt bệnh nhân nằm sấp (Prone position), có thể kê gối nhỏ dưới khung chậu.",
-        "2. Sờ xác định gai chậu sau trên (PSIS) ở góc trên trong mông và đỉnh mấu chuyển lớn (GT) ở mặt ngoài hông.",
-        "3. Nhờ người phụ gấp gối bệnh nhân 90 độ rồi lắc cẳng chân sang hai bên (xoay trong – xoay ngoài khớp háng thụ động): vừa giúp sờ thấy vùng cơ hình lê căng giật sâu giữa mông, vừa là nghiệm pháp động cực nhạy trên siêu âm để phân biệt cơ hình lê trượt qua lại dưới cơ mông lớn đứng yên!"
+      "topographicRelations": {
+        "superficialAndDeep": "Cơ hình lê nằm ngay sâu dưới cơ mông lớn; dây thần kinh tọa nằm ngay mặt sâu bờ dưới cơ hình lê ở ~85% người, NHƯNG ở ~15% biến thể Beaton-Anson nhánh mác chung đâm xuyên ngay giữa bụng cơ hình lê!",
+        "medialAndLateral": "Bờ trên cơ hình lê là lỗ trên cơ hình lê chứa bó mạch – thần kinh mông trên; bờ dưới cơ hình lê là lỗ dưới cơ hình lê chứa thần kinh tọa, bó mạch mông dưới và bó mạch thẹn trong."
+      },
+      "dangerCorridors": [
+        "Chỉ tiêm vào nửa NGOÀI bụng cơ hình lê (nơi có bản xương cánh chậu Lớp 6 nâng đỡ phía sâu!), tuyệt đối không đâm sâu vào nửa trong khuyết ngồi lớn (nơi tập trung thần kinh tọa, bó mạch mông và trực tràng).",
+        "Quét kỹ trong lòng bụng cơ hình lê để loại trừ biến thể nhánh thần kinh mác chung chạy xuyên cơ trước khi đâm kim."
       ],
-      "probePlacement": "Phương pháp quét chuẩn Philip Peng: Bước A – Đặt đầu dò Curvilinear 2-5 MHz ngang trên PSIS thấy sườn xương cánh chậu liên tục. Bước B – Trượt đầu dò xuống dưới tới khuyết ngồi lớn (thấy bờ xương cánh chậu ngắt quãng tạo bậc hẫng) rồi xoay đầu ngoài đầu dò chếch xuống hướng về phía mấu chuyển lớn dọc theo trục dài hình quả lê của cơ hình lê.",
       "figures": [
         {
-          "path": "assets/images/ch8_pelvic_muscles/p107_img1.jpeg",
-          "figNumber": "8.6",
-          "title": "Quy trình 2 bước đặt đầu dò bề mặt từ cánh chậu xuống khuyết ngồi lớn tìm cơ hình lê (Fig. 8.6)",
-          "desc": "Đặt đầu dò ở vị trí A (trên cánh chậu) rồi trượt xuống vị trí B (khuyết ngồi lớn xoay về mấu chuyển lớn) để bộc lộ trục dọc cơ hình lê dưới cơ mông lớn.",
-          "springerCaption": "Fig. 8.6 Ultrasound probe positions A and B over the posterior pelvis to localize the piriformis muscle."
+          "path": "assets/images/external_anatomy/ext_sec_gluteal_deep_muscles_gray434.png",
+          "figNumber": "Gray 434",
+          "title": "Giải phẫu phân lớp khoang mông sâu sau khi cắt lật cơ mông lớn: Cơ hình lê, cơ bịt trong và cơ vuông đùi (Gray's Plate 434)",
+          "desc": "Cấu trúc tầng sâu vùng mông hiển thị rõ cơ hình lê (Piriformis) đi qua khuyết ngồi lớn nằm ngay trên cụm cơ sinh đôi trên - cơ bịt trong - cơ sinh đôi dưới.",
+          "atlasSource": "Gray's Anatomy (20th Ed., Plate 434) – Deep muscular layer of the gluteal region."
         }
       ]
     },
@@ -2231,52 +2460,53 @@ var STABLE_PROCEDURES_FALLBACK = [];
         "Rối loạn đông máu nặng."
       ]
     },
-    "anatomy": {
-      "overview": "Thần kinh bì đùi ngoài (Lateral Femoral Cutaneous Nerve - LFCN) là nhánh cảm giác thuần túy phát sinh từ nhánh trước rễ thắt lưng L2 và L3. Thần kinh lộ ra ở bờ ngoài cơ thắt lưng lớn, chạy chéo qua mặt trước cơ chậu (dưới mạc chậu) hướng về gai chậu trước trên (ASIS), rồi chui qua dưới (hoặc xuyên qua) đầu ngoài dây chằng bẹn ngay sát phía trong ASIS (~1 - 2 cm). Sau khi xuống vùng đùi trên khoảng 3 - 5 cm dưới ASIS, LFCN đi vào một 'rãnh tam giác chứa đầy mỡ' hằng định nằm kẹp giữa cơ may (Sartorius – ở trong) và cơ căng mạc đùi (Tensor fasciae latae - TFL – ở ngoài), ngay dưới lớp mạc đùi rộng (Fascia lata) trước khi chia nhánh trước và nhánh sau chi phối da mặt trước ngoài đùi.",
-      "targetStructure": "Khoang rãnh mỡ hình thấu kính/tam giác nằm dưới mạc đùi (Fascia lata) giữa bờ ngoài cơ may (Sartorius) và bờ trong cơ căng mạc đùi (TFL), hoặc đoạn thần kinh vắt qua mặt nông cơ may ngay dưới ASIS.",
-      "innervation": "Bản thân LFCN (L2–L3) chi phối cảm giác đơn thuần vùng da mặt ngoài và trước ngoài đùi tới ngang gối (hoàn toàn không có sợi vận động).",
-      "vascularAndDangerZones": [
-        "Nhánh lên của động mạch mũ đùi ngoài (Ascending branch of lateral circumflex femoral artery) và động mạch mũ chậu sâu (Deep circumflex iliac artery gần ASIS): Cần bật Color Doppler kiểm tra trước khi chọc kim.",
-        "Thần kinh đùi (Femoral nerve): Nằm cách xa hơn vào phía trong (~4 - 5 cm trong ASIS): Tránh bơm thể tích thuốc tê quá lớn (> 8 - 10 ml) ngay trên dây chằng bẹn vì thuốc có thể lan theo mặt dưới mạc chậu vào phong bế thần kinh đùi gây yếu cơ tứ đầu đùi!",
-        "Các biến thể giải phẫu tại ASIS (~10-20% LFCN đi ngay trên đỉnh ASIS hoặc lệch hẳn ra ngoài ASIS – vì vậy quét tìm LFCN ở rãnh mỡ dưới ASIS 3 - 5 cm rồi lần ngược lên trên theo phương pháp Philip Peng luôn đạt tỷ lệ tìm thấy gần 100%!)."
+    "surfaceAnatomy": {
+      "sourceRef": "Gray's Anatomy (42nd Ed.) – Anterolateral Thigh & ASIS Surface Markings; Intermuscular Sartorius-TFL Groove",
+      "surfaceLandmarks": [
+        "Gai chậu trước trên (Anterior Superior Iliac Spine - ASIS): Đỉnh xương nhô sát dưới da ở đầu ngoài dây chằng bẹn.",
+        "Dây chằng bẹn (Inguinal ligament): Căng từ ASIS chếch xuống trong tới củ mu.",
+        "Rãnh gian cơ May – Căng mạc đùi (Infra-ASIS intermuscular groove): Hõm dọc nông nằm ngay dưới ASIS 3 – 6 cm giữa cơ may (chạy chéo vào trong) và cơ căng mạc đùi (chạy thẳng xuống ngoài)."
+      ],
+      "surfaceProjections": "Ở ~80 – 85% cá thể, thần kinh bì đùi ngoài (LFCN, L2–L3) chui qua dưới (hoặc xuyên đôi) đầu ngoài dây chằng bẹn cách ASIS khoảng 1.0 – 2.0 cm về phía trong; nhưng có ~15% biến thể đi vắt trực tiếp trên đỉnh ASIS hoặc ngay phía ngoài ASIS! Tuy nhiên, khi xuống thấp hơn ASIS 3.0 – 5.0 cm ở mặt trước đùi, gần như 100% các biến thể LFCN đều hội tụ đi vào rãnh tam giác giữa cơ may và cơ căng mạc đùi trước khi tách nhánh trước – sau.",
+      "palpationSteps": [
+        "1. Bệnh nhân nằm ngửa thẳng trên giường.",
+        "2. Sờ xác định rõ mỏm nhọn gai chậu trước trên (ASIS).",
+        "3. Cho bệnh nhân hơi nâng gót chân kết hợp xoay ngoài nhẹ đùi để làm nổi dải cơ may (Sartorius) tách khỏi khối cơ căng mạc đùi (TFL) ở phía ngoài, sờ rãnh lõm giữa hai cơ cách dưới ASIS 4 cm (và tìm dấu Tinel dưới ASIS)."
       ],
       "figures": [
         {
-          "path": "assets/images/anatomy/fig_10_01_lfcn_pathway.jpg",
-          "figNumber": "10.1",
-          "title": "Đường đi giải phẫu điển hình của thần kinh bì đùi ngoài từ chậu hông xuống rãnh cơ may - TFL (Fig. 10.1)",
-          "desc": "LFCN đi chéo trên cơ chậu chui dưới dây chằng bẹn sát ASIS rồi nằm trong rãnh giữa cơ may (Sartorius) và cơ căng mạc đùi (TFL).",
-          "springerCaption": "Fig. 10.1 Pathway of a typical course of the lateral femoral cutaneous nerve relative to iliacus, ASIS, sartorius, and tensor fasciae latae."
-        },
-        {
-          "path": "assets/images/anatomy/fig_10_02_inguinal_nerves.jpg",
-          "figNumber": "10.2",
-          "title": "Tương quan giải phẫu các dây thần kinh vùng bẹn dưới dây chằng bẹn (Fig. 10.2)",
-          "desc": "Vị trí của LFCN ở sát gai chậu trước trên, cách biệt an toàn với thần kinh đùi và bó mạch đùi nằm ở phía trong.",
-          "springerCaption": "Fig. 10.2 Anatomical relationship of nerves at the inguinal region."
+          "path": "assets/images/external_anatomy/ext_surf_thigh_femoral_markings_gray1245.png",
+          "figNumber": "Gray 1245",
+          "title": "Giải phẫu bề mặt vùng ASIS và đùi trước: Khoảng cách an toàn giữa mốc LFCN (sát ASIS) và bó mạch thần kinh đùi (Gray's Plate 1245)",
+          "desc": "Đối chiếu vị trí gai chậu trước trên (nơi LFCN đi ra) cách xa ~4 - 5 cm về phía ngoài so với thần kinh đùi và động mạch đùi ở điểm giữa bẹn.",
+          "atlasSource": "Gray's Anatomy (20th Ed., Plate 1245) – Surface markings of ASIS, inguinal ligament, and femoral neurovascular bundle."
         }
       ]
     },
-    "surfaceAnatomy": {
-      "bonyLandmarks": [
-        "Gai chậu trước trên (Anterior Superior Iliac Spine - ASIS): Mốc xương nhọn sờ rất dễ ở đầu ngoài nếp bẹn.",
-        "Dây chằng bẹn (Inguinal ligament): Căng từ ASIS chếch xuống trong tới củ mu.",
-        "Rãnh cơ giữa cơ may và cơ căng mạc đùi ở mặt trước trên đùi."
+    "crossSectionalAnatomy": {
+      "sourceRef": "Gray's Anatomy – Transverse Cross-Section of Proximal Thigh Below ASIS",
+      "sectionPlane": "Thiết đồ cắt ngang (Axial / Transverse Cross-Section) vùng đùi trước trên cách dưới gai chậu trước trên (ASIS) 3.0 – 5.0 cm.",
+      "layeredStructure": [
+        "Lớp 1 – Da và mô mỡ dưới da mặt trước trên đùi (dày ~5 – 25 mm).",
+        "Lớp 2 – Mạc đùi rộng (Fascia lata – tách thành hai lá nông và sâu tạo một đường hầm cân mỏng ở ngay trên rãnh gian cơ!).",
+        "Lớp 3 – KHOANG ĐÍCH: Hố tam giác chứa mỡ tăng âm (Fat-filled intermuscular groove) được đậy mái bởi mạc đùi rộng, cạnh TRONG là mặt vát cơ may (Sartorius), cạnh NGOÀI là mặt vát cơ căng mạc đùi (Tensor fasciae latae - TFL) – bên trong hố mỡ này chứa THẦN KINH BÌ ĐÙI NGOÀI (LFCN, đường kính ~1.5 – 2.5 mm).",
+        "Lớp 4 (Đáy thiết đồ) – Đầu nguyên ủy gân cơ thẳng đùi (Rectus femoris) và sâu hơn là cơ chậu / cơ rộng ngoài (có nhánh lên động mạch mũ đùi ngoài đi ở lớp sâu dưới khe cơ!)."
       ],
-      "referenceLines": "Điểm xuất chiếu kinh điển tại nếp bẹn: Cách ASIS 1 - 2 cm vào trong và 1 - 2 cm xuống dưới; ĐIỂM VÀNG ĐẶT ĐẦU DÒ (Dynamic distal-to-proximal tracking): Nằm cách ASIS 3 - 5 cm thẳng xuống dưới mặt trước đùi (nơi rãnh mỡ Sartorius – TFL rộng và rõ nhất).",
-      "palpationSteps": [
-        "1. Bệnh nhân nằm ngửa thẳng trên giường, bộc lộ vùng gai chậu trước trên và 1/3 trên đùi.",
-        "2. Dùng ngón cái sờ xác định rõ đỉnh nhô của gai chậu trước trên (ASIS) và đánh dấu.",
-        "3. Yêu cầu bệnh nhân hơi gấp – dạng – xoay ngoài nhẹ khớp háng (tư thế 'số 4' nhẹ có cản trở) nếu muốn sờ rõ dải cơ may chạy chéo vào trong và cơ căng mạc đùi ở phía ngoài ngay dưới ASIS."
+      "topographicRelations": {
+        "superficialAndDeep": "Tại rãnh dưới ASIS 4 cm, LFCN nằm rất nông ngay dưới lá mạc đùi rộng (Lớp 2–3), hoàn toàn tách biệt với các mạch máu sâu; khi lần ngược lên sát dây chằng bẹn, LFCN chuyển sâu vào dưới mạc chậu trên mặt trước cơ chậu.",
+        "medialAndLateral": "Nếu tiêm ở rãnh dưới ASIS 3 – 4 cm, thuốc chỉ khu trú trong ống mạc đùi quanh LFCN; ngược lại nếu tiêm thể tích lớn (> 8 – 10 ml) ngay trên dây chằng bẹn dưới mạc chậu, thuốc sẽ lan dọc mặt cơ chậu sang PHÍA TRONG (~4 cm) gây phong bế nhầm THẦN KINH ĐÙI làm sụp gối khi bệnh nhân bước xuống giường!"
+      },
+      "dangerCorridors": [
+        "Chỉ sử dụng thể tích vừa đủ (3 – 5 ml) bơm tách mở đúng hố mỡ dưới mạc đùi để tránh lan vào bao mạc chậu gây yếu cơ tứ đầu đùi.",
+        "Bật Doppler màu loại trừ nhánh nông của động mạch mũ chậu sâu (sát ASIS) hoặc nhánh động mạch mũ đùi ngoài ở đáy khe cơ."
       ],
-      "probePlacement": "Kỹ thuật 'Dynamic Tracking' chuẩn Philip Peng: Đặt đầu dò Linear 10-15 MHz nằm ngang trên đỉnh ASIS, trượt thẳng xuống dưới dọc cơ may khoảng 3 - 5 cm cho tới khi thấy khoang tam giác chứa mỡ tăng âm kẹp giữa cơ may (trong) và TFL (ngoài); tìm cấu trúc mắt bò giảm âm có viền sáng của LFCN trong hố mỡ này rồi quét lần ngược lên sát dây chằng bẹn nơi bị chèn ép.",
       "figures": [
         {
-          "path": "assets/images/anatomy/fig_10_04_lfcn_groove_scan.jpg",
-          "figNumber": "10.4",
-          "title": "Vị trí đặt đầu dò ngang dưới ASIS tại rãnh mỡ giữa cơ may và cơ căng mạc đùi (Fig. 10.4)",
-          "desc": "Đặt đầu dò ngang cách dưới ASIS vài cm ngay trên rãnh mỡ phân cách cơ may (Sar) và cơ căng mạc đùi (TFL) để bắt giữ LFCN dễ dàng nhất.",
-          "springerCaption": "Fig. 10.4 Surface transducer position scanning the fat-filled groove between sartorius and tensor fasciae latae."
+          "path": "assets/images/external_anatomy/ext_sec_thigh_cross_section_gray432.png",
+          "figNumber": "Gray 432",
+          "title": "Thiết đồ cắt ngang đùi định khu mạc đùi rộng, cơ may (Sartorius), cơ thẳng đùi và các nhánh thần kinh bì đùi (Gray's Plate 432)",
+          "desc": "Cấu trúc các bao cân tách từ mạc đùi rộng bao bọc cơ may và ngăn cách hoàn toàn vùng bì đùi ngoài với ống mạch đùi phía trong.",
+          "atlasSource": "Gray's Anatomy (20th Ed., Plate 432) – Transverse section of thigh fascial compartments."
         }
       ]
     },
@@ -2355,52 +2585,56 @@ var STABLE_PROCEDURES_FALLBACK = [];
         "Tắc hẹp mạch máu chi dưới nặng."
       ]
     },
-    "anatomy": {
-      "overview": "Khớp cổ chân trên / Khớp chày – sên (Tibiotalar / Talocrural Joint) là khớp ròng rọc bản lề chịu lực giữa mộng chày – mác (bờ dưới đầu xa xương chày, mắt cá trong và mắt cá ngoài) và ròng rọc xương sên (Talar dome). Ở mặt trước cổ chân, bao khớp chùng rộng bám từ bờ trước xương chày vượt qua ròng rọc tới cổ xương sên (Talar neck), tạo nên ngách hoạt dịch trước cổ chân (Anterior tibiotalar recess) chứa một đệm mỡ nội bao nhỏ. Toàn bộ nhóm gân duỗi cổ bàn chân đi dọc phía trước bao khớp theo thứ tự từ trong ra ngoài ('Tom, Hairy, And Very Nervous, Dick'): Gân chày trước (TA) -> Gân duỗi ngón cái dài (EHL) -> Động mạch chày trước / mu chân (A) + Thần kinh mác sâu (N) -> Gân duỗi chung các ngón (EDL).",
-      "targetStructure": "Ngách hoạt dịch mặt trước khớp chày – sên (Anterior tibiotalar recess) nằm ngay trên cổ và vòm sụn xương sên, dưới đệm mỡ trước khớp.",
-      "innervation": "Nhánh khớp từ thần kinh mác sâu (Deep peroneal nerve - mặt trước), thần kinh chày (mặt sau) và thần kinh hiển / mác nông.",
-      "vascularAndDangerZones": [
-        "Động mạch chày trước chuyển tiếp thành động mạch mu chân (Anterior tibial / Dorsalis pedis artery) VÀ Thần kinh mác sâu (Deep peroneal nerve - DPN): Nằm sát màng xương ngay khe giữa gân EHL và gân EDL tại trung tâm mặt trước cổ chân – BẮT BUỘC bật Color Doppler và chọn hành lang kim ở phía TRONG gân chày trước (hoặc giữa TA và EHL) để tránh tuyệt đối bó mạch thần kinh này!",
-        "Tĩnh mạch hiển lớn và thần kinh hiển (Saphenous nerve & vein) chạy nông ngay bờ trước mắt cá trong.",
-        "Nhánh trong thần kinh mác nông (Superficial peroneal nerve) chạy trong lớp dưới da mặt trước ngoài cổ chân."
+    "surfaceAnatomy": {
+      "sourceRef": "Gray's Anatomy (42nd Ed.) – Anterior Ankle Retinacula, Tendon Sheaths & Dorsalis Pedis Line",
+      "surfaceLandmarks": [
+        "Mắt cá trong xương chày (Medial malleolus) và Mắt cá ngoài xương mác (Lateral malleolus – thấp hơn 1 cm và lùi sau hơn mắt cá trong).",
+        "Gân cơ chày trước (Tibialis anterior - TA): Dải gân to tròn nhất ở mặt trước trong cổ chân.",
+        "Gân cơ duỗi ngón cái dài (Extensor hallucis longus - EHL) nằm ngay phía ngoài gân TA, và Gân duỗi chung các ngón (EDL) ở phía ngoài cùng.",
+        "Đường đập của Động mạch chày trước / Động mạch mu chân nằm đúng khe giữa gân EHL và gân EDL."
+      ],
+      "surfaceProjections": "Khe khớp chày – sên (Tibiotalar joint line) chiếu thành đường ngang cao hơn đỉnh mắt cá trong khoảng 1.0 cm và cao hơn đỉnh mắt cá ngoài khoảng 2.0 cm. Bó mạch chày trước – mu chân và thần kinh mác sâu chạy dọc theo đường nối từ điểm giữa hai mắt cá tới kẽ xương bàn chân I – II (nằm giữa EHL và EDL); do đó CỬA SỔ AN TOÀN NHẤT trên bề mặt là khoảng lõm ngay BỜ TRONG gân chày trước (giữa mắt cá trong và gân TA) hoặc khe giữa gân TA và gân EHL!",
+      "palpationSteps": [
+        "1. Bệnh nhân nằm ngửa, gấp gối 45° đặt lòng bàn chân lên giường (gấp gan chân nhẹ ~15° – 20° để mở rộng ngách trước cổ xương sên).",
+        "2. Bảo bệnh nhân ngóc mạnh bàn chân và ngón cái lên để nhìn và sờ rõ thứ tự gân TA -> gân EHL -> gân EDL.",
+        "3. Bắt rõ mạch đập động mạch chày trước/mu chân ngay ngoài gân EHL và đánh dấu tránh; sau đó ấn tìm khe khớp mềm nằm giữa gân TA và EHL (hoặc bờ trong gân TA)."
       ],
       "figures": [
         {
-          "path": "assets/images/anatomy/fig_24_01_ankle_bones_joints.jpg",
-          "figNumber": "24.1",
-          "title": "Giải phẫu hệ thống xương khớp cổ chân: Khớp chày - sên (a) và Khớp dưới sên (b, c) (Fig. 24.1)",
-          "desc": "Cấu trúc diện khớp chày - sên phía trước (a), nhìn ngoài xoang cổ chân - khớp dưới sên (b) và nhìn trong mỏm chân đế sên (c).",
-          "springerCaption": "Fig. 24.1 Ankle bony and joint anatomy: (a) Anterior view of tibiotalar joint, (b) Lateral view, (c) Medial view."
-        },
-        {
-          "path": "assets/images/anatomy/fig_24_02_anterior_ankle_dpn_spn.jpg",
-          "figNumber": "24.2",
-          "title": "Giải phẫu các gân duỗi, động mạch mu chân và thần kinh mác sâu mặt trước khớp cổ chân (Fig. 24.2)",
-          "desc": "Liên quan sống còn giữa khe khớp chày - sên với bó mạch chày trước - thần kinh mác sâu (nằm giữa EHL và EDL) và nhánh mác nông phía dưới da.",
-          "springerCaption": "Fig. 24.2 Anterior view of the ankle showing superficial peroneal nerve, deep peroneal nerve, dorsalis pedis artery, and tibiotalar joint."
+          "path": "assets/images/external_anatomy/ext_surf_ankle_lateral_sheaths_gray1241.png",
+          "figNumber": "Gray 1241",
+          "title": "Giải phẫu bề mặt mặt trước - ngoài cổ chân: Mạc giữ gân duỗi và bao hoạt dịch các gân TA, EHL, EDL (Gray's Plate 1241)",
+          "desc": "Hình chiếu bề mặt 3 bao hoạt dịch gân duỗi đi qua trước khe khớp cổ chân và hãm gân duỗi hình chữ Y.",
+          "atlasSource": "Gray's Anatomy (20th Ed., Plate 1241) – Mucous sheaths of tendons around the anterior and lateral ankle."
         }
       ]
     },
-    "surfaceAnatomy": {
-      "bonyLandmarks": [
-        "Mắt cá trong (Medial malleolus) và mắt cá ngoài (Lateral malleolus – thấp hơn và lùi sau hơn mắt cá trong ~1 cm).",
-        "Bờ trước trần xương chày (Anterior tibial plafond margin) và hõm cổ xương sên khi gấp – duỗi cổ chân.",
-        "Gân cơ chày trước (Tibialis anterior tendon - TA): Dải gân lớn nhất, nổi gồ rõ nhất ở bờ trước trong cổ chân."
+    "crossSectionalAnatomy": {
+      "sourceRef": "Gray's Anatomy (Plates 356, 357) – Coronal & Sagittal Sectional Anatomy of Talocrural Joint",
+      "sectionPlane": "Thiết đồ đứng dọc mặt trước trong cổ chân (Anteromedial Sagittal Section) phối hợp Thiết đồ cắt ngang qua khe liên mắt cá.",
+      "layeredStructure": [
+        "Lớp 1 – Da mỏng mặt trước cổ chân và mô dưới da: Ở góc trước mắt cá trong có TĨNH MẠCH HIỂN LỚN và THẦN KINH HIỂN; ở nửa trước ngoài có hai nhánh tận của THẦN KINH MÁC NÔNG (nhánh bì mu chân trong & giữa)!",
+        "Lớp 2 – Mạc giữ gân duỗi trên và nhánh trên mạc giữ gân duỗi dưới (Extensor retinacula).",
+        "Lớp 3 – Hàng gân duỗi kèm bao hoạt dịch riêng (từ trong ra ngoài: TA -> EHL -> EDL -> Mác ba); lách sâu dưới giữa EHL và EDL sát bao khớp là ĐỘNG MẠCH CHÀY TRƯỚC (kèm 2 tĩnh mạch đi kèm) và THẦN KINH MÁC SÂU (DPN)!",
+        "Lớp 4 – Bao xơ mỏng mặt trước khớp cổ chân và đệm mỡ trước cổ chân nhỏ (Anterior intracapsular fat pad).",
+        "Lớp 5 – KHOANG ĐÍCH: Ngách hoạt dịch trước khớp chày – sên (Anterior tibiotalar synovial recess – vươn xa xuống tận cổ xương sên ~1 cm trước bờ sụn ròng rọc!).",
+        "Lớp 6 (Đáy thiết đồ) – Bờ trước trần xương chày (Tibial plafond), sụn hyalin vòm xương sên (Talar dome) và mặt lưng lõm của cổ xương sên."
       ],
-      "referenceLines": "Đường liên mắt cá trước (Intermalleolar line): Đi ngang qua bờ trước khe khớp chày – sên; cửa sổ chọc kim an toàn nhất nằm ngay sát bờ trong (hoặc ngay bờ ngoài) của gân cơ chày trước (TA), tránh vùng giữa EHL – EDL có mạch đập động mạch mu chân.",
-      "palpationSteps": [
-        "1. Bệnh nhân nằm ngửa, gấp gối 45 - 60 độ với lòng bàn chân đặt phẳng trên mặt giường (tạo tư thế gấp gan chân nhẹ 15 - 20 độ giúp mở rộng ngách bao khớp trước cổ chân).",
-        "2. Yêu cầu bệnh nhân gấp mu chân và nghiêng trong bàn chân nhẹ để gân cơ chày trước (TA) và gân duỗi ngón cái dài (EHL) nổi rõ trên da.",
-        "3. Bắt mạch đập động mạch chày trước / mu chân ở ngay phía ngoài gân EHL và đánh dấu tránh xa; sau đó sờ khe lõm khớp mềm nằm giữa gân TA và gân EHL (hoặc ngay trong gân TA trước mắt cá trong)."
+      "topographicRelations": {
+        "superficialAndDeep": "Động mạch chày trước và thần kinh mác sâu (Lớp 3 sâu) nằm ép sát trực tiếp lên mặt nông bao khớp trước cổ chân ở đường giữa – nên nếu chọc mù chính giữa cổ chân rất dễ đâm xuyên qua động mạch vào khớp!",
+        "medialAndLateral": "Hành lang giữa bờ trong gân TA và mắt cá trong: lưu ý tránh tĩnh mạch hiển lớn & thần kinh hiển ở nông. Hành lang giữa gân TA và gân EHL: hoàn toàn không có thân động mạch lớn và đi thẳng xuống hõm cổ xương sên."
+      },
+      "dangerCorridors": [
+        "Luôn quét ngang bằng Color Doppler trước để định vị chính xác động mạch chày trước và thần kinh mác sâu rồi mới xoay dọc đầu dò tại hành lang vô mạch (giữa TA – EHL hoặc trong TA).",
+        "Tránh chọc xuyên vào bao hoạt dịch các gân duỗi hoặc cạo mũi kim lên mặt sụn vòm xương sên."
       ],
-      "probePlacement": "Bước 1: Đặt đầu dò Linear cắt ngang mặt trước cổ chân kèm Color Doppler để định vị chính xác động mạch chày trước và thần kinh mác sâu. Bước 2: Xoay đầu dò dọc theo mặt phẳng đứng dọc (Sagittal longitudinal view) ngay khoảng trống giữa gân TA và gân EHL (tránh hẳn bó mạch) để bộc lộ mỏm trước xương chày, vòm sụn đen xương sên và ngách khớp hình tam giác phía trước.",
       "figures": [
         {
-          "path": "assets/images/ch24_ankle_foot/p310_img1.jpeg",
-          "figNumber": "24.13",
-          "title": "Đặt đầu dò dọc mặt trước cổ chân bộc lộ khe khớp chày - sên (Fig. 24.13)",
-          "desc": "Đầu dò đặt dọc mặt trước khớp cổ chân giữa các gân duỗi hiển thị đầu dưới xương chày (Tibia), vòm và cổ xương sên (Talus).",
-          "springerCaption": "Fig. 24.13 Sagittal probe placement and sonoanatomy anterior to the tibiotalar joint."
+          "path": "assets/images/external_anatomy/ext_sec_ankle_subtalar_coronal_gray357.png",
+          "figNumber": "Gray 357",
+          "title": "Thiết đồ đứng ngang (Coronal Section) qua mộng chày - mác, khớp chày - sên và khớp dưới sên (Gray's Plate 357)",
+          "desc": "Thiết đồ kinh điển cắt qua xương chày (Tibia), xương mác (Fibula), xương sên (Talus) và xương gót (Calcaneus), cho thấy rõ hai buồng khớp chày - sên và dưới sên hoàn toàn ngăn cách.",
+          "atlasSource": "Gray's Anatomy (20th Ed., Plate 357) – Coronal section through right talocrural and talocalcaneal joints."
         }
       ]
     },
@@ -2482,45 +2716,62 @@ var STABLE_PROCEDURES_FALLBACK = [];
         "Tiêm corticoid nhiều lần trước đó (trên 2 lần)."
       ]
     },
-    "anatomy": {
-      "overview": "Cân gan chân (Plantar Fascia / Aponeurosis) là dải cân sợi collagen đa lớp cực dày đóng vai trò thanh giằng cơ học nâng đỡ vòm dọc bàn chân (cơ chế tời Windlass mechanism), gồm 3 dải (trong, giữa và ngoài), trong đó dải trung tâm (Central band) dày và quan trọng nhất (bình thường dày ≤ 4.0 mm). Dải trung tâm nguyên ủy từ củ trong xương gót (Medial calcaneal tuberosity), chạy dọc ra trước chia 5 trẽ tới các ngón chân. Mặt nông (phía da gót) của cân được che chở bởi lớp đệm mỡ gót chân chuyên biệt cấu trúc tổ ong chịu lực (Heel fat pad – dày 1.5 - 2 cm); mặt sâu của cân áp sát vào nhóm cơ nội tại lớp 1 bàn chân (cơ dạng ngón cái, cơ gấp các ngón chân ngắn FDB).",
-      "targetStructure": "Mặt phẳng mô lỏng lẻo ngay MẶT NÔNG (Superficial perifascial interface) tại nguyên ủy cân gan chân bám vào củ trong xương gót (nếu tiêm Corticosteroid kháng viêm), hoặc vùng cân dày giảm âm > 4 mm (nếu châm kim PRP tái tạo – tuyệt đối không bơm steroid vào đệm mỡ gót hay lõi cân!).",
-      "innervation": "Nhánh gót trong (Medial calcaneal nerve) và thần kinh gan chân đầu tiên / thần kinh Baxter (First branch of lateral plantar nerve – chạy ngay mặt sâu cơ dạng ngón cái và trước củ trong xương gót).",
-      "vascularAndDangerZones": [
-        "ĐỆM MỠ GÓT CHÂN (Plantar heel fat pad): Tuyệt đối KHÔNG đâm kim xuyên qua lòng gan gót chân và KHÔNG để Corticosteroid trào vào mô đệm mỡ gót – sẽ gây teo đệm mỡ gót không hồi phục khiến bệnh nhân đi bộ như dẫm trực tiếp xương gót xuống đất!",
-        "Thần kinh Baxter (Inferior calcaneal nerve) và bó mạch – thần kinh gan chân ngoài / trong đi ở bờ trong gót sâu dưới cơ dạng ngón cái: Cần bật Doppler màu kiểm tra khi tiếp cận từ bờ trong gót chân.",
-        "Lõi cân gan chân (Plantar fascia substance): Tránh bơm áp lực steroid vào trong lõi cân gây đứt cân gan chân cấp tính và sập vòm bàn chân."
+    "surfaceAnatomy": {
+      "sourceRef": "Gray's Anatomy (42nd Ed.) – Plantar Heel & Medial Glabrous Skin Junction Landmarks",
+      "surfaceLandmarks": [
+        "Mỏm trong củ xương gót (Medial process of calcaneal tuberosity): Điểm xương tỳ đè thấp nhất ở phía trong gót chân.",
+        "Đường ranh giới da nhẵn – da dày gan chân ở mặt trong gót (Medial glabrous – non-glabrous skin junction): Đường chuyển tiếp rõ rệt giữa da mỏng có lông/mềm của mắt cá trong và lớp da sừng dày không lông của đế gót chân.",
+        "Đỉnh mắt cá trong (Tip of medial malleolus) ở phía trên."
+      ],
+      "surfaceProjections": "Nguyên ủy dải trung tâm cân gan chân bám vào mỏm trong củ xương gót chiếu xuống lòng gót cách bờ sau gót khoảng 3.5 – 4.5 cm và lệch nhẹ về nửa trong gót chân (ngay trên giao điểm đường thẳng đứng hạ từ bờ sau mắt cá trong xuống lòng gót). Đường ranh giới da mỏng – da dày ở bờ trong gót tương ứng đúng mặt phẳng ngang đi qua mặt nông nguyên ủy cân gan chân!",
+      "palpationSteps": [
+        "1. Bệnh nhân nằm sấp thòng bàn chân qua mép bàn.",
+        "2. Dùng một tay gấp mu tối đa ngón chân cái (nghiệm pháp tời Windlass của Hicks) để dải trung tâm cân gan chân nổi căng cứng dọc gan chân.",
+        "3. Dùng ngón cái tay kia ấn vào bờ trước của mỏm trong củ xương gót xác định điểm đau chói nhất, sau đó gióng ngang ra mặt da mỏng bờ trong gót chân để đánh dấu điểm chọc kim an toàn."
       ],
       "figures": [
         {
-          "path": "assets/images/anatomy/fig_24_05_medial_tarsal_tunnel.jpg",
-          "figNumber": "24.5",
-          "title": "Giải phẫu mặt trong cổ chân - gót chân, thần kinh chày và nhánh gót - gan chân (Fig. 24.5)",
-          "desc": "Mối liên quan giữa củ xương gót, cân gan chân và các nhánh tận của thần kinh chày (nhánh gót, thần kinh gan chân trong & ngoài) ở bờ trong gót.",
-          "springerCaption": "Fig. 24.5 Medial view of the ankle and heel showing tibial nerve branches in relation to the calcaneus and plantar aspect."
+          "path": "assets/images/external_anatomy/ext_surf_ankle_medial_tarsal_gray1242.png",
+          "figNumber": "Gray 1242",
+          "title": "Giải phẫu bề mặt mặt trong cổ chân - gót chân: Củ xương gót, ranh giới gan chân và ống cổ chân (Gray's Plate 1242)",
+          "desc": "Định khu mặt trong vùng gót nơi tiếp cận kim an toàn từ vùng da mỏng bờ trong trên đệm mỡ gót.",
+          "atlasSource": "Gray's Anatomy (20th Ed., Plate 1242) – Medial aspect of ankle and calcaneal heel region."
         }
       ]
     },
-    "surfaceAnatomy": {
-      "bonyLandmarks": [
-        "Củ trong xương gót (Medial process of calcaneal tuberosity): Gồ xương chịu lực chính ở phần trước trong dưới gót chân.",
-        "Ranh giới da nhẵn – da dày gan chân ở bờ trong gót (Medial glabrous skin junction – đường trắng đỏ phân ranh giữa vùng da mỏng mặt trong cổ chân và lớp da sừng dày dưới lòng gót).",
-        "Mắt cá trong (Medial malleolus) ở phía trên."
+    "crossSectionalAnatomy": {
+      "sourceRef": "Gray's Anatomy (Plates 357, 358) – Coronal & Sagittal Sectional Anatomy of the Heel Pad & Plantar Aponeurosis",
+      "sectionPlane": "Thiết đồ đứng ngang qua củ xương gót (Calcaneal Coronal Section) và Thiết đồ đứng dọc dọc theo dải trung tâm cân gan chân.",
+      "layeredStructure": [
+        "Lớp 1 (Từ đáy gót đi lên) – Da sừng dày gan gót chân (dày tới 2 – 4 mm, giàu đầu mút thần kinh đau).",
+        "Lớp 2 – ĐỆM MỠ GÓT CHÂN CHỊU LỰC (Plantar heel fat pad, dày 15 – 20 mm): Cấu tạo bởi hàng chục buồng vi nang mỡ đàn hồi đóng kín bởi các vách sợi xoắn ốc chữ U bám chặt từ da lên cân gan chân để hấp thụ xung lực dậm gót – TUYỆT ĐỐI BẢO TỒN!",
+        "Lớp 3 – KHOANG ĐÍCH KHÁNG VIÊM: Mặt phẳng mô liên kết mỏng ngay MẶT NÔNG (Superficial perifascial interface) của nguyên ủy cân gan chân.",
+        "Lớp 4 – Dải trung tâm CÂN GAN CHÂN (Central band of plantar aponeurosis – bình thường dày 2.5 – 4.0 mm; khi viêm thoái hóa dày phù giảm âm > 4.5 – 8.0 mm; là đích nếu châm kim PRP tái tạo).",
+        "Lớp 5 – Lớp cơ nội tại tầng 1 bàn chân ngay sâu dưới cân: Cơ gấp các ngón chân ngắn (Flexor digitorum brevis - FDB ở giữa) và Cơ dạng ngón cái (Abductor hallucis ở bờ trong).",
+        "Lớp 6 (Đáy thiết đồ) – Giữa mặt sâu cơ dạng ngón cái / FDB và bờ trước củ xương gót là THẦN KINH BAXTER (First branch of lateral plantar nerve – nhánh hỗn hợp tới cơ dạng ngón út & màng xương gót!) cùng mỏm trong củ xương gót."
       ],
-      "referenceLines": "Đường thẳng đứng hạ từ bờ sau mắt cá trong thẳng xuống lòng gót chân cắt ngang qua củ trong xương gót; ĐIỂM ĐÂM KIM AN TOÀN nằm ở mặt trong gót chân ngay phía TRÊN ranh giới da dày gan chân (Glabrous skin line) ngang mức bờ trước củ xương gót.",
-      "palpationSteps": [
-        "1. Đặt bệnh nhân nằm sấp với bàn chân thòng tự nhiên ra khỏi mép cuối bàn khám (hoặc nằm ngửa xoay ngoài chân chữ ngũ).",
-        "2. Một tay bác sĩ gấp mu tối đa ngón chân cái và các ngón chân của bệnh nhân (nghiệm pháp tời Windlass) để làm dải cân gan chân căng cứng nổi gồ lên ở gan chân.",
-        "3. Tay kia dùng ngón cái ấn sâu vào bờ trước trong của củ xương gót để xác định chính xác điểm bám nguyên ủy đau chói nhất và quan sát đường ranh giới da mỏng – da sừng dày ở mặt trong gót."
+      "topographicRelations": {
+        "superficialAndDeep": "Cân gan chân (Lớp 4) nằm ngăn cách giữa đệm mỡ gót chịu lực (ở nông/dưới) và cơ gấp các ngón ngắn + thần kinh Baxter (ở sâu/trên).",
+        "medialAndLateral": "Tại bờ trong gót chân (nơi đâm kim In-plane từ trong ra ngoài): Phía trên hơn và nông hơn cơ dạng ngón cái là nhánh gót trong (Medial calcaneal nerve); phía sâu dưới cơ dạng ngón cái là bó mạch – thần kinh gan chân ngoài và nhánh Baxter."
+      },
+      "dangerCorridors": [
+        "CẤM đâm kim xuyên qua lòng gan chân (Lớp 1–2) và CẤM bơm Corticosteroid vào đệm mỡ gót (Lớp 2) gây tiêu hủy vách nang mỡ không hồi phục!",
+        "Khi đi kim từ mặt da mỏng bờ trong gót vào Lớp 3, bật Color Doppler ở thành trong gót để tránh bó mạch gan chân ngoài/trong và thần kinh Baxter."
       ],
-      "probePlacement": "Đặt đầu dò Linear dọc theo trục dài bàn chân (Longitudinal sagittal view) dưới lòng gót hơi lệch trong qua củ trong xương gót để đo bề dày cân (bệnh lý > 4.0 mm); khi chọc kim tiếp cận bờ trong (Medial in-plane approach), có thể xoay đầu dò cắt ngang (Short-axis coronal view) ngay bờ trước củ xương gót để đi kim từ mặt da mỏng bờ trong gót vào mặt nông cân mà không chạm đệm mỡ gót.",
       "figures": [
         {
-          "path": "assets/images/ch24_ankle_foot/p308_img1.jpeg",
-          "figNumber": "24.10",
-          "title": "Giải phẫu siêu âm vùng ống cổ tay trong trên đường thần kinh chày đi xuống gót chân (Fig. 24.10)",
-          "desc": "Kiểm tra đường đi của bó mạch thần kinh chày sau mắt cá trong trước khi tiếp cận bờ trong vùng gót chân.",
-          "springerCaption": "Fig. 24.10 Sonoanatomy of the medial ankle tarsal tunnel structures."
+          "path": "assets/images/external_anatomy/ext_sec_ankle_subtalar_coronal_gray357.png",
+          "figNumber": "Gray 357",
+          "title": "Thiết đồ đứng ngang qua xương gót hiển thị đệm mỡ gót tổ ong, cân gan chân, cơ FDB, cơ dạng ngón cái và bó mạch thần kinh gan chân (Gray's Plate 357)",
+          "desc": "Phần đáy thiết đồ của Gray minh họa cực kỳ sắc nét lớp đệm mỡ gót dày bên dưới, cơ gấp các ngón ngắn (Flexor digitorum brevis), cơ dạng ngón cái (Abductor hallucis) và bó mạch thần kinh gan chân trong/ngoài.",
+          "atlasSource": "Gray's Anatomy (20th Ed., Plate 357) – Coronal section of calcaneus, heel fat pad, plantar muscles, and plantar neurovascular bundles."
+        },
+        {
+          "path": "assets/images/external_anatomy/ext_sec_foot_plantar_layers_gray358.png",
+          "figNumber": "Gray 358",
+          "title": "Giải phẫu nền xương - dây chằng sâu gan chân và củ xương gót (Gray's Plate 358)",
+          "desc": "Cấu trúc mỏm trong củ xương gót, dây chằng gan chân dài (Long plantar ligament) và các gân sâu vùng gan chân.",
+          "atlasSource": "Gray's Anatomy (20th Ed., Plate 358) – Deep plantar ligaments and calcaneal tuberosity."
         }
       ]
     },
@@ -2600,45 +2851,54 @@ var STABLE_PROCEDURES_FALLBACK = [];
         "Cứng dính khớp cùng chậu hoàn toàn (ankylosis) giai đoạn muộn không còn khe khớp."
       ]
     },
-    "anatomy": {
-      "overview": "Khớp cùng chậu (Sacroiliac Joint - SIJ) là khớp phức hợp chịu tải trục lớn nhất cơ thể nối cánh xương cùng và xương chậu, được chia thành 2 phần giải phẫu hoàn toàn khác biệt: 2/3 trên – sau là khớp dây chằng xơ cực kỳ dày chắc (Fibrous syndesmosis – chứa dây chằng cùng chậu gian cốt và dây chằng cùng chậu sau dày đặc không có khoang khớp), trong khi CHỈ CÓ 1/3 DƯỚI – TRƯỚC (ngang mức lỗ cùng S2–S3) mới là KHỚP HOẠT DỊCH THỰC SỰ (True synovial joint) có khe khớp hẹp (1 - 2 mm) và bao hoạt dịch! Vì vậy, mọi mũi tiêm nội khớp cùng chậu bắt buộc phải nhắm chính xác vào phần thấp (Inferior 1/3) của khe khớp ngay ngang mức lỗ cùng sau S2!",
-      "targetStructure": "Khoang hoạt dịch 1/3 dưới của khớp cùng chậu (Inferior synovial portion of SIJ) nằm sâu dưới dây chằng cùng chậu sau giữa bờ ngoài xương cùng (ngang mức lỗ cùng S2) và bản trong cánh chậu.",
-      "innervation": "Mặt sau khớp cùng chậu do mạng lưới thần kinh cùng sau (Posterior sacral network: nhánh ngoài S1–S3 và ngành sau L5); mặt trước khớp có đóng góp từ đám rối thắt lưng – cùng (L4–S2).",
-      "vascularAndDangerZones": [
-        "Lỗ cùng sau S1, S2 (Posterior sacral foramina): Chứa các rễ thần kinh cùng và nhánh động mạch cùng ngoài – nếu đi kim lệch quá vào trong sẽ lọt tụt xuống lỗ cùng sau gây tê rễ cùng!",
-        "Khuyết ngồi lớn (Greater sciatic notch) nằm ngay phía dưới – ngoài đáy khớp cùng chậu (chứa dây thần kinh tọa và động mạch mông trên / mông dưới): Không trượt đầu dò xuống quá thấp dưới khuyết ngồi lớn!",
-        "Các nhánh xuyên của động mạch mông trên đi trong dây chằng cùng chậu sau (kiểm tra bằng Color Doppler)."
+    "surfaceAnatomy": {
+      "sourceRef": "Gray's Anatomy (42nd Ed., Plate 1211) – Dimples of Venus (PSIS), Fortin's Area & Sacral Landmarks",
+      "surfaceLandmarks": [
+        "Gai chậu sau trên (Posterior Superior Iliac Spine - PSIS): Nằm ngay đáy 'lúm đồng tiền vùng thắt lưng cùng' (Dimple of Venus), ngang đúng mức đốt cùng S2 và điểm kết thúc túi màng cứng!",
+        "Gai chậu sau dưới (PIIS – nằm thấp hơn PSIS ~4 cm, ngang mức S3 – đánh dấu cực dưới phần hoạt dịch khớp cùng chậu).",
+        "Mào cùng giữa (Median sacral crest) ở đường giữa và Khe xương cùng (Sacral hiatus) ở dưới."
+      ],
+      "surfaceProjections": "Khớp cùng chậu có hình vành tai chữ L ngược: Phần trên (ngang S1 tới bờ trên PSIS) bị che lấp hoàn toàn bởi cánh chậu nhô ra sau và khối dây chằng gian cốt dày đặc; CHỈ CÓ 1/3 DƯỚI (đoạn nối từ ngay dưới trong PSIS xuống PIIS, ngang mức lỗ cùng S2 – S3, trùng với vùng chỉ tay đau Fortin: cách dưới – trong PSIS ~1.5 – 2.0 cm) là có khe khớp hoạt dịch mở ra phía mặt lưng!",
+      "palpationSteps": [
+        "1. Bệnh nhân nằm sấp kê gối dưới bụng dưới.",
+        "2. Dùng hai ngón cái tìm hai hõm lúm đồng tiền đối xứng và ấn xác định đỉnh xương nhô của gai chậu sau trên (PSIS).",
+        "3. Trượt ngón cái từ đỉnh PSIS xuống dưới 2 cm và vào trong 1 cm (điểm Fortin) kết hợp sờ khe xương cùng ở dưới làm mốc định hướng quét ngược lên."
       ],
       "figures": [
         {
-          "path": "assets/images/anatomy/fig_15_01_posterior_sacral_ligaments.jpg",
-          "figNumber": "15.1",
-          "title": "Giải phẫu hệ thống dây chằng cùng chậu sau, gai chậu sau trên (PSIS) và lỗ cùng sau (Fig. 15.1)",
-          "desc": "Phức hợp dây chằng chậu - thắt lưng, dây chằng cùng chậu sau che phủ mặt sau khớp cùng chậu và liên quan tới PSIS (1) cùng các lỗ cùng.",
-          "springerCaption": "Fig. 15.1 Posterior sacroiliac ligaments, PSIS (1), iliolumbar ligament (2), and sacrotuberous/sacrospinous ligaments."
+          "path": "assets/images/external_anatomy/ext_surf_back_spine_scapula_gray1211.png",
+          "figNumber": "Gray 1211",
+          "title": "Giải phẫu bề mặt vùng thắt lưng - cùng: Hai hõm lúm đồng tiền tương ứng gai chậu sau trên (PSIS) và tam giác xương cùng (Gray's Plate 1211)",
+          "desc": "Định khu bề mặt vùng cùng chậu qua hai hõm PSIS đối xứng hai bên nền tam giác xương cùng.",
+          "atlasSource": "Gray's Anatomy (20th Ed., Plate 1211) – Surface anatomy of lumbosacral dimples (PSIS) and sacral triangle."
         }
       ]
     },
-    "surfaceAnatomy": {
-      "bonyLandmarks": [
-        "Gai chậu sau trên (Posterior Superior Iliac Spine - PSIS): Nằm ngay dưới 'lúm đồng tiền Venus' vùng lưng cùng, ngang mức đốt cùng S2.",
-        "Mào cùng giữa (Median sacral crest): Hàng gờ xương dọc đường giữa mặt sau xương cùng.",
-        "Khe xương cùng (Sacral hiatus) và hai sừng cùng (Sacral cornua) ở đầu dưới xương cùng gần rãnh liên mông."
+    "crossSectionalAnatomy": {
+      "sourceRef": "Gray's Anatomy (Plates 322, 323, 324) – Classical Sequential Coronal/Oblique Cross-Sections of the Sacroiliac Joint",
+      "sectionPlane": "Thiết đồ cắt ngang – đứng ngang qua xương cùng và khớp cùng chậu tại mức S1 (phần dây chằng) đối chiếu mức S2–S3 (phần hoạt dịch).",
+      "layeredStructure": [
+        "Lớp 1 – Da và lớp mỡ dưới da vùng cùng – mông.",
+        "Lớp 2 – Lá cân cơ ngực – thắt lưng hòa nhập với nguyên ủy cơ mông lớn (ở ngoài) và cơ nhiều chân Multifidus (ở hõm xương cùng phía trong).",
+        "Lớp 3 – Dây chằng cùng – chậu sau nông và sâu (Posterior sacroiliac ligaments); ở mức cao S1 có thêm dây chằng cùng – chậu gian cốt (Interosseous sacroiliac ligament – dây chằng dày và chắc bậc nhất cơ thể bịt kín hoàn toàn 2/3 trên sau khe khớp!).",
+        "Lớp 4 – KHOANG ĐÍCH (CHỈ TỒN TẠI Ở 1/3 DƯỚI MỨC S2–S3!): Khe khớp hoạt dịch cùng chậu (Synovial SIJ cleft, rộng ~1 – 2 mm, chạy nghiêng dốc từ SAU TRONG ra TRƯỚC NGOÀI góc ~30° – 45°!).",
+        "Lớp 5 (Đáy và giới hạn trước sâu của thiết đồ) – Bao khớp trước mỏng (Anterior SIJ capsule): Ngay sát mặt trước bao khớp trước (nếu đâm kim xuyên thấu khớp vào tiểu khung!) là THÂN THẦN KINH THẮT LƯNG – CÙNG (Lumbosacral trunk L4–L5), RỄ S1 và bó mạch chậu trong / mạch mông trên!"
       ],
-      "referenceLines": "Đường ngang nối hai gai chậu sau trên (Inter-PSIS line) cắt ngang qua đốt cùng S2; phần hoạt dịch 1/3 dưới của khớp cùng chậu nằm ngay phía DƯỚI – TRONG so với đỉnh PSIS khoảng 1.5 - 2.5 cm!",
-      "palpationSteps": [
-        "1. Đặt bệnh nhân nằm sấp trên bàn phẳng, kê gối nhỏ dưới khung chậu – bụng dưới.",
-        "2. Dùng hai ngón cái sờ tìm hai lúm đồng tiền vùng thắt lưng – cùng để xác định đỉnh xương của gai chậu sau trên (PSIS) và kiểm tra điểm đau Fortin (ngay dưới trong PSIS 1 cm).",
-        "3. Sờ dọc đường giữa xương cùng xuống phía rãnh liên mông để định vị khe xương cùng (mốc khởi điểm tuyệt vời để quét ngược từ dưới lên không bao giờ nhầm tầng!)."
+      "topographicRelations": {
+        "superficialAndDeep": "Ở 2/3 trên (mức PSIS / S1), cánh chậu vươn chồm ra sau che khuất khe khớp và lấp đầy bởi dây chằng gian cốt; khi hạ thiết đồ xuống 1/3 dưới (mức S2 – dưới PSIS 2 cm), cánh chậu thu hẹp làm miệng khe khớp hoạt dịch lộ thẳng ra dưới dây chằng cùng – chậu sau!",
+        "medialAndLateral": "Cách miệng khe khớp cùng chậu ~1.5 – 2.0 cm về PHÍA TRONG là hàng LỖ CÙNG SAU S1, S2 (chứa rễ thần kinh cùng và nhánh động mạch cùng ngoài); ngay PHÍA DƯỚI cực dưới khớp (dưới PIIS) là khuyết ngồi lớn chứa dây thần kinh tọa và động mạch mông trên!"
+      },
+      "dangerCorridors": [
+        "Hướng vát chéo của khe khớp trên thiết đồ ngang: Khe khớp nghiêng từ TRONG RA NGOÀI, do đó bắt buộc đâm kim In-plane từ TRONG RA NGOÀI (Medial-to-lateral) trùng góc nghiêng khe khớp (nếu đâm từ ngoài vào trong sẽ bị sườn cánh chậu chặn đứng!).",
+        "Không đi lệch vào trong tụt xuống lỗ cùng sau S2 và không đâm quá sâu xuyên thủng bao khớp trước chạm thân thắt lưng – cùng L4–S1 gây tê liệt bàn chân sau tiêm!"
       ],
-      "probePlacement": "Hai cách quét chuẩn Finlayson & Peng (dùng đầu dò Curvilinear 2-5 MHz): Cách 1 (Từ trên xuống) – Đặt đầu dò cắt ngang tại PSIS thấy khe hẹp giữa cánh chậu dốc (ngoài) và xương cùng phẳng (trong), trượt nhẹ xuống dưới 1.5 - 2 cm tới ngang mức lỗ cùng S2 nơi khe khớp mở sâu nhất (1/3 dưới khớp). Cách 2 (Từ dưới lên chuẩn mực nhất) – Đặt ngang tại khe cùng (2 sừng cùng) trượt ngược lên tìm bờ dưới S3 -> lỗ cùng S2 và dịch nhẹ ra ngoài là đúng cửa vào 1/3 dưới khớp cùng chậu; đi kim In-plane từ TRONG RA NGOÀI theo hướng nghiêng dốc của khe khớp!",
       "figures": [
         {
-          "path": "assets/images/ch15_sacroiliac_joint/p191_img1.jpeg",
-          "figNumber": "15.2",
-          "title": "Các tầng quét ngang mặt sau xương cùng định vị lỗ cùng S1–S2 và 1/3 dưới khớp cùng chậu (Fig. 15.2)",
-          "desc": "Đối chiếu vị trí vạch đầu dò trên xương cùng - cánh chậu từ PSIS (ngang S1–S2) xuống phần hoạt dịch thấp của khớp cùng chậu.",
-          "springerCaption": "Fig. 15.2 Transverse sonographic views of the posterior sacrum and sacroiliac joint across S1 and S2 levels."
+          "path": "assets/images/external_anatomy/ext_sec_sacroiliac_coronal_gray322.png",
+          "figNumber": "Gray 322",
+          "title": "Thiết đồ cắt lớp kinh điển qua xương cùng và hai khớp cùng chậu: Phần hoạt dịch và dây chằng gian cốt (Gray's Plate 322)",
+          "desc": "Thiết đồ cắt qua đoạn trước - dưới xương cùng hiển thị rõ khe khớp hoạt dịch cùng chậu hẹp nghiêng vát giữa cánh xương cùng và xương chậu.",
+          "atlasSource": "Gray's Anatomy (20th Ed., Plate 322) – Section through the sacrum and sacroiliac joints."
         }
       ]
     },
@@ -2723,52 +2983,56 @@ var STABLE_PROCEDURES_FALLBACK = [];
         "Phụ nữ có thai."
       ]
     },
-    "anatomy": {
-      "overview": "Khe xương cùng (Sacral Hiatus) là một khuyết hở tự nhiên hình chữ U hoặc chữ V ngược ở đầu dưới thành sau ống cùng do sự không hàn kín bẩm sinh bản sống của đốt cùng S5 (và đôi khi S4). Hai bên khe cùng được giới hạn bởi hai mấu xương nhô gọi là SỪNG CÙNG (Sacral cornua – di tích mỏm khớp dưới S5), sàn khe là mặt sau thân đốt S5, và mái khe được căng phủ bởi DÂY CHẰNG CÙNG – CỤT SAU SÂU (Sacrococcygeal ligament / membrane – tương đương dây chằng vàng ở trên). Bên trong ống cùng chứa đám rối thần kinh cùng – cụt, dây tận cùng, mạng tĩnh mạch ngoài màng cứng phong phú và TÚI MÀNG CỨNG (Dural sac – bình thường kết thúc ở ngang mức S2, nhưng ở 1–5% người lớn hoặc trẻ nhỏ có thể xuống thấp tới S3–S4!).",
-      "targetStructure": "Khoang ngoài màng cứng ống cùng ngay phía dưới dây chằng cùng – cụt (Caudal epidural canal just beyond the sacrococcygeal membrane, dừng đầu kim ngay sau khi qua màng 5 - 10 mm, tuyệt đối không đẩy kim cao lên mức S2–S3!).",
-      "innervation": "Dung dịch tiêm ngoài màng cứng xương cùng (10 - 20 ml) lan ngược lên khoang ngoài màng cứng thắt lưng – cùng tác động lên các rễ thần kinh L4, L5 và S1–S5.",
-      "vascularAndDangerZones": [
-        "TÚI MÀNG CỨNG (Dural sac): Kết thúc ngang S2 (nằm cách đỉnh khe cùng khoảng 4.5 - 6 cm, nhưng có thể thấp bất thường ở S3 hoặc có nang Tarlov lớn trong ống cùng!) – siêu âm giúp đo khoảng cách và chỉ cần luồn kim qua màng cùng cụt 0.5 - 1 cm (nhìn rõ 100% dưới mặt cắt dọc) thay vì đẩy sâu mù như kinh điển tránh thủng màng cứng gây tê tủy sống toàn bộ!",
-        "Đám rối tĩnh mạch ngoài màng cứng không van của Batson (Epidural venous plexus): Tiêm mù có tỷ lệ vào tĩnh mạch tới 10–15% mà hút thử vẫn có thể âm tính giả do xẹp thành tĩnh mạch – bắt buộc dùng Dexamethasone hoặc kiểm tra dòng lan dịch mở rộng khoang ngoài màng cứng trên siêu âm + Color Doppler!",
-        "Biến thể khuyết đóng kín hoàn toàn khe cùng (gặp ở ~3–5% người lớn tuổi vôi hóa màng) hoặc khuyết toác thành sau ống cùng hoàn toàn."
+    "surfaceAnatomy": {
+      "sourceRef": "Gray's Anatomy (42nd Ed.) – Equilateral Sacral Triangle, Sacral Cornua & Natal Cleft Landmarks",
+      "surfaceLandmarks": [
+        "Hai gai chậu sau trên (Bilateral PSIS – ngang mức đốt cùng S2 và đáy túi màng cứng!).",
+        "Hai sừng cùng (Sacral cornua – hai mấu xương nhỏ cao ~3 – 5 mm nằm hai bên khe xương cùng ngay đầu trên rãnh liên mông).",
+        "Khe xương cùng (Sacral hiatus – hõm chữ V ngược rộng ~10 – 15 mm nằm cách đỉnh xương cụt ~4 – 5 cm lên trên).",
+        "Đỉnh xương cụt (Tip of coccyx) ở sâu trong rãnh liên mông (cách bờ hậu môn ~3 – 4 cm – vùng bẩn bắt buộc che cách ly vô khuẩn!)."
+      ],
+      "surfaceProjections": "Hai định luật hình học bề mặt vàng của ống cùng: (1) TAM GIÁC ĐỀU XƯƠNG CÙNG: Đoạn nối ngang giữa PSIS trái và PSIS phải tạo thành cạnh đáy (~8 – 10 cm) của một tam giác đều hướng xuống dưới mà đỉnh thứ ba trùng chính xác vào KHE XƯƠNG CÙNG; (2) ĐÁY TÚI MÀNG CỨNG (Dural sac termination) chiếu ngang đúng đường nối hai PSIS (mức S2), cách đỉnh khe xương cùng trung bình 4.5 – 6.0 cm (nhưng ở ~3 – 5% cá thể có thể xuống thấp tới S3 cách khe cùng < 3 cm!).",
+      "palpationSteps": [
+        "1. Bệnh nhân nằm sấp kê gối dưới xương mu, hai gót chân xoay hẳn ra ngoài (ngón cái chạm nhau) để làm chùng mềm cơ mông lớn hai bên.",
+        "2. Đặt ngón cái và ngón giữa một bàn tay lên hai PSIS rồi hạ ngón trỏ dựng tam giác đều xuống đầu trên rãnh liên mông.",
+        "3. Lăn ngang đầu ngón trỏ để sờ rõ hai gờ hạt đậu của sừng cùng hai bên và mặt màng đàn hồi căng giữa hai sừng (nếu bệnh nhân béo hoặc vôi hóa khó sờ sừng cùng, siêu âm cắt ngang sẽ tìm thấy ngay trong 3 giây!)."
       ],
       "figures": [
         {
-          "path": "assets/images/anatomy/fig_17_01_sacral_hiatus_cornua.jpg",
-          "figNumber": "17.1",
-          "title": "Giải phẫu xương khe xương cùng (mũi tên), hai sừng cùng (*) và chùm đuôi ngựa trong ống cùng (Fig. 17.1)",
-          "desc": "Hình chụp xương thực tế và thiết đồ dọc ống cùng chỉ rõ cửa vào khe xương cùng nằm giữa hai sừng cùng (*) ở đầu dưới xương cùng.",
-          "springerCaption": "Fig. 17.1 Bony anatomy of the sacral hiatus (arrow), bilateral sacral cornua (*), and sagittal view of the sacral canal."
-        },
-        {
-          "path": "assets/images/anatomy/fig_17_03_dural_sac_filum.jpg",
-          "figNumber": "17.3",
-          "title": "Tương quan giải phẫu điểm tận hết túi màng cứng tại mức S2 và dây tận cùng ở khe cùng (Fig. 17.3)",
-          "desc": "Túi màng cứng (Dura) thường tận hết ở mức S2 (ngang hai gai chậu sau trên PSIS), cách đỉnh khe xương cùng vài centimet.",
-          "springerCaption": "Fig. 17.3 Anatomical termination of the dural sac at S2 and filum terminale passing through the sacral hiatus."
+          "path": "assets/images/external_anatomy/ext_surf_perineum_ischial_gray1228.png",
+          "figNumber": "Gray 1228",
+          "title": "Thiết đồ giải phẫu định khu vùng cùng - cụt, rãnh liên mông và tương quan trực tràng phía trước xương cùng (Gray's Plate 1228)",
+          "desc": "Định khu độ cong sinh lý của xương cùng - xương cụt so với mặt da vùng cùng sau và bóng trực tràng nằm ngay sát mặt trước xương cụt.",
+          "atlasSource": "Gray's Anatomy (20th Ed., Plate 1228) – Median sagittal relations of sacrum, coccyx, gluteal cleft, and pelvic organs."
         }
       ]
     },
-    "surfaceAnatomy": {
-      "bonyLandmarks": [
-        "Hai gai chậu sau trên (Bilateral PSIS): Hai hõm xương đối xứng ngang mức đốt cùng S2.",
-        "Hai sừng cùng (Sacral cornua): Hai gờ xương nhỏ bằng hạt đậu nằm đối xứng hai bên đường giữa ngay phía trên đỉnh rãnh liên mông.",
-        "Đỉnh xương cụt (Tip of coccyx) ở sâu dưới rãnh mông."
+    "crossSectionalAnatomy": {
+      "sourceRef": "Gray's Anatomy (Plate 661) – Mid-Sagittal & Transverse Sectional Anatomy of the Sacral Canal, Filum Terminale & Dural Sac",
+      "sectionPlane": "Thiết đồ đứng dọc chính giữa qua ống sống thắt lưng – cùng (Mid-sagittal Lumbosacral Canal Section – Gray's Plate 661) và Thiết đồ cắt ngang qua khe xương cùng.",
+      "layeredStructure": [
+        "Lớp 1 – Da và lớp mỡ dưới da vùng cùng thấp.",
+        "Lớp 2 – Mạc nông và cân sâu vùng cùng – cụt.",
+        "Lớp 3 – MÀNG CHẮN CỬA VÀO: Dây chằng cùng – cụt sau nông và sâu (Sacrococcygeal ligament / membrane – dày ~1.5 – 3 mm căng ngang giữa hai sừng cùng đậy kín mái khe xương cùng).",
+        "Lớp 4 – KHOANG ĐÍCH: Đoạn thấp Khoang ngoài màng cứng ống cùng (Caudal epidural space – đường kính trước – sau tại khe cùng chỉ rộng trung bình 4.0 – 6.0 mm; nếu < 2.0 mm trên siêu âm là hẹp ống cùng giải phẫu rất khó luồn kim!). Bên trong chứa mỡ ngoài màng cứng lỏng lẻo, dây tận cùng ngoài màng cứng (Filum terminale externum), các rễ S4–S5–Co1 và ĐÁM RỐI TĨNH MẠCH NGOÀI MÀNG CỨNG KHÔNG VAN BATSON (tập trung dày ở phần trước – bên ống cùng!).",
+        "Lớp 5 (Đáy trước ống cùng) – Mặt sau thân đốt cùng S5 – S4 và dây chằng dọc sau (nếu chọc thủng qua sụn gian đốt cùng non ở trẻ em hoặc khuyết xương sẽ đâm thẳng ra trước vào TRỰC TRÀNG!).",
+        "Lớp 6 (Giới hạn trần trên trong ống cùng – CẤM CHẠM!) – Đỉnh dưới TÚI MÀNG CỨNG & MÀNG NHỆN (Dural-arachnoid sac chứa dịch não tủy ở mức S2) hoặc nang màng nhện rễ thần kinh Tarlov (gặp ở ~5% dân số tại S2–S3!)."
       ],
-      "referenceLines": "QUY TẮC TAM GIÁC ĐỀU KINH ĐIỂN (Equilateral Triangle Rule): Nối đoạn thẳng ngang giữa hai gai chậu sau trên (PSIS trái và PSIS phải) làm cạnh đáy của một tam giác đều hướng đỉnh xuống dưới đường giữa – đỉnh dưới của tam giác đều này trùng chính xác với KHE XƯƠNG CÙNG (Sacral hiatus)!",
-      "palpationSteps": [
-        "1. Đặt bệnh nhân nằm sấp, kê gối dưới xương chậu, hai gót chân xoay ra ngoài (ngón chân cái chụm vào nhau – Pigeon-toed position) để làm giãn mềm tối đa hai cơ mông lớn giúp bộc lộ khe liên mông.",
-        "2. Dùng ngón cái và ngón giữa một tay chạm hai gai chậu sau trên (PSIS), hạ ngón trỏ tạo tam giác đều xuống đường giữa ngay đầu trên rãnh liên mông.",
-        "3. Dùng đầu ngón trỏ lăn ngang nhẹ nhàng ngay trên xương cụt để cảm nhận hai gờ xương sừng cùng hai bên và hõm đàn hồi ở giữa (màng cùng – cụt). ĐẶC BIỆT luôn đặt gạc vô khuẩn che kín hoàn toàn phía rãnh hậu môn ở dưới tránh nhiễm khuẩn ngược dòng!"
+      "topographicRelations": {
+        "superficialAndDeep": "Trên thiết đồ cắt ngang khe cùng ('Frog-eye view'): hai sừng cùng là hai con mắt, dây chằng cùng – cụt là mái trên và mặt sau thân S5 là sàn dưới. Trên thiết đồ đứng dọc giữa: thành sau ống cùng tạo bóng cản âm che khuất phần cao, chỉ để hở cửa sổ âm học ngay tại khe cùng dưới dây chằng cùng – cụt!",
+        "medialAndLateral": "Đường kính trước – sau của ống cùng hẹp nhất ở đỉnh khe cùng (~4 – 5 mm); khi vừa xuyên qua dây chằng cùng – cụt theo góc ~20° – 30°, bắt buộc hạ thấp góc kim song song trục ống cùng và chỉ đẩy kim vào trong ống tối đa 5 – 10 mm!"
+      },
+      "dangerCorridors": [
+        "Tê tủy sống toàn bộ (Total spinal anesthesia) do đâm thủng túi màng cứng thấp hoặc nang Tarlov lớn ở S3: Tuyệt đối KHÔNG đẩy kim sâu lên cao 3 – 4 cm trong ống cùng như kỹ thuật mù kinh điển; dưới siêu âm cắt dọc chỉ cần đầu kim vượt qua dây chằng cùng – cụt 5 – 10 mm rồi bơm dịch nhìn khoang ngoài màng cứng tách mở lên trên!",
+        "Tiêm nội tĩnh mạch đám rối Batson (tỷ lệ tới 10 – 15%): Bắt buộc dùng Dexamethasone không hạt, hút thử nhẹ nhàng và quan sát trực tiếp dòng dịch mở khoang trên siêu âm + Doppler."
       ],
-      "probePlacement": "Quy trình 2 mặt cắt chuẩn mực: Bước 1 – Đặt đầu dò Linear (hoặc Curvilinear ở người béo) cắt ngang (Transverse short-axis) ngay trên đỉnh tam giác đều để thấy 'Dấu hiệu mắt ếch' (Frog-eye sign): hai sừng cùng tăng âm tròn hai bên nối bởi dải trắng sáng của màng cùng – cụt ở trên và sàn xương S5 ở dưới. Bước 2 – Xoay đầu dò 90 độ sang mặt cắt dọc giữa (Mid-sagittal long-axis) để dẫn đường kim In-plane từ dưới lên xuyên qua màng cùng – cụt vào ống cùng dưới quan sát trực tiếp 100%.",
       "figures": [
         {
-          "path": "assets/images/anatomy/fig_17_02_sacrococcygeal_ligament.jpg",
-          "figNumber": "17.2",
-          "title": "Giải phẫu bề mặt màng cùng - cụt căng che phủ khe xương cùng và quy tắc định vị (Fig. 17.2)",
-          "desc": "Màng dây chằng cùng - cụt đậy kín khe xương cùng giữa hai sừng cùng là ranh giới cảm nhận rõ nhất trên siêu âm trước khi vào ống cùng.",
-          "springerCaption": "Fig. 17.2 Sacral hiatus covered by the sacrococcygeal ligament."
+          "path": "assets/images/external_anatomy/ext_sec_caudal_canal_sagittal_gray661.png",
+          "figNumber": "Gray 661",
+          "title": "Thiết đồ đứng dọc chính giữa ống sống thắt lưng - cùng kinh điển: Chóp tủy (L1–L2), Túi màng cứng kết thúc tại S2 và Khoang ngoài màng cứng khe cùng (Gray's Plate 661)",
+          "desc": "Thiết đồ chuẩn mực số 1 của Gray (Plate 661) hiển thị trọn vẹn nón tủy, chùm đuôi ngựa, đáy túi màng cứng đóng lại ngang đốt cùng thứ hai (S2) và dây tận cùng đi xuống khe xương cùng.",
+          "atlasSource": "Gray's Anatomy (20th Ed., Plate 661) – Sagittal section of vertebral and sacral canal showing lower end of medulla spinalis, dural sac termination at S2, and filum terminale."
         }
       ]
     },
@@ -2853,59 +3117,62 @@ var STABLE_PROCEDURES_FALLBACK = [];
         "Rối loạn đông máu nặng."
       ]
     },
-    "anatomy": {
-      "overview": "Phong bế mặt phẳng cơ dựng gai (Erector Spinae Plane Block - ESPB, mô tả đầu tiên bởi Forero 2016) nhắm vào khoang cân sâu kéo dài dọc từ nền sọ tới xương cùng nằm ngay giữa mặt sâu khối cơ dựng gai (Erector spinae muscle complex: gồm cơ chậu sườn Iliocostalis, cơ dài Longissimus và cơ gai Spinalis) và mặt lưng ĐỈNH MỎM NGANG đốt sống (Tip of Transverse Process - TP). Ở vùng ngực giữa (ví dụ T5), từ nông vào sâu trên mỏm ngang gồm 3 lớp cơ đặc trưng: Cơ thang (Trapezius) -> Cơ trám lớn (Rhomboid major – biến mất từ dưới mức T7!) -> Cơ dựng gai (Erector spinae) -> Đỉnh mỏm ngang. Thuốc tê bơm vào mặt phẳng này lan rộng lên – xuống nhiều khoang (3–6 đốt sống) và thấm ra trước qua mô liên kết gian ngang vào khoang cạnh sống ngực phong bế cả nhánh sau, nhánh trước và chuỗi giao cảm.",
-      "targetStructure": "Mặt phẳng cân ngay MẶT SÂU cơ dựng gai và tiếp xúc trực tiếp lên vỏ xương ĐỈNH MỎM NGANG (Tip of transverse process) của đốt sống mục tiêu.",
-      "innervation": "Phong bế đa tầng các ngành sau (Dorsal rami - cơ da lưng) và lan thấm tới ngành trước (Ventral rami / thần kinh gian sườn) cùng các nhánh thông giao cảm (Rami communicantes).",
-      "vascularAndDangerZones": [
-        "Khoang cạnh sống và Màng phổi (Paravertebral space & Pleura): Nằm sâu hơn mặt phẳng dây chằng sườn – ngang; mỏm ngang chính là 'lá chắn xương an toàn tuyệt đối' (Bony backstop) – nếu đặt đầu dò quá lệch ra ngoài (> 4 - 5 cm khỏi đường giữa) trên thân xương sườn tròn thay vì mỏm ngang vuông phẳng, kim trượt qua sườn có thể chọc vào màng phổi!",
-        "Các nhánh lưng của động mạch gian sườn sau chạy sát bờ mỏm ngang.",
-        "Tổng liều thuốc tê toàn thân (LAST): Do ESP là phong bế mặt phẳng cân thể tích lớn (20 - 30 ml mỗi bên), bắt buộc tính trần liều Ropivacaine 0.2% / Bupivacaine 0.25% theo cân nặng!"
+    "surfaceAnatomy": {
+      "sourceRef": "Gray's Anatomy (42nd Ed., Plate 1211) – Vertebral Spinous Landmarks & Paraspinal Transverse Process Line",
+      "surfaceLandmarks": [
+        "Mỏm gai C7 (Vertebra prominens – mốc đếm trên cùng).",
+        "Đầu trong gai vai (Root of scapular spine – ngang mỏm gai T3).",
+        "Góc dưới xương bả vai (Inferior angle of scapula – ngang mỏm gai T7 ở tư thế chuẩn).",
+        "Xương sườn 12 (ngang T12) và Đường liên mào chậu Tuffier (ngang mỏm gai L4 / khe L4–L5)."
+      ],
+      "surfaceProjections": "Quy tắc định khu bề mặt mỏm ngang cột sống ngực: Do mỏm gai các đốt ngực giữa (T5–T8) dốc chúc dài xuống dưới theo kiểu lợp ngói, ĐỈNH MỎM NGANG của đốt sống ngực Tn nằm ngang mức với ĐỈNH MỎM GAI của đốt sống phía trên (Tn-1), và nằm trên đường dọc cạnh sống cách đường giữa đúng 2.5 – 3.0 cm! (Nếu đo xa đường giữa > 4.0 cm sẽ rơi ra ngoài khớp sườn – ngang lên xương sườn và màng phổi!).",
+      "palpationSteps": [
+        "1. Bệnh nhân ngồi thẳng cong nhẹ lưng hoặc nằm sấp/nghiêng.",
+        "2. Đếm mỏm gai từ C7 xuống (đối chiếu gai vai = T3, góc dưới xương vai = T7) để xác định đúng tầng cần phong bế.",
+        "3. Từ đường giữa mỏm gai đo ngang sang bên 2.5 – 3.0 cm và vạch đường dọc cạnh sống dài 4 cm để đặt đầu dò."
       ],
       "figures": [
         {
-          "path": "assets/images/anatomy/fig_11_02_esp_cross_section_t5.jpg",
-          "figNumber": "11.2",
-          "title": "Thiết đồ cắt ngang giải phẫu 3 lớp cơ cạnh sống tại mức ngực T5 và mặt phẳng ESP (Fig. 11.2)",
-          "desc": "Tại mức T5, phía nông mỏm ngang lần lượt từ nông vào sâu gồm cơ thang, cơ trám lớn và khối cơ dựng gai áp trực tiếp lên đỉnh mỏm ngang.",
-          "springerCaption": "Fig. 11.2 Cross-sectional anatomy of paraspinal muscle layers at the T5 vertebral level."
-        },
-        {
-          "path": "assets/images/anatomy/fig_11_06_esp_spread_diagram.jpg",
-          "figNumber": "11.6",
-          "title": "Cơ chế lan tỏa thuốc tê đa tầng vào ngành trước và ngành sau sau tiêm ESP Block (Fig. 11.6)",
-          "desc": "Dung dịch tiêm dưới cơ dựng gai tại đỉnh mỏm ngang lan dọc nhiều đốt sống và thấm qua mô gian ngang ra khoang cạnh sống.",
-          "springerCaption": "Fig. 11.6 Schematic diagram showing craniocaudal and anterior paravertebral spread of injectate following ESP block."
+          "path": "assets/images/external_anatomy/ext_surf_back_spine_scapula_gray1211.png",
+          "figNumber": "Gray 1211",
+          "title": "Giải phẫu bề mặt toàn bộ vùng lưng: Đối chiếu cột sống ngực - thắt lưng, cơ thang, cơ trám lớn và khối cơ dựng gai (Gray's Plate 1211)",
+          "desc": "Hình thái bề mặt rãnh giữa lưng, khối lồi cơ dựng gai (Sacrospinalis) hai bên cột sống và các mốc xương bả vai T3 – T7.",
+          "atlasSource": "Gray's Anatomy (20th Ed., Plate 1211) – Surface anatomy of the back showing trapezius, rhomboideus major, and sacrospinalis."
         }
       ]
     },
-    "surfaceAnatomy": {
-      "bonyLandmarks": [
-        "Mỏm gai C7 (Vertebra prominens - mỏm gai nhô cao nhất nền cổ) dùng để đếm xuống T1–T12.",
-        "Gai vai (ngang T3) và góc dưới xương bả vai (ngang T7).",
-        "Đường liên mào chậu Tuffier (ngang L4 / khe L4–L5) nếu làm ESP vùng thắt lưng."
+    "crossSectionalAnatomy": {
+      "sourceRef": "Gray's Anatomy (Plates 314, 388, 819) – Transverse Paraspinal, Costotransverse & Thoracolumbar Sectional Anatomy",
+      "sectionPlane": "Thiết đồ cắt ngang qua cột sống ngực – khớp sườn ngang (Transverse Thoracic Paraspinal Section) và Thiết đồ đứng dọc cạnh sống cách đường giữa 3 cm.",
+      "layeredStructure": [
+        "Lớp 1 – Da và mô mỡ dưới da vùng lưng cạnh sống.",
+        "Lớp 2 – Lá sau cân ngực – thắt lưng; ở tầng ngực cao – giữa (T1–T7) có 2 lớp cơ đai vai phủ nông là CƠ THANG (Trapezius) và CƠ TRÁM LỚN (Rhomboid major – lưu ý dưới mức T7 cơ trám lớn biến mất, chỉ còn cơ thang hoặc cơ lưng rộng!).",
+        "Lớp 3 – Khối CƠ DỰNG GAI (Erector spinae / Sacrospinalis – tại mức 3 cm cạnh đường giữa chủ yếu là bụng cơ dài ngực Longissimus thoracis kèm gân bám vào đỉnh mỏm ngang).",
+        "Lớp 4 – KHOANG ĐÍCH: Mặt phẳng cân sâu dưới cơ dựng gai (Sub-erector spinae fascial plane) áp trực tiếp lên vỏ xương mặt sau ĐỈNH MỎM NGANG (Tip of transverse process).",
+        "Lớp 5 (Đáy chắn xương & Khoang sâu phía trước) – Bản xương mỏm ngang làm tấm khiên chắn kim! Ngay phía sâu (trước) kẽ giữa hai mỏm ngang là dây chằng sườn – ngang trên (Superior costotransverse ligament) ngăn cách với KHOANG CẠNH SỐNG NGỰC (chứa ngành trước, ngành sau, hạch giao cảm) và sâu hơn nữa là lá thành màng phổi!"
       ],
-      "referenceLines": "Đường dọc cạnh sống cách đường giữa mỏm gai đúng 2.5 - 3.0 cm (Paramedian sagittal line 3 cm lateral to midline): Đây là khoảng cách chuẩn tương ứng với hàng ĐỈNH MỎM NGANG ngực (đi vào trong hơn là bản sống phẳng liên tục; đi ra ngoài > 4 cm là xương sườn tròn kèm màng phổi lấp lánh!).",
-      "palpationSteps": [
-        "1. Bệnh nhân có thể ngồi thẳng ở mép giường, nằm sấp hoặc nằm nghiêng đều thực hiện tốt.",
-        "2. Sờ xác định mỏm gai C7 ở nền cổ và đếm từng mỏm gai xuống đúng tầng đốt sống đích (ví dụ T5 cho đau ngực/sườn cao, T7–T9 cho ngực thấp/bụng trên, L2–L4 cho thắt lưng).",
-        "3. Từ đỉnh mỏm gai mục tiêu đo ngang sang bên cần phong bế đúng 2.5 - 3 cm và đánh dấu điểm chuẩn."
+      "topographicRelations": {
+        "superficialAndDeep": "Đỉnh mỏm ngang (Lớp 5) nằm nông hơn bản sống (ở trong) và nông hơn màng phổi ~1.5 – 2.0 cm – đóng vai trò điểm dừng xương cứng tuyệt đối cho đầu kim.",
+        "medialAndLateral": "Dịch đầu dò VÀO TRONG (< 2 cm cách đường giữa) sẽ trượt từ mỏm ngang ngắt quãng sang BẢN SỐNG (Lamina) phẳng liên tục; dịch đầu dò RA NGOÀI (> 4 cm cách đường giữa) sẽ vượt qua khớp sườn – ngang sang THÂN XƯƠNG SƯỜN tròn có màng phổi nằm sát ngay bên dưới!"
+      },
+      "dangerCorridors": [
+        "Nhầm cổ xương sườn tròn với đỉnh mỏm ngang vuông phẳng: Luôn quét từ ngoài (thấy sườn tròn + màng phổi) dịch dần vào trong cho tới khi bóng xương biến thành đầu vuông phẳng (mỏm ngang) và mất hẳn hình ảnh màng phổi mới được đâm kim!",
+        "Khi bơm dịch (Lớp 4), phải thấy cơ dựng gai được bóc tách nhấc bổng lên khỏi mặt xương mỏm ngang theo đường thẳng (Linear hydrodissection), không phải phồng tròn trong lòng cơ."
       ],
-      "probePlacement": "Kỹ thuật quét 'từ ngoài vào trong' hoặc 'từ trong ra ngoài' chuẩn Vicente Roques & Philip Peng: Đặt đầu dò Linear (ngực) hoặc Curvilinear (thắt lưng) dọc cạnh sống (Parasagittal orientation): nếu đặt ngoài thấy xương sườn tròn + màng phổi trắng sáng ở kẽ sâu -> dịch dần đầu dò VÀO TRONG cho tới khi bóng xương chuyển từ tròn thành PHẲNG ĐẦU VUÔNG ('Squared-off acoustic shadow' – chính là đỉnh mỏm ngang!) và biến mất đường màng phổi (nếu vào trong quá nữa sẽ thành vệt xương phẳng liên tục của bản sống Lamina).",
       "figures": [
         {
-          "path": "assets/images/anatomy/fig_11_07_esp_patient_positions.jpg",
-          "figNumber": "11.7",
-          "title": "Ba tư thế bệnh nhân linh hoạt (Ngồi, Nằm nghiêng, Nằm sấp) khi thực hiện ESP Block (Fig. 11.7)",
-          "desc": "Bộc lộ toàn bộ dải mỏm gai và vùng cạnh sống lưng ở tư thế ngồi, nằm nghiêng hoặc nằm sấp tùy khả năng chịu đau của người bệnh.",
-          "springerCaption": "Fig. 11.7 Patient positioning options (sitting, lateral decubitus, prone) for ESP block."
+          "path": "assets/images/external_anatomy/ext_sec_thoracolumbar_fascia_gray388.png",
+          "figNumber": "Gray 388",
+          "title": "Thiết đồ cắt ngang kinh điển khối cơ dựng gai (Sacrospinalis), mỏm ngang và ba lá cân ngực - thắt lưng (Gray's Plate 388)",
+          "desc": "Thiết đồ ngang hiển thị rõ khối cơ dựng gai nằm trong buồng cân giữa lá sau và lá giữa cân ngực - thắt lưng bám thẳng vào đỉnh mỏm ngang đốt sống.",
+          "atlasSource": "Gray's Anatomy (20th Ed., Plate 388) – Transverse section showing disposition of lumbodorsal fascia, sacrospinalis, and transverse process."
         },
         {
-          "path": "assets/images/anatomy/fig_11_08_esp_initial_scan.jpg",
-          "figNumber": "11.8",
-          "title": "Giải phẫu bề mặt đặt đầu dò cạnh sống và nhận diện mốc khớp sườn - ngang tới mỏm ngang (Fig. 11.8)",
-          "desc": "Đối chiếu vị trí đầu dò trên khung xương lưng với hình ảnh siêu âm 3 lớp cơ phủ trên khớp sườn - ngang và đỉnh mỏm ngang.",
-          "springerCaption": "Fig. 11.8 Surface transducer placement and corresponding anatomy over the costotransverse junction and transverse process."
+          "path": "assets/images/external_anatomy/ext_sec_costotransverse_thoracic_gray314.png",
+          "figNumber": "Gray 314",
+          "title": "Thiết đồ cắt qua khớp sườn - ngang ngực (T3–T9) minh họa ranh giới giữa đỉnh mỏm ngang và xương sườn (Gray's Plate 314)",
+          "desc": "Tương quan thiết đồ khớp sườn - ngang và dây chằng sườn - ngang ngay phía ngoài đỉnh mỏm ngang.",
+          "atlasSource": "Gray's Anatomy (20th Ed., Plate 314) – Section through the costotransverse joints."
         }
       ]
     },
@@ -2987,45 +3254,62 @@ var STABLE_PROCEDURES_FALLBACK = [];
         "Dị tật cột sống thắt lưng hoặc trượt đốt sống độ 3-4."
       ]
     },
-    "anatomy": {
-      "overview": "Mỗi khớp liên mấu cột sống thắt lưng (Lumbar Facet / Zygapophyseal Joint, ví dụ khớp L4–L5) nhận chi phối thần kinh cảm giác kép từ nhánh trong ngành sau cùng mức (L3 medial branch đi qua gốc mỏm ngang L4) và nhánh trong mức ngay trên (hoặc rễ sau L5 cho khớp L5–S1). Các nhánh trong thắt lưng L1–L4 đi hằng định qua rãnh xương tạo bởi giao điểm giữa MẶT TRÊN GỐC MỎM NGANG (Root of transverse process) và BỜ NGOÀI MỎM KHỚP TRÊN (Superior Articular Process - SAP), được ghim chặt sát xương dưới dây chằng vú – phụ (Mamillo-accessory ligament). Riêng ở tầng L5, không gọi là nhánh trong mà chính bản thân NGÀNH SAU L5 (L5 Dorsal Ramus) chạy trong rãnh lõm giữa mỏm khớp trên S1 và mặt trên cánh xương cùng (Sacral ala)!",
-      "targetStructure": "Thung lũng giao điểm xương giữa bờ ngoài mỏm khớp trên (SAP) và mặt trên gốc mỏm ngang (cho nhánh trong L1–L4); và rãnh giữa mỏm khớp trên S1 với mặt trên cánh xương cùng (cho ngành sau L5).",
-      "innervation": "Các nhánh trong L1–L4 và ngành sau L5 chi phối cảm giác bao khớp liên mấu thắt lưng L1–S1 và cơ nhiều chân (Multifidus) cùng đoạn.",
-      "vascularAndDangerZones": [
-        "Nhánh động mạch thắt lưng lưng (Lumbar dorsal ramus artery) đi sát rãnh góc SAP – mỏm ngang (bật Color Doppler sâu hoặc hút kiểm tra bắt buộc).",
-        "Rễ thần kinh thắt lưng trong lỗ liên hợp (Intervertebral foramen): Nằm ngay PHÍA TRƯỚC – DƯỚI gốc mỏm ngang! Tuyệt đối KHÔNG ĐƯỢC trượt mũi kim trượt quá bờ trên hoặc bờ trước mỏm ngang ra khoang cơ thắt lưng chậu!",
-        "Khoang ngoài màng cứng / màng cứng qua khe gian mảnh ở phía trong nếu đi kim chệch vào trong mỏm khớp trên."
+    "surfaceAnatomy": {
+      "sourceRef": "Gray's Anatomy (42nd Ed.) – Lumbosacral Surface Landmarks & Tuffier's Intercristal Line",
+      "surfaceLandmarks": [
+        "Điểm cao nhất hai mào chậu (Iliac crests) và Đường liên mào chậu Tuffier (Intercristal line – đi ngang qua mỏm gai L4 hoặc khe gian gai L4–L5).",
+        "Hai gai chậu sau trên (PSIS – dưới lúm đồng tiền Venus, ngang mức đốt cùng S2).",
+        "Rãnh giữa lưng chứa hàng mỏm gai thắt lưng L1–L5 và Mặt lưng phẳng của xương cùng ở dưới."
+      ],
+      "surfaceProjections": "Khớp liên mấu thắt lưng nằm cách đường giữa mỏm gai ~2.0 – 2.5 cm, còn góc giao giữa mỏm khớp trên (SAP) và gốc mỏm ngang (đích nhánh trong L1–L4) nằm cách đường giữa ~3.0 – 3.5 cm ngang mức bờ trên mỏm gai cùng tên. Riêng rãnh cánh xương cùng (đích ngành sau L5) nằm cách đường giữa ~2.5 – 3.0 cm ngay phía trên trong gai chậu sau trên (PSIS).",
+      "palpationSteps": [
+        "1. Đặt bệnh nhân nằm sấp có kê gối dày dưới bụng dưới để mở phẳng độ ưỡn cột sống thắt lưng.",
+        "2. Sờ hai mào chậu xác định sơ bộ mức L4 và sờ hai PSIS xác định mức xương cùng S2.",
+        "3. Luôn dùng đầu dò siêu âm quét dọc từ bản xương cùng đếm ngược lên L5 -> L4 -> L3 -> L2 để xác nhận chính xác 100% tầng đốt sống (vì sờ tay đường Tuffier trên người béo sai số 1 tầng tới 30 – 40%)."
       ],
       "figures": [
         {
-          "path": "assets/images/anatomy/fig_14_01_lumbar_facet_dual_supply.jpg",
-          "figNumber": "14.1",
-          "title": "Quy luật chi phối thần kinh kép của khớp liên mấu thắt lưng và ngành sau L5 (Fig. 14.1)",
-          "desc": "Mỗi khớp liên mấu thắt lưng được chi phối bởi hai nhánh thần kinh đi qua góc giữa mỏm khớp trên (SAP) và gốc mỏm ngang của hai đốt kế tiếp.",
-          "springerCaption": "Fig. 14.1 Dual neural supply of the lumbar facet joints from adjacent medial branches and the L5 dorsal ramus."
+          "path": "assets/images/external_anatomy/ext_surf_back_spine_scapula_gray1211.png",
+          "figNumber": "Gray 1211",
+          "title": "Giải phẫu bề mặt vùng thắt lưng - cùng: Mào chậu, rãnh mỏm gai giữa, khối cơ dựng gai và lúm PSIS (Gray's Plate 1211)",
+          "desc": "Các mốc bề mặt chuẩn của vùng thắt lưng - cùng gồm mào chậu (Iliac crest), khối cơ cạnh sống và vùng chuyển tiếp thắt lưng - cùng.",
+          "atlasSource": "Gray's Anatomy (20th Ed., Plate 1211) – Surface landmarks of lumbar spine, iliac crest, and sacroiliac region."
         }
       ]
     },
-    "surfaceAnatomy": {
-      "bonyLandmarks": [
-        "Mào chậu hai bên (Iliac crests) và đường liên mào chậu Tuffier (Intercristal line – thường đi qua mỏm gai L4 hoặc khe L4–L5, nhưng trên lâm sàng sai lệch tới 30–40% nên bắt buộc đếm từ xương cùng bằng siêu âm!).",
-        "Gai chậu sau trên (PSIS - ngang mức S2) và mặt lưng xương cùng (Sacrum).",
-        "Hàng mỏm gai thắt lưng L1–L5 ở đường giữa."
+    "crossSectionalAnatomy": {
+      "sourceRef": "Gray's Anatomy (Plates 301, 388, 799) – Transverse Lumbar Vertebral & Paraspinal Sectional Anatomy",
+      "sectionPlane": "Thiết đồ cắt ngang qua đốt sống thắt lưng ngang mức gốc mỏm ngang – mỏm khớp trên (Axial Lumbar Section) và qua khớp thắt lưng – cùng (cho L5 dorsal ramus).",
+      "layeredStructure": [
+        "Lớp 1 – Da dày vùng thắt lưng và mô mỡ dưới da (dày từ 1.5 cm đến > 6 cm tùy BMI).",
+        "Lớp 2 – Lá sau cân ngực – thắt lưng (Posterior layer of thoracolumbar fascia) rất dày chắc.",
+        "Lớp 3 – Khối cơ cạnh sống thắt lưng xếp từ trong ra ngoài trên thiết đồ ngang: Cơ nhiều chân (Multifidus – nằm trong ô giữa mỏm gai và mỏm khớp trên SAP!) và Cơ dài / Cơ chậu sườn (Longissimus & Iliocostalis – nằm phía ngoài mỏm khớp trên, phủ lên mặt sau mỏm ngang!).",
+        "Lớp 4 – Dây chằng vú – phụ (Mamillo-accessory ligament – căng từ núm vú mỏm khớp trên tới củ phụ gốc mỏm ngang, đôi khi cốt hóa thành cầu xương đậy lên thần kinh!).",
+        "Lớp 5 – KHOANG ĐÍCH: Rãnh góc chữ L tạo bởi mặt ngoài MỎM KHỚP TRÊN (SAP) và bờ trên GỐC MỎM NGANG (nơi nhánh trong L1–L4 bị ghim sát màng xương); ở mức dưới cùng là rãnh giữa mặt ngoài SAP của S1 và mặt trên CÁNH XƯƠNG CÙNG (nơi ngành sau L5 đi qua).",
+        "Lớp 6 (Đáy thiết đồ & Phía trước mỏm ngang) – Lá giữa cân ngực – thắt lưng, cơ vuông thắt lưng (ở ngoài) và CƠ THẮT LƯNG LỚN (Psoas major – ở trước mỏm ngang chứa ĐÁM RỐI THẮT LƯNG và các rễ thần kinh thắt lưng thoát khỏi lỗ liên hợp!)."
       ],
-      "referenceLines": "Đường dọc giữa qua các mỏm gai và đường cạnh dọc giữa cách đường giữa 2 - 4 cm (qua dãy mỏm khớp và gốc mỏm ngang); luôn đếm đốt sống từ dưới lên bắt đầu từ vệt xương phẳng liên tục của XƯƠNG CÙNG (Sacrum -> L5 -> L4 -> L3) để tránh nhầm lẫn cùng hóa L5 / thắt lưng hóa S1.",
-      "palpationSteps": [
-        "1. Đặt bệnh nhân nằm sấp trên giường phẳng, kê một gối dày dưới bụng dưới để làm phẳng độ ưỡn cột sống thắt lưng (giảm lumbar lordosis giúp mở rộng khoảng cách giữa các mỏm ngang).",
-        "2. Sờ hai mào chậu, hai gai chậu sau trên (PSIS) và rãnh mỏm gai đường giữa.",
-        "3. Khám ấn đau cạnh sống (Paraspinal facet tenderness) cách đường giữa 2 - 3 cm để đối chiếu với tầng khớp liên mấu dự kiến phong bế."
+      "topographicRelations": {
+        "superficialAndDeep": "Đích thần kinh nằm sâu ~4 – 8 cm dưới da ngay trong góc lõm xương SAP – mỏm ngang (hoặc SAP S1 – cánh cùng).",
+        "medialAndLateral": "Phía TRONG đỉnh mỏm khớp trên là bao khớp liên mấu, bản sống, dây chằng vàng và ống sống ngoài màng cứng; ngay PHÍA TRƯỚC – TRÊN bờ trên gốc mỏm ngang (nếu trượt kim hụt qua trên mỏm ngang!) là lỗ liên hợp chứa RỄ THẦN KINH THẮT LƯNG và nhánh động mạch thắt lưng!"
+      },
+      "dangerCorridors": [
+        "Trượt kim vượt qua bờ trên gốc mỏm ngang vào lỗ liên hợp / cơ thắt lưng lớn (Lớp 6): Sau khi chọc kim trên mặt cắt ngang chạm góc xương SAP – TP, BẮT BUỘC xoay đầu dò 90° sang mặt cắt đứng dọc qua hàng mỏm ngang để xác nhận đầu kim nằm đúng bờ trên mỏm ngang chứ không lọt vào kẽ giữa hai mỏm ngang!",
+        "Chỉ dùng thể tích thuốc tê chẩn đoán rất nhỏ (0.3 – 0.5 ml) để thuốc không tràn vào lỗ liên hợp hay khoang ngoài màng cứng làm dương tính giả."
       ],
-      "probePlacement": "Quy trình 'Đếm dọc – Chọc ngang' 2 mặt phẳng chuẩn Philip Peng: Bước 1 – Đặt đầu dò Curvilinear 2-5 MHz dọc cạnh sống cách đường giữa 3 cm từ xương cùng (dải sáng liên tục) trượt ngược lên đếm rõ từng mỏm ngang L5, L4, L3 ('dấu hiệu đinh ba / ngón tay'). Bước 2 – Xoay đầu dò 90 độ sang mặt cắt ngang tại đúng tầng đích để thấy hình bậc thang kinh điển: Mỏm gai -> Bản sống -> Đỉnh mỏm khớp trên (SAP) -> Bậc ngang gốc mỏm ngang (TP); đi kim In-plane từ ngoài vào trong chạm đúng góc chữ L giữa SAP và TP, rồi xoay dọc lại kiểm chứng mũi kim nằm sát bờ trên gốc mỏm ngang!",
       "figures": [
         {
-          "path": "assets/images/anatomy/fig_14_07_lumbar_counting_sagittal.jpg",
-          "figNumber": "14.7",
-          "title": "Đặt đầu dò mặt phẳng dọc cạnh sống đếm chính xác tầng đốt sống từ xương cùng lên L5–L1 (Fig. 14.7)",
-          "desc": "Quét dọc cạnh sống bắt đầu từ dốc xương cùng liên tục đếm ngược lên L5, L4, L3 giúp định vị tầng thắt lưng chính xác tuyệt đối.",
-          "springerCaption": "Fig. 14.7 Paramedian sagittal lumbar spine level counting starting from the sacrum."
+          "path": "assets/images/external_anatomy/ext_sec_thoracolumbar_fascia_gray388.png",
+          "figNumber": "Gray 388",
+          "title": "Thiết đồ cắt ngang cột sống thắt lưng: Thân đốt, mỏm khớp - mỏm ngang, cơ dựng gai phía sau và cơ thắt lưng lớn (Psoas) phía trước (Gray's Plate 388)",
+          "desc": "Thiết đồ ngang chuẩn mực chỉ rõ góc xương giữa mỏm khớp và gốc mỏm ngang ở mặt sau đốt sống, ngăn cách hoàn toàn với cơ Psoas major chứa đám rối thắt lưng ở phía trước mỏm ngang.",
+          "atlasSource": "Gray's Anatomy (20th Ed., Plate 388) – Transverse section of lumbar spine, sacrospinalis, quadratus lumborum, and psoas major."
+        },
+        {
+          "path": "assets/images/external_anatomy/ext_sec_lumbar_sagittal_ligaments_gray301.png",
+          "figNumber": "Gray 301",
+          "title": "Thiết đồ đứng dọc cột sống thắt lưng minh họa vị trí lỗ liên hợp ngay dưới cuống cung - trước gốc mỏm ngang (Gray's Plate 301)",
+          "desc": "Vị trí lỗ liên hợp nơi rễ thần kinh thắt lưng thoát ra nằm ngay phía trước kẽ giữa hai mỏm ngang.",
+          "atlasSource": "Gray's Anatomy (20th Ed., Plate 301) – Sagittal section of lumbar vertebrae, intervertebral foramen, and ligaments."
         }
       ]
     },
@@ -3111,52 +3395,55 @@ var STABLE_PROCEDURES_FALLBACK = [];
         "Rối loạn đông máu nặng."
       ]
     },
-    "anatomy": {
-      "overview": "Các dây thần kinh gian sườn (Intercostal Nerves T1–T11 – chính là nhánh trước của thần kinh gai sống ngực) chạy vòng theo khoang gian sườn cùng bó mạch gian sườn theo thứ tự kinh điển từ trên xuống dưới 'VAN' (Vein – Tĩnh mạch ở cao nhất, Artery – Động mạch ở giữa, Nerve – Thần kinh nằm thấp nhất). Tại vùng góc sườn phía sau (Posterior costal angle – cách đường giữa gai sống ~6 - 8 cm), rãnh dưới sườn sâu rõ nhất và cơ gian sườn trong bắt đầu hình thành, kẹp bó mạch thần kinh gian sườn nằm trong mặt phẳng cân giữa cơ gian sườn trong (Internal intercostal muscle - ở nông) và cơ gian sườn trong cùng (Innermost intercostal muscle - ở sâu), ngay phía trên lá thành màng phổi! Lưu ý nhánh bên bì (Lateral cutaneous branch) tách ra quanh đường nách giữa, nên phong bế tại góc sườn sau mới đạt vô cảm trọn vẹn thành ngực trước – bên.",
-      "targetStructure": "Mặt phẳng cân giữa cơ gian sườn trong và cơ gian sườn trong cùng ngay sát bờ dưới của xương sườn mục tiêu tại vị trí góc sườn sau (Subcostal groove at the angle of the rib).",
-      "innervation": "Dây thần kinh gian sườn tương ứng (kèm nhánh phụ bên dưới và giao thoa tầng lân cận – thường cần phong bế thêm 1 tầng trên và 1 tầng dưới nếu đau lan rộng).",
-      "vascularAndDangerZones": [
-        "MÀNG PHỔI VÀ NHU MÔ PHỔI (Pleura & Lung): Nằm ngay mặt sâu của cơ gian sườn trong cùng chỉ cách thần kinh gian sườn 2 - 4 mm! Bắt buộc luôn nhận diện đường màng phổi tăng âm trượt theo nhịp thở (Lung sliding) trên siêu âm và kiểm soát 100% đầu kim không vượt qua bờ dưới xương sườn vào màng phổi (nguy cơ tràn khí màng phổi Pneumothorax)!",
-        "Động mạch và tĩnh mạch gian sườn sau (Posterior intercostal artery & vein): Nằm sát trong rãnh dưới sườn ngay trên thần kinh; tiêm thuốc tê nội mạch tại khoang gian sườn cho nồng độ đỉnh thuốc tê trong máu CAO NHẤT trong mọi phong bế vùng (nguy cơ ngộ độc LAST cao – bắt buộc hút kiểm tra và tính kỹ tổng liều!)."
+    "surfaceAnatomy": {
+      "sourceRef": "Gray's Anatomy (42nd Ed., Plates 1211, 1216, 1217) – Surface Relations of Ribs, Costal Angles & Pleural Reflections",
+      "surfaceLandmarks": [
+        "Góc ức Louis (Sternal angle – ngang sụn sườn 2 phía trước); Gai vai (ngang T3), Góc dưới xương bả vai (ngang xương sườn 7 / khoang gian sườn 7 khi xuôi tay) và Xương sườn 12 ở dưới cùng.",
+        "Đường góc sườn sau (Posterior costal angle line): Dải gờ xương sườn gập góc nằm cách đường giữa mỏm gai ngực khoảng 6.0 – 8.0 cm sang bên.",
+        "Đường phản chiếu đáy màng phổi (Pleural reflection line – quy tắc 8–10–12: màng phổi xuống tới xương sườn 8 ở đường đòn giữa, sườn 10 ở đường nách giữa và sườn 12 ở cạnh cột sống!)."
+      ],
+      "surfaceProjections": "Phong bế gian sườn bắt buộc thực hiện tại ĐƯỜNG GÓC SƯỜN SAU (cách đường giữa lưng 6 – 8 cm) vì 2 lý do giải phẫu bề mặt then chốt: (1) Tại đây xương sườn dày nhất (~8 mm), rãnh dưới sườn sâu nhất trước khi nông dần ở phía trước; và (2) Chặn được dây thần kinh TRƯỚC KHI nó tách nhánh bì bên (Lateral cutaneous branch – tách ra trước đường nách sau để chi phối da thành ngực bên!).",
+      "palpationSteps": [
+        "1. Bệnh nhân nằm sấp (hoặc ngồi ôm gối trước ngực) với hai cánh tay vươn ra trước để hai xương bả vai trượt ra ngoài bộc lộ góc sườn các xương sườn từ 4 đến 10.",
+        "2. Đếm chính xác xương sườn mục tiêu từ xương sườn 12 đi lên (kiểm tra lại bằng siêu âm).",
+        "3. Đánh dấu điểm trên bờ dưới xương sườn mục tiêu cách đường giữa gai sống 6 – 7 cm."
       ],
       "figures": [
         {
-          "path": "assets/images/anatomy/fig_05_01_intercostal_layers.jpg",
-          "figNumber": "5.1",
-          "title": "Giải phẫu 3 lớp cơ gian sườn và vị trí bó mạch thần kinh VAN sát rãnh dưới sườn (Fig. 5.1)",
-          "desc": "Bó mạch thần kinh gian sườn (Tĩnh mạch - Động mạch - Thần kinh từ trên xuống) nằm giữa cơ gian sườn trong và cơ gian sườn trong cùng, sát trên màng phổi.",
-          "springerCaption": "Fig. 5.1 Three layers of intercostal muscles and neurovascular bundle (VAN) in the subcostal groove."
-        },
-        {
-          "path": "assets/images/anatomy/fig_05_03_intercostal_branches.jpg",
-          "figNumber": "5.3",
-          "title": "Đường đi vòng quanh lồng ngực và điểm tách nhánh bì bên của dây thần kinh gian sườn (Fig. 5.3)",
-          "desc": "Phong bế tại vùng góc sườn phía sau giúp chặn thần kinh trước khi tách nhánh bì bên ở đường nách giữa.",
-          "springerCaption": "Fig. 5.3 Anatomical course and cutaneous branches of the intercostal nerve."
+          "path": "assets/images/external_anatomy/ext_surf_thorax_lateral_pleura_gray1217.png",
+          "figNumber": "Gray 1217",
+          "title": "Giải phẫu bề mặt lồng ngực bên: Đối chiếu các xương sườn, khoang gian sườn, phổi (tím) và giới hạn màng phổi (xanh) (Gray's Plate 1217)",
+          "desc": "Hình chiếu bề mặt cho thấy toàn bộ các khoang gian sườn đến tận xương sườn 10–12 đều có lá thành màng phổi (màu xanh) lót ngay mặt trong.",
+          "atlasSource": "Gray's Anatomy (20th Ed., Plate 1217) – Lateral view of thorax showing surface relations of ribs, lungs, and pleura."
         }
       ]
     },
-    "surfaceAnatomy": {
-      "bonyLandmarks": [
-        "Chuỗi mỏm gai đốt sống ngực ở đường giữa lưng.",
-        "Góc dưới xương bả vai (Inferior angle of scapula): Ngang mức khoang gian sườn T7 khi hai tay xuôi (nhưng dịch ra ngoài khi đưa tay ra trước).",
-        "Xương sườn số 12 ở dưới cùng (hoặc bờ trên xương sườn 1 / gai vai ngang T3 ở trên) để đếm chính xác thứ tự xương sườn.",
-        "Góc sườn sau (Angle of the rib): Đường gờ dọc cách đường giữa mỏm gai khoảng 6 - 8 cm (ngay bờ trong xương bả vai khi đưa tay ôm vai trước)."
+    "crossSectionalAnatomy": {
+      "sourceRef": "Gray's Anatomy (Plate 819) – Sagittal Intercostal Space Section & Transverse Thoracic Wall Section",
+      "sectionPlane": "Thiết đồ đứng dọc cắt vuông góc qua hai xương sườn kế tiếp tại góc sườn sau (Sagittal Costal Cross-Section) đối chiếu Thiết đồ ngang lồng ngực.",
+      "layeredStructure": [
+        "Lớp 1 – Da và mô mỡ dưới da vùng lưng ngực.",
+        "Lớp 2 – Cơ thành lưng nông phụ thuộc tầng (Cơ thang / Cơ lưng rộng Latissimus dorsi ở nông; Cơ răng trước / Cơ chậu sườn ngực Iliocostalis thoracis phủ rìa góc sườn).",
+        "Lớp 3 – Cơ gian sườn ngoài (External intercostal muscle – thớ chạy chéo xuống dưới ra trước).",
+        "Lớp 4 – Cơ gian sườn trong (Internal intercostal muscle – thớ chạy vuông góc xuống dưới ra sau).",
+        "Lớp 5 – KHOANG ĐÍCH: Mặt phẳng cân thần kinh – mạch máu tại RÃNH DƯỚI SƯỜN (Subcostal groove ở bờ dưới xương sườn trên), nằm kẹp giữa cơ gian sườn trong (ở nông) và cơ gian sườn trong cùng (ở sâu), xếp dọc từ trên xuống dưới theo thứ tự V – A – N: Tĩnh mạch gian sườn -> Động mạch gian sườn sau -> DÂY THẦN KINH GIAN SƯỜN (thấp nhất, thường nhô nhẹ dưới mép xương sườn!).",
+        "Lớp 6 (Đáy nguy hiểm tuyệt đối – chỉ cách Lớp 5 đúng 2 – 4 mm!) – Cơ gian sườn trong cùng mỏng (Innermost intercostal), Mạc nội ngực (Endothoracic fascia) và LÁ THÀNH MÀNG PHỔI (Parietal pleura) trượt trên nhu mô phổi!"
       ],
-      "referenceLines": "Đường dọc cạnh sống cách đường giữa 6 - 8 cm qua các góc sườn sau (nơi xương sườn phẳng dày dễ nhìn nhất và trước khi tách nhánh bì bên).",
-      "palpationSteps": [
-        "1. Đặt bệnh nhân nằm sấp kê gối dưới bụng – ngực (hoặc ngồi gục người ôm gối phía trước) với hai cánh tay buông thõng ra trước bàn để kéo hai xương bả vai dạt rộng ra ngoài, bộc lộ các góc sườn từ T4–T10.",
-        "2. Đếm chính xác xương sườn mục tiêu bằng tay phối hợp siêu âm (đếm từ xương sườn 12 đi lên hoặc từ xương sườn 1 / T1 đi xuống).",
-        "3. Dùng hai đầu ngón tay sờ xác định bờ trên, mặt lưng và bờ dưới của xương sườn mục tiêu cùng khoang gian sườn ngay dưới nó."
+      "topographicRelations": {
+        "superficialAndDeep": "Khoảng cách từ bờ dưới xương sườn (Lớp 5) tới lá thành màng phổi (Lớp 6) cực kỳ mỏng (chỉ 2 – 4 mm!) – khi bơm đúng lớp cân Lớp 5 sẽ thấy dung dịch thuốc tê ấn lõm nhẹ màng phổi xuống sâu ('Pleural displacement sign').",
+        "medialAndLateral": "Ngoài nhánh chính VAN ở bờ dưới sườn trên, tại bờ trên của xương sườn dưới còn có nhánh mạch – thần kinh phụ nhỏ (Collateral branch)."
+      },
+      "dangerCorridors": [
+        "Tràn khí màng phổi (Pneumothorax): Luôn đặt đầu dò cắt ngang 2 xương sườn thấy rõ vạch trắng màng phổi trượt ở đáy, đi kim In-plane từ bờ trên sườn dưới chếch nông lên chạm sát mép xương bờ dưới sườn trên, tuyệt đối không mất dấu đầu kim một giây nào!",
+        "Mạng mao mạch và tĩnh mạch gian sườn hấp thu thuốc tê vào máu nhanh bậc nhất cơ thể: Luôn hút thử kỹ và khống chế tổng liều thuốc tê khi phong bế đa tầng."
       ],
-      "probePlacement": "Đặt đầu dò Linear tần số cao theo mặt phẳng đứng dọc cạnh sống (Sagittal / Short-axis to ribs) cách đường giữa 6 - 8 cm (ngay phía trong bờ trong xương bả vai) để cắt ngang hai xương sườn kế tiếp nhau ('dấu hiệu cánh dơi') và đường màng phổi trắng sáng trượt nhịp nhàng ở đáy giữa hai bóng cản sườn; đi kim In-plane từ dưới lên trên hướng thẳng vào bờ dưới xương sườn trên.",
       "figures": [
         {
-          "path": "assets/images/ch5_intercostal/p76_img1.jpeg",
-          "figNumber": "5.4",
-          "title": "Đặt đầu dò cắt ngang qua hai xương sườn tại góc sườn sau và nhận diện màng phổi (Fig. 5.4)",
-          "desc": "Mặt cắt dọc lồng ngực (cắt ngang xương sườn) hiển thị rõ hai bóng xương sườn, các lớp cơ gian sườn (EI, II) và đường tăng âm màng phổi phía sâu.",
-          "springerCaption": "Fig. 5.4 Sagittal scan across adjacent ribs showing external/internal intercostal muscles and the hyperechoic pleural line."
+          "path": "assets/images/external_anatomy/ext_sec_intercostal_nerve_wall_gray819.png",
+          "figNumber": "Gray 819",
+          "title": "Thiết đồ cắt ngang toàn cảnh thành ngực: Ngành sau, hạch giao cảm, thần kinh gian sườn giữa các lớp cơ và màng phổi (Gray's Plate 819)",
+          "desc": "Thiết đồ ngang kinh điển chỉ rõ đường đi thần kinh gian sườn sát mặt ngoài màng phổi (Pleura), nằm giữa cơ gian sườn ngoài - trong và vị trí tách nhánh bì bên (Lateral cutaneous).",
+          "atlasSource": "Gray's Anatomy (20th Ed., Plate 819) – Transverse diagram of the course and branches of a typical intercostal nerve."
         }
       ]
     },
@@ -3238,45 +3525,63 @@ var STABLE_PROCEDURES_FALLBACK = [];
         "Rối loạn đông máu."
       ]
     },
-    "anatomy": {
-      "overview": "Thần kinh chẩm lớn (Greater Occipital Nerve - GON) là nhánh trong của ngành sau thần kinh gai sống cổ C2 (lớn nhất trong các ngành sau cổ). Sau khi thoát ra giữa cung sau đốt đội (C1) và mảnh cung đốt trục (C2), GON vòng quanh bờ dưới cơ chéo đầu dưới (Obliquus Capitis Inferior - OCI), rồi chạy ngược lên trên và vào trong nằm trọn trong 'mặt phẳng cân cơ vàng' kẹp giữa mặt nông cơ chéo đầu dưới (OCI - ở sâu) và mặt sâu cơ bán gai đầu (Semispinalis capitis - SSC - ở nông), trước khi đâm xuyên qua cơ bán gai đầu và cân cơ thang để lên da đầu vùng đỉnh chẩm. Cách tiếp cận gần tại mức C2 (Proximal C2 approach của Greher & Peng) bắt giữ thân chính GON trước khi chia nhánh với tỷ lệ thành công gần như tuyệt đối.",
-      "targetStructure": "Mặt phẳng cân cơ (Interfascial plane) nằm ngay giữa mặt nông cơ chéo đầu dưới (OCI) và mặt sâu cơ bán gai đầu (Semispinalis capitis) tại mức đốt sống C2.",
-      "innervation": "GON (ngành sau C2) chi phối cảm giác vùng da đầu từ đường gáy trên vòm lên tận đỉnh sọ (Vertex); thần kinh chẩm bé (LON - nhánh trước C2, C3) chi phối vùng da sau tai và chẩm bên.",
-      "vascularAndDangerZones": [
-        "Động mạch đốt sống (Vertebral artery): Nằm ngay phía NGOÀI (lateral) sát đầu ngoài cơ chéo đầu dưới tại tam giác dưới chẩm và cung C1 – BẮT BUỘC đi kim từ TRONG RA NGOÀI hoặc kiểm soát đầu kim nằm trên bụng giữa cơ OCI, không trượt quá xa ra phía mỏm ngang C1!",
-        "Tủy cổ cao / Khoang dưới nhện qua khoảng gian cung C1–C2 ở đường giữa: Luôn đảm bảo nhìn thấy bản xương mảnh cung C2 (C2 lamina) hoặc bụng cơ OCI nằm chắn phía sâu trước khi tiến kim!",
-        "Động mạch cổ sâu và đám rối tĩnh mạch dưới chẩm đi trong lớp cơ gáy sâu (kiểm tra bằng Color Doppler)."
+    "surfaceAnatomy": {
+      "sourceRef": "Gray's Anatomy (42nd Ed.) – Suboccipital Triangle of Tillaux & Posterior Neck Surface Landmarks",
+      "surfaceLandmarks": [
+        "Ụ chẩm ngoài (External occipital protuberance - Inion): Đỉnh gồ xương chính giữa vùng chẩm.",
+        "Mỏm gai đốt trục C2 (Bifid spinous process of Axis C2): Mấu xương cứng đầu tiên sờ thấy trong hõm gáy thấp hơn Inion ~3.5 – 4.5 cm (đốt C1 hoàn toàn không có mỏm gai!).",
+        "Đỉnh mỏm chũm xương thái dương (Tip of mastoid process) ngay phía sau dái tai.",
+        "Mỏm ngang đốt đội C1 (Transverse process of Atlas): Sờ sâu ở điểm giữa nối đỉnh mỏm chũm và góc xương hàm dưới."
+      ],
+      "surfaceProjections": "Tam giác dưới chẩm kinh điển của Tillaux (Suboccipital triangle): Cạnh dưới – ngoài của tam giác này được tạo bởi CƠ CHÉO ĐẦU DƯỚI (Obliquus capitis inferior - OCI) chạy chếch từ đỉnh mỏm gai C2 lên trên – ra ngoài tới mỏm ngang C1. Thần kinh chẩm lớn (GON, ngành sau C2) vòng bờ dưới cơ OCI ở điểm cách đường giữa ~2.0 – 2.5 cm rồi chạy ngược lên trong mặt phẳng cân giữa cơ OCI và cơ bán gai đầu.",
+      "palpationSteps": [
+        "1. Đặt bệnh nhân nằm sấp cúi gập cổ nhẹ (kê gối dưới ngực) để mở rộng hõm gáy trên.",
+        "2. Dùng ngón cái sờ ụ chẩm ngoài ở đường giữa rồi trượt xuống rãnh gáy ~4 cm chạm mấu xương cứng đầu tiên là mỏm gai C2.",
+        "3. Vạch đường tưởng tượng chếch ~30° từ mỏm gai C2 hướng lên mỏm ngang C1 / mỏm chũm để đặt dọc đầu dò đúng theo thớ cơ OCI."
       ],
       "figures": [
         {
-          "path": "assets/images/anatomy/fig_02_01_occipital_layers.jpg",
-          "figNumber": "2.1",
-          "title": "Giải phẫu 4 lớp cơ vùng gáy trên và đường đi thần kinh chẩm lớn trên cơ chéo đầu dưới (Fig. 2.1)",
-          "desc": "Thần kinh chẩm lớn (GON) vòng bờ dưới cơ chéo đầu dưới (OCI) rồi đi lên trong khoang cân dưới cơ bán gai đầu (Semispinalis capitis).",
-          "springerCaption": "Fig. 2.1 Four layers of suboccipital muscles relevant to the greater occipital nerve course over obliquus capitis inferior."
+          "path": "assets/images/external_anatomy/ext_surf_head_occipital_gray1193.png",
+          "figNumber": "Gray 1193",
+          "title": "Giải phẫu bề mặt sọ - chẩm - cổ trên: Đối chiếu ụ chẩm ngoài (Inion), đường gáy trên và mỏm chũm (Gray's Plate 1193)",
+          "desc": "Tương quan bề mặt của xương chẩm, ụ chẩm ngoài, mỏm chũm và nền cổ trên nơi khu trú tam giác dưới chẩm.",
+          "atlasSource": "Gray's Anatomy (20th Ed., Plate 1193) – Side view of head showing surface relations of skull and upper cervical bones."
         }
       ]
     },
-    "surfaceAnatomy": {
-      "bonyLandmarks": [
-        "Ụ chẩm ngoài (External occipital protuberance - Inion): Gồ xương nhô rõ ở chính giữa sọ chẩm phía sau.",
-        "Mỏm gai đốt sống trục C2 (Spinous process of C2): Mỏm gai chẻ đôi to đầu tiên sờ thấy ngay khi trượt tay từ ụ chẩm ngoài xuống hõm gáy (~3 - 4 cm dưới ụ chẩm ngoài; lưu ý đốt C1 không có mỏm gai!).",
-        "Mỏm chũm xương thái dương (Mastoid process) ngay phía sau dái tai."
+    "crossSectionalAnatomy": {
+      "sourceRef": "Gray's Anatomy (Plates 308, 800) – Suboccipital Layered & Sagittal Craniocervical Sectional Anatomy",
+      "sectionPlane": "Thiết đồ cắt ngang chếch mức C2 – C1 dọc theo bụng cơ chéo đầu dưới (Oblique Suboccipital Section) đối chiếu Thiết đồ đứng dọc giữa sọ – cổ.",
+      "layeredStructure": [
+        "Lớp 1 – Da vùng gáy dày chắc và lớp mô mỡ dưới da có nhiều vách xơ đặc.",
+        "Lớp 2 – Dây chằng gáy ở đường giữa và lớp cơ nông nhất: Cơ thang (Trapezius – lá mỏng ở phía trong trên) cùng Cơ ức đòn chũm / Cơ gối đầu (Splenius capitis – ở phía ngoài).",
+        "Lớp 3 – Cơ bán gai đầu (Semispinalis capitis – cơ dọc dày khỏe nhất vùng gáy trên, dày ~8 – 14 mm).",
+        "Lớp 4 – KHOANG ĐÍCH: Mặt phẳng cân thần kinh – mạch máu dưới cơ bán gai đầu (Sub-semispinalis interfascial plane) chứa THẦN KINH CHẨM LỚN (GON – rộng 2 – 4 mm), thần kinh chẩm thứ 3 (TON ở phía trong hơn) và đám rối tĩnh mạch dưới chẩm / nhánh động mạch cổ sâu.",
+        "Lớp 5 – Tầng cơ tam giác dưới chẩm: Bụng cơ chéo đầu dưới (Obliquus capitis inferior - OCI) căng từ mỏm gai C2 lên mỏm ngang C1.",
+        "Lớp 6 (Đáy thiết đồ) – Mảnh cung đốt sống C2 (C2 lamina – tấm xương hình thuyền chắn an toàn phía sâu!); trong khi ở PHÍA TRÊN cơ OCI (khe C1–C2) là màng đội – trục sau che trực tiếp khoang ngoài màng cứng và tủy cổ cao, còn ở PHÍA NGOÀI tam giác là ĐỘNG MẠCH ĐỐT SỐNG (đoạn V3 uốn trên rãnh cung sau C1)!"
       ],
-      "referenceLines": "Đường chếch C2 – C1 (Oblique suboccipital axis): Đường nối từ mỏm gai C2 (ở dưới – trong) chếch lên trên – ra ngoài hướng về phía mỏm ngang C1 / mỏm chũm chính là trục dọc thực sự của bụng cơ chéo đầu dưới (OCI).",
-      "palpationSteps": [
-        "1. Đặt bệnh nhân nằm sấp kê gối dưới ngực – trán để gập nhẹ cổ tối đa (tư thế 'cúi cằm mở rộng hõm gáy'), hoặc ngồi gục trán lên gối trên mặt bàn.",
-        "2. Dùng ngón cái sờ ụ chẩm ngoài ở đường giữa, miết thẳng xuống hõm dưới chẩm cho tới khi chạm mấu xương cứng nổi rõ đầu tiên – đó chính là mỏm gai chẻ đôi của đốt C2.",
-        "3. Dùng tay kia xác định đỉnh mỏm chũm sau tai để định hướng góc xoay chếch lên trên của đầu ngoài đầu dò."
+      "topographicRelations": {
+        "superficialAndDeep": "GON nằm kẹp ngay giữa mặt sâu cơ bán gai đầu (Lớp 3) và mặt nông cơ chéo đầu dưới OCI (Lớp 5), có mảnh cung xương C2 nâng đỡ phía sâu.",
+        "medialAndLateral": "Phía TRONG là mỏm gai chẻ đôi C2; cách tâm bụng cơ OCI ~1.5 – 2.0 cm về PHÍA NGOÀI – TRÊN (trong lòng tam giác dưới chẩm) là đoạn V3 ĐỘNG MẠCH ĐỐT SỐNG và thần kinh dưới chẩm C1!"
+      },
+      "dangerCorridors": [
+        "Động mạch đốt sống đoạn V3 ở đầu ngoài cơ OCI và Khoang dưới nhện tủy cổ ở khe gian cung C1–C2: Bắt buộc luôn nhìn rõ bóng mảnh cung C2 (Lớp 6) đỡ dưới cơ OCI và giữ đầu kim ở 1/2 trong – giữa bụng cơ OCI!",
+        "Hút kiểm tra âm tính và bật Doppler màu tránh đám rối tĩnh mạch dưới chẩm dày đặc quanh GON."
       ],
-      "probePlacement": "Phương pháp quét chuẩn Philip Peng: Đặt đầu dò Linear nằm ngang ở đường giữa trên ụ chẩm ngoài -> trượt thẳng xuống dưới qua khoảng tối C1 tới khi thấy mỏm gai C2 chẻ đôi ('dấu hiệu hai sừng' - Bifid spinous process) -> dịch nhẹ đầu dò sang bên đau và XOAY đầu ngoài của đầu dò chếch lên trên ~30 độ hướng về mỏm ngang C1 để cắt dọc trọn vẹn cơ chéo đầu dưới (OCI) nằm tựa trên mảnh cung C2 hình con thuyền.",
       "figures": [
         {
-          "path": "assets/images/anatomy/fig_02_04_c2_level_scan.jpg",
-          "figNumber": "2.4",
-          "title": "Vị trí đặt đầu dò trên mốc mỏm gai chẻ đôi C2 vùng gáy cao (Fig. 2.4)",
-          "desc": "Đặt đầu dò ngang mức mỏm gai C2 nhận diện dấu hiệu mỏm gai chẻ đôi đặc trưng trước khi xoay đầu ngoài lên mỏm ngang C1 tìm cơ OCI.",
-          "springerCaption": "Fig. 2.4 Surface probe placement at the C2 spinous process level."
+          "path": "assets/images/external_anatomy/ext_sec_suboccipital_triangle_gray800.png",
+          "figNumber": "Gray 800",
+          "title": "Giải phẫu phân lớp vùng gáy sâu và Tam giác dưới chẩm: Thần kinh chẩm lớn (C2), cơ OCI và động mạch đốt sống (Gray's Plate 800)",
+          "desc": "Sau khi cắt lật cơ thang và cơ bán gai đầu, lộ rõ thần kinh chẩm lớn vòng dưới cơ chéo đầu dưới (Obliquus inferior) đi lên, thần kinh chẩm bé dọc bờ sau SCM và động mạch đốt sống trong tam giác dưới chẩm.",
+          "atlasSource": "Gray's Anatomy (20th Ed., Plate 800) – Posterior primary divisions of the upper three cervical nerves and suboccipital triangle."
+        },
+        {
+          "path": "assets/images/external_anatomy/ext_sec_craniocervical_sagittal_gray308.png",
+          "figNumber": "Gray 308",
+          "title": "Thiết đồ đứng dọc giữa (Mid-sagittal Section) qua xương chẩm, C1, C2 và màng tủy cổ cao (Gray's Plate 308)",
+          "desc": "Thiết đồ dọc minh họa rõ khoảng hở màng đội - trục sau giữa C1–C2 và độ dày bản xương mỏm gai - mảnh cung C2 làm mốc chắn an toàn.",
+          "atlasSource": "Gray's Anatomy (20th Ed., Plate 308) – Median sagittal section through occipital bone and first three cervical vertebrae."
         }
       ]
     },
@@ -3357,52 +3662,55 @@ var STABLE_PROCEDURES_FALLBACK = [];
         "Liệt dây thanh âm bên đối diện (nguy cơ khàn tiếng hoặc khó thở nếu phong bế 2 bên)."
       ]
     },
-    "anatomy": {
-      "overview": "Hạch sao / Hạch giao cảm cổ – ngực (Stellate / Cervicothoracic Ganglion) hình thành do sự hợp nhất của hạch giao cảm cổ dưới và hạch ngực T1 (có ở 80% dân số), nằm ngay phía trước cổ xương sườn 1 và mỏm ngang C7 – vùng cực kỳ nguy hiểm do sát đỉnh màng phổi và động mạch đốt sống trần. Tuy nhiên, chuỗi giao cảm cổ chạy dọc liên tục trong khoang cân dưới lá mạc trước sống (Subfascial prevertebral plane) nằm trên mặt nông của cơ dài cổ (Longus colli muscle). Do đó, thực hiện phong bế ở mức ĐỐT SỐNG C6 (ngang củ cảnh Chassaignac) cho phép thuốc tê lan dọc mặt phẳng dưới mạc trước sống xuống hạch sao ở C7–T1 an toàn vượt trội!",
-      "targetStructure": "Mặt phẳng dưới lá mạc trước sống (Prevertebral fascia plane) nằm ngay phía trước bề mặt cơ dài cổ (Longus colli muscle), phía sau bao cảnh và phía trong củ trước mỏm ngang C6.",
-      "innervation": "Chuỗi hạch giao cảm cổ chi phối giao cảm đầu mặt cổ, mắt (dấu hiệu Horner khi phong bế thành công: sụp mi, co đồng tử, sung huyết kết mạc, ấm mặt) và toàn bộ mạch máu chi trên.",
-      "vascularAndDangerZones": [
-        "Động mạch cảnh chung và Tĩnh mạch cảnh trong (Carotid artery & Internal jugular vein trong bao cảnh) nằm ngay phía trước – ngoài cơ dài cổ.",
-        "Động mạch đốt sống (Vertebral artery): Ở 90% người đã chui vào lỗ ngang ở C6, NHƯNG có tới 10% biến thể động mạch đốt sống chưa chui vào lỗ ngang ở C6 mà nằm lộ ngay phía trước củ Chassaignac C6, cùng với động mạch giáp dưới (Inferior thyroid artery) và động mạch cổ lên vắt ngang hành trình kim – BẮT BUỘC bật Color Doppler quét kỹ trước khi chọc!",
-        "Thực quản (Esophagus – đặc biệt lệch sang BÊN TRÁI C6–C7!) và Thần kinh thanh quản quặt ngược (Recurrent laryngeal nerve – nằm ở rãnh khí – thực quản phía trong, gây khàn tiếng nếu tiêm quá vào trong hoặc thể tích lớn)."
+    "surfaceAnatomy": {
+      "sourceRef": "Gray's Anatomy (42nd Ed., Plates 1194, 1195) – Anterior Neck Surface Markings & Chassaignac's Carotid Tubercle",
+      "surfaceLandmarks": [
+        "Bờ dưới Sụn nhẫn (Inferior border of Cricoid cartilage): Mốc vàng giải phẫu bề mặt cổ trước – nằm ngang ĐÚNG MỨC ĐỐT SỐNG CỔ C6 (nơi hầu nối thực quản và thanh quản nối khí quản)!",
+        "Củ cảnh Chassaignac (Anterior tubercle of C6 transverse process): Có thể ấn sờ thấy ở rãnh sâu giữa khí quản và bao cảnh ngang mức sụn nhẫn.",
+        "Bờ trước và bờ sau cơ ức đòn chũm (SCM), cùng hõm ức – đòn ở dưới (tương ứng vùng C7–T1 sát đỉnh màng phổi)."
+      ],
+      "surfaceProjections": "Chuỗi giao cảm cổ chiếu dọc theo đường thẳng đứng nối từ phía sau góc hàm dưới xuống khớp ức – đòn, đi qua phía sau bao cảnh. Hạch cổ giữa nằm ngang mức sụn nhẫn (C6), còn bản thân Hạch sao (hợp nhất hạch cổ dưới + T1) nằm sâu trước cổ xương sườn 1 ngang mức mỏm ngang C7 – T1 (nơi ĐỈNH MÀNG PHỔI nhô cao vượt trên đầu trong xương đòn 2.5 – 3.0 cm!). Vì vậy, điểm đặt đầu dò bề mặt chuẩn luôn đặt cao ở mức SỤN NHẪN (C6).",
+      "palpationSteps": [
+        "1. Bệnh nhân nằm ngửa kê gối mỏng dưới vai, quay nhẹ đầu 15° sang đối bên và hé nhẹ miệng để làm chùng cơ bám da cổ và cơ ức đòn chũm.",
+        "2. Dùng ngón trỏ lần dọc đường giữa cổ từ khuyết sụn giáp xuống qua màng nhẫn – giáp để chạm vòng cung cứng của SỤN NHẪN (tương ứng C6).",
+        "3. Từ sụn nhẫn gióng thẳng ngang ra bờ ngoài cơ ức đòn chũm để đặt đầu dò cắt ngang mà không đè bẹp tĩnh mạch cảnh trong."
       ],
       "figures": [
         {
-          "path": "assets/images/anatomy/fig_03_01_cervical_sympathetic_chain.jpg",
-          "figNumber": "3.1",
-          "title": "Giải phẫu chuỗi hạch giao cảm cổ, cơ dài cổ và các mạch máu lớn vùng cổ trước (Fig. 3.1)",
-          "desc": "Chuỗi giao cảm cổ chạy dọc mặt trước cơ dài cổ (Longus colli) phía sau bao cảnh; lưu ý động mạch đốt sống lộ trần ở mức C7.",
-          "springerCaption": "Fig. 3.1 Anatomy of the cervical sympathetic chain lying over the longus colli muscle."
-        },
-        {
-          "path": "assets/images/ch3_cervical_sympathetic/p58_img1.jpeg",
-          "figNumber": "3.4",
-          "title": "Thiết đồ cắt ngang cổ mức C6 đối chiếu lá mạc trước sống, cơ dài cổ và bao cảnh (Fig. 3.4)",
-          "desc": "Mặt cắt ngang chuẩn mức C6 hiển thị củ trước Chassaignac lồi cao, cơ dài cổ, tuyến giáp, thực quản, khí quản và bao cảnh.",
-          "springerCaption": "Fig. 3.4 Cross-sectional anatomic structures at the C6 Chassaignac's tubercle level."
+          "path": "assets/images/external_anatomy/ext_surf_neck_anterior_gray1195.png",
+          "figNumber": "Gray 1195",
+          "title": "Giải phẫu bề mặt cổ trước: Đối chiếu sụn giáp, sụn nhẫn (mức C6), khí quản, tuyến giáp và bao cảnh (Gray's Plate 1195)",
+          "desc": "Mốc sụn nhẫn ở đường giữa cổ tương ứng chính xác mức đốt sống cổ C6 và eo tuyến giáp ngay bên dưới.",
+          "atlasSource": "Gray's Anatomy (20th Ed., Plate 1195) – Front of neck showing surface relations of larynx, cricoid cartilage, trachea, and thyroid."
         }
       ]
     },
-    "surfaceAnatomy": {
-      "bonyLandmarks": [
-        "Sụn nhẫn (Cricoid cartilage): Mốc sụn vòng tròn cứng nằm ngay dưới màng nhẫn – giáp, ngang đúng mức thân đốt sống C6!",
-        "Củ cảnh Chassaignac (Anterior tubercle of C6 transverse process): Gồ xương sờ thấy sâu trong rãnh giữa khí quản và cơ ức đòn chũm ngang mức sụn nhẫn.",
-        "Bờ trước và bờ sau cơ ức đòn chũm (SCM)."
+    "crossSectionalAnatomy": {
+      "sourceRef": "Gray's Anatomy (Plate 384) – Classical Transverse Cross-Section of the Neck at the C6 Level",
+      "sectionPlane": "Thiết đồ cắt ngang cổ chuẩn qua thân đốt sống cổ thứ 6 (Transverse Cross-Section of Neck at C6 Level – Gray's Plate 384).",
+      "layeredStructure": [
+        "Lớp 1 – Da cổ mỏng, mô dưới da và cơ bám da cổ (Platysma; chứa tĩnh mạch cảnh ngoài ở mặt ngoài SCM).",
+        "Lớp 2 – Lá nông mạc cổ sâu (Investing fascia) bao quanh cơ ức đòn chũm (SCM).",
+        "Lớp 3 – Ở phía trước trong là lá trước khí quản bọc các cơ dưới móng & thùy bên tuyến giáp; ở giữa là BAO CẢNH (Carotid sheath: Động mạch cảnh chung ở trong, Tĩnh mạch cảnh trong ở ngoài, Dây X ở góc sau giữa); ở phía ngoài là cơ bậc thang trước (Scalenus anterior – có thần kinh hoành chạy trên mặt trước!).",
+        "Lớp 4 – LÁ MẠC TRƯỚC SỐNG (Prevertebral fascia – đường viền màu xanh dương đậm phủ trước các cơ trước sống và cơ bậc thang trên thiết đồ Gray 384!).",
+        "Lớp 5 – KHOANG ĐÍCH: Mặt phẳng dưới lá mạc trước sống (Subfascial prevertebral plane) nằm ngay trên mặt nông của CƠ DÀI CỔ (Longus colli muscle – phần cổ chéo bám củ trước C6) – đây là kênh dẫn thẳng dung dịch thuốc tê lan dọc xuống hạch sao mà không tràn vào bao cảnh hay dây thanh quản quặt ngược!",
+        "Lớp 6 (Đáy thiết đồ) – Củ trước Chassaignac mỏm ngang C6, lỗ ngang C6 chứa ĐỘNG MẠCH & TĨNH MẠCH ĐỐT SỐNG, và thân đốt sống C6."
       ],
-      "referenceLines": "Đường ngang qua bờ dưới sụn nhẫn (Cricoid ring level = C6): Cắt qua bờ sau cơ ức đòn chũm chính là vị trí đặt đầu dò tìm củ trước C6.",
-      "palpationSteps": [
-        "1. Đặt bệnh nhân nằm ngửa, kê một cuộn khăn mỏng dưới bả vai để cổ hơi ngửa nhẹ và quay mặt lệch nhẹ ~15 - 20 độ sang bên đối diện (không quay quá căng làm dẹt tĩnh mạch cảnh và căng cơ SCM).",
-        "2. Dùng ngón trỏ sờ lồi thanh quản (sụn giáp) ở đường giữa cổ trước, trượt xuống qua hõm màng nhẫn – giáp sẽ chạm vòng sụn nhẫn cứng tròn – đây là mốc bề mặt tương ứng mức C6.",
-        "3. Yêu cầu bệnh nhân nuốt nước bọt nhẹ trong khi siêu âm (nếu làm bên trái) để nhận diện ngay túi thực quản nhu động cạnh khí quản."
+      "topographicRelations": {
+        "superficialAndDeep": "Chuỗi giao cảm cổ nằm ngay trong/dưới lá mạc trước sống (Lớp 4–5), kẹp giữa thành sau bao cảnh (ở phía trước) và bụng cơ dài cổ (ở phía sau).",
+        "medialAndLateral": "Phía TRONG cơ dài cổ (đặc biệt ở BÊN TRÁI cổ!) là THỰC QUẢN (Esophagus – hơi lệch trái khỏi khí quản!) và rãnh khí – thực quản chứa THẦN KINH THANH QUẢN QUẶT NGƯỢC; phía NGOÀI cơ dài cổ là củ trước C6, rễ thần kinh cổ C6 và cơ bậc thang trước; vắt ngang trước cơ dài cổ có ĐỘNG MẠCH GIÁP DƯỚI (từ thân giáp – cổ)!"
+      },
+      "dangerCorridors": [
+        "Đi kim In-plane từ NGOÀI VÀO TRONG (Lateral-to-medial) xuyên qua bờ trước cơ bậc thang trước sát trên đỉnh củ trước C6 giúp đi hoàn toàn PHÍA SAU bao cảnh và TRÁNH thực quản + thần kinh thanh quản quặt ngược ở phía trong!",
+        "10% người bệnh có động mạch đốt sống chưa chui vào lỗ ngang ở C6 (nằm trần ngay trước củ trước C6!) + động mạch giáp dưới bắt ngang -> BẮT BUỘC quét Color Doppler toàn bộ thiết đồ trước khi đâm kim!"
       ],
-      "probePlacement": "Đặt đầu dò Linear nằm ngang (Short-axis transverse view) ở mặt trước bên cổ ngang mức sụn nhẫn (C6); quét xác nhận củ trước C6 cao nhô rõ (hình yên ngựa 2 củ), kiểm tra đối chiếu bằng cách trượt nhẹ xuống C7 (chỉ có 1 củ sau, mất củ trước và lộ động mạch đốt sống tròn to ở trước) rồi trượt ngược lại lên đúng C6 để đi kim In-plane từ ngoài vào trong xuyên qua cơ bậc thang trước tới mặt phẳng dưới mạc trước sống.",
       "figures": [
         {
-          "path": "assets/images/anatomy/fig_03_08_sgb_approaches.jpg",
-          "figNumber": "3.8",
-          "title": "Hướng đặt đầu dò ngang mức C6 và đường đi kim In-plane từ ngoài vào mặt trước cơ dài cổ (Fig. 3.8)",
-          "desc": "Tiếp cận In-plane từ ngoài vào trong mức C6 giúp thân kim đi an toàn phía sau bao cảnh thẳng tới lá mạc trước sống trên cơ dài cổ.",
-          "springerCaption": "Fig. 3.8 Transverse C6 ultrasound approach targeting the prevertebral fascia superficial to longus colli."
+          "path": "assets/images/external_anatomy/ext_sec_neck_c6_fascia_gray384.png",
+          "figNumber": "Gray 384",
+          "title": "Thiết đồ cắt ngang cổ kinh điển tại mức đốt sống C6 hiển thị đầy đủ các khoang mạc cổ (màu xanh) (Gray's Plate 384)",
+          "desc": "Thiết đồ ngang vô giá của Gray tại đúng mức C6: chỉ rõ lá mạc trước sống bọc mặt trước cơ dài cổ (phía sau bao cảnh, phía ngoài thực quản - khí quản) và động mạch đốt sống trong lỗ ngang C6.",
+          "atlasSource": "Gray's Anatomy (20th Ed., Plate 384) – Cross-section diagram of the human neck at the level of C6 showing fascial compartments."
         }
       ]
     },
@@ -3485,52 +3793,63 @@ var STABLE_PROCEDURES_FALLBACK = [];
         "Rối loạn đông máu nặng."
       ]
     },
-    "anatomy": {
-      "overview": "Thần kinh chậu hạ vị (Iliohypogastric Nerve - IHN, từ T12–L1) và thần kinh chậu bẹn (Ilioinguinal Nerve - IIN, từ L1) xuất phát từ nhánh cao nhất của đám rối thắt lưng, đi chéo qua mặt trước cơ vuông thắt lưng rồi xuyên qua cơ ngang bụng ở gần phía trên mào chậu. Tại vị trí kinh điển ngay phía trong – trên gai chậu trước trên (ASIS), CẢ HAI DÂY THẦN KINH đều chạy song song sát nhau trong cùng một mặt phẳng cân cơ hằng định nằm kẹp giữa CƠ CHÉO BỤNG TRONG (Internal Oblique Muscle - IOM, ở nông) và CƠ NGANG BỤNG (Transversus Abdominis Muscle - TAM, ở sâu), đi kèm nhánh sâu của động mạch mũ chậu sâu! Tiến xuống thấp hơn về phía củ mu, chúng mới xuyên ra nông hơn và chui vào ống bẹn.",
-      "targetStructure": "Mặt phẳng cân thần kinh – mạch máu (TAP-like fascial plane) nằm giữa cơ chéo bụng trong (IOM) và cơ ngang bụng (TAM) cách gai chậu trước trên (ASIS) khoảng 2 cm vào trong và 2 cm lên trên (nơi IIN và IHN nằm chung một lớp cân chưa xuyên nông).",
-      "innervation": "IHN chi phối cảm giác vùng da trên mu (Suprapubic) và mông trước ngoài; IIN đi vào ống bẹn chi phối cảm giác nếp bẹn trong, mặt trên trong đùi và gốc bìu (nam) hoặc môi lớn (nữ).",
-      "vascularAndDangerZones": [
-        "PHÚC MẠC VÀ QUAI RUỘT TRONG Ổ BỤNG (Peritoneum & Bowel): Nằm ngay mặt sâu của cơ ngang bụng (TAM) khá mỏng – nếu dùng kỹ thuật mù dựa cảm giác 'pop' có tới 20–40% mũi kim đi quá sâu xuyên vào cơ ngang bụng hoặc thủng phúc mạc / manh tràng / đại tràng sigma!",
-        "Động mạch mũ chậu sâu (Deep circumflex iliac artery - nhánh lên): Chạy ngay trong cùng mặt phẳng cân IOM – TAM sát cạnh hai dây thần kinh – vừa là mốc Doppler chỉ điểm thần kinh cực tốt vừa phải tránh đâm thủng lòng mạch!",
-        "Thần kinh đùi nằm sâu dưới mạc chậu: Tránh đâm kim quá sâu ở phía dưới dây chằng bẹn gây liệt cơ tứ đầu đùi."
+    "surfaceAnatomy": {
+      "sourceRef": "Gray's Anatomy (42nd Ed., Plates 1219, 1220) – Anterolateral Abdominal Wall & ASIS–Umbilicus Line",
+      "surfaceLandmarks": [
+        "Gai chậu trước trên (Anterior Superior Iliac Spine - ASIS): Đỉnh xương nhô rõ ở hố chậu ngoài.",
+        "Mào chậu trước (Anterior iliac crest) ngay phía sau trên ASIS.",
+        "Rốn (Umbilicus) ở đường giữa và Bờ ngoài cơ thẳng bụng (Linea semilunaris).",
+        "Dây chằng bẹn (nối ASIS tới củ mu)."
+      ],
+      "surfaceProjections": "Trên đường thẳng nối từ đỉnh gai chậu trước trên (ASIS) hướng chéo lên RỐN (ASIS – Umbilicus line): Cả hai dây thần kinh chậu bẹn (IIN, L1) và chậu hạ vị (IHN, T12–L1) đều xuyên từ mặt sau vào khoang giữa cơ chéo trong và cơ ngang bụng ngay phía trên mào chậu, và chạy song song cắt vuông góc qua đường nối ASIS – Rốn tại khoảng CÁCH ĐỈNH ASIS TỪ 1.5 ĐẾN 3.0 CM VỀ PHÍA RỐN (IIN nằm gần ASIS hơn ~1.5 – 2 cm, IHN nằm phía trong hơn ~2.5 – 3.5 cm).",
+      "palpationSteps": [
+        "1. Bệnh nhân nằm ngửa duỗi chân thoải mái để thành bụng mềm.",
+        "2. Dùng ngón cái sờ rõ đỉnh xương của gai chậu trước trên (ASIS) và mép trong mào chậu.",
+        "3. Kẻ đường thẳng nối từ ASIS hướng thẳng tới rốn; vùng đặt đầu dò nằm ngay sát bờ trong ASIS trên đường thẳng này."
       ],
       "figures": [
         {
-          "path": "assets/images/anatomy/fig_06_01_lumbar_plexus.jpg",
-          "figNumber": "6.1",
-          "title": "Nguyên ủy đám rối thắt lưng của thần kinh chậu hạ vị, chậu bẹn, sinh dục đùi và bì đùi ngoài (Fig. 6.1)",
-          "desc": "Thứ tự từ trên xuống dưới của 4 nhánh cảm giác vùng bụng dưới - bẹn đùi xuất phát từ rễ T12–L3.",
-          "springerCaption": "Fig. 6.1 Lumbar plexus origin of iliohypogastric, ilioinguinal, genitofemoral, and lateral femoral cutaneous nerves."
-        },
-        {
-          "path": "assets/images/anatomy/fig_06_02_ii_ih_abdominal_wall.jpg",
-          "figNumber": "6.2",
-          "title": "Tương quan giải phẫu thần kinh chậu bẹn - chậu hạ vị giữa 3 lớp cơ thành bụng ngang mức ASIS (Fig. 6.2)",
-          "desc": "Ngang mức gai chậu trước trên, cả hai dây thần kinh đều nằm trong khoang cân giữa cơ chéo bụng trong và cơ ngang bụng trước khi xuyên nông ở phía xa.",
-          "springerCaption": "Fig. 6.2 Anatomical course of ilioinguinal and iliohypogastric nerves between internal oblique and transversus abdominis muscles."
+          "path": "assets/images/external_anatomy/ext_surf_abdomen_inguinal_gray1219.png",
+          "figNumber": "Gray 1219",
+          "title": "Giải phẫu bề mặt thành bụng trước - vùng hố chậu bẹn: Gai chậu trước trên (ASIS), rốn, đường bán nguyệt và nếp bẹn (Gray's Plate 1219)",
+          "desc": "Các mốc bề mặt kinh điển của thành bụng trước dưới: rốn, bờ ngoài cơ thẳng bụng, gai chậu trước trên (ASIS) và dây chằng bẹn.",
+          "atlasSource": "Gray's Anatomy (20th Ed., Plate 1219) – Surface anatomy of the front of the abdomen and inguinal region."
         }
       ]
     },
-    "surfaceAnatomy": {
-      "bonyLandmarks": [
-        "Gai chậu trước trên (Anterior Superior Iliac Spine - ASIS): Mốc tựa cố định đầu ngoài của đầu dò.",
-        "Mào chậu trước (Anterior iliac crest).",
-        "Rốn (Umbilicus): Đích hướng trục chéo của đầu dò."
+    "crossSectionalAnatomy": {
+      "sourceRef": "Gray's Anatomy (Plates 388, 546) – Oblique Sectional Anatomy of the Three Abdominal Wall Layers Medial to ASIS",
+      "sectionPlane": "Thiết đồ cắt chéo vuông góc thành bụng dọc theo đường nối ASIS – Rốn (Oblique Section along ASIS–Umbilicus Line).",
+      "layeredStructure": [
+        "Lớp 1 – Da bụng dưới và mô mỡ dưới da (gồm lá mỡ nông Camper và lá màng xơ Scarpa ở sâu).",
+        "Lớp 2 – Cơ chéo bụng ngoài (External oblique muscle / aponeurosis – ở mức ngang ASIS có thể đã bắt đầu chuyển thành lá cân mỏng tăng âm).",
+        "Lớp 3 – Cơ chéo bụng trong (Internal oblique muscle - IOM – luôn là LỚP CƠ DÀY VÀ RÕ NHẤT trong 3 cơ thành bụng tại hố chậu!).",
+        "Lớp 4 – KHOANG ĐÍCH: Mặt phẳng cân thần kinh – mạch máu (Neurovascular TAP plane) nằm kẹp giữa mặt sâu cơ chéo bụng trong (Lớp 3) và mặt nông cơ ngang bụng (Lớp 5), chứa THẦN KINH CHẬU BẸN (gần ASIS hơn), THẦN KINH CHẬU HẠ VỊ (phía trong hơn) và NHÁNH LÊN ĐỘNG MẠCH MŨ CHẬU SÂU (Ascending branch of deep circumflex iliac artery)!",
+        "Lớp 5 – Cơ ngang bụng (Transversus abdominis muscle - TAM – lớp cơ mỏng sẫm màu nằm sâu nhất).",
+        "Lớp 6 (Đáy nguy hiểm sát liền!) – Mạc ngang (Transversalis fascia), mỡ tiền phúc mạc và LÁ THÀNH PHÚC MẠC (Parietal peritoneum) bọc sát manh tràng (bên phải) hoặc đại tràng sigma / ruột non (bên trái)!"
       ],
-      "referenceLines": "Đường nối từ gai chậu trước trên (ASIS) hướng thẳng tới Rốn (ASIS–Umbilicus line): Vuông góc hoàn toàn với đường đi giải phẫu của hai dây thần kinh chậu bẹn và chậu hạ vị tại vùng hố chậu!",
-      "palpationSteps": [
-        "1. Đặt bệnh nhân nằm ngửa thẳng trên giường, bộc lộ vùng bụng dưới và mào chậu.",
-        "2. Dùng ngón cái sờ rõ mấu nhọn của gai chậu trước trên (ASIS) và bờ trong mào chậu ngay phía sau trên ASIS.",
-        "3. Kẻ (hoặc hình dung) đường thẳng nối từ đỉnh ASIS hướng chéo lên trên – vào trong tới rốn; vùng quét nằm trong phạm vi 5 cm đầu tiên tính từ ASIS trên đường này."
+      "topographicRelations": {
+        "superficialAndDeep": "Cơ ngang bụng (Lớp 5) ở người gầy hoặc người già chỉ dày 2 – 4 mm ngăn cách khoang đích (Lớp 4) với ổ phúc mạc và ruột (Lớp 6)!",
+        "medialAndLateral": "Đầu NGOÀI của thiết đồ tựa trực tiếp lên bóng xương MÀO CHẬU / ASIS (nơi cả 3 cơ bám vào – mốc neo giải phẫu giúp không bao giờ đếm nhầm lớp mỡ Scarpa thành cơ!); sát cạnh IIN/IHN cách ASIS ~1.5 – 2 cm luôn có nhánh lên động mạch mũ chậu sâu."
+      },
+      "dangerCorridors": [
+        "Thủng phúc mạc và thủng ruột (Bowel perforation): Tuyệt đối tựa một đầu của đầu dò lên xương ASIS để đếm đủ 3 lớp cơ từ bờ xương đi ra và quan sát nhu động ruột trượt dưới phúc mạc trước khi đâm kim!",
+        "Bật Color Doppler tại Lớp 4 để tìm nhánh lên động mạch mũ chậu sâu (vừa giúp xác nhận đúng mặt phẳng chứa thần kinh vừa tránh chọc vào lòng mạch)."
       ],
-      "probePlacement": "Đặt đầu dò Linear tần số cao (10 - 15 MHz) nằm chéo trên đường nối ASIS – Rốn sao cho ĐẦU NGOÀI CỦA ĐẦU DÒ TỰA TRỰC TIẾP LÊN MÀO XƯƠNG GAI CHẬU TRƯỚC TRÊN (ASIS): Mốc bóng cản xương ASIS ở mép ngoài màn hình sẽ giúp định danh ngay lập tức 3 lớp cơ thành bụng (Chéo ngoài -> Chéo trong dày nhất -> Ngang bụng mỏng sâu nhất trên phúc mạc nhu động) và thấy hai cấu trúc hình thoi tách mạc chứa IIN, IHN cùng động mạch mũ chậu sâu cách ASIS 1 - 3 cm.",
       "figures": [
         {
-          "path": "assets/images/anatomy/fig_06_04_ii_ih_probe_position.jpg",
-          "figNumber": "6.4",
-          "title": "Vị trí đặt đầu dò chuẩn tựa đầu ngoài lên ASIS hướng thẳng về phía rốn (Fig. 6.4)",
-          "desc": "Đặt đầu dò chéo nối từ gai chậu trước trên (ASIS) hướng về rốn cắt vuông góc với trục đường đi của thần kinh chậu bẹn và chậu hạ vị.",
-          "springerCaption": "Fig. 6.4 Optimal ultrasound probe position aligned from the ASIS toward the umbilicus."
+          "path": "assets/images/external_anatomy/ext_sec_thoracolumbar_fascia_gray388.png",
+          "figNumber": "Gray 388",
+          "title": "Thiết đồ cắt ngang ba lớp cơ dẹt thành bụng: Chéo ngoài (Obliquus externus) - Chéo trong (Obliquus internus) - Ngang bụng (Transversus) (Gray's Plate 388)",
+          "desc": "Phần bên thiết đồ ngang của Gray hiển thị sắc nét thứ tự 3 lớp cơ thành bụng và khoang cân giữa cơ chéo trong - cơ ngang bụng nơi thần kinh chậu bẹn/chậu hạ vị đi qua.",
+          "atlasSource": "Gray's Anatomy (20th Ed., Plate 388) – Transverse section showing External oblique, Internal oblique, and Transversus abdominis layers."
+        },
+        {
+          "path": "assets/images/external_anatomy/ext_sec_inguinal_canal_layers_gray546.png",
+          "figNumber": "Gray 546",
+          "title": "Giải phẫu mặt sâu thành bụng dưới - vùng bẹn: Động mạch mũ chậu sâu (sát ASIS) và động mạch thượng vị dưới (Gray's Plate 546)",
+          "desc": "Nhìn từ mặt trong thành bụng thấy rõ nhánh động mạch mũ chậu sâu chạy dọc sát ASIS (cùng lớp thần kinh chậu bẹn) và động mạch thượng vị dưới ở bờ trong lỗ bẹn sâu.",
+          "atlasSource": "Gray's Anatomy (20th Ed., Plate 546) – Posterior view of anterior abdominal wall showing deep circumflex iliac and inferior epigastric vessels."
         }
       ]
     },
@@ -3615,51 +3934,53 @@ var STABLE_PROCEDURES_FALLBACK = [];
         "Vừa tiêm corticoid tại chỗ trong vòng 4 - 6 tuần gần đây."
       ]
     },
-    "anatomy": {
-      "overview": "Huyết tương giàu tiểu cầu tự thân (Platelet-Rich Plasma - PRP) không chỉ định cho một vùng giải phẫu cố định mà nhắm trực tiếp vào VI CẤU TRÚC MÔ ĐÍCH ĐANG THOÁI HÓA (Micro-anatomical target niche): (1) Trong bệnh lý điểm bám gân mạn tính (Tendinosis / Enthesopathy như gân trên gai, gân duỗi chung ECRB, gân bánh chè, gân Achilles, cân gan chân), tổn thương đặc trưng bởi sự đứt gãy vô tổ chức sợi collagen type I thay bằng collagen type III nghèo nàn ở vùng vô mạch sát chỗ tiếp nối gân – sụn sợi – xương (Osteotendinous enthesis); (2) Trong thoái hóa khớp (gối, háng, vai, cổ chân), đích tác động là khoang hoạt dịch nội khớp chứa màng hoạt dịch viêm và bề mặt sụn hyalin. Các hạt Alpha của tiểu cầu giải phóng PDGF, TGF-β, VEGF, IGF-1 kích hoạt chuỗi tái tạo sinh học 3 pha (Viêm sinh lý -> Tăng sinh nguyên bào sợi -> Tái cấu trúc collagen). Lựa chọn LP-PRP (nghèo bạch cầu) cho nội khớp và LR-PRP (giàu bạch cầu) hoặc LP-PRP kết hợp châm kim Fenestration cho điểm bám gân.",
-      "targetStructure": "Ổ rách bán phần / vùng thoái hóa nhầy giảm âm tại điểm bám xương – gân (Enthesis intratendinous zone – dùng kỹ thuật rải hạt tiêu Peppering / Fenestration) HOẶC khoang bao hoạt dịch nội khớp thực sự (Intra-articular synovial recess).",
-      "innervation": "Các sợi thần kinh cảm giác tự do (Sợi C chứa Substance P và CGRP) mọc lan kèm các vi mạch tân sinh (Neovascularization) xâm nhập vào mặt sâu của gân thoái hóa hoặc màng hoạt dịch khớp.",
-      "vascularAndDangerZones": [
-        "Vùng lấy máu tĩnh mạch ngoại vi (thường là Tĩnh mạch nền / Tĩnh mạch giữa khuỷu tại hố trụ – Antecubital fossa): Cần lưu ý tránh chọc sâu xuyên qua cân cơ nhị đầu vào ĐỘNG MẠCH CÁNH TAY và THẦN KINH GIỮA nằm ngay mặt sâu tĩnh mạch giữa khuỷu!",
-        "Mạng mạch máu – thần kinh đặc thù của từng vùng khớp/gân đích (luôn bật Color/Power Doppler trên siêu âm: Power Doppler giúp nhận diện vùng tân mạch bệnh lý trong gân để đưa PRP tới đúng tâm tổn thương, đồng thời tránh bơm vào lòng động mạch lớn!).",
-        "TUYỆT ĐỐI KHÔNG pha chung Thuốc tê nồng độ cao (Lidocaine > 1%, Bupivacaine, Ropivacaine) hoặc Corticosteroid vào ống PRP vì gây độc tế bào sụn (Chondrotoxicity), làm kết tập sớm hoặc bất hoạt chức năng hạt Alpha tiểu cầu!"
+    "surfaceAnatomy": {
+      "sourceRef": "Gray's Anatomy (42nd Ed., Plate 1235) – Cubital Fossa Venipuncture Topography & Target Enthesis Landmarks",
+      "surfaceLandmarks": [
+        "Mốc lấy máu tự thân tại Hố trụ trước khuỷu (Cubital fossa): Tĩnh mạch giữa khuỷu (Median cubital vein – nối chéo từ tĩnh mạch đầu sang tĩnh mạch nền), Tĩnh mạch đầu (Cephalic vein – bờ ngoài cơ nhị đầu) và Tĩnh mạch nền (Basilic vein – bờ trong).",
+        "Gân cơ nhị đầu cánh tay và Trẽ cân cơ nhị đầu (Bicipital aponeurosis / Lacertus fibrosus) căng chéo vào trong.",
+        "Mốc bề mặt của vùng khớp hoặc điểm bám gân đích (vai, khuỷu, cổ tay, háng, gối, cổ bàn chân)."
+      ],
+      "surfaceProjections": "Tại hố trụ (nơi lấy 20 – 30 ml máu tĩnh mạch bằng kim lớn thu chế phẩm PRP): Tĩnh mạch giữa khuỷu nằm ngay mặt nông của cân cơ nhị đầu; ngay dưới trẽ cân này ở PHÍA TRONG gân nhị đầu là ĐỘNG MẠCH CÁNH TAY và THẦN KINH GIỮA, còn sát tĩnh mạch nền là thần kinh bì cẳng tay trong! Do đó nửa ngoài tĩnh mạch giữa khuỷu hoặc tĩnh mạch đầu luôn là điểm lấy máu an toàn nhất.",
+      "palpationSteps": [
+        "1. Buộc garô cánh tay vừa đủ áp lực tĩnh mạch: sờ gân cơ nhị đầu ở giữa hố trụ và bắt mạch đập động mạch cánh tay ngay bờ trong gân nhị đầu trước khi lấy máu bằng kim bướm 18G – 21G.",
+        "2. Tại vùng khớp/gân nhận PRP: khám sờ nắn xác định chính xác 'tâm điểm đau cơ học' trên diện bám xương – gân (Osteotendinous enthesis) hoặc ngách hoạt dịch khớp.",
+        "3. Đánh dấu điểm vào da cách xa vùng sẹo/nhiễm trùng và chỉ gây tê nốt phồng da nông ngoài bao gân (tránh thuốc tê thấm vào mô nhận PRP làm ức chế hạt Alpha tiểu cầu)."
       ],
       "figures": [
         {
-          "path": "assets/images/anatomy/fig_25_01_platelet_physiology.jpg",
-          "figNumber": "25.1",
-          "title": "Giải phẫu vi thể tiểu cầu, các hạt Alpha và yếu tố tăng trưởng tái tạo mô cơ xương khớp (Fig. 25.1)",
-          "desc": "Tiểu cầu chứa các hạt Alpha giàu yếu tố tăng trưởng (PDGF, TGF-β, VEGF, EGF, IGF-1) đóng vai trò trung tâm khởi động tái tạo sụn khớp và sợi collagen gân.",
-          "springerCaption": "Fig. 25.1 Platelet ultrastructure, alpha-granules, and bioactive growth factors in tissue regeneration."
-        },
-        {
-          "path": "assets/images/anatomy/fig_25_04_prp_clinical_targets.jpg",
-          "figNumber": "25.4",
-          "title": "Phân bố các vị trí giải phẫu ứng dụng lâm sàng trọng điểm của liệu pháp PRP (Fig. 25.4)",
-          "desc": "Các đích giải phẫu có bằng chứng hiệu quả cao nhất với PRP gồm thoái hóa khớp gối/háng, viêm điểm bám gân khuỷu, chóp xoay vai, gân bánh chè và cân gan chân.",
-          "springerCaption": "Fig. 25.4 Primary anatomical and clinical applications of platelet-rich plasma in musculoskeletal medicine."
+          "path": "assets/images/external_anatomy/ext_surf_upper_front_nerves_arteries_gray1235.png",
+          "figNumber": "Gray 1235",
+          "title": "Giải phẫu bề mặt hố trụ và chi trên: Đối chiếu tĩnh mạch nông với động mạch cánh tay và thần kinh giữa bên dưới (Gray's Plate 1235)",
+          "desc": "Hình chiếu bề mặt chỉ rõ vị trí động mạch cánh tay và thần kinh giữa nằm ngay bờ trong gân nhị đầu dưới nền tĩnh mạch khuỷu trong.",
+          "atlasSource": "Gray's Anatomy (20th Ed., Plate 1235) – Surface markings of antecubital vessels and nerves."
         }
       ]
     },
-    "surfaceAnatomy": {
-      "bonyLandmarks": [
-        "Bước 1 (Lấy máu tự thân): Hố trụ trước khuỷu (Antecubital fossa) – tĩnh mạch giữa khuỷu (Median cubital vein) hoặc tĩnh mạch đầu ở phía ngoài (an toàn hơn tĩnh mạch nền ở phía trong do xa động mạch cánh tay và thần kinh giữa).",
-        "Bước 2 (Tiêm đích dưới siêu âm): Tuân thủ đúng mốc xương bề mặt đặc hiệu của khớp hoặc điểm bám gân đích (ví dụ: cực trên ngoài bánh chè cho khớp gối; mỏm trên lồi cầu ngoài – chỏm quay cho Tennis Elbow; cực dưới bánh chè cho gân bánh chè; củ lớn cho gân trên gai)."
+    "crossSectionalAnatomy": {
+      "sourceRef": "OpenStax (Fig. 9.07) & Gray's Anatomy – Micro- & Macro-Sectional Anatomy of Synovial Joints & Fibrocartilaginous Entheses",
+      "sectionPlane": "Thiết đồ cắt dọc qua phức hợp Điểm bám xương – gân 4 vùng mô học (4-Zone Enthesis Organ Section) VÀ Thiết đồ chuẩn của Khớp hoạt dịch (Synovial Joint Cavity Section).",
+      "layeredStructure": [
+        "Tại Hố trụ lấy máu (Thiết đồ ngang khuỷu trước): Da mỏng -> Mạc nông chứa Tĩnh mạch giữa khuỷu (đích lấy máu) & các nhánh thần kinh bì cẳng tay -> Trẽ cân cơ nhị đầu (Lacertus fibrosus – mái chắn bảo vệ) -> Khoang sâu chứa Động mạch cánh tay và Thần kinh giữa ở bờ trong gân nhị đầu.",
+        "Trên thiết đồ Khớp hoạt dịch (đích của LP-PRP nghèo bạch cầu): Da & mạc sâu -> Bao xơ khớp (Fibrous capsule) -> Màng hoạt dịch giàu mạch máu (Synovial intima & subintima – đích điều hòa kháng viêm IL-1ra!) -> KHOANG ĐÍCH: Buồng dịch khớp -> Sụn khớp hyalin vô mạch và bản xương dưới sụn.",
+        "Trên thiết đồ Điểm bám xương – gân 4 vùng Benjamin (Enthesis – đích của PRP tái tạo gân): Bao quanh gân (Paratenon) -> Vùng 1: Sợi collagen type I song song -> Vùng 2 (TÂM ĐIỂM RÁCH BÁN PHẦN & THOÁI HÓA NHẦY): Sụn sợi không khoáng hóa -> Đường vôi hóa Tidemark -> Vùng 3: Sụn sợi khoáng hóa -> Vùng 4: Vỏ xương dưới sụn.",
+        "Lớp phức hợp Đệm mỡ – Bao hoạt dịch kề điểm bám (Synovio-entheseal complex, ví dụ đệm mỡ Hoffa/Kager & túi hoạt dịch sát gân): Tầng mô giàu vi mạch và sợi thần kinh cảm thụ đau C-fibers nằm ngay mặt sâu điểm bám gân (cần tránh bơm tràn PRP có bạch cầu cao gây phản ứng viêm bao hoạt dịch cấp)."
       ],
-      "referenceLines": "Định vị kép: (1) Sờ điểm đau khu trú nhất trên diện bám xương của gân (Clinical maximal tenderness enthesis) kết hợp (2) Ánh xạ lên hình ảnh vùng giảm âm mất cấu trúc sợi / tăng sinh mạch trên siêu âm (Sonographic hypoechoic defect) để trùng khớp 100% trước khi tiêm PRP.",
-      "palpationSteps": [
-        "1. Khám và đánh dấu mốc bề mặt vùng tĩnh mạch khuỷu tay để lấy 15 - 30 ml máu tĩnh mạch bằng kim lớn (18G - 21G tránh vỡ hồng cầu và hoạt hóa tiểu cầu sớm do lực xé).",
-        "2. Đặt bệnh nhân ở tư thế bộc lộ căng nhẹ gân hoặc mở rộng ngách khớp đích (tương ứng từng thủ thuật thành phần trên hệ thống).",
-        "3. Sờ xác định mốc xương điểm bám gân và chỉ gây tê da nông ở điểm chọc ngoài bao gân (tránh bơm thuốc tê trực tiếp vào ổ gân nơi sắp bơm PRP)."
+      "topographicRelations": {
+        "superficialAndDeep": "Trong thoái hóa điểm bám gân (Tendinosis), các vi mạch tân sinh bất thường kèm sợi thần kinh đau xâm nhập từ lớp mỡ/paratenon mặt sâu vào Vùng 1–2 làm phá vỡ cấu trúc sợi song song tạo hốc giảm âm nội gân.",
+        "medialAndLateral": "Trong tràn dịch khớp thoái hóa, khoang dịch nội khớp chứa nồng độ cao các metalloproteinase (MMPs) và cytokine tiền viêm – bắt buộc hút cạn toàn bộ dịch khớp viêm trước khi bơm PRP để các yếu tố tăng trưởng tiếp xúc trực tiếp màng hoạt dịch và sụn khớp!"
+      },
+      "dangerCorridors": [
+        "Độc tính hóa học lên tiểu cầu và tế bào sụn: TUYỆT ĐỐI KHÔNG trộn Lidocaine nồng độ cao (> 1%), Bupivacaine, Ropivacaine hoặc Corticosteroid chung vào khoang vừa bơm PRP!",
+        "Khi châm kim rải hạt tiêu (Peppering / Fenestration) đưa PRP vào Vùng 2–3 điểm bám gân, luôn bật Power Doppler định vị ổ tân mạch bệnh lý nhưng tránh đâm thủng các động mạch nuôi chính hoặc dây chằng giữ vững khớp nằm sát bên dưới."
       ],
-      "probePlacement": "Luôn quét siêu âm trực tiếp 2 mặt phẳng (dọc và ngang) kèm Power Doppler tại mô đích trước khi chuẩn bị kim để đo kích thước vùng rách bán phần / thoái hóa gân hoặc xác nhận ngách dịch nội khớp (nếu khớp gối có tràn dịch viêm nhiều, bắt buộc chọc hút sạch dịch khớp thừa dưới siêu âm trước khi bơm LP-PRP để không làm loãng nồng độ yếu tố tăng trưởng!).",
       "figures": [
         {
-          "path": "assets/images/ch25_prp/p322_img1.jpeg",
-          "figNumber": "25.6",
-          "title": "Quy trình thu thập máu tĩnh mạch, ly tâm tách lớp Buffy coat và tiêm đích dưới hướng dẫn siêu âm (Fig. 25.6)",
-          "desc": "Chu trình khép kín vô trùng từ lấy máu chống đông, ly tâm thu huyết tương giàu tiểu cầu tới tiêm chính xác vào cấu trúc giải phẫu đích dưới siêu âm.",
-          "springerCaption": "Fig. 25.6 Closed-system platelet-rich plasma preparation and ultrasound-guided target injection."
+          "path": "assets/images/external_anatomy/ext_sec_synovial_joint_bursa_openstax907.jpg",
+          "figNumber": "OpenStax 9.07",
+          "title": "Thiết đồ cắt lớp cấu trúc chuẩn của Khớp hoạt dịch, Bao hoạt dịch và Bao gân (OpenStax Anatomical Atlas)",
+          "desc": "Thiết đồ phân lớp chuẩn của khớp hoạt dịch (bao xơ, màng hoạt dịch, khoang khớp, sụn khớp), túi hoạt dịch đệm (Bursa) và bao hoạt dịch gân (Tendon sheath) – ba đích vi giải phẫu chính của y học tái tạo PRP.",
+          "atlasSource": "OpenStax Anatomy & Physiology (CC-BY 4.0, Fig. 9.07) – Sectional anatomy of synovial joint, bursa, and tendon sheath."
         }
       ]
     },
@@ -3743,52 +4064,55 @@ var STABLE_PROCEDURES_FALLBACK = [];
         "Ổ vôi hóa thể xơ cứng cản quang rất cứng (giai đoạn tạo vôi nghỉ) khó hút rửa -> có thể chuyển sang tán sỏi ngoài cơ thể ESWT."
       ]
     },
-    "anatomy": {
-      "overview": "Vôi hóa gân chóp xoay (Calcific Tendinitis) xảy ra chủ yếu tại 'vùng tới hạn' (Critical zone) nghèo mạch máu của gân cơ trên gai (chiếm ~80%, cách điểm bám củ lớn 1 - 1.5 cm), ít gặp hơn ở gân dưới gai (~15%) và gân dưới vai (~5%). Theo Uhthoff, bệnh tiến triển qua 3 giai đoạn mô học: (1) Tiền vôi hóa chuyển sản sụn sợi, (2) Giai đoạn vôi hóa (pha hình thành cứng như phấn và pha tiêu hủy mềm dạng kem đánh răng gây tăng áp lực nội gân và viêm cấp bao hoạt dịch SASD dữ dội), và (3) Giai đoạn sau vôi hóa tái tạo sợi collagen.",
-      "targetStructure": "Trung tâm ổ lắng đọng tinh thể Hydroxyapatite nằm trong bề dày gân chóp xoay (để rửa hút Barbotage) KẾT HỢP khoang bao hoạt dịch SASD ở ngay mặt nông gân (để tiêm Corticosteroid kháng viêm cuối thủ thuật).",
-      "innervation": "Thần kinh trên vai (Suprascapular nerve - C5, C6) và nhánh cảm giác thần kinh nách chi phối mạng lưới thụ thể đau dày đặc tại bao hoạt dịch SASD.",
-      "vascularAndDangerZones": [
-        "Sợi gân chóp xoay lành xung quanh ổ vôi: Không được làm rách toác vỏ bao trên của ổ vôi quá rộng hoặc bơm steroid trực tiếp vào nhu mô gân.",
-        "Bề mặt sụn khớp chỏm cánh tay nằm sâu ngay dưới mặt khớp của gân trên gai.",
-        "Mạch máu tăng sinh tân mạch quanh ổ vôi trong pha tiêu hủy cấp (kiểm tra bằng Power Doppler)."
+    "surfaceAnatomy": {
+      "sourceRef": "Gray's Anatomy (42nd Ed.) – Rotator Cuff & Subacromial Surface Topography; Codman's Critical Zone Landmarks",
+      "surfaceLandmarks": [
+        "Bờ trước ngoài mỏm cùng vai (Anterolateral acromion) và dây chằng quạ – cùng vai (nối sang mỏm quạ).",
+        "Củ lớn xương cánh tay (Greater tubercle – gồm 3 diện bám: diện trên cho cơ trên gai, diện giữa cho cơ dưới gai, diện dưới cho cơ tròn bé).",
+        "Củ bé xương cánh tay (Lesser tubercle – nơi bám gân dưới vai ở phía trước).",
+        "Điểm Codman: Cách góc trước ngoài mỏm cùng vai 1 cm xuống dưới trước khi tay xoay trong."
+      ],
+      "surfaceProjections": "Khoảng 80% ổ lắng đọng tinh thể Hydroxyapatite nằm tại 'vùng vô mạch tới hạn Codman' của gân trên gai (cách diện bám củ lớn 1.0 – 1.5 cm về phía trong). Ở tư thế giải phẫu trung tính, điểm này bị che lấp ngay dưới mỏm cùng vai; khi duỗi – khép – xoay trong cánh tay (tư thế Crass), ổ vôi trượt ra trước ngoài ~2 cm nằm ngay dưới da – cơ delta trước ngoài.",
+      "palpationSteps": [
+        "1. Đối chiếu phim X-quang vai thẳng (xoay trong & xoay ngoài) và nghiêng Y-view để xác định ổ vôi thuộc gân trên gai (trước ngoài), gân dưới gai (sau ngoài) hay gân dưới vai (trước trong).",
+        "2. Đưa tay bệnh nhân vào tư thế bộc lộ tối ưu tương ứng (Crass cải tiến cho trên gai; bàn tay ôm vai đối diện cho dưới gai; xoay ngoài cánh tay cho dưới vai).",
+        "3. Sờ bờ mỏm cùng vai, củ lớn và điểm đau nhói dữ dội nhất dưới da để đặt tâm đầu dò."
       ],
       "figures": [
         {
-          "path": "assets/images/anatomy/fig_26_01_calcific_phases.jpg",
-          "figNumber": "26.1",
-          "title": "Chu trình sinh bệnh học 3 giai đoạn của vôi hóa gân chóp xoay theo Uhthoff (Fig. 26.1)",
-          "desc": "Ba giai đoạn tiến triển mô học của ổ vôi nội gân trên gai; giai đoạn tiêu hủy mềm dạng kem đánh răng là thời điểm vàng cho thủ thuật rửa vôi Barbotage.",
-          "springerCaption": "Fig. 26.1 The three pathophysiological phases of calcific tendinitis of the rotator cuff."
-        },
-        {
-          "path": "assets/images/anatomy/fig_26_03_soft_calcific_phase.jpg",
-          "figNumber": "26.3",
-          "title": "Đối chiếu hình ảnh siêu âm, X-quang và dịch vôi trắng đục pha mềm (Fig. 26.3)",
-          "desc": "Ổ vôi pha mềm tăng âm dạng vòm mờ ít bóng cản trên siêu âm, tương ứng đám mờ mây trên X-quang và dịch hút trắng sữa như kem đánh răng.",
-          "springerCaption": "Fig. 26.3 Soft resorptive calcific phase: sonographic (a), radiographic (b), and milky calcium aspirate (c)."
+          "path": "assets/images/external_anatomy/ext_surf_upper_front_topography_gray1231.png",
+          "figNumber": "Gray 1231",
+          "title": "Giải phẫu bề mặt ụ cơ delta, mỏm cùng vai và đầu trên xương cánh tay (Gray's Plate 1231)",
+          "desc": "Định khu vùng vòm cùng vai - củ lớn xương cánh tay nơi bộc lộ vùng tới hạn gân chóp xoay khi xoay trong cánh tay.",
+          "atlasSource": "Gray's Anatomy (20th Ed., Plate 1231) – Surface topography of shoulder and deltoid region."
         }
       ]
     },
-    "surfaceAnatomy": {
-      "bonyLandmarks": [
-        "Bờ trước ngoài mỏm cùng vai (Anterolateral acromion).",
-        "Củ lớn xương cánh tay (Greater tuberosity) – đối với vôi gân trên gai/dưới gai.",
-        "Mỏm quạ và củ bé xương cánh tay – nếu ổ vôi nằm ở gân cơ dưới vai."
+    "crossSectionalAnatomy": {
+      "sourceRef": "Gray's Anatomy & OpenStax Sectional Anatomy – Coronal Section of Rotator Cuff Enthesis & Bursa",
+      "sectionPlane": "Thiết đồ đứng ngang (Coronal Section) qua vòm mỏm cùng vai, bao hoạt dịch SASD và vùng bám tận xương – gân (Enthesis) của gân trên gai tại củ lớn.",
+      "layeredStructure": [
+        "Lớp 1 – Da và lớp mỡ dưới da vùng vai ngoài (dày ~4 – 10 mm).",
+        "Lớp 2 – Mạc nông, bó giữa/trước cơ delta (dày ~12 – 18 mm) và lớp mỡ quanh bao hoạt dịch.",
+        "Lớp 3 – ĐÍCH PHỐI HỢP CUỐI THỦ THUẬT: Khoang bao hoạt dịch SASD (nơi thường viêm phù nề dữ dội hoặc có nguy cơ ổ vôi tự vỡ tràn lên gây viêm bao hoạt dịch tinh thể cấp tính; là vị trí bơm Corticosteroid sau khi rửa vôi).",
+        "Lớp 4 – KHOANG ĐÍCH CHÍNH: Nhu mô giữa của gân cơ trên gai (5 lớp mô học của Clark: bao gân nông -> bó sợi collagen song song dày -> lớp sợi đan chéo chứa ổ chuyển sản sụn sợi & tinh thể canxi -> lớp bao khớp sâu -> sụn sợi khoáng hóa bám củ lớn).",
+        "Lớp 5 (Đáy thiết đồ) – Vỏ xương diện trên củ lớn và sụn hyalin chỏm xương cánh tay ngăn cách với ổ khớp vai."
       ],
-      "referenceLines": "Khoảng cách từ bờ ngoài mỏm cùng vai xuống củ lớn khoảng 2 cm; hầu hết ổ vôi gân trên gai bị che khuất dưới mỏm cùng vai khi để tay trung tính nên bắt buộc dùng tư thế bộc lộ bề mặt.",
-      "palpationSteps": [
-        "1. Xác định vị trí gân chứa vôi trên phim X-quang khớp vai tư thế thẳng (xoay trong/ngoài) trước thủ thuật.",
-        "2. Đặt tay bệnh nhân ở tư thế Crass cải tiến (mu bàn tay hoặc lòng bàn tay tựa vùng mông/mào chậu cùng bên) nếu vôi ở gân trên gai; hoặc xoay ngoài cánh tay nếu vôi ở gân dưới vai.",
-        "3. Sờ xác định bờ ngoài mỏm cùng vai và điểm đau chói khu trú nhất trên củ lớn để đặt tâm đầu dò."
+      "topographicRelations": {
+        "superficialAndDeep": "Ổ vôi thường nằm lơ lửng trong Lớp 4, cách lá tạng bao hoạt dịch SASD ở phía nông chỉ 1 – 2 mm (vỏ sợi bao trên ổ vôi) và cách sụn chỏm cánh tay ở phía sâu 2 – 3 mm.",
+        "medialAndLateral": "Phía trong là chỗ nối cơ – gân nằm dưới mỏm cùng vai; phía ngoài là diện bám sụn sợi vào củ lớn và đám rối mạch nối mũ cánh tay – ngực cùng vai."
+      },
+      "dangerCorridors": [
+        "Bảo tồn mái gân phía nông (Superficial tendon roof): Chỉ chọc kim 18G qua một lỗ duy nhất đi ngang từ ngoài vào đúng tâm ổ vôi; tránh chọc nát mái trên của gân hoặc bơm quá áp lực làm nổ toác vôi rách thông gân.",
+        "Sau khi rửa sạch vôi trong Lớp 4, bắt buộc rút lùi mũi kim ra Lớp 3 (khoang SASD) mới được bơm Corticosteroid."
       ],
-      "probePlacement": "Quét hai mặt phẳng vuông góc (trục dọc và trục ngang gân trên gai) ngay dưới bờ ngoài mỏm cùng vai để đo kích thước 3 chiều của ổ vôi, sau đó cố định đầu dò dọc theo trục dài lớn nhất của đám vôi để đi kim In-plane từ ngoài vào trong.",
       "figures": [
         {
-          "path": "assets/images/anatomy/fig_19_02_rotator_cuff_sasd.jpg",
-          "figNumber": "19.2",
-          "title": "Liên quan giải phẫu giữa gân trên gai, mỏm cùng vai và bao hoạt dịch SASD (Fig. 19.2)",
-          "desc": "Đưa tay về tư thế duỗi - xoay trong giúp kéo vùng tới hạn của gân trên gai thoát khỏi mái che xương mỏm cùng vai.",
-          "springerCaption": "Fig. 19.2 Anatomical relationship of supraspinatus tendon passing beneath the acromion and SASD bursa."
+          "path": "assets/images/external_anatomy/ext_sec_shoulder_coronal_dbcls.png",
+          "figNumber": "Coronal Sec.",
+          "title": "Thiết đồ đứng ngang tương quan trực tiếp giữa lõi gân trên gai và khoang bao hoạt dịch SASD phủ trên (DBCLS Atlas)",
+          "desc": "Thiết đồ cho thấy rõ ranh giới sát liền giữa bề dày gân trên gai (nơi chứa ổ vôi) và khoang bao hoạt dịch SASD màu xanh đậm ngay phía nông.",
+          "atlasSource": "DBCLS Anatomical Atlas (CC-BY 4.0) – Coronal section of supraspinatus tendon and SASD bursa."
         }
       ]
     },
@@ -3871,45 +4195,54 @@ var STABLE_PROCEDURES_FALLBACK = [];
         "Dị dạng mạch máu lớn vùng chẩm cổ chưa được khảo sát."
       ]
     },
-    "anatomy": {
-      "overview": "Thần kinh chẩm bé (Lesser Occipital Nerve - LON) là nhánh cao nhất của đám rối cổ nông (Superficial cervical plexus), cấu thành từ nhánh trước rễ cổ C2 (và đôi khi C3). Sau khi vòng quanh bờ sau phần giữa cơ ức đòn chũm (tại điểm thần kinh Erb's point ngang mức sụn giáp), LON chạy ngược thẳng lên trên dọc sát theo BỜ SAU CƠ ỨC ĐÒN CHŨM (Posterior border of Sternocleidomastoid - SCM), nằm nông ngay trên lớp cân cổ sâu bao phủ cơ gối đầu (Splenius capitis) và cơ nâng vai, để đi lên phân nhánh cảm giác vùng da sau vành tai, mỏm chũm và vùng chẩm thái dương bên.",
-      "targetStructure": "Khoang mạc nông dọc theo bờ sau đầu trên cơ ức đòn chũm (ngay mặt nông cơ gối đầu Splenius capitis, cách đỉnh mỏm chũm 2 - 3 cm xuống dưới).",
-      "innervation": "LON (nhánh trước C2, C3) chi phối cảm giác vùng da sau trên loa tai, vùng chũm và phần bên vùng chẩm.",
-      "vascularAndDangerZones": [
-        "Thần kinh phụ / Dây XI (Spinal accessory nerve - CN XI): Chạy chéo từ bờ sau 1/3 trên cơ ức đòn chũm qua tam giác cổ sau tới cơ thang ở lớp sâu hơn nhẹ – tuyệt đối chỉ tiêm thể tích nhỏ (2 - 3 ml) nông ngay sát bao cân bờ sau phần cao SCM để tránh gây yếu nhún vai!",
-        "Tĩnh mạch cảnh ngoài (External jugular vein) và nhánh mỏm chũm động mạch chẩm.",
-        "Động mạch đốt sống ở lớp rất sâu (nếu chọc kim quá sâu vào tam giác dưới chẩm)."
+    "surfaceAnatomy": {
+      "sourceRef": "Gray's Anatomy (42nd Ed., Plate 1194) – Posterior Triangle of Neck & Erb's Nerve Point",
+      "surfaceLandmarks": [
+        "Bờ sau cơ ức đòn chũm (Posterior border of Sternocleidomastoid - SCM): Ranh giới trước của tam giác cổ sau.",
+        "Đỉnh và bờ sau mỏm chũm xương thái dương (Mastoid process) ngay sau tai.",
+        "Điểm thần kinh cổ của Erb (Erb's punctum nervosum): Nằm tại trung điểm bờ sau cơ ức đòn chũm (ngang mức bờ trên sụn giáp / C4–C5), nơi cả 4 nhánh cảm giác của đám rối cổ nông tỏa ra."
+      ],
+      "surfaceProjections": "Từ điểm Erb ở giữa bờ sau cơ ức đòn chũm, thần kinh chẩm bé (LON, nhánh trước C2–C3) móc vòng qua thần kinh phụ (CN XI) rồi chạy thẳng ĐỨNG DỌC LÊN TRÊN BÁM SÁT BỜ SAU PHẦN BA TRÊN CƠ ỨC ĐÒN CHŨM hướng tới điểm nằm ngay phía sau mỏm chũm (~2.5 cm sau ống tai ngoài trên đường gáy trên).",
+      "palpationSteps": [
+        "1. Bệnh nhân nằm nghiêng sang bên lành, yêu cầu hơi nâng đầu xoay nhẹ cằm sang đối bên để bờ sau cơ ức đòn chũm nổi rõ như một dải thừng.",
+        "2. Xác định đỉnh mỏm chũm sau tai và lần dọc theo bờ sau cơ SCM xuống dưới ~2 – 3 cm.",
+        "3. Ấn dọc bờ sau 1/3 trên cơ SCM để tái hiện dấu hiệu Tinel lan lên vùng da sau vành tai – thái dương chẩm."
       ],
       "figures": [
         {
-          "path": "assets/images/anatomy/fig_02_02_occipital_nerves_surface.jpg",
-          "figNumber": "2.2",
-          "title": "Tương quan giải phẫu bề mặt giữa thần kinh chẩm bé (1), thần kinh chẩm lớn và động mạch chẩm (2) (Fig. 2.2)",
-          "desc": "Thần kinh chẩm bé (1) đi dọc bờ sau phần bám tận cơ ức đòn chũm phía sau tai, nằm ngoài hơn hẳn so với thần kinh chẩm lớn (2).",
-          "springerCaption": "Fig. 2.2 Surface relationship of (1) lesser occipital nerve along posterior SCM border and (2) greater occipital nerve with occipital artery."
+          "path": "assets/images/external_anatomy/ext_surf_neck_lateral_gray1194.png",
+          "figNumber": "Gray 1194",
+          "title": "Giải phẫu bề mặt cổ bên: Cơ ức đòn chũm, mỏm chũm và tam giác cổ sau (Gray's Plate 1194)",
+          "desc": "Định khu bờ sau phần trên cơ ức đòn chũm từ điểm Erb chạy thẳng lên mỏm chũm là đường chiếu chuẩn của thần kinh chẩm bé.",
+          "atlasSource": "Gray's Anatomy (20th Ed., Plate 1194) – Surface anatomy of the side of the neck and sternocleidomastoid."
         }
       ]
     },
-    "surfaceAnatomy": {
-      "bonyLandmarks": [
-        "Mỏm chũm xương thái dương (Mastoid process): Gồ xương lớn ngay sau dái tai.",
-        "Ụ chẩm ngoài (External occipital protuberance - Inion) ở đường giữa sau.",
-        "Bờ sau cơ ức đòn chũm (Posterior border of SCM muscle)."
+    "crossSectionalAnatomy": {
+      "sourceRef": "Gray's Anatomy (Plates 384, 800) – Transverse Section of Upper Posterolateral Neck",
+      "sectionPlane": "Thiết đồ cắt ngang (Axial Section) qua phần cao cổ bên – sau mỏm chũm 2 cm cắt ngang bờ sau cơ ức đòn chũm và cơ gối đầu.",
+      "layeredStructure": [
+        "Lớp 1 – Da cổ bên sau mỏng và mô dưới da (chứa tĩnh mạch cảnh ngoài External jugular vein ở đoạn thấp hơn và hạch bạch huyết sau tai).",
+        "Lớp 2 – Lá nông mạc cổ sâu (Investing layer of deep cervical fascia – tách đôi bao bọc cơ ức đòn chũm rồi chập lại ở bờ sau cơ).",
+        "Lớp 3 – KHOANG ĐÍCH: Mặt phẳng cân ngay dưới/sát mép BỜ SAU CƠ ỨC ĐÒN CHŨM (Posterior edge of SCM) và nằm trên mặt nông cơ gối đầu (Splenius capitis) – nơi THẦN KINH CHẨM BÉ (LON, đường kính 1 – 2 mm) trượt lên da đầu.",
+        "Lớp 4 – Cơ gối đầu (Splenius capitis) và cơ nâng vai (Levator scapulae); lưu ý ở khoảng giữa cổ, THẦN KINH PHỤ (Spinal accessory nerve - CN XI) đi chéo dưới lá nông mạc cổ trên mặt cơ nâng vai cách LON chỉ 1 – 1.5 cm về phía dưới!",
+        "Lớp 5 (Đáy thiết đồ) – Các cơ cổ sâu (cơ dài đầu, bán gai đầu) và mấu ngang đốt sống cổ cao."
       ],
-      "referenceLines": "Đường nối ụ chẩm ngoài – đỉnh mỏm chũm (Superior nuchal line): LON đi qua khoảng nối 1/3 ngoài và 2/3 trong của đường này (cách bờ sau mỏm chũm ~2 - 3 cm vào trong, hoặc dọc bờ sau SCM thấp hơn mỏm chũm 2 - 3 cm).",
-      "palpationSteps": [
-        "1. Đặt bệnh nhân nằm nghiêng sang bên lành (mặt bệnh hướng lên trên) hoặc nằm sấp xoay nhẹ đầu.",
-        "2. Yêu cầu bệnh nhân hơi nâng đầu và xoay cằm sang bên đối diện có kháng lực nhẹ để toàn bộ dải cơ ức đòn chũm (SCM) nổi gồ rõ từ cổ lên mỏm chũm.",
-        "3. Dùng ngón trỏ lần dọc theo bờ sau phần ba trên cơ ức đòn chũm hướng lên mỏm chũm và ấn tìm điểm Tinel / điểm đau chói lan lên sau tai."
+      "topographicRelations": {
+        "superficialAndDeep": "LON nằm rất nông (chỉ sâu ~4 – 8 mm dưới mặt da) ngay mặt nông mạc cơ gối đầu dưới mép thon bờ sau SCM.",
+        "medialAndLateral": "Phía trước ngoài là bụng cơ ức đòn chũm và thần kinh tai lớn (Great auricular nerve chạy chéo ra mặt ngoài SCM hướng dái tai); phía dưới dọc sàn tam giác cổ sau là thần kinh vận động CN XI nuôi cơ thang."
+      },
+      "dangerCorridors": [
+        "Thần kinh phụ (CN XI): Phong bế LON ở cao (cách dưới mỏm chũm 2 cm) với thể tích nhỏ (2 – 3 ml) tránh tiêm thấp gần điểm Erb thể tích lớn gây liệt tạm thời cơ thang!",
+        "Tránh chọc vào tĩnh mạch cảnh ngoài chạy nông dưới cơ bám da cổ."
       ],
-      "probePlacement": "Đặt đầu dò Linear tần số cao (12 - 15 MHz) nằm ngang (Transverse oblique view) ngay dưới đường cong chẩm trên ~2 cm, vắt ngang qua bờ sau đầu trên cơ ức đòn chũm (SCM) để thấy LON là cấu trúc bầu dục giảm âm nhỏ nằm kẹp trên mặt mạc cơ gối đầu (Splenius capitis) ngay dưới mép thon bờ sau SCM.",
       "figures": [
         {
-          "path": "assets/images/ch2_occipital/p50_img1.jpeg",
-          "figNumber": "2.8",
-          "title": "Đặt đầu dò ngang qua bờ sau cơ ức đòn chũm định vị thần kinh chẩm bé (Fig. 2.8)",
-          "desc": "Hình ảnh siêu âm thần kinh chẩm bé nằm ngay mặt phẳng cân dưới bờ sau cơ ức đòn chũm (SCM) và phía trên cơ gối đầu.",
-          "springerCaption": "Fig. 2.8 Sonography and surface probe position showing the lesser occipital nerve at the posterior border of SCM."
+          "path": "assets/images/external_anatomy/ext_sec_suboccipital_triangle_gray800.png",
+          "figNumber": "Gray 800",
+          "title": "Tương quan phân lớp của thần kinh chẩm bé (Lesser occipital) dọc bờ sau cơ ức đòn chũm và thần kinh tai lớn (Gray's Plate 800)",
+          "desc": "Bờ trái bản vẽ của Gray minh họa rõ đường đi nông của thần kinh chẩm bé ôm dọc bờ sau cơ ức đòn chũm trên mặt cơ gối đầu.",
+          "atlasSource": "Gray's Anatomy (20th Ed., Plate 800) – Course of lesser occipital nerve along posterior border of sternocleidomastoid."
         }
       ]
     },
@@ -3995,44 +4328,55 @@ var STABLE_PROCEDURES_FALLBACK = [];
         "Tiền sử dị ứng thuốc tê."
       ]
     },
-    "anatomy": {
-      "overview": "Ở mức xa vùng chẩm (Distal / Classical Approach tại đường gáy trên – Superior nuchal line), thần kinh chẩm lớn (GON) đã đâm xuyên qua cơ bán gai đầu và cân gân cơ thang để thoát ra nằm nông ngay trên mặt xương chẩm (dưới lớp cân galea da đầu). Tại đúng vị trí đường cong chẩm trên này, GON chạy song song và nằm NGAY PHÍA TRONG (Medial) sát cạnh động mạch chẩm (Occipital artery – nhánh của động mạch cảnh ngoài). Lối tiếp cận xa rất nông (chỉ 0.5 - 1.2 cm dưới da) nhưng dễ bỏ sót nhánh nếu thần kinh đã chia sớm.",
-      "targetStructure": "Khoang cân nông ngay sát mặt xương chẩm tại mức đường cong chẩm trên, nằm ngay phía TRONG (medial) động mạch chẩm.",
-      "innervation": "Các nhánh tận da đầu vùng chẩm – đỉnh của thần kinh chẩm lớn (GON - C2).",
-      "vascularAndDangerZones": [
-        "Động mạch chẩm (Occipital artery): Nằm ngay sát bờ ngoài của GON trong cùng một mặt phẳng cân nông – BẮT BUỘC bật Color Doppler để định vị mạch đập động mạch chẩm vừa làm mốc dẫn đường vừa tránh chọc thủng gây tụ máu da đầu (Scalp hematoma)!",
-        "Lớp da đầu có sọ xương chẩm ngay bên dưới (~5 - 10 mm), riêng bệnh nhân có tiền sử phẫu thuật mở sọ hố sau (Suboccipital craniectomy) có khuyết xương sọ: TUYỆT ĐỐI kiểm tra liên tục vỏ xương sọ nguyên vẹn dưới đầu dò tránh đâm vào màng cứng tiểu não!"
+    "surfaceAnatomy": {
+      "sourceRef": "Gray's Anatomy (42nd Ed., Plates 1193, 1196) – Superior Nuchal Line & Scalp Neurovascular Projections",
+      "surfaceLandmarks": [
+        "Ụ chẩm ngoài (External occipital protuberance - Inion) ở đường giữa chẩm.",
+        "Đỉnh mỏm chũm (Tip of mastoid process) ở phía ngoài sau tai.",
+        "Đường gáy trên (Superior nuchal line): Gờ xương cong ngang nối từ Inion sang mỏm chũm (nơi bám của cơ thang và cơ ức đòn chũm).",
+        "Mạch đập Động mạch chẩm (Occipital artery pulse) sờ thấy trên gờ xương cách Inion ~3 cm."
+      ],
+      "surfaceProjections": "Trên đoạn cong nối từ Inion tới đỉnh mỏm chũm (dài trung bình ~8 – 9 cm): Động mạch chẩm và thần kinh chẩm lớn (GON) chọc xuyên qua cân gáy lên mô dưới da đầu tại ĐIỂM NỐI 1/3 TRONG VÀ 2/3 NGOÀI (cách Inion đúng 2.5 – 3.0 cm sang bên), trong đó GON nằm sát phía TRONG động mạch chẩm.",
+      "palpationSteps": [
+        "1. Bệnh nhân ngồi cúi đầu tựa trán lên bàn khám hoặc nằm sấp.",
+        "2. Sờ rõ đỉnh ụ chẩm ngoài ở chính giữa và đo ngang sang bên đau 2.5 – 3.0 cm dọc theo gờ xương đường gáy trên.",
+        "3. Ấn nhẹ đầu ngón trỏ bắt nhịp đập của động mạch chẩm và xác nhận điểm đau chói Arnold ngay bờ trong mạch đập."
       ],
       "figures": [
         {
-          "path": "assets/images/anatomy/fig_02_02_occipital_nerves_surface.jpg",
-          "figNumber": "2.2",
-          "title": "Giải phẫu lối thoát nông của thần kinh chẩm lớn đi kèm động mạch chẩm tại đường gáy trên (Fig. 2.2)",
-          "desc": "Tại đường cong chẩm trên, thần kinh chẩm lớn (2) đi sát bờ trong của động mạch chẩm ngay trên nền xương sọ chẩm.",
-          "springerCaption": "Fig. 2.2 Classical distal relationship of the greater occipital nerve medial to the occipital artery along the superior nuchal line."
+          "path": "assets/images/external_anatomy/ext_surf_head_occipital_gray1193.png",
+          "figNumber": "Gray 1193",
+          "title": "Giải phẫu bề mặt xương chẩm, ụ chẩm ngoài và đường gáy trên (Gray's Plate 1193)",
+          "desc": "Mốc xương sọ vùng chẩm đối chiếu vị trí thoát nông của bó mạch thần kinh chẩm lớn trên đường gáy trên.",
+          "atlasSource": "Gray's Anatomy (20th Ed., Plate 1193) – Surface relations of occipital bone, inion, and mastoid."
         }
       ]
     },
-    "surfaceAnatomy": {
-      "bonyLandmarks": [
-        "Ụ chẩm ngoài (External occipital protuberance - Inion): Đỉnh gồ xương giữa vùng chẩm.",
-        "Mỏm chũm (Mastoid process) ở phía sau tai.",
-        "Đường cong chẩm trên (Superior nuchal line): Gờ xương ngang nối từ ụ chẩm ngoài ra mỏm chũm."
+    "crossSectionalAnatomy": {
+      "sourceRef": "Gray's Anatomy (Plate 1196) – Classical 5-Layer 'SCALP' Sectional Anatomy at the Occiput",
+      "sectionPlane": "Thiết đồ đứng ngang tiếp tuyến qua da đầu vùng chẩm tại mức đường gáy trên (Transverse Occipital Scalp Section).",
+      "layeredStructure": [
+        "Lớp 1 (S – Skin) – Da đầu vùng chẩm rất dày (3 – 5 mm) chứa nhiều nang tóc và tuyến bã.",
+        "Lớp 2 (C – Connective tissue / KHOANG ĐÍCH) – Lớp mô liên kết mỡ đặc dưới da có nhiều vách xơ dọc gắn chặt da với cân galea: TOÀN BỘ ĐỘNG MẠCH CHẨM (Occipital artery), tĩnh mạch và THẦN KINH CHẨM LỚN ĐOẠN XA (Distal GON) nằm trọn trong Lớp 2 này! (Khi đứt mạch ở lớp này vách xơ giữ miệng mạch hở gây chảy máu nhiều).",
+        "Lớp 3 (A – Aponeurosis / Galea aponeurotica & Bụng chẩm cơ chẩm – trán Occipitalis) – Lá cân gân sọ căng chắc (hoặc trẽ cân cơ thang tại đường gáy trên).",
+        "Lớp 4 (L – Loose areolar tissue) – Khoang mô liên kết lỏng lẻo dưới cân galea ('Danger space of scalp' chứa tĩnh mạch liên lạc xuyên sọ).",
+        "Lớp 5 (P – Pericranium & Calvaria – Đáy thiết đồ) – Màng xương ngoài sọ và bản ngoài – tủy xương – bản trong xương sọ chẩm (ngăn cách với xoang tĩnh mạch ngang và tiểu não bên trong!)."
       ],
-      "referenceLines": "Quy tắc 1/3 trong trên đường Inion – Mỏm chũm: Nối đường thẳng từ ụ chẩm ngoài tới đỉnh mỏm chũm (~9 cm); GON và động mạch chẩm đi qua điểm nối 1/3 trong và 2/3 ngoài (cách ụ chẩm ngoài khoảng 2.5 - 3 cm sang bên).",
-      "palpationSteps": [
-        "1. Bệnh nhân ngồi cúi đầu tựa trán lên gối trên bàn hoặc nằm sấp.",
-        "2. Dùng ngón cái sờ rõ đỉnh ụ chẩm ngoài ở chính giữa.",
-        "3. Trượt ngón trỏ từ ụ chẩm ngoài ngang sang bên đau khoảng 2.5 - 3 cm dọc theo gờ xương đường gáy trên để bắt mạch đập nảy của động mạch chẩm và ấn kiểm tra điểm đau chói Arnold."
+      "topographicRelations": {
+        "superficialAndDeep": "Ở lối tiếp cận xa trên đường gáy trên, cả GON và động mạch chẩm đã xuyên qua cân cơ để nằm NÔNG trên mặt cân galea/màng xương ở độ sâu chỉ 5 – 10 mm dưới mặt da đầu!",
+        "medialAndLateral": "Thần kinh chẩm lớn (GON) nằm ngay PHÍA TRONG (Medial) cách động mạch chẩm 2 – 5 mm; đi tiếp ra ngoài cách Inion ~5 – 6 cm là thần kinh chẩm bé (LON)."
+      },
+      "dangerCorridors": [
+        "Tiêm mù rất dễ chọc thủng động mạch chẩm trong Lớp 2 gây khối máu tụ da đầu căng đau: Bắt buộc bật Color Doppler định vị động mạch chẩm rồi đưa mũi kim vào phía trong mạch.",
+        "CẢNH BÁO TỬ VONG: Bệnh nhân từng mổ mở sọ hố sau (Suboccipital craniectomy) mất bản xương Lớp 5 – bắt buộc kiểm tra siêu âm thấy đường vỏ xương sọ tăng âm liên tục phía dưới trước khi chọc kim!"
       ],
-      "probePlacement": "Đặt đầu dò Linear tần số cao (12 - 15 MHz, dùng nhiều gel xuyên qua tóc) nằm ngang ngay trên ụ chẩm ngoài, sau đó trượt ngang sang bên đau 2 - 3 cm dọc đường gáy trên đồng thời bật Color Doppler để thấy ngay động mạch chẩm đập tròn và GON nằm sát phía trong trên nền vỏ xương sọ sáng.",
       "figures": [
         {
-          "path": "assets/images/anatomy/fig_02_03_occipital_protuberance_scan.jpg",
-          "figNumber": "2.3",
-          "title": "Đặt đầu dò khởi điểm trên ụ chẩm ngoài rồi trượt dọc đường gáy trên (Fig. 2.3)",
-          "desc": "Đầu dò đặt ngang mức ụ chẩm ngoài (*) xác định lớp cân nông da đầu trước khi trượt sang bên 2.5 - 3 cm tìm động mạch chẩm.",
-          "springerCaption": "Fig. 2.3 Initial transverse scan at the external occipital protuberance (*) along the superior nuchal line."
+          "path": "assets/images/external_anatomy/ext_sec_scalp_occipital_layers_gray1196.png",
+          "figNumber": "Gray 1196",
+          "title": "Thiết đồ cắt lớp kinh điển 5 tầng da đầu - hộp sọ - màng não (SCALP Section - Gray's Plate 1196)",
+          "desc": "Thiết đồ cắt lớp chuẩn mực hiển thị 5 tầng SCALP: các mạch máu và thần kinh chẩm đoạn xa nằm ở lớp mô liên kết đặc trên cân galea và bản xương sọ.",
+          "atlasSource": "Gray's Anatomy (20th Ed., Plate 1196) – Diagrammatic section of scalp, skull, and meninges."
         }
       ]
     },
@@ -4116,52 +4460,62 @@ var STABLE_PROCEDURES_FALLBACK = [];
         "Bệnh nhân không hợp tác, kích động."
       ]
     },
-    "anatomy": {
-      "overview": "Các rễ thần kinh gai sống cổ C5, C6 và C7 thoát ra từ lỗ liên hợp và đi ra ngoài nằm trong rãnh mấu ngang xương đốt sống cổ (Intertubercular groove), kẹp giữa củ trước (Anterior tubercle – có cơ bậc thang trước bám) và củ sau (Posterior tubercle – có cơ bậc thang giữa bám). Hình thái mấu ngang trên siêu âm là 'dấu vân tay giải phẫu' để định danh chính xác từng tầng: C5 có củ trước và củ sau cao gần bằng nhau ('dấu tai thỏ / hai bướu lạc đà'); C6 có củ trước Chassaignac rất cao và nhọn còn củ sau thấp; C7 có củ trước thoái triển mất hẳn, chỉ còn duy nhất một dốc xương củ sau với động mạch đốt sống nằm trần ngay phía trước rễ C7!",
-      "targetStructure": "Khoang rìa MẶT SAU (Dorsal / Posterior aspect) của rễ thần kinh cổ mục tiêu ngay giữa rãnh mấu ngang và củ sau (tránh mặt trước rễ nơi tập trung các nhánh động mạch nuôi tủy!).",
-      "innervation": "Rễ cổ C5 (vai – mặt ngoài cánh tay), C6 (mặt ngoài cẳng tay – ngón cái & ngón trỏ), C7 (mặt sau cánh cẳng tay – ngón giữa).",
-      "vascularAndDangerZones": [
-        "Các động mạch rễ nuôi tủy sống (Radicular / Segmental medullary arteries tách từ động mạch đốt sống, động mạch cổ lên và động mạch cổ sâu): Thường đi sát MẶT TRƯỚC hoặc góc sau của rễ thần kinh cổ thông nối với động mạch tủy trước – TUYỆT ĐỐI CHỈ DÙNG DEXAMETHASONE KHÔNG HẠT TINH THỂ (Non-particulate steroid) và BẮT BUỘC bật Color Doppler kiểm tra quanh rễ trước khi chọc!",
-        "Động mạch đốt sống (Vertebral artery): Nằm lộ trần ngay phía trước rễ C7 (và ở 10% ca nằm trước C6).",
-        "Thần kinh hoành (Phrenic nerve - C3, C4, C5): Chạy chéo trên mặt trước cơ bậc thang trước dưới mạc trước sống."
+    "surfaceAnatomy": {
+      "sourceRef": "Gray's Anatomy (42nd Ed., Plates 1194, 1195) – Interscalene Groove & Cervical Transverse Process Landmarks",
+      "surfaceLandmarks": [
+        "Bờ trên sụn giáp (Superior border of thyroid cartilage): Tương ứng mức C4 (đĩa C3–C4 / C4–C5).",
+        "Vòng sụn nhẫn (Cricoid cartilage): Tương ứng chính xác mức mấu ngang C6 (củ Chassaignac).",
+        "Rãnh gian cơ bậc thang (Interscalene groove): Rãnh dọc sờ thấy ngay phía sau bờ ngoài cơ ức đòn chũm (giữa cơ bậc thang trước và cơ bậc thang giữa).",
+        "Hố thượng đòn (Supraclavicular fossa) ở dưới: Tương ứng mức C7 và thân trên đám rối cánh tay."
+      ],
+      "surfaceProjections": "Các mấu ngang cổ C5, C6, C7 nằm xếp dọc theo một đường thẳng nối từ đỉnh mỏm chũm xuống điểm giữa xương đòn (dọc sát bờ sau cơ ức đòn chũm): C5 nằm cao hơn mức sụn nhẫn ~1.5 cm; C6 nằm ngang đúng mức sụn nhẫn; C7 nằm thấp hơn mức sụn nhẫn ~1.5 cm ngay trên nền hố thượng đòn.",
+      "palpationSteps": [
+        "1. Đặt bệnh nhân nằm nghiêng sang bên lành (giúp bộc lộ rộng mặt bên – sau cổ để đi kim từ sau ra trước).",
+        "2. Sờ vòng sụn nhẫn ở cổ trước và gióng ngang sang rãnh gian cơ bậc thang ngay bờ sau cơ ức đòn chũm (đánh dấu mức chuẩn C6).",
+        "3. Nhắc bệnh nhân hít mũi ngắn (Sniff test) để cảm nhận rõ bờ cơ bậc thang trước và cơ bậc thang giữa dưới ngón tay."
       ],
       "figures": [
         {
-          "path": "assets/images/anatomy/fig_12_01_cervical_root_cross_section.jpg",
-          "figNumber": "12.1",
-          "title": "Thiết đồ cắt ngang lỗ liên hợp, rãnh mấu ngang cổ và động mạch đốt sống (Fig. 12.1)",
-          "desc": "Rễ thần kinh cổ thoát khỏi lỗ liên hợp đi trong rãnh xương giữa củ trước và củ sau, ngay phía sau động mạch đốt sống.",
-          "springerCaption": "Fig. 12.1 Cross-sectional anatomy of cervical spinal nerve root, intertubercular groove, and vertebral artery."
-        },
-        {
-          "path": "assets/images/anatomy/fig_12_02_cervical_radicular_arteries.jpg",
-          "figNumber": "12.2",
-          "title": "Mạng lưới động mạch cổ lên và cổ sâu cho nhánh động mạch rễ nuôi tủy cổ (Fig. 12.2)",
-          "desc": "Các nhánh mạch nhỏ từ động mạch đốt sống, cổ lên và cổ sâu đi sát rễ thần kinh cổ - lý do bắt buộc dùng Dexamethasone tan hoàn toàn.",
-          "springerCaption": "Fig. 12.2 Anastomoses of ascending cervical, deep cervical, and vertebral arteries supplying radicular arteries."
+          "path": "assets/images/external_anatomy/ext_surf_neck_lateral_gray1194.png",
+          "figNumber": "Gray 1194",
+          "title": "Giải phẫu bề mặt cổ bên: Rãnh sau cơ ức đòn chũm nơi xuất chiếu chuỗi mấu ngang và rễ cổ C5 - C7 (Gray's Plate 1194)",
+          "desc": "Định khu bề mặt tam giác cổ bên ngay sau cơ ức đòn chũm tương ứng rãnh gian cơ bậc thang.",
+          "atlasSource": "Gray's Anatomy (20th Ed., Plate 1194) – Surface anatomy of lateral neck and sternocleidomastoid border."
         }
       ]
     },
-    "surfaceAnatomy": {
-      "bonyLandmarks": [
-        "Sụn nhẫn (Cricoid cartilage): Tương ứng mức đốt sống C6.",
-        "Bờ trên sụn giáp (Superior border of thyroid cartilage): Tương ứng mức C4–C5.",
-        "Rãnh gian cơ bậc thang (Interscalene groove): Rãnh lõm dọc ngay phía sau bờ ngoài cơ ức đòn chũm."
+    "crossSectionalAnatomy": {
+      "sourceRef": "Gray's Anatomy (Plates 384, 770, 799) – Axial Cross-Section of Cervical Intertubercular Groove & Radicular Vessels",
+      "sectionPlane": "Thiết đồ cắt ngang (Axial Cross-Section) đi qua lỗ liên hợp và rãnh mấu ngang đốt sống cổ C5, C6 hoặc C7.",
+      "layeredStructure": [
+        "Lớp 1 – Da cổ bên, mô mỡ dưới da và cơ bám da cổ (có tĩnh mạch cảnh ngoài và các nhánh đám rối cổ nông chạy ngay trên mạc).",
+        "Lớp 2 – Lá nông mạc cổ sâu và bờ sau cơ ức đòn chũm (ở nửa trước thiết đồ).",
+        "Lớp 3 – Lớp cơ bậc thang và lá mạc trước sống: Phía TRƯỚC rãnh thần kinh là Cơ bậc thang trước (Scalenus anterior – có THẦN KINH HOÀNH chạy dọc mặt trước dưới mạc!); phía SAU rãnh thần kinh là Cơ bậc thang giữa (Scalenus medius – hành lang đi kim an toàn từ sau ra trước!).",
+        "Lớp 4 – KHOANG ĐÍCH: Rãnh xương gian củ của mấu ngang cổ chứa Nhánh trước rễ thần kinh cổ (Ventral ramus C5, C6 hoặc C7); mục tiêu mũi kim là KHOANG RÌA MẶT SAU (Dorsal epineural space) ngay giữa rễ thần kinh và sườn trước của củ sau!",
+        "Lớp 5 (Đáy và phía trong thiết đồ) – Mấu ngang xương cổ (C5: 2 củ cân xứng; C6: củ trước Chassaignac cao to; C7: MẤT củ trước chỉ còn củ sau!), lỗ ngang chứa ĐỘNG MẠCH ĐỐT SỐNG (nằm trần ngay trước rễ C7!) và các động mạch rễ tủy đi sát mặt trước rễ vào lỗ liên hợp."
       ],
-      "referenceLines": "Đường ngang từ sụn nhẫn kéo sang bên cắt qua bờ sau cơ ức đòn chũm là điểm chuẩn xác định củ Chassaignac C6; từ mốc C6 trượt lên 1.5 cm là C5, trượt xuống 1.5 cm trên nền hố thượng đòn là C7.",
-      "palpationSteps": [
-        "1. Đặt bệnh nhân nằm nghiêng sang bên lành (Lateral decubitus – tư thế tối ưu nhất cho đi kim In-plane từ sau ra trước!) hoặc nằm ngửa quay đầu 30 - 45 độ sang bên đối diện.",
-        "2. Sờ sụn nhẫn ở cổ trước và gióng ngang sang bờ sau cơ ức đòn chũm.",
-        "3. Yêu cầu bệnh nhân hít mạnh ngắn bằng mũi ('Sniff maneuver') để hai cơ bậc thang co nhẹ giúp sờ thấy rãnh gian cơ bậc thang ngay sau SCM."
+      "topographicRelations": {
+        "superficialAndDeep": "Rễ thần kinh cổ thoát khỏi lỗ liên hợp đi ngay sau động mạch đốt sống rồi nằm lọt trong máng xương giữa củ trước và củ sau.",
+        "medialAndLateral": "Các ĐỘNG MẠCH RỄ TỦY (Radicular / Segmental medullary arteries tách từ động mạch đốt sống, cổ lên và cổ sâu) đi kèm sát rễ (đặc biệt tập trung ở mặt trước rễ!) để nối thẳng vào động mạch tủy sống trước – đây là cơ chế gây nhồi máu tủy cổ liệt tứ chi nếu tiêm steroid dạng hạt tinh thể vào mạch!"
+      },
+      "dangerCorridors": [
+        "BẮT BUỘC TUYỆT ĐỐI: Chỉ sử dụng Corticosteroid KHÔNG HẠT TINH THỂ tan hoàn toàn (Dexamethasone sodium phosphate), cấm dùng Triamcinolone hay Depo-Medrol ở vùng rễ cổ!",
+        "Luôn đi kim In-plane từ SAU RA TRƯỚC xuyên qua cơ bậc thang giữa dừng ở BỜ SAU rễ (có củ sau đỡ, tránh hoàn toàn mặt trước rễ, động mạch đốt sống và thần kinh hoành!)."
       ],
-      "probePlacement": "Đặt đầu dò Linear cắt ngang trục cổ (Short-axis axial view) tại bờ sau cơ SCM ngang mức sụn nhẫn: Xác định 'mốc neo C6' (củ trước Chassaignac nhô rất cao), trượt xuống C7 kiểm tra xác nhận hình thái 1 củ sau kèm động mạch đốt sống phía trước, rồi đếm ngược lên đúng tầng cần tiêm (C7 -> C6 -> C5); đi kim In-plane từ SAU RA TRƯỚC (Posterior-to-Anterior) qua cơ bậc thang giữa tới bờ sau rễ.",
       "figures": [
         {
-          "path": "assets/images/ch12_cervical_root/p157_img1.jpeg",
-          "figNumber": "12.3",
-          "title": "Nhận diện hình thái hai củ mấu ngang C5 và rễ thần kinh C5 ở cổ bên (Fig. 12.3)",
-          "desc": "Củ trước và củ sau C5 có độ cao tương đương tạo hình rãnh chữ U chứa rễ thần kinh C5 tròn giảm âm.",
-          "springerCaption": "Fig. 12.3 Transverse cervical scan of the C5 nerve root between symmetric anterior and posterior tubercles."
+          "path": "assets/images/external_anatomy/ext_sec_neck_c6_fascia_gray384.png",
+          "figNumber": "Gray 384",
+          "title": "Thiết đồ cắt ngang mức C6 chỉ rõ khe gian cơ bậc thang (Scalenus ant. & med.), mấu ngang và mạch đốt sống (Gray's Plate 384)",
+          "desc": "Trên thiết đồ ngang C6, thấy rõ đường kim từ sau ra trước xuyên qua cơ bậc thang giữa (Scalenus medius) vào bờ sau rãnh mấu ngang tránh hoàn toàn mạch đốt sống và bao cảnh ở phía trước.",
+          "atlasSource": "Gray's Anatomy (20th Ed., Plate 384) – Transverse section at C6 showing scalene muscles and vertebral vessels."
+        },
+        {
+          "path": "assets/images/external_anatomy/ext_sec_spinal_nerve_meninges_gray770.png",
+          "figNumber": "Gray 770",
+          "title": "Thiết đồ cắt ngang tủy sống, màng cứng, hạch gai và rễ thần kinh gai sống tại lỗ liên hợp (Gray's Plate 770)",
+          "desc": "Liên quan thiết đồ giữa bao màng cứng mở rộng tới hạch rễ sau (DRG) trong lỗ liên hợp và đoạn nhánh trước thoát ra rãnh mấu ngang.",
+          "atlasSource": "Gray's Anatomy (20th Ed., Plate 770) – Transverse section of medulla spinalis, meninges, and spinal nerve roots."
         }
       ]
     },
@@ -4263,52 +4617,61 @@ var STABLE_PROCEDURES_FALLBACK = [];
         "Cứng khớp cổ nặng hoặc tiền sử phẫu thuật hàn xương cổ lối sau làm mất mốc giải phẫu."
       ]
     },
-    "anatomy": {
-      "overview": "Mỗi khớp liên mấu cổ (Cervical Zygapophyseal / Facet Joint từ C3–C4 đến C6–C7) nhận chi phối thần kinh kép từ hai nhánh trong của ngành sau (Medial branches of dorsal rami) nằm ngay trên và ngay dưới khớp đó; ngoại trừ khớp C2–C3 được chi phối duy nhất bởi thần kinh chẩm thứ ba (Third Occipital Nerve - TON, nhánh nông ngành sau C3 vắt trực tiếp qua mặt ngoài khe khớp C2–C3). Các nhánh trong C3, C4, C5, C6 luôn ôm sát điểm lõm nhất ('eo thắt / centroid waist') ở chính giữa khối khớp bên (Articular pillar) tương ứng, nằm trong khoang cân sâu dưới cơ bán gai đầu (Semispinalis capitis); riêng nhánh C7 nằm cao hơn ở chân mỏm khớp trên C7 gần mỏm ngang C7.",
-      "targetStructure": "Đáy xương hõm eo thắt chính giữa khối khớp bên (Waist of the articular pillar) của C3, C4, C5, C6; khe khớp lồi C2–C3 (cho TON); và mặt trên gốc mỏm ngang – mỏm khớp trên C7 (cho nhánh trong C7).",
-      "innervation": "Thần kinh chẩm thứ 3 (TON: khớp C2–C3 và đau đầu vùng chẩm dưới) và các nhánh trong C3–C7 (chi phối các khớp liên mấu cổ C3–T1 cùng cơ nhiều chân cổ).",
-      "vascularAndDangerZones": [
-        "Động mạch cổ sâu (Deep cervical artery) và các nhánh động mạch đốt sống chạy dọc sát cột khớp bên hoặc băng qua thung lũng eo khớp ở ~10–15% các tầng – BẮT BUỘC bật Color Doppler kiểm tra trên cả mặt cắt dọc và ngang trước khi chọc!",
-        "Rễ thần kinh cổ và động mạch đốt sống nằm ở PHÍA TRƯỚC (Anterior) cột khớp bên: Khi đi kim trên mặt cắt ngang từ sau ra trước, mũi kim tuyệt đối KHÔNG ĐƯỢC trượt vượt quá bờ trước của khối khớp bên!",
-        "Ống sống cổ ở phía trong nếu đi kim chệch vào khe bản sống."
+    "surfaceAnatomy": {
+      "sourceRef": "Gray's Anatomy (42nd Ed.) – Posterior Cervical Articular Pillars & Mastoid Line",
+      "surfaceLandmarks": [
+        "Đỉnh mỏm chũm xương thái dương (Tip of mastoid process) phía sau tai.",
+        "Mỏm gai C2 (ở hõm gáy trên) và Mỏm gai lồi C7 (Vertebra prominens – mỏm gai nhô to nhất ở nền cổ sau).",
+        "Rãnh khối khớp bên cổ (Cervical articular pillar furrow): Dải xương cứng sờ thấy sâu cách đường giữa mỏm gai ~2.0 – 2.5 cm sang bên (ngay sau bờ sau cơ ức đòn chũm)."
+      ],
+      "surfaceProjections": "Đường thẳng đứng kẻ từ bờ sau đỉnh mỏm chũm thẳng xuống nền cổ bên (theo mặt phẳng trán giữa cổ) đi dọc qua chính tâm chuỗi KHỐI KHỚP BÊN (Articular pillars) từ khớp C2–C3 (nơi thần kinh chẩm thứ 3 TON băng ngang cách dưới mỏm chũm ~2.5 – 3 cm) xuống C3, C4, C5, C6 và gốc mỏm ngang C7.",
+      "palpationSteps": [
+        "1. Đặt bệnh nhân nằm nghiêng thẳng trục sang bên lành (giữ cổ trung tính song song mặt bàn).",
+        "2. Sờ đỉnh mỏm chũm ở trên và mỏm gai C7 ở dưới nền cổ sau để xác định chiều dài đoạn cổ.",
+        "3. Dùng hai đầu ngón tay ấn sâu dọc theo dải cột khớp bên cách đường giữa sau ~2.5 cm để tìm các tầng khớp liên mấu ấn đau chói quy chiếu điển hình."
       ],
       "figures": [
         {
-          "path": "assets/images/anatomy/fig_13_01_cervical_mb_ton_anatomy.jpg",
-          "figNumber": "13.1",
-          "title": "Giải phẫu nhánh trong cột sống cổ và thần kinh chẩm thứ 3 (TON) ôm quanh eo cột khớp bên (Fig. 13.1)",
-          "desc": "(a) Thiết đồ ngang đốt sống C5 chỉ đường đi nhánh trong ngành sau (2) vòng qua eo khối khớp bên; (b) Hình chiếu bên các nhánh C3–C7 và TON qua khớp C2–C3.",
-          "springerCaption": "Fig. 13.1 Anatomy of cervical medial branches and third occipital nerve (TON) along the articular pillars."
-        },
-        {
-          "path": "assets/images/anatomy/fig_13_02_cervical_facet_referral.jpg",
-          "figNumber": "13.2",
-          "title": "Bản đồ vùng đau quy chiếu theo tầng của các khớp liên mấu cột sống cổ C2–C7 (Fig. 13.2)",
-          "desc": "Sơ đồ Dwyer-Bogduk kinh điển giúp chọn đúng tầng nhánh trong cần phong bế dựa theo vị trí lan đau vùng cổ - gáy - bả vai.",
-          "springerCaption": "Fig. 13.2 Segmental pain referral patterns for cervical zygapophyseal joints (Dwyer, Aprill & Bogduk)."
+          "path": "assets/images/external_anatomy/ext_surf_neck_lateral_gray1194.png",
+          "figNumber": "Gray 1194",
+          "title": "Giải phẫu bề mặt vùng cổ bên - sau: Trục dọc từ mỏm chũm xuống nền cổ qua chuỗi cột khớp bên (Gray's Plate 1194)",
+          "desc": "Đường chiếu từ sau mỏm chũm dọc sau bờ cơ ức đòn chũm tương ứng chuỗi khối khớp bên C2–C7.",
+          "atlasSource": "Gray's Anatomy (20th Ed., Plate 1194) – Lateral neck surface topography."
         }
       ]
     },
-    "surfaceAnatomy": {
-      "bonyLandmarks": [
-        "Mỏm chũm xương thái dương (Mastoid process): Mốc khởi điểm cực kỳ quan trọng trên đường nách trước cổ bên.",
-        "Mỏm ngang C1 (nằm ngay giữa đỉnh mỏm chũm và góc hàm dưới).",
-        "Dải cột khớp bên cổ (Cervical articular pillars) nằm dọc sau bờ sau cơ ức đòn chũm và mỏm gai C7 (Vertebra prominens) ở nền cổ sau."
+    "crossSectionalAnatomy": {
+      "sourceRef": "Gray's Anatomy (Plates 384, 799) – Axial Cross-Section of Cervical Articular Pillar & Posterior Rami",
+      "sectionPlane": "Thiết đồ cắt ngang cổ qua eo thắt khối khớp bên (Axial Section through Cervical Articular Pillar Waist) phối hợp Thiết đồ dọc trán (Coronal Pillar Scan).",
+      "layeredStructure": [
+        "Lớp 1 – Da và mô mỡ dưới da vùng cổ bên – sau.",
+        "Lớp 2 – Cơ thang (ở sau), Cơ gối đầu & gối cổ (Splenius capitis & cervicis) và Cơ nâng vai (Levator scapulae – ở phía bên ngoài).",
+        "Lớp 3 – Cơ bán gai đầu (Semispinalis capitis – tạo vòm mái cơ dày phủ trực tiếp lên rãnh nhánh trong!).",
+        "Lớp 4 – KHOANG ĐÍCH: Mặt phẳng cân mỏng chứa NHÁNH TRONG NGÀNH SAU (Cervical medial branch, đường kính ~0.8 – 1.2 mm) và THẦN KINH CHẨM THỨ BA (TON tại khe C2–C3, ~1.5 mm) ôm sát rãnh lõm màng xương giữa cơ bán gai đầu (ở nông) và gân cơ bán gai cổ / nhiều chân (ở trong sâu).",
+        "Lớp 5 (Đáy thiết đồ) – Vỏ xương lõm chính giữa ('Waist / Centroid') mặt ngoài khối khớp bên của đốt sống cổ tương ứng!"
       ],
-      "referenceLines": "Đường mặt phẳng trán bên cổ (Lateral coronal line) kẻ thẳng từ đỉnh mỏm chũm xuống nền cổ đi dọc qua toàn bộ chuỗi cột khớp bên C2–C7 (tạo hình 'làn sóng hình sin / ngọn đồi – thung lũng' đặc trưng trên siêu âm).",
-      "palpationSteps": [
-        "1. Đặt bệnh nhân nằm nghiêng hoàn toàn sang bên lành (Lateral decubitus position), kê gối dưới đầu sao cho cột sống cổ thẳng trục ngang không gập bên.",
-        "2. Sờ rõ đỉnh mỏm chũm sau tai và dùng hai ngón tay ấn sâu dọc mặt bên – sau cổ từ dưới mỏm chũm xuống nền cổ để cảm nhận dải xương cứng liên tục của các khối khớp bên và điểm ấn đau khu trú từng tầng.",
-        "3. Đánh dấu bờ sau cơ ức đòn chũm để xác định cửa sổ quét mặt bên cổ."
+      "topographicRelations": {
+        "superficialAndDeep": "Mặt ngoài khối khớp bên (Lớp 5) tạo một bức tường xương liên tục an toàn đỡ ngay dưới đầu kim.",
+        "medialAndLateral": "Ngay PHÍA TRƯỚC bờ trước khối khớp bên (< 5 – 8 mm) là lỗ ngang chứa ĐỘNG MẠCH ĐỐT SỐNG và rễ thần kinh cổ; ngay PHÍA TRONG (sâu về phía mỏm gai) là mảnh cung sống và ống sống cổ; chạy dọc sát mặt ngoài cột khớp bên có ĐỘNG MẠCH CỔ SÂU (Deep cervical artery)!"
+      },
+      "dangerCorridors": [
+        "Trên thiết đồ cắt ngang đi kim từ SAU RA TRƯỚC: Mũi kim bắt buộc dừng trên phần giữa mặt ngoài khối khớp bên, TUYỆT ĐỐI KHÔNG trượt vượt quá bờ trước khối khớp bên (nơi có động mạch đốt sống và rễ cổ)!",
+        "Quét Color Doppler tại đáy thung lũng eo khớp trên mặt cắt dọc trước khi chọc để loại trừ nhánh động mạch cổ sâu nằm ngay điểm đích."
       ],
-      "probePlacement": "Đếm tầng chuẩn xác bằng mặt cắt dọc trán (Coronal scan từ trên xuống hoặc từ dưới lên theo Finlayson & Peng): Đặt đầu dò Linear dọc ngay dưới đỉnh mỏm chũm -> dịch nhẹ xuống và ra sau tìm bậc hẫng C2–C3 (khớp liên mấu cao nhất có hình gợn sóng lồi lên, phía trên C2 dốc hẫng sâu xuống) rồi đếm từng 'đỉnh đồi' (khe khớp C2/3, C3/4, C4/5, C5/6) và 'đáy thung lũng' (eo khối khớp C3, C4, C5, C6); hoặc kiểm chứng từ dưới lên bằng mỏm ngang T1 vuông rộng có xương sườn 1 -> C7. Sau khi định tâm đúng đáy thung lũng, xoay đầu dò 90 độ sang mặt cắt ngang để đi kim từ sau ra trước.",
       "figures": [
         {
-          "path": "assets/images/anatomy/fig_13_03_cervical_coronal_scan.jpg",
-          "figNumber": "13.3",
-          "title": "Đặt đầu dò mặt phẳng trán dọc cổ bên đếm chuỗi 'đồi - thung lũng' khối khớp bên (Fig. 13.3)",
-          "desc": "Đặt đầu dò dọc mặt bên cổ hiển thị dải lượn sóng hình sin: đỉnh lồi là khe khớp liên mấu, đáy lõm là eo khối khớp nơi nhánh trong đi qua.",
-          "springerCaption": "Fig. 13.3 Coronal scan of the cervical spine demonstrating the sinusoidal contour of the articular pillars."
+          "path": "assets/images/external_anatomy/ext_sec_spinal_nerve_branches_gray799.png",
+          "figNumber": "Gray 799",
+          "title": "Thiết đồ cắt ngang nguyên lý phân chia dây thần kinh gai sống: Ngành trước, Ngành sau (Nhánh trong & Nhánh ngoài) (Gray's Plate 799)",
+          "desc": "Sơ đồ cắt ngang kinh điển của Gray chỉ rõ ngành sau tách ngay sau lỗ liên hợp rồi chia nhánh trong (Medial branch) ôm sát khối khớp liên mấu đi vào cơ sâu.",
+          "atlasSource": "Gray's Anatomy (20th Ed., Plate 799) – Transverse scheme of spinal nerve, dorsal ramus, and medial/lateral branches."
+        },
+        {
+          "path": "assets/images/external_anatomy/ext_sec_neck_c6_fascia_gray384.png",
+          "figNumber": "Gray 384",
+          "title": "Thiết đồ cắt ngang các lớp cơ cổ sau (Trapezius, Splenius, Levator scapulae, Semispinalis capitis & colli) phủ trên khối khớp bên (Gray's Plate 384)",
+          "desc": "Nửa dưới thiết đồ ngang C6 hiển thị chính xác thứ tự các lớp cơ gáy phủ ngoài cột khớp bên và khoang cân dưới cơ bán gai đầu (Semispinalis capitis).",
+          "atlasSource": "Gray's Anatomy (20th Ed., Plate 384) – Posterior cervical muscle planes overlying the articular pillar."
         }
       ]
     },
@@ -4399,52 +4762,62 @@ var STABLE_PROCEDURES_FALLBACK = [];
         "Dị ứng thuốc tê."
       ]
     },
-    "anatomy": {
-      "overview": "Thần kinh sinh dục đùi (Genitofemoral Nerve - GFN, rễ L1, L2) đâm xuyên qua mặt trước cơ thắt lưng lớn (Psoas major) rồi chia làm hai nhánh tận phía trên dây chằng bẹn: (1) Nhánh đùi (Femoral branch) đi kèm bờ ngoài động mạch chậu ngoài qua dưới dây chằng bẹn cảm giác vùng da tam giác đùi trên; và (2) Nhánh sinh dục (Genital branch – đích lâm sàng chính trong đau bẹn bìu/môi lớn mạn tính sau mổ thoát vị bẹn!) đi vòng sát động mạch chậu ngoài và gốc động mạch thượng vị dưới chui qua LỖ BẸN SÂU (Deep inguinal ring) đi vào trong ỐNG BẸN (Inguinal canal), nằm sát mặt sau dưới của thừng tinh (Spermatic cord ở nam) hoặc dây chằng tròn (Round ligament ở nữ).",
-      "targetStructure": "Bên trong và ngay sát bao mạc tinh trong của ống bẹn (Inguinal canal around/deep to spermatic cord or round ligament) ngay phía trên ngoài củ mu hoặc tại lỗ bẹn sâu phía trên động mạch chậu ngoài.",
-      "innervation": "Nhánh sinh dục GFN vận động cơ bìu (phản xạ da bìu Cremasteric reflex) và cảm giác da bìu trước / môi lớn; nhánh đùi cảm giác vùng da tam giác Scarpa ngay dưới dây chằng bẹn.",
-      "vascularAndDangerZones": [
-        "Động mạch chậu ngoài / Động mạch đùi (External iliac / Femoral artery) nằm ngay mặt sâu của lỗ bẹn sâu VÀ gốc ĐỘNG MẠCH THƯỢNG VỊ DƯỚI (Inferior epigastric artery – mốc 'vương miện' tách từ mặt trước trong động mạch chậu ngoài quặt lên thành bụng ngay bờ trong lỗ bẹn sâu!) – BẮT BUỘC bật Color Doppler nhận diện hai mạch này!",
-        "Ống dẫn tinh (Vas deferens – cấu trúc thành cơ rất dày không xẹp) và động mạch tinh hoàn / đám rối tĩnh mạch hình dây leo bên trong thừng tinh ở nam giới: Tuyệt đối dùng kim mảnh 25G bơm tách nhẹ quanh bao, không chọc nát ống dẫn tinh hay động mạch tinh!",
-        "Túi phúc mạc / thoát vị bẹn gián tiếp nếu bệnh nhân còn túi thoát vị."
+    "surfaceAnatomy": {
+      "sourceRef": "Gray's Anatomy (42nd Ed., Plate 1227) – Surface Markings of Deep & Superficial Inguinal Rings",
+      "surfaceLandmarks": [
+        "Củ mu (Pubic tubercle): Gồ xương nhỏ cách đường giữa khớp mu ~2.0 – 2.5 cm sang bên.",
+        "Gai chậu trước trên (ASIS) ở phía ngoài và Dây chằng bẹn nối giữa hai mốc.",
+        "Điểm giữa bẹn (Mid-inguinal point): Nơi bắt mạch đập động mạch chậu ngoài – đùi."
+      ],
+      "surfaceProjections": "Bản đồ chiếu bề mặt ống bẹn kinh điển (Gray's Plate 1227): (1) LỖ BẸN SÂU (Deep / Abdominal inguinal ring) chiếu lên da thành một hình bầu dục nằm CAO HƠN dây chằng bẹn ~1.2 – 1.5 cm ngay tại điểm giữa bẹn (ngay phía NGOÀI đường chiếu động mạch thượng vị dưới!); (2) LỖ BẸN NÔNG (Superficial / Subcutaneous inguinal ring) nằm ngay phía TRÊN – NGOÀI củ mu; (3) Ống bẹn dài ~4 cm nối chéo hai lỗ này chứa thừng tinh (nam) / dây chằng tròn (nữ) và NHÁNH SINH DỤC THẦN KINH SINH DỤC ĐÙI!",
+      "palpationSteps": [
+        "1. Bệnh nhân nằm ngửa, che chắn bộ phận sinh dục, bộc lộ vùng trên xương mu và nếp bẹn.",
+        "2. Bắt mạch đập động mạch đùi ở điểm giữa bẹn và đánh dấu điểm nằm ngay phía trên mạch đập 1.5 cm (vị trí lỗ bẹn sâu).",
+        "3. Sờ dọc mào xương mu ra ngoài 2 cm chạm củ mu; sờ nhẹ thừng tinh lăn tròn ngay phía trên ngoài củ mu."
       ],
       "figures": [
         {
-          "path": "assets/images/anatomy/fig_07_01_genitofemoral_anatomy.jpg",
-          "figNumber": "7.1",
-          "title": "Giải phẫu nguyên ủy và phân chia nhánh sinh dục - nhánh đùi của thần kinh sinh dục đùi (Fig. 7.1)",
-          "desc": "Thần kinh sinh dục đùi đi dọc mặt trước cơ thắt lưng lớn rồi tách nhánh đùi (theo động mạch đùi) và nhánh sinh dục (chui vào ống bẹn).",
-          "springerCaption": "Fig. 7.1 Anatomical course of the genital and femoral branches of the genitofemoral nerve."
-        },
-        {
-          "path": "assets/images/anatomy/fig_07_02_genitofemoral_dermatome.jpg",
-          "figNumber": "7.2",
-          "title": "Bản đồ vùng da chi phối cảm giác của nhánh sinh dục và nhánh đùi thần kinh GFN (Fig. 7.2)",
-          "desc": "Phân bố cảm giác biệt lập ở vùng bìu/môi lớn (nhánh sinh dục) và tam giác đùi trước trên (nhánh đùi).",
-          "springerCaption": "Fig. 7.2 Cutaneous innervation of the genital and femoral branches of the genitofemoral nerve."
+          "path": "assets/images/external_anatomy/ext_surf_inguinal_ring_gray1227.png",
+          "figNumber": "Gray 1227",
+          "title": "Giải phẫu bề mặt kinh điển của ống bẹn: Lỗ bẹn sâu, Lỗ bẹn nông, Vòng đùi và Động mạch thượng vị dưới (Gray's Plate 1227)",
+          "desc": "Sơ đồ định khu bề mặt hoàn hảo chỉ rõ vị trí Lỗ bẹn sâu (Abdominal inguinal ring) nằm ngay ngoài gốc động mạch thượng vị dưới và ống bẹn chạy chéo xuống củ mu.",
+          "atlasSource": "Gray's Anatomy (20th Ed., Plate 1227) – Surface projections of the abdominal inguinal ring, inguinal canal, subcutaneous ring, and inferior epigastric artery."
         }
       ]
     },
-    "surfaceAnatomy": {
-      "bonyLandmarks": [
-        "Củ mu (Pubic tubercle - PT): Gồ xương nhỏ nhô ra cách đường giữa khớp mu khoảng 2 - 2.5 cm sang bên trên bờ trên xương mu.",
-        "Gai chậu trước trên (ASIS) ở phía ngoài.",
-        "Mạch đập động mạch đùi (Femoral artery pulse) tại điểm giữa bẹn."
+    "crossSectionalAnatomy": {
+      "sourceRef": "Gray's Anatomy (Plates 546, 1146) – Cross-Sectional Anatomy of the Inguinal Canal & Spermatic Cord",
+      "sectionPlane": "Thiết đồ cắt ngang vuông góc trục ống bẹn (Short-axis Section of Inguinal Canal) ngay phía ngoài củ mu và tại lỗ bẹn sâu.",
+      "layeredStructure": [
+        "Lớp 1 – Da vùng bẹn – trên mu, lớp mỡ Camper và mạc màng Scarpa.",
+        "Lớp 2 – Thành trước ống bẹn: Lá cân cơ chéo bụng ngoài (External oblique aponeurosis; ở 1/3 ngoài có thêm thớ cơ chéo bụng trong).",
+        "Lớp 3 – Bao thừng tinh ngoài, Cơ bìu & mạc cơ bìu (Cremasteric muscle & fascia) và Mạc tinh trong (Internal spermatic fascia).",
+        "Lớp 4 – KHOANG ĐÍCH: Mặt phẳng sâu bên trong/quanh bao mạc tinh trong của ống bẹn – nơi NHÁNH SINH DỤC THẦN KINH SINH DỤC ĐÙI (Genital branch of GFN, L1–L2) chạy dọc ở bờ sau – dưới thừng tinh (hoặc dây chằng tròn tử cung ở nữ); trong khi thần kinh chậu bẹn nằm ở mặt trước nông ngoài mạc tinh trong!",
+        "Lớp 5 – Các thành phần bên trong thừng tinh ở nam giới: Ống dẫn tinh (Ductus/Vas deferens – thành cơ cực dày tròn không xẹp), Động mạch tinh hoàn, động mạch ống dẫn tinh, động mạch cơ bìu và đám rối tĩnh mạch hình dây leo (Pampiniform plexus).",
+        "Lớp 6 (Đáy / Thành sau ống bẹn) – Mạc ngang (Transversalis fascia), liềm bẹn ở trong, và ngay phía dưới sâu tại lỗ bẹn sâu là ĐỘNG MẠCH CHẬU NGOÀI tách ra ĐỘNG MẠCH THƯỢNG VỊ DƯỚI ở bờ trong lỗ bẹn sâu!"
       ],
-      "referenceLines": "Đường dây chằng bẹn nối ASIS – Củ mu: Lỗ bẹn sâu (Internal inguinal ring) nằm ngay phía TRÊN điểm giữa bẹn khoảng 1.5 - 2 cm (ngay phía ngoài gốc động mạch thượng vị dưới); ống bẹn chạy chéo từ lỗ bẹn sâu xuống trong tới lỗ bẹn nông ngay phía trên – ngoài củ mu.",
-      "palpationSteps": [
-        "1. Bệnh nhân nằm ngửa thoải mái, che phủ kín đáo bộ phận sinh dục, bộc lộ vùng hạ vị – nếp bẹn và bờ trên xương mu.",
-        "2. Bắt mạch đập động mạch đùi ngay tại nếp bẹn để xác định vị trí lỗ bẹn sâu ở ngay phía trên động mạch chậu ngoài – đùi.",
-        "3. Dùng ngón trỏ sờ dọc bờ trên khớp mu từ đường giữa sang bên 2 cm để chạm củ mu (Pubic tubercle); ở nam giới có thể sờ thấy thừng tinh lăn tròn ngay phía trên ngoài củ mu."
+      "topographicRelations": {
+        "superficialAndDeep": "Tại lỗ bẹn sâu, ống bẹn nằm ngay PHÍA TRƯỚC (nông hơn) động mạch và tĩnh mạch chậu ngoài; đi xuống gần củ mu, sàn dưới ống bẹn là rãnh dây chằng bẹn và xương mu.",
+        "medialAndLateral": "Bờ TRONG lỗ bẹn sâu có thân ĐỘNG MẠCH THƯỢNG VỊ DƯỚI chạy ngược chéo lên thành bụng sâu (mốc 'Crown sign' kinh điển trên Doppler màu giúp xác định chính xác lỗ bẹn sâu!)."
+      },
+      "dangerCorridors": [
+        "Ở bệnh nhân nam: Dùng kim nhỏ 25G bơm tách nhẹ nhàng quanh rìa bao mạc tinh trong (hoặc phong bế tại lỗ bẹn sâu ngay khi nhánh sinh dục vừa tách trên động mạch chậu ngoài), tuyệt đối KHÔNG chọc đi chọc lại xuyên thủng ống dẫn tinh hay động mạch tinh hoàn!",
+        "Bật Color Doppler định vị động mạch chậu ngoài ở đáy và động mạch thượng vị dưới ở bờ trong trước khi chọc kim."
       ],
-      "probePlacement": "Ba phương pháp quét chuẩn Philip Peng (ưu tiên kết hợp): Đặt đầu dò Linear tần số cao dọc theo trục động mạch đùi trượt lên trên dây chằng bẹn rồi xoay ngang tìm ống bẹn hình bầu dục nằm nông phía trước động mạch chậu ngoài (nơi động mạch thượng vị dưới tách ra), HOẶC đặt đầu dò ngang trên củ mu rồi dịch nhẹ ra ngoài ~1 - 2 cm để thấy thiết đồ cắt ngang rõ nét của thừng tinh / dây chằng tròn.",
       "figures": [
         {
-          "path": "assets/images/anatomy/fig_07_07_pubic_tubercle_probe.jpg",
-          "figNumber": "7.7",
-          "title": "Đặt đầu dò ngang tại và ngay phía ngoài củ mu (PT) định vị thừng tinh và ống bẹn (Fig. 7.7)",
-          "desc": "Đặt đầu dò tại mốc xương củ mu (PT) rồi dịch nhẹ ra phía ngoài giúp nhận diện ngay thừng tinh chứa nhiều cấu trúc ống tròn bên trong ống bẹn.",
-          "springerCaption": "Fig. 7.7 Ultrasound probe position at and just lateral to the pubic tubercle (PT) showing the spermatic cord."
+          "path": "assets/images/external_anatomy/ext_sec_spermatic_cord_section_gray1146.png",
+          "figNumber": "Gray 1146",
+          "title": "Thiết đồ cắt lớp ống bẹn, các lớp bao thừng tinh, ống dẫn tinh và các mạch máu bên trong (Gray's Plate 1146)",
+          "desc": "Cấu trúc các lớp bao đồng tâm của ống bẹn - thừng tinh từ cân cơ chéo ngoài, cơ bìu, mạc tinh trong tới ống dẫn tinh và mạch tinh.",
+          "atlasSource": "Gray's Anatomy (20th Ed., Plate 1146) – Sectional anatomy of the inguinal canal and coverings of the spermatic cord."
+        },
+        {
+          "path": "assets/images/external_anatomy/ext_sec_inguinal_canal_layers_gray546.png",
+          "figNumber": "Gray 546",
+          "title": "Thiết đồ mặt sau lỗ bẹn sâu: Tương quan động mạch chậu ngoài, gốc động mạch thượng vị dưới và thừng tinh (Gray's Plate 546)",
+          "desc": "Mối liên quan giải phẫu sống còn tại lỗ bẹn sâu: động mạch thượng vị dưới quặt lên ngay bờ trong chỗ thừng tinh và nhánh sinh dục GFN chui vào ống bẹn.",
+          "atlasSource": "Gray's Anatomy (20th Ed., Plate 546) – Internal view of deep inguinal ring, external iliac artery, and inferior epigastric artery."
         }
       ]
     },
@@ -4533,45 +4906,61 @@ var STABLE_PROCEDURES_FALLBACK = [];
         "Bệnh nhân béo phì độ III (mốc xương quá sâu khó nhìn rõ trên siêu âm)."
       ]
     },
-    "anatomy": {
-      "overview": "Cơ bịt trong (Obturator Internus muscle - OI) có phần bụng trong chậu bám vào màng bịt và khung xương quanh lỗ bịt, sau đó các thớ gân quặt góc vuông 90 độ đi qua khuyết ngồi bé (Lesser sciatic notch – có bao hoạt dịch cơ bịt trong đệm sát ròng rọc xương ngồi ngay dưới gai ngồi) để ra vùng mông sâu. Ở ngoài chậu, gân cơ bịt trong kẹp giữa cơ sinh đôi trên (Superior gemellus - ở bờ trên) và cơ sinh đôi dưới (Inferior gemellus - ở bờ dưới) tạo thành phức hợp tam đầu hông (Triceps coxae) chạy ngang bám vào mặt trong mấu chuyển lớn, nằm ngay mặt sâu của dây thần kinh tọa!",
-      "targetStructure": "Gân/cơ bịt trong ngoài chậu (tại mặt sau xương ngồi ngay dưới mức gai ngồi) hoặc bao hoạt dịch cơ bịt trong tại khuyết ngồi bé (luôn giữ mũi kim chạm lên bản xương ngồi làm điểm tựa an toàn).",
-      "innervation": "Thần kinh cơ bịt trong (Nerve to obturator internus - L5, S1, S2) đi vòng qua gai ngồi cùng bó mạch thẹn.",
-      "vascularAndDangerZones": [
-        "Dây thần kinh tọa (Sciatic nerve): Nằm ngay mặt NÔNG (phía sau) vắt ngang qua trên mặt lưng của gân cơ bịt trong – sinh đôi! Bắt buộc nhận diện thần kinh tọa trên siêu âm và đi kim tránh hoàn toàn đường đi của thần kinh tọa.",
-        "Bó mạch thẹn trong và thần kinh thẹn (Internal pudendal vessels & Pudendal nerve): Uốn vòng qua đỉnh gai ngồi rồi chui ngay vào khuyết ngồi bé (ống Alcock) ở phía TRONG của cơ bịt trong – không đâm kim lệch vào bờ trong gai ngồi!",
-        "Trực tràng nằm sâu trong hố ngồi – trực tràng nếu kim đi vượt quá bờ xương ngồi."
+    "surfaceAnatomy": {
+      "sourceRef": "Gray's Anatomy (42nd Ed., Plate 1244) – Ischial Spine & Lesser Sciatic Foramen Surface Markings",
+      "surfaceLandmarks": [
+        "Gai chậu sau trên (PSIS) ở góc trên trong mông.",
+        "Ụ ngồi (Ischial tuberosity): Khối xương lồi rõ khi ấn sâu vào phần trong nếp lằn mông.",
+        "Đỉnh mấu chuyển lớn xương đùi (Greater trochanter) ở mặt bên."
+      ],
+      "surfaceProjections": "Trên đường thẳng nối từ PSIS xuống bờ ngoài ụ ngồi (Gray's Plate 1244): Điểm nối 1/3 dưới và 2/3 trên là hình chiếu của ĐỈNH GAI NGỒI; ngay phía dưới mốc này 1.0 – 2.0 cm (tức cao hơn bờ trên ụ ngồi ~2.0 – 2.5 cm) chính là KHUYẾT NGỒI BÉ (Lesser sciatic notch) – nơi gân cơ bịt trong và bao hoạt dịch cơ bịt trong quặt góc 90° đi ngang ra hố mấu chuyển!",
+      "palpationSteps": [
+        "1. Bệnh nhân nằm sấp cân đối trên bàn.",
+        "2. Dùng ngón cái ấn sâu xác định rõ đỉnh và bờ trên ụ ngồi ở nếp lằn mông dưới.",
+        "3. Dịch ngón cái thẳng lên trên dọc trụ xương ngồi 2 – 2.5 cm và kẻ đường ngang nối ra hố trong mấu chuyển lớn để xác định trục ngang của phức hợp tam đầu hông (Gemelli – Obturator internus)."
       ],
       "figures": [
         {
-          "path": "assets/images/anatomy/fig_08_11_deep_gluteal_muscles.jpg",
-          "figNumber": "8.11",
-          "title": "Giải phẫu chuỗi cơ xoay ngoài khoang mông sâu: Hình lê, Sinh đôi - Bịt trong và Vuông đùi (Fig. 8.11)",
-          "desc": "Thứ tự từ trên xuống dưới ở khoang mông sâu: Cơ hình lê (1) -> Cơ sinh đôi trên, Cơ bịt trong, Cơ sinh đôi dưới -> Cơ vuông đùi (7), với dây thần kinh tọa chạy dọc phía sau.",
-          "springerCaption": "Fig. 8.11 Deep gluteal space muscles showing piriformis, gemelli-obturator internus complex, quadratus femoris, and sciatic nerve."
+          "path": "assets/images/external_anatomy/ext_surf_gluteal_sciatic_markings_gray1244.png",
+          "figNumber": "Gray 1244",
+          "title": "Giải phẫu bề mặt vùng mông dưới: Khuyết ngồi bé giữa gai ngồi và ụ ngồi trên đường đi thần kinh tọa (Gray's Plate 1244)",
+          "desc": "Vị trí khuyết ngồi bé nằm ngay dưới mốc động mạch thẹn trong (đỉnh gai ngồi) và ngay trên ụ ngồi, có dây thần kinh tọa vắt dọc phía sau.",
+          "atlasSource": "Gray's Anatomy (20th Ed., Plate 1244) – Surface projection of ischial spine, lesser sciatic notch, and sciatic nerve."
         }
       ]
     },
-    "surfaceAnatomy": {
-      "bonyLandmarks": [
-        "Gai chậu sau trên (PSIS) ở phía trên trong.",
-        "Ụ ngồi (Ischial tuberosity - IT): Khối xương tù lớn sờ rất rõ ở nếp lằn mông dưới.",
-        "Đỉnh mấu chuyển lớn (Greater trochanter - GT) ở phía ngoài."
+    "crossSectionalAnatomy": {
+      "sourceRef": "Gray's Anatomy (Plates 344, 434, 829) – Axial Section Through Lesser Sciatic Foramen & Obturator Internus",
+      "sectionPlane": "Thiết đồ cắt ngang (Axial Cross-Section) đi qua khuyết ngồi bé (dưới gai ngồi 1.5 cm) và cổ xương đùi / hố mấu chuyển.",
+      "layeredStructure": [
+        "Lớp 1 – Da và lớp mỡ dưới da vùng mông dưới.",
+        "Lớp 2 – Bụng dưới cơ mông lớn dày (Gluteus maximus) VÀ ở góc trong là dây chằng cùng – ụ ngồi (Sacrotuberous ligament).",
+        "Lớp 3 – MẶT PHẲNG THẦN KINH NGUY HIỂM PHÍA NÔNG: Dây thần kinh tọa (Sciatic nerve) và thần kinh bì đùi sau chạy dọc vắt trực tiếp lên MẶT SAU (mặt nông) của phức hợp gân cơ bịt trong – sinh đôi!",
+        "Lớp 4 – KHOANG ĐÍCH NGOÀI CHẬU: Gân cơ bịt trong dẹt sáng nằm kẹp giữa cơ sinh đôi trên và cơ sinh đôi dưới (phức hợp Triceps coxae dày chỉ ~6 – 10 mm) cùng bao hoạt dịch cơ bịt trong (Bursa of obturator internus) lót ngay chỗ gân uốn qua rãnh sụn khuyết ngồi bé.",
+        "Lớp 5 (Đáy thiết đồ) – Thân xương ngồi phẳng rộng (ở phần ngoài chậu làm tấm chắn xương!) VÀ ở phần trong chậu (mặt trong màng bịt – thành bên hố ngồi trực tràng) là bụng trong chậu của cơ bịt trong chứa ỐNG THẸN ALCOCK!"
       ],
-      "referenceLines": "Trên trục dọc từ PSIS xuống ụ ngồi: đi qua lần lượt cánh chậu (mức A) -> khuyết ngồi lớn / cơ hình lê (mức B) -> gai ngồi (mức C) -> khuyết ngồi bé / thân xương ngồi ngay trên ụ ngồi (mức D – chính là mức của cơ bịt trong!).",
-      "palpationSteps": [
-        "1. Bệnh nhân nằm sấp trên bàn thủ thuật, bàn chân thả lỏng tự nhiên hoặc gấp gối 90 độ để người phụ xoay nhẹ khớp háng khi cần kiểm tra chuyển động gân.",
-        "2. Dùng ngón cái ấn sâu vào nếp lằn mông để xác định rõ đỉnh ụ ngồi (Ischial tuberosity) ở phía dưới trong và mấu chuyển lớn ở phía ngoài.",
-        "3. Từ đỉnh ụ ngồi dịch ngón tay thẳng lên trên khoảng 2 - 3 cm dọc trụ xương ngồi: đây là mức khuyết ngồi bé nơi cơ bịt trong quặt góc đi ra phía mấu chuyển lớn."
+      "topographicRelations": {
+        "superficialAndDeep": "Khác hoàn toàn với cơ hình lê (nơi thần kinh tọa nằm SÂU dưới cơ hình lê), tại mức cơ bịt trong dây thần kinh tọa đã chui ra nằm NÔNG ngay phía sau đè lên gân cơ bịt trong! Còn phía sâu trước cơ bịt trong ngoài chậu là bản xương ngồi và mặt sau bao khớp háng.",
+        "medialAndLateral": "Phía TRONG khuyết ngồi bé (dọc cân mặt trong cơ bịt trong trong hố ngồi – trực tràng) là ống Alcock chứa bó mạch thẹn trong và thần kinh thẹn; phía NGOÀI là hố ngón tay mặt trong mấu chuyển lớn."
+      },
+      "dangerCorridors": [
+        "Dây thần kinh tọa nằm ngay PHÍA NÔNG (Lớp 3) chắn trên lưng cơ bịt trong: Bắt buộc định vị rõ bóng bầu dục của thần kinh tọa trên siêu âm và đi kim xiên từ phía trong hoặc phía ngoài tránh hoàn toàn đường đi của thần kinh tọa!",
+        "Luôn giữ mũi kim dừng trên nền xương ngồi phẳng (Lớp 5), không chọc lệch vào bờ trong khuyết ngồi bé vào ống Alcock / hố ngồi – trực tràng."
       ],
-      "probePlacement": "Quét trượt liên tục đầu dò Curvilinear 2-5 MHz từ trên xuống dưới (4 mức A -> B -> C -> D theo Philip Peng): từ gai ngồi (mức C, xương nhọn mảnh) trượt nhẹ xuống 1 - 2 cm tới khuyết ngồi bé (mức D, viền xương ngồi chuyển thành dải phẳng dài liên tục) sẽ thấy dải giảm âm dẹt có gân sáng ở giữa của cơ bịt trong nằm sát mặt xương ngồi dưới thần kinh tọa.",
       "figures": [
         {
-          "path": "assets/images/anatomy/fig_08_08_obturator_probe_levels.jpg",
-          "figNumber": "8.8",
-          "title": "Bốn mức trượt đầu dò bề mặt vùng mông (A–D) định vị chính xác cơ bịt trong tại khuyết ngồi bé (Fig. 8.8)",
-          "desc": "Sơ đồ 4 vị trí đặt đầu dò từ mào chậu (A), khuyết ngồi lớn (B), gai ngồi (C) xuống khuyết ngồi bé (D) để nhận diện viền xương đặc trưng của cơ bịt trong.",
-          "springerCaption": "Fig. 8.8 Four sequential probe positions (A–D) over the posterior pelvis to identify the obturator internus muscle."
+          "path": "assets/images/external_anatomy/ext_sec_gluteal_deep_muscles_gray434.png",
+          "figNumber": "Gray 434",
+          "title": "Giải phẫu cụm cơ tam đầu hông: Cơ sinh đôi trên - Gân cơ bịt trong - Cơ sinh đôi dưới qua khuyết ngồi bé (Gray's Plate 434)",
+          "desc": "Hình ảnh kinh điển hiển thị gân trắng của cơ bịt trong thoát qua khuyết ngồi bé kẹp giữa hai cơ sinh đôi ngay trên cơ vuông đùi.",
+          "atlasSource": "Gray's Anatomy (20th Ed., Plate 434) – Obturator internus and gemelli muscles exiting the lesser sciatic foramen."
+        },
+        {
+          "path": "assets/images/external_anatomy/ext_sec_pelvis_sacral_pudendal_gray829.png",
+          "figNumber": "Gray 829",
+          "title": "Thiết đồ thành bên chậu hông: Bụng trong chậu cơ bịt trong, đám rối cùng và đường đi thần kinh thẹn (Gray's Plate 829)",
+          "desc": "Nhìn từ mặt trong khung chậu thấy toàn bộ nguyên ủy rộng của cơ bịt trong trên màng bịt trước khi hội tụ chui qua khuyết ngồi bé.",
+          "atlasSource": "Gray's Anatomy (20th Ed., Plate 829) – Side wall of pelvis showing obturator internus, sacral and pudendal plexuses."
         }
       ]
     },
@@ -4660,43 +5049,61 @@ var STABLE_PROCEDURES_FALLBACK = [];
         "Rối loạn đông máu nặng."
       ]
     },
-    "anatomy": {
-      "overview": "Cơ vuông đùi (Quadratus Femoris - QF) là cơ phẳng hình chữ nhật nằm thấp nhất trong nhóm 6 cơ xoay ngoài ngắn vùng mông sâu (ngay dưới cơ sinh đôi dưới và ngay trên bờ trên cơ khép lớn Adductor magnus). Cơ nguyên ủy từ bờ ngoài ụ ngồi (Ischial tuberosity) chạy ngang ra ngoài bám vào củ cơ vuông trên mào gian mấu xương đùi (Quadrate tubercle on intertrochanteric crest). Cơ vuông đùi nằm lọt hoàn toàn bên trong 'khoang ngồi – đùi' (Ischiofemoral space – bình thường rộng ~20 mm) kẹp giữa ụ ngồi ở trong và mấu chuyển bé ở ngoài. Phía nông (sau) của QF là dây thần kinh tọa và cơ mông lớn; phía sâu (trước) của QF là gân cơ bịt ngoài và gân thắt lưng chậu.",
-      "targetStructure": " Trung tâm bụng cơ vuông đùi (Quadratus femoris muscle belly) nằm bên trong khoang xương giữa bờ ngoài ụ ngồi và mào gian mấu / mấu chuyển bé xương đùi.",
-      "innervation": "Thần kinh cơ vuông đùi (Nerve to quadratus femoris - L4, L5, S1) đi vào từ mặt sâu (mặt trước) của cơ vuông đùi đồng thời cho nhánh khớp chi phối bao khớp háng sau.",
-      "vascularAndDangerZones": [
-        "Dây thần kinh tọa (Sciatic nerve) và thần kinh bì đùi sau: Nằm ngay sát MẶT SAU (mặt nông) của cơ vuông đùi trên ranh giới với cơ mông lớn – BẮT BUỘC đi kim In-plane từ NGOÀI VÀO TRONG (từ phía mấu chuyển xương đùi luồn dưới thần kinh tọa vào bụng cơ QF), tuyệt đối không đâm xuyên qua dây thần kinh tọa!",
-        "Nhánh lên của động mạch mũ đùi trong (Medial circumflex femoral artery – nguồn cấp máu sống còn nuôi chỏm xương đùi!) xuất hiện ở bờ trên/mặt sâu cơ vuông đùi – bắt buộc bật Color Doppler kiểm tra trước khi bơm thuốc!"
+    "surfaceAnatomy": {
+      "sourceRef": "Gray's Anatomy (42nd Ed.) – Ischiofemoral Space & Gluteal Fold Surface Landmarks",
+      "surfaceLandmarks": [
+        "Bờ ngoài ụ ngồi (Lateral margin of ischial tuberosity): Sờ rõ ngay tại phần trong nếp lằn mông dưới.",
+        "Bờ sau dưới mấu chuyển lớn và mào gian mấu xương đùi (Intertrochanteric crest) ở phía ngoài.",
+        "Nếp lằn mông ngang (Gluteal fold – đánh dấu bờ dưới cơ mông lớn)."
+      ],
+      "surfaceProjections": "Khoang ngồi – đùi (Ischiofemoral space) chứa cơ vuông đùi chiếu thành một dải chữ nhật nằm ngang dài ~3 – 4 cm nối trực tiếp từ bờ ngoài ụ ngồi sang mặt sau đầu trên xương đùi (ngang mức mấu chuyển bé), nằm ngay cao hơn nếp lằn mông khoảng 1.0 – 2.0 cm. Điểm giữa đoạn nối ụ ngồi – mấu chuyển lớn chính là đường đi dọc của dây thần kinh tọa vắt ngang qua lưng cơ vuông đùi!",
+      "palpationSteps": [
+        "1. Đặt bệnh nhân nằm sấp với hai gót chân hơi xoay nhẹ vào trong (xoay trong khớp háng giúp mở rộng tối đa khoảng cách giữa ụ ngồi và mấu chuyển bé!).",
+        "2. Dùng ngón cái tay trong ấn giữ bờ ngoài ụ ngồi, ngón cái tay ngoài chạm bờ sau mấu chuyển lớn.",
+        "3. Ấn sâu vào điểm giữa hai ngón cái (đúng khoang ngồi – đùi) để kiểm tra điểm đau chói sâu đặc trưng của hội chứng chèn ép ngồi – đùi."
       ],
       "figures": [
         {
-          "path": "assets/images/anatomy/fig_08_11_deep_gluteal_muscles.jpg",
-          "figNumber": "8.11",
-          "title": "Giải phẫu cơ vuông đùi trong khoang ngồi - đùi và liên quan sát mặt sâu dây thần kinh tọa (Fig. 8.11)",
-          "desc": "Cơ vuông đùi (số 7) căng ngang giữa ụ ngồi và xương đùi, có dây thần kinh tọa chạy dọc đè trực tiếp lên mặt sau của cơ.",
-          "springerCaption": "Fig. 8.11 Anatomy of the quadratus femoris muscle (7) bridging the ischial tuberosity and proximal femur deep to the sciatic nerve."
+          "path": "assets/images/external_anatomy/ext_surf_lower_back_popliteal_gray1239.png",
+          "figNumber": "Gray 1239",
+          "title": "Giải phẫu bề mặt nếp lằn mông dưới, vùng ụ ngồi và bờ dưới cơ mông lớn (Gray's Plate 1239)",
+          "desc": "Định khu bề mặt nếp lằn mông nơi bờ dưới cơ mông lớn bắt chéo qua vùng ụ ngồi - đầu trên xương đùi.",
+          "atlasSource": "Gray's Anatomy (20th Ed., Plate 1239) – Surface anatomy of gluteal fold and proximal posterior thigh."
         }
       ]
     },
-    "surfaceAnatomy": {
-      "bonyLandmarks": [
-        "Ụ ngồi (Ischial tuberosity - IT): Mốc xương trong rõ rệt ngay tại nếp lằn mông.",
-        "Bờ sau dưới mấu chuyển lớn và mào gian mấu xương đùi (Greater trochanter & Intertrochanteric crest) ở phía ngoài."
+    "crossSectionalAnatomy": {
+      "sourceRef": "Gray's Anatomy (Plates 344, 434) – Transverse Sectional Anatomy of the Ischiofemoral Space",
+      "sectionPlane": "Thiết đồ cắt ngang (Axial / Transverse Cross-Section) đi ngang qua ụ ngồi (ở trong) và mào gian mấu / mấu chuyển bé xương đùi (ở ngoài).",
+      "layeredStructure": [
+        "Lớp 1 – Da và mô mỡ dưới da vùng nếp mông dưới.",
+        "Lớp 2 – Phần ba dưới của Cơ mông lớn (Gluteus maximus).",
+        "Lớp 3 – MẶT PHẲNG THẦN KINH SÁT MẶT SAU CƠ: Dây thần kinh tọa (Sciatic nerve) và thần kinh bì đùi sau chạy dọc đè trực tiếp lên mặt sau phần giữa của bụng cơ vuông đùi!",
+        "Lớp 4 – KHOANG ĐÍCH: Bụng cơ vuông đùi (Quadratus femoris muscle – dày ~10 – 15 mm) căng ngang lấp đầy khe xương giữa bờ ngoài ụ ngồi (trong) và củ cơ vuông trên mào gian mấu xương đùi (ngoài).",
+        "Lớp 5 (Đáy sâu phía trước thiết đồ) – Gân cơ bịt ngoài (Obturator externus tendon), nhánh sâu của ĐỘNG MẠCH MŨ ĐÙI TRONG (Medial circumflex femoral artery – động mạch chính cấp máu nuôi sống chỏm xương đùi!), và sâu hơn ở ngoài là mấu chuyển bé có gân thắt lưng chậu bám."
       ],
-      "referenceLines": "Đường nối ngang trực tiếp từ bờ ngoài ụ ngồi sang phần dưới mấu chuyển lớn xương đùi (ngang mức hoặc ngay trên nếp lằn mông 1 cm) trùng hoàn toàn với trục dài của cơ vuông đùi và khoang ngồi – đùi.",
-      "palpationSteps": [
-        "1. Bệnh nhân nằm sấp, bàn chân để trung tính hoặc hơi xoay ngoài nhẹ (làm hẹp nhẹ khoang ngồi – đùi để tái hiện điểm đau chèn ép Ischiofemoral impingement nếu cần khám đối chiếu, sau đó trả về trung tính/xoay trong nhẹ để mở rộng khoang khi tiêm).",
-        "2. Dùng ngón cái ấn xác định rõ bờ ngoài của ụ ngồi ở phía trong.",
-        "3. Tay kia sờ bờ sau dưới của mấu chuyển lớn xương đùi; ấn sâu vào khoảng hõm chính giữa hai mốc xương này sẽ chạm đúng vị trí khoang ngồi – đùi."
+      "topographicRelations": {
+        "superficialAndDeep": "Cơ vuông đùi bị kẹp giữa 'hai mặt phẳng mạch – thần kinh tối quan trọng': Mặt NÔNG (sau) là dây thần kinh tọa; mặt SÂU (trước) là nhánh sâu động mạch mũ đùi trong và thần kinh cơ vuông đùi!",
+        "medialAndLateral": "Đầu TRONG là ụ ngồi kèm nguyên ủy khối gân chung Hamstring (bán màng, bán gân, đầu dài nhị đầu); đầu NGOÀI là mào gian mấu và mấu chuyển bé xương đùi (bình thường khe xương ngồi – đùi rộng 18 – 23 mm; khi hẹp < 15 mm sẽ ép phù nề cơ vuông đùi và chèn thần kinh tọa)."
+      },
+      "dangerCorridors": [
+        "Hành lang đi kim BẮT BUỘC từ NGOÀI VÀO TRONG (Lateral-to-medial): Đâm kim từ phía sau ngoài mấu chuyển xương đùi đi chếch vào phần ngoài bụng cơ vuông đùi (luồn BÊN DƯỚI / PHÍA NGOÀI thần kinh tọa), tuyệt đối không đâm từ sau thẳng xuyên qua thần kinh tọa!",
+        "Không đâm xuyên quá mặt trước (Lớp 5) của cơ vuông đùi để bảo vệ tuyệt đối nhánh sâu động mạch mũ đùi trong nuôi chỏm xương đùi."
       ],
-      "probePlacement": "Đặt đầu dò Curvilinear 2-5 MHz nằm ngang (Transverse plane – song song trục dài cơ vuông đùi) nối bắc cầu giữa ụ ngồi (ở đầu trong màn hình) và mặt sau xương đùi / mấu chuyển bé (ở đầu ngoài màn hình).",
       "figures": [
         {
-          "path": "assets/images/ch8_pelvic_muscles/p114_img1.jpeg",
-          "figNumber": "8.12",
-          "title": "Vị trí đặt đầu dò ngang bắc cầu giữa ụ ngồi và xương đùi khảo sát cơ vuông đùi (Fig. 8.12)",
-          "desc": "Đầu dò đặt ngang mức ụ ngồi - mấu chuyển hiển thị cơ vuông đùi (QF) nằm giữa ụ ngồi (IT) và mào gian mấu (IC), ngay sâu dưới thần kinh tọa.",
-          "springerCaption": "Fig. 8.12 Transverse transducer placement bridging the ischial tuberosity and femur over the quadratus femoris."
+          "path": "assets/images/external_anatomy/ext_sec_gluteal_deep_muscles_gray434.png",
+          "figNumber": "Gray 434",
+          "title": "Giải phẫu cơ vuông đùi (Quadratus femoris) căng ngang giữa ụ ngồi và xương đùi trên cùng mặt phẳng các gân Hamstring (Gray's Plate 434)",
+          "desc": "Vị trí hình chữ nhật đặc trưng của cơ vuông đùi nằm giữa cơ sinh đôi dưới (ở trên) và bờ trên cơ khép lớn (ở dưới), nối bờ ngoài ụ ngồi sang mào gian mấu.",
+          "atlasSource": "Gray's Anatomy (20th Ed., Plate 434) – Quadratus femoris in the ischiofemoral interval."
+        },
+        {
+          "path": "assets/images/external_anatomy/ext_sec_thigh_cross_section_gray432.png",
+          "figNumber": "Gray 432",
+          "title": "Thiết đồ cắt ngang ngay dưới nếp mông chỉ rõ tương quan dây thần kinh tọa, thần kinh bì đùi sau và khối cơ sau (Gray's Plate 432)",
+          "desc": "Vị trí thiết đồ ngang của dây thần kinh tọa (Ischiadic N.) và thần kinh bì đùi sau nằm sát mặt phẳng cân sâu.",
+          "atlasSource": "Gray's Anatomy (20th Ed., Plate 432) – Cross-section of proximal thigh showing sciatic and posterior femoral cutaneous nerves."
         }
       ]
     },
@@ -4777,52 +5184,62 @@ var STABLE_PROCEDURES_FALLBACK = [];
         "Mang thai (cần cân nhắc kỹ)."
       ]
     },
-    "anatomy": {
-      "overview": "Thần kinh thẹn (Pudendal Nerve – nhánh trước rễ cùng S2, S3, S4) thoát khỏi chậu hông qua lỗ dưới cơ hình lê rồi ngay lập tức uốn vòng qua mặt sau ĐỈNH GAI NGỒI (Ischial spine) để kẹp vào trong 'gọng kìm dây chằng gian gai – ụ ngồi' (Interligamentous plane): phía trước (sâu) là dây chằng cùng – gai (Sacrospinous ligament - SSL, mỏng căng ngang bám vào đỉnh gai ngồi) và phía sau (nông) là dây chằng cùng – ụ ngồi (Sacrotuberous ligament - STL, rất dày chắc). Đây là vị trí bị kẹt chèn ép kinh điển nhất (> 70% ca đau thần kinh thẹn mạn tính), trước khi thần kinh chui qua khuyết ngồi bé vào ống thẹn (Alcock's canal) trong cân cơ bịt trong và chia 3 nhánh tận: thần kinh trực tràng dưới, thần kinh đáy chậu và thần kinh lưng dương vật / âm vật.",
-      "targetStructure": "Khoang gian dây chằng (Interligamentous plane) nằm giữa dây chằng cùng – ụ ngồi (STL - ở nông) và dây chằng cùng – gai (SSL - ở sâu), ngay phía TRONG (Medial) sát cạnh động mạch thẹn trong tại mức gai ngồi!",
-      "innervation": "Thần kinh thẹn (S2–S4) chi phối cảm giác và vận động cơ thắt vùng đáy chậu, hậu môn, bìu sau / môi lớn và dương vật / âm vật (đau tăng điển hình khi ngồi theo tiêu chuẩn Nantes).",
-      "vascularAndDangerZones": [
-        "Động mạch và tĩnh mạch thẹn trong (Internal pudendal artery & vein): Chạy song song ngay trong cùng khoang gian dây chằng cạnh đỉnh gai ngồi (thần kinh thẹn thường nằm phía TRONG động mạch ở ~75–80% ca hoặc chẻ nhánh hai bên mạch) – BẮT BUỘC bật Color Doppler nhận diện động mạch thẹn trong làm 'ngọn hải đăng' và tránh tiêm nội mạch!",
-        "Dây thần kinh tọa (Sciatic nerve) và thần kinh bì đùi sau: Nằm ở PHÍA NGOÀI (Lateral) trên lưng gai ngồi / xương ngồi! Đi kim hướng vào phía trong gai ngồi tránh xa thần kinh tọa tránh gây tê liệt chân!",
-        "Trực tràng và khoang chậu hông nằm ngay sâu dưới dây chằng cùng – gai (SSL): Dừng mũi kim ngay khi vừa bật qua dây chằng cùng – ụ ngồi (STL) và thấy dịch tách đôi hai lá dây chằng, tuyệt đối không đâm xuyên qua SSL!"
+    "surfaceAnatomy": {
+      "sourceRef": "Gray's Anatomy (42nd Ed., Plate 1244) – Surface Marking of Internal Pudendal Vessels & Ischial Spine",
+      "surfaceLandmarks": [
+        "Gai chậu sau trên (PSIS) ở góc trên trong mông.",
+        "Ụ ngồi (Ischial tuberosity) ở phần trong nếp lằn mông dưới.",
+        "Đỉnh mấu chuyển lớn xương đùi (Greater trochanter) ở mặt bên."
+      ],
+      "surfaceProjections": "Định khu bề mặt ĐỈNH GAI NGỒI và BÓ MẠCH – THẦN KINH THẸN kinh điển của Gray (Gray's Plate 1244): Kẻ đoạn thẳng đứng hơi chếch nối từ Gai chậu sau trên (PSIS) tới bờ ngoài Ụ ngồi – điểm nối ĐÚNG 1/3 DƯỚI VÀ 2/3 TRÊN của đường này (hoặc giao điểm của đường PSIS – ụ ngồi với đường ngang kẻ qua đỉnh mấu chuyển lớn) chiếu thẳng xuống đỉnh gai ngồi nơi thần kinh thẹn và động mạch thẹn trong đi qua!",
+      "palpationSteps": [
+        "1. Đặt bệnh nhân nằm sấp cân đối trên bàn.",
+        "2. Sờ rõ đỉnh PSIS ở trên và đỉnh ụ ngồi ở dưới; dùng thước/bút chia đoạn nối PSIS – ụ ngồi thành 3 phần bằng nhau và đánh dấu điểm 1/3 dưới.",
+        "3. Kiểm tra đường ngang qua đỉnh mấu chuyển lớn giao với điểm đánh dấu để đặt tâm đầu dò Curvilinear."
       ],
       "figures": [
         {
-          "path": "assets/images/ch9_pudendal/p118_img1.jpeg",
-          "figNumber": "9.1",
-          "title": "Giải phẫu thần kinh thẹn nằm kẹp trong gọng kìm giữa dây chằng cùng - gai và cùng - ụ ngồi (Fig. 9.1)",
-          "desc": "Tại mức gai ngồi, thần kinh thẹn và động mạch thẹn trong bị kẹp giữa dây chằng cùng - gai ở trước và dây chằng cùng - ụ ngồi ở sau.",
-          "springerCaption": "Fig. 9.1 Pudendal nerve entrapped between the sacrospinous and sacrotuberous ligaments at the ischial spine."
-        },
-        {
-          "path": "assets/images/anatomy/fig_09_02_pudendal_alcock_course.jpg",
-          "figNumber": "9.2",
-          "title": "Đường đi toàn cảnh của thần kinh thẹn vòng qua gai ngồi vào ống Alcock và 3 nhánh tận (Fig. 9.2)",
-          "desc": "Hành trình thần kinh thẹn từ đám rối cùng S2–S4 qua khuyết ngồi lớn, vòng gai ngồi vào ống Alcock chia 3 nhánh tận vùng đáy chậu.",
-          "springerCaption": "Fig. 9.2 Anatomical course of the pudendal nerve around the ischial spine into Alcock's canal and its three terminal branches."
+          "path": "assets/images/external_anatomy/ext_surf_gluteal_sciatic_markings_gray1244.png",
+          "figNumber": "Gray 1244",
+          "title": "Bản đồ giải phẫu bề mặt vùng mông kinh điển chỉ đích danh điểm chiếu Động mạch thẹn trong tại gai ngồi (Gray's Plate 1244)",
+          "desc": "Chú thích 'Internal pudendal artery' trên bản vẽ của Gray chỉ chính xác vào điểm 1/3 dưới đường nối PSIS – Ụ ngồi tại mỏm gai ngồi.",
+          "atlasSource": "Gray's Anatomy (20th Ed., Plate 1244) – Surface marking for the internal pudendal artery and pudendal nerve at the ischial spine."
         }
       ]
     },
-    "surfaceAnatomy": {
-      "bonyLandmarks": [
-        "Gai chậu sau trên (PSIS) ở phía trên trong mông.",
-        "Ụ ngồi (Ischial tuberosity) ở nếp lằn mông dưới.",
-        "Đỉnh mấu chuyển lớn xương đùi (Greater trochanter) ở phía ngoài."
+    "crossSectionalAnatomy": {
+      "sourceRef": "Gray's Anatomy (Plates 406, 829) – Axial Section Through Ischial Spine, Sacrotuberous-Sacrospinous Clamp & Alcock's Canal",
+      "sectionPlane": "Thiết đồ cắt ngang qua khung chậu nhỏ ngang mức Đỉnh gai ngồi (Axial Pelvic-Gluteal Section at the Ischial Spine Level).",
+      "layeredStructure": [
+        "Lớp 1 – Da và lớp mỡ dưới da vùng mông trong dày.",
+        "Lớp 2 – Bụng cơ mông lớn dày (Gluteus maximus, dày ~3 – 5 cm).",
+        "Lớp 3 – DÂY CHẰNG CÙNG – Ụ NGỒI (Sacrotuberous ligament - STL: dải gân – xơ dày 3 – 5 mm căng chéo từ bờ xương cùng xuống ụ ngồi; tạo 'cảm giác bật sực' rõ rệt khi mũi kim đi qua!).",
+        "Lớp 4 – KHOANG ĐÍCH: KHOANG GIAN DÂY CHẰNG (Interligamentous neurovascular plane) hình tam giác dẹt nằm kẹp giữa mặt sâu dây chằng cùng – ụ ngồi (STL) ở sau và mặt nông dây chằng cùng – gai (SSL) ở trước, ngay sát bờ trong đỉnh gai ngồi – chứa ĐỘNG MẠCH THẸN TRONG và THẦN KINH THẸN (S2–S4, thường tách 1 – 2 thân nằm ngay phía TRONG động mạch!).",
+        "Lớp 5 – DÂY CHẰNG CÙNG – GAI (Sacrospinous ligament - SSL: dải xơ mỏng căng hình quạt từ bờ bên xương cùng – cụt tới đỉnh nhọn gai ngồi) và bản xương GAI NGỒI ở phía ngoài.",
+        "Lớp 6 (Đáy sâu trong chậu hông – VÙNG CẤM!) – Cơ cụt (Coccygeus), cơ nâng hậu môn, khoang dưới phúc mạc chậu và BÓNG TRỰC TRÀNG (Rectum) nằm ngay phía trước dây chằng cùng – gai!"
       ],
-      "referenceLines": "Đường dọc nối từ PSIS xuống ụ ngồi (PSIS – Ischial tuberosity line): Đỉnh gai ngồi (Ischial spine – nằm rất sâu không sờ thấy trực tiếp từ da mông) xuất chiếu ở khoảng nối 1/3 dưới và 2/3 trên của đường này (hoặc giao điểm giữa đường nối PSIS – ụ ngồi và đường ngang qua đỉnh mấu chuyển lớn).",
-      "palpationSteps": [
-        "1. Đặt bệnh nhân nằm sấp hoàn toàn (Prone position) trên bàn thủ thuật.",
-        "2. Sờ rõ gai chậu sau trên (PSIS) ở trên và khối xương ụ ngồi ở nếp lằn mông dưới.",
-        "3. Hình dung trục quét trượt dọc từ bờ trên khuyết ngồi lớn xuống gai ngồi dọc theo bờ trong vùng mông."
+      "topographicRelations": {
+        "superficialAndDeep": "Thần kinh thẹn bị kẹp đúng như 'gọng kìm tôm hùm' giữa STL (ở nông/sau) và SSL + gai ngồi (ở sâu/trước) trước khi lách xuống dưới vào ống thẹn Alcock (lá tách cân cơ bịt trong thành ngoài hố ngồi – trực tràng).",
+        "medialAndLateral": "Trên cùng thiết đồ ngang mức gai ngồi: Đi sang PHÍA NGOÀI trên lưng xương gai ngồi (~1.5 – 2.5 cm ngoài động mạch thẹn) là DÂY THẦN KINH TỌA rất lớn và nhánh mông dưới; ngay bên cạnh thần kinh thẹn trong khoang gian dây chằng là ĐỘNG MẠCH THẸN TRONG!"
+      },
+      "dangerCorridors": [
+        "Thủng trực tràng (Rectal perforation – Lớp 6): Dừng mũi kim NGAY LẬP TỨC khi vừa xuyên qua dây chằng cùng – ụ ngồi (Lớp 3) vào khoang Lớp 4 và thấy dịch tách đôi hai dải sáng STL – SSL; tuyệt đối không đâm xuyên qua dây chằng cùng – gai!",
+        "Lan thuốc ra phía ngoài gây tê liệt dây thần kinh tọa: Giữ đầu kim ở bờ trong đỉnh gai ngồi (phía trong động mạch thẹn trong) và dùng thể tích vừa phải (4 – 5 ml)."
       ],
-      "probePlacement": "Phương pháp quét trượt 3 bước chuẩn Peng & Bellinger (dùng đầu dò Curvilinear 2-5 MHz): Bước 1 – Đặt ngang chếch trên cánh chậu mức PSIS thấy dốc xương chậu dài. Bước 2 – Trượt xuống khuyết ngồi lớn thấy cơ hình lê và động mạch mông dưới. Bước 3 – Trượt tiếp xuống dưới thêm 2 - 3 cm cho tới khi cơ hình lê biến mất và bờ xương chuyển thành một ĐƯỜNG THẲNG SÁNG NGẮN SẮC NÉT ở đáy khuyết (chính là GAI NGỒI – Ischial spine!), nối vào trong bởi dải sáng mảnh của dây chằng cùng – gai (SSL) nằm dưới dải dày của dây chằng cùng – ụ ngồi (STL) kèm nhịp đập động mạch thẹn trong trên Doppler!",
       "figures": [
         {
-          "path": "assets/images/ch9_pudendal/p122_img1.jpeg",
-          "figNumber": "9.7",
-          "title": "Vị trí đặt đầu dò Curvilinear vùng mông ngang mức gai ngồi và hình ảnh siêu âm tương ứng (Fig. 9.7)",
-          "desc": "Đặt đầu dò ngang hơi chếch mức gai ngồi hiển thị đỉnh gai ngồi phẳng sáng, thần kinh tọa ở ngoài (SCN) và động mạch/thần kinh thẹn (PA) nằm giữa hai dây chằng ở phía trong.",
-          "springerCaption": "Fig. 9.7 Position of the ultrasound probe at the ischial spine (IS) and pertinent anatomy/sonoanatomy."
+          "path": "assets/images/external_anatomy/ext_sec_pelvis_sacral_pudendal_gray829.png",
+          "figNumber": "Gray 829",
+          "title": "Giải phẫu thiết đồ thành bên chậu hông: Đám rối cùng, gai ngồi, dây chằng cùng - gai và đường đi thần kinh thẹn (Gray's Plate 829)",
+          "desc": "Thiết đồ chậu hông nhìn trong chỉ rõ rễ S2, S3, S4 hợp thành thần kinh thẹn lách qua khuyết ngồi lớn vòng sau gai ngồi và dây chằng cùng - gai.",
+          "atlasSource": "Gray's Anatomy (20th Ed., Plate 829) – Dissection of side wall of pelvis showing sacral and pudendal plexuses and sacrospinous ligament."
+        },
+        {
+          "path": "assets/images/external_anatomy/ext_sec_perineum_alcock_gray406.png",
+          "figNumber": "Gray 406",
+          "title": "Giải phẫu hố ngồi - trực tràng, ụ ngồi, dây chằng cùng - ụ ngồi và các nhánh tận vùng đáy chậu (Gray's Plate 406)",
+          "desc": "Tương quan dưới gai ngồi nơi thần kinh thẹn chạy trong thành ngoài hố ngồi - trực tràng (ống Alcock) sát mặt trong ụ ngồi để phân nhánh trực tràng dưới và đáy chậu.",
+          "atlasSource": "Gray's Anatomy (20th Ed., Plate 406) – Ischiorectal fossa, ischial tuberosity, sacrotuberous ligament, and perineal compartments."
         }
       ]
     },
@@ -4912,45 +5329,54 @@ var STABLE_PROCEDURES_FALLBACK = [];
         "Rối loạn đông máu nặng."
       ]
     },
-    "anatomy": {
-      "overview": "Các dây thần kinh bì mông dưới (Inferior Cluneal Nerves - ICN) là các nhánh bì tách ra từ dây thần kinh bì đùi sau (Posterior Femoral Cutaneous Nerve - PFCN, rễ S1–S3). Thần kinh bì đùi sau đi ra từ lỗ dưới cơ hình lê ngay sát mặt nông/trong dây thần kinh tọa dưới cơ mông lớn; khi chạy xuống ngang mức BỜ DƯỚI CƠ MÔNG LỚN và BỜ NGOÀI Ụ NGỒI (Ischial tuberosity), nó tách các nhánh bì mông dưới quặt vòng quanh bờ dưới cơ mông lớn ra nông để chi phối cảm giác vùng da phần dưới mông, nếp lằn mông và nhánh đáy chậu (Perineal ramus) vòng dưới ụ ngồi tới vùng da bìu ngoài / môi lớn (rất hay bị chẩn đoán nhầm là đau thần kinh thẹn nhưng đau tập trung ngay dưới ụ ngồi!).",
-      "targetStructure": "Khoang cân sâu ngay dưới cơ mông lớn tại sát BỜ NGOÀI Ụ NGỒI (Lateral border of ischial tuberosity, phía trong dây thần kinh tọa và trên nguyên ủy khối gân cơ ụ ngồi – cẳng chân Hamstrings).",
-      "innervation": "Thần kinh bì mông dưới và nhánh đáy chậu (từ PFCN - S1, S2, S3) cảm giác phần dưới mông, nếp lằn mông và da đáy chậu bên ngoài xương ngồi (không gây rối loạn cơ thắt).",
-      "vascularAndDangerZones": [
-        "Dây thần kinh tọa (Sciatic nerve): Đi song song chỉ cách bờ ngoài ụ ngồi khoảng 1.5 - 2 cm (nằm trên cơ vuông đùi / gân Hamstring) – BẮT BUỘC nhận diện rõ dây thần kinh tọa to dẹt trên siêu âm và chỉ tiêm thể tích nhỏ (2 - 4 ml) tách về phía bờ ụ ngồi để không gây tê liệt thần kinh tọa!",
-        "Các nhánh tận động mạch mông dưới (Inferior gluteal artery – nhánh đi kèm thần kinh tọa) – kiểm tra Doppler màu trước khi bơm.",
-        "Nguyên ủy gân chung cơ Hamstring bám vào mặt sau ngoài ụ ngồi (tránh đâm xuyên vào lõi gân gân nhị đầu đùi – bán gân – bán màng)."
+    "surfaceAnatomy": {
+      "sourceRef": "Gray's Anatomy (42nd Ed., Plates 1239, 1244) – Gluteal Fold & Ischial Tuberosity Surface Landmarks",
+      "surfaceLandmarks": [
+        "Ụ ngồi (Ischial tuberosity - IT): Khối xương lồi sờ rõ nhất ở góc trong nếp lằn mông.",
+        "Nếp lằn mông dưới (Inferior gluteal fold): Nếp da ngang vùng dưới mông.",
+        "Đỉnh mấu chuyển lớn xương đùi (Greater trochanter - GT) ở phía ngoài."
+      ],
+      "surfaceProjections": "Trên đoạn nối ngang giữa bờ ngoài Ụ ngồi và bờ sau Mấu chuyển lớn tại mức nếp lằn mông: Dây thần kinh bì đùi sau (PFCN) và các nhánh bì mông dưới (Inferior cluneal nerves) thoát vòng qua bờ dưới cơ mông lớn ngay sát BỜ NGOÀI Ụ NGỒI (cách bờ ngoài ụ ngồi ~0.5 – 1.5 cm), đồng thời tách nhánh đáy chậu (Perineal branch) uốn vòng ngay dưới mặt dưới – ngoài ụ ngồi tiến về rãnh đùi – bìu/môi lớn!",
+      "palpationSteps": [
+        "1. Bệnh nhân nằm sấp trên bàn.",
+        "2. Dùng ngón cái ấn sâu vào nếp lằn mông xác định đỉnh và sườn ngoài của ụ ngồi.",
+        "3. Ấn miết nhẹ ngay sát bờ ngoài và bờ dưới ụ ngồi để tìm dấu hiệu Tinel lan ra phần dưới mông hoặc dọc rãnh đùi – đáy chậu ngoài."
       ],
       "figures": [
         {
-          "path": "assets/images/ch9_pudendal/p119_img2.jpeg",
-          "figNumber": "9.4",
-          "title": "Giải phẫu đường đi thần kinh bì mông dưới và nhánh đáy chậu vòng quanh bờ dưới ụ ngồi (Fig. 9.4)",
-          "desc": "Thần kinh bì mông dưới và nhánh đáy chậu tách từ thần kinh bì đùi sau ngay ngang mức bờ ngoài - dưới ụ ngồi.",
-          "springerCaption": "Fig. 9.4 Anatomy of the inferior cluneal nerve and perineal ramus arising from the posterior femoral cutaneous nerve."
+          "path": "assets/images/external_anatomy/ext_surf_lower_back_popliteal_gray1239.png",
+          "figNumber": "Gray 1239",
+          "title": "Giải phẫu bề mặt nếp lằn mông dưới và vùng dưới ụ ngồi nơi quặt ngược các nhánh thần kinh bì mông dưới (Gray's Plate 1239)",
+          "desc": "Hình thái bề mặt nếp lằn mông và khu đùi sau trên nơi các nhánh bì mông dưới vòng qua bờ dưới cơ mông lớn ra da.",
+          "atlasSource": "Gray's Anatomy (20th Ed., Plate 1239) – Back of lower extremity showing gluteal fold and proximal thigh topography."
         }
       ]
     },
-    "surfaceAnatomy": {
-      "bonyLandmarks": [
-        "Ụ ngồi (Ischial tuberosity - IT): Khối xương lồi rõ nhất khi ấn sâu vào nếp lằn mông dưới.",
-        "Mấu chuyển lớn xương đùi (Greater trochanter - GT) ở phía ngoài.",
-        "Nếp lằn mông dưới (Gluteal fold): Bờ dưới tự nhiên của vùng mông."
+    "crossSectionalAnatomy": {
+      "sourceRef": "Gray's Anatomy (Plates 432, 434) – Transverse Cross-Section at the Level of the Ischial Tuberosity & Gluteal Fold",
+      "sectionPlane": "Thiết đồ cắt ngang (Axial Cross-Section) ngay mức nếp lằn mông đi qua ụ ngồi, nguyên ủy gân Hamstring và mào gian mấu xương đùi.",
+      "layeredStructure": [
+        "Lớp 1 – Da và đệm mỡ dưới da dày vùng nếp mông dưới (dày ~1.5 – 4.0 cm).",
+        "Lớp 2 – Mạc mông – đùi sâu (mạc đùi rộng phủ bờ dưới cơ mông lớn) và các thớ dưới cùng của Cơ mông lớn (Gluteus maximus).",
+        "Lớp 3 – KHOANG ĐÍCH: Mặt phẳng mô mỡ – cân ngay DƯỚI bờ dưới cơ mông lớn / mạc đùi rộng tại sát BỜ NGOÀI Ụ NGỒI, nơi THẦN KINH BÌ ĐÙI SAU (PFCN) và các nhánh THẦN KINH BÌ MÔNG DƯỚI (ICN) nằm nông ngay trên nguyên ủy khối gân ụ ngồi – cẳng chân!",
+        "Lớp 4 – Nguyên ủy gân chung cơ Hamstring (đầu dài nhị đầu đùi & cơ bán gân ở sau trong, gân dẹt cơ bán màng ở trước ngoài) bám vào ụ ngồi; ngay PHÍA NGOÀI gân bán màng trên lưng cơ vuông đùi / cơ khép lớn là THÂN CHÍNH DÂY THẦN KINH TỌA!",
+        "Lớp 5 (Đáy thiết đồ) – Khối xương ụ ngồi (ở trong), cơ khép lớn / cơ vuông đùi (ở giữa) và đầu trên xương đùi (ở ngoài)."
       ],
-      "referenceLines": "Đường ngang nối Ụ ngồi (IT) – Mấu chuyển lớn (GT) ngay tại nếp lằn mông: Dây thần kinh tọa nằm khoảng điểm nối 1/3 trong và 2/3 ngoài (hơi lệch gần ụ ngồi), còn thần kinh bì mông dưới / PFCN nằm ngay giữa bờ ngoài ụ ngồi và bờ trong thần kinh tọa.",
-      "palpationSteps": [
-        "1. Bệnh nhân nằm sấp trên bàn phẳng.",
-        "2. Dùng ngón cái ấn sâu vào nếp lằn mông xác định đỉnh và bờ ngoài của ụ ngồi (nơi bệnh nhân hội chứng thần kinh bì mông dưới thường đau chói khi ngồi lên ghế cứng, khác với thần kinh thẹn là ngồi bồn cầu không đỡ đau!).",
-        "3. Sờ mấu chuyển lớn xương đùi ở phía ngoài để xác lập trục ngang đặt đầu dò."
+      "topographicRelations": {
+        "superficialAndDeep": "Thần kinh bì mông dưới và PFCN (Lớp 3) nằm NÔNG hơn và TRONG hơn so với dây thần kinh tọa (Lớp 4), ngay sát mặt nông gân Hamstring và bờ dưới cơ mông lớn.",
+        "medialAndLateral": "Khoảng cách ngang từ các nhánh bì mông dưới/nhánh đáy chậu sát bờ ngoài ụ ngồi tới bờ trong dây thần kinh tọa chỉ khoảng 1.0 – 2.0 cm!"
+      },
+      "dangerCorridors": [
+        "Phong bế lan sang dây thần kinh tọa (Lớp 4) cách đó 1.5 cm: Luôn nhận diện rõ bóng thần kinh tọa trước trên siêu âm, hướng mũi kim về phía sát bờ xương ụ ngồi (phía trong gân Hamstring) và chỉ bơm thể tích nhỏ 2 – 4 ml!",
+        "Tránh đâm xuyên vào lõi gân nguyên ủy Hamstring trên ụ ngồi."
       ],
-      "probePlacement": "Đặt đầu dò Curvilinear 2-5 MHz (hoặc Linear 6-12 MHz ở người gầy) nằm ngang ngay trên nếp lằn mông nối từ ụ ngồi (IT - đầu trong) ra phía mấu chuyển lớn (GT - đầu ngoài): Nhận diện mỏm xương ụ ngồi có khối gân Hamstring bám vào, dây thần kinh tọa nằm ngay phía ngoài gân Hamstring, và các sợi thần kinh nhỏ tăng âm của ICN/PFCN nằm trong lớp mỡ sâu dưới cơ mông lớn ngay sát bờ ngoài ụ ngồi.",
       "figures": [
         {
-          "path": "assets/images/anatomy/fig_09_09_inferior_cluneal_probe.jpg",
-          "figNumber": "9.9",
-          "title": "Vị trí đặt đầu dò ngang trên nếp lằn mông qua ụ ngồi tìm thần kinh bì mông dưới (Fig. 9.9)",
-          "desc": "Đặt đầu dò ngang tại nếp lằn mông từ ụ ngồi sang ngoài giúp thấy đồng thời ụ ngồi, gân Hamstring, thần kinh tọa (mũi tên) và nhánh bì mông dưới (đầu mũi tên).",
-          "springerCaption": "Fig. 9.9 Surface probe placement at the gluteal crease and corresponding sonography of the inferior cluneal nerve."
+          "path": "assets/images/external_anatomy/ext_sec_thigh_cross_section_gray432.png",
+          "figNumber": "Gray 432",
+          "title": "Thiết đồ cắt ngang đùi cao hiển thị trực tiếp Thần kinh bì đùi sau (Posterior femoral cutaneous nerve) nằm nông dưới mạc cạnh Thần kinh tọa (Ischiadic N.) (Gray's Plate 432)",
+          "desc": "Ở cực dưới (mặt sau) của thiết đồ ngang Gray 432 thấy cực kỳ rõ ràng vị trí nông ngay dưới mạc của Posterior femoral cutaneous nerve tách biệt với Ischiadic N. ở lớp sâu.",
+          "atlasSource": "Gray's Anatomy (20th Ed., Plate 432) – Cross-section showing Posterior femoral cutaneous nerve superficial to hamstring muscles and Ischiadic nerve."
         }
       ]
     },
@@ -5029,51 +5455,54 @@ var STABLE_PROCEDURES_FALLBACK = [];
         "Rối loạn đông máu nặng."
       ]
     },
-    "anatomy": {
-      "overview": "Khác với tiêm nội khớp cùng chậu (chỉ tác động phần hoạt dịch 1/3 dưới), phong bế nhánh ngoài xương cùng (Sacral Lateral Branch Blocks - SLBB) nhắm vào toàn bộ nguồn thần kinh cảm giác chi phối phức hợp dây chằng cùng chậu sau và mặt sau khớp cùng chậu: đó là ĐÁM RỐI CÙNG SAU (Posterior Sacral Network - PSN), được tạo thành chủ yếu (90–100%) bởi các nhánh ngoài của ngành sau thần kinh cùng S1, S2, S3 (đôi khi có S4) thoát ra từ bờ ngoài các lỗ cùng sau tương ứng và chạy vắt ngang qua MÀO CÙNG BÊN (Lateral Sacral Crest - LSC, tương đương các củ ngang cùng Transverse sacral tubercles TST 1, 2, 3), phối hợp cùng ngành sau L5 ở cực trên.",
-      "targetStructure": "Mặt xương của Mào cùng bên / các Củ ngang xương cùng thứ 1, thứ 2 và thứ 3 (Transverse Sacral Tubercles TST1, TST2, TST3 nằm ngay bờ ngoài các lỗ cùng sau S1, S2, S3 khoảng 0.5 - 1 cm) kèm rãnh cánh cùng cho ngành sau L5.",
-      "innervation": "Các nhánh ngoài ngành sau cùng S1, S2, S3 (Posterior sacral network) và ngành sau L5 chi phối toàn bộ phức hợp dây chằng và bao khớp cùng chậu sau.",
-      "vascularAndDangerZones": [
-        "Lòng các lỗ cùng sau S1, S2, S3 (Posterior sacral foramina): Nếu đặt mũi kim tụt vào trong lỗ cùng sau sẽ gây phong bế trực tiếp rễ thần kinh cùng (gây tê tầng sinh môn, rối loạn tiểu tiện tạm thời hoặc yếu chân) làm sai lệch hoàn toàn giá trị chẩn đoán trước đốt RFA!",
-        "Các nhánh sau của động mạch cùng ngoài (Lateral sacral artery branches) thoát ra ngay tại miệng lỗ cùng sau – cần bật Color Doppler kiểm tra."
+    "surfaceAnatomy": {
+      "sourceRef": "Gray's Anatomy (42nd Ed., Plates 803, 1211) – Posterior Sacral Foramina & Lateral Sacral Crest Projections",
+      "surfaceLandmarks": [
+        "Mào cùng giữa (Median sacral crest – hàng gờ mỏm gai S1–S4 dọc đường giữa).",
+        "Hai sừng cùng và Khe xương cùng (Sacral cornua & hiatus) ở cực dưới đường giữa (ngang S4–S5).",
+        "Gai chậu sau trên (PSIS – nằm ngang mức giữa lỗ cùng S1 và lỗ cùng S2!)."
+      ],
+      "surfaceProjections": "Bốn lỗ cùng sau S1–S4 xếp thành một hàng dọc hơi hội tụ nhẹ xuống dưới: Lỗ S2 nằm ngang mức PSIS và cách đường giữa ~2.0 cm; Lỗ S1 nằm cao hơn mức PSIS ~2.0 cm và cách đường giữa ~2.2 – 2.5 cm; Lỗ S3 nằm thấp hơn mức PSIS ~2.0 cm và cách đường giữa ~1.8 cm. Ngay sát BỜ NGOÀI các lỗ cùng sau ~5 – 8 mm là hàng củ xương của MÀO CÙNG BÊN (Lateral sacral crest / Transverse sacral tubercles TST 1, 2, 3) – nơi toàn bộ các nhánh ngoài S1–S3 vắt qua!",
+      "palpationSteps": [
+        "1. Bệnh nhân nằm sấp kê gối dưới khung chậu.",
+        "2. Sờ xác định mào cùng giữa ở đường giữa, khe xương cùng (hai sừng cùng) ở dưới và đỉnh PSIS ở bên bệnh.",
+        "3. Vạch đường dọc trung gian nằm giữa đường giữa xương cùng và bờ trong PSIS (cách đường giữa ~2.3 – 2.5 cm) tương ứng trục mào cùng bên."
       ],
       "figures": [
         {
-          "path": "assets/images/ch16_sacroiliac_rfa/p196_img1.jpeg",
-          "figNumber": "16.1",
-          "title": "Giải phẫu đám rối thần kinh cùng sau (PSN) từ các nhánh ngoài S1, S2, S3 chi phối khớp cùng chậu (Fig. 16.1)",
-          "desc": "Các nhánh ngoài thoát ra từ bờ ngoài lỗ cùng sau S1, S2, S3 đan thành mạng lưới thần kinh cùng sau trên mào cùng bên.",
-          "springerCaption": "Fig. 16.1 Posterior innervation of the sacroiliac joint from the posterior sacral network (S1–S3 lateral branches and L5 dorsal ramus)."
-        },
-        {
-          "path": "assets/images/anatomy/fig_16_02_sacral_lateral_branches_model.jpg",
-          "figNumber": "16.2",
-          "title": "Mô hình giải phẫu xương đường đi các nhánh ngoài S1 (vàng), S2 (xanh lá) và S3 (xanh dương) qua các củ ngang cùng (Fig. 16.2)",
-          "desc": "Mối liên quan giữa lỗ cùng sau, mào cùng bên (các củ TST1–TST3) và đường đi của nhánh ngoài S1–S3 hướng ra khớp cùng chậu.",
-          "springerCaption": "Fig. 16.2 Bone model illustrating the course of S1, S2, and S3 lateral branches across the lateral sacral crest."
+          "path": "assets/images/external_anatomy/ext_surf_back_spine_scapula_gray1211.png",
+          "figNumber": "Gray 1211",
+          "title": "Giải phẫu bề mặt tam giác xương cùng giữa hai lúm PSIS và rãnh liên mông dưới (Gray's Plate 1211)",
+          "desc": "Vùng tam giác xương cùng bề mặt nơi định vị trục mào cùng bên giữa đường giữa và PSIS.",
+          "atlasSource": "Gray's Anatomy (20th Ed., Plate 1211) – Posterior sacral triangle surface topography."
         }
       ]
     },
-    "surfaceAnatomy": {
-      "bonyLandmarks": [
-        "Khe xương cùng và hai sừng cùng (Sacral hiatus & Sacral cornua) ở đầu dưới xương cùng (mức S4–S5).",
-        "Gai chậu sau trên (PSIS - ngang mức S2).",
-        "Mào cùng giữa (Median sacral crest) ở đường giữa."
+    "crossSectionalAnatomy": {
+      "sourceRef": "Gray's Anatomy (Plates 322, 803) – Transverse Sacral Sectional Anatomy & Posterior Sacral Neural Plexus",
+      "sectionPlane": "Thiết đồ cắt ngang qua bản xương cùng tại mức các lỗ cùng sau S1, S2, S3 (Transverse Sacral Foramen – Lateral Crest Section).",
+      "layeredStructure": [
+        "Lớp 1 – Da và lớp mỡ dưới da vùng cùng sau (chứa các nhánh bì mông giữa sau khi đã xuyên cân ra nông).",
+        "Lớp 2 – Cân ngực – thắt lưng lá sau dày chắc đậy căng trên rãnh cùng sau.",
+        "Lớp 3 – Khối cơ nhiều chân vùng cùng (Sacral multifidus) và dây chằng cùng – chậu sau sâu.",
+        "Lớp 4 – KHOANG ĐÍCH: Mặt phẳng màng xương ngay trên đỉnh MÀO CÙNG BÊN / CỦ NGANG XƯƠNG CÙNG (Lateral sacral crest – TST1, TST2, TST3, nằm ngoài bờ lỗ cùng 5 – 8 mm), nơi ĐÁM RỐI CÙNG SAU (Posterior sacral network hợp từ các nhánh ngoài ngành sau S1, S2, S3) bò sát mặt xương để tiến ra dây chằng và khớp cùng chậu!",
+        "Lớp 5 (Đáy xương & Lỗ nguy hiểm phía trong) – Bản sau xương cùng làm tấm chắn kim; nhưng ngay PHÍA TRONG cách đích 5 – 8 mm là miệng hở của LỖ CÙNG SAU (Posterior sacral foramen) thông thẳng vào ống cùng (chứa rễ thần kinh cùng vận động chân/bàng quang – cơ thắt và nhánh động mạch cùng ngoài!)."
       ],
-      "referenceLines": "Đường dọc mào cùng bên (Lateral sacral crest line): Chạy song song cách đường giữa mào cùng giữa khoảng 2 - 2.5 cm (ngay bờ ngoài dãy lỗ cùng sau S1–S3 và ngay phía trong khe khớp cùng chậu).",
-      "palpationSteps": [
-        "1. Bệnh nhân nằm sấp trên bàn phẳng có kê gối dưới khung chậu.",
-        "2. Dùng ngón trỏ sờ rãnh liên mông tìm khe lõm hình tam giác giữa hai sừng cùng (Sacral hiatus) ở dưới và sờ hai mỏm PSIS ở trên.",
-        "3. Đánh dấu trục dọc cạnh đường giữa xương cùng ~2 - 2.5 cm từ khe cùng lên ngang bờ trên PSIS."
+      "topographicRelations": {
+        "superficialAndDeep": "Mạng lưới thần kinh cùng sau (Lớp 4) chạy sát màng xương mào cùng bên sâu dưới cơ nhiều chân và dây chằng cùng – chậu sau.",
+        "medialAndLateral": "Trên thiết đồ ngang từ trong ra ngoài gồm 3 gờ xương kinh điển của xương cùng: Mào cùng giữa (mỏm gai) -> Mào cùng trung gian (mỏm khớp, nằm ngay bờ TRONG lỗ cùng) -> LỖ CÙNG SAU (hố sẫm đứt quãng vỏ xương!) -> MÀO CÙNG BÊN (nằm ngay bờ NGOÀI lỗ cùng – ĐÍCH AN TOÀN!) -> Khe khớp cùng chậu."
+      },
+      "dangerCorridors": [
+        "Lọt mũi kim vào lòng lỗ cùng sau S1, S2, S3: Sẽ gây tê rễ cùng trước (tê đáy chậu, bí tiểu tạm thời, yếu gấp gan chân) và làm mất tính đặc hiệu của phong bế chẩn đoán! Bắt buộc kiểm tra trên cả hai mặt cắt ngang và dọc thấy đầu kim chạm gờ xương đặc của mào cùng bên ở phía ngoài lỗ.",
+        "Bật Doppler màu ngay miệng lỗ cùng sau tránh nhánh lưng của động mạch cùng ngoài."
       ],
-      "probePlacement": "Phương pháp quét chuẩn từ dưới lên của Finlayson: Đặt đầu dò Curvilinear (hoặc Linear ở người gầy) cắt ngang tại khe cùng (hai sừng cùng) -> dịch sang bên đau tới bờ ngoài xương cùng dưới -> trượt đầu dò từ dưới lên đầu (caudad-to-cephalad) lần lượt nhận diện các khuyết hẫng vỏ xương của lỗ cùng S3, S2, S1 và gờ nhô của mào cùng bên (TST3, TST2, TST1) nằm ngay sát bờ ngoài mỗi lỗ cùng; kết hợp xoay dọc cạnh giữa (Parasagittal) qua hàng lỗ cùng để xác nhận đầu kim nằm trên gờ xương giữa/ngoài các lỗ chứ không tụt vào lỗ cùng.",
       "figures": [
         {
-          "path": "assets/images/ch15_sacroiliac_joint/p192_img1.jpeg",
-          "figNumber": "15.3",
-          "title": "Mặt cắt dọc cạnh giữa xương cùng hiển thị hàng lỗ cùng sau S1–S3 xác nhận vị trí kim (Fig. 15.3)",
-          "desc": "Quét dọc cạnh giữa qua xương cùng cho thấy các khuyết hở của lỗ cùng sau để đảm bảo mũi kim tựa an toàn trên mào xương.",
-          "springerCaption": "Fig. 15.3 Parasagittal scan of the sacrum demonstrating the posterior sacral foramina."
+          "path": "assets/images/external_anatomy/ext_sec_sacral_posterior_nerves_gray803.png",
+          "figNumber": "Gray 803",
+          "title": "Giải phẫu mặt sau xương cùng kinh điển: Các nhánh sau thần kinh cùng S1–S4 thoát từ lỗ cùng sau đan thành đám rối trên mào cùng bên (Gray's Plate 803)",
+          "desc": "Bản vẽ vô giá của Gray (Plate 803) hiển thị trực tiếp các quai nối của ngành sau thần kinh cùng S1, S2, S3, S4 và ngành sau L5 chạy vắt qua bờ ngoài các lỗ cùng sau hướng tới dây chằng cùng - chậu.",
+          "atlasSource": "Gray's Anatomy (20th Ed., Plate 803) – The posterior divisions of the sacral nerves and posterior sacral plexus."
         }
       ]
     },
@@ -5161,45 +5590,54 @@ var STABLE_PROCEDURES_FALLBACK = [];
         "Phản ứng đau dữ dội trong các lần phong bế trước."
       ]
     },
-    "anatomy": {
-      "overview": "Do số lượng và vị trí chính xác theo chiều dọc của các nhánh ngoài thần kinh cùng S1–S3 (Posterior Sacral Network) biến thiên khá lớn giữa từng cá thể khi chúng vượt qua mào cùng bên (Lateral Sacral Crest - LSC), đốt sóng cao tần đơn cực từng điểm đơn lẻ dễ bỏ sót sợi thần kinh. Kỹ thuật tạo 'Dải tổn thương nhiệt liên tục lưỡng cực' (Bipolar Palisade / Strip Lesioning RFA) dưới hướng dẫn siêu âm đặt một hàng kim RF thẳng hàng dọc theo mào cùng bên nối liên tục từ củ ngang xương cùng thứ 1 (TST1 – ngang S1) qua TST2 (ngang S2) tới TST3 (ngang S3), kết hợp đốt ngành sau L5 tại rãnh cánh xương cùng (Sacral ala notch), tạo ra một bức tường đông nhiệt chặn đứng toàn bộ mạng lưới thần kinh cùng sau!",
-      "targetStructure": "Dải bản xương liên tục của Mào cùng bên (Lateral sacral crest) kéo dài từ củ ngang cùng 1 (TST1 - ngoài lỗ S1) qua TST2 tới củ ngang cùng 3 (TST3 - ngoài lỗ S3), kèm rãnh gốc mỏm khớp trên S1 – cánh xương cùng (cho ngành sau L5).",
-      "innervation": "Đám rối thần kinh cùng sau (S1–S3 lateral branches) và ngành sau L5 (chỉ thực hiện RFA sau khi bệnh nhân đáp ứng giảm đau ≥ 50–80% với phong bế chẩn đoán SLBB!).",
-      "vascularAndDangerZones": [
-        "Rễ thần kinh vận động – tự chủ cùng S1–S3 bên trong lỗ cùng sau: BẮT BUỘC đặt các cannula cách bờ ngoài lỗ cùng ~5 - 8 mm trên mào cùng bên VÀ bắt buộc test kích thích cảm giác (50 Hz) + vận động (2 Hz đến 2.0 V không có giật cơ mông/chân hay co cơ thắt hậu môn!) trước khi phát nhiệt!",
-        "Rễ thần kinh thắt lưng L5 đi ở mặt trước cánh xương cùng (tránh trượt kim vượt quá bờ trước trên cánh xương cùng khi đốt L5 dorsal ramus).",
-        "Bỏng nhiệt da vùng mông nông ở bệnh nhân quá gầy (đảm bảo phần đầu hoạt động Active tip 10 mm nằm sâu hoàn toàn sát bản xương dưới cân cơ dày)."
+    "surfaceAnatomy": {
+      "sourceRef": "Gray's Anatomy (42nd Ed., Plate 803) – Lateral Sacral Crest Palisade Corridor & Sacral Ala Notch",
+      "surfaceLandmarks": [
+        "Hai sừng cùng và Khe xương cùng (Sacral hiatus – mốc đáy đếm ngược lên).",
+        "Gai chậu sau trên (PSIS – mốc biên giới ngoài ngang S2).",
+        "Mào cùng giữa ở đường giữa và Mỏm gai L5 ở trên."
+      ],
+      "surfaceProjections": "Dải đốt sóng cao tần liên tục (Strip lesion corridor) chiếu thành một đoạn thẳng dọc hơi chếch ra ngoài khi đi lên trên, bắt đầu từ bờ ngoài lỗ cùng S3 (cách dưới mức PSIS ~2 cm, cách đường giữa ~1.8 cm) kéo dọc qua bờ ngoài lỗ S2 (ngang PSIS) lên bờ ngoài lỗ S1 (trên PSIS ~2 cm, cách đường giữa ~2.5 cm) và kết thúc tại rãnh cánh xương cùng sát gốc mỏm khớp trên S1 (đích ngành sau L5).",
+      "palpationSteps": [
+        "1. Bệnh nhân nằm sấp cân đối, dán bản điện cực tiếp đất RFA lên khối cơ đùi/bắp chân cùng bên.",
+        "2. Sờ đánh dấu khe xương cùng, đường giữa mào cùng giữa và viền trong của gai chậu sau trên (PSIS).",
+        "3. Kết hợp quét siêu âm sơ bộ vạch lên da đường nối 3 củ ngang xương cùng (TST1 – TST2 – TST3) và điểm rãnh cánh cùng L5 cách nhau đều đặn ≤ 10 mm."
       ],
       "figures": [
         {
-          "path": "assets/images/anatomy/fig_16_04_sij_strip_lesion_diagram.jpg",
-          "figNumber": "16.4",
-          "title": "Sơ đồ giải phẫu dải tổn thương nhiệt liên tục (Strip lesion) từ củ ngang cùng TST1 đến TST3 (Fig. 16.4)",
-          "desc": "Đường chấm đứt nét minh họa dải đốt sóng cao tần liên tục chạy dọc theo mào cùng bên ở phía ngoài hàng lỗ cùng S1–S3 cắt đứt toàn bộ mạng thần kinh cùng sau.",
-          "springerCaption": "Fig. 16.4 Illustration of continuous radiofrequency strip lesion extending from the first to third transverse sacral tubercles lateral to S1–S3 foramina."
+          "path": "assets/images/external_anatomy/ext_sec_sacral_posterior_nerves_gray803.png",
+          "figNumber": "Gray 803",
+          "title": "Bản đồ giải phẫu mạng lưới quai nối thần kinh cùng sau S1–S4 giải thích cơ sở của dải đốt liên tục (Palisade Strip Lesion) (Gray's Plate 803)",
+          "desc": "Do các nhánh ngoài S1–S3 tỏa nhiều sợi nhỏ ở các độ cao biến thiên dọc ngoài lỗ cùng, tạo dải đông nhiệt liên tục dọc mào cùng bên mới triệt tiêu trọn vẹn dẫn truyền đau.",
+          "atlasSource": "Gray's Anatomy (20th Ed., Plate 803) – Anastomosing loops of posterior sacral lateral branches."
         }
       ]
     },
-    "surfaceAnatomy": {
-      "bonyLandmarks": [
-        "Khe xương cùng và hai sừng cùng (Sacral hiatus & cornua) ở cực dưới xương cùng.",
-        "Gai chậu sau trên (PSIS) ở phía ngoài ngang mức S2.",
-        "Mào cùng giữa (Median sacral crest) ở đường giữa và mào chậu phía trên."
+    "crossSectionalAnatomy": {
+      "sourceRef": "Gray's Anatomy (Plates 322, 803) – Parasagittal & Transverse Sectional Anatomy Along the Lateral Sacral Crest",
+      "sectionPlane": "Thiết đồ đứng dọc cạnh giữa dọc theo mào cùng bên (Parasagittal Lateral Sacral Crest Section) phối hợp Thiết đồ cắt ngang từng tầng S1–S3.",
+      "layeredStructure": [
+        "Lớp 1 – Da và lớp mỡ dưới da vùng cùng (cần đảm bảo tổng độ sâu từ da tới đầu hoạt động kim ≥ 15 – 20 mm để tránh bỏng nhiệt da!).",
+        "Lớp 2 – Lá sau cân ngực – thắt lưng dày chắc.",
+        "Lớp 3 – Cơ nhiều chân vùng cùng (Multifidus) và phức hợp dây chằng cùng – chậu sau sâu.",
+        "Lớp 4 – DẢI ĐÍCH ĐỐT NHIỆT: Lớp màng xương liên tục dọc theo đỉnh và sườn ngoài MÀO CÙNG BÊN nối liền TST1 – TST2 – TST3 (nơi đặt hàng rào điện cực lưỡng cực cách nhau 8 – 10 mm tạo vùng đông nhiệt elip liên hoàn bao trùm toàn bộ các sợi nhánh ngoài S1–S3).",
+        "Lớp 5 (Đáy xương & Hai vùng nguy hiểm cận kề) – Bản xương đặc mào cùng bên làm sàn phản xạ nhiệt; cách 5 – 8 mm về PHÍA TRONG là chuỗi LỖ CÙNG SAU (chứa thân rễ thần kinh cùng S1–S3); còn tại tầng cao nhất (cánh xương cùng), ngay PHÍA TRƯỚC bờ trước cánh cùng là thân rễ vận động L5!"
       ],
-      "referenceLines": "Trục hàng rào kim (Palisade line): Nằm dọc trên mào cùng bên cách đường giữa xương cùng khoảng 2 - 2.5 cm (nằm giữa hàng lỗ cùng sau ở phía trong và bờ trong PSIS/khe khớp cùng chậu ở phía ngoài), khoảng cách giữa mỗi cannula liền kề ≤ 10 mm để các ổ đốt lưỡng cực chồng lấp liền dải.",
-      "palpationSteps": [
-        "1. Đặt bệnh nhân nằm sấp cân xứng hai bên, kê gối dưới khung chậu, dán bản điện cực trung tính (Grounding pad) chắc chắn lên đùi/bắp chân.",
-        "2. Sờ xác định khe xương cùng ở dưới, mào cùng giữa ở đường giữa và đỉnh gai chậu sau trên (PSIS) ở bên bệnh.",
-        "3. Dùng bút vô khuẩn đánh dấu trục dọc dự kiến giữa đường giữa xương cùng và PSIS sau khi quét siêu âm sơ bộ."
+      "topographicRelations": {
+        "superficialAndDeep": "So sánh 2 thiết đồ dọc song song cách nhau chỉ 8 mm: Thiết đồ dọc qua hàng lỗ cùng thấy xương đứt đoạn thành từng hố sâu (lỗ S1, S2, S3); dịch đầu dò ra ngoài 8 mm lên đúng mào cùng bên sẽ thấy một đường sóng xương LIÊN TỤC KHÔNG ĐỨT ĐOẠN!",
+        "medialAndLateral": "Phía trong là lỗ cùng sau (rễ thần kinh cùng chi phối vận động chân và tự chủ bàng quang – trực tràng – sinh dục); phía ngoài là vách cánh chậu và khe khớp cùng chậu."
+      },
+      "dangerCorridors": [
+        "Tổn thương nhiệt rễ cùng S1–S3 trong lỗ cùng hoặc rễ L5 trước cánh cùng: BẮT BUỘC xác nhận trên mặt cắt dọc tất cả các đầu kim đều tựa trên dải xương liên tục ngoài lỗ cùng VÀ bắt buộc chạy test kích thích vận động 2 Hz tới 2.0 V không có giật cơ chi dưới hay co thắt hậu môn trước khi bật chế độ đốt 80°C!",
+        "Ở bệnh nhân rất gầy lớp dưới da mỏng: tránh rút lùi đầu hoạt động kim quá nông lên Lớp 1–2 gây bỏng da."
       ],
-      "probePlacement": "Bước 1: Dùng đầu dò Curvilinear quét ngang từ khe cùng ngược lên đầu để đánh dấu lên da 3 mức ngang của củ ngang cùng TST3 (ngoài S3), TST2 (ngoài S2), TST1 (ngoài S1) và rãnh cánh cùng L5. Bước 2: Xoay đầu dò sang mặt cắt đứng dọc cạnh giữa (Sagittal view along lateral sacral crest) để kiểm soát trực quan hàng cannula RFA nằm tựa sát liên tục dọc mào cùng bên với khoảng cách các đầu kim đều nhau 0.8 - 1.0 cm.",
       "figures": [
         {
-          "path": "assets/images/ch16_sacroiliac_rfa/p198_img1.jpeg",
-          "figNumber": "16.3",
-          "title": "Quét trượt đầu dò mặt phẳng ngang từ dưới lên định vị 3 củ ngang cùng TST3, TST2, TST1 (Fig. 16.3)",
-          "desc": "Các mặt cắt ngang liên tiếp từ khe cùng lên S3, S2, S1 chỉ rõ mốc mào cùng bên nằm ngay phía ngoài miệng lỗ cùng sau.",
-          "springerCaption": "Fig. 16.3 Caudad-to-cephalad transverse sacral scans illustrating landmarks for SIJ radiofrequency strip lesioning."
+          "path": "assets/images/external_anatomy/ext_sec_sacroiliac_coronal_gray322.png",
+          "figNumber": "Gray 322",
+          "title": "Thiết đồ cắt ngang qua xương cùng minh họa bề dày bản xương vùng cánh - mào cùng bên so với ống cùng và lỗ cùng ở trong (Gray's Plate 322)",
+          "desc": "Khối xương vùng bên xương cùng tạo nền xương dày an toàn ngăn cách điện cực RFA ở mặt lưng với các cấu trúc thần kinh - mạch máu chậu hông ở mặt trước.",
+          "atlasSource": "Gray's Anatomy (20th Ed., Plate 322) – Sectional anatomy of the sacrum and lateral sacral mass."
         }
       ]
     },
@@ -5289,45 +5727,56 @@ var STABLE_PROCEDURES_FALLBACK = [];
         "Rách gân dưới vai hoàn toàn kèm mất vững chỏm cánh tay ra trước."
       ]
     },
-    "anatomy": {
-      "overview": "Ở mặt trước khớp vai, bao khớp ổ chảo – cánh tay kéo dài từ bờ trước ổ chảo và nền mỏm quạ tới cổ giải phẫu xương cánh tay, được phủ trực tiếp bởi gân cơ dưới vai (Subscapularis tendon). Khoang gian chóp xoay (Rotator cuff interval) ở phía trước trên chứa dây chằng quạ – cánh tay (CHL), dây chằng ổ chảo – cánh tay trên (SGHL) và gân đầu dài nhị đầu; trong khi ở mặt trước khớp, khe khớp nằm ngay sâu dưới gân cơ dưới vai giữa củ bé và bờ trước ổ chảo.",
-      "targetStructure": "Ngách trước khoang khớp ổ chảo – cánh tay (Anterior glenohumeral joint space) nằm giữa bờ trước ổ chảo / sụn viền trước và mặt sụn trong của chỏm xương cánh tay, ngay sâu dưới gân cơ dưới vai.",
-      "innervation": "Thần kinh dưới vai trên và dưới (Upper & lower subscapular nerves - C5, C6), thần kinh nách (Axillary nerve) và nhánh khớp của thần kinh ngực ngoài.",
-      "vascularAndDangerZones": [
-        "Bó mạch nách và Đám rối thần kinh cánh tay (Axillary artery/vein & Brachial plexus) nằm ở phía trong mỏm quạ: Tuyệt đối không đặt điểm chọc kim lệch vào phía trong mỏm quạ.",
-        "Tĩnh mạch đầu (Cephalic vein) chạy nông trong rãnh delta – ngực (Deltopectoral groove): Cần quét kiểm tra và ép thử đầu dò trước khi chọc kim.",
-        "Động mạch mũ cánh tay trước (Anterior circumflex humeral artery) chạy ngang bờ dưới cơ dưới vai quanh cổ phẫu thuật xương cánh tay."
+    "surfaceAnatomy": {
+      "sourceRef": "Gray's Anatomy (42nd Ed.) – Pectoral & Deltopectoral Surface Anatomy; Moore's Clinically Oriented Anatomy",
+      "surfaceLandmarks": [
+        "Xương đòn (Clavicle) và Hố dưới đòn (Infraclavicular fossa / Mohrenheim's fossa) nằm ngay dưới chỗ nối 1/3 ngoài – 2/3 trong xương đòn.",
+        "Đỉnh mỏm quạ xương vai (Tip of coracoid process): Mốc sờ chạm quan trọng nhất ('Lighthouse of the anterior shoulder'), nằm sâu dưới hố dưới đòn ~2 cm trong rãnh delta – ngực.",
+        "Rãnh delta – ngực (Deltopectoral groove): Rãnh lõm chéo phân cách bờ trước cơ delta và bờ trên ngoài cơ ngực lớn (chứa tĩnh mạch đầu).",
+        "Củ bé xương cánh tay (Lesser tubercle): Nằm ngang mức và phía ngoài đỉnh mỏm quạ ~2.0 cm, nổi rõ ngay dưới tay khi xoay ngoài cánh tay."
+      ],
+      "surfaceProjections": "Khe khớp ổ chảo – cánh tay trước chiếu lên bề mặt da thành một đường thẳng đứng dài ~3 cm nằm ngay sát PHÍA NGOÀI đỉnh mỏm quạ khoảng 1.0 – 1.5 cm. Toàn bộ bó mạch nách và đám rối thần kinh cánh tay đi chéo ở PHÍA TRONG và DƯỚI mỏm quạ (sâu dưới cơ ngực bé) – do đó đường dọc qua đỉnh mỏm quạ là 'biên giới đỏ tuyệt đối' phân chia vùng an toàn phía ngoài và vùng mạch máu lớn phía trong.",
+      "palpationSteps": [
+        "1. Đặt bệnh nhân nằm ngửa hoặc nửa ngồi, khuỷu gấp 90° áp sát mạn sườn.",
+        "2. Dùng ngón cái ấn nhẹ vào rãnh delta – ngực ngay dưới xương đòn 2 cm để chạm vào đỉnh mỏm quạ cứng chắc (lưu ý mỏm quạ vốn nhạy cảm đau khi ấn mạnh ở người bình thường).",
+        "3. Đặt ngón trỏ dịch sang phía ngoài mỏm quạ 2 cm, tay kia cầm cẳng tay bệnh nhân xoay ngoài tối đa: cảm nhận củ bé trượt ra ngoài làm căng giãn gân cơ dưới vai và mở rộng cửa sổ mặt trước khớp."
       ],
       "figures": [
         {
-          "path": "assets/images/anatomy/fig_19_03_biceps_rotator_interval.jpg",
-          "figNumber": "19.3",
-          "title": "Giải phẫu các ngách hoạt dịch mặt trước khớp vai và khoang gian chóp xoay (Fig. 19.3)",
-          "desc": "Mối liên quan giải phẫu giữa mỏm quạ, gân cơ dưới vai, bao hoạt dịch dưới vai và khoang gian chóp xoay phía trước trên.",
-          "springerCaption": "Fig. 19.3 Anterior shoulder synovial membrane recesses and rotator interval anatomy."
+          "path": "assets/images/external_anatomy/ext_surf_upper_front_topography_gray1231.png",
+          "figNumber": "Gray 1231",
+          "title": "Giải phẫu bề mặt rãnh delta - ngực, hố dưới đòn và mặt trước vai (Gray's Plate 1231)",
+          "desc": "Hình thái bề mặt hố dưới đòn (nơi sờ mỏm quạ), rãnh delta - ngực chứa tĩnh mạch đầu và khối cơ delta trước.",
+          "atlasSource": "Gray's Anatomy (20th Ed., Plate 1231) – Surface topography of the front of right upper extremity."
         }
       ]
     },
-    "surfaceAnatomy": {
-      "bonyLandmarks": [
-        "Mỏm quạ xương vai (Coracoid process): Mốc xương cứng ấn hơi tức nằm sâu trong rãnh delta – ngực, cách bờ dưới xương đòn chỗ nối 1/3 ngoài và 2/3 trong khoảng 2 cm.",
-        "Củ bé xương cánh tay (Lesser tuberosity): Nằm ngay phía ngoài mỏm quạ khoảng 2 cm, lăn rõ dưới tay khi xoay ngoài – xoay trong cánh tay.",
-        "Rãnh delta – ngực (Deltopectoral groove): Rãnh lõm tự nhiên giữa bờ trước cơ delta và bờ trên ngoài cơ ngực lớn."
+    "crossSectionalAnatomy": {
+      "sourceRef": "Gray's Anatomy – Axial Section of Shoulder & Axilla; Ellis Human Sectional Anatomy",
+      "sectionPlane": "Thiết đồ cắt ngang (Axial / Transverse Section) đi ngang qua đỉnh mỏm quạ, gân cơ dưới vai, củ bé xương cánh tay và bờ trước ổ chảo.",
+      "layeredStructure": [
+        "Lớp 1 – Da và mô dưới da vùng vai trước: Chứa nhánh thần kinh trên đòn và đặc biệt là TĨNH MẠCH ĐẦU (Cephalic vein) nằm trong rãnh mỡ giữa cơ delta và cơ ngực lớn.",
+        "Lớp 2 – Bó trước cơ delta (Anterior deltoid) và lá mạc đòn – ngực (Clavipectoral fascia) nối sang mỏm quạ.",
+        "Lớp 3 – Bao hoạt dịch dưới mỏm quạ / dưới cơ delta phần trước và gân chung cơ quạ – cánh tay & đầu ngắn cơ nhị đầu bám ở đỉnh mỏm quạ (phía trong).",
+        "Lớp 4 – Gân cơ dưới vai (Subscapularis tendon, dày ~5 – 6 mm, cấu tạo đa dải gân đan xen thớ cơ) căng ngang từ hố dưới vai ra bám tận củ bé.",
+        "Lớp 5 – Bao khớp trước (được tăng cường bởi 3 dây chằng ổ chảo – cánh tay trên, giữa, dưới) và KHOANG ĐÍCH: Ngách trước khớp ổ chảo – cánh tay (có thông nối với túi cùng dưới cơ dưới vai qua lỗ Weitbrecht).",
+        "Lớp 6 (Đáy thiết đồ) – Sụn viền trước ổ chảo (Anterior labrum) ở phía trong và diện sụn chỏm xương cánh tay ở phía ngoài."
       ],
-      "referenceLines": "Đường nối ngang từ đỉnh mỏm quạ ra phía ngoài tới củ bé xương cánh tay tương ứng với trục ngang của gân cơ dưới vai và khe khớp vai trước.",
-      "palpationSteps": [
-        "1. Bệnh nhân nằm ngửa hoặc ngồi ngả lưng, khuỷu gấp 90 độ khép sát thân mình.",
-        "2. Tìm rãnh delta – ngực dưới bờ dưới xương đòn và ấn sâu nhẹ để xác định đỉnh mỏm quạ (giới hạn an toàn phía trong – tuyệt đối không đâm kim vượt vào trong mốc này).",
-        "3. Đặt ngón tay ra phía ngoài mỏm quạ 2 cm rồi cho bệnh nhân xoay ngoài tối đa cẳng tay: củ bé và gân dưới vai sẽ trượt ra ngoài làm mở rộng khe khớp trước."
+      "topographicRelations": {
+        "superficialAndDeep": "Phía nông là bó trước cơ delta, tĩnh mạch đầu và gân cơ dưới vai; phía sâu là cổ giải phẫu chỏm cánh tay và bờ trước ổ chảo.",
+        "medialAndLateral": "Phía TRONG mỏm quạ là bó mạch nách (Động mạch – Tĩnh mạch nách) và 3 bó đám rối thần kinh cánh tay; phía NGOÀI củ bé là rãnh gian củ chứa gân đầu dài cơ nhị đầu; phía DƯỚI bờ dưới cơ dưới vai là động mạch mũ cánh tay trước."
+      },
+      "dangerCorridors": [
+        "Vùng cấm phía trong mỏm quạ: Tuyệt đối không đặt điểm chọc kim hay hướng mũi kim vượt quá mặt phẳng dọc qua mỏm quạ vào trong hố nách.",
+        "Luôn nhả nhẹ lực ấn đầu dò ở rãnh delta – ngực để tĩnh mạch đầu không bị ép xẹp vô hình trước khi đâm kim."
       ],
-      "probePlacement": "Đặt đầu dò Linear cắt ngang (Axial plane) ngay phía ngoài mỏm quạ, vuông góc với trục xương cánh tay đang giữ ở tư thế xoay ngoài (External rotation).",
       "figures": [
         {
-          "path": "assets/images/anatomy/fig_19_06b_rotator_interval_scan.jpg",
-          "figNumber": "19.6b",
-          "title": "Định vị đầu dò mặt trước vai và liên quan mỏm quạ - chóp xoay trước (Fig. 19.6b)",
-          "desc": "Mặt cắt ngang phía trước vai với cánh tay xoay nhẹ giúp bộc lộ cấu trúc trước khớp vai và ranh giới mỏm quạ.",
-          "springerCaption": "Fig. 19.6b Surface transducer placement over the anterior shoulder and rotator interval."
+          "path": "assets/images/external_anatomy/ext_sec_shoulder_capsule_gray327.png",
+          "figNumber": "Gray 327",
+          "title": "Giải phẫu bao khớp vai căng giãn mặt trước, mỏm quạ và các túi hoạt dịch thông nối (Gray's Plate 327)",
+          "desc": "Mối liên quan trực tiếp giữa bao khớp vai trước, ngách hoạt dịch dưới cơ dưới vai, bao gân nhị đầu và mốc xương mỏm quạ.",
+          "atlasSource": "Gray's Anatomy (20th Ed., Plate 327) – Distended capsule of shoulder-joint (anterior aspect)."
         }
       ]
     },
@@ -5403,45 +5852,56 @@ var STABLE_PROCEDURES_FALLBACK = [];
         "Rối loạn đông máu nặng."
       ]
     },
-    "anatomy": {
-      "overview": "Khớp khuỷu là một phức hợp khớp bản lề – trục chung một khoang bao hoạt dịch duy nhất bao gồm 3 khớp thành phần thông nối hoàn toàn với nhau: khớp cánh tay – trụ (Humeroulnar), khớp cánh tay – quay / quay – lồi cầu con (Radiocapitellar) và khớp quay – trụ gần. Bao khớp có 3 đệm mỡ nội bao nhưng nằm ngoài màng hoạt dịch (đệm mỡ vành, đệm mỡ quay phía trước và đệm mỡ mỏm khuỷu lớn nhất nằm trong hố mỏm khuỷu phía sau). Khi tràn dịch hoặc viêm màng hoạt dịch khuỷu, ngách sau (hố mỏm khuỷu dưới gân cơ tam đầu) và khe khớp quay – lồi cầu con phía ngoài giãn phồng sớm và an toàn nhất để tiếp cận kim.",
-      "targetStructure": "Ngách hoạt dịch sau tại hố mỏm khuỷu (Olecranon fossa - sâu dưới gân cơ tam đầu và đệm mỡ sau) HOẶC khe khớp quay – lồi cầu con (Radiocapitellar joint space) ở mặt sau ngoài.",
-      "innervation": "Chi phối bởi cả 4 thần kinh chính chi trên: thần kinh cơ bì, thần kinh giữa (mặt trước), thần kinh quay (mặt ngoài & sau) và thần kinh trụ (mặt sau trong).",
-      "vascularAndDangerZones": [
-        "Dây thần kinh trụ (Ulnar nerve) chạy dọc bờ trong mỏm khuỷu trong ống khuỷu: Khi tiêm lối sau hoặc lối cạnh ngoài mỏm khuỷu, LUÔN đâm kim từ BỜ NGOÀI (Lateral side) vào hố mỏm khuỷu, tuyệt đối không chọc từ bờ trong!",
-        "Động mạch cánh tay và thần kinh giữa nằm ở hố trụ phía trước (tuyệt đối tránh tiếp cận khớp khuỷu từ mặt trước).",
-        "Sụn khớp chỏm con (Capitellum) và chỏm quay ở lối bên ngoài."
+    "surfaceAnatomy": {
+      "sourceRef": "Gray's Anatomy (42nd Ed.) – Elbow Joint Surface Projections & Anconeus Triangle; Moore's Clinically Oriented Anatomy",
+      "surfaceLandmarks": [
+        "Đỉnh mỏm khuỷu xương trụ (Tip of olecranon), Mỏm trên lồi cầu ngoài và Chỏm xương quay.",
+        "Tam giác mềm khuỷu ngoài (Lateral infracondylar 'Soft Spot' / Anconeus triangle): Tam giác lõm tạo bởi 3 đỉnh xương gồm Mỏm trên lồi cầu ngoài – Chỏm xương quay – Đỉnh mỏm khuỷu.",
+        "Hố trên mỏm khuỷu (Posterior supracondylar / Olecranon depression): Vùng lõm dọc hai bên và ngay trên đỉnh mỏm khuỷu dưới gân cơ tam đầu.",
+        "Mỏm trên lồi cầu trong và rãnh thần kinh trụ ở phía trong (vùng cấm tuyệt đối)."
+      ],
+      "surfaceProjections": "Bao hoạt dịch khớp khuỷu bọc chung cả 3 khớp (cánh tay – trụ, cánh tay – quay, quay – trụ gần). Trên bề mặt da, hai điểm mà khoang khớp nằm nông nhất và không vướng mạch máu – thần kinh lớn là: (1) Tâm tam giác mềm mặt ngoài khuỷu (chiếu thẳng vào khe khớp quay – lồi cầu con và ngách ngoài bao khớp) và (2) Bờ ngoài gân cơ tam đầu cách đỉnh mỏm khuỷu 1.5 – 2.0 cm lên phía trên (chiếu thẳng vào hố mỏm khuỷu).",
+      "palpationSteps": [
+        "1. Đặt khuỷu bệnh nhân gấp 90° (tư thế dung tích bao khớp khuỷu lớn nhất và mở rộng tối đa hố mỏm khuỷu phía sau).",
+        "2. Dùng 3 ngón tay xác định 3 đỉnh của Tam giác mềm khuỷu ngoài (Lồi cầu ngoài – Chỏm quay – Đỉnh mỏm khuỷu): nếu có tràn dịch khớp khuỷu, tâm tam giác này sẽ căng phồng mất hõm lõm tự nhiên.",
+        "3. Dùng ngón tay đối diện ấn xác nhận rãnh thần kinh trụ ở bờ trong mỏm khuỷu để tuyệt đối chỉ tiếp cận từ phía ngoài hoặc chính sau ngoài."
       ],
       "figures": [
         {
-          "path": "assets/images/anatomy/fig_20_04_posterior_elbow_anatomy.jpg",
-          "figNumber": "20.4",
-          "title": "Giải phẫu mặt sau khớp khuỷu và 2 vị trí đặt đầu dò chuẩn (Fig. 20.4)",
-          "desc": "Khung số 1 (dọc giữa trên mỏm khuỷu qua gân cơ tam đầu) và khung số 2 (chéo ngoài mỏm khuỷu) để tiếp cận khoang khớp khuỷu an toàn, tránh thần kinh trụ phía trong.",
-          "springerCaption": "Fig. 20.4 Posterior elbow anatomy showing blue boxes 1 and 2 for ultrasound scanning and intra-articular access."
+          "path": "assets/images/external_anatomy/ext_surf_upper_back_topography_gray1232.png",
+          "figNumber": "Gray 1232",
+          "title": "Giải phẫu bề mặt mặt sau cánh tay - khuỷu tay: Mỏm khuỷu, gân cơ tam đầu và hõm bên khuỷu (Gray's Plate 1232)",
+          "desc": "Hình thái bề mặt đỉnh mỏm khuỷu, dải gân cơ tam đầu phía trên và hõm mềm bên ngoài khuỷu.",
+          "atlasSource": "Gray's Anatomy (20th Ed., Plate 1232) – Back of right upper extremity surface topography."
         }
       ]
     },
-    "surfaceAnatomy": {
-      "bonyLandmarks": [
-        "Đỉnh mỏm khuỷu xương trụ (Tip of olecranon): Mốc xương nhọn sờ rõ nhất ở mặt sau khuỷu.",
-        "Mỏm trên lồi cầu ngoài và chỏm xương quay: Hai phần ba đỉnh của 'tam giác mềm sau ngoài' (Anconeus soft spot triangle).",
-        "Mỏm trên lồi cầu trong: Đánh dấu ranh giới cấm ở phía trong do có dây thần kinh trụ."
+    "crossSectionalAnatomy": {
+      "sourceRef": "Gray's Anatomy – Sagittal & Axial Sectional Anatomy of the Elbow Joint",
+      "sectionPlane": "Thiết đồ đứng dọc chính giữa qua hố mỏm khuỷu (Mid-sagittal Section) và Thiết đồ chéo ngoài qua khớp quay – lồi cầu con.",
+      "layeredStructure": [
+        "Lớp 1 – Da lỏng lẻo vùng sau khuỷu và bao hoạt dịch dưới da mỏm khuỷu (Subcutaneous olecranon bursa – nằm NÔNG ngoài gân tam đầu, KHÔNG thông với ổ khớp khuỷu!).",
+        "Lớp 2 – Mạc cánh tay sau và Gân cơ tam đầu cánh tay dày chắc (Triceps brachii tendon – ở đường giữa sau) hoặc Cơ khuỷu mỏng (Anconeus muscle – ở lối tam giác mềm ngoài).",
+        "Lớp 3 – Bao xơ khớp khuỷu sau (Posterior fibrous capsule – mỏng, bám cao trên rìa trên hố mỏm khuỷu).",
+        "Lớp 4 – Đệm mỡ sau khớp khuỷu (Posterior olecranon fat pad): Nằm TRONG bao xơ nhưng NGOÀI màng hoạt dịch (Intracapsular, extrasynovial – khi tràn dịch khớp sẽ đẩy đệm mỡ này bật lên tạo dấu hiệu 'cánh buồm sau' trên X-quang và siêu âm!).",
+        "Lớp 5 – KHOANG ĐÍCH: Màng hoạt dịch và Ngách sau khoang khớp khuỷu trong lòng hố mỏm khuỷu (Olecranon fossa synovial recess) hoặc khe sụn khớp quay – lồi cầu con.",
+        "Lớp 6 (Đáy thiết đồ) – Đáy xương lõm hố mỏm khuỷu xương cánh tay và sụn ròng rọc / chỏm con."
       ],
-      "referenceLines": "Tam giác mềm khuỷu ngoài (Lateral soft spot / Anconeus triangle): Được giới hạn bởi 3 đỉnh xương gồm Mỏm trên lồi cầu ngoài – Chỏm xương quay – Đỉnh mỏm khuỷu; mặt khác ở phía sau, hố mỏm khuỷu nằm ngay chính giữa phía trên đỉnh mỏm khuỷu 1 - 2 cm.",
-      "palpationSteps": [
-        "1. Bệnh nhân nằm sấp treo tay qua mép giường hoặc ngồi đặt cẳng tay trên bàn với khuỷu gấp 90 độ (giúp mở rộng hố mỏm khuỷu phía sau và đẩy đệm mỡ trồi lên nếu có tràn dịch).",
-        "2. Dùng 3 ngón tay lần lượt chạm đỉnh mỏm khuỷu, lồi cầu ngoài và lồi cầu trong; đánh dấu rãnh trụ ở phía trong để tránh xa.",
-        "3. Nếu tiếp cận hố mỏm khuỷu sau: sờ dọc gân cơ tam đầu ngay trên đỉnh mỏm khuỷu. Nếu tiếp cận khớp quay – lồi cầu con: sờ điểm lõm mềm ở tâm tam giác ngoài đồng thời xoay sấp – ngửa cẳng tay để nhận diện khe khớp chỏm quay."
+      "topographicRelations": {
+        "superficialAndDeep": "Ở lối sau, từ nông vào sâu lần lượt là gân cơ tam đầu -> bao xơ -> đệm mỡ sau -> màng hoạt dịch -> đáy xương hố mỏm khuỷu; phía trước vách xương mỏng hố mỏm khuỷu là hố vẹt, cơ cánh tay và động mạch cánh tay – thần kinh giữa.",
+        "medialAndLateral": "Bờ TRONG hố mỏm khuỷu sát liền rãnh ròng rọc – khuỷu chứa DÂY THẦN KINH TRỤ và động mạch quặt ngược trụ sau; bờ NGOÀI hố mỏm khuỷu chỉ có cơ khuỷu và nhánh mạch bên giữa nhỏ – đây là hành lang đi kim an toàn tuyệt đối!"
+      },
+      "dangerCorridors": [
+        "Phân biệt bao hoạt dịch mỏm khuỷu nông (Lớp 1) với ổ khớp khuỷu sâu (Lớp 5): Tuyệt đối không chọc xuyên qua một bao hoạt dịch mỏm khuỷu đang viêm nhiễm khuẩn nông vào ổ khớp sâu gây viêm mủ khớp khuỷu!",
+        "Luôn đưa kim vào hố mỏm khuỷu từ BỜ NGOÀI gân cơ tam đầu (Lateral-to-medial), cấm đi kim từ bờ trong để tránh thần kinh trụ."
       ],
-      "probePlacement": "Vị trí 1 (Lối sau): Đặt đầu dò Linear dọc chính giữa ngay phía trên đỉnh mỏm khuỷu dọc theo gân cơ tam đầu (hoặc xoay ngang ở hố mỏm khuỷu, đi kim In-plane từ ngoài vào trong). Vị trí 2 (Lối quay – lồi cầu con): Đặt đầu dò dọc qua khe giữa lồi cầu ngoài/chỏm con và chỏm xương quay.",
       "figures": [
         {
-          "path": "assets/images/ch20_elbow/p241_img1.jpeg",
-          "figNumber": "20.8",
-          "title": "Hình ảnh siêu âm hố mỏm khuỷu tương ứng vị trí đặt đầu dò số 1 mặt sau khuỷu (Fig. 20.8)",
-          "desc": "Mặt cắt dọc sau khuỷu hiển thị hố mỏm khuỷu (OF), đệm mỡ sau và gân cơ tam đầu ở vị trí quét số 1.",
-          "springerCaption": "Fig. 20.8 Sonoanatomy of the posterior elbow at scan position 1 over the olecranon fossa."
+          "path": "assets/images/external_anatomy/ext_sec_elbow_capsule_sagittal_gray331.png",
+          "figNumber": "Gray 331",
+          "title": "Giải phẫu bao hoạt dịch khớp khuỷu căng giãn và các túi cùng trên mỏm khuỷu - quanh chỏm quay (Gray's Plate 331)",
+          "desc": "Hình thái không gian 3 chiều của khoang hoạt dịch khớp khuỷu mở rộng lên hố vẹt, hố mỏm khuỷu và túi cùng hình vòng quanh cổ xương quay.",
+          "atlasSource": "Gray's Anatomy (20th Ed., Plate 331) – Capsule of elbow-joint distended showing synovial recesses."
         }
       ]
     },
@@ -5531,44 +5991,55 @@ var STABLE_PROCEDURES_FALLBACK = [];
         "Đang dùng thuốc chống đông chưa ngưng đủ thời gian."
       ]
     },
-    "anatomy": {
-      "overview": "Ở lối tiếp cận ngoài khớp háng (Lateral / Supratrochanteric Approach), hành trình từ mặt ngoài đùi đi vào khớp đi qua lớp da, dải chậu chày – cơ căng mạc đùi, rồi luồn qua cửa sổ cơ trên mấu chuyển (gồm cơ mông nhỡ Gluteus medius ở nông và cơ mông bé Gluteus minimus ở sâu) để tiếp cận bờ trên ngoài của chỗ nối chỏm – cổ xương đùi ngay dưới trần ổ cối và sụn viền trên ngoài. Ưu điểm lớn của lối ngoài là đường đi hoàn toàn cách xa bó mạch thần kinh đùi và vùng nếp bẹn ẩm ướt (đặc biệt hữu ích ở bệnh nhân béo phì có nếp bụng dày phủ lấp vùng bẹn).",
-      "targetStructure": "Mặt trên ngoài chỗ nối chỏm – cổ xương đùi (Superolateral head-neck junction) trong bao khớp háng, nằm sâu dưới cơ mông nhỡ và cơ mông bé.",
-      "innervation": "Nhánh thần kinh mông trên (Superior gluteal nerve - L4, L5, S1) đi trong mặt phẳng cân giữa cơ mông nhỡ và cơ mông bé, cùng các nhánh cảm giác bao khớp trên.",
-      "vascularAndDangerZones": [
-        "Nhánh sâu động mạch mông trên và nhánh thần kinh mông trên (Superior gluteal neurovascular branches) chạy giữa cơ mông nhỡ và cơ mông bé: Cần bật Color Doppler kiểm tra hành trình kim!",
-        "Sụn viền trên ngoài ổ cối (Superolateral acetabular labrum): Tránh đâm mũi kim chếch quá cao vào bờ ổ cối làm tổn thương sụn viền.",
-        "Điểm bám gân cơ mông nhỡ – mông bé tại đỉnh mấu chuyển lớn."
+    "surfaceAnatomy": {
+      "sourceRef": "Gray's Anatomy (42nd Ed.) – Nélaton's Line & Bryant's Iliofemoral Triangle; Moore's Clinically Oriented Anatomy",
+      "surfaceLandmarks": [
+        "Đỉnh mấu chuyển lớn xương đùi (Apex of greater trochanter): Sờ rõ ở mặt ngoài hông cách dưới mào chậu một bàn tay (~10 cm).",
+        "Gai chậu trước trên (ASIS) ở phía trước trên và Ụ ngồi (Ischial tuberosity) ở phía sau dưới.",
+        "Củ mào chậu (Iliac tubercle – điểm nhô rộng nhất của mào chậu cách ASIS 5 cm ra sau)."
+      ],
+      "surfaceProjections": "Hai mốc hình học bề mặt kinh điển của vùng hông ngoài (Gray's Plate 1243): (1) Đường Nélaton – Roser: Khi nằm nghiêng gấp háng 45°, đường nối thẳng từ ASIS tới ụ ngồi đi vừa chạm qua ĐỈNH MẤU CHUYỂN LỚN; (2) Tam giác Bryant: Hạ đường thẳng đứng từ ASIS xuống mặt giường và đường ngang từ đỉnh mấu chuyển lớn gặp nhau tạo tam giác vuông giúp xác định chính xác chiều cao khoảng trên mấu chuyển (Supratrochanteric window) dẫn thẳng vào mặt trên ngoài cổ – chỏm xương đùi.",
+      "palpationSteps": [
+        "1. Đặt bệnh nhân nằm nghiêng hoàn toàn sang bên lành, hai chân duỗi nhẹ có gối đệm giữa hai đầu gối.",
+        "2. Dùng lòng bàn tay ôm xác định chu vi trước – sau và đỉnh cao nhất của mấu chuyển lớn xương đùi.",
+        "3. Xác định cửa sổ mềm trên mấu chuyển (nằm ngay phía trên đỉnh mấu chuyển lớn 1 – 3 cm hướng về củ mào chậu)."
       ],
       "figures": [
         {
-          "path": "assets/images/anatomy/fig_22_11_gluteus_muscles_insertions.jpg",
-          "figNumber": "22.11",
-          "title": "Giải phẫu phân lớp cơ mông lớn, mông nhỡ và mông bé vùng mấu chuyển ngoài khớp háng (Fig. 22.11)",
-          "desc": "Ba lớp cơ vùng hông ngoài gồm cơ mông lớn, cơ mông nhỡ và cơ mông bé phủ phía trên mấu chuyển lớn và cổ xương đùi.",
-          "springerCaption": "Fig. 22.11 Anatomical arrangement of gluteus maximus, gluteus medius, and gluteus minimus over the lateral hip."
+          "path": "assets/images/external_anatomy/ext_surf_hip_nelaton_bryant_gray1243.png",
+          "figNumber": "Gray 1243",
+          "title": "Giải phẫu bề mặt hông ngoài kinh điển: Đường Nélaton và Tam giác Bryant định vị đỉnh mấu chuyển lớn - cổ đùi (Gray's Plate 1243)",
+          "desc": "Đường chuẩn Nélaton (ASIS – ụ ngồi) và tam giác Bryant giúp định khu chính xác đỉnh mấu chuyển lớn so với ổ cối và cổ xương đùi.",
+          "atlasSource": "Gray's Anatomy (20th Ed., Plate 1243) – Nélaton's line and Bryant's triangle."
         }
       ]
     },
-    "surfaceAnatomy": {
-      "bonyLandmarks": [
-        "Đỉnh mấu chuyển lớn xương đùi (Apex of greater trochanter): Khối xương lớn nhô rõ nhất ở mặt bên hông đùi.",
-        "Mào chậu (Iliac crest) ở phía trên và gai chậu trước trên (ASIS) ở phía trước trên."
+    "crossSectionalAnatomy": {
+      "sourceRef": "OpenStax (Fig. 9.16) & Gray's Anatomy (Plate 344) – True Coronal Section of Hip & Abductor Mechanism",
+      "sectionPlane": "Thiết đồ đứng ngang chính diện (True Coronal Section) cắt dọc qua cánh chậu, trần ổ cối, chỏm – cổ xương đùi và đỉnh mấu chuyển lớn.",
+      "layeredStructure": [
+        "Lớp 1 – Da và lớp mỡ dưới da vùng hông ngoài (dày ~1.5 – 4.5 cm).",
+        "Lớp 2 – Lá cân rộng của Dải chậu chày (Iliotibial tract) và cân cơ mông (Gluteal aponeurosis).",
+        "Lớp 3 – Bụng cơ và gân cơ mông nhỡ (Gluteus medius muscle) ở nông; ngăn cách với lớp dưới bởi mặt phẳng cân thần kinh – mạch máu chứa NHÁNH SÂU ĐỘNG MẠCH MÔNG TRÊN và THẦN KINH MÔNG TRÊN (L4–S1)!",
+        "Lớp 4 – Bụng cơ và gân cơ mông bé (Gluteus minimus muscle) áp sát trực tiếp mặt trên bao khớp háng.",
+        "Lớp 5 – Bao khớp trên ngoài (được tăng cường bởi bó ngang dây chằng chậu – đùi) và KHOANG ĐÍCH: Ngách trên ngoài khớp háng tại chỗ nối chỏm – cổ xương đùi.",
+        "Lớp 6 (Đáy thiết đồ) – Vỏ xương bờ trên cổ xương đùi, sụn chỏm đùi và sụn viền trên ngoài ổ cối (Superolateral acetabular labrum)."
       ],
-      "referenceLines": "Trục vành ngoài xương đùi (Mid-coronal lateral line) đi thẳng từ mặt ngoài đùi qua đỉnh mấu chuyển lớn hướng lên khoảng trên mấu chuyển (Supratrochanteric window).",
-      "palpationSteps": [
-        "1. Đặt bệnh nhân nằm nghiêng hoàn toàn sang bên lành (Lateral decubitus position, mặt bệnh bên đau hướng lên trần nhà), kẹp một gối mỏng giữa hai đầu gối để giữ đùi ở tư thế trung tính.",
-        "2. Dùng lòng các ngón tay sờ xác định bờ trước, bờ sau và đỉnh cao nhất của mấu chuyển lớn xương đùi.",
-        "3. Ấn xác nhận vùng hõm cơ mềm ngay phía trên đỉnh mấu chuyển lớn (khoảng giữa đỉnh mấu chuyển lớn và mào chậu)."
+      "topographicRelations": {
+        "superficialAndDeep": "Hành trình kim đi hoàn toàn qua cơ dạng háng (mông nhỡ -> mông bé) tới bờ trên cổ đùi; không hề đi gần bó mạch đùi (ở trước trong) hay thần kinh tọa (ở sau trong).",
+        "medialAndLateral": "Phía trên trong sát bờ xương ổ cối là sụn viền trên ngoài (vùng hay rách nhất trong hội chứng chạm khớp háng FAI); phía dưới ngoài là diện bám gân cơ mông nhỡ – mông bé trên đỉnh mấu chuyển lớn."
+      },
+      "dangerCorridors": [
+        "Mặt phẳng cân giữa Lớp 3 (cơ mông nhỡ) và Lớp 4 (cơ mông bé) chứa nhánh thần kinh mông trên và nhánh sâu động mạch mông trên: Bật Color Doppler kiểm tra trước khi xuyên kim.",
+        "Tránh hướng mũi kim quá cao sát rìa xương ổ cối gây đâm xuyên qua sụn viền trên ngoài."
       ],
-      "probePlacement": "Đặt đầu dò Curvilinear 2-5 MHz dọc theo mặt phẳng trán (Coronal longitudinal plane) trực tiếp lên đỉnh mấu chuyển lớn rồi trượt nhẹ đầu dò lên phía đầu (cephalad) để thấy đường viền mấu chuyển lớn chuyển tiếp vào cổ trên và chỏm xương đùi tròn nằm sát bờ ổ cối.",
       "figures": [
         {
-          "path": "assets/images/ch22_hip/p273_img1.jpeg",
-          "figNumber": "22.4",
-          "title": "Đặt đầu dò mặt phẳng trán trên vùng mấu chuyển ngoài khớp háng (Fig. 22.4)",
-          "desc": "Bệnh nhân nằm nghiêng sang bên lành, đầu dò Curvilinear đặt dọc qua đỉnh mấu chuyển lớn hướng lên khe khớp trên ngoài.",
-          "springerCaption": "Fig. 22.4 Coronal ultrasound probe placement over the lateral trochanteric and supratrochanteric area."
+          "path": "assets/images/external_anatomy/ext_sec_hip_coronal_openstax916.jpg",
+          "figNumber": "OpenStax 9.16",
+          "title": "Thiết đồ đứng ngang (Coronal Section) qua đỉnh mấu chuyển lớn, bờ trên cổ xương đùi và trần sụn viền ổ cối (OpenStax Atlas)",
+          "desc": "Thiết đồ đứng ngang khớp háng minh họa rõ cửa sổ trên mấu chuyển đi thẳng vào chỗ nối chỏm - cổ trên ngoài ngay dưới sụn viền ổ cối.",
+          "atlasSource": "OpenStax Anatomy & Physiology (CC-BY 4.0, Fig. 9.16) – Coronal section of the hip joint."
         }
       ]
     },
@@ -5652,45 +6123,62 @@ var STABLE_PROCEDURES_FALLBACK = [];
         "Rối loạn đông máu nặng (nguy cơ tụ máu sau phúc mạc hoặc khoang cơ chậu)."
       ]
     },
-    "anatomy": {
-      "overview": "Cơ thắt lưng – chậu (Iliopsoas) hợp thành từ cơ thắt lưng lớn và cơ chậu, đi qua khuyết cơ (Muscular lacuna) dưới dây chằng bẹn ở phía ngoài bó mạch đùi. Tại mức gờ chậu – lược (Iliopectineal eminence) mặt trước khớp háng, phần gân cơ thắt lưng lớn (Psoas tendon) nằm ở phía sâu – trong sát gờ xương chậu lược, được bao bọc phía trước ngoài bởi phần thịt cơ chậu (Iliacus muscle), trước khi bám tận vào mấu chuyển bé. Bao hoạt dịch thắt lưng chậu (Iliopsoas bursa – bao hoạt dịch lớn nhất cơ thể, kích thước tới 5–7 x 2–4 cm) nằm đệm ngay giữa mặt sâu gân thắt lưng chậu và mặt trước bao khớp háng / gờ chậu lược (thông nối với ổ khớp háng ở ~15% người lớn).",
-      "targetStructure": "Mặt phẳng bao hoạt dịch thắt lưng chậu (Iliopsoas bursa plane) nằm ngay giữa mặt sâu gân cơ thắt lưng lớn (Psoas major tendon) và mặt xương tăng âm của gờ chậu – lược (Iliopectineal eminence - IPE) trên vành ổ cối trước.",
-      "innervation": "Các nhánh cơ từ đám rối thắt lưng (L1–L3) và nhánh của thần kinh đùi (Femoral nerve).",
-      "vascularAndDangerZones": [
-        "Thần kinh đùi (Femoral nerve): Nằm ngay mặt nông – trong của cơ chậu (dưới mạc chậu Fascia iliaca)!",
-        "Động mạch và tĩnh mạch đùi (Femoral artery & vein): Nằm ngay sát bờ trong của gân cơ thắt lưng chậu và gờ chậu – lược – bắt buộc đi kim từ NGOÀI VÀO TRONG (Lateral to Medial) và bật Doppler màu để kim dừng ngay dưới gân, không vượt sang bờ trong!",
-        "Động mạch mũ đùi ngoài ở phía dưới và phúc mạc/ổ chậu nếu đi quá cao trên dây chằng bẹn."
+    "surfaceAnatomy": {
+      "sourceRef": "Gray's Anatomy (42nd Ed.) – Lacuna Musculorum vs. Lacuna Vasorum & Femoral Triangle",
+      "surfaceLandmarks": [
+        "Gai chậu trước trên (ASIS – đầu ngoài dây chằng bẹn) và Củ mu (Pubic tubercle – đầu trong dây chằng bẹn).",
+        "Điểm giữa bẹn (Mid-inguinal point): Nơi bắt rõ mạch đập của ĐỘNG MẠCH ĐÙI.",
+        "Gai chậu trước dưới (AIIS – nằm sâu dưới ASIS ~3 cm hơi vào trong, không sờ rõ ở người cơ dày nhưng định hướng trên đường nối)."
+      ],
+      "surfaceProjections": "Dưới dây chằng bẹn được vách cân chậu – lược (Iliopectineal arch) chia làm 2 buồng riêng biệt: Buồng mạch (Lacuna vasorum) ở PHÍA TRONG chứa động mạch – tĩnh mạch đùi; Buồng cơ (Lacuna musculorum) ở PHÍA NGOÀI chứa cơ thắt lưng chậu và thần kinh đùi. Gân cơ thắt lưng lớn và bao hoạt dịch thắt lưng chậu chiếu lên mặt da ở ngay dưới dây chằng bẹn cách mạch đập động mạch đùi ~1.5 – 2.0 cm về PHÍA NGOÀI!",
+      "palpationSteps": [
+        "1. Bệnh nhân nằm ngửa thẳng, hai chân duỗi trung tính.",
+        "2. Sờ ASIS ở ngoài và bắt mạch đập động mạch đùi ở giữa nếp bẹn bằng hai ngón tay.",
+        "3. Đánh dấu vùng đặt đầu dò nằm giữa ASIS và động mạch đùi ngay sát bờ dưới nếp dây chằng bẹn."
       ],
       "figures": [
         {
-          "path": "assets/images/ch22_hip/p271_img1.jpeg",
-          "figNumber": "22.1",
-          "title": "Giải phẫu liên quan gân cơ thắt lưng chậu, gờ chậu - lược và bó mạch thần kinh đùi (Fig. 22.1)",
-          "desc": "Cơ và gân thắt lưng chậu trượt qua gờ chậu - lược phía trước bao khớp háng, nằm ngay sát phía ngoài thần kinh và động mạch đùi.",
-          "springerCaption": "Fig. 22.1 Anatomical relationship of the iliopsoas complex, anterior hip capsule, and femoral neurovascular bundle."
+          "path": "assets/images/external_anatomy/ext_surf_thigh_femoral_markings_gray1245.png",
+          "figNumber": "Gray 1245",
+          "title": "Giải phẫu bề mặt nếp bẹn: Tương quan dây chằng bẹn, thần kinh đùi, động mạch đùi và nền chậu - lược (Gray's Plate 1245)",
+          "desc": "Gân cơ thắt lưng chậu đi qua buồng cơ ngay phía sâu - ngoài của thần kinh đùi và động mạch đùi dưới dây chằng bẹn.",
+          "atlasSource": "Gray's Anatomy (20th Ed., Plate 1245) – Surface markings of inguinal ligament, femoral nerve, and femoral artery."
         }
       ]
     },
-    "surfaceAnatomy": {
-      "bonyLandmarks": [
-        "Gai chậu trước trên (ASIS): Mốc xương chuẩn khởi điểm phía trước ngoài khung chậu.",
-        "Gai chậu trước dưới (AIIS) và Gờ chậu – lược (Iliopectineal eminence - IPE): Nằm sâu dưới nếp bẹn.",
-        "Củ mu (Pubic tubercle) ở phía trong."
+    "crossSectionalAnatomy": {
+      "sourceRef": "Gray's Anatomy (Plates 344, 435) – Transverse-Oblique Sectional Anatomy Across Acetabular Rim & Muscular Lacuna",
+      "sectionPlane": "Thiết đồ cắt ngang chếch song song dây chằng bẹn (Transverse-Oblique Section) qua gai chậu trước dưới (AIIS), gờ chậu – lược (IPE) và vành trước ổ cối.",
+      "layeredStructure": [
+        "Lớp 1 – Da và mô mỡ dưới da nếp bẹn (chứa hạch bạch huyết bẹn nông và tĩnh mạch thượng vị nông).",
+        "Lớp 2 – Mạc đùi (Fascia lata), cơ may (Sartorius – ở cực ngoài bám vào ASIS) và nguyên ủy cơ thẳng đùi (bám vào AIIS).",
+        "Lớp 3 – Mạc chậu (Fascia iliaca) bọc mặt nông cơ chậu: THẦN KINH ĐÙI (Femoral nerve) nằm dẹt ngay DƯỚI mạc chậu trên rãnh mặt trước trong của cơ chậu!",
+        "Lớp 4 – Khối cơ chậu (Iliacus muscle – phần thịt giảm âm rộng ở phía ngoài) ôm lấy GÂN CƠ THẮT LƯNG LỚN (Psoas major tendon – bó gân dẹt bầu dục đặc chắc nằm lệch phía sâu – trong sát gờ xương!).",
+        "Lớp 5 – KHOANG ĐÍCH: Bao hoạt dịch thắt lưng chậu (Iliopsoas / Iliopectineal bursa – túi hoạt dịch lớn nhất cơ thể, dài 5 – 7 cm, thông nối với ổ khớp háng ở ~15% người trưởng thành) nằm kẹp ngay giữa mặt sâu gân Psoas và mặt trước bao khớp háng / gờ xương chậu – lược!",
+        "Lớp 6 (Đáy thiết đồ) – Vỏ xương phẳng nhô cao của Gờ chậu – lược (Iliopectineal eminence) và vành trước ổ cối."
       ],
-      "referenceLines": "Đường dây chằng bẹn nối từ ASIS tới củ mu: Gân cơ thắt lưng chậu đi qua ngay phía dưới điểm nối 1/3 giữa và 1/3 ngoài của đường này (ngay phía ngoài mạch đập động mạch đùi).",
-      "palpationSteps": [
-        "1. Bệnh nhân nằm ngửa, hai chân duỗi thẳng tư thế trung tính.",
-        "2. Sờ xác định gai chậu trước trên (ASIS) bằng ngón cái và bắt mạch đập động mạch đùi ở nếp bẹn bằng ngón trỏ để khoanh vùng khoảng an toàn ở phía ngoài động mạch đùi.",
-        "3. Có thể thực hiện nghiệm pháp gây tiếng bật khớp háng trong (Snapping hip maneuver: từ tư thế gấp – dạng – xoay ngoài háng đưa duỗi – khép về trung tính) để tái hiện cảm giác gân thắt lưng chậu trượt bật qua gờ chậu – lược."
+      "topographicRelations": {
+        "superficialAndDeep": "Thần kinh đùi (Lớp 3) nằm NÔNG hơn bụng cơ chậu, còn bao hoạt dịch đích (Lớp 5) nằm SÂU sát mặt xương dưới gân Psoas.",
+        "medialAndLateral": "Ngay sát BỜ TRONG gân Psoas (qua vách cân chậu – lược mỏng) là ĐỘNG MẠCH ĐÙI và TĨNH MẠCH ĐÙI; phía NGOÀI gân Psoas là khối thịt cơ chậu dày và gai chậu trước dưới AIIS (hành lang an toàn tuyệt đối để đâm kim!)."
+      },
+      "dangerCorridors": [
+        "Bắt buộc đi kim In-plane từ NGOÀI VÀO TRONG xuyên qua phần thịt cơ chậu ở dưới sâu (SÂU hơn thần kinh đùi!) để luồn mũi kim vào khe giữa mặt sâu gân Psoas và gờ xương chậu – lược.",
+        "Tuyệt đối dừng kim dưới gân Psoas, không đẩy mũi kim nhô sang bờ trong gân chạm động mạch đùi."
       ],
-      "probePlacement": "Đặt đầu dò Curvilinear (hoặc Linear ở người gầy) cắt ngang tại gai chậu trước trên (ASIS), trượt xuống dưới tìm gai chậu trước dưới (AIIS), sau đó xoay nhẹ đầu trong đầu dò xuống dưới (~20 - 30 độ song song dây chằng bẹn) nối giữa AIIS và gờ chậu – lược (IPE) để thấy gân Psoas tăng âm hình bầu dục nằm ngay trên mặt xương IPE.",
       "figures": [
         {
-          "path": "assets/images/ch22_hip/p280_img1.jpeg",
-          "figNumber": "22.14",
-          "title": "Các vị trí đặt đầu dò trên nếp bẹn khảo sát gân và bao hoạt dịch thắt lưng chậu (Fig. 22.14)",
-          "desc": "Quét ngang chếch ngay mức vành ổ cối - gờ chậu lược bộc lộ rõ gân cơ thắt lưng (trắng sáng) tựa sát mặt xương phía ngoài bó mạch đùi.",
-          "springerCaption": "Fig. 22.14 Transducer positions and transverse-oblique scan of the iliopsoas tendon over the iliopectineal eminence."
+          "path": "assets/images/external_anatomy/ext_sec_gluteal_deep_layer_gray435.png",
+          "figNumber": "Gray 435",
+          "title": "Thiết đồ xương - dây chằng qua dây chằng bẹn: Buồng cơ (ngoài), gờ chậu - lược, dây chằng Cooper và ống bịt (Gray's Plate 435)",
+          "desc": "Cấu trúc nền xương từ gai chậu trước trên (ASIS) xuống gờ chậu - lược (trần trước ổ cối) tới củ mu, chỉ rõ mặt sàn xương nơi gân và bao hoạt dịch thắt lưng chậu trượt qua.",
+          "atlasSource": "Gray's Anatomy (20th Ed., Plate 435) – Coronal/anterior view of inguinal ligament, iliopectineal line, and obturator canal."
+        },
+        {
+          "path": "assets/images/external_anatomy/ext_sec_hip_surrounding_section_gray344.png",
+          "figNumber": "Gray 344",
+          "title": "Thiết đồ cắt qua quanh khớp háng hiển thị trực tiếp bao hoạt dịch Psoas nằm dưới cơ thắt lưng chậu sát trước bao khớp (Gray's Plate 344)",
+          "desc": "Trên thiết đồ quanh ổ cối của Gray, thấy rõ túi hoạt dịch dưới cơ Psoas kẹp sát bao khớp trước và tách biệt với bó mạch đùi ở phía trong.",
+          "atlasSource": "Gray's Anatomy (20th Ed., Plate 344) – Structures surrounding right hip-joint showing iliopsoas bursa and femoral vessels."
         }
       ]
     },
@@ -5773,45 +6261,55 @@ var STABLE_PROCEDURES_FALLBACK = [];
         "Rách dải chậu chày cấp tính chưa liền."
       ]
     },
-    "anatomy": {
-      "overview": "Dải chậu chày (Iliotibial Band - ITB) là dải cân dọc dày chắc của mạc đùi rộng hợp lực từ cơ căng mạc đùi (TFL) và cơ mông lớn, chạy dọc mặt ngoài đùi xuống bám tận chính vào củ Gerdy (Gerdy's tubercle) ở mặt trước ngoài đầu trên xương chày. Khi khớp gối gấp – duỗi lặp đi lặp lại qua góc ma sát 20 - 30 độ (ở người chạy bộ đường dài, đạp xe), dải ITB trượt cọ xát qua mỏm trên lồi cầu ngoài xương đùi (Lateral femoral epicondyle) gây viêm mô mỡ giàu mạch máu – thần kinh hoặc viêm bao hoạt dịch dải chậu chày xa (Distal ITB bursa / Adventitial bursa) nằm kẹp giữa mặt sâu ITB và vỏ xương lồi cầu ngoài đùi.",
-      "targetStructure": "Khoang hoạt dịch / mô mỡ đệm dưới dải chậu chày xa (Sub-ITB space / Bursa) nằm giữa mặt sâu dải chậu chày và mỏm trên lồi cầu ngoài xương đùi.",
-      "innervation": "Nhánh khớp gối trên ngoài (Superior lateral genicular nerve - SLGN) và các nhánh cảm giác từ thần kinh bì đùi ngoài và thần kinh mác chung.",
-      "vascularAndDangerZones": [
-        "Động mạch gối trên ngoài (Superior lateral genicular artery): Chạy sát màng xương bờ trên lồi cầu ngoài xương đùi ngay vùng bao hoạt dịch – cần bật Doppler màu kiểm tra.",
-        "Dây chằng bên ngoài / bên mác (Lateral collateral ligament - LCL) và gân cơ khoeo (Popliteus tendon) nằm chếch phía sau dưới so với dải ITB.",
-        "Thần kinh mác chung (Common peroneal nerve) chạy phía sau dọc gân cơ nhị đầu đùi vòng qua cổ xương mác (tránh đi kim lệch quá sâu ra phía sau)."
+    "surfaceAnatomy": {
+      "sourceRef": "Gray's Anatomy (42nd Ed.) – Lateral Knee Surface Markings & Gerdy's Tubercle; Noble's Compression Zone",
+      "surfaceLandmarks": [
+        "Củ Gerdy (Gerdy's anterolateral tibial tubercle): Gồ xương nhô tròn nằm ở mặt trước ngoài mâm chày, đúng trung điểm nối giữa lồi củ chày và chỏm xương mác.",
+        "Mỏm trên lồi cầu ngoài xương đùi (Lateral femoral epicondyle): Đỉnh xương nhô cách khe khớp gối ngoài ~2.5 cm lên phía trên.",
+        "Chỏm xương mác (Head of fibula): Nằm thấp hơn khe khớp ngoài ~2 cm ở phía sau ngoài (nơi bám dây chằng bên mác LCL và gân cơ nhị đầu đùi).",
+        "Dải chậu chày (Iliotibial tract): Nổi gồ thành một dải gân phẳng rộng ~2 – 3 cm dọc mặt ngoài gối khi đứng chịu lực một chân gấp gối nhẹ."
+      ],
+      "surfaceProjections": "Vùng cọ xát cơ học tối đa của dải chậu chày và vị trí hình thành bao hoạt dịch dưới dải chậu chày xa (Distal ITB bursa) chiếu đúng lên đỉnh và bờ trên MỎM TRÊN LỒI CẦU NGOÀI XƯƠNG ĐÙI (cao hơn khe khớp gối ngoài 2.0 – 3.0 cm – điểm ấn đau Noble khi gấp gối ở góc 30°).",
+      "palpationSteps": [
+        "1. Bệnh nhân nằm ngửa hoặc nằm nghiêng sang bên lành, khớp gối gấp ~30°.",
+        "2. Định vị tam giác xương mặt ngoài gối gồm Lồi củ chày (trước) – Củ Gerdy (giữa) – Chỏm xương mác (sau ngoài).",
+        "3. Từ củ Gerdy lần dọc theo bờ dải chậu chày thẳng lên trên qua khe khớp ngoài ~2.5 cm chạm mỏm trên lồi cầu ngoài đùi; vừa ấn ngón cái lên lồi cầu ngoài vừa cho bệnh nhân gấp – duỗi gối qua góc 30° (nghiệm pháp Noble)."
       ],
       "figures": [
         {
-          "path": "assets/images/anatomy/fig_23_17_itb_gerdy_anatomy.jpg",
-          "figNumber": "23.17",
-          "title": "Giải phẫu dải chậu chày xa, củ Gerdy (*) và bao hoạt dịch dải chậu chày (Fig. 23.17)",
-          "desc": "Dải chậu chày trượt qua mỏm trên lồi cầu ngoài xương đùi (nơi có bao hoạt dịch đệm phía sâu) trước khi bám tận vào củ Gerdy (*) xương chày.",
-          "springerCaption": "Fig. 23.17 Lateral view of knee showing the iliotibial band, iliotibial bursa, lateral collateral ligament, and Gerdy's tubercle (*)."
+          "path": "assets/images/external_anatomy/ext_surf_leg_lateral_itb_fibula_gray1240.png",
+          "figNumber": "Gray 1240",
+          "title": "Giải phẫu bề mặt mặt ngoài gối và cẳng chân: Dải chậu chày, củ Gerdy và chỏm xương mác (Gray's Plate 1240)",
+          "desc": "Hình thái bề mặt dải chậu chày chạy qua lồi cầu ngoài xương đùi xuống bám củ Gerdy phía trước chỏm xương mác và thần kinh mác chung phía sau.",
+          "atlasSource": "Gray's Anatomy (20th Ed., Plate 1240) – Lateral aspect of right knee and leg surface anatomy."
         }
       ]
     },
-    "surfaceAnatomy": {
-      "bonyLandmarks": [
-        "Củ Gerdy (Gerdy's tubercle): Gồ xương nhô rõ ở mặt trước ngoài đầu trên xương chày, nằm đúng khoảng giữa lồi củ chày (phía trước) và chỏm xương mác (phía sau ngoài).",
-        "Mỏm trên lồi cầu ngoài xương đùi (Lateral femoral epicondyle): Gồ xương nổi rõ cách khe khớp gối ngoài khoảng 2 - 3 cm lên phía trên.",
-        "Chỏm xương mác (Fibular head) ở phía sau ngoài (nơi bám của LCL và gân nhị đầu đùi)."
+    "crossSectionalAnatomy": {
+      "sourceRef": "Gray's Anatomy – Coronal & Axial Sectional Anatomy of Lateral Femoral Condyle & Iliotibial Tract",
+      "sectionPlane": "Thiết đồ đứng ngang mặt ngoài gối (Lateral Coronal Section) và Thiết đồ cắt ngang qua mỏm trên lồi cầu ngoài xương đùi.",
+      "layeredStructure": [
+        "Lớp 1 – Da và lớp mỡ dưới da vùng ngoài gối (dày ~3 – 8 mm; chứa các nhánh tận thần kinh bì đùi ngoài).",
+        "Lớp 2 – Dải chậu chày (Iliotibial band - ITB, dải cân collagen dày đặc 2 – 3 mm liên tục với mạc giữ bánh chè ngoài ở phía trước và vách gian cơ đùi ngoài ở phía trên).",
+        "Lớp 3 – KHOANG ĐÍCH: Khoang mỡ giàu mạch máu – thần kinh dưới dải chậu chày và Bao hoạt dịch dải chậu chày xa (Sub-ITB adventitial bursa / Lateral synovial recess extension) nằm ngay giữa mặt sâu ITB và mỏm trên lồi cầu ngoài xương đùi.",
+        "Lớp 4 – Ở ngay phía sau – dưới lồi cầu ngoài hơn là nguyên ủy Dây chằng bên mác (Fibular / Lateral collateral ligament - LCL) và sâu hơn LCL là gân cơ khoeo (Popliteus tendon trong rãnh khoeo).",
+        "Lớp 5 (Đáy thiết đồ) – Màng xương sườn ngoài lồi cầu ngoài xương đùi và ngách bên ổ khớp gối."
       ],
-      "referenceLines": "Đường thẳng nối từ củ Gerdy ngược dọc lên mặt ngoài đùi qua mỏm trên lồi cầu ngoài xương đùi chính là trục giải phẫu của dải chậu chày xa; vùng cọ xát đau chói (Noble compression point) nằm trên mỏm trên lồi cầu ngoài đùi (cách khe khớp ngoài 2 - 3 cm lên trên).",
-      "palpationSteps": [
-        "1. Đặt bệnh nhân nằm ngửa hoặc nằm nghiêng sang bên lành, khớp gối bên đau gấp nhẹ 20 - 30 độ kê trên gối đệm.",
-        "2. Sờ xác định 3 mốc tam giác mặt ngoài gối: Lồi củ chày (trước) – Chỏm xương mác (sau ngoài) – Củ Gerdy (nằm giữa và hơi cao hơn hai mốc kia).",
-        "3. Từ củ Gerdy lần dọc dải cân căng lên trên qua khe khớp ngoài 2 - 3 cm tới đỉnh nhô của lồi cầu ngoài xương đùi và ấn kiểm tra điểm đau Noble."
+      "topographicRelations": {
+        "superficialAndDeep": "Dải ITB (Lớp 2) nằm rất nông ngay dưới da; khoang hoạt dịch đích (Lớp 3) áp trực tiếp lên vỏ xương lồi cầu ngoài đùi.",
+        "medialAndLateral": "Trên thiết đồ cắt ngang mức trên lồi cầu ngoài: Phía TRƯỚC là cơ rộng ngoài và ngách trên bánh chè; phía SAU cách ~3 – 4 cm dọc mặt trong gân cơ nhị đầu đùi là DÂY THẦN KINH MÁC CHUNG (Common peroneal nerve); sát màng xương trên lồi cầu ngoài có ĐỘNG MẠCH GỐI TRÊN NGOÀI (SLGA)."
+      },
+      "dangerCorridors": [
+        "Luôn đi kim từ TRƯỚC RA SAU (Anterior-to-posterior) trên thiết đồ cắt ngang hoặc từ xa lên gần dọc dải ITB, tuyệt đối không trượt kim sâu ra khoang sau chạm thần kinh mác chung.",
+        "Bật Color Doppler kiểm tra nhánh động mạch gối trên ngoài sát vỏ xương trước khi bơm thuốc."
       ],
-      "probePlacement": "Đặt đầu dò Linear dọc theo mặt phẳng trán ngoài (Coronal long-axis view) nối từ củ Gerdy lên lồi cầu ngoài xương đùi để thấy dải ITB căng phẳng vượt qua đỉnh xương lồi cầu ngoài; có thể xoay ngang 90 độ trên lồi cầu ngoài đùi để đâm kim In-plane từ trước ra sau an toàn.",
       "figures": [
         {
-          "path": "assets/images/ch23_knee/p295_img1.jpeg",
-          "figNumber": "23.18",
-          "title": "Đặt đầu dò dọc mặt ngoài gối từ củ Gerdy lên lồi cầu ngoài xương đùi (Fig. 23.18)",
-          "desc": "Đầu dò đặt dọc theo dải chậu chày bắc qua khe khớp ngoài để khảo sát khoang hoạt dịch giữa ITB và lồi cầu ngoài xương đùi.",
-          "springerCaption": "Fig. 23.18 Longitudinal probe placement and sonographic image of the distal iliotibial band."
+          "path": "assets/images/external_anatomy/ext_sec_knee_capsule_lateral_gray351.png",
+          "figNumber": "Gray 351",
+          "title": "Thiết đồ mặt ngoài khớp gối: Tương quan lồi cầu ngoài xương đùi, dây chằng bên mác, gân khoeo và bao hoạt dịch (Gray's Plate 351)",
+          "desc": "Vị trí sườn ngoài lồi cầu ngoài xương đùi so với ngách bao khớp ngoài, dây chằng bên mác và chỏm xương mác.",
+          "atlasSource": "Gray's Anatomy (20th Ed., Plate 351) – Lateral aspect of knee joint capsule and surrounding structures."
         }
       ]
     },
@@ -5892,45 +6390,62 @@ var STABLE_PROCEDURES_FALLBACK = [];
         "Rối loạn đông máu nặng."
       ]
     },
-    "anatomy": {
-      "overview": "Gân bánh chè (Patellar Tendon / Ligament) là dải gân dẹt, rất khỏe (rộng ~2.5 - 3 cm, dày bình thường 3 - 5 mm) nối tiếp lực cơ tứ đầu đùi từ mặt sâu và cực dưới xương bánh chè (Inferior pole / Apex of patella) chạy thẳng xuống bám tận vào lồi củ xương chày (Tibial tuberosity). Phía nông gân là mạc nông và bao hoạt dịch trước bánh chè / dưới da; ngay mặt sâu của gân là đệm mỡ dưới bánh chè của Hoffa (Hoffa's infrapatellar fat pad) và bao hoạt dịch dưới bánh chè sâu (Deep infrapatellar bursa) nằm ngay trên lồi củ chày. Trong bệnh lý gân bánh chè mạn tính (Jumper's Knee), thoái hóa nhầy và tân mạch tăng sinh từ đệm mỡ Hoffa xâm nhập chủ yếu vào mặt sâu đầu gần gân ngay sát cực dưới xương bánh chè.",
-      "targetStructure": "Vùng gân thoái hóa giảm âm ở mặt sâu đầu gần gân bánh chè sát cực dưới xương bánh chè (để châm kim Fenestration / PRP) HOẶC mặt phẳng giao diện giữa mặt sâu gân bánh chè và đệm mỡ Hoffa (để tiêm thể tích lớn High-volume bóc tách tân mạch thần kinh).",
-      "innervation": "Nhánh dưới bánh chè của thần kinh hiển (Infrapatellar branch of saphenous nerve) và các sợi thần kinh cảm giác tự do đi kèm mạch tân sinh từ đệm mỡ Hoffa xâm nhập vào mặt sâu gân.",
-      "vascularAndDangerZones": [
-        "Vòng mạch nối quanh bánh chè và các nhánh động mạch gối dưới trong/ngoài đi xuyên qua đệm mỡ Hoffa (dùng Power Doppler để định vị vùng tân mạch đi vào mặt sâu gân).",
-        "Tuyệt đối CẤM tiêm Corticosteroid vào trong hoặc sát bề mặt gân bánh chè (nguy cơ cực cao gây đứt hoàn toàn gân bánh chè khi bệnh nhân bước cầu thang hoặc bật nhảy!).",
-        "Bao hoạt dịch dưới bánh chè sâu gần đầu xa gân và sụn khớp gối sâu sau đệm mỡ Hoffa."
+    "surfaceAnatomy": {
+      "sourceRef": "Gray's Anatomy (42nd Ed.) – Anterior Knee Extensor Mechanism Surface Anatomy",
+      "surfaceLandmarks": [
+        "Đỉnh / Cực dưới xương bánh chè (Apex / Inferior pole of patella): Mũi nhọn hình chữ V hướng xuống dưới nằm cao hơn khe khớp gối trước ~1.5 – 2.0 cm khi gối gấp nhẹ.",
+        "Lồi củ xương chày (Tibial tuberosity): Gồ xương lớn cách cực dưới xương bánh chè ~4.5 – 5.0 cm.",
+        "Hai hõm mềm cạnh gân bánh chè (Medial & Lateral infrapatellar fat pad dimples – 'mắt gối'): Phồng nhẹ hai bên gân bánh chè tương ứng đệm mỡ Hoffa bên dưới."
+      ],
+      "surfaceProjections": "Dải gân bánh chè rộng ~2.5 – 3.0 cm chạy thẳng đứng từ đỉnh dưới xương bánh chè tới nửa trên lồi củ chày. Tổn thương viêm thoái hóa gân bánh chè (Jumper's knee) tập trung ở 90% trường hợp tại phần sâu – trong ngay sát ĐỈNH CỰC DƯỚI XƯƠNG BÁNH CHÈ (trong phạm vi 1.0 cm đầu tiên dưới cực dưới bánh chè).",
+      "palpationSteps": [
+        "1. Khám điểm đau ở tư thế GỐI DUỖI THẲNG 180° thả lỏng hoàn toàn cơ tứ đầu (nếu khám khi gối đang gấp căng, các sợi nông lành căng cứng sẽ che lấp ổ tổn thương sâu gây âm tính giả!).",
+        "2. Dùng lòng bàn tay ấn cực trên xương bánh chè bẩy cho cực dưới xương bánh chè bật ngửa lên nông rồi ấn đầu ngón cái vào mặt dưới đỉnh bánh chè (dấu hiệu Bassett).",
+        "3. Khi đặt đầu dò can thiệp, kê gối nhỏ dưới khoeo (gấp 20° – 30°) để gân duỗi thẳng hết chùng sóng."
       ],
       "figures": [
         {
-          "path": "assets/images/ch23_knee/p298_img1.jpeg",
-          "figNumber": "23.22",
-          "title": "Giải phẫu siêu âm trục dọc gân bánh chè từ cực dưới xương bánh chè tới lồi củ chày (Fig. 23.22)",
-          "desc": "Gân bánh chè căng đều từ cực dưới xương bánh chè (P) đến lồi củ xương chày, ngăn cách với khoang khớp sâu bởi đệm mỡ Hoffa tăng âm.",
-          "springerCaption": "Fig. 23.22 Longitudinal anatomy and sonographic scan of the patellar tendon and Hoffa's fat pad."
+          "path": "assets/images/external_anatomy/ext_surf_leg_lateral_itb_fibula_gray1240.png",
+          "figNumber": "Gray 1240",
+          "title": "Giải phẫu bề mặt cơ chế duỗi gối trước: Xương bánh chè, gân bánh chè và lồi củ chày (Gray's Plate 1240)",
+          "desc": "Định khu bề mặt đỉnh xương bánh chè, dải gân bánh chè phẳng phía trước và lồi củ xương chày.",
+          "atlasSource": "Gray's Anatomy (20th Ed., Plate 1240) – Surface landmarks of patella, ligamentum patellae, and tibial tuberosity."
         }
       ]
     },
-    "surfaceAnatomy": {
-      "bonyLandmarks": [
-        "Cực dưới (đỉnh) xương bánh chè (Inferior pole / Apex of patella): Đỉnh nhọn hình chữ V ở bờ dưới xương bánh chè.",
-        "Lồi củ xương chày (Tibial tuberosity): Gồ xương nổi rõ phía trước đầu trên xương chày cách đỉnh xương bánh chè khoảng 4 - 5 cm.",
-        "Hai bờ bên (trong và ngoài) của dải gân bánh chè."
+    "crossSectionalAnatomy": {
+      "sourceRef": "Gray's Anatomy (Plate 350) & OpenStax (Fig. 9.17) – Mid-Sagittal & Axial Section of Infrapatellar Region",
+      "sectionPlane": "Thiết đồ đứng dọc chính giữa dưới bánh chè (Infrapatellar Mid-sagittal Section) và Thiết đồ cắt ngang ngay dưới đỉnh xương bánh chè.",
+      "layeredStructure": [
+        "Lớp 1 – Da mặt trước gối và bao hoạt dịch dưới da trước/dưới bánh chè nông (Subcutaneous infrapatellar bursa).",
+        "Lớp 2 – Mạc sâu gối trước và bao quanh gân mỏng (Paratenon – gân bánh chè KHÔNG có bao hoạt dịch gân thực sự như gân gấp bàn tay mà được nuôi qua mạng mạch paratenon và đệm mỡ Hoffa!).",
+        "Lớp 3 – ĐÍCH CHÂM KIM / PRP: Nhu mô Gân bánh chè (Ligamentum patellae, dày chuẩn 3.5 – 5.0 mm; vùng thoái hóa nhầy nằm khu trú ở bó sợi sâu sát mặt sau đỉnh xương bánh chè).",
+        "Lớp 4 – ĐÍCH BÓC TÁCH THỦY DỊCH THỂ TÍCH LỚN (High-volume interface): Mặt phẳng màng mỏng giữa mặt sâu gân bánh chè và mặt trước ĐỆM MỠ DƯỚI BÁNH CHÈ HOFFA (Infrapatellar fat pad – nơi các vi mạch tân sinh và sợi thần kinh đau C-fibers mọc xuyên vào mặt sâu gân!).",
+        "Lớp 5 – Đệm mỡ Hoffa (nội bao khớp nhưng ngoài màng hoạt dịch) ở trên VÀ Bao hoạt dịch dưới bánh chè sâu (Deep infrapatellar bursa – dài ~1.5 cm kẹp giữa mặt sâu đầu xa gân bánh chè và bờ trước trên xương chày).",
+        "Lớp 6 (Đáy thiết đồ) – Nếp hoạt dịch dưới bánh chè (Ligamentum mucosum), dây chằng ngang gối và khe sụn lồi cầu đùi – mâm chày."
       ],
-      "referenceLines": "Đường trục dọc chính giữa nối từ đỉnh dưới xương bánh chè thẳng xuống trung tâm lồi củ xương chày.",
-      "palpationSteps": [
-        "1. Khám sờ nắn khi gối duỗi hoàn toàn (cơ tứ đầu thả lỏng!): Dùng ngón cái đẩy nhẹ cực trên xương bánh chè xuống dưới để làm bật nổi đỉnh cực dưới xương bánh chè lên rồi ấn ngón trỏ vào mặt dưới đỉnh xương bánh chè (dấu hiệu Bassett dương tính).",
-        "2. Sau khi đánh dấu điểm đau, đặt cuộn gối dưới khoeo để khớp gối gấp nhẹ 20 - 30 độ giúp gân bánh chè hơi căng thẳng, giảm hiện tượng giả giảm âm do bất đẳng hướng (Anisotropy) trên siêu âm.",
-        "3. Sờ xác định rõ hai bờ bên của gân bánh chè để chuẩn bị hướng đi kim In-plane trên mặt cắt ngang (từ ngoài vào trong sát mặt sâu gân)."
+      "topographicRelations": {
+        "superficialAndDeep": "Mặt nông gân bánh chè cách da chỉ 3 – 5 mm; mặt sâu gân áp trực tiếp vào đệm mỡ Hoffa giàu mạch máu (vòng nối mạch quanh bánh chè tạo bởi động mạch gối dưới trong và dưới ngoài).",
+        "medialAndLateral": "Ở bờ trong dưới bánh chè có nhánh dưới bánh chè của thần kinh hiển (Infrapatellar branch of saphenous nerve) chạy nông ngang dưới da ra trước gân bánh chè."
+      },
+      "dangerCorridors": [
+        "TUYỆT ĐỐI CẤM TIÊM CORTICOSTEROID vào Lớp 3 hoặc Lớp 4 vì làm ức chế tổng hợp collagen gây đứt ngang hoàn toàn gân bánh chè!",
+        "Khi đi kim In-plane trên thiết đồ ngang từ bờ ngoài luồn vào Lớp 4 (giữa mặt sâu gân và đệm mỡ Hoffa), tránh nhánh dưới bánh chè thần kinh hiển ở bờ trong."
       ],
-      "probePlacement": "Quét mặt cắt dọc chính giữa (Long-axis sagittal view) từ cực dưới xương bánh chè tới lồi củ chày để đánh giá vùng dày giảm âm và phổ Power Doppler; khi tiêm bóc tách mặt phẳng sâu (High-volume interface injection), xoay đầu dò cắt ngang (Short-axis view) ngay dưới đỉnh bánh chè để đi kim In-plane từ bờ ngoài luồn chính xác vào khe giữa mặt sâu gân và đệm mỡ Hoffa.",
       "figures": [
         {
-          "path": "assets/images/ch23_knee/p297_img1.jpeg",
-          "figNumber": "23.21",
-          "title": "Liên quan các khoang hoạt dịch và gân mặt trước - ngoài khớp gối (Fig. 23.21)",
-          "desc": "Kiểm soát mặt cắt ngang giúp đưa thân kim đi song song mặt phẳng nông hoặc sâu của dải cân - gân một cách an toàn tuyệt đối.",
-          "springerCaption": "Fig. 23.21 Short-axis ultrasound-guided planar needle trajectory around knee tendon/band structures."
+          "path": "assets/images/external_anatomy/ext_sec_knee_sagittal_gray350.png",
+          "figNumber": "Gray 350",
+          "title": "Thiết đồ đứng dọc giữa khớp gối: Gân bánh chè, đệm mỡ Hoffa và bao hoạt dịch dưới bánh chè sâu (Gray's Plate 350)",
+          "desc": "Thiết đồ dọc kinh điển hiển thị toàn bộ chiều dài gân bánh chè (Ligamentum patellae), đệm mỡ dưới bánh chè (Infrapatellar pad of fat) ngay mặt sâu đầu gần gân và túi hoạt dịch dưới bánh chè sâu ở đầu xa.",
+          "atlasSource": "Gray's Anatomy (20th Ed., Plate 350) – Sagittal section showing patellar tendon, Hoffa's fat pad, and deep infrapatellar bursa."
+        },
+        {
+          "path": "assets/images/external_anatomy/ext_sec_knee_sagittal_openstax917.jpg",
+          "figNumber": "OpenStax 9.17",
+          "title": "Thiết đồ đứng dọc màu cấu trúc các lớp bao khớp, đệm mỡ và túi hoạt dịch khớp gối (OpenStax Atlas)",
+          "desc": "Phân tầng màu trực quan của cơ chế duỗi gối, đệm mỡ dưới bánh chè, bao hoạt dịch trước/dưới bánh chè và ổ khớp.",
+          "atlasSource": "OpenStax Anatomy & Physiology (CC-BY 4.0, Fig. 9.17) – Sagittal section of the knee joint."
         }
       ]
     },
@@ -6012,45 +6527,55 @@ var STABLE_PROCEDURES_FALLBACK = [];
         "Rối loạn đông máu nặng."
       ]
     },
-    "anatomy": {
-      "overview": "Khớp dưới sên / Khớp sên – gót (Subtalar / Talocalcaneal Joint) gồm buồng trước – giữa và buồng khớp dưới sên sau (Posterior subtalar joint – buồng lớn nhất và chịu lực chính, có bao hoạt dịch riêng biệt không thông với buồng trước nhưng thông với khớp cổ chân ở ~10–20% người). Giữa buồng trước và buồng sau là xoang cổ chân (Sinus tarsi) chứa dây chằng sên – gót gian cốt và đệm mỡ giàu thụ thể cảm nhận bản thể. Ở mặt sau ngoài dưới đỉnh mắt cá ngoài, khe khớp dưới sên sau lộ ra giữa mỏm ngoài xương sên (Lateral process of talus) ở trên và diện khớp sau xương gót (Calcaneus) ở dưới, có gân cơ mác dài và mác ngắn vắt chéo ở phía nông.",
-      "targetStructure": "Cửa vào mặt trước ngoài hoặc sau ngoài của buồng khớp dưới sên sau (Posterior subtalar joint recess) nằm giữa mỏm ngoài xương sên và xương gót (hoặc xoang cổ chân Sinus tarsi nếu hội chứng xoang cổ chân).",
-      "innervation": "Nhánh khớp từ thần kinh hiển ngoài / bắp chân (Sural nerve), thần kinh mác sâu (nhánh vào xoang cổ chân) và nhánh gót của thần kinh chày.",
-      "vascularAndDangerZones": [
-        "Gân cơ mác ngắn và cơ mác dài (Peroneus brevis & longus tendons): Chạy vòng ngay sau dưới mắt cá ngoài vắt qua mặt ngoài khe khớp dưới sên – BẮT BUỘC nhận diện trên siêu âm để luồn kim tránh đâm xuyên qua gân mác!",
-        "Thần kinh bắp chân / hiển ngoài (Sural nerve) và tĩnh mạch hiển bé (Small saphenous vein): Đi dọc phía sau gân cơ mác dưới mắt cá ngoài.",
-        "Động mạch ống cổ chân (Artery of the tarsal canal / Sinus tarsi branch): Bật Doppler kiểm tra khi tiêm vùng xoang cổ chân."
+    "surfaceAnatomy": {
+      "sourceRef": "Gray's Anatomy (42nd Ed., Plate 1241) – Lateral Malleolus, Sinus Tarsi & Peroneal Tendon Sheaths",
+      "surfaceLandmarks": [
+        "Đỉnh mắt cá ngoài xương mác (Tip of lateral malleolus).",
+        "Hõm xoang cổ chân (Sinus tarsi): Vùng lõm tròn mềm rộng ~1.5 cm nằm ngay phía TRƯỚC – DƯỚI mắt cá ngoài ~1.5 – 2.0 cm.",
+        "Gân cơ mác dài và mác ngắn (Peroneus longus & brevis tendons): Vòng sát bờ sau – dưới đỉnh mắt cá ngoài trượt trên thành ngoài xương gót.",
+        "Mỏm chân đế sên (Sustentaculum tali) ở mặt trong (dưới đỉnh mắt cá trong ~2.5 cm – mốc đối chiếu bên trong)."
+      ],
+      "surfaceProjections": "Buồng khớp dưới sên sau (Posterior talocalcaneal joint) chiếu ra mặt ngoài cổ chân tại khe ngang hơi chếch nằm ngay PHÍA TRƯỚC – DƯỚI đỉnh mắt cá ngoài khoảng 1.0 cm (ngay bờ sau của xoang cổ chân và ngay PHÍA TRƯỚC – TRÊN của hai gân cơ mác).",
+      "palpationSteps": [
+        "1. Đặt bệnh nhân nằm nghiêng sang bên lành, kê cuộn khăn dưới mắt cá trong để bàn chân nghiêng trong nhẹ (Inversion – làm hé mở khe khớp dưới sên bên ngoài).",
+        "2. Sờ đỉnh nhọn mắt cá ngoài và yêu cầu bệnh nhân nghiêng ngoài bàn chân có kháng lực nhẹ để thấy rõ hai gân cơ mác căng lên vòng ngay sau dưới mắt cá ngoài.",
+        "3. Ấn ngón cái vào khoảng lõm ngay trước hai gân cơ mác và ngay dưới trước đỉnh mắt cá ngoài 1 cm (bờ sau xoang cổ chân) đồng thời lắc thụ động xương gót để cảm nhận khe khớp dưới sên chuyển động."
       ],
       "figures": [
         {
-          "path": "assets/images/anatomy/fig_24_01_ankle_bones_joints.jpg",
-          "figNumber": "24.1",
-          "title": "Giải phẫu nhìn ngoài và nhìn trong của khớp dưới sên và xoang cổ chân (Fig. 24.1b, c)",
-          "desc": "Hình (b) mặt ngoài cổ chân chỉ rõ vị trí xoang cổ chân (*) và khe khớp dưới sên sau nằm giữa xương sên (Talus) và xương gót (Calcaneus) dưới mắt cá ngoài.",
-          "springerCaption": "Fig. 24.1 (b) Lateral view showing sinus tarsi (*) and posterior subtalar joint between talus and calcaneus."
+          "path": "assets/images/external_anatomy/ext_surf_ankle_lateral_sheaths_gray1241.png",
+          "figNumber": "Gray 1241",
+          "title": "Giải phẫu bề mặt cổ chân ngoài: Mắt cá ngoài, xoang cổ chân và bao hoạt dịch chung gân cơ mác dài - mác ngắn (Gray's Plate 1241)",
+          "desc": "Hình chiếu chính xác đường đi bao hoạt dịch gân cơ mác vòng sát dưới mắt cá ngoài qua mặt ngoài khe khớp dưới sên.",
+          "atlasSource": "Gray's Anatomy (20th Ed., Plate 1241) – Lateral aspect of ankle showing peroneal tendon sheaths and sinus tarsi."
         }
       ]
     },
-    "surfaceAnatomy": {
-      "bonyLandmarks": [
-        "Đỉnh mắt cá ngoài xương mác (Tip of lateral malleolus): Mốc xương chuẩn nhất mặt ngoài cổ chân.",
-        "Xoang cổ chân (Sinus tarsi): Hõm mềm tròn sờ thấy rất rõ cách bờ trước dưới mắt cá ngoài khoảng 1.5 - 2 cm.",
-        "Thành ngoài xương gót (Lateral wall of calcaneus) và ròng rọc mác."
+    "crossSectionalAnatomy": {
+      "sourceRef": "Gray's Anatomy (Plate 357) – Coronal Sectional Anatomy of Talocalcaneal Articulation & Interosseous Ligament",
+      "sectionPlane": "Thiết đồ đứng ngang qua cổ chân – gót (Ankle-Hindfoot Coronal Section) cắt qua mắt cá ngoài, mỏm ngoài xương sên, khe khớp dưới sên sau và xương gót.",
+      "layeredStructure": [
+        "Lớp 1 – Da và mô dưới da vùng dưới mắt cá ngoài (dày ~3 – 6 mm; ở phía sau gân cơ mác có THẦN KINH BẮP CHÂN / SURAL NERVE và tĩnh mạch hiển bé!).",
+        "Lớp 2 – Hãm gân cơ mác trên/dưới (Peroneal retinacula) và Bao hoạt dịch chứa Gân cơ mác ngắn + Gân cơ mác dài (vắt chéo ở nửa dưới ngoài thiết đồ) cùng dây chằng mác – gót (Calcaneofibular ligament - CFL) bắc cầu qua mặt ngoài khe khớp!",
+        "Lớp 3 – Bao xơ khớp dưới sên sau và ngách hoạt dịch ngoài (Anterolateral / Posterolateral subtalar recess).",
+        "Lớp 4 – KHOANG ĐÍCH: Khe khớp hoạt dịch dưới sên sau (Posterior talocalcaneal synovial cavity) nằm giữa diện khớp lõm mặt dưới thân xương sên (trên) và diện khớp lồi sau mặt trên xương gót (dưới).",
+        "Lớp 5 (Giới hạn trong sâu của thiết đồ) – Dây chằng sên – gót gian cốt cực dày (Interosseous talocalcaneal ligament trong xoang cổ chân, ngăn cách hoàn toàn buồng dưới sên sau với khớp sên – gót – ghe phía trước!)."
       ],
-      "referenceLines": "Khe khớp dưới sên lối ngoài (Anterolateral / Lateral subtalar portal): Nằm ngay phía trước – dưới đỉnh mắt cá ngoài khoảng 1 cm (ngay bờ sau trên của hõm xoang cổ chân, phía trước gân cơ mác).",
-      "palpationSteps": [
-        "1. Đặt bệnh nhân nằm nghiêng sang bên lành (mặt ngoài cổ chân bên đau hướng lên trên), kê một cuộn khăn tròn dưới mặt trong cổ chân để tạo tư thế nghiêng trong bàn chân nhẹ (Inversion – làm mở toác khe khớp dưới sên phía ngoài!).",
-        "2. Sờ xác định đỉnh nhọn của mắt cá ngoài.",
-        "3. Trượt ngón cái ra trước – xuống dưới đỉnh mắt cá ngoài ~1 - 1.5 cm rơi vào hõm mềm xoang cổ chân; đồng thời lắc nghiêng trong – nghiêng ngoài xương gót thụ động để cảm nhận đường khe khớp sên – gót chuyển động ngay phía trên xương gót, phía trước hai gân cơ mác."
+      "topographicRelations": {
+        "superficialAndDeep": "Mặt ngoài khe khớp dưới sên sau bị bắt chéo bởi dây chằng mác – gót (CFL) và hai gân cơ mác ở phía sau dưới; còn cửa ngách trước ngoài ngay sát sau xoang cổ chân chỉ có da, mô mỡ và bao khớp mỏng che phủ!",
+        "medialAndLateral": "Nếu đâm kim quá sâu xuyên suốt chiều ngang khớp sang bờ trong xương gót dưới mỏm chân đế sên sẽ chạm ống cổ chân trong (gân FHL và bó mạch thần kinh gan chân!)."
+      },
+      "dangerCorridors": [
+        "Luôn nhận diện bóng cắt của gân cơ mác dài – mác ngắn ở phần dưới màn hình siêu âm để lách kim vào khe xương mỏm ngoài xương sên – xương gót ở PHÍA TRƯỚC – TRÊN gân cơ mác, tránh đâm xuyên qua gân mác.",
+        "Không đâm từ phía sau gân cơ mác để tránh thần kinh Sural và tĩnh mạch hiển bé."
       ],
-      "probePlacement": "Phương pháp 2 bước chuẩn Philip Peng: Bước 1 – Đặt đầu dò Linear dọc theo mặt phẳng trán chếch ở hõm xoang cổ chân trước dưới mắt cá ngoài. Bước 2 – Giữ đầu trên đầu dò trên xương sên và trượt/xoay nhẹ về phía đỉnh mắt cá ngoài cho tới khi hố xoang cổ chân rộng khép dần thành khe khớp dưới sên hẹp sắc nét nằm giữa mỏm ngoài xương sên (trên) và xương gót (dưới), có gân cơ mác cắt chéo ở góc dưới.",
       "figures": [
         {
-          "path": "assets/images/ch24_ankle_foot/p312_img1.jpeg",
-          "figNumber": "24.15",
-          "title": "Đặt đầu dò ngay dưới trước mắt cá ngoài bộc lộ khe khớp dưới sên sau (Fig. 24.15)",
-          "desc": "Đầu dò đặt dọc chếch ngay dưới đỉnh mắt cá ngoài hiển thị khe khớp dưới sên giữa xương sên (Talus) và xương gót (Calcaneus) cùng gân cơ mác (*).",
-          "springerCaption": "Fig. 24.15 Probe placement and sonoanatomy of the posterior subtalar joint entrance."
+          "path": "assets/images/external_anatomy/ext_sec_ankle_subtalar_coronal_gray357.png",
+          "figNumber": "Gray 357",
+          "title": "Thiết đồ đứng ngang qua khớp dưới sên: Xương sên, xương gót, dây chằng gian cốt, gân mác và ống cổ chân trong (Gray's Plate 357)",
+          "desc": "Thiết đồ đứng ngang tuyệt chuẩn chỉ rõ hướng nghiêng của khe khớp dưới sên sau, dây chằng mác - gót cùng hai gân cơ mác ở bờ ngoài và bó mạch thần kinh gan chân ở bờ trong.",
+          "atlasSource": "Gray's Anatomy (20th Ed., Plate 357) – Coronal section through talocrural and subtalar joints."
         }
       ]
     },
@@ -6132,52 +6657,61 @@ var STABLE_PROCEDURES_FALLBACK = [];
         "Rối loạn đông máu nặng."
       ]
     },
-    "anatomy": {
-      "overview": "Bộ phong bế cổ chân hoàn chỉnh (Comprehensive Ankle Block) chi phối toàn bộ bàn chân phía xa hai mắt cá gồm 5 dây thần kinh ngoại vi (4 nhánh từ thần kinh tọa và 1 nhánh từ thần kinh đùi): (1) Thần kinh chày (Tibial nerve - TN: thần kinh lớn nhất và quan trọng nhất chi phối cảm giác toàn bộ lòng bàn chân, nằm trong ống cổ chân sau mắt cá trong theo thứ tự từ trước ra sau 'Tom, Dick And Very Nervous Harry': Chày sau TP -> Gấp các ngón dài FDL -> Động mạch & Tĩnh mạch chày sau -> Thần kinh chày -> Gấp ngón cái dài FHL); (2) Thần kinh mác sâu (DPN: kẽ ngón I–II và bao khớp cổ chân, đi kèm động mạch chày trước giữa EHL và EDL); (3) Thần kinh mác nông (SPN: toàn bộ mu chân, xuyên mạc cẳng chân ở 1/3 dưới giữa cơ mác và EDL); (4) Thần kinh bắp chân / hiển ngoài (Sural nerve - SuN: bờ ngoài bàn chân, đi cạnh tĩnh mạch hiển bé sau mắt cá ngoài); và (5) Thần kinh hiển (Saphenous nerve - SaN: bờ trong cổ bàn chân, đi cạnh tĩnh mạch hiển lớn trước mắt cá trong).",
-      "targetStructure": "Bao cân quanh từng dây thần kinh đích (Perineural fascial plane) của 5 nhánh: TN (sau mắt cá trong), DPN (trước cổ chân cạnh động mạch chày trước), SPN (1/3 dưới ngoài cẳng chân), Sural (rãnh sau mắt cá ngoài – gân Achilles) và Saphenous (trước trên mắt cá trong cạnh tĩnh mạch hiển lớn).",
-      "innervation": "Phong bế phối hợp 5 nhánh tạo vô cảm hoàn toàn (100% dermatomal/osteotomal coverage) bàn chân và các ngón chân mà vẫn bảo tồn vận động cổ chân.",
-      "vascularAndDangerZones": [
-        "Động mạch chày sau (Posterior tibial artery - đi ngay trước thần kinh chày), Động mạch chày trước / mu chân (đi sát thần kinh mác sâu), Tĩnh mạch hiển lớn (đi sát thần kinh hiển) và Tĩnh mạch hiển bé (đi sát thần kinh Sural): Vừa là mốc mạch máu vàng (Vascular landmarks) để tìm thần kinh, vừa bắt buộc KHÔNG garô hay pha Adrenaline nồng độ cao gây thiếu máu hoại tử ngón chân!",
-        "Khi tìm tĩnh mạch hiển lớn và tĩnh mạch hiển bé (cho SaN và Sural): Phải đặt đầu dò thật nhẹ tay (Light touch / nhiều gel) vì ấn mạnh sẽ làm xẹp hoàn toàn lòng tĩnh mạch mất mốc tìm thần kinh!",
-        "Tuyệt đối tránh tiêm nội thần kinh (Intraneural injection) đặc biệt tại ống cổ chân hẹp."
+    "surfaceAnatomy": {
+      "sourceRef": "Gray's Anatomy (42nd Ed., Plates 1240, 1241, 1242) – Surface Markings of the Five Ankle Nerves",
+      "surfaceLandmarks": [
+        "Mắt cá trong (Medial malleolus) và Gân gót Achilles ở phía sau trong -> định khu Ống cổ chân (Tarsal tunnel) cho Thần kinh chày, và bờ trước mắt cá trong cho Thần kinh hiển.",
+        "Mắt cá ngoài (Lateral malleolus) và bờ ngoài Gân gót Achilles -> định khu rãnh sau mắt cá ngoài cho Thần kinh bắp chân (Sural nerve).",
+        "Gân chày trước (TA), Gân duỗi ngón cái dài (EHL), Gân duỗi chung (EDL) và mạch đập Động mạch mu chân -> định khu Thần kinh mác sâu (DPN).",
+        "Rãnh cơ 1/3 dưới ngoài cẳng chân (cao hơn mắt cá ngoài 6 – 10 cm, giữa cơ mác ngắn và cơ EDL) -> nơi Thần kinh mác nông (SPN) xuyên mạc cẳng chân ra dưới da."
+      ],
+      "surfaceProjections": "Vòng đai phong bế cổ chân (Supramalleolar & Intermalleolar ring): (1) Thần kinh chày nằm ở điểm giữa đường nối bờ sau mắt cá trong và bờ trong gân Achilles (ngay sau động mạch chày sau); (2) Thần kinh mác sâu đi dọc khe giữa gân EHL và EDL ngay bờ ngoài động mạch chày trước; (3) Thần kinh hiển chạy sát bờ trước mắt cá trong cùng tĩnh mạch hiển lớn; (4) Thần kinh Sural chạy ở điểm giữa mắt cá ngoài và bờ ngoài gân Achilles cùng tĩnh mạch hiển bé; (5) Thần kinh mác nông xuyên mạc cẳng chân ở bờ trước xương mác trên mắt cá ngoài ~8 cm rồi tỏa nhánh nông trước cổ chân.",
+      "palpationSteps": [
+        "1. Bắt hai mốc mạch đập chủ đạo: Mạch chày sau (sau mắt cá trong -> dẫn đường cho TN) và Mạch chày trước/mu chân (giữa cổ chân trước -> dẫn đường cho DPN).",
+        "2. Quan sát hoặc buộc garô tĩnh mạch nhẹ ở bắp chân 20 giây để nổi rõ Tĩnh mạch hiển lớn (trước mắt cá trong -> dẫn đường cho Saphenous) và Tĩnh mạch hiển bé (sau mắt cá ngoài -> dẫn đường cho Sural).",
+        "3. Sờ dọc bờ trước thân xương mác ở 1/3 dưới cẳng chân (trên mắt cá ngoài 6 – 8 cm) tìm rãnh vách gian cơ trước để đặt đầu dò tìm SPN."
       ],
       "figures": [
         {
-          "path": "assets/images/anatomy/fig_24_05_medial_tarsal_tunnel.jpg",
-          "figNumber": "24.5",
-          "title": "Giải phẫu ống cổ chân mặt trong (Thần kinh chày) và thiết đồ ngang 5 thần kinh cổ chân (Fig. 24.5)",
-          "desc": "Sơ đồ mặt trong ống cổ chân (TP, FDL, động mạch chày sau, thần kinh chày, FHL) và thiết đồ cắt ngang cổ chân chỉ rõ vị trí cả 5 dây thần kinh.",
-          "springerCaption": "Fig. 24.5 (a) Medial view of tibial nerve in tarsal tunnel. (b) Cross-sectional view of all five nerves around the ankle."
+          "path": "assets/images/external_anatomy/ext_surf_ankle_medial_tarsal_gray1242.png",
+          "figNumber": "Gray 1242",
+          "title": "Giải phẫu bề mặt mặt trong cổ chân: Thứ tự gân - mạch - thần kinh trong ống cổ chân dưới mạc giữ gân gấp (Gray's Plate 1242)",
+          "desc": "Hình chiếu bề mặt 3 bao gân (TP -> FDL -> FHL) và khe giữa FDL - FHL nơi bó mạch chày sau và thần kinh chày đi qua.",
+          "atlasSource": "Gray's Anatomy (20th Ed., Plate 1242) – Medial aspect of ankle showing tarsal tunnel compartments."
         },
         {
-          "path": "assets/images/anatomy/fig_24_06_lateral_sural_nerve.jpg",
-          "figNumber": "24.6",
-          "title": "Giải phẫu thần kinh bắp chân (Sural nerve) và tĩnh mạch hiển bé mặt ngoài cổ chân (Fig. 24.6)",
-          "desc": "Thần kinh Sural chạy dọc bờ sau gân cơ mác ngắn cùng tĩnh mạch hiển bé trong khoang giữa mắt cá ngoài và gân gót Achilles.",
-          "springerCaption": "Fig. 24.6 (a) Lateral view of sural nerve. (b) Cross-sectional relationship to peroneal tendons and small saphenous vein."
+          "path": "assets/images/external_anatomy/ext_surf_leg_lateral_itb_fibula_gray1240.png",
+          "figNumber": "Gray 1240",
+          "title": "Giải phẫu bề mặt mặt ngoài cẳng - cổ chân: Vách cơ mác - EDL nơi thần kinh mác nông xuyên mạc và rãnh sau mắt cá ngoài (Gray's Plate 1240)",
+          "desc": "Định khu mặt ngoài 1/3 dưới cẳng chân (chỗ thoát SPN) và hõm giữa mắt cá ngoài - gân gót (đường đi thần kinh Sural).",
+          "atlasSource": "Gray's Anatomy (20th Ed., Plate 1240) – Lateral aspect of leg and ankle surface topography."
         }
       ]
     },
-    "surfaceAnatomy": {
-      "bonyLandmarks": [
-        "Mắt cá trong (Medial malleolus): Mốc trung tâm cho Thần kinh chày (phía sau) và Thần kinh hiển (phía trước).",
-        "Mắt cá ngoài (Lateral malleolus) và bờ ngoài xương mác 1/3 dưới: Mốc cho Thần kinh Sural (phía sau mắt cá ngoài) và Thần kinh mác nông (5 - 10 cm trên mắt cá ngoài).",
-        "Gân gót (Achilles tendon) ở phía sau và hai gân EHL – EDL ở mặt trước cổ chân (mốc cho Thần kinh mác sâu)."
+    "crossSectionalAnatomy": {
+      "sourceRef": "Gray's Anatomy (Plate 440) & Ellis Sectional Anatomy – Transverse Cross-Section of Distal Leg & Supramalleolar Ankle",
+      "sectionPlane": "Thiết đồ cắt ngang qua đầu dưới cẳng chân – trên hai mắt cá (Supramalleolar Axial Cross-Section) cắt qua toàn bộ 5 dây thần kinh cảm giác bàn chân.",
+      "layeredStructure": [
+        "Tầng Dưới da Trong & Sau ngoài (Epifascial venous-neural plane – nằm NGOÀI mạc cẳng chân): Chứa (1) Thần kinh hiển (Saphenous nerve) kẹp sát Tĩnh mạch hiển lớn ngay trước mắt cá trong, và (2) Thần kinh bắp chân (Sural nerve) kẹp sát Tĩnh mạch hiển bé ở rãnh giữa mắt cá ngoài và bờ ngoài gân Achilles.",
+        "Tầng Xuyên mạc Trước ngoài (Fascial piercing plane – trên mắt cá ngoài ~6 – 10 cm): Chứa (3) Thần kinh mác nông (Superficial fibular nerve – SPN) nằm tại đỉnh tam giác vách gian cơ trước giữa cơ mác ngắn (Peroneus brevis) và cơ duỗi các ngón chân dài (EDL) ngay trước khi chọc thủng mạc cẳng chân ra mô mỡ dưới da.",
+        "Khoang Sâu Trước dưới mạc giữ gân duỗi (Anterior subfascial compartment): Da & mỡ -> Mạc giữ gân duỗi -> Khe giữa gân EHL (trong) và gân EDL (ngoài) -> ĐÍCH (4): Thần kinh mác sâu (Deep fibular nerve – DPN) nằm sát mặt trước vỏ xương chày / màng gian cốt ngay cạnh bờ ngoài Động mạch chày trước.",
+        "Khoang Sâu Sau trong – Ống cổ chân (Tarsal tunnel dưới mạc giữ gân gấp): Da & mỡ -> Mạc giữ gân gấp (Flexor retinaculum) -> Thứ tự từ trước trong ra sau ngoài ('Tom, Dick And Very Nervous Harry'): Gân chày sau (TP) -> Gân gấp chung (FDL) -> Động mạch & 2 tĩnh mạch chày sau -> ĐÍCH (5): Thần kinh chày (Tibial nerve) -> Gân gấp ngón cái dài (FHL) tựa trên rãnh sau xương sên."
       ],
-      "referenceLines": "Vòng đai ngang trên hai mắt cá 2 - 3 cm (Supramalleolar ring): Tập hợp đủ 4 điểm quét quanh chu vi cổ chân (Trước mắt cá trong -> Sau mắt cá trong -> Trước giữa cổ chân -> Sau mắt cá ngoài), riêng Thần kinh mác nông (SPN) dễ nhìn nhất khi quét cao hơn mắt cá ngoài 5 - 8 cm trước khi chia nhánh nhỏ.",
-      "palpationSteps": [
-        "1. Đặt bệnh nhân nằm ngửa, kê gối nâng cẳng chân lên cao nhẹ để có thể xoay trong – xoay ngoài cổ chân tiếp cận đủ cả 4 mặt (trước, trong, ngoài, sau ngoài) mà không cần lật bệnh nhân.",
-        "2. Bắt mạch chày sau (sau mắt cá trong) cho Thần kinh chày và mạch chày trước/mu chân (giữa EHL – EDL) cho Thần kinh mác sâu.",
-        "3. Có thể buộc dây garô tĩnh mạch nhẹ tạm thời ở bắp chân trên (hoặc để thòng chân 30 giây trước khi nằm) giúp tĩnh mạch hiển lớn (trước mắt cá trong) và tĩnh mạch hiển bé (sau mắt cá ngoài) căng tròn nổi rõ làm mốc dẫn đường cho Thần kinh hiển và Sural!"
+      "topographicRelations": {
+        "superficialAndDeep": "Ba thần kinh nông (Saphenous, Sural, SPN đoạn cổ chân) nằm trong mô mỡ dưới da trên mạc sâu (ấn mạnh đầu dò sẽ làm xẹp tĩnh mạch tùy hành!); hai thần kinh sâu (Tibial, DPN) nằm trong khoang cân xương – xơ kín đi kèm động mạch lớn.",
+        "medialAndLateral": "Thần kinh chày thường nằm ngay PHÍA SAU – NGOÀI động mạch chày sau (nhưng có thể chia nhánh gót trong sớm trên mắt cá 3 – 5 cm nên phong bế trên đỉnh mắt cá trong 2 – 3 cm sẽ bắt trọn cả nhánh gót!)."
+      },
+      "dangerCorridors": [
+        "TUYỆT ĐỐI KHÔNG PHA ADRENALINE (Epinephrine) nồng độ co mạch khi phong bế vòng cổ chân trên bệnh nhân bệnh mạch máu ngoại vi / đái tháo đường vì nguy cơ co thắt động mạch tận bàn – ngón chân!",
+        "Ống cổ chân và khoang trước xương chày là các khoang kín hạn chế giãn nở: Dùng thể tích vừa phải (3 – 5 ml cho TN, 2 – 3 ml cho mỗi nhánh còn lại) và tuyệt đối tránh tiêm nội thần kinh."
       ],
-      "probePlacement": "Sử dụng đầu dò Linear tần số cao (10 - 15 MHz) đặt cắt ngang (Transverse short-axis) lần lượt tại 5 trạm: (1) Sau trên mắt cá trong 2 cm (TN); (2) Giữa cổ chân trước ngang khe khớp (DPN); (3) Mặt trước ngoài cẳng chân trên mắt cá ngoài 6 - 8 cm tại rãnh giữa cơ mác và EDL (SPN); (4) Giữa mắt cá ngoài và gân Achilles (Sural); (5) Ngay bờ trước trên mắt cá trong phủ nhiều gel không đè ép (Saphenous).",
       "figures": [
         {
-          "path": "assets/images/anatomy/fig_24_04_saphenous_nerve_ankle.jpg",
-          "figNumber": "24.4",
-          "title": "Giải phẫu bề mặt mặt trước trong cổ chân của thần kinh hiển và tĩnh mạch hiển lớn (Fig. 24.4)",
-          "desc": "Thần kinh hiển đi sát tĩnh mạch hiển lớn ngay bờ trước mắt cá trong trên đường xuống bờ trong bàn chân.",
-          "springerCaption": "Fig. 24.4 Anteromedial surface anatomy of the saphenous nerve and great saphenous vein at the ankle."
+          "path": "assets/images/external_anatomy/ext_sec_leg_cross_section_gray440.png",
+          "figNumber": "Gray 440",
+          "title": "Thiết đồ cắt ngang chuẩn qua cẳng chân hiển thị đầy đủ vị trí 5 dây thần kinh cảm giác xuống cổ bàn chân (Gray's Plate 440)",
+          "desc": "Một thiết đồ cắt ngang duy nhất cho thấy trọn vẹn cả 5 đích: Thần kinh mác sâu & động mạch chày trước (khu trước), Thần kinh mác nông (vách cơ mác - EDL), Thần kinh chày & mạch chày sau (khu sau sâu), Thần kinh hiển & TM hiển lớn (dưới da trong), và nhánh tạo Thần kinh Sural & TM hiển bé (dưới da sau).",
+          "atlasSource": "Gray's Anatomy (20th Ed., Plate 440) – Transverse cross-section through the leg showing all five neural pathways."
         }
       ]
     },
@@ -6268,45 +6802,54 @@ var STABLE_PROCEDURES_FALLBACK = [];
         "Lỏng chuôi khớp hoặc chén khớp nhân tạo có chỉ định mổ lại."
       ]
     },
-    "anatomy": {
-      "overview": "Theo nghiên cứu giải phẫu tử thi kinh điển của nhóm GS. Philip Peng (Short et al., 2018 – nền tảng của PENG block và RFA khớp háng), mặt trước bao khớp háng là vùng tập trung mật độ thụ thể đau cao nhất và được chi phối bởi 3 nguồn thần kinh cảm giác có mốc xương hằng định: (1) Các nhánh khớp của thần kinh đùi (Femoral articular branches – cả nhánh cao và nhánh thấp đều hội tụ đi qua rãnh lõm xương giữa gai chậu trước dưới AIIS và gờ chậu – lược IPE sâu dưới gân Psoas); (2) Nhánh thần kinh bịt phụ (Accessory obturator nerve - AON, có ở ~30–50% người, vượt qua ngay bờ trong gờ chậu – lược IPE); và (3) Các nhánh khớp của thần kinh bịt (Obturator articular branches – đi ra từ ống bịt tại góc dưới trong ngành mu – ổ cối / khuyết ổ cối).",
-      "targetStructure": "Target 1 (cho PENG block & RFA nhánh thần kinh đùi + AON): Mặt phẳng xương trong rãnh lõm giữa AIIS và gờ chậu – lược (IPE) ngay mặt sâu gân Psoas. Target 2 (cho RFA nhánh thần kinh bịt): Góc dưới trong chỗ tiếp giáp ngành trên xương mu và trụ trước dưới ổ cối (Subpectineal / Incisura acetabuli).",
-      "innervation": "Các nhánh khớp cảm giác của thần kinh đùi (chi phối phần tư trước trên & trước ngoài bao khớp), thần kinh bịt phụ (phần tư trước trong) và thần kinh bịt (phần tư dưới trong bao khớp háng).",
-      "vascularAndDangerZones": [
-        "Thần kinh đùi chính (Main femoral nerve) và bó mạch đùi / chậu ngoài: Nằm nông hơn cơ chậu và ở phía trong gân Psoas – đi kim In-plane từ ngoài vào trong luôn có cơ chậu che chắn thần kinh đùi ở trên!",
-        "Bó mạch bịt (Obturator artery & vein) và nhánh nối 'vòng mạch tử thần' (Corona mortis) dọc ngành trên xương mu ở vùng Target 2 – bắt buộc quét Color Doppler kỹ trước khi đặt kim RFA.",
-        "Thần kinh bì đùi ngoài (LFCN) chạy nông gần điểm chọc da dưới ASIS: Cần tránh đâm xuyên hoặc gây bỏng nhiệt da đầu vào."
+    "surfaceAnatomy": {
+      "sourceRef": "Gray's Anatomy (42nd Ed.) – Pelvic Brim, Inguinal & Obturator Surface Landmarks; Short & Peng Anatomical Study",
+      "surfaceLandmarks": [
+        "Gai chậu trước trên (ASIS) ở phía ngoài.",
+        "Củ mu (Pubic tubercle) và Bờ trên ngành trên xương mu ở phía trong.",
+        "Điểm đập động mạch đùi tại điểm giữa bẹn (Mid-inguinal point).",
+        "Nếp lằn bẹn – đùi trong (cách củ mu ~2 – 3 cm ra ngoài và xuống dưới tương ứng vùng cơ lược che phủ ống bịt)."
+      ],
+      "surfaceProjections": "Hai đích xương cảm giác khớp háng chiếu lên vùng bẹn trước: (1) Đích PENG / Nhánh khớp thần kinh đùi & thần kinh bịt phụ (Target 1) chiếu dọc theo nửa ngoài đường nối ASIS – Củ mu (ngay sâu dưới dây chằng bẹn, phía ngoài động mạch đùi); (2) Đích nhánh khớp thần kinh bịt (Target 2) chiếu tại góc dưới – ngoài củ mu ~2.5 cm (nơi ngành trên xương mu gặp trụ trước dưới ổ cối dưới cơ lược).",
+      "palpationSteps": [
+        "1. Bệnh nhân nằm ngửa, đùi để trung tính (khi làm Target 1) và hơi dạng nhẹ – xoay ngoài 15° (khi làm Target 2 vùng cơ lược).",
+        "2. Bắt mạch đập động mạch đùi và tĩnh mạch đùi (nằm trong động mạch 1 cm) rồi vẽ vạch dọc cảnh báo trên da vùng bẹn.",
+        "3. Xác định ASIS (điểm mốc ngoài cho Target 1) và củ mu (điểm mốc trong cho Target 2)."
       ],
       "figures": [
         {
-          "path": "assets/images/anatomy/fig_27_05_hip_capsule_quadrants.jpg",
-          "figNumber": "27.5",
-          "title": "Bản đồ phân vùng 4 góc phần tư chi phối thần kinh cảm giác mặt trước bao khớp háng (Fig. 27.5)",
-          "desc": "Tổng hợp đóng góp của nhánh thần kinh đùi (trên ngoài/trên trong), thần kinh bịt phụ (AON) và thần kinh bịt (dưới trong) trên bao khớp háng trước.",
-          "springerCaption": "Fig. 27.5 Summary diagram of sensory articular branch contributions to the four quadrants of the anterior hip capsule."
+          "path": "assets/images/external_anatomy/ext_surf_inguinal_ring_gray1227.png",
+          "figNumber": "Gray 1227",
+          "title": "Giải phẫu bề mặt vùng chậu - bẹn: Hình chiếu đường động mạch chậu ngoài - đùi, vòng đùi và khung xương mu - chậu (Gray's Plate 1227)",
+          "desc": "Đối chiếu bề mặt đường động mạch chậu ngoài tiếp nối động mạch đùi đi qua điểm giữa bẹn phân ranh giữa vùng chậu ngoài (Target 1) và vùng lược - bịt (Target 2).",
+          "atlasSource": "Gray's Anatomy (20th Ed., Plate 1227) – Surface projections of iliac-femoral vessels and inguinal rings."
         }
       ]
     },
-    "surfaceAnatomy": {
-      "bonyLandmarks": [
-        "Gai chậu trước trên (ASIS): Mốc khởi điểm sờ thấy rõ ở phía ngoài.",
-        "Củ mu (Pubic tubercle): Mốc sờ thấy ở phía trong trên bờ trên xương mu.",
-        "Nếp lằn bẹn (Inguinal crease) nối giữa hai mốc trên."
+    "crossSectionalAnatomy": {
+      "sourceRef": "Gray's Anatomy (Plates 344, 435) – Sectional Anatomy of Iliopubic Valley & Subpectineal Obturator Canal",
+      "sectionPlane": "Thiết đồ chéo dọc vành chậu trước (Pelvic Brim Oblique Section qua AIIS – IPE) cho Target 1 VÀ Thiết đồ đứng dọc/ngang qua cơ lược – rãnh bịt cho Target 2.",
+      "layeredStructure": [
+        "Tầng Nông & Đệm Cơ tại Target 1 (Vùng chậu ngoài): Da & mỡ dưới da (chứa thần kinh bì đùi ngoài LFCN sát dưới ASIS) -> Mạc đùi & cơ may / thẳng đùi -> Mạc chậu (có THẦN KINH ĐÙI nằm ngay dưới mạc chậu phía trong) -> Khối cơ chậu (ngoài) & Gân cơ thắt lưng lớn (trong) làm đệm chắn an toàn.",
+        "Tầng Đáy Xương Target 1 (Thung lũng PENG / AIIS – IPE): ĐÍCH 1 nằm ngay sát màng xương khe lõm giữa Gai chậu trước dưới (AIIS) và Gờ chậu – lược (IPE), nơi hội tụ toàn bộ các nhánh khớp cao/thấp của thần kinh đùi và thần kinh bịt phụ (AON).",
+        "Tầng Nông & Cơ Lược tại Target 2 (Vùng bẹn trong): Da & mỡ đùi trong (chứa Tĩnh mạch hiển lớn đổ vào tĩnh mạch đùi) -> Mạc lược (Pectineal fascia) -> Bụng cơ lược (Pectineus muscle) dày bao phủ phía trước ống bịt.",
+        "Tầng Đáy Xương Target 2 (Cửa ra Ống bịt – Khuyết ổ cối): Mạc cơ bịt ngoài (Obturator externus) -> ĐÍCH 2 tại mặt phẳng cân sâu dưới cơ lược và góc xương nơi nhánh khớp của THẦN KINH BỊT thoát ra từ ống bịt ngay dưới ngành trên xương mu sát khuyết ổ cối (Incisura acetabuli)."
       ],
-      "referenceLines": "Đường dây chằng bẹn nối ASIS – Củ mu: Rãnh xương AIIS – IPE (Target 1) nằm song song và ngay dưới nửa ngoài dây chằng bẹn; vùng ống bịt dưới cơ lược (Target 2) nằm cách củ mu khoảng 2 - 3 cm ra ngoài và xuống dưới.",
-      "palpationSteps": [
-        "1. Bệnh nhân nằm ngửa thẳng, hai chân duỗi trung tính (xoay ngoài nhẹ 15 độ khi cần tiếp cận Target 2 vùng cơ lược phía trong).",
-        "2. Sờ rõ gai chậu trước trên (ASIS) và củ mu, đồng thời bắt mạch đập động mạch đùi ở giữa nếp bẹn và đánh dấu bằng bút lên da.",
-        "3. Xác định điểm vào da an toàn ở phía ngoài (ngay dưới và trong ASIS khoảng 1.5 - 2 cm) để đảm bảo kim đi từ ngoài vào trong tránh thần kinh bì đùi ngoài."
+      "topographicRelations": {
+        "superficialAndDeep": "Tại Target 1, khối cơ chậu – thắt lưng dày ~2 – 3 cm làm tấm đệm ngăn cách an toàn giữa mũi kim nằm sát xương ở sâu với thân chính thần kinh đùi ở nông.",
+        "medialAndLateral": "Giữa Target 1 (ngoài) và Target 2 (trong) là hành lang mạch máu lớn chứa BÓ MẠCH ĐÙI (Femoral artery & vein); tại Target 2 sát bờ xương mu có ĐỘNG MẠCH BỊT và nhánh nối CORONA MORTIS (nối động mạch thượng vị dưới với động mạch bịt ở ~25 – 30% dân số!)."
+      },
+      "dangerCorridors": [
+        "Vòng nối tử thần Corona mortis và bó mạch bịt tại Target 2: Bắt buộc bật Color Doppler kiểm tra sát ngành trên xương mu và ống bịt trước khi chọc cannula RFA!",
+        "Không đâm kim nông gần da dưới ASIS chạm thần kinh bì đùi ngoài (LFCN)."
       ],
-      "probePlacement": "Sử dụng đầu dò Curvilinear tần số thấp (2 - 5 MHz): Đặt ngang trên ASIS, trượt xuống dưới để thấy mỏm nhọn AIIS, sau đó xoay đầu trong của đầu dò chếch xuống ~45 độ hướng về phía củ mu cho tới khi thấy hai đỉnh xương tăng âm (AIIS ở ngoài và IPE ở trong) tạo thành thung lũng chứa gân Psoas tròn sáng.",
       "figures": [
         {
-          "path": "assets/images/anatomy/fig_27_06a_asis_landmark_scan.jpg",
-          "figNumber": "27.6a",
-          "title": "Bước 1 định vị mốc xương gai chậu trước trên (ASIS) làm chuẩn quét xuống AIIS - IPE (Fig. 27.6a)",
-          "desc": "Đặt đầu dò trên gai chậu trước trên (ASIS) trước khi trượt xuống dưới và xoay 45 độ thẳng hàng với trục AIIS - gờ chậu lược (IPE).",
-          "springerCaption": "Fig. 27.6a Initial surface landmark scan over the anterior superior iliac spine (ASIS)."
+          "path": "assets/images/external_anatomy/ext_sec_gluteal_deep_layer_gray435.png",
+          "figNumber": "Gray 435",
+          "title": "Thiết đồ xương khung chậu trước: Thung lũng dưới ASIS - gờ chậu lược (Target 1) và Ống bịt - khuyết ổ cối (Target 2) (Gray's Plate 435)",
+          "desc": "Hình ảnh giải phẫu tuyệt đẹp chỉ rõ cả 2 đích xương trên cùng một lát cắt: bờ chậu - lược phía trên ổ cối (Target 1) và lỗ ống bịt (Obturator canal) ngay góc trên trong ổ cối dưới dây chằng Cooper (Target 2).",
+          "atlasSource": "Gray's Anatomy (20th Ed., Plate 435) – Obturator canal, iliopectineal line, and acetabular margin."
         }
       ]
     },
@@ -6383,8 +6926,8 @@ var STABLE_PROCEDURES_FALLBACK = [];
   }
 ];
     window.STABLE_VERSION_METADATA = {
-      version: '1.1.0-stable',
-      timestamp: '2026-11-24T18:23:55.820298',
+      version: '1.2.0-stable',
+      timestamp: '2026-11-24T19:45:17.578817',
       procedureCount: window.STABLE_PROCEDURES_FALLBACK ? window.STABLE_PROCEDURES_FALLBACK.length : 0
     };
     STABLE_PROCEDURES_FALLBACK = window.STABLE_PROCEDURES_FALLBACK;

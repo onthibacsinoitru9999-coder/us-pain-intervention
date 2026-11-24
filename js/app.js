@@ -382,7 +382,7 @@ function filterProcedures() {
       if (item.difficulty !== appState.currentDifficulty) return false;
     }
 
-    // Search query matching (including clinical anatomy & surface anatomy landmarks)
+    // Search query matching (including external Surface Anatomy & Cross-Sectional Anatomy)
     if (normQuery) {
       const matchNameVi = normalizeStr(item.nameVi).includes(normQuery);
       const matchNameEn = normalizeStr(item.nameEn).includes(normQuery);
@@ -390,27 +390,30 @@ function filterProcedures() {
       const matchIndications = item.indications.some(ind => normalizeStr(ind).includes(normQuery));
       const matchSono = item.sonoanatomy.some(s => normalizeStr(s).includes(normQuery));
 
-      let matchAnatomy = false;
-      if (item.anatomy) {
-        const a = item.anatomy;
-        matchAnatomy =
-          normalizeStr(a.overview).includes(normQuery) ||
-          normalizeStr(a.targetStructure).includes(normQuery) ||
-          normalizeStr(a.innervation).includes(normQuery) ||
-          (Array.isArray(a.vascularAndDangerZones) && a.vascularAndDangerZones.some(z => normalizeStr(z).includes(normQuery)));
-      }
-
       let matchSurface = false;
       if (item.surfaceAnatomy) {
         const sf = item.surfaceAnatomy;
         matchSurface =
-          normalizeStr(sf.referenceLines).includes(normQuery) ||
-          normalizeStr(sf.probePlacement).includes(normQuery) ||
-          (Array.isArray(sf.bonyLandmarks) && sf.bonyLandmarks.some(l => normalizeStr(l).includes(normQuery))) ||
+          normalizeStr(sf.sourceRef).includes(normQuery) ||
+          normalizeStr(sf.surfaceProjections).includes(normQuery) ||
+          (Array.isArray(sf.surfaceLandmarks) && sf.surfaceLandmarks.some(l => normalizeStr(l).includes(normQuery))) ||
           (Array.isArray(sf.palpationSteps) && sf.palpationSteps.some(ps => normalizeStr(ps).includes(normQuery)));
       }
 
-      return matchNameVi || matchNameEn || matchIcd || matchIndications || matchSono || matchAnatomy || matchSurface;
+      let matchCrossSection = false;
+      if (item.crossSectionalAnatomy) {
+        const cs = item.crossSectionalAnatomy;
+        const topo = cs.topographicRelations || {};
+        matchCrossSection =
+          normalizeStr(cs.sourceRef).includes(normQuery) ||
+          normalizeStr(cs.sectionPlane).includes(normQuery) ||
+          normalizeStr(topo.superficialAndDeep).includes(normQuery) ||
+          normalizeStr(topo.medialAndLateral).includes(normQuery) ||
+          (Array.isArray(cs.layeredStructure) && cs.layeredStructure.some(ly => normalizeStr(ly).includes(normQuery))) ||
+          (Array.isArray(cs.dangerCorridors) && cs.dangerCorridors.some(dc => normalizeStr(dc).includes(normQuery)));
+      }
+
+      return matchNameVi || matchNameEn || matchIcd || matchIndications || matchSono || matchSurface || matchCrossSection;
     }
 
     return true;
@@ -626,86 +629,47 @@ function openProcedureDetail(procId) {
     </div>
   `;
 
-  // Populate Tab 2: Seamless 4-Stage Continuum (Clinical Anatomy -> Surface Anatomy -> Sonoanatomy -> Needle Technique)
+  // Populate Tab 2: Seamless 4-Stage Continuum (1. Giải phẫu Bề mặt -> 2. Giải phẫu Thiết đồ -> 3. Giải phẫu Siêu âm -> 4. Kỹ thuật đâm kim)
   const tab2 = document.getElementById('modal-tab-content-2');
-  const anat = item.anatomy || null;
   const surf = item.surfaceAnatomy || null;
-
-  const anatomySectionHtml = anat ? `
-    <div id="sec-clinical-anatomy" class="anatomy-stage-card anatomy-stage-clinical">
-      <div class="anatomy-stage-header">
-        <span class="anatomy-stage-num">1</span>
-        <div>
-          <h4 class="anatomy-stage-title">Giải Phẫu Ứng Dụng & Vùng Nguy Hiểm (Clinical & Functional Anatomy)</h4>
-          <p class="anatomy-stage-subtitle">Cấu trúc giải phẫu đích, chi phối thần kinh và các mốc mạch máu – tạng cần bảo vệ</p>
-        </div>
-      </div>
-
-      <p class="anatomy-overview-text">${anat.overview}</p>
-
-      <div class="anatomy-meta-grid">
-        <div class="anatomy-meta-box anatomy-target-box">
-          <div class="anatomy-meta-label">
-            <span>🎯</span> Cấu trúc Giải phẫu Đích (Target Structure)
-          </div>
-          <p class="anatomy-meta-content">${anat.targetStructure}</p>
-        </div>
-
-        <div class="anatomy-meta-box anatomy-nerve-box">
-          <div class="anatomy-meta-label">
-            <span>⚡</span> Chi phối Thần kinh (Innervation)
-          </div>
-          <p class="anatomy-meta-content">${anat.innervation}</p>
-        </div>
-      </div>
-
-      ${Array.isArray(anat.vascularAndDangerZones) && anat.vascularAndDangerZones.length > 0 ? `
-        <div class="anatomy-danger-box">
-          <div class="anatomy-danger-title">
-            <span>🛡️</span> Mạch máu & Cấu trúc Nguy hiểm Lân cận Cần Tránh (Danger Zones & Doppler Check)
-          </div>
-          <ul class="anatomy-danger-list">
-            ${anat.vascularAndDangerZones.map(z => `<li>${z}</li>`).join('')}
-          </ul>
-        </div>
-      ` : ''}
-
-      ${renderInlineStageFigures(anat.figures, 'Sơ đồ Giải phẫu Springer')}
-    </div>
-  ` : '';
+  const cs = item.crossSectionalAnatomy || null;
+  const hasExtAnatomy = Boolean(surf && cs);
 
   const surfaceSectionHtml = surf ? `
     <div id="sec-surface-anatomy" class="anatomy-stage-card anatomy-stage-surface">
       <div class="anatomy-stage-header">
-        <span class="anatomy-stage-num anatomy-stage-num-amber">2</span>
-        <div>
-          <h4 class="anatomy-stage-title">Giải Phẫu Bề Mặt & Định Vị Đầu Dò (Surface Anatomy & Landmarks)</h4>
-          <p class="anatomy-stage-subtitle">Mốc xương sờ chạm ngoài da, đường định hướng và vị trí đặt đầu dò khởi điểm</p>
+        <span class="anatomy-stage-num anatomy-stage-num-amber">1</span>
+        <div class="flex-1">
+          <div class="anatomy-stage-title-row">
+            <h4 class="anatomy-stage-title">Giải Phẫu Bề Mặt (Surface Anatomy &amp; Topographic Landmarks)</h4>
+            ${surf.sourceRef ? `<span class="anatomy-source-pill" title="${escapeAttr(surf.sourceRef)}">📚 ${surf.sourceRef}</span>` : ''}
+          </div>
+          <p class="anatomy-stage-subtitle">Mốc xương – gân – mạch sờ chạm ngoài da, đường chiếu định khu kinh điển và quy trình sờ nắn chuẩn bị</p>
         </div>
       </div>
 
       <div class="anatomy-meta-grid">
         <div class="anatomy-meta-box surface-landmarks-box">
           <div class="anatomy-meta-label">
-            <span>📍</span> Mốc Xương & Gân Cơ Bề Mặt (Palpable Landmarks)
+            <span>📍</span> Mốc Giải Phẫu Bề Mặt Sờ Chạm (Palpable Landmarks)
           </div>
           <ul class="surface-landmark-list">
-            ${(surf.bonyLandmarks || []).map(lm => `<li>${lm}</li>`).join('')}
+            ${(surf.surfaceLandmarks || []).map(lm => `<li>${lm}</li>`).join('')}
           </ul>
         </div>
 
         <div class="anatomy-meta-box surface-refline-box">
           <div class="anatomy-meta-label">
-            <span>📐</span> Đường Định Hướng & Tọa Độ Bề Mặt (Reference Lines)
+            <span>📐</span> Đường Chiếu, Tam Giác Định Khu &amp; Tọa Độ Kinh Điển
           </div>
-          <p class="anatomy-meta-content">${surf.referenceLines || ''}</p>
+          <p class="anatomy-meta-content">${surf.surfaceProjections || ''}</p>
         </div>
       </div>
 
       ${Array.isArray(surf.palpationSteps) && surf.palpationSteps.length > 0 ? `
         <div class="surface-palpation-box">
           <div class="surface-palpation-title">
-            <span>🖐️</span> Quy Trình Sờ Nắn Định Vị Lâm Sàng Trước Khi Đặt Đầu Dò
+            <span>🖐️</span> Quy Trình Bộc Lộ &amp; Sờ Nắn Xác Định Mốc Ngoài Da
           </div>
           <ol class="surface-palpation-steps">
             ${surf.palpationSteps.map(ps => `<li>${ps}</li>`).join('')}
@@ -713,16 +677,79 @@ function openProcedureDetail(procId) {
         </div>
       ` : ''}
 
-      ${surf.probePlacement ? `
-        <div class="surface-probe-box">
-          <div class="surface-probe-label">
-            <span>📡</span> Vị Trí Đặt Đầu Dò Khởi Điểm & Hướng Quét (Initial Probe Footprint):
+      ${renderInlineStageFigures(surf.figures, 'Atlas Giải phẫu Bề mặt (Nguồn ngoài sách)')}
+    </div>
+  ` : '';
+
+  const crossSectionHtml = cs ? `
+    <div id="sec-cross-sectional-anatomy" class="anatomy-stage-card anatomy-stage-clinical">
+      <div class="anatomy-stage-header">
+        <span class="anatomy-stage-num">2</span>
+        <div class="flex-1">
+          <div class="anatomy-stage-title-row">
+            <h4 class="anatomy-stage-title">Giải Phẫu Thiết Đồ &amp; Phân Lớp Theo Chiều Sâu (Cross-Sectional Anatomy)</h4>
+            ${cs.sourceRef ? `<span class="anatomy-source-pill" title="${escapeAttr(cs.sourceRef)}">📚 ${cs.sourceRef}</span>` : ''}
           </div>
-          <p class="surface-probe-text">${surf.probePlacement}</p>
+          <p class="anatomy-stage-subtitle">Cấu trúc từng lớp từ da tới xương/tạng, tương quan định khu 4 chiều và hành lang mạch – thần kinh trên lát cắt chuẩn</p>
+        </div>
+      </div>
+
+      ${cs.sectionPlane ? `
+        <div class="cross-plane-banner">
+          <span class="cross-plane-label">🔪 Mặt phẳng thiết đồ chuẩn:</span>
+          <span class="cross-plane-text">${cs.sectionPlane}</span>
         </div>
       ` : ''}
 
-      ${renderInlineStageFigures(surf.figures, 'Giải phẫu Bề mặt & Đặt đầu dò')}
+      ${Array.isArray(cs.layeredStructure) && cs.layeredStructure.length > 0 ? `
+        <div class="cross-layers-box">
+          <div class="cross-layers-title">
+            <span>🥞</span> Thiết Đồ Phân Lớp Từ Nông Vào Sâu (Superficial → Deep Needle Layers)
+          </div>
+          <ol class="cross-layer-list">
+            ${cs.layeredStructure.map((layerText, idx) => {
+              const isTarget = /ĐÍCH|KHOANG ĐÍCH/i.test(layerText);
+              return `
+                <li class="cross-layer-item ${isTarget ? 'is-target-layer' : ''}">
+                  <span class="cross-layer-badge">${isTarget ? '🎯 ĐÍCH' : `Tầng ${idx + 1}`}</span>
+                  <div class="cross-layer-body">${layerText}</div>
+                </li>
+              `;
+            }).join('')}
+          </ol>
+        </div>
+      ` : ''}
+
+      ${cs.topographicRelations ? `
+        <div class="anatomy-meta-grid">
+          <div class="anatomy-meta-box anatomy-target-box">
+            <div class="anatomy-meta-label">
+              <span>↕️</span> Liên Quan Nông – Sâu Trên Thiết Đồ (Superficial &amp; Deep)
+            </div>
+            <p class="anatomy-meta-content">${cs.topographicRelations.superficialAndDeep || ''}</p>
+          </div>
+
+          <div class="anatomy-meta-box anatomy-nerve-box">
+            <div class="anatomy-meta-label">
+              <span>↔️</span> Liên Quan Trong – Ngoài / Trước – Sau (Medial &amp; Lateral)
+            </div>
+            <p class="anatomy-meta-content">${cs.topographicRelations.medialAndLateral || ''}</p>
+          </div>
+        </div>
+      ` : ''}
+
+      ${Array.isArray(cs.dangerCorridors) && cs.dangerCorridors.length > 0 ? `
+        <div class="anatomy-danger-box">
+          <div class="anatomy-danger-title">
+            <span>🛡️</span> Hành Lang Nguy Hiểm Trên Thiết Đồ Cần Bảo Vệ (Danger Corridors)
+          </div>
+          <ul class="anatomy-danger-list">
+            ${cs.dangerCorridors.map(dc => `<li>${dc}</li>`).join('')}
+          </ul>
+        </div>
+      ` : ''}
+
+      ${renderInlineStageFigures(cs.figures, 'Atlas Giải phẫu Thiết đồ (Nguồn ngoài sách)')}
     </div>
   ` : '';
 
@@ -730,35 +757,35 @@ function openProcedureDetail(procId) {
     <div class="space-y-4 text-sm">
       <!-- 4-Stage Seamless Continuum Jump Bar -->
       <div class="anatomy-workflow-bar" role="navigation" aria-label="Tiến trình thực hành 4 bước">
-        ${anat ? `
-          <button type="button" class="workflow-jump-pill" onclick="scrollToTab2Section('sec-clinical-anatomy')">
-            <span class="workflow-pill-num">1</span> Giải phẫu ứng dụng
+        ${surf ? `
+          <button type="button" class="workflow-jump-pill workflow-pill-amber" onclick="scrollToTab2Section('sec-surface-anatomy')">
+            <span class="workflow-pill-num">1</span> Giải phẫu bề mặt
           </button>
           <span class="workflow-arrow">→</span>
         ` : ''}
-        ${surf ? `
-          <button type="button" class="workflow-jump-pill workflow-pill-amber" onclick="scrollToTab2Section('sec-surface-anatomy')">
-            <span class="workflow-pill-num">2</span> Giải phẫu bề mặt
+        ${cs ? `
+          <button type="button" class="workflow-jump-pill" onclick="scrollToTab2Section('sec-cross-sectional-anatomy')">
+            <span class="workflow-pill-num">2</span> Giải phẫu thiết đồ
           </button>
           <span class="workflow-arrow">→</span>
         ` : ''}
         <button type="button" class="workflow-jump-pill workflow-pill-teal" onclick="scrollToTab2Section('sec-sonoanatomy')">
-          <span class="workflow-pill-num">${anat && surf ? '3' : '1'}</span> Giải phẫu siêu âm
+          <span class="workflow-pill-num">${hasExtAnatomy ? '3' : '1'}</span> Giải phẫu siêu âm
         </button>
         <span class="workflow-arrow">→</span>
         <button type="button" class="workflow-jump-pill workflow-pill-indigo" onclick="scrollToTab2Section('sec-needle-technique')">
-          <span class="workflow-pill-num">${anat && surf ? '4' : '2'}</span> Kỹ thuật đâm kim
+          <span class="workflow-pill-num">${hasExtAnatomy ? '4' : '2'}</span> Kỹ thuật đâm kim
         </button>
       </div>
 
-      ${anatomySectionHtml}
-
       ${surfaceSectionHtml}
+
+      ${crossSectionHtml}
 
       <!-- Stage 3: Patient Position, Transducer & Sonoanatomy -->
       <div id="sec-sonoanatomy" class="anatomy-stage-card anatomy-stage-sono">
         <div class="anatomy-stage-header">
-          <span class="anatomy-stage-num anatomy-stage-num-teal">${anat && surf ? '3' : '1'}</span>
+          <span class="anatomy-stage-num anatomy-stage-num-teal">${hasExtAnatomy ? '3' : '1'}</span>
           <div>
             <h4 class="anatomy-stage-title">Tư Thế, Đầu Dò & Giải Phẫu Siêu Âm (Sonoanatomy Landmarks)</h4>
             <p class="anatomy-stage-subtitle">Thiết lập máy siêu âm và nhận diện phân tầng cấu trúc trên màn hình</p>
@@ -790,7 +817,7 @@ function openProcedureDetail(procId) {
       <div id="sec-needle-technique" class="procedure-steps-box anatomy-stage-needle">
         <div class="flex items-center justify-between mb-3 border-b border-slate-200 pb-2 flex-wrap gap-2">
           <div class="flex items-center gap-2">
-            <span class="anatomy-stage-num anatomy-stage-num-indigo">${anat && surf ? '4' : '2'}</span>
+            <span class="anatomy-stage-num anatomy-stage-num-indigo">${hasExtAnatomy ? '4' : '2'}</span>
             <h4 class="font-bold text-indigo-900 text-sm">Quy trình Kỹ thuật Chọc kim Từng bước</h4>
           </div>
           <span class="text-xs bg-indigo-50 text-indigo-700 px-2 py-1 rounded font-semibold">${item.technique.needle}</span>
@@ -1085,15 +1112,20 @@ function renderInlineStageFigures(figures, groupLabel) {
   return `
     <div class="anatomy-inline-figs-wrap">
       <div class="anatomy-inline-figs-heading">
-        <span>🖼️</span> ${groupLabel} (${figures.length} hình minh họa gốc):
+        <span>🖼️</span> ${groupLabel} (${figures.length} bản vẽ đối chiếu – nhấn vào ảnh để phóng to):
       </div>
       <div class="anatomy-fig-grid ${singleColClass}">
-        ${figures.map(fig => `
+        ${figures.map(fig => {
+          const sourceCaption = fig.atlasSource || fig.springerCaption || '';
+          const sourceType = fig.atlasSource ? 'external' : 'springer';
+          const badgeLabel = fig.figNumber ? (/^(Gray|OpenStax|DBCLS|Atlas)/i.test(fig.figNumber) ? fig.figNumber : `Fig ${fig.figNumber}`) : '';
+          return `
           <div class="anatomy-fig-card"
                data-src="${escapeAttr(fig.path)}"
                data-title="${escapeAttr(fig.title)}"
                data-desc="${escapeAttr(fig.desc)}"
-               data-springer="${escapeAttr(fig.springerCaption || '')}"
+               data-source="${escapeAttr(sourceCaption)}"
+               data-source-type="${sourceType}"
                onclick="openLightboxFromEl(this)">
             <div class="anatomy-fig-img-box">
               <img src="${escapeAttr(fig.path)}" alt="${escapeAttr(fig.title)}" loading="lazy">
@@ -1102,12 +1134,14 @@ function renderInlineStageFigures(figures, groupLabel) {
             <div class="anatomy-fig-caption">
               <div class="anatomy-fig-caption-top">
                 <span class="anatomy-fig-title">${fig.title}</span>
-                ${fig.figNumber ? `<span class="anatomy-fig-badge">Fig ${fig.figNumber}</span>` : ''}
+                ${badgeLabel ? `<span class="anatomy-fig-badge">${badgeLabel}</span>` : ''}
               </div>
               <p class="anatomy-fig-desc">${fig.desc}</p>
+              ${sourceCaption ? `<div class="anatomy-fig-source">📖 ${sourceCaption}</div>` : ''}
             </div>
           </div>
-        `).join('')}
+          `;
+        }).join('')}
       </div>
     </div>
   `;
@@ -1119,7 +1153,8 @@ function openLightboxFromEl(el) {
     el.getAttribute('data-src') || '',
     el.getAttribute('data-title') || '',
     el.getAttribute('data-desc') || '',
-    el.getAttribute('data-springer') || ''
+    el.getAttribute('data-source') || el.getAttribute('data-springer') || '',
+    el.getAttribute('data-source-type') || 'springer'
   );
 }
 
@@ -1138,7 +1173,7 @@ function scrollToTab2Section(sectionId) {
 }
 
 // Lightbox logic
-function openLightbox(imgSrc, title, desc, springerCaption = '') {
+function openLightbox(imgSrc, title, desc, sourceCaption = '', sourceType = 'springer') {
   const lb = document.getElementById('image-lightbox');
   const lbImg = document.getElementById('lightbox-img');
   const lbTitle = document.getElementById('lightbox-title');
@@ -1150,8 +1185,11 @@ function openLightbox(imgSrc, title, desc, springerCaption = '') {
     if (lbTitle) lbTitle.textContent = title;
     if (lbDesc) lbDesc.textContent = desc;
     if (lbSpringer) {
-      if (springerCaption) {
-        lbSpringer.textContent = `📖 Springer Atlas (Philip Peng): ${springerCaption}`;
+      if (sourceCaption) {
+        const prefix = sourceType === 'external'
+          ? '📖 Nguồn Atlas Giải phẫu Kinh điển:'
+          : '📖 Springer Atlas (Philip Peng):';
+        lbSpringer.textContent = `${prefix} ${sourceCaption}`;
         lbSpringer.classList.remove('hidden');
       } else {
         lbSpringer.classList.add('hidden');
