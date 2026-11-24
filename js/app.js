@@ -241,11 +241,15 @@ function setupEventListeners() {
     });
   }
 
-  // Keyboard shortcut Esc
+  // Keyboard shortcut Esc (close lightbox first if open, otherwise close modal)
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') {
-      closeModal();
-      closeLightbox();
+      const lb = document.getElementById('image-lightbox');
+      if (lb && !lb.classList.contains('hidden')) {
+        closeLightbox();
+      } else {
+        closeModal();
+      }
     }
   });
 
@@ -378,14 +382,35 @@ function filterProcedures() {
       if (item.difficulty !== appState.currentDifficulty) return false;
     }
 
-    // Search query matching
+    // Search query matching (including clinical anatomy & surface anatomy landmarks)
     if (normQuery) {
       const matchNameVi = normalizeStr(item.nameVi).includes(normQuery);
       const matchNameEn = normalizeStr(item.nameEn).includes(normQuery);
       const matchIcd = normalizeStr(item.icd10).includes(normQuery);
       const matchIndications = item.indications.some(ind => normalizeStr(ind).includes(normQuery));
       const matchSono = item.sonoanatomy.some(s => normalizeStr(s).includes(normQuery));
-      return matchNameVi || matchNameEn || matchIcd || matchIndications || matchSono;
+
+      let matchAnatomy = false;
+      if (item.anatomy) {
+        const a = item.anatomy;
+        matchAnatomy =
+          normalizeStr(a.overview).includes(normQuery) ||
+          normalizeStr(a.targetStructure).includes(normQuery) ||
+          normalizeStr(a.innervation).includes(normQuery) ||
+          (Array.isArray(a.vascularAndDangerZones) && a.vascularAndDangerZones.some(z => normalizeStr(z).includes(normQuery)));
+      }
+
+      let matchSurface = false;
+      if (item.surfaceAnatomy) {
+        const sf = item.surfaceAnatomy;
+        matchSurface =
+          normalizeStr(sf.referenceLines).includes(normQuery) ||
+          normalizeStr(sf.probePlacement).includes(normQuery) ||
+          (Array.isArray(sf.bonyLandmarks) && sf.bonyLandmarks.some(l => normalizeStr(l).includes(normQuery))) ||
+          (Array.isArray(sf.palpationSteps) && sf.palpationSteps.some(ps => normalizeStr(ps).includes(normQuery)));
+      }
+
+      return matchNameVi || matchNameEn || matchIcd || matchIndications || matchSono || matchAnatomy || matchSurface;
     }
 
     return true;
@@ -601,33 +626,173 @@ function openProcedureDetail(procId) {
     </div>
   `;
 
-  // Populate Tab 2: Sonoanatomy & Needle Technique
+  // Populate Tab 2: Seamless 4-Stage Continuum (Clinical Anatomy -> Surface Anatomy -> Sonoanatomy -> Needle Technique)
   const tab2 = document.getElementById('modal-tab-content-2');
-  tab2.innerHTML = `
-    <div class="space-y-4 text-sm">
-      <div class="info-card">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div>
-            <div class="font-bold text-slate-800 text-sm">Tư thế bệnh nhân:</div>
-            <p class="text-slate-600 text-xs mt-1 leading-relaxed">${item.patientPosition}</p>
-          </div>
-          <div>
-            <div class="font-bold text-slate-800 text-sm">Đầu dò siêu âm (Transducer):</div>
-            <p class="text-slate-600 text-xs mt-1 leading-relaxed">${item.transducer}</p>
-          </div>
+  const anat = item.anatomy || null;
+  const surf = item.surfaceAnatomy || null;
+
+  const anatomySectionHtml = anat ? `
+    <div id="sec-clinical-anatomy" class="anatomy-stage-card anatomy-stage-clinical">
+      <div class="anatomy-stage-header">
+        <span class="anatomy-stage-num">1</span>
+        <div>
+          <h4 class="anatomy-stage-title">Giải Phẫu Ứng Dụng & Vùng Nguy Hiểm (Clinical & Functional Anatomy)</h4>
+          <p class="anatomy-stage-subtitle">Cấu trúc giải phẫu đích, chi phối thần kinh và các mốc mạch máu – tạng cần bảo vệ</p>
         </div>
       </div>
 
-      <div class="clinical-box">
-        <h4 class="font-bold text-teal-800 text-sm mb-2">Mốc Giải phẫu Siêu âm (Sonoanatomy Landmarks):</h4>
-        <ul class="list-disc pl-5 space-y-1 text-slate-700 text-xs">
-          ${item.sonoanatomy.map(s => `<li>${s}</li>`).join('')}
-        </ul>
+      <p class="anatomy-overview-text">${anat.overview}</p>
+
+      <div class="anatomy-meta-grid">
+        <div class="anatomy-meta-box anatomy-target-box">
+          <div class="anatomy-meta-label">
+            <span>🎯</span> Cấu trúc Giải phẫu Đích (Target Structure)
+          </div>
+          <p class="anatomy-meta-content">${anat.targetStructure}</p>
+        </div>
+
+        <div class="anatomy-meta-box anatomy-nerve-box">
+          <div class="anatomy-meta-label">
+            <span>⚡</span> Chi phối Thần kinh (Innervation)
+          </div>
+          <p class="anatomy-meta-content">${anat.innervation}</p>
+        </div>
       </div>
 
-      <div class="procedure-steps-box">
-        <div class="flex items-center justify-between mb-3 border-b border-slate-200 pb-2">
-          <h4 class="font-bold text-indigo-900 text-sm">Quy trình Kỹ thuật Chọc kim Từng bước</h4>
+      ${Array.isArray(anat.vascularAndDangerZones) && anat.vascularAndDangerZones.length > 0 ? `
+        <div class="anatomy-danger-box">
+          <div class="anatomy-danger-title">
+            <span>🛡️</span> Mạch máu & Cấu trúc Nguy hiểm Lân cận Cần Tránh (Danger Zones & Doppler Check)
+          </div>
+          <ul class="anatomy-danger-list">
+            ${anat.vascularAndDangerZones.map(z => `<li>${z}</li>`).join('')}
+          </ul>
+        </div>
+      ` : ''}
+
+      ${renderInlineStageFigures(anat.figures, 'Sơ đồ Giải phẫu Springer')}
+    </div>
+  ` : '';
+
+  const surfaceSectionHtml = surf ? `
+    <div id="sec-surface-anatomy" class="anatomy-stage-card anatomy-stage-surface">
+      <div class="anatomy-stage-header">
+        <span class="anatomy-stage-num anatomy-stage-num-amber">2</span>
+        <div>
+          <h4 class="anatomy-stage-title">Giải Phẫu Bề Mặt & Định Vị Đầu Dò (Surface Anatomy & Landmarks)</h4>
+          <p class="anatomy-stage-subtitle">Mốc xương sờ chạm ngoài da, đường định hướng và vị trí đặt đầu dò khởi điểm</p>
+        </div>
+      </div>
+
+      <div class="anatomy-meta-grid">
+        <div class="anatomy-meta-box surface-landmarks-box">
+          <div class="anatomy-meta-label">
+            <span>📍</span> Mốc Xương & Gân Cơ Bề Mặt (Palpable Landmarks)
+          </div>
+          <ul class="surface-landmark-list">
+            ${(surf.bonyLandmarks || []).map(lm => `<li>${lm}</li>`).join('')}
+          </ul>
+        </div>
+
+        <div class="anatomy-meta-box surface-refline-box">
+          <div class="anatomy-meta-label">
+            <span>📐</span> Đường Định Hướng & Tọa Độ Bề Mặt (Reference Lines)
+          </div>
+          <p class="anatomy-meta-content">${surf.referenceLines || ''}</p>
+        </div>
+      </div>
+
+      ${Array.isArray(surf.palpationSteps) && surf.palpationSteps.length > 0 ? `
+        <div class="surface-palpation-box">
+          <div class="surface-palpation-title">
+            <span>🖐️</span> Quy Trình Sờ Nắn Định Vị Lâm Sàng Trước Khi Đặt Đầu Dò
+          </div>
+          <ol class="surface-palpation-steps">
+            ${surf.palpationSteps.map(ps => `<li>${ps}</li>`).join('')}
+          </ol>
+        </div>
+      ` : ''}
+
+      ${surf.probePlacement ? `
+        <div class="surface-probe-box">
+          <div class="surface-probe-label">
+            <span>📡</span> Vị Trí Đặt Đầu Dò Khởi Điểm & Hướng Quét (Initial Probe Footprint):
+          </div>
+          <p class="surface-probe-text">${surf.probePlacement}</p>
+        </div>
+      ` : ''}
+
+      ${renderInlineStageFigures(surf.figures, 'Giải phẫu Bề mặt & Đặt đầu dò')}
+    </div>
+  ` : '';
+
+  tab2.innerHTML = `
+    <div class="space-y-4 text-sm">
+      <!-- 4-Stage Seamless Continuum Jump Bar -->
+      <div class="anatomy-workflow-bar" role="navigation" aria-label="Tiến trình thực hành 4 bước">
+        ${anat ? `
+          <button type="button" class="workflow-jump-pill" onclick="scrollToTab2Section('sec-clinical-anatomy')">
+            <span class="workflow-pill-num">1</span> Giải phẫu ứng dụng
+          </button>
+          <span class="workflow-arrow">→</span>
+        ` : ''}
+        ${surf ? `
+          <button type="button" class="workflow-jump-pill workflow-pill-amber" onclick="scrollToTab2Section('sec-surface-anatomy')">
+            <span class="workflow-pill-num">2</span> Giải phẫu bề mặt
+          </button>
+          <span class="workflow-arrow">→</span>
+        ` : ''}
+        <button type="button" class="workflow-jump-pill workflow-pill-teal" onclick="scrollToTab2Section('sec-sonoanatomy')">
+          <span class="workflow-pill-num">${anat && surf ? '3' : '1'}</span> Giải phẫu siêu âm
+        </button>
+        <span class="workflow-arrow">→</span>
+        <button type="button" class="workflow-jump-pill workflow-pill-indigo" onclick="scrollToTab2Section('sec-needle-technique')">
+          <span class="workflow-pill-num">${anat && surf ? '4' : '2'}</span> Kỹ thuật đâm kim
+        </button>
+      </div>
+
+      ${anatomySectionHtml}
+
+      ${surfaceSectionHtml}
+
+      <!-- Stage 3: Patient Position, Transducer & Sonoanatomy -->
+      <div id="sec-sonoanatomy" class="anatomy-stage-card anatomy-stage-sono">
+        <div class="anatomy-stage-header">
+          <span class="anatomy-stage-num anatomy-stage-num-teal">${anat && surf ? '3' : '1'}</span>
+          <div>
+            <h4 class="anatomy-stage-title">Tư Thế, Đầu Dò & Giải Phẫu Siêu Âm (Sonoanatomy Landmarks)</h4>
+            <p class="anatomy-stage-subtitle">Thiết lập máy siêu âm và nhận diện phân tầng cấu trúc trên màn hình</p>
+          </div>
+        </div>
+
+        <div class="info-card mb-3">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              <div class="font-bold text-slate-800 text-sm">Tư thế bệnh nhân:</div>
+              <p class="text-slate-600 text-xs mt-1 leading-relaxed">${item.patientPosition}</p>
+            </div>
+            <div>
+              <div class="font-bold text-slate-800 text-sm">Đầu dò siêu âm (Transducer):</div>
+              <p class="text-slate-600 text-xs mt-1 leading-relaxed">${item.transducer}</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="clinical-box">
+          <h4 class="font-bold text-teal-800 text-sm mb-2">Mốc Giải phẫu Siêu âm (Sonoanatomy Landmarks):</h4>
+          <ul class="list-disc pl-5 space-y-1 text-slate-700 text-xs">
+            ${item.sonoanatomy.map(s => `<li>${s}</li>`).join('')}
+          </ul>
+        </div>
+      </div>
+
+      <!-- Stage 4: Step-by-Step Needle Technique -->
+      <div id="sec-needle-technique" class="procedure-steps-box anatomy-stage-needle">
+        <div class="flex items-center justify-between mb-3 border-b border-slate-200 pb-2 flex-wrap gap-2">
+          <div class="flex items-center gap-2">
+            <span class="anatomy-stage-num anatomy-stage-num-indigo">${anat && surf ? '4' : '2'}</span>
+            <h4 class="font-bold text-indigo-900 text-sm">Quy trình Kỹ thuật Chọc kim Từng bước</h4>
+          </div>
           <span class="text-xs bg-indigo-50 text-indigo-700 px-2 py-1 rounded font-semibold">${item.technique.needle}</span>
         </div>
         <div class="mb-2 text-xs font-semibold text-indigo-700">Hướng tiếp cận: ${item.technique.approach}</div>
@@ -904,6 +1069,74 @@ function closeModal() {
   }
 }
 
+function escapeAttr(str) {
+  if (!str) return '';
+  return String(str)
+    .replace(/&/g, '&amp;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;');
+}
+
+function renderInlineStageFigures(figures, groupLabel) {
+  if (!Array.isArray(figures) || figures.length === 0) return '';
+  const singleColClass = figures.length === 1 ? 'anatomy-fig-grid-single' : 'anatomy-fig-grid-multi';
+  return `
+    <div class="anatomy-inline-figs-wrap">
+      <div class="anatomy-inline-figs-heading">
+        <span>🖼️</span> ${groupLabel} (${figures.length} hình minh họa gốc):
+      </div>
+      <div class="anatomy-fig-grid ${singleColClass}">
+        ${figures.map(fig => `
+          <div class="anatomy-fig-card"
+               data-src="${escapeAttr(fig.path)}"
+               data-title="${escapeAttr(fig.title)}"
+               data-desc="${escapeAttr(fig.desc)}"
+               data-springer="${escapeAttr(fig.springerCaption || '')}"
+               onclick="openLightboxFromEl(this)">
+            <div class="anatomy-fig-img-box">
+              <img src="${escapeAttr(fig.path)}" alt="${escapeAttr(fig.title)}" loading="lazy">
+              <span class="figure-zoom-hint">Phóng to 🔍</span>
+            </div>
+            <div class="anatomy-fig-caption">
+              <div class="anatomy-fig-caption-top">
+                <span class="anatomy-fig-title">${fig.title}</span>
+                ${fig.figNumber ? `<span class="anatomy-fig-badge">Fig ${fig.figNumber}</span>` : ''}
+              </div>
+              <p class="anatomy-fig-desc">${fig.desc}</p>
+            </div>
+          </div>
+        `).join('')}
+      </div>
+    </div>
+  `;
+}
+
+function openLightboxFromEl(el) {
+  if (!el) return;
+  openLightbox(
+    el.getAttribute('data-src') || '',
+    el.getAttribute('data-title') || '',
+    el.getAttribute('data-desc') || '',
+    el.getAttribute('data-springer') || ''
+  );
+}
+
+function scrollToTab2Section(sectionId) {
+  const target = document.getElementById(sectionId);
+  const modalBody = document.getElementById('modal-body');
+  if (!target) return;
+  if (modalBody) {
+    const bodyRect = modalBody.getBoundingClientRect();
+    const targetRect = target.getBoundingClientRect();
+    const nextTop = modalBody.scrollTop + (targetRect.top - bodyRect.top) - 12;
+    modalBody.scrollTo({ top: Math.max(0, nextTop), behavior: 'smooth' });
+  } else {
+    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+}
+
 // Lightbox logic
 function openLightbox(imgSrc, title, desc, springerCaption = '') {
   const lb = document.getElementById('image-lightbox');
@@ -1084,6 +1317,8 @@ window.switchModalSubTab = switchModalSubTab;
 window.openProcedureDetail = openProcedureDetail;
 window.toggleFavorite = toggleFavorite;
 window.openLightbox = openLightbox;
+window.openLightboxFromEl = openLightboxFromEl;
+window.scrollToTab2Section = scrollToTab2Section;
 window.closeLightbox = closeLightbox;
 window.resetFilters = resetFilters;
 window.updateChecklistProgress = updateChecklistProgress;

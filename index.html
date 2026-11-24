@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>US-PainIntervention Pro | Cẩm Nang Tra Cứu Tiêm Khớp & Siêu Âm Can Thiệp Lâm Sàng</title>
   <meta name="description" content="Hệ thống tra cứu quy trình tiêm khớp, bao hoạt dịch, gân và phong bế thần kinh dưới hướng dẫn siêu âm chuẩn lâm sàng - Dựa trên tài liệu Springer của GS. Philip Peng">
-  <link rel="stylesheet" href="css/style.css?v=20260926_stable">
+  <link rel="stylesheet" href="css/style.css?v=20261124_anatomy">
   <!-- Self-contained, zero-dependency offline design system -->
 </head>
 <body>
@@ -73,7 +73,7 @@
             <svg class="search-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
             </svg>
-            <input type="text" id="search-input" class="search-input" placeholder="Tìm kiếm theo tên khớp, bệnh lý, vị trí đau, gân, thần kinh, thuốc, mã ICD-10... (Ví dụ: vai, gối, háng, cổ tay, prp, de quervain)">
+            <input type="text" id="search-input" class="search-input" placeholder="Tìm theo tên khớp, mốc giải phẫu bề mặt, thần kinh, bệnh lý, mã ICD-10... (Ví dụ: vai, củ Gerdy, ASIS, khe cùng, ống cổ tay)">
             <button id="clear-search-btn" class="clear-search-btn" title="Xóa tìm kiếm">
               <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
             </button>
@@ -408,8 +408,8 @@
         </button>
         <button class="modal-sub-tab" onclick="switchModalSubTab(2)">
           <span class="tab-index-badge">2</span>
-          <span class="tab-txt-desktop">Siêu âm & Kỹ thuật kim</span>
-          <span class="tab-txt-mobile">Kỹ thuật kim</span>
+          <span class="tab-txt-desktop">Giải phẫu, Siêu âm & Kỹ thuật</span>
+          <span class="tab-txt-mobile">GP & Kỹ thuật</span>
         </button>
         <button class="modal-sub-tab" onclick="switchModalSubTab(3)">
           <span class="tab-index-badge">3</span>
@@ -487,11 +487,11 @@
 
   <!-- Scripts -->
   <!-- 1. Stable Fallback Dataset (Nạp trước làm lá chắn an toàn khi bản chính bị lỗi) -->
-  <script src="data/procedures.fallback.js?v=20261001_video"></script>
+  <script src="data/procedures.fallback.js?v=20261124_anatomy"></script>
   <!-- 2. Primary Updatable Dataset (Tệp dữ liệu chính đang phát triển & cập nhật) -->
-  <script src="data/procedures.js?v=20261001_video"></script>
-  <script src="js/calculator.js?v=20261001_video"></script>
-  <script src="js/checklist.js?v=20261001_video"></script>
-  <script src="js/app.js?v=20261001_video"></script>
+  <script src="data/procedures.js?v=20261124_anatomy"></script>
+  <script src="js/calculator.js?v=20261124_anatomy"></script>
+  <script src="js/checklist.js?v=20261124_anatomy"></script>
+  <script src="js/app.js?v=20261124_anatomy"></script>
 </body>
 </html>
